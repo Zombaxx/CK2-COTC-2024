@@ -77,6 +77,7 @@ is_hereditary_trigger = {
                 #government = corporate_monarchy
                 #government = administrative_monarchy
                 #government = pirate_kingdom
+                government = neofeudal_government
                 has_law = succ_gavelkind
                 has_law = succ_elective_gavelkind
                 has_law = succ_seniority
@@ -139,13 +140,13 @@ is_hereditary_religion = {
 		text = "HEREDITARYRELIGION"
 		hidden_tooltip = {
 			holder_scope = {
-			OR = {
-				religion = terran_imperial
-				religion = neo_feudal
-				religion_group = religious_group
-				religion_group = religious_terran_group
-				religion = bio_directionist
-			}
+				OR = {
+					religion = terran_imperial
+					religion = neo_feudal
+					religion_group = religious_group
+					religion_group = religious_terran_group
+					religion = bio_directionist
+				}
 			}
 		}
 	}
@@ -156,18 +157,18 @@ is_elective_religion = {
 		text = "ELECTIVERELIGION"
 		hidden_tooltip = {
 			holder_scope = {
-			OR = {
-				religion = terran_federalist
-				religion = terran_republican
-				religion = terran_imperial
-				religion = colonial_separatist
-				religion = neo_socialist
-				religion = astrist
-				religion = cyberneticist
-				religion = machine_cultist
-				religion_group = religious_group
-				religion_group = religious_terran_group
-			}
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = terran_imperial
+					religion = colonial_separatist
+					religion = neo_socialist
+					religion = astrist
+					religion = cyberneticist
+					religion = machine_cultist
+					religion_group = religious_group
+					religion_group = religious_terran_group
+				}
 			}
 		}
 	}
@@ -284,38 +285,39 @@ is_monarchy = {
 
 laws_allow_elections = {
     OR = {
-        holder_scope = { independent = yes }
-        has_law = disobedience_1
-        AND = {
-            holder_scope = { independent = no }
-            NOT = { crownlaw_title = { has_law = centralization_4 } }
-        }
+        is_elective_religion = yes
+		holder_scope = {
+			OR = {
+				is_feudal = no
+				is_rectorial_trigger = yes
+				is_civil_trigger = yes
+			}
+		}
+        crownlaw_title = {
+			is_elective_religion = yes
+		}
+		primary_title = {
+			OR = {
+				has_law = centralization_0
+				#has_law = centralization_1
+			}
+		}
     }
 }
 
 laws_allow_inheritance = {
     OR = {
-        has_law = disobedience_1
-        AND = {
-            holder_scope = { independent = yes }
-            crownlaw_title = {
-                OR = {
-                    has_law = centralization_2
-                    has_law = centralization_3
-                    has_law = centralization_4
-                }
-            }
-        }
-        AND = {
-            holder_scope = { independent = no }
-            crownlaw_title = {
-                OR = {
-                    has_law = centralization_0
-                    has_law = centralization_1
-                    has_law = centralization_2
-                }
-            }
-        }
+        is_hereditary_religion = yes
+        crownlaw_title = {
+			is_hereditary_religion = yes
+		}
+		#primary_title = {
+		#	OR = {
+		#		#has_law = centralization_3
+		#		has_law = centralization_4
+		#		has_law = law_voting_power_0
+		#	}
+		#}
     }
 }
 
@@ -327,7 +329,7 @@ laws_allow_appointment = {
 			holder_scope = { independent = no }
 			crownlaw_title = {
 				OR = {
-					has_law = disobedience_1
+					#has_law = disobedience_1
 					has_law = centralization_1
 					has_law = centralization_2
 					has_law = centralization_3
@@ -341,107 +343,79 @@ laws_allow_appointment = {
 #dictatorship is like appointment but for "self" appointment
 laws_allow_dictatorship = {
     OR = {
-        has_law = disobedience_1
-        AND = {
-            holder_scope = { independent = yes }
-            crownlaw_title = {
-                OR = {
-                    has_law = centralization_3
-                    has_law = centralization_4
-                }
-            }
-        }
-        AND = {
-            holder_scope = { independent = no }
-            crownlaw_title = {
-                OR = {
-                    has_law = centralization_0
-                    has_law = centralization_1
-                    has_law = centralization_2
-                }
-            }
-        }
+		primary_title = {
+			OR = {
+				#has_law = centralization_3
+				has_law = centralization_4
+				has_law = law_voting_power_0
+			}
+		}
+        crownlaw_title = {
+			has_law = law_voting_power_0
+		}
+        crownlaw_title = {
+			is_dictatorship_trigger = yes
+		}
     }
 }
 
 #also dicatorship
 liege_allows_inheritance = {
 	custom_tooltip = {
-	text = "LIEGEALLOWSINHERITANCETOOLTIP"
-	hidden_tooltip = {
-    trigger_if = {
-        limit = {
-            OR = {
-                crownlaw_title = {
-                    has_law = public_order_0
-                }
-                has_law = disobedience_1
-            }
-        }
-        always = yes
-    }
-    trigger_else_if = {
-        limit = {
-            crownlaw_title = {
-                NOT = { has_law = public_order_0 }
-            }
-        }
-        OR = {
-            AND = {
-                crownlaw_title = { has_law = military_vassal_legitimacy_0 }
-                holder_scope = { is_military_trigger = yes }
-            }
-            AND = {
-                crownlaw_title = { has_law = republic_vassal_legitimacy_0 }
-                holder_scope = { is_civil_trigger = yes }
-            }
-            AND = {
-                crownlaw_title = { has_law = theocracy_vassal_legitimacy_0 }
-                holder_scope = { is_rectorial_trigger = yes }
-            }
-        }
-    }
-	}
+		text = "LIEGEALLOWSINHERITANCETOOLTIP"
+		hidden_tooltip = {
+			OR = {
+				crownlaw_title = {
+					OR = {
+						has_law = centralization_0
+						has_law = law_voting_power_0
+						is_hereditary_religion = yes
+					}
+				}
+				has_law = disobedience_1
+				AND = {
+					crownlaw_title = { has_law = military_vassal_legitimacy_0 }
+					holder_scope = { is_military_trigger = yes }
+				}
+				AND = {
+					crownlaw_title = { has_law = republic_vassal_legitimacy_0 }
+					holder_scope = { is_civil_trigger = yes }
+				}
+				AND = {
+					crownlaw_title = { has_law = theocracy_vassal_legitimacy_0 }
+					holder_scope = { is_rectorial_trigger = yes }
+				}
+				holder_scope = { independent = yes }
+			}
+		}
 	}
 }
 
 liege_allows_elections = {
 	custom_tooltip = {
-	text = "LIEGEALLOWSELECTIONSTOOLTIP"
-	hidden_tooltip = {
-    trigger_if = {
-        limit = {
-            OR = {
-                crownlaw_title = {
-                    has_law = public_order_0
-                }
-                has_law = disobedience_1
-            }
-        }
-        always = yes
-    }
-    trigger_else_if = {
-        limit = {
-            crownlaw_title = {
-                NOT = { has_law = public_order_0 }
-            }
-        }
-        OR = {
-            AND = {
-                crownlaw_title = { has_law = military_vassal_legitimacy_1 }
-                holder_scope = { is_military_trigger = yes }
-            }
-            AND = {
-                crownlaw_title = { has_law = republic_vassal_legitimacy_1 }
-                holder_scope = { is_civil_trigger = yes }
-            }
-            AND = {
-                crownlaw_title = { has_law = theocracy_vassal_legitimacy_1 }
-                holder_scope = { is_rectorial_trigger = yes }
-            }
-        }
-    }
-	}
+		text = "LIEGEALLOWSELECTIONSTOOLTIP"
+		hidden_tooltip = {
+			OR = {
+				crownlaw_title = {
+					has_law = centralization_0
+					is_elective_religion = yes
+				}
+				has_law = disobedience_1
+				AND = {
+					crownlaw_title = { has_law = military_vassal_legitimacy_1 }
+					holder_scope = { is_military_trigger = yes }
+				}
+				AND = {
+					crownlaw_title = { has_law = republic_vassal_legitimacy_1 }
+					holder_scope = { is_civil_trigger = yes }
+				}
+				AND = {
+					crownlaw_title = { has_law = theocracy_vassal_legitimacy_1 }
+					holder_scope = { is_rectorial_trigger = yes }
+				}
+				holder_scope = { independent = yes }
+			}
+		}
 	}
 }
 
@@ -469,59 +443,46 @@ liege_wants_elections = {
 #	Liege has authority
 
 requires_open_succession = {
-	liege_wants_elections = yes
+	tier = baron
 	holder_scope = {
 		OR = {
-			government = npc_civil_government
-			government = npc_rectorial_government
+			is_theocracy = yes
+			is_republic = yes
 		}
 	}
-	OR = {
-		tier = BARON
-		NOR = {
-			crownlaw_title = {
-				has_law = public_order_0
-			}
-			has_law = disobedience_1
+}
+
+requires_turkish_succession = {
+	holder_scope = {
+		OR = {
+			government = pirate_kingdom
+			government = hivemind_government
 		}
 	}
 }
 
 liege_allows_appointment = {
-    trigger_if = {
-        limit = {
-            OR = {
-                crownlaw_title = {
-                    has_law = public_order_0
-                }
-                has_law = disobedience_1
-            }
-        }
-        always = yes
-    }
-    trigger_else_if = {
-        limit = {
-            crownlaw_title = {
-                NOT = { has_law = public_order_0 }
-            }
-        }
-        OR = {
-            AND = {
-                crownlaw_title = { has_law = military_vassal_legitimacy_2 }
-                holder_scope = { is_military_trigger = yes }
-            }
-            AND = {
-                crownlaw_title = { has_law = republic_vassal_legitimacy_2 }
-                holder_scope = { is_civil_trigger = yes }
-            }
-            AND = {
-                crownlaw_title = { has_law = theocracy_vassal_legitimacy_2 }
-                holder_scope = { is_rectorial_trigger = yes }
-            }
-        }
-    }
+	custom_tooltip = {
+		text = "APPOINTMENTTOOLTIP"
+		hidden_tooltip = {
+			OR = {
+				AND = {
+					crownlaw_title = { has_law = military_vassal_legitimacy_2 }
+					holder_scope = { is_military_trigger = yes }
+				}
+				AND = {
+					crownlaw_title = { has_law = republic_vassal_legitimacy_2 }
+					holder_scope = { is_civil_trigger = yes }
+				}
+				AND = {
+					crownlaw_title = { has_law = theocracy_vassal_legitimacy_2 }
+					holder_scope = { is_rectorial_trigger = yes }
+				}
+				holder_scope = { government = military_command }
+			}
+		}
+	}
 }
-
 senate_allows_taking_succession_control_from_them = {
     #trigger_if = {
     #    limit = {
@@ -750,5 +711,33 @@ laws_allow_candidate_vote = {
     NOR = {
         has_law = succ_feudal_elective
         has_law = succ_tanistry
+    }
+}
+
+is_patriarchy = {
+    OR = {
+        has_law = gender_status_0
+        has_law = gender_status_1
+    }
+}
+
+is_matriarchy = {
+    OR = {
+        has_law = gender_status_3
+        has_law = gender_status_4
+    }
+}
+
+matriarchal_succession = {
+    OR = {
+        has_law = enatic_cognatic_succession
+        has_law = enatic_succession
+    }
+}
+
+patriarchal_succession = {
+    OR = {
+        has_law = cognatic_succession
+        has_law = agnatic_succession
     }
 }

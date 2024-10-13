@@ -289,7 +289,7 @@ decisions = {
 					AND = {
 						OR = {
 							religion = terran_imperial
-							religion = imperial_cult
+							religion = terran_imperial_cult
 							religion = astrist
 							religion = neo_feudal
 						}

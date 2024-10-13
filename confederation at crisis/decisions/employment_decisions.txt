@@ -28,11 +28,11 @@ decisions = {
 			}
 		}
 		allow = {
-			scaled_wealth = 0.25
+			wealth = 5
 			NOT = { has_character_modifier = in_seclusion }
 		}
 		effect = {
-			scaled_wealth = -0.25
+			wealth = -5
 			create_character = {
 				culture = ROOT
 			}
@@ -47,6 +47,10 @@ decisions = {
 			}
 			random_list = {
 				50 = {
+					modifier = {
+						factor = 0
+						primary_title = { is_patriarchy = yes }
+					}
 					create_random_diplomat = {
 						random_traits = yes
 						religion = ROOT
@@ -63,6 +67,10 @@ decisions = {
 					}
 				}
 				50 = {
+					modifier = {
+						factor = 0
+						primary_title = { is_matriarchy = yes }
+					}
 					create_random_diplomat = {
 						random_traits = yes
 						religion = ROOT
@@ -327,12 +335,12 @@ decisions = {
 		}
 		allow = {
 			prestige = 25
-			scaled_wealth = 0.25
+			wealth = 5
 			NOT = { has_character_modifier = in_seclusion }
 		}
 		effect = {
 			prestige = -25
-			scaled_wealth = -0.25
+			wealth = -5
 			hidden_tooltip = {
 				if = {
 					limit = { any_owned_bloodline = { has_bloodline_flag = bloodline_inspire_commanders } }
@@ -374,11 +382,11 @@ decisions = {
 			}
 		}
 		allow = {
-			scaled_wealth = 0.25
+			wealth = 0.25
 			NOT = { has_character_modifier = in_seclusion }
 		}
 		effect = {
-			scaled_wealth = -0.25
+			wealth = -0.25
 			create_character = {
 				culture = ROOT
 			}
@@ -393,6 +401,10 @@ decisions = {
 			}
 			random_list = {
 				50 = {
+					modifier = {
+						factor = 0
+						primary_title = { is_patriarchy = yes }
+					}
 					create_random_steward = {
 						random_traits = yes
 						religion = ROOT
@@ -409,6 +421,10 @@ decisions = {
 					}
 				}
 				50 = {
+					modifier = {
+						factor = 0
+						primary_title = { is_matriarchy = yes }
+					}
 					create_random_steward = {
 						random_traits = yes
 						religion = ROOT
@@ -665,11 +681,11 @@ decisions = {
 			}
 		}
 		allow = {
-			scaled_wealth = 0.25
+			wealth = 5
 			NOT = { has_character_modifier = in_seclusion }
 		}
 		effect = {
-			scaled_wealth = -0.25
+			wealth = -5
 			create_character = {
 				culture = ROOT
 			}
@@ -684,6 +700,10 @@ decisions = {
 			}
 			random_list = {
 				50 = {
+					modifier = {
+						factor = 0
+						primary_title = { is_patriarchy = yes }
+					}
 					create_random_intriguer = {
 						random_traits = yes
 						religion = ROOT
@@ -700,6 +720,10 @@ decisions = {
 					}
 				}
 				50 = {
+					modifier = {
+						factor = 0
+						primary_title = { is_matriarchy = yes }
+					}
 					create_random_intriguer = {
 						random_traits = yes
 						religion = ROOT
@@ -957,12 +981,12 @@ decisions = {
 		}
 		allow = {
 			piety = 25
-			scaled_wealth = 0.25
+			wealth = 5
 			NOT = { has_character_modifier = in_seclusion }
 		}
 		effect = {
 			piety = -25
-			scaled_wealth = -0.25
+			wealth = -5
 			create_character = {
 				culture = ROOT
 			}
@@ -977,6 +1001,10 @@ decisions = {
 			}
 			random_list = {
 				50 = {
+					modifier = {
+						factor = 0
+						primary_title = { is_patriarchy = yes }
+					}
 					create_random_priest = {
 						random_traits = yes
 						religion = ROOT
@@ -993,6 +1021,10 @@ decisions = {
 					}
 				}
 				50 = {
+					modifier = {
+						factor = 0
+						primary_title = { is_matriarchy = yes }
+					}
 					create_random_priest = {
 						random_traits = yes
 						religion = ROOT
@@ -1250,11 +1282,11 @@ decisions = {
 			}
 		}
 		allow = {
-			scaled_wealth = 0.20
+			wealth = 5
 			NOT = { has_character_modifier = in_seclusion }
 		}
 		effect = {
-			scaled_wealth = -0.20
+			wealth = -5
 			create_character = {
 				culture = ROOT
 			}
@@ -1399,11 +1431,11 @@ decisions = {
 			}
 		}
 		allow = {
-			scaled_wealth = 0.20
+			wealth = 5
 			NOT = { has_character_modifier = in_seclusion }
 		}
 		effect = {
-			scaled_wealth = -0.20
+			wealth = -5
 			create_character = {
 				culture = ROOT
 			}

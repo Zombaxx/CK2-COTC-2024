@@ -2059,8 +2059,7 @@ character_event = { #Progress event type 2! #Unhappy with work (gain stressed or
     }
     option = { # I'd rather not involve anyone else.
         name = EVTOPTB_JD_10062
-		change_variable = { which = stress_var value = 20 }
-		modify_stress_effect = yes
+        degrade_mood_effect = yes
     }
     after = {
     	hidden_effect = {
@@ -2217,8 +2216,13 @@ character_event = { #Progress event type 4!  #stay up all night or not
         		}
         	}
         	writing_about_relationships = {
-				change_variable = { which = stress_var value = 15 }
-				modify_stress_effect = yes
+        		random = {
+        			chance = 90
+        			degrade_mood_effect = yes
+        			hidden_effect = {
+        				character_event = { id = 38282 } #Notify Stressed
+        			}
+        		}
         	}
         	writing_about_administration = {
         		random = {

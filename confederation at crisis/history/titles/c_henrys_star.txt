@@ -1,6 +1,6 @@
 2723.1.1 = {
 	liege = "d_lancelot"
-	law = succ_ultimogeniture
+	#law = succ_ultimogeniture #i'm sorry i know this is like a lore thing but otherwise the clones won't inherit
 	effect = {
 		add_law = true_cognatic_succession
 		holder_scope = {

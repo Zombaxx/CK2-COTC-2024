@@ -693,82 +693,82 @@ hive_barony;CP Network;;;;;;;;;;;;;x
 hive_baronies;CP Networks;;;;;;;;;;;;;x
 monarchy_emperor_imperial_cult;God-Emperor;;;;;;;;;;;;;x
 monarchy_emperor_imperial_cult_female;God-Empress;;;;;;;;;;;;;x
-monarchy_emperor_foa_imperial_cult;Your Holiness;;;;;;;;;;;;;x
-monarchy_emperor_foa_imperial_cult_female;Your Holiness;;;;;;;;;;;;;x
+monarchy_emperor_foa_terran_imperial_cult;Your Holiness;;;;;;;;;;;;;x
+monarchy_emperor_foa_terran_imperial_cult_female;Your Holiness;;;;;;;;;;;;;x
 monarchy_emperor_title_ruler_consort_imperial_cult;Emperor Consort;;;;;;;;;;;;;x
 monarchy_emperor_title_ruler_consort_imperial_cult_female;Empress Consort;;;;;;;;;;;;;x
-monarchy_empire_of_imperial_cult;Holy Empire of;;;;;;;;;;;;;x
-monarchy_empire_imperial_cult;Holy Empire;;;;;;;;;;;;;x
-monarchy_empires_imperial_cult;Holy Empires;;;;;;;;;;;;;x
+monarchy_empire_of_terran_imperial_cult;Holy Empire of;;;;;;;;;;;;;x
+monarchy_empire_terran_imperial_cult;Holy Empire;;;;;;;;;;;;;x
+monarchy_empires_terran_imperial_cult;Holy Empires;;;;;;;;;;;;;x
 monarchy_king_imperial_cult;God-King;;;;;;;;;;;;;x
 monarchy_king_imperial_cult_female;God-Queen;;;;;;;;;;;;;x
-monarchy_king_foa_imperial_cult;Your Holiness;;;;;;;;;;;;;x
-monarchy_king_foa_imperial_cult_female;Your Holiness;;;;;;;;;;;;;x
+monarchy_king_foa_terran_imperial_cult;Your Holiness;;;;;;;;;;;;;x
+monarchy_king_foa_terran_imperial_cult_female;Your Holiness;;;;;;;;;;;;;x
 monarchy_king_title_ruler_consort_imperial_cult;King Consort;;;;;;;;;;;;;x
 monarchy_king_title_ruler_consort_imperial_cult_female;Queen Consort;;;;;;;;;;;;;x
-monarchy_kingdom_of_imperial_cult;Holy Kingdom of;;;;;;;;;;;;;x
-monarchy_kingdom_imperial_cult;Holy Kingdom;;;;;;;;;;;;;x
-monarchy_kingdoms_imperial_cult;Holy Kingdoms;;;;;;;;;;;;;x
-monarchy_duke_imperial_cult;Seraph;;;;;;;;;;;;;x
-monarchy_duke_imperial_cult_female;Seraph;;;;;;;;;;;;;x
-monarchy_duke_foa_imperial_cult;Your Grace;;;;;;;;;;;;;x
-monarchy_duke_foa_imperial_cult_female;Your Grace;;;;;;;;;;;;;x
-monarchy_duke_title_ruler_consort_imperial_cult;Seraph's Consort;;;;;;;;;;;;;x
-monarchy_duke_title_ruler_consort_imperial_cult_female;Seraph's Consort;;;;;;;;;;;;;x
-monarchy_duchy_of_imperial_cult;Seraphate of;;;;;;;;;;;;;x
-monarchy_duchy_imperial_cult;Seraphate;;;;;;;;;;;;;x
-monarchy_duchies_imperial_cult;Seraphates;;;;;;;;;;;;;x
-monarchy_monarchy_count_imperial_cult;Guardian;;;;;;;;;;;;;x
-monarchy_count_imperial_cult_female;Guardian;;;;;;;;;;;;;x
-monarchy_count_foa_imperial_cult;My Lord;;;;;;;;;;;;;x
-monarchy_count_foa_imperial_cult_female;My Lady;;;;;;;;;;;;;x
-monarchy_count_title_ruler_consort_imperial_cult;Guardian's Consort;;;;;;;;;;;;;x
-monarchy_count_title_ruler_consort_imperial_cult_female;Guardian's Consort;;;;;;;;;;;;;x
-monarchy_baron_imperial_cult;Warden;;;;;;;;;;;;;x
-monarchy_baron_imperial_cult_female;Warden;;;;;;;;;;;;;x
-monarchy_baron_foa_imperial_cult;My Lord;;;;;;;;;;;;;x
-monarchy_baron_foa_imperial_cult_female;My Lady;;;;;;;;;;;;;x
-monarchy_baron_title_ruler_consort_imperial_cult;Warden's Consort;;;;;;;;;;;;;x
-monarchy_baron_title_ruler_consort_imperial_cult_female;Warden's Consort;;;;;;;;;;;;;x
-temple_emperor_imperial_cult;God-Emperor;;;;;;;;;;;;;x
-temple_emperor_imperial_cult_female;God-Empress;;;;;;;;;;;;;x
-temple_emperor_foa_imperial_cult;Your Holiness;;;;;;;;;;;;;x
-temple_emperor_foa_imperial_cult_female;Your Holiness;;;;;;;;;;;;;x
-temple_emperor_title_ruler_consort_imperial_cult;Emperor Consort;;;;;;;;;;;;;x
-temple_emperor_title_ruler_consort_imperial_cult_female;Empress Consort;;;;;;;;;;;;;x
-temple_empire_of_imperial_cult;Holy Empire of;;;;;;;;;;;;;x
-temple_empire_imperial_cult;Holy Empire;;;;;;;;;;;;;x
-temple_empires_imperial_cult;Holy Empires;;;;;;;;;;;;;x
-temple_king_imperial_cult;God-King;;;;;;;;;;;;;x
-temple_king_imperial_cult_female;God-Queen;;;;;;;;;;;;;x
-temple_king_foa_imperial_cult;Your Holiness;;;;;;;;;;;;;x
-temple_king_foa_imperial_cult_female;Your Holiness;;;;;;;;;;;;;x
-temple_king_title_ruler_consort_imperial_cult;King Consort;;;;;;;;;;;;;x
-temple_king_title_ruler_consort_imperial_cult_female;Queen Consort;;;;;;;;;;;;;x
-temple_kingdom_of_imperial_cult;Holy Kingdom of;;;;;;;;;;;;;x
-temple_kingdom_imperial_cult;Holy Kingdom;;;;;;;;;;;;;x
-temple_kingdoms_imperial_cult;Holy Kingdoms;;;;;;;;;;;;;x
-temple_duke_imperial_cult;Apostle;;;;;;;;;;;;;x
-temple_duke_imperial_cult_female;Apostle;;;;;;;;;;;;;x
-temple_duke_foa_imperial_cult;Your Grace;;;;;;;;;;;;;x
-temple_duke_foa_imperial_cult_female;Your Grace;;;;;;;;;;;;;x
-temple_duke_title_ruler_consort_imperial_cult;Apostle's Consort;;;;;;;;;;;;;x
-temple_duke_title_ruler_consort_imperial_cult_female;Apostle's Consort;;;;;;;;;;;;;x
-temple_duchy_of_imperial_cult;See of;;;;;;;;;;;;;x
-temple_duchy_imperial_cult;See;;;;;;;;;;;;;x
-temple_duchies_imperial_cult;Sees;;;;;;;;;;;;;x
-temple_count_imperial_cult;Archbishop;;;;;;;;;;;;;x
-temple_count_imperial_cult_female;Archbishop;;;;;;;;;;;;;x
-temple_count_foa_imperial_cult;My Lord;;;;;;;;;;;;;x
-temple_count_foa_imperial_cult_female;My Lady;;;;;;;;;;;;;x
-temple_count_title_ruler_consort_imperial_cult;Archbishop's Consort;;;;;;;;;;;;;x
-temple_count_title_ruler_consort_imperial_cult_female;Archbishop's Consort;;;;;;;;;;;;;x
-temple_baron_imperial_cult;Bishop;;;;;;;;;;;;;x
-temple_baron_imperial_cult_female;Bishop;;;;;;;;;;;;;x
-temple_baron_foa_imperial_cult;My Lord;;;;;;;;;;;;;x
-temple_baron_foa_imperial_cult_female;My Lady;;;;;;;;;;;;;x
-temple_baron_title_ruler_consort_imperial_cult;Bishop's Consort;;;;;;;;;;;;;x
-temple_baron_title_ruler_consort_imperial_cult_female;Bishop's Consort;;;;;;;;;;;;;x
+monarchy_kingdom_of_terran_imperial_cult;Holy Kingdom of;;;;;;;;;;;;;x
+monarchy_kingdom_terran_imperial_cult;Holy Kingdom;;;;;;;;;;;;;x
+monarchy_kingdoms_terran_imperial_cult;Holy Kingdoms;;;;;;;;;;;;;x
+monarchy_duke_terran_imperial_cult;Seraph;;;;;;;;;;;;;x
+monarchy_duke_terran_imperial_cult_female;Seraph;;;;;;;;;;;;;x
+monarchy_duke_foa_terran_imperial_cult;Your Grace;;;;;;;;;;;;;x
+monarchy_duke_foa_terran_imperial_cult_female;Your Grace;;;;;;;;;;;;;x
+monarchy_duke_title_ruler_consort_terran_imperial_cult;Seraph's Consort;;;;;;;;;;;;;x
+monarchy_duke_title_ruler_consort_terran_imperial_cult_female;Seraph's Consort;;;;;;;;;;;;;x
+monarchy_duchy_of_terran_imperial_cult;Seraphate of;;;;;;;;;;;;;x
+monarchy_duchy_terran_imperial_cult;Seraphate;;;;;;;;;;;;;x
+monarchy_duchies_terran_imperial_cult;Seraphates;;;;;;;;;;;;;x
+monarchy_monarchy_count_terran_imperial_cult;Guardian;;;;;;;;;;;;;x
+monarchy_count_terran_imperial_cult_female;Guardian;;;;;;;;;;;;;x
+monarchy_count_foa_terran_imperial_cult;My Lord;;;;;;;;;;;;;x
+monarchy_count_foa_terran_imperial_cult_female;My Lady;;;;;;;;;;;;;x
+monarchy_count_title_ruler_consort_terran_imperial_cult;Guardian's Consort;;;;;;;;;;;;;x
+monarchy_count_title_ruler_consort_terran_imperial_cult_female;Guardian's Consort;;;;;;;;;;;;;x
+monarchy_baron_terran_imperial_cult;Warden;;;;;;;;;;;;;x
+monarchy_baron_terran_imperial_cult_female;Warden;;;;;;;;;;;;;x
+monarchy_baron_foa_terran_imperial_cult;My Lord;;;;;;;;;;;;;x
+monarchy_baron_foa_terran_imperial_cult_female;My Lady;;;;;;;;;;;;;x
+monarchy_baron_title_ruler_consort_terran_imperial_cult;Warden's Consort;;;;;;;;;;;;;x
+monarchy_baron_title_ruler_consort_terran_imperial_cult_female;Warden's Consort;;;;;;;;;;;;;x
+temple_emperor_terran_imperial_cult;God-Emperor;;;;;;;;;;;;;x
+temple_emperor_terran_imperial_cult_female;God-Empress;;;;;;;;;;;;;x
+temple_emperor_foa_terran_imperial_cult;Your Holiness;;;;;;;;;;;;;x
+temple_emperor_foa_terran_imperial_cult_female;Your Holiness;;;;;;;;;;;;;x
+temple_emperor_title_ruler_consort_terran_imperial_cult;Emperor Consort;;;;;;;;;;;;;x
+temple_emperor_title_ruler_consort_terran_imperial_cult_female;Empress Consort;;;;;;;;;;;;;x
+temple_empire_of_terran_imperial_cult;Holy Empire of;;;;;;;;;;;;;x
+temple_empire_terran_imperial_cult;Holy Empire;;;;;;;;;;;;;x
+temple_empires_terran_imperial_cult;Holy Empires;;;;;;;;;;;;;x
+temple_king_terran_imperial_cult;God-King;;;;;;;;;;;;;x
+temple_king_terran_imperial_cult_female;God-Queen;;;;;;;;;;;;;x
+temple_king_foa_terran_imperial_cult;Your Holiness;;;;;;;;;;;;;x
+temple_king_foa_terran_imperial_cult_female;Your Holiness;;;;;;;;;;;;;x
+temple_king_title_ruler_consort_terran_imperial_cult;King Consort;;;;;;;;;;;;;x
+temple_king_title_ruler_consort_terran_imperial_cult_female;Queen Consort;;;;;;;;;;;;;x
+temple_kingdom_of_terran_imperial_cult;Holy Kingdom of;;;;;;;;;;;;;x
+temple_kingdom_terran_imperial_cult;Holy Kingdom;;;;;;;;;;;;;x
+temple_kingdoms_terran_imperial_cult;Holy Kingdoms;;;;;;;;;;;;;x
+temple_duke_terran_imperial_cult;Apostle;;;;;;;;;;;;;x
+temple_duke_terran_imperial_cult_female;Apostle;;;;;;;;;;;;;x
+temple_duke_foa_terran_imperial_cult;Your Grace;;;;;;;;;;;;;x
+temple_duke_foa_terran_imperial_cult_female;Your Grace;;;;;;;;;;;;;x
+temple_duke_title_ruler_consort_terran_imperial_cult;Apostle's Consort;;;;;;;;;;;;;x
+temple_duke_title_ruler_consort_terran_imperial_cult_female;Apostle's Consort;;;;;;;;;;;;;x
+temple_duchy_of_terran_imperial_cult;See of;;;;;;;;;;;;;x
+temple_duchy_terran_imperial_cult;See;;;;;;;;;;;;;x
+temple_duchies_terran_imperial_cult;Sees;;;;;;;;;;;;;x
+temple_count_terran_imperial_cult;Archbishop;;;;;;;;;;;;;x
+temple_count_terran_imperial_cult_female;Archbishop;;;;;;;;;;;;;x
+temple_count_foa_terran_imperial_cult;My Lord;;;;;;;;;;;;;x
+temple_count_foa_terran_imperial_cult_female;My Lady;;;;;;;;;;;;;x
+temple_count_title_ruler_consort_terran_imperial_cult;Archbishop's Consort;;;;;;;;;;;;;x
+temple_count_title_ruler_consort_terran_imperial_cult_female;Archbishop's Consort;;;;;;;;;;;;;x
+temple_baron_terran_imperial_cult;Bishop;;;;;;;;;;;;;x
+temple_baron_terran_imperial_cult_female;Bishop;;;;;;;;;;;;;x
+temple_baron_foa_terran_imperial_cult;My Lord;;;;;;;;;;;;;x
+temple_baron_foa_terran_imperial_cult_female;My Lady;;;;;;;;;;;;;x
+temple_baron_title_ruler_consort_terran_imperial_cult;Bishop's Consort;;;;;;;;;;;;;x
+temple_baron_title_ruler_consort_terran_imperial_cult_female;Bishop's Consort;;;;;;;;;;;;;x
 job_prime;Prime Secretary;Secrétaire de l'état;;;;;;;;;;;;x
 job_chancellor;Secretary of State;Secrétaire de l'état;;;;;;;;;;;;x
 job_solidarity;Secretary of Ecology and Solidarity;Secrétaire de la défense;;;;;;;;;;;;x

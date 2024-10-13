@@ -49,14 +49,27 @@ male_can_hold_minor_title_trigger = {
 
 		is_female = no
 
-		custom_tooltip = {
-			text = tooltip_not_matriarchal_liege_religion_feature
+		OR = {
+			trigger_if = {
+				limit = { is_landed = yes }
 
-			NOR = {
-				has_religion_feature = religion_matriarchal
-
+				primary_title = {
+					OR = {
+						has_law = gender_status_2
+						has_law = gender_status_1
+						has_law = gender_status_0
+					}
+				}
+			}
+			trigger_else = {
 				liege = {
-					has_religion_feature = religion_matriarchal
+					primary_title = {
+						OR = {
+						has_law = gender_status_2
+						has_law = gender_status_1
+						has_law = gender_status_0
+						}
+					}
 				}
 			}
 		}
@@ -77,42 +90,14 @@ female_can_hold_minor_title_trigger = {
 		is_female = yes
 
 		OR = {
-			custom_tooltip = {
-				text = tooltip_feminist_liege_vanilla_religion
-
-				OR = {
-					religion = cathar
-					religion = messalian
-					religion = bogomilist
-					religion = mazdaki
-				}
-
-				religion = liege
-			}
-
-			custom_tooltip = {
-				text = tooltip_feminist_liege_religion_feature
-
-				OR = {
-					has_religion_feature = religion_equal
-					has_religion_feature = religion_matriarchal
-				}
-
-				liege = {
-					OR = {
-						has_religion_feature = religion_equal
-						has_religion_feature = religion_matriarchal
-					}
-				}
-			}
-
 			trigger_if = {
 				limit = { is_landed = yes }
 
 				primary_title = {
 					OR = {
-						has_law = status_of_women_3
-						has_law = status_of_women_4
+						has_law = gender_status_2
+						has_law = gender_status_3
+						has_law = gender_status_4
 					}
 				}
 			}
@@ -120,8 +105,9 @@ female_can_hold_minor_title_trigger = {
 				liege = {
 					primary_title = {
 						OR = {
-							has_law = status_of_women_3
-							has_law = status_of_women_4
+						has_law = gender_status_2
+						has_law = gender_status_3
+						has_law = gender_status_4
 						}
 					}
 				}

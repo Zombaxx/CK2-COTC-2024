@@ -6,11 +6,13 @@ targetted_decisions = {
 
 		from_potential = {
 			ai = no
+			always = no #doesn't seem to do anything
 		}
 		ai_check_interval = 10 
- potential = {
+		potential = {
 			prisoner = yes
 			host = { character = FROM }
+			always = no #doesn't seem to do anything
 		}
 		allow = {
 			any_claim = {

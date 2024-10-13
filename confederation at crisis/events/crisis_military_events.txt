@@ -716,3 +716,24 @@ character_event = {
 		primary_title = { add_law = succ_appointment }
 	}
 }
+
+character_event = {
+	id = military.3006
+	
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			has_ambition = obj_win_a_war
+			NOT = { has_character_flag = obj_win_war_won_war }
+		}
+	}
+
+	option = {
+		name = OK
+		FROM = {
+			set_character_flag = obj_win_war_won_war
+		}
+	}
+}

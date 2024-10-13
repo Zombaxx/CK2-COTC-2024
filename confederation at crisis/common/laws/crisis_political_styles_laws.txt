@@ -84,7 +84,41 @@ laws = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 10
+			modifier = {
+				factor = 2
+				holder_scope = { top_liege = {
+					primary_title = {
+						has_law = gender_status_0
+					}
+				} }
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					religion = neo_feudal
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					is_female = yes 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = { top_liege = {
+					primary_title = {
+						is_patriarchy = no 
+					}
+				} }
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					culture = cat_splice_ge
+				}
+			}
 		}
 	}
 
@@ -141,7 +175,125 @@ laws = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 10
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = {
+						is_female = yes 
+					}
+					has_law = gender_status_0 #rolling back patriarchy
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = { top_liege = {
+						primary_title = {
+							is_patriarchy = no 
+						}
+					} }
+					has_law = gender_status_0 #rolling back patriarchy
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = {
+						culture = cat_splice_ge
+					}
+					has_law = gender_status_0 #rolling back patriarchy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = {
+						religion = neo_feudal 
+					}
+					has_law = gender_status_0 #rolling back patriarchy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = { top_liege = {
+						primary_title = {
+							has_law = gender_status_0 
+						}
+					} }
+					has_law = gender_status_0 #rolling back patriarchy
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = { top_liege = {
+						primary_title = {
+							is_patriarchy = yes 
+						}
+					} }
+					is_patriarchy = no #advancing patriarchy
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = {
+						religion = neo_feudal
+					}
+					is_patriarchy = no #advancing patriarchy
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = {
+						is_female = no 
+					}
+					current_heir = {
+						is_female = no 
+					}
+					OR = {
+						holder_scope = {
+							trait = clone 
+						}
+						current_heir = {
+							trait = clone 
+						}
+					}
+					is_patriarchy = no #advancing patriarchy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = { top_liege = {
+						primary_title = {
+							is_patriarchy = no 
+						}
+					} }
+					is_patriarchy = no #advancing patriarchy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = {
+						culture = cat_splice_ge #the cat_splice trait was set to be enatic so i assume the goal is catgirl empires 
+					}
+					is_patriarchy = no #advancing patriarchy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = {
+						is_female = yes 
+					}
+					is_patriarchy = no #advancing patriarchy
+				}
+			}
 		}
 	}
 
@@ -199,7 +351,124 @@ laws = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 10
+			modifier = {
+				factor = 2
+				OR = {
+					AND = {
+						is_matriarchy = no
+						holder_scope = {
+							is_female = yes
+						}
+					}
+					AND = {
+						is_patriarchy = no
+						holder_scope = {
+							is_female = no
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { top_liege = {
+					primary_title = {
+						has_law = gender_status_2
+					}
+				} }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					AND = {
+						is_patriarchy = yes
+						top_liege = {
+							primary_title = {
+								is_matriarchy = yes
+							}
+						}
+					}
+					AND = {
+						is_matriarchy = yes
+						top_liege = {
+							primary_title = {
+								is_patriarchy = yes
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				is_hereditary_religion = no #pro democracy lean to equality
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = {
+						religion = neo_feudal #only religion that isn't feminist
+					}
+					is_matriarchy = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = {
+						culture = cat_splice_ge #the cat_splice trait was set to be enatic so i assume the goal is catgirl empires 
+					}
+					is_patriarchy = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = {
+						is_military_trigger = yes 
+					}
+					is_patriarchy = yes #militaries would seem more ok with patriarchies to me
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = {
+						religion = neo_feudal #only religion that isn't feminist
+					}
+					is_patriarchy = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = { top_liege = {
+						primary_title = {
+							is_patriarchy = yes
+						}
+					} }
+					is_patriarchy = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = { top_liege = {
+						primary_title = {
+							is_matriarchy = yes
+						}
+					} }
+					is_matriarchy = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = {
+						culture = cat_splice_ge
+					}
+					is_matriarchy = yes
+				}
+			}
 		}
 	}
 
@@ -256,7 +525,125 @@ laws = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 10
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = {
+						is_female = no 
+					}
+					has_law = gender_status_4 #rolling back matriarchy
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = { top_liege = {
+						primary_title = {
+							is_matriarchy = no
+						}
+					} }
+					has_law = gender_status_4 #rolling back matriarchy
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = {
+						religion = neo_feudal
+					}
+					has_law = gender_status_4 #rolling back matriarchy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = {
+						culture = cat_splice_ge
+					}
+					has_law = gender_status_4 #rolling back matriarchy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = { top_liege = {
+						primary_title = {
+							has_law = gender_status_4
+						}
+					} }
+					has_law = gender_status_4 #rolling back matriarchy
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = { top_liege = {
+						primary_title = {
+							is_matriarchy = yes 
+						}
+					} }
+					is_matriarchy = no #advancing matriarchy
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = {
+						culture = cat_splice_ge #the cat_splice trait was set to be enatic so i assume the goal is catgirl empires 
+					}
+					is_matriarchy = no #advancing matriarchy
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					holder_scope = {
+						is_female = yes 
+					}
+					current_heir = {
+						is_female = yes 
+					}
+					OR = {
+						holder_scope = {
+							trait = clone 
+						}
+						current_heir = {
+							trait = clone 
+						}
+					}
+					is_matriarchy = no #advancing matriarchy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = {
+						is_female = no 
+					}
+					is_matriarchy = no #advancing matriarchy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = {
+						religion = neo_feudal
+					}
+					is_matriarchy = no #advancing matriarchy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = { top_liege = {
+						primary_title = {
+							is_matriarchy = no
+						}
+					} }
+					is_matriarchy = no #advancing matriarchy
+				}
+			}
 		}
 	}
 
@@ -311,7 +698,41 @@ laws = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 10
+			modifier = {
+				factor = 2
+				holder_scope = { top_liege = {
+					primary_title = {
+						has_law = gender_status_4 
+					}
+				} }
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					culture = cat_splice_ge #the cat_splice trait was set to be enatic so i assume the goal is catgirl empires 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					is_female = no 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = { top_liege = {
+					primary_title = {
+						is_matriarchy = no
+					}
+				} }
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					religion = neo_feudal
+				}
+			}
 		}
 	}
 }

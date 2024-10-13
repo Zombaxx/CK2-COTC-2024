@@ -29,15 +29,15 @@ law_groups = {
 		law_type = realm
 		allowed_for_councillors = yes
 	}
-	military_budget = {
+	military_budget = {#Unfinished from what i can tell
 		law_type = realm
 		allowed_for_councillors = yes
 	}
-	civil_budget = {
+	civil_budget = {#Unfinished from what i can tell
 		law_type = realm
 		allowed_for_councillors = yes
 	}
-	rectorial_budget = {
+	rectorial_budget = {#Unfinished from what i can tell
 		law_type = realm
 		allowed_for_councillors = yes
 	}
@@ -662,7 +662,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -679,7 +679,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -697,7 +697,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -890,7 +890,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -906,7 +906,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -923,7 +923,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -940,7 +940,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -956,7 +956,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -973,7 +973,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -1141,7 +1141,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -1158,7 +1158,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -1176,7 +1176,7 @@ laws = {
 				holder_scope = {
 					OR = {
 						religion = terran_imperial
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = neo_feudal
 						religion = astrist
 						religion = space_pirate
@@ -1271,7 +1271,7 @@ laws = {
 						OR = {
 							trait = ambitious
 							religion = terran_imperial
-							religion = imperial_cult
+							religion = terran_imperial_cult
 							religion = neo_feudal
 							religion = astrist
 							religion = space_pirate
@@ -1950,7 +1950,9 @@ laws = {
 		temple_opinion = -10
 		group = military_budget
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			always = yes
 		}
@@ -1988,7 +1990,9 @@ laws = {
 		group = military_budget
 		default = yes
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			OR = {
 				has_law = military_budget_2
@@ -2037,7 +2041,9 @@ laws = {
 	military_budget_2 = {
 		group = military_budget
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			OR = {
 				has_law = military_budget_3
@@ -2079,7 +2085,9 @@ laws = {
 	military_budget_3 = {
 		group = military_budget
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			holder_scope = { monthly_income = 0 }
 		}
@@ -2112,7 +2120,9 @@ laws = {
 		temple_opinion = -10
 		group = civil_budget
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			always = yes
 		}
@@ -2150,7 +2160,9 @@ laws = {
 		group = civil_budget
 		default = yes
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			OR = {
 				has_law = civil_budget_2
@@ -2199,7 +2211,9 @@ laws = {
 	civil_budget_2 = {
 		group = civil_budget
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			OR = {
 				has_law = civil_budget_3
@@ -2241,7 +2255,9 @@ laws = {
 	civil_budget_3 = {
 		group = civil_budget
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			holder_scope = { monthly_income = 0 }
 		}
@@ -2274,7 +2290,9 @@ laws = {
 		temple_opinion = -10
 		group = rectorial_budget
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			always = yes
 		}
@@ -2312,7 +2330,9 @@ laws = {
 		group = rectorial_budget
 		default = yes
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			OR = {
 				has_law = rectorial_budget_2
@@ -2361,7 +2381,9 @@ laws = {
 	rectorial_budget_2 = {
 		group = rectorial_budget
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			OR = {
 				has_law = rectorial_budget_3
@@ -2403,7 +2425,9 @@ laws = {
 	rectorial_budget_3 = {
 		group = rectorial_budget
 
-		potential = { holder_scope = { NOT = { government = neofeudal_government } } }
+		potential = { 
+			always = no #holder_scope = { NOT = { government = neofeudal_government } } 
+		}
 		allow = {
 			holder_scope = { monthly_income = 0 }
 		}

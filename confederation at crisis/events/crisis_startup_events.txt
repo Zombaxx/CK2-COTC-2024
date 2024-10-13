@@ -312,3 +312,166 @@ character_event = {
 		#add_law = succession_voting_power_1
 	}
 }
+
+character_event = { #some rulers started with no crown laws and unable to select any, having to create a new title for the game to assign them the defaults properly
+	id = startup.6
+	hide_window = yes
+	only_rulers = yes
+	is_triggered_only = yes
+	trigger = {
+		primary_title = {
+			is_crown_law_title = yes
+			OR = {
+				NOR = {
+					has_law = centralization_0
+					has_law = centralization_1
+					has_law = centralization_2
+					has_law = centralization_3
+					has_law = centralization_4
+				}
+				NOR = {
+					has_law = public_order_0
+					has_law = public_order_1
+					has_law = public_order_2
+				}
+				NOR = {
+					has_law = military_vassal_legitimacy_0
+					has_law = military_vassal_legitimacy_1
+					has_law = military_vassal_legitimacy_2
+				}
+				NOR = {
+					has_law = republic_vassal_legitimacy_0
+					has_law = republic_vassal_legitimacy_1
+					has_law = republic_vassal_legitimacy_2
+				}
+				NOR = {
+					has_law = theocracy_vassal_legitimacy_0
+					has_law = theocracy_vassal_legitimacy_1
+					has_law = theocracy_vassal_legitimacy_2
+				}
+				NOR = {
+					has_law = out_of_realm_inheritance_law_0
+					has_law = out_of_realm_inheritance_law_1
+				}
+			}
+		}
+	}
+
+	immediate = {
+		primary_title = {
+			if = {
+				limit = {
+					NOR = {
+						has_law = centralization_0
+						has_law = centralization_1
+						has_law = centralization_2
+						has_law = centralization_3
+						has_law = centralization_4
+					}
+				}
+				add_law = {
+					law = centralization_0
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_law = public_order_0
+						has_law = public_order_1
+						has_law = public_order_2
+					}
+				}
+				add_law = {
+					law = public_order_0
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_law = military_vassal_legitimacy_0
+						has_law = military_vassal_legitimacy_1
+						has_law = military_vassal_legitimacy_2
+					}
+				}
+				add_law = {
+					law = military_vassal_legitimacy_2
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_law = republic_vassal_legitimacy_0
+						has_law = republic_vassal_legitimacy_1
+						has_law = republic_vassal_legitimacy_2
+					}
+				}
+				add_law = {
+					law = republic_vassal_legitimacy_1
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_law = theocracy_vassal_legitimacy_0
+						has_law = theocracy_vassal_legitimacy_1
+						has_law = theocracy_vassal_legitimacy_2
+					}
+				}
+				add_law = {
+					law = theocracy_vassal_legitimacy_2
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_law = out_of_realm_inheritance_law_0
+						has_law = out_of_realm_inheritance_law_1
+					}
+				}
+				add_law = {
+					law = out_of_realm_inheritance_law_0
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+		}
+	}
+}
+
+character_event = { #fix piety/prestige costs from previous event
+	id = startup.7
+	hide_window = yes
+	only_rulers = yes
+	is_triggered_only = yes
+	trigger = {
+		prestige < 0
+	}
+
+	immediate = {
+		prestige = 250
+	}
+}
+
+character_event = { #fix piety/prestige costs from previous event
+	id = startup.8
+	hide_window = yes
+	only_rulers = yes
+	is_triggered_only = yes
+	trigger = {
+		piety < 0
+	}
+
+	immediate = {
+		piety = 250
+	}
+}

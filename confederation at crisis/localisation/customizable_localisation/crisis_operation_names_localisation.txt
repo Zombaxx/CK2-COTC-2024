@@ -67,7 +67,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				religion_group = religious_group
-				religion = imperial_cult
+				religion = terran_imperial_cult
 			}
 		}
 		localisation_key = String_religious_ship_name_adjective
@@ -113,7 +113,7 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { religion_group = religious_group }
-			NOT = { religion = imperial_cult }
+			NOT = { religion = terran_imperial_cult }
 		}
 		localisation_key = String_mythological_ship_name_noun
 		weight_multiplier = { factor = 1 }
@@ -122,7 +122,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				religion_group = religious_group
-				religion = imperial_cult
+				religion = terran_imperial_cult
 			}
 		}
 		localisation_key = String_religious_ship_name_noun
@@ -202,7 +202,7 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = { religion_group = religious_group }
-			NOT = { religion = imperial_cult }
+			NOT = { religion = terran_imperial_cult }
 		}
 		localisation_key = String_mythological_ship_name_noun
 		weight_multiplier = { factor = 1 }
@@ -211,7 +211,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				religion_group = religious_group
-				religion = imperial_cult
+				religion = terran_imperial_cult
 			}
 		}
 		localisation_key = String_religious_ship_name_noun

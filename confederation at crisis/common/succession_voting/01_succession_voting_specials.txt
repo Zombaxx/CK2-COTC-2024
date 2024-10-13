@@ -5,7 +5,7 @@
 # FromFromFrom scope - The title owner's candidate
 # The voter will vote for the top score candidate calculated from this script.
 
-byzantine_elective = {
+byzantine_elective = { #voting_rules
 	elector_selection = {
 		days = -5 		
 		additive_modifier = { #Emperor is always an Elector.
@@ -4812,7 +4812,7 @@ byzantine_elective = {
 	#####################################################################################################################################################
 	#####################################################################################################################################################
 
-hre_feudal_elective = {
+hre_feudal_elective = { #voting_rules
 
 	elector_vote_strength = {
 		days = 1

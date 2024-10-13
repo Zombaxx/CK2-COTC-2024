@@ -1,5 +1,42 @@
 # this selects a random province of a realm, then generate a character that is adult and came from there
 # intention is for example generate senators, representing a specific province.
+grant_genetically_modified_trait_effect = {
+	if = {
+		limit = { 
+			culture = bio_ge 
+		}
+		random_list = {
+			33 = {
+				add_trait = heavy_worlder
+			}
+			33 = {
+				add_trait = organic_wifi
+			}
+			33 = {
+				add_trait = cat_splice
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			culture = heavy_worlder_ge 
+		}
+		add_trait = heavy_worlder
+	}
+	else_if = {
+		limit = { 
+			culture = cat_splice_ge 
+		}
+		add_trait = cat_splice
+	}
+	else_if = {
+		limit = { 
+			culture = organic_wifi_ge 
+		}
+		add_trait = organic_wifi
+	}
+}
+
 generate_random_lowborn_adult_from_realm_effect = {
     random_realm_province = {
         generate_random_lowborn_adult_from_province_effect = yes
@@ -37,6 +74,19 @@ generate_random_soldier_adult_from_province_effect = {
 					culture_group = terran_group 
 				}
 				terran_scrambled_effect = yes
+			}
+			if = {
+				limit = { 
+					culture_group = ge_bio_group 
+				}
+				grant_genetically_modified_trait_effect = yes
+			}
+			if = {
+				limit = { 
+					religion = astrist
+					liege = { trait = spacer_physiology }
+				}
+				add_trait = spacer_physiology
 			}
         }
         random = {
@@ -83,6 +133,19 @@ generate_random_lowborn_adult_from_province_effect = {
 				}
 				terran_scrambled_effect = yes
 			}
+			if = {
+				limit = { 
+					culture_group = ge_bio_group 
+				}
+				grant_genetically_modified_trait_effect = yes
+			}
+			if = {
+				limit = { 
+					religion = astrist
+					liege = { trait = spacer_physiology }
+				}
+				add_trait = spacer_physiology
+			}
         }
         random = {
             chance = 1
@@ -127,6 +190,19 @@ generate_random_highborn_adult_from_province_effect = {
 					culture_group = terran_group 
 				}
 				terran_scrambled_effect = yes
+			}
+			if = {
+				limit = { 
+					culture_group = ge_bio_group 
+				}
+				grant_genetically_modified_trait_effect = yes
+			}
+			if = {
+				limit = { 
+					religion = astrist
+					liege = { trait = spacer_physiology }
+				}
+				add_trait = spacer_physiology
 			}
         }
         random = {
@@ -417,10 +493,27 @@ spawn_good_commander_effect = {
 			}
 			terran_scrambled_effect = yes
 		}
+			if = {
+				limit = { 
+					culture_group = ge_bio_group 
+				}
+				grant_genetically_modified_trait_effect = yes
+			}
+			if = {
+				limit = { 
+					religion = astrist
+					liege = { trait = spacer_physiology }
+				}
+				add_trait = spacer_physiology
+			}
 		save_event_target_as = target_stupid
 	}
     random_list = {
         50 = {
+			modifier = {
+				factor = 0
+				primary_title = { is_patriarchy = yes }
+			}
             create_random_soldier = {
                 random_traits = yes
                 culture = event_target:target_stupid
@@ -437,6 +530,10 @@ spawn_good_commander_effect = {
             }
         }
         50 = {
+			modifier = {
+				factor = 0
+				primary_title = { is_matriarchy = yes }
+			}
             create_random_soldier = {
                 random_traits = yes
                 culture = event_target:target_stupid
@@ -653,10 +750,27 @@ spawn_great_commander_effect = {
 			}
 			terran_scrambled_effect = yes
 		}
+			if = {
+				limit = { 
+					culture_group = ge_bio_group 
+				}
+				grant_genetically_modified_trait_effect = yes
+			}
+			if = {
+				limit = { 
+					religion = astrist
+					liege = { trait = spacer_physiology }
+				}
+				add_trait = spacer_physiology
+			}
 		save_event_target_as = target_stupid
 	}
     random_list = {
         50 = {
+			modifier = {
+				factor = 0
+				primary_title = { is_patriarchy = yes }
+			}
             create_random_soldier = {
                 random_traits = yes
                 culture = event_target:target_stupid
@@ -673,6 +787,10 @@ spawn_great_commander_effect = {
             }
         }
         50 = {
+			modifier = {
+				factor = 0
+				primary_title = { is_matriarchy = yes }
+			}
             create_random_soldier = {
                 random_traits = yes
                 culture = event_target:target_stupid
@@ -941,10 +1059,27 @@ spawn_fantastic_commander_effect = {
 			}
 			terran_scrambled_effect = yes
 		}
+			if = {
+				limit = { 
+					culture_group = ge_bio_group 
+				}
+				grant_genetically_modified_trait_effect = yes
+			}
+			if = {
+				limit = { 
+					religion = astrist
+					liege = { trait = spacer_physiology }
+				}
+				add_trait = spacer_physiology
+			}
 		save_event_target_as = target_stupid
 	}
     random_list = {
         50 = {
+			modifier = {
+				factor = 0
+				primary_title = { is_patriarchy = yes }
+			}
             create_random_soldier = {
                 random_traits = yes
                 culture = event_target:target_stupid
@@ -961,6 +1096,10 @@ spawn_fantastic_commander_effect = {
             }
         }
         50 = {
+			modifier = {
+				factor = 0
+				primary_title = { is_matriarchy = yes }
+			}
             create_random_soldier = {
                 random_traits = yes
                 culture = event_target:target_stupid
@@ -1298,731 +1437,4 @@ spawn_fantastic_commander_effect = {
 		event_target:target_stupid = { banish = yes }
 		event_target:target_stupid = { death = { death_reason = death_natural } }
     }
-}
-
-# Creating university graduates
-# PREV scope should be a province
-create_lawyer_effect = {
-	random_list = {
-		10 = {
-			create_random_diplomat = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 30
-				female = yes
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 30
-				female = no
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 30
-				female = yes
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 30
-				female = yes
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 30
-				female = yes
-				culture = PREV
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 40
-				female = yes
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 40
-				female = no
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 40
-				female = yes
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 40
-				female = yes
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_diplomat = {
-				age = 40
-				female = yes
-				culture = PREV
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-	}
-	new_character = { add_trait = lawyer }
-}
-create_economist_effect = {
-	random_list = {
-		10 = {
-			create_random_steward = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 30
-				female = yes
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 30
-				female = no
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 30
-				female = yes
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 30
-				female = yes
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 30
-				female = yes
-				culture = PREV
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 40
-				female = yes
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 40
-				female = no
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 40
-				female = yes
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 40
-				female = yes
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_steward = {
-				age = 40
-				female = yes
-				culture = PREV
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-	}
-	new_character = { add_trait = economist }
-}
-create_scientist_effect = {
-	random_list = {
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = yes
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = no
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = yes
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = yes
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = yes
-				culture = PREV
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = yes
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = no
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = yes
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = yes
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = yes
-				culture = PREV
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-	}
-	new_character = { add_trait = scientist }
-}
-create_physician_effect = {
-	random_list = {
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = yes
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = no
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = yes
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = yes
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 30
-				female = yes
-				culture = PREV
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = yes
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = no
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = yes
-				culture = PREV
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = yes
-				culture = ROOT
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = no
-				culture = ROOT
-				religion = ROOT
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-		10 = {
-			create_random_priest = {
-				age = 40
-				female = yes
-				culture = PREV
-				religion = PREV
-				employer = ROOT
-				dynasty = actually_culture
-				random_traits = yes
-			}
-		}
-	}
-	new_character = { add_trait = physician }
 }

@@ -80,8 +80,12 @@ decisions = {
                 status = yes
             }
             d_terran_augustus_emperor = {
+				holder_scope = {
+					remove_trait = augustus
+				}
                 usurp_title = ROOT
             }
+			add_trait = augustus
         }
     }
 
@@ -100,7 +104,19 @@ decisions = {
         allow = {
             is_monarchy = yes
             ruled_years = 10
-            piety = 10000
+            #piety = 10000 #that seems way too much even for a player
+			custom_tooltip = {
+				text = 5000_piety_tooltip
+				hidden_tooltip = {
+					OR = {
+						piety = 5000 #a more reasonably high number in a world without crusades and the like
+						AND = {
+							piety = 3000
+							ai = yes #AI is stupid and needs help
+						}
+					}
+				}
+			}
         }
 
         effect = {
@@ -137,11 +153,28 @@ decisions = {
             d_terran_augustus_emperor = {
                 usurp_title = ROOT
             }
-            piety = -5000
+			add_trait = augustus
+            piety = -2500
         }
 
         ai_will_do = {
-            factor = 0
+            factor = 4
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
         }
     }
 }

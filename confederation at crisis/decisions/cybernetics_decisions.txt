@@ -11,20 +11,7 @@ decisions = {
 				ai = yes
 				has_character_flag = flag_cybernetics_menu_open
 			}
-			OR = {
-				religion_group = transhumanist_group
-				trait = lunatic
-				AND = {
-					trait = pragmatic
-					age = 60
-				}
-			}
-		}
-		allow = {
-			is_pregnant = no
-			NOT = { has_character_flag = flag_busy }
 			location = {
-				TECH_CYBERNETICS = 5
 				any_province_lord = {
 					NOT = { war_with = ROOT }
 					any_demesne_title = {
@@ -33,6 +20,13 @@ decisions = {
 						has_building = tp_cybernetics_lab_q_1
 					}
 				}
+			}
+		}
+		allow = {
+			is_pregnant = no
+			NOT = { has_character_flag = flag_busy }
+			location = {
+				TECH_CYBERNETICS = 5
 			}
 			OR = {
 				wealth = 2000
@@ -50,6 +44,14 @@ decisions = {
 				trait = pragmatic
 				piety = 500
 			}
+			#OR = {
+			#	religion_group = transhumanist_group
+			#	trait = lunatic
+			#	AND = {
+			#		trait = pragmatic
+			#		age = 60
+			#	}
+			#}
 		}
 		effect = {
 			if = {
@@ -4830,10 +4832,22 @@ targetted_decisions = {
 		filter = home_court
 		ai_target_filter = home_court
 		from_potential = {
+			is_ruler = yes
+			is_landed = yes # Must actually have land somewhere
 			NOT = { trait = incapable }
 			prisoner = no
+			location = {
+				any_province_lord = {
+					NOT = { war_with = ROOT }
+					any_demesne_title = {
+						tier = baron
+						location = { province_id = PREVPREVPREV }
+						has_building = tp_cybernetics_lab_q_1
+					}
+				}
+			}
 		}
-		ai_check_interval = 40
+		ai_check_interval = 80
 		potential = {
 			NOT = { trait = dni }
 			prisoner = no
@@ -4841,6 +4855,7 @@ targetted_decisions = {
 			liege = { character = FROM }
 		}
 		allow = {
+			show_only_failed_conditions = yes
 			NOT = { FROM = { has_character_flag = flag_busy } }
 			NOT = { has_character_flag = flag_busy }
 			OR = {
@@ -4860,17 +4875,6 @@ targetted_decisions = {
 				AND = {
 					location = { TECH_CYBERNETICS = 5 }
 					FROM = { wealth = 5 }
-				}
-				location = { TECH_CYBERNETICS = 6 }
-			}
-			location = {
-				any_province_lord = {
-					NOT = { war_with = FROM }
-					any_demesne_title = {
-						tier = baron
-						location = { province_id = PREVPREVPREV }
-						has_building = tp_cybernetics_lab_q_1
-					}
 				}
 			}
 			FROM = {
@@ -4937,7 +4941,6 @@ targetted_decisions = {
 				limit = {
 					location = {
 						TECH_CYBERNETICS = 5
-						NOT = { TECH_CYBERNETICS = 6 }
 					}
 				}
 				FROM = { wealth = -5 }
@@ -4965,29 +4968,27 @@ targetted_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
-			}
-			modifier = {
-				factor = 5
-				FROM = {
+				factor = 0
+				NAND = {
 					religion_group = transhumanist_group
 					NOT = { religion = bio_directionist }
 				}
 			}
 			modifier = {
-				factor = 0.2
-				FROM = {
-					religion_group = religious_group
-					NOT = { trait = pragmatic }
+				factor = 0.1
+				ROOT = {
+					NOT = {
+						is_child_of = FROM
+					}
 				}
 			}
 			modifier = {
-				factor = 2
-				FROM = { trait = friendly }
-			}
-			modifier = {
-				factor = 0.5
-				FROM = { trait = cold }
+				factor = 0.1
+				ROOT = {
+					NOT = {
+						is_close_relative = FROM
+					}
+				}
 			}
 			modifier = {
 				factor = 1.25
@@ -5076,8 +5077,20 @@ targetted_decisions = {
 		filter = home_court
 		ai_target_filter = home_court
 		from_potential = {
+			is_ruler = yes
+			is_landed = yes # Must actually have land somewhere
 			NOT = { trait = incapable }
 			prisoner = no
+			location = {
+				any_province_lord = {
+					NOT = { war_with = ROOT }
+					any_demesne_title = {
+						tier = baron
+						location = { province_id = PREVPREVPREV }
+						has_building = tp_cybernetics_lab_q_1
+					}
+				}
+			}
 		}
 		ai_check_interval = 40
 		potential = {
@@ -5087,6 +5100,7 @@ targetted_decisions = {
 			liege = { character = FROM }
 		}
 		allow = {
+			show_only_failed_conditions = yes
 			NOT = { FROM = { has_character_flag = flag_busy } }
 			NOT = { has_character_flag = flag_busy }
 			OR = {
@@ -5095,6 +5109,7 @@ targetted_decisions = {
 					NOT = { has_dlc = "Reapers" }
 				}
 				trait = one_handed
+				NOT = { age = 16 }
 			}
 			OR = {
 				FROM = { wealth = 500 }
@@ -5129,22 +5144,6 @@ targetted_decisions = {
 					trait = pragmatic
 					piety = 100
 				}
-			}
-			location = {
-				any_province_lord = {
-					NOT = { war_with = FROM }
-					any_demesne_title = {
-						tier = baron
-						location = { province_id = PREVPREVPREV }
-						has_building = tp_cybernetics_lab_q_1
-					}
-				}
-			}
-			OR = {
-				NOT = { age = 16 }
-				trait = severely_injured
-				trait = incapable
-				opinion = { who = FROM value = 50 }
 			}
 		}
 		effect = {
@@ -5260,9 +5259,6 @@ targetted_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
-			}
-			modifier = {
 				factor = 0
 				NOT = { trait = maimed }
 				NOT = { has_dlc = "Reapers" }
@@ -5273,26 +5269,27 @@ targetted_decisions = {
 				has_dlc = "Reapers"
 			}
 			modifier = {
-				factor = 5
-				FROM = {
+				factor = 0
+				NAND = {
 					religion_group = transhumanist_group
 					NOT = { religion = bio_directionist }
 				}
 			}
 			modifier = {
-				factor = 0.2
-				FROM = {
-					religion_group = religious_group
-					NOT = { trait = pragmatic }
+				factor = 0.1
+				ROOT = {
+					NOT = {
+						is_child_of = FROM
+					}
 				}
 			}
 			modifier = {
-				factor = 2
-				FROM = { trait = friendly }
-			}
-			modifier = {
-				factor = 0.5
-				FROM = { trait = cold }
+				factor = 0.1
+				ROOT = {
+					NOT = {
+						is_close_relative = FROM
+					}
+				}
 			}
 			modifier = {
 				factor = 1.25
@@ -5401,8 +5398,20 @@ targetted_decisions = {
 		filter = home_court
 		ai_target_filter = home_court
 		from_potential = {
+			is_ruler = yes
+			is_landed = yes # Must actually have land somewhere
 			NOT = { trait = incapable }
 			prisoner = no
+			location = {
+				any_province_lord = {
+					NOT = { war_with = ROOT }
+					any_demesne_title = {
+						tier = baron
+						location = { province_id = PREVPREVPREV }
+						has_building = tp_cybernetics_lab_q_1
+					}
+				}
+			}
 		}
 		ai_check_interval = 40
 		potential = {
@@ -5413,9 +5422,13 @@ targetted_decisions = {
 			liege = { character = FROM }
 		}
 		allow = {
+			show_only_failed_conditions = yes
 			NOT = { FROM = { has_character_flag = flag_busy } }
 			NOT = { has_character_flag = flag_busy }
-			trait = one_legged
+			OR = {
+				trait = one_legged
+				NOT = { age = 16 }
+			}
 			OR = {
 				FROM = { wealth = 500 }
 				AND = {
@@ -5449,22 +5462,6 @@ targetted_decisions = {
 					trait = pragmatic
 					piety = 100
 				}
-			}
-			location = {
-				any_province_lord = {
-					NOT = { war_with = FROM }
-					any_demesne_title = {
-						tier = baron
-						location = { province_id = PREVPREVPREV }
-						has_building = tp_cybernetics_lab_q_1
-					}
-				}
-			}
-			OR = {
-				NOT = { age = 16 }
-				trait = severely_injured
-				trait = incapable
-				opinion = { who = FROM value = 50 }
 			}
 		}
 		effect = {
@@ -5580,33 +5577,31 @@ targetted_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
-			}
-			modifier = {
 				factor = 0
 				NOT = { trait = one_legged }
 			}
 			modifier = {
-				factor = 5
-				FROM = {
+				factor = 0
+				NAND = {
 					religion_group = transhumanist_group
 					NOT = { religion = bio_directionist }
 				}
 			}
 			modifier = {
-				factor = 0.2
-				FROM = {
-					religion_group = religious_group
-					NOT = { trait = pragmatic }
+				factor = 0.1
+				ROOT = {
+					NOT = {
+						is_child_of = FROM
+					}
 				}
 			}
 			modifier = {
-				factor = 2
-				FROM = { trait = friendly }
-			}
-			modifier = {
-				factor = 0.5
-				FROM = { trait = cold }
+				factor = 0.1
+				ROOT = {
+					NOT = {
+						is_close_relative = FROM
+					}
+				}
 			}
 			modifier = {
 				factor = 1.25
@@ -5715,8 +5710,20 @@ targetted_decisions = {
 		filter = home_court
 		ai_target_filter = home_court
 		from_potential = {
+			is_ruler = yes
+			is_landed = yes # Must actually have land somewhere
 			NOT = { trait = incapable }
 			prisoner = no
+			location = {
+				any_province_lord = {
+					NOT = { war_with = ROOT }
+					any_demesne_title = {
+						tier = baron
+						location = { province_id = PREVPREVPREV }
+						has_building = tp_cybernetics_lab_q_1
+					}
+				}
+			}
 		}
 		ai_check_interval = 40
 		potential = {
@@ -5727,9 +5734,13 @@ targetted_decisions = {
 			liege = { character = FROM }
 		}
 		allow = {
+			show_only_failed_conditions = yes
 			NOT = { FROM = { has_character_flag = flag_busy } }
 			NOT = { has_character_flag = flag_busy }
-			trait = mangled
+			OR = {
+				trait = mangled
+				NOT = { age = 16 }
+			}
 			OR = {
 				AND = {
 					location = { TECH_CYBERNETICS = 3 }
@@ -5762,22 +5773,6 @@ targetted_decisions = {
 					trait = pragmatic
 					piety = 100
 				}
-			}
-			location = {
-				any_province_lord = {
-					NOT = { war_with = FROM }
-					any_demesne_title = {
-						tier = baron
-						location = { province_id = PREVPREVPREV }
-						has_building = tp_cybernetics_lab_q_1
-					}
-				}
-			}
-			OR = {
-				NOT = { age = 16 }
-				trait = severely_injured
-				trait = incapable
-				opinion = { who = FROM value = 50 }
 			}
 		}
 		effect = {
@@ -5891,21 +5886,37 @@ targetted_decisions = {
 				factor = 0.1
 			}
 			modifier = {
-				factor = 0
-				NOT = { trait = mangled }
+				factor = 100
+				trait = mangled
 			}
 			modifier = {
-				factor = 5
-				FROM = {
+				factor = 0.1
+				NOT = {
 					religion_group = transhumanist_group
-					NOT = { religion = bio_directionist }
 				}
 			}
 			modifier = {
-				factor = 0.2
+				factor = 0.1
 				FROM = {
-					religion_group = religious_group
-					NOT = { trait = pragmatic }
+					NOT = {
+						religion_group = transhumanist_group
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				ROOT = {
+					NOT = {
+						is_child_of = FROM
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				ROOT = {
+					NOT = {
+						is_close_relative = FROM
+					}
 				}
 			}
 			modifier = {

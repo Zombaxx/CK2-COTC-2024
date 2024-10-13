@@ -1,0 +1,265 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EMPEROR_OF_TERRA;Terran Emperor;;;;;;;;;;;;;x
+EMPRESS_OF_TERRA;Terran Empress;;;;;;;;;;;;;x
+PLACEHOLDER;Entropy;;;;;;;;;;;;;x
+restore_confed_anarchy;Restore the Confederation;;;;;;;;;;;;;x
+restore_confed_anarchy_desc;End the Age of Warlords;;;;;;;;;;;;;x
+request_senator_candidates_from_provinces;Find senatorial candidates;;;;;;;;;;;;;x
+request_senator_candidates_from_provinces_desc;Recruit potential senators from among the local populace;;;;;;;;;;;;;x
+EVTPARLDESC_FIND_SENATOR_CANDIDATES;You've scoured your demesne for candidates;;;;;;;;;;;;;x
+EVTPARL_GRANTING_SENATORB;Welcome aboard;;;;;;;;;;;;;x
+fill_seats_with_available_people;Fill open senate seats;;;;;;;;;;;;;x
+fill_seats_with_available_people_desc;Fill senate seats with available candidates;;;;;;;;;;;;;x
+succ_open_elective;Open Elective;;;;;;;;;;;;;x
+succ_open_elective_desc;Rulers are effectively randomly chosen;;;;;;;;;;;;;x
+faction_liege_loyalist_title;Liege Loyalists;;;;;;;;;;;;;x
+faction_liege_loyalist_desc;The members of this faction support the ruler and the current government;;;;;;;;;;;;;x
+political_terran_group_opinion;Pro-Terra Political Opinion;;;;;;;;;;;;;x
+religious_terran_group_opinion;Pro-Terra Religious Opinion;;;;;;;;;;;;;x
+d_bio_directionist;The Directorate;;;;;;;;;;;;;x
+warlord;Warlord;;;;;;;;;;;;;x
+warlord_desc;This character seized power during the crisis and maintains their position by force;;;;;;;;;;;;;x
+nick_the_strange;the Strange;;;;;;;;;;;;;x
+party_timer;Had a Party;;;;;;;;;;;;;x
+negative_money_1;In debt;;;;;;;;;;;;;x
+negative_money_2;In severe debt;;;;;;;;;;;;;x
+negative_money_3;In extreme debt;;;;;;;;;;;;;x
+mobster_DESC;"§Y"I've never been one for fancy debate. I prefer the wordless honesty of ionized lithium plasma."\n - Captain Kaoru Maeda, 3001§!\n\nLike regular mobsters, but in space. Somewhat more organized than common pirates, at least in theory. Can freely raid non-pirate systems, and have the ability to navigate hyperspace within nebulas.";;;;;;;;;;;;;x
+plot_kidnapping_short;Plot kidnapping;;;;;;;;;;;;;x
+plot_kidnapping_long;Plot kidnapping;;;;;;;;;;;;;x
+plot_kidnapping_title;Kidnapping;;;;;;;;;;;;;x
+plot_kidnapping_desc;Kidnap this character;;;;;;;;;;;;;x
+student_of_strategy;Student of Strategy;;;;;;;;;;;;;x
+evt_534_opt_a;Good for them;;;;;;;;;;;;;x
+evt_534_opt_b;Good for them;;;;;;;;;;;;;x
+evt_534_opt_c;Good for them;;;;;;;;;;;;;x
+terran_imperial_cult;Imperial Cult;;;;;;;;;;;;;x
+EVTOPTB_WOL_11110;I will push through it, i don't need anyone else;;;;;;;;;;;;;x
+twod_thinking;2D Thinking;;;;;;;;;;;;;x
+twod_thinking_desc;This character has trouble grasping the 3-dimensionality of galactic warfare;;;;;;;;;;;;;x
+get_relative_dni_decision_desc;Install a Direct Neural Interface on this character;;;;;;;;;;;;;x
+obj_find_lover_title;Fall in Love;;;;;;;;;;;;;x
+obj_find_lover_desc;[Root.GetFullName] wants to find a romantic companion;;;;;;;;;;;;;x
+obj_win_a_war_title;Win a War;;;;;;;;;;;;;x
+obj_win_a_war_desc;[Root.GetFullName] wants to prove her valor on the battlefield;;;;;;;;;;;;;x
+obj_convert_a_province_title;Convert a Province;;;;;;;;;;;;;x
+obj_convert_a_province_desc;[Root.GetFullName] wants convert a province to the [This.Religion.GetName] creed;;;;;;;;;;;;;x
+obj_adopt_a_lifestyle_title;Adopt a Lifestyle;;;;;;;;;;;;;x
+obj_adopt_a_lifestyle_desc;[Root.GetFullName] wants get a hobby;;;;;;;;;;;;;x
+player_no_ambition;No ambition;;;;;;;;;;;;;x
+player_no_ambition_desc;Pick and ambition to give your character a goal;;;;;;;;;;;;;x
+obj_expand_realm_title;Expand the Realm;;;;;;;;;;;;;x
+obj_expand_realm_desc;Expand your realm by force;;;;;;;;;;;;;x
+obj_amass_wealth_2_title;Amass Wealth;;;;;;;;;;;;;x
+obj_amass_wealth_2_desc;Enough is never enough;;;;;;;;;;;;;x
+obj_amass_wealth_3_title;Amass Wealth;;;;;;;;;;;;;x
+obj_amass_wealth_3_desc;Enough is never enough;;;;;;;;;;;;;x
+obj_amass_wealth_4_title;Amass Wealth;;;;;;;;;;;;;x
+obj_amass_wealth_4_desc;Enough is never enough;;;;;;;;;;;;;x
+obj_become_exalted_2_title;Become Exalted;;;;;;;;;;;;;x
+obj_become_exalted_2_desc;Write your name in the history books;;;;;;;;;;;;;x
+obj_become_exalted_3_title;Become Exalted;;;;;;;;;;;;;x
+obj_become_exalted_3_desc;Write your name in the history books;;;;;;;;;;;;;x
+obj_become_exalted_4_title;Become Exalted;;;;;;;;;;;;;x
+obj_become_exalted_4_desc;Write your name in the history books;;;;;;;;;;;;;x
+obj_have_five_children_title;Have Five Children;;;;;;;;;;;;;x
+obj_have_five_children_desc;Secure your lineage;;;;;;;;;;;;;x
+obj_ten_children_title;Have Ten Children;;;;;;;;;;;;;x
+obj_ten_children_desc;Secure your lineage;;;;;;;;;;;;;x
+obj_have_fifteen_children_title;Have Fifteen Children;;;;;;;;;;;;;x
+obj_have_fifteen_children_desc;Secure your lineage;;;;;;;;;;;;;x
+obj_have_twenty_children_title;Have Twenty Children;;;;;;;;;;;;;x
+obj_have_twenty_children_desc;Secure your lineage;;;;;;;;;;;;;x
+obj_become_independent_title;Claim Independence;;;;;;;;;;;;;x
+obj_become_independent_desc;Throw of the foreign yoke and rule in your own name;;;;;;;;;;;;;x
+obj_increase_demesne_1_title;Increase Demesne;;;;;;;;;;;;;x
+obj_increase_demesne_1_desc;Expand your personal holdings;;;;;;;;;;;;;x
+obj_increase_demesne_2_title;Increase Demesne;;;;;;;;;;;;;x
+obj_increase_demesne_2_desc;Expand your personal holdings;;;;;;;;;;;;;x
+obj_increase_demesne_3_title;Increase Demesne;;;;;;;;;;;;;x
+obj_increase_demesne_3_desc;Expand your personal holdings;;;;;;;;;;;;;x
+obj_increase_demesne_4_title;Increase Demesne;;;;;;;;;;;;;x
+obj_increase_demesne_4_desc;Expand your personal holdings;;;;;;;;;;;;;x
+obj_increase_demesne_5_title;Increase Demesne;;;;;;;;;;;;;x
+obj_increase_demesne_5_desc;Expand your personal holdings;;;;;;;;;;;;;x
+obj_increase_demesne_6_title;Increase Demesne;;;;;;;;;;;;;x
+obj_increase_demesne_6_desc;Expand your personal holdings;;;;;;;;;;;;;x
+obj_increase_demesne_7_title;Increase Demesne;;;;;;;;;;;;;x
+obj_increase_demesne_7_desc;Expand your personal holdings;;;;;;;;;;;;;x
+obj_increase_demesne_8_title;Increase Demesne;;;;;;;;;;;;;x
+obj_increase_demesne_8_desc;Expand your personal holdings;;;;;;;;;;;;;x
+obj_increase_demesne_9_title;Increase Demesne;;;;;;;;;;;;;x
+obj_increase_demesne_9_desc;Expand your personal holdings;;;;;;;;;;;;;x
+obj_become_duke_title;Become [Root.GetDukeDuchess];;;;;;;;;;;;;x
+obj_become_duke_desc;[Root.GetFullName] wants to rule a duchy;;;;;;;;;;;;;x
+obj_become_multiduke_title;Become High [Root.GetDukeDuchess];;;;;;;;;;;;;x
+obj_become_multiduke_desc;[Root.GetFullName] wants to rule multiple duchies;;;;;;;;;;;;;x
+obj_become_emperor_title;Become [Root.GetEmpressEmperor];;;;;;;;;;;;;x
+obj_become_emperor_desc;[Root.GetFullName] wants to rule an empire;;;;;;;;;;;;;x
+obj_break_out_of_prison_title;Get out of Prison;;;;;;;;;;;;;x
+obj_break_out_of_prison_desc;[Root.GetFullName] would like to no longer be imprisoned;;;;;;;;;;;;;x
+obj_befriend_liege_title;Befriend Liege;;;;;;;;;;;;;x
+obj_befriend_liege_desc;[Root.GetFullName] would like to be in their liege's good graces;;;;;;;;;;;;;x
+obj_befriend_top_liege_title;Befriend Top Liege;;;;;;;;;;;;;x
+obj_befriend_top_liege_desc;[Root.GetFullName] would like to be in their liege's good graces;;;;;;;;;;;;;x
+obj_befriend_relhead_title;Befriend Head of Religion;;;;;;;;;;;;;x
+obj_befriend_relhead_desc;[Root.GetFullName] would like to be in their religious head's good graces;;;;;;;;;;;;;x
+obj_make_a_friend_title;Make a Friend;;;;;;;;;;;;;x
+obj_make_a_friend_desc;[Root.GetFullName] would like to have friends;;;;;;;;;;;;;x
+obj_spouse_councillor_title;Have Your Spouse on the Council;;;;;;;;;;;;;x
+obj_spouse_councillor_desc;[Root.GetFullName] would like their spouse to be a councillor;;;;;;;;;;;;;x
+obj_known_for_virtue_title;Bescome Known for Virtue;;;;;;;;;;;;;x
+obj_known_for_virtue_desc;Be known as a virtuous person;;;;;;;;;;;;;x
+obj_reign_20_years_title;Reign 20 Year;;;;;;;;;;;;;x
+obj_reign_20_years_desc;Reign for twenty years;;;;;;;;;;;;;x
+obj_great_council_title;Form a Great Council;;;;;;;;;;;;;x
+obj_great_council_desc;Fill your realm's council with the greatest minds in the galaxy;;;;;;;;;;;;;x
+call_senate_elections;Call senatorial elections;;;;;;;;;;;;;x
+call_senate_elections_desc;Call for elections in the senate;;;;;;;;;;;;;x
+EVTDESCRELATIONS503;You have made an enemy;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION30;Sometimes they actually do know better;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION50;Everybody likes me!;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION50;Do onto others as you would have them do onto you;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION80;I only need myself;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION100;In this moment i am euphoric;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION140;People will se what i want them to see;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION170;Fear is the mind killer;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION440;Rules are made to be broken;;;;;;;;;;;;;x
+faction_anti_public_order_title;Low Civil Order;;;;;;;;;;;;;x
+faction_anti_public_order_desc;The members of this faction do not appreciate the government telling them who they can and can't kill;;;;;;;;;;;;;x
+faction_anti_public_order_bill;Send demand to liege;;;;;;;;;;;;;x
+faction_anti_public_order_bill_desc;You have the support to pass a bill through the senate;;;;;;;;;;;;;x
+DR_obj_win_war;§Y[This.GetTitledFirstName]§! wins a war.;;;;;;;;;;;;x
+EVTTOOLTIPRELATIONS503;might become your rival;;;;;;;;;;;;;x
+THE_HIVE;the Hive;;;;;;;;;;;;;x
+THE_VOICE;the Voice;;;;;;;;;;;;;x
+THE_WORLD;the World;;;;;;;;;;;;;x
+STAT_PIETY_MENU_ASPIRATION;Aspiration;;;;;;;;;;;;;x
+plot_fabricate_evidence;Fabricate Evidence;;;;;;;;;;;;;x
+plot_fabricate_evidence_desc;[From.GetTitledFirstName] seeks to fabricate evidence of [This.GetBestName]'s misdeeds.;;;;;;;;;;;;;x
+plot_fabricate_evidence_short;Fabricate Evidence;;;;;;;;;;;;;x
+plot_fabricate_evidence_title;Fabricate Evidence of [This.GetBestName]'s misdeeds.;;;;;;;;;;;;;x
+plot_fabricate_treason_title;Fabricate Evidence of [This.GetTitledFirstName]'s Treason;Fabriquer des preuves de la trahison de [This.GetTitledFirstName];;;Fabricar pruebas de la traición de [This.GetTitledFirstName];;;;;;;;;x
+plot_fabricate_treason_desc;[From.GetTitledFirstName] wants to convince [This.Liege.GetTitledFirstName] that [This.GetFirstNameWithDynasty], [This.GetTitle] of [This.PrimaryTitle.GetName], is a traitor.;[From.GetTitledFirstName] veut convaincre [This.GetFirstNameWithDynasty], [This.GetTitle] de [This.PrimaryTitle.GetName], que [This.GetTitledFirstName] est un(e) traître(sse). ;;;[From.GetTitledFirstName] quiere convencer a [This.Liege.GetTitledFirstName] que [This.GetTitledFirstName] es un traidor.;;;;;;;;;x
+plot_fabricate_treason_short;Plot to Fabricate Treason;Complot pour fabriquer une fausse trahison;;;Complot para fabricar traición;;;;;;;;;x
+plot_fabricate_treason_liege_short;Plot to Fabricate Treason;Complot pour fabriquer une fausse trahison;;;Complot para fabricar traición;;;;;;;;;x
+plot_fabricate_treason_liege_title;Fabricate Evidence of [This.GetTitledFirstName]'s Treason;Fabriquer des preuves de la trahison de [This.GetTitledFirstName];Fabricate Evidence of [This.GetTitledFirstName]'s Treason;;Fabricar pruebas de la traición de [This.GetTitledFirstName];;;;;;;;;x
+plot_fabricate_treason_liege_desc;[From.GetTitledFirstName] wants to convince the realm that [This.GetTitledFirstName] is a traitor.;[From.GetTitledFirstName] veut convaincre le royaume que [This.GetTitledFirstName] est un traitre.;[From.GetTitledFirstName] wants to convince the realm that [This.GetTitledFirstName] is a traitor.;;[From.GetTitledFirstName] quiere convencer al reino que [This.GetTitledFirstName] es un traidor.;;;;;;;;;x
+ideology_is_despotic;Ideology is Despotic;;;;;;;;;;;;;x
+title_court_educator;Court Educator;;;;;;;;;;;;;x
+scorch_settlement;Scorch Settlement;;;;;;;;;;;;;x
+castle;Military;;;;;;;;;;;;;x
+city;Civilian;;;;;;;;;;;;;x
+temple;Administrative;;;;;;;;;;;;;x
+GALLEYS;Fleet Transports;;;;;;;;;;;;;x
+capital_county_independent_holder;Capital Province;;;;;;;;;;;;;x
+CONFIRM_DISBAND_NO_evt_SHIPS;\nNo special event fleets will be disbanded.;\nAucune flotte d'événement ne sera dissoute.;\nEs werden keine speziellen Eventflotten aufgelöst.;;\nNo se licenciará ninguna flota de eventos especiales.;;;;;;;;;x
+EVTOPTANEWDUEL34;Confirm;;;;;;;;;;;;;x
+capital_county_independent_holder;Capital Province;;;;;;;;;;;;;x
+EXILE_IMPRISONED_INTERACTION_3;The banishment will cost you §R$PIETY$§! $PIETYNAME$.;L'exil vous coûtera §R$PIETY$§! en $PIETYNAME$.;Die Verbannung wird Euch §R$PIETY$§! $PIETYNAME$ kosten.;;La Destierro te costará §R$PIETY$§! de $PIETYNAME$.;;;;;;;;;x
+DISBAND_AFFECTS_EMBARKED;§RWill cause all embarked troops to disband.§!;§RToutes les troupes embarquées se disperseront.§!;§RDies wird alle verschifften Armeen auflösen.§!;;§RLicenciará todas las tropas embarcadas.§!;;;;;;;;;x
+CONFIRM_DISBAND_NO_EVT_SHIPS;\nNo special event fleets will be disbanded.;\nAucune flotte d'événement ne sera dissoute.;\nEs werden keine speziellen Eventflotten aufgelöst.;;\nNo se licenciará ninguna flota de eventos especiales.;;;;;;;;;x
+CONFIRM_DISBAND_EVT_SHIPS;\n§RAll special event fleets will be disbanded!§!;\n§RToutes les flottes d'événement seront dissoutes !§!;\n§RAlle speziellen Eventflotten werden aufgelöst!§!;;\n§RSe licenciarán todas las flotas de eventos especiales§!;;;;;;;;;x
+EVTOPTANEWDUEL42;I'm almost disappointed;;;;;;;;;;;;;x
+EVTDESCNEWDUEL42;Your strike your enemy right between the eyes;;;;;;;;;;;;;x
+EVTOPT_WOL_11310_ARMY;Lead by example;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION6;Your ward appears to have moved on from looking up to you to looking up to themselves;;;;;;;;;;;;;x
+EVTTOOLTIPCLONE0; ;;;;;;;;;;;;;x
+EVTOOLTIPCLONE300; - ;;;;;;;;;;;;;x
+EVTDESCCLONE0;You stand in the cloning lab considering your options;;;;;;;;;;;;;x
+EVTDESCBATTLE200;You prepare to meet the enemy in battle;;;;;;;;;;;;;x
+EVTOPTABATTLE200;Confirm;;;;;;;;;;;;;x
+blackmail_plotter;Blackmail Plotter;;;;;;;;;;;;;x
+blackmail_plotter_desc;Blackmail [This.GetBestName] with knowledge of their plot;;;;;;;;;;;;;x
+String_empty_space; ;;;;;;;;;;;;;x
+EVTTOOLTIPRELATIONS10;Grows to like you;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION180;I swear i saw something under my bed;;;;;;;;;;;;;x
+county_conquest_desc;Conquer a single province;;;;;;;;;;;;;x
+EVTOPTBRELATIONS201;I don't need them to;;;;;;;;;;;;;x
+EVTDESCCONVERSION10004;Conversions are happening;;;;;;;;;;;;;x
+plot_take_revenge_short;Take Revenge;;;;;;;;;;;;;x
+plot_take_revenge;Plot Revenge;;;;;;;;;;;;;x
+plot_take_revenge_desc;Take revenge on your rival;;;;;;;;;;;;;x
+EVTTOOLTIPABOUTTENMONTHS;Will take about ten months;;;;;;;;;;;;;x
+INFLICTMINORINJURY;Inflicts a minor injury;;;;;;;;;;;;;x
+EVTDESCBATTLE201;The battle commences;;;;;;;;;;;;;x
+EVTOPTABATTLE201;Confirm;;;;;;;;;;;;;x
+EVTDESCBATTLE202;You have come through unscathed;;;;;;;;;;;;;x
+EVTOPTABATTLE202;Confirm;;;;;;;;;;;;;x
+String_anti_personnel_infantry_victory_over_anti_personnel_infantry;You push your opponent back from their cover;;;;;;;;;;;;;x
+EVTDESCCYBERNETICS5080;Every one of the 206 bones that compose your skeleton has been painstakingly replaced with an artificial replacement rendering you almost entirely invulnerable to certain physical threats like broken bones or leukemia;;;;;;;;;;;;;x
+EVTDESCCYBERNETICS5070;You take your first step out of the operating room, feeling the subtle sensation of joints clicking into place. It isn't the same as the real thing. It's cold to the touch, and your sense of balance is strangely shifted. But it will do the job all the same.;;;;;;;;;;;;x
+EVTDESCCYBERNETICS5010;The installation of your implant was successful.;;;;;;;;;;;;;x
+clone_death;a natural death;;;;;;;;;;;;;x
+STAT_PIETY_MENU_CREDIBILITY;Credibility;;;;;;;;;;;;;x
+NOT_DEMESENE_PROVINCE_STARTS;No province;;;;;;;;;;;;;x
+STAT_PIETY_MENU_RESPECT;Respect;;;;;;;;;;;;;x
+self_appointment;Self Appointment;;;;;;;;;;;;;x
+RULE_CATGIRLS;Catgirls;;;;;;;;;;;;;x
+RULE_CATGIRLS_DESC_ON;The team that updated the old mod thought it would improve the game to add catgirls down the bio-engineering path (Enabled);;;;;;;;;;;;;x
+RULE_CATGIRLS_DESC_OFF;The team that updated the old mod thought it would improve the game to add catgirls down the bio-engineering path (Disabled);;;;;;;;;;;;;x
+RULE_CATGIRLS_OPTION_ON;And they were right;;;;;;;;;;;;;x
+RULE_CATGIRLS_OPTION_OFF;And they were wrong;;;;;;;;;;;;;x
+EVTDESCCYBERNETICS5002;The procedure was successful;;;;;;;;;;;;;x
+opinion_lowered_crown_authority_bad;Weakened the state;;;;;;;;;;;;;x
+EVTDESCCYBERNETICS10200;A beta version of an improven ODIN is ready for testing, you have been asked to volunteer;;;;;;;;;;;;;x
+odin_beta_test;ODIN beta-test;;;;;;;;;;;;;x
+EVTDESCCYBERNETICS10203;The ODIN implant has malfunctioned, inhibiting your strategic management at a key moment;;;;;;;;;;;;;x
+EVTOPTACYBERNETICS10203;I'll kill those scientists when i get back;;;;;;;;;;;;;x
+EVTDESCCYBERNETICS10206;The ODIN implant has functioned perfectly, enhancing your strategic management at a key moment;;;;;;;;;;;;;x
+EVTOPTACYBERNETICS10206;I'll kiss those scientists when i get back;;;;;;;;;;;;;x
+EVTDESCCYBERNETICS10201;The beta-testing has ended, and the device has been perfected partially due to data you collected;;;;;;;;;;;;;x
+iaei_beta_test;IAEI beta-test;;;;;;;;;;;;;x
+EVTOPTACYBERNETICS10104;Your implant's new drivers appear to have malfunction, you were not aware of what you said, but when you regained your senses you could see shocked expressions in the crowd;;;;;;;;;;;;;x
+EVTDESCCYBERNETICS10104;Awkward;;;;;;;;;;;;;x
+opinion_approves_of_reform;Approves of reform;;;;;;;;;;;;;x
+d_terran_augustus_emperor;Divine Terran Imperium;;;;;;;;;;;;;x
+i_am_the_empire;I am the Empire;;;;;;;;;;;;;x
+i_am_the_empire_desc;Let us abandon these archaic pretentions that the glory of an empire is that of anyone other than its monarch;;;;;;;;;;;;;x
+make_earth_capital;Make Earth Capital;;;;;;;;;;;;;x
+make_earth_capital_desc;Let us move our capital to the homeworld of our species;;;;;;;;;;;;;x
+STAT_PIETY_MENU_LEGITIMACY;Legitimacy;;;;;;;;;;;;;x
+terran_imperial_cult_DESC;Question: What has the Emperor ever done for me?\nAnswer: What have you ever done for the Emperor?;;;;;;;;;;;;;x
+EMPEROR;Emperor;;;;;;;;;;;;;x
+EMPRESS;Empress;;;;;;;;;;;;;x
+earth_capital;Move the Capital to Earth;;;;;;;;;;;;;x
+5000_piety_tooltip;[Root.Religion.GetPietyName] is greater or equal to §Y5000.00;;;;;;;;;;;;;x
+court_physician_tooltip_2;Must be male if women are not considered equal and vice-versa;;;;;;;;;;;;;x
+title_court_educator_desc;The Court Tutor will serve as the default Educator for all children at court who don't have an assigned Guardian.;Le tuteur de la Cour sera l'éducateur par défaut pour tous les enfants à la cour qui n'ont pas de tuteur assigné.;Der Hoflehrer wird als Standard-Erzieher für alle Kinder am Hofe dienen, die keinen zugewiesenen Wächter haben.;;El tutor de la corte servirá como educador por defecto de todos los niños de la corte que no tengan tutor asignado.;;;;;;;;;x
+ISSENATOR;Is a Senator;;;;;;;;;;;;;x
+ct_industrial_export_farming;Industrial Export Farming;;;;;;;;;;;;;x
+ct_industrial_export_farming_desc;Collections of highly efficient automated farms for the purposes of mass exports;;;;;;;;;;;;;x
+ct_export_infrastructure;Export Infrastructure;;;;;;;;;;;;;x
+ct_export_infrastructure_desc;A massive trading hub to facilitate exporting of goods all across charted space;;;;;;;;;;;;;x
+ct_industrial_park;Industrial Park;;;;;;;;;;;;;x
+ct_industrial_park_desc;An enormous mass of industry, packed together to most efficiently produce every consumer good a human being could require;;;;;;;;;;;;;x
+GOD_THE_SACRED_ENGINE;the Sacred Engine;;;;;;;;;;;;;x
+get_relative_spacer_physiology_decision;Alter for Spacer Physiology;;;;;;;;;;;;;x
+get_relative_spacer_physiology_decision_desc;Have the child altered to function outside of a traditional atmosphere;;;;;;;;;;;;;x
+ca_military_surplus;Military Surplus;;;;;;;;;;;;;x
+ca_military_surplus_desc;In an era defined by war the production and distribution of both new and old equipment can be extremely lucrative;;;;;;;;;;;;;x
+tp_cultural_goods_institute;Cultural Goods Institute;;;;;;;;;;;;;x
+tp_cultural_goods_institute_desc;A factory for the production of visual arts, music, video games, fashion and everything else to distract one from the state of the galaxy;;;;;;;;;;;;;x
+tp_intellectual_property_office;Intellectual Property Office;;;;;;;;;;;;;x
+tp_intellectual_property_office_desc;A sprawling office complex hunting down every unauthorized use of protected IP in civilized space, all will pay their license fee;;;;;;;;;;;;;x
+nick_the_living_armageddon;the Living Armageddon;;;;;;;;;;;;;x
+ct_homeworld_0;Ruined Cradle;;;;;;;;;;;;;x
+opinion_lowered_crown_authority_good;Lowered State Authority;;;;;;;;;;;;;x
+spacer_physiology_death;a natural death;;;;;;;;;;;;;x
+opinion_vetoed_my_proposal;Vetoed my Proposal;;;;;;;;;;;;;x
+EVTTOOLTIPMILITARY300;Authorize occupation of enemy titles;;;;;;;;;;;;;x
+EVTDESCMILITARY300;A claim has been granted;;;;;;;;;;;;;x
+opinion_granted_claim_on_my_title;Granted Claim on my Title;;;;;;;;;;;;;x
+xenoterran_opinion;Xenoterran Opinion;;;;;;;;;;;;;x
+recent_major_victory;Recent Major Victory;;;;;;;;;;;;;x
+political_group_opinion;Political Opinion;;;;;;;;;;;;;x
+religious_group_opinion;Religious Opinion;;;;;;;;;;;;;x
+transhumanist_group_opinion;Transhumanist Opinion;;;;;;;;;;;;;x
+outlaw_group_opinion;Outlaw Opinion;;;;;;;;;;;;;x
+cyberneticist_opinion;Cyberneticist Opinion;;;;;;;;;;;;;x
+machine_cultist_opinion;Machine Cultist Opinion;;;;;;;;;;;;;x
+bio_directionist_opinion;Bio-Directionist Opinion;;;;;;;;;;;;;x
+xenoterran_opinion;Xenoterran;;;;;;;;;;;;;x
+xenoterran_opinion;Xenoterran;;;;;;;;;;;;;x
+xenoterran_opinion;Xenoterran;;;;;;;;;;;;;x
+xenoterran_opinion;Xenoterran;;;;;;;;;;;;;x

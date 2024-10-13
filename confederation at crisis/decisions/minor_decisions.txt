@@ -139,7 +139,7 @@ decisions = {
 	authorize_bombardment_decision = {
 		is_high_prio = yes
 		ai_check_interval = 40
- potential = {
+		potential = {
 			demesne_size = 1
 			top_liege = { character = ROOT } # You are the highest authority
 			any_current_enemy = { always = yes } # Is at war
@@ -192,7 +192,7 @@ decisions = {
 	order_bombardment_decision = {
 		is_high_prio = yes
 		ai_check_interval = 40
- potential = {
+		potential = {
 			in_command = yes
 			is_landed = yes
 			siege = {
@@ -210,10 +210,15 @@ decisions = {
 		}
 		allow = {
 			# Has sufficient capital ships to carry out the command
-			siege = {
-				OR = {
-					knights = 0.1
-					dreadnoughts = 0.1
+			OR = {
+				siege = {
+					OR = {
+						knights = 0.1
+						#dreadnoughts = 0.1 were apparently commented out
+					}
+				}
+				primary_title = {
+					tier = EMPEROR
 				}
 			}
 		}
@@ -283,7 +288,7 @@ decisions = {
 	order_unauthorized_bombardment_decision = {
 		is_high_prio = yes
 		ai_check_interval = 40
- potential = {
+		potential = {
 			in_command = yes
 			is_landed = yes
 			siege = {
@@ -304,10 +309,7 @@ decisions = {
 		allow = {
 			# Has sufficient capital ships to carry out the command
 			siege = {
-				OR = {
-					knights = 0.1
-					dreadnoughts = 0.1
-				}
+				knights = 0.1
 			}
 		}
 		effect = {

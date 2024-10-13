@@ -266,10 +266,11 @@ character_event = {
 		trait = cybernetic_limb
 		NOT = { trait = wounded }
 		NOT = { trait = full_cybernetic_conversion }
+		#always = no #seems more like an anoyance
 	}
 
 	mean_time_to_happen = {
-		months = 120
+		months = 1200
 		modifier = {
 			factor = 2
 			trait = disciplined

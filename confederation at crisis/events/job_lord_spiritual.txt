@@ -1651,7 +1651,7 @@ character_event = {
 				factor = 0.75
 				has_job_action = action_inquisition
 				
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				
 				location = {
 					OR = {
@@ -1666,7 +1666,7 @@ character_event = {
 				factor = 1.33
 				has_job_action = action_inquisition
 				
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				
 				location = {
 					OR = {
@@ -1684,7 +1684,7 @@ character_event = {
 				factor = 2
 				has_job_action = action_inquisition
 				
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				
 				location = {
 					OR = {
@@ -1703,7 +1703,7 @@ character_event = {
 				factor = 10
 				has_job_action = action_inquisition
 				
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				
 				top_liege = { is_elective_trigger = yes }
 				
@@ -3538,7 +3538,7 @@ character_event = {
 				factor = 0.75
 				has_job_action = action_inquisition
 				
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				
 				location = {
 					OR = {
@@ -3553,7 +3553,7 @@ character_event = {
 				factor = 1.33
 				has_job_action = action_inquisition
 				
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				
 				location = {
 					OR = {
@@ -3571,7 +3571,7 @@ character_event = {
 				factor = 2
 				has_job_action = action_inquisition
 				
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				
 				location = {
 					OR = {
@@ -3590,7 +3590,7 @@ character_event = {
 				factor = 10
 				has_job_action = action_inquisition
 				
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				
 				top_liege = { is_elective_trigger = yes }
 				

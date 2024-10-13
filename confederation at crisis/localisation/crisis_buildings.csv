@@ -232,25 +232,25 @@ fp_quarters_5;Personal Quarters;;;;;;;;;;;;;x
 fp_quarters_5_desc;The respect of others is vitally important in the criminal underworld, and one of the ways to gain that respect is through an opulent display of wealth. Many smuggler lords maintain luxurious personal quarters not out of any real sense of luxury, but for the sole purpose of impressing upon others their importance and status.;;;;;;;;;;;;;x
 fp_quarters_6;Personal Quarters;;;;;;;;;;;;;x
 fp_quarters_6_desc;The respect of others is vitally important in the criminal underworld, and one of the ways to gain that respect is through an opulent display of wealth. Many smuggler lords maintain luxurious personal quarters not out of any real sense of luxury, but for the sole purpose of impressing upon others their importance and status.;;;;;;;;;;;;;x
-ca_space_station_q_1;Space Habitat;;;;;;;;;;;;;x
-ct_space_station_q_1;Space Habitat;;;;;;;;;;;;;x
-tp_space_station_q_1;Space Habitat;;;;;;;;;;;;;x
+ca_space_station_q_1;Space Habitat I;;;;;;;;;;;;;x
+ct_space_station_q_1;Space Habitat I;;;;;;;;;;;;;x
+tp_space_station_q_1;Space Habitat I;;;;;;;;;;;;;x
 cu_space_station_q_1_desc;This is a space-station for the population to live, either built at some lagrange point in a star system or in orbit of a planet.;;;;;;;;;;;;;x
-ca_space_station_q_2;Space Habitat;;;;;;;;;;;;;x
-ct_space_station_q_2;Space Habitat;;;;;;;;;;;;;x
-tp_space_station_q_2;Space Habitat;;;;;;;;;;;;;x
+ca_space_station_q_2;Space Habitat II;;;;;;;;;;;;;x
+ct_space_station_q_2;Space Habitat II;;;;;;;;;;;;;x
+tp_space_station_q_2;Space Habitat II;;;;;;;;;;;;;x
 cu_space_station_q_2_desc;This is a space-station for the population to live, either built at some lagrange point in a star system or in orbit of a planet.;;;;;;;;;;;;;x
-ca_space_station_q_3;Space Habitat;;;;;;;;;;;;;x
-ct_space_station_q_3;Space Habitat;;;;;;;;;;;;;x
-tp_space_station_q_3;Space Habitat;;;;;;;;;;;;;x
+ca_space_station_q_3;Space Habitat III;;;;;;;;;;;;;x
+ct_space_station_q_3;Space Habitat III;;;;;;;;;;;;;x
+tp_space_station_q_3;Space Habitat III;;;;;;;;;;;;;x
 cu_space_station_q_3_desc;This is a space-station for the population to live, either built at some lagrange point in a star system or in orbit of a planet.;;;;;;;;;;;;;x
-ca_space_station_q_4;Space Habitat;;;;;;;;;;;;;x
-ct_space_station_q_4;Space Habitat;;;;;;;;;;;;;x
-tp_space_station_q_4;Space Habitat;;;;;;;;;;;;;x
+ca_space_station_q_4;Space Habitat IV;;;;;;;;;;;;;x
+ct_space_station_q_4;Space Habitat IV;;;;;;;;;;;;;x
+tp_space_station_q_4;Space Habitat IV;;;;;;;;;;;;;x
 cu_space_station_q_4_desc;This is a space-station for the population to live, either built at some lagrange point in a star system or in orbit of a planet.;;;;;;;;;;;;;x
-ca_space_station_q_5;Space Habitat;;;;;;;;;;;;;x
-ct_space_station_q_5;Space Habitat;;;;;;;;;;;;;x
-tp_space_station_q_5;Space Habitat;;;;;;;;;;;;;x
+ca_space_station_q_5;Space Habitat V;;;;;;;;;;;;;x
+ct_space_station_q_5;Space Habitat V;;;;;;;;;;;;;x
+tp_space_station_q_5;Space Habitat V;;;;;;;;;;;;;x
 cu_space_station_q_5_desc;This is a space-station for the population to live, either built at some lagrange point in a star system or in orbit of a planet.;;;;;;;;;;;;;x
 ca_space_dock_q_1;Space Dock;;;;;;;;;;;;;x
 ct_space_dock_q_1;Space Dock;;;;;;;;;;;;;x

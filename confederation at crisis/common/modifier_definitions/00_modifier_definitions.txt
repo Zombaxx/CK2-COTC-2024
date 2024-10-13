@@ -152,6 +152,14 @@ terran_group_opinion = {
 	max_decimals = 0
 }
 
+xenoterran_opinion = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+}
+
 avalonian_group_opinion = {
 	show_as_percent = no
 	is_good = yes
@@ -249,3 +257,26 @@ outlaw_group_opinion = {
 	max_decimals = 0
 }
 
+cyberneticist_opinion = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+}
+
+machine_cultist_opinion = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+}
+
+bio_directionist_opinion = {
+	show_as_percent = no
+	is_good = yes
+	is_monthly = no
+	is_hidden = no
+	max_decimals = 0
+}

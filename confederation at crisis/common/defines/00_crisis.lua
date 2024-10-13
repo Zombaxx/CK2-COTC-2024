@@ -9,6 +9,7 @@ NDefines.NCouncil.CHANGE_POSITION_COOLDOWN = 1
 
 NDefines.NDiplomacy.DEMESNE_MAX_SIZE_KING_MULT = 1.5			-- Extra Max Demesne Size from the ruler's rank
 NDefines.NDiplomacy.DEMESNE_MAX_SIZE_EMPEROR_MULT = 2		-- Extra Max Demesne Size from the ruler's rank
+NDefines.NDiplomacy.MAX_PREP_INV_TARGET_HOLDINGS = 100		-- 50 limit was there to limit expansion to vikings in historic direction, only locks of random regions of space here
 
 NDefines.NCharacter.PORTRAIT_ADULT_MALE_AGE_THRESHOLD = 16
 NDefines.NCharacter.MAX_LED_FACTIONS = 3
@@ -30,10 +31,10 @@ NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_0 = 0
 NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_10 = 0
 NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_20 = 0
 NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_30 = 0
-NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_40 = 25
-NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_50 = 50
-NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_60 = 200
-NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_70 = 1000
+NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_40 = 0
+NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_50 = 0
+NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_60 = 0
+NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_70 = 0
 NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_80 = 2000
 NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_90 = 4000
 NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_100 = 8000
@@ -253,9 +254,9 @@ NDefines.NMilitary.GALLEYS_MAINTENANCE = 10
 
 NDefines.NTechnology.DONT_EXECUTE_TECH_BEFORE = 2000
 NDefines.NTechnology.IDEAL_YEAR_LEVEL_0 = 2998
-NDefines.NTechnology.IDEAL_YEAR_LEVEL_8 = 4000
+NDefines.NTechnology.IDEAL_YEAR_LEVEL_8 = 3500
 NDefines.NTechnology.NEIGHBOUR_SAME_RELIGON_GROUP_MULT = 4.0                    -- since we have more focused religion groups this can be higher than vanilla
-NDefines.NTechnology.POINTS_PER_ATTRIBUTE = 0                                   -- idea is there will be no passive tech bonus, only actual investment in universities and whatnot will help advance education
+NDefines.NTechnology.POINTS_PER_ATTRIBUTE = 0.1                                 -- idea is there will be no passive tech bonus, only actual investment in universities and whatnot will help advance education
 
 NDefines.NAI.MAX_EMPIRE_TITLES_TO_CREATE = 1
 NDefines.NAI.AI_EMPEROR_CREATES_KINGDOMS = 1
@@ -892,6 +893,9 @@ NDefines.NDiplomacy.BANISH_TAKE_WEALTH_PERCENTAGE_LANDED = 0.5
 NDefines.NEngine.MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_YEAR = 1066
 NDefines.NEngine.MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_MONTH = 8
 NDefines.NEngine.MISSING_SCRIPTED_SUCCESSOR_ERROR_CUTOFF_DAY = 16
+NDefines.NEngine.COURT_PRUNE_SIZE = 20
+NDefines.NEngine.PRUNE_MINIMAL_AGE = 50
+NDefines.NEngine.HEALTH_IMMUNITY_TO_PRUNING = 7
 
 -- performance stuff
 NDefines.NEngine.EVENT_PROCESS_OFFSET = 100

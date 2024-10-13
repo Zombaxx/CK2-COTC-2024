@@ -76,7 +76,7 @@ THE_LAWS;The Three Laws of Transhumanism;;;;;;;;;;;;;x
 THE_DEUS_EX;To bring God from the Machine;;;;;;;;;;;;;x
 THE_PRINCIPLES;The Principles of Directed Evolution;;;;;;;;;;;;;x
 THE_THESIS;The Imperial Thesis;;;;;;;;;;;;;x
-GOD_THE_EMPEROR;The [Root.TopLiege.GetTitle];;;;;;;;;;;;;x
+GOD_THE_EMPEROR;the [RelHead.GetTitle];;;;;;;;;;;;;x
 GOD_UNITY;Unity;;;;;;;;;;;;;x
 GOD_FEDERALISM;Federalism;;;;;;;;;;;;;x
 GOD_THE_REPUBLIC;The Republic;;;;;;;;;;;;;x

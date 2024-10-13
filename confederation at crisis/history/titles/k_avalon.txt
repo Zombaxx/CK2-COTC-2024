@@ -23,7 +23,7 @@
 2699.1.1 = { holder = "19020019" } # Victoria VI Locksley
 2705.1.1 = {
 	holder = "18020019" # Victoria VII Locksley
-	law = succ_ultimogeniture
+	#law = succ_ultimogeniture #i'm sorry i know this is like a lore thing but otherwise the clones won't inherit
 	effect = {
 		add_law = true_cognatic_succession
 		holder_scope = {
@@ -46,7 +46,7 @@
 2998.1.1 = {
 	law = military_vassal_legitimacy_0
 	liege = 0 # Crisis of the Confederation begins
-	holder = 11020020
+	#holder = 11020020
 	#effect = { holder_scope = { set_government = military_monarchy } }
 }
 # Crisis of the Confederation Ends

@@ -343,4 +343,165 @@ spriteTypes = {
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
+	spriteType = {
+		name = "GFX_plot_discredit_councillor"
+		texturefile = "gfx/ambitions/plot_slander.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_embezzle_from_liege"
+		texturefile = "gfx/ambitions/plot_embezzle.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_kidnapping"
+		texturefile = "gfx/ambitions/plot_kidnap.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_fabricate_treason"
+		texturefile = "gfx/ambitions/plot_fabricate_treason.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_fabricate_treason_liege"
+		texturefile = "gfx/ambitions/plot_fabricate_treason.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_fabricate_heresy"
+		texturefile = "gfx/ambitions/plot_fabricate_treason.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_kidnap_liege"
+		texturefile = "gfx/ambitions/plot_kidnap.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_seduce"
+		texturefile = "gfx/ambitions/plot_seduce.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_take_revenge"
+		texturefile = "gfx/ambitions/plot_kill_character.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_usurp_wife"
+		texturefile = "gfx/ambitions/plot_coup.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_replace_regent"
+		texturefile = "gfx/ambitions/plot_regent.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_incapable_usurp"
+		texturefile = "gfx/ambitions/plot_coup.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_stir_rebellion"
+		texturefile = "gfx/ambitions/plot_instigate_revolt.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_become_republic"
+		texturefile = "gfx/ambitions/plot_democracy.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_elope"
+		texturefile = "gfx/ambitions/plot_seduce.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_overthrow_empire"
+		texturefile = "gfx/ambitions/plot_instigate_revolt.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_coup"
+		texturefile = "gfx/ambitions/plot_coup.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_justified_coup"
+		texturefile = "gfx/ambitions/plot_coup.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_refute_claim"
+		texturefile = "gfx/ambitions/plot_refute_claim.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_investigate_legitimacy"
+		texturefile = "gfx/ambitions/plot_investigate_legitimacy.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_fabricate_evidence"
+		texturefile = "gfx/ambitions/plot_fabricate_treason.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_regent"
+		texturefile = "gfx/ambitions/plot_regent.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_plot_embezzle"
+		texturefile = "gfx/ambitions/plot_embezzle.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
 }

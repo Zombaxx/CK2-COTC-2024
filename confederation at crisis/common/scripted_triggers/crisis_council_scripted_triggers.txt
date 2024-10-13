@@ -56,14 +56,20 @@ proselytize_convert_independent_trigger = {
         }
     }
 }
-
 is_senator = {
-    has_minor_title = title_senatorduke
-    has_minor_title = title_senatorking
-    has_minor_title = title_senatoremperor
-    has_minor_title = title_senatorbigrealm1
-    has_minor_title = title_senatorbigrealm2
-    has_minor_title = title_senatorbigrealm3
-    has_minor_title = title_senatorbigrealm4
-    has_minor_title = title_senatorbigrealm5
+    custom_tooltip = {
+        text = "ISSENATOR"
+        hidden_tooltip = {
+            OR = {
+                has_minor_title = title_senatorduke
+				has_minor_title = title_senatorking
+				has_minor_title = title_senatoremperor
+				has_minor_title = title_senatorbigrealm1
+				has_minor_title = title_senatorbigrealm2
+				has_minor_title = title_senatorbigrealm3
+				has_minor_title = title_senatorbigrealm4
+				has_minor_title = title_senatorbigrealm5
+            }
+        }
+    }
 }

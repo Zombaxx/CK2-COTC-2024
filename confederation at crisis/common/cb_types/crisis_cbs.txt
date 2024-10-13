@@ -707,7 +707,7 @@ autocratic_rebellion = {
 			}
 			if = {
 				limit = {
-					religion = imperial_cult
+					religion = terran_imperial_cult
 				}
 				set_government_type = pc_theocratic_government
 			}
@@ -716,7 +716,7 @@ autocratic_rebellion = {
 					NOR = {
 						religion_group = outlaw_group
 						religion = neo_feudal
-						religion = imperial_cult
+						religion = terran_imperial_cult
 					}
 				}
 				set_government_type = military_government
@@ -1287,6 +1287,7 @@ county_conquest = {
 			prestige = 100
 			OR = {
 				religion = terran_imperial
+				religion = terran_imperial_cult
 				religion = astrist
 				religion = neo_feudal
 				religion_group = outlaw_group

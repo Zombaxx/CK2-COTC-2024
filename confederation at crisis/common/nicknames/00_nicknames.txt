@@ -1194,6 +1194,134 @@ nick_the_wise = {
 			factor = 2.0
 			trait = scholar
 		}
+		mult_modifier = {
+			factor = 0.1 #like half the characters seemed to get this damn nickname
+		}
+	}
+}
+
+nick_the_clever = {
+	allow = {
+		age >= 20
+
+		NOR = {
+			#trait = arbitrary
+			#trait = wroth
+			is_dumb_trigger = yes
+			trait = inbred
+			is_incapable = yes
+		}
+
+		OR = {
+			is_smart_trigger = yes
+			trait = scholar
+		}
+	}
+	chance = {
+		factor = 1
+
+		mult_modifier = {
+			factor = 5.0
+			trait = genius
+		}
+		mult_modifier = {
+			factor = 5.0
+			OR = {
+				trait = quick
+				trait = shrewd
+			}
+		}
+		mult_modifier = {
+			factor = 2.0
+			trait = scholar
+		}
+		mult_modifier = {
+			factor = 0.1 #to add variety so it's not just wise
+		}
+	}
+}
+
+nick_the_sharp = {
+	allow = {
+		age >= 20
+
+		NOR = {
+			#trait = arbitrary
+			#trait = wroth
+			is_dumb_trigger = yes
+			trait = inbred
+			is_incapable = yes
+		}
+
+		OR = {
+			is_smart_trigger = yes
+			trait = scholar
+		}
+	}
+	chance = {
+		factor = 1
+
+		mult_modifier = {
+			factor = 5.0
+			trait = genius
+		}
+		mult_modifier = {
+			factor = 5.0
+			OR = {
+				trait = quick
+				trait = shrewd
+			}
+		}
+		mult_modifier = {
+			factor = 2.0
+			trait = scholar
+		}
+		mult_modifier = {
+			factor = 0.1 #to add variety so it's not just wise
+		}
+	}
+}
+
+nick_the_bright = {
+	allow = {
+		age >= 20
+
+		NOR = {
+			#trait = arbitrary
+			#trait = wroth
+			is_dumb_trigger = yes
+			trait = inbred
+			is_incapable = yes
+		}
+
+		OR = {
+			is_smart_trigger = yes
+			trait = just
+			trait = patient
+			trait = scholar
+		}
+	}
+	chance = {
+		factor = 1
+
+		mult_modifier = {
+			factor = 5.0
+			trait = genius
+		}
+		mult_modifier = {
+			factor = 5.0
+			OR = {
+				trait = quick
+				trait = shrewd
+			}
+		}
+		mult_modifier = {
+			factor = 2.0
+			trait = scholar
+		}
+		mult_modifier = {
+			factor = 0.1 #to add variety so it's not just wise
+		}
 	}
 }
 

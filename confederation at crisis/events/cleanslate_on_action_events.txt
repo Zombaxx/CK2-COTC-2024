@@ -5767,29 +5767,3 @@ character_event = {
 #}
 
 
-# Scripted default elective token setup
-character_event = {
-	id = CK2.689
-
-	hide_window = yes
-	is_triggered_only = yes
-
-	only_rulers = yes
-
-	immediate = {
-		any_demesne_title = {
-			if = {
-				limit = { has_law = succ_elective_gavelkind }
-				elective_voting_rules = elective_gavelkind
-			}
-			else_if = {
-				limit = { has_law = succ_tanistry }
-				elective_voting_rules = tanistry
-			}
-			else_if = {
-				limit = { has_law = succ_feudal_elective }
-				elective_voting_rules = feudal_elective
-			}
-		}
-	}
-}

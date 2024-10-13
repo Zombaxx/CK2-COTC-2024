@@ -2,7 +2,8 @@
 
 gender_laws = {
 	agnatic_succession = {
-		female_dynasty_opinion = -5
+		male_dynasty_opinion = 10
+		female_dynasty_opinion = -20
 
 		potential = {
 			holder_scope = {
@@ -15,15 +16,29 @@ gender_laws = {
 				}
 				# Matriarchal and Equal religions don't allow male-centric succession
 				trigger_else = {
-					NOR = {
-						has_religion_feature = religion_matriarchal
-						has_religion_feature = religion_equal
-						has_law = gender_status_1
-						has_law = gender_status_2
-						has_law = gender_status_3
-						has_law = gender_status_4
+					has_law = cognatic_succession
+				}
+			}
+		}
+
+		allow = {
+			OR = {
+				holder_scope = {
+					primary_title = {
+						OR = {
+							has_law = gender_status_0
+							has_law = agnatic_succession
+						}
 					}
 				}
+				holder_scope = { top_liege = {
+					primary_title = {
+						OR = {
+							has_law = gender_status_0
+							has_law = agnatic_succession
+						}
+					}
+				} }
 			}
 		}
 
@@ -37,23 +52,95 @@ gender_laws = {
 			gender_succ = agnatic
 		}
 
+		default = yes
 		default_selection = {
 			factor = 1
+			
+			modifier = {
+				factor = 0.1
+				holder_scope = {
+					primary_title = {
+						NOT = { has_law = gender_status_0 }
+					}
+				}
+			}
+			modifier = {
+				factor = 25
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_0
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				holder_scope = {
+					religion = neo_feudal
+				}
+			}
+			modifier = {
+				factor = 10
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_0
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				holder_scope = { top_liege = {
+					primary_title = {
+						patriarchal_succession = yes
+					}
+				} }
+			}
+			modifier = {
+				factor = 0.1
+				holder_scope = {
+					is_female = yes
+				}
+			}
 		}
 	}
 
 	cognatic_succession = { # agnatic-cognatic
+		male_dynasty_opinion = 5
+		female_dynasty_opinion = -10
 		potential = {
 			holder_scope = {
 				# No exceptions
 				NOR = {
-					has_religion_feature = religion_matriarchal
-                	has_religion_feature = religion_equal
-                	has_law = gender_status_0
-					has_law = gender_status_2
-					has_law = gender_status_3
-					has_law = gender_status_4
+					has_law = enatic_cognatic_succession
+					has_law = enatic_succession
 				}
+			}
+		}
+
+		allow = {
+			OR = {
+				holder_scope = {
+					primary_title = {
+						OR = {
+							has_law = gender_status_0
+							has_law = gender_status_1
+							has_law = agnatic_succession
+							has_law = cognatic_succession
+						}
+					}
+				}
+				holder_scope = { top_liege = {
+					primary_title = {
+						OR = {
+							has_law = gender_status_0
+							has_law = gender_status_1
+							has_law = agnatic_succession
+							has_law = cognatic_succession
+						}
+					}
+				} }
 			}
 		}
 
@@ -66,15 +153,187 @@ gender_laws = {
 
 			gender_succ = cognatic
 			law_set_allow_matrilineal_marriage = yes
+			hidden_tooltip = { #patrician family palace workaround stolen from game of thrones mod
+				holder_scope = {
+					if = {
+						limit = {
+							is_patrician = yes
+							primary_title = { title = PREVPREV }
+						}
+						family_palace = { gender_succ = cognatic }
+						recalc_succession = yes
+					}
+				}	
+			}
 		}
 
+		default = yes
 		default_selection = {
 			factor = 10
+			
+			modifier = {
+				factor = 0.1
+				holder_scope = {
+					primary_title = {
+						NOT = { has_law = gender_status_1 }
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_1
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				holder_scope = { top_liege = {
+					primary_title = {
+						OR = {
+							has_law = gender_status_0
+							has_law = agnatic_succession
+						}
+					}
+				} }
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_1
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_0
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					has_law = agnatic_succession
+					holder_scope = {
+						primary_title = {
+							has_law = gender_status_0
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					patriarchal_succession = no
+					holder_scope = {
+						is_female = no
+						OR = {
+							trait = proud
+							trait = ambitious
+							trait = arbitrary
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					patriarchal_succession = no
+					holder_scope = {
+						is_female = no 
+					}
+					current_heir = {
+						is_female = no 
+					}
+					OR = {
+						holder_scope = {
+							trait = clone 
+						}
+						current_heir = {
+							trait = clone 
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					patriarchal_succession = no
+					holder_scope = {
+						religion = neo_feudal
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				AND = {
+					patriarchal_succession = no
+					holder_scope = { top_liege = {
+						primary_title = {
+							patriarchal_succession = yes
+						}
+					} }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				AND = {
+					patriarchal_succession = no
+					holder_scope = {
+						is_female = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				AND = {
+					has_law = agnatic_succession
+					holder_scope = {
+						is_female = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				AND = {
+					has_law = agnatic_succession
+					holder_scope = {
+						culture = cat_splice_ge
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					has_law = agnatic_succession
+					holder_scope = { top_liege = {
+						primary_title = {
+							patriarchal_succession = no
+						}
+					} }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				AND = {
+					has_law = agnatic_succession
+					holder_scope = {
+						religion = neo_feudal
+					}
+				}
+			}
 		}
 	}
 
 	true_cognatic_succession = { # absolute cognatic
-		male_dynasty_opinion = -5
+		#male_dynasty_opinion = -5
 
 		potential = {
 			holder_scope = {
@@ -86,15 +345,23 @@ gender_laws = {
 				}
 
 				trigger_else = {
-					NOR = {
-						has_religion_feature = religion_patriarchal
-						has_religion_feature = religion_matriarchal
-						has_law = gender_status_0
-						has_law = gender_status_1
-						has_law = gender_status_3
-						has_law = gender_status_4
+					always = yes
+				}
+			}
+		}
+
+		allow = {
+			OR = {
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_2
 					}
 				}
+				holder_scope = { top_liege = {
+					primary_title = {
+						has_law = gender_status_2
+					}
+				} }
 			}
 		}
 
@@ -107,10 +374,158 @@ gender_laws = {
 
 			gender_succ = true_cognatic
 			law_set_allow_matrilineal_marriage = yes
+			hidden_tooltip = { #patrician family palace workaround stolen from game of thrones mod
+				holder_scope = {
+					if = {
+						limit = {
+							is_patrician = yes
+							primary_title = { title = PREVPREV }
+						}
+						family_palace = { gender_succ = true_cognatic }
+						recalc_succession = yes
+					}
+				}	
+			}
 		}
 
+		default = yes
 		default_selection = {
 			factor = 100
+			
+			modifier = {
+				factor = 0.1
+				holder_scope = {
+					primary_title = {
+						NOT = { has_law = gender_status_2 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				holder_scope = { top_liege = {
+					primary_title = {
+						OR = {
+							is_matriarchy = yes
+							is_patriarchy = yes
+						}
+					}
+				} }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 5
+				OR = {
+					AND = {
+						matriarchal_succession = no
+						holder_scope = {
+							is_female = yes
+						}
+					}
+					AND = {
+						patriarchal_succession = no
+						holder_scope = {
+							is_female = no
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_2
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				holder_scope = { top_liege = {
+					primary_title = {
+						has_law = gender_status_2
+					}
+				} }
+			}
+			modifier = {
+				factor = 5
+				holder_scope = { top_liege = {
+					primary_title = {
+						has_law = true_cognatic_succession
+					}
+				} }
+			}
+			modifier = {
+				factor = 2
+				is_hereditary_religion = no #pro democracy lean to equality
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					holder_scope = {
+						religion = neo_feudal #only religion that isn't feminist
+					}
+					matriarchal_succession = yes
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					holder_scope = {
+						culture = cat_splice_ge #the cat_splice trait was set to be enatic so i assume the goal is catgirl empires 
+					}
+					patriarchal_succession = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					holder_scope = {
+						is_military_trigger = yes 
+					}
+					patriarchal_succession = yes #militaries would seem more ok with patriarchies to me
+				}
+			}
+			modifier = {
+				factor = 0.1
+				AND = {
+					holder_scope = {
+						religion = neo_feudal #only religion that isn't feminist
+					}
+					patriarchal_succession = yes
+				}
+			}
+			modifier = {
+				factor = 0.1
+				AND = {
+					holder_scope = {
+						culture = cat_splice_ge
+					}
+					matriarchal_succession = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					patriarchal_succession = yes
+					holder_scope = { top_liege = {
+						primary_title = {
+							patriarchal_succession = yes
+						}
+					} }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					matriarchal_succession = yes
+					holder_scope = { top_liege = {
+						primary_title = {
+							matriarchal_succession = yes
+						}
+					} }
+				}
+			}
 		}
 	}
 
@@ -122,13 +537,34 @@ gender_laws = {
 			holder_scope = {
 				# No exceptions
 				NOR = {
-					has_religion_feature = religion_patriarchal
-                	has_religion_feature = religion_equal
-                	has_law = gender_status_0
-					has_law = gender_status_1
-					has_law = gender_status_2
-					has_law = gender_status_4
+					has_law = agnatic_succession
+					has_law = cognatic_succession
 				}
+			}
+		}
+
+		allow = {
+			OR = {
+				holder_scope = {
+					primary_title = {
+						OR = {
+							has_law = gender_status_4
+							has_law = gender_status_3
+							has_law = enatic_succession
+							has_law = enatic_cognatic_succession
+						}
+					}
+				}
+				holder_scope = { top_liege = {
+					primary_title = {
+						OR = {
+							has_law = gender_status_4
+							has_law = gender_status_3
+							has_law = enatic_succession
+							has_law = enatic_cognatic_succession
+						}
+					}
+				} }
 			}
 		}
 
@@ -140,15 +576,187 @@ gender_laws = {
 			log = "enatic_cognatic_succession ([This.GetFullBaseName])"
 
 			gender_succ = enatic_cognatic
+			hidden_tooltip = { #patrician family palace workaround stolen from game of thrones mod
+				holder_scope = {
+					if = {
+						limit = {
+							is_patrician = yes
+							primary_title = { title = PREVPREV }
+						}
+						family_palace = { gender_succ = enatic_cognatic }
+						recalc_succession = yes
+					}
+				}	
+			}
 		}
 
+		default = yes
 		default_selection = {
-			factor = 1
+			factor = 10
+			
+			modifier = {
+				factor = 0.1
+				holder_scope = {
+					primary_title = {
+						NOT = { has_law = gender_status_3 }
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_3
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				holder_scope = { top_liege = {
+					primary_title = {
+						OR = {
+							has_law = gender_status_4
+							has_law = enatic_succession
+						}
+					}
+				} }
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_3
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_4
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					has_law = enatic_succession
+					holder_scope = {
+						primary_title = {
+							has_law = gender_status_2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					matriarchal_succession = no
+					holder_scope = {
+						is_female = yes
+						OR = {
+							trait = proud
+							trait = ambitious
+							trait = arbitrary
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					matriarchal_succession = no
+					holder_scope = {
+						is_female = yes 
+					}
+					current_heir = {
+						is_female = yes 
+					}
+					OR = {
+						holder_scope = {
+							trait = clone 
+						}
+						current_heir = {
+							trait = clone 
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					matriarchal_succession = no
+					holder_scope = {
+						culture = cat_splice_ge
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				AND = {
+					matriarchal_succession = no
+					holder_scope = { top_liege = {
+						primary_title = {
+							matriarchal_succession = yes
+						}
+					} }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				AND = {
+					matriarchal_succession = no
+					holder_scope = {
+						is_female = no
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				AND = {
+					has_law = enatic_succession
+					holder_scope = {
+						is_female = no
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				AND = {
+					has_law = enatic_succession
+					holder_scope = {
+						religion = neo_feudal
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					has_law = enatic_succession
+					holder_scope = { top_liege = {
+						primary_title = {
+							matriarchal_succession = no
+						}
+					} }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				AND = {
+					has_law = enatic_succession
+					holder_scope = {
+						culture = cat_splice_ge
+					}
+				}
+			}
 		}
 	}
 
 	enatic_succession = {
-		male_dynasty_opinion = -10
+		male_dynasty_opinion = -20
 		female_dynasty_opinion = 10
 
 		potential = {
@@ -162,15 +770,29 @@ gender_laws = {
 				}
 				# Patriarchal and Equal religions don't allow female-centric succession
 				trigger_else = {
-					NOR = {
-						has_religion_feature = religion_patriarchal
-						has_religion_feature = religion_equal
-						has_law = gender_status_0
-						has_law = gender_status_1
-						has_law = gender_status_2
-						has_law = gender_status_3
+					has_law = enatic_cognatic_succession
+				}
+			}
+		}
+
+		allow = {
+			OR = {
+				holder_scope = {
+					primary_title = {
+						OR = {
+							has_law = gender_status_4
+							has_law = enatic_succession
+						}
 					}
 				}
+				holder_scope = { top_liege = {
+					primary_title = {
+						OR = {
+							has_law = gender_status_4
+							has_law = enatic_succession
+						}
+					}
+				} }
 			}
 		}
 
@@ -182,10 +804,71 @@ gender_laws = {
 			log = "enatic_succession ([This.GetFullBaseName])"
 
 			gender_succ = enatic
+			hidden_tooltip = { #patrician family palace workaround stolen from game of thrones mod
+				holder_scope = {
+					if = {
+						limit = {
+							is_patrician = yes
+							primary_title = { title = PREVPREV }
+						}
+						family_palace = { gender_succ = enatic }
+						recalc_succession = yes
+					}
+				}	
+			}
 		}
 
+		default = yes
 		default_selection = {
 			factor = 1
+			
+			modifier = {
+				factor = 0.1
+				holder_scope = {
+					primary_title = {
+						NOT = { has_law = gender_status_4 }
+					}
+				}
+			}
+			modifier = {
+				factor = 25
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_4
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				holder_scope = {
+					culture = cat_splice_ge
+				}
+			}
+			modifier = {
+				factor = 10
+				holder_scope = {
+					primary_title = {
+						has_law = gender_status_4
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				holder_scope = { top_liege = {
+					primary_title = {
+						matriarchal_succession = yes
+					}
+				} }
+			}
+			modifier = {
+				factor = 0.1
+				holder_scope = {
+					is_female = no
+				}
+			}
 		}
 	}
 }

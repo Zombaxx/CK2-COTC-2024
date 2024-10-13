@@ -89,9 +89,10 @@ tall = {
 gmo = {
 	inherit_chance = 65
 
-	health = +1.5
+	health = +1
 	same_opinion = 10
 	religious_group_opinion = -10
+	bio_directionist_opinion = 10
 	ruler_designer_cost = 10
 	male_compliment_adj = COMPL_STRONG
 	female_compliment_adj = COMPL_WRY

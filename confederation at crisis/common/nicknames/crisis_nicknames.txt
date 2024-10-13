@@ -1,10 +1,11 @@
 nick_the_comet = { }
+nick_the_living_armageddon = { }
 
 nick_the_old_man = {
 	allow = {
 		is_military_trigger = yes
 		has_education_martial_trigger = yes
-		age = 40
+		age = 60
 		prestige = 1000
 		OR = {
 			liege = { character = ROOT }
@@ -12,7 +13,7 @@ nick_the_old_man = {
 		}
 	}
 	chance = {
-		factor = 3
+		factor = 1
 		modifier = {
 			factor = 1.25
 			trait = friendly

@@ -2807,7 +2807,7 @@ letter_event = {
 				factor = 0
 				OR = {
 					religion = terran_imperial
-					religion = imperial_cult
+					religion = terran_imperial_cult
 					religion = terran_republican
 					religion = astrist
 				}
@@ -4225,7 +4225,7 @@ letter_event = {
 				OR = {
 					religion = terran_imperial
 					religion = terran_republican
-					religion = imperial_cult
+					religion = terran_imperial_cult
 					religion = astrist
 				}
 				NOT = { trait = pragmatic }
@@ -5650,7 +5650,7 @@ letter_event = {
 				OR = {
 					religion = terran_republican
 					religion = terran_imperial
-					religion = imperial_cult
+					religion = terran_imperial_cult
 					religion = astrist
 				}
 				NOT = { trait = pragmatic }

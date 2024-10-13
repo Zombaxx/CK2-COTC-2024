@@ -341,17 +341,17 @@ character_event = { # Great warrior character arrives
 		}
 	}
 	
-	option = {
-		name = EVTOPTB_HF_100
-		
-		hidden_tooltip = {
-			event_target:invited_character = { 
-				death = {
-					death_reason = death_missing
-				}
-			}
-		}
-	}
+	#option = {
+	#	name = EVTOPTB_HF_100
+	#	
+	#	hidden_tooltip = {
+	#		event_target:invited_character = { 
+	#			death = {
+	#				death_reason = death_missing
+	#			}
+	#		}
+	#	}
+	#}
 }
 
 character_event = { # Chance of gaining a personality trait of Founder
@@ -7378,17 +7378,17 @@ character_event = { # Knight character arrives
 		}
 	}
 	
-	option = {
-		name = EVTOPTCHF24130
-		
-		hidden_tooltip = {
-			event_target:invited_character = { 
-				death = {
-					death_reason = death_missing
-				}
-			}
-		}
-	}
+	#option = {
+	#	name = EVTOPTCHF24130
+	#	
+	#	hidden_tooltip = {
+	#		event_target:invited_character = { 
+	#			death = {
+	#				death_reason = death_missing
+	#			}
+	#		}
+	#	}
+	#}
 }
 
 character_event = { # Bard character arrives
@@ -7421,17 +7421,17 @@ character_event = { # Bard character arrives
 			}
 		}
 	}
-	option = {
-		name = EVTOPTCHF24130
-		
-		hidden_tooltip = {
-			event_target:invited_character = { 
-				death = {
-					death_reason = death_missing
-				}
-			}
-		}
-	}
+	#option = {
+	#	name = EVTOPTCHF24130
+	#	
+	#	hidden_tooltip = {
+	#		event_target:invited_character = { 
+	#			death = {
+	#				death_reason = death_missing
+	#			}
+	#		}
+	#	}
+	#}
 }
 
 #Landless ladies of same religion might ask for protection.
@@ -14476,17 +14476,17 @@ character_event = { # Bard character arrives
 			}
 		}
 	}
-	option = {
-		name = EVTOPTBHF24237
-		
-		hidden_tooltip = {
-			event_target:invited_character = { 
-				death = {
-					death_reason = death_missing
-				}
-			}
-		}
-	}
+	#option = {
+	#	name = EVTOPTBHF24237
+	#	
+	#	hidden_tooltip = {
+	#		event_target:invited_character = { 
+	#			death = {
+	#				death_reason = death_missing
+	#			}
+	#		}
+	#	}
+	#}
 }
 
 character_event = { # Scholar character arrives
@@ -14520,17 +14520,17 @@ character_event = { # Scholar character arrives
 			}
 		}
 	}
-	option = {
-		name = EVTOPTBHF24238
-		
-		hidden_tooltip = {
-			event_target:invited_character = { 
-				death = {
-					death_reason = death_missing
-				}
-			}
-		}
-	}
+	#option = {
+	#	name = EVTOPTBHF24238
+	#	
+	#	hidden_tooltip = {
+	#		event_target:invited_character = { 
+	#			death = {
+	#				death_reason = death_missing
+	#			}
+	#		}
+	#	}
+	#}
 }
 
 character_event = { # Mystic character arrives
@@ -14613,17 +14613,17 @@ character_event = { # Mystic character arrives
 			}
 		}
 	}
-	option = {
-		name = EVTOPTBHF24239
-		
-		hidden_tooltip = {
-			event_target:invited_character = { 
-				death = {
-					death_reason = death_missing
-				}
-			}
-		}
-	}
+	#option = {
+	#	name = EVTOPTBHF24239
+	#	
+	#	hidden_tooltip = {
+	#		event_target:invited_character = { 
+	#			death = {
+	#				death_reason = death_missing
+	#			}
+	#		}
+	#	}
+	#}
 }
 
 narrative_event = {

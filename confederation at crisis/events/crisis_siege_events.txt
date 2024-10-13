@@ -10,6 +10,9 @@ character_event = {
 	weight_multiplier = {
 		factor = 1
 		modifier = {
+			factor = 0.2 #amount of duels seemed very excessive
+		}
+		modifier = {
 			factor = 2
 			trait = brave
 		}

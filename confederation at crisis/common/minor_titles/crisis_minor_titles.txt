@@ -41,7 +41,10 @@ title_court_educator = {
 		}
 		custom_tooltip = {
 			text = court_physician_tooltip_2
-			gender_compatible_trigger = yes
+			OR = {
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+			}
 		}
 		custom_tooltip = {
 			text = court_educator_tooltip

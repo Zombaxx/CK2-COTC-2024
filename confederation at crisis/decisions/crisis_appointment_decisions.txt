@@ -3346,7 +3346,7 @@ targetted_decisions = {
 						religion = terran_imperial
 						religion = bio_directionist
 						religion = neo_feudal
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						trait = proud
 						trait = ambitious
 					}

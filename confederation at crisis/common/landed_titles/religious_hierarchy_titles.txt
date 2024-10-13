@@ -43,14 +43,17 @@ d_imperial_cult = {
     capital = 202
     creation_requires_capital = no
 
-    dignity = -100
+    #dignity = -100
 
     # title = "PRESIDENT"
     # title_female = "PRESIDENT"
     # foa = "PRESIDENT_FOA"
 
+    title = "EMPEROR"
+    title_female = "EMPRESS"
+
     short_name = yes
-    # location_ruler_title = yes
+    location_ruler_title = yes
 
     #is_autocratic_trigger = yes
     #is_hereditary_trigger = yes

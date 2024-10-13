@@ -92,7 +92,8 @@ character_event = {
 		name = "EVTOPTABASTARD110"
 		FROM = {
 			dynasty = ROOT
-			add_trait = legitimized_bastard
+			#add_trait = legitimized_bastard
+			remove_trait = bastard #seems to make more sense here
 		}
 		if = {
 			limit = { FROM = { mother = { character = ROOT } } }
@@ -697,7 +698,10 @@ character_event = {
 	option = {
 		# Legitimize them
 		name = "EVTOPTABASTARD110"
-		FROM = { add_trait = legitimized_bastard }
+		FROM = { 
+			#add_trait = legitimized_bastard 
+			remove_trait = bastard #seems to make more sense here
+		}
 		if = {
 			limit = {
 				FROM = {

@@ -37,9 +37,14 @@ augustus = {
 
 	vassal_opinion = 10
 	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
 	same_religion_opinion = 30
 	church_opinion = 30
-
+	
+	
+	potential = { religion = terran_imperial_cult }
+	random = no
+	religious = yes
 	male_compliment = COMPL_AUGUSTUS
 	female_compliment = COMPL_AUGUSTUS
 }

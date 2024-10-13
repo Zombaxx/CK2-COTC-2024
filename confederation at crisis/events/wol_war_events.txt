@@ -3608,9 +3608,9 @@ character_event = {
 			}
 		}
 		trigger = {
-			NOT = { trait = light_foot_leader }
+			NOT = { trait = army_captain }
 		}
-		add_trait = light_foot_leader
+		add_trait = army_captain
 	}
 	option = {
 		name = EVTOPTB_WOL_11301 # Heavy Infantry
@@ -3618,9 +3618,9 @@ character_event = {
 			factor = 100
 		}
 		trigger = {
-			NOT = { trait = heavy_infantry_leader }
+			NOT = { trait = frigate_pilot }
 		}
-		add_trait = heavy_infantry_leader
+		add_trait = frigate_pilot
 	}
 	option = {
 		name = EVTOPTC_WOL_11301 # Cavalry
@@ -3632,9 +3632,9 @@ character_event = {
 			}
 		}
 		trigger = {
-			NOT = { trait = cavalry_leader }
+			NOT = { trait = warship_captain }
 		}
-		add_trait = cavalry_leader
+		add_trait = warship_captain
 	}
 	option = {
 		name = EVTOPTD_WOL_11301 # Elephants
@@ -3642,10 +3642,10 @@ character_event = {
 			factor = 50
 		}
 		trigger = {
-			NOT = { trait = war_elephant_leader }
+			NOT = { trait = marine_captain }
 		}
 
-		add_trait = war_elephant_leader
+		add_trait = marine_captain
 	}
 	option = {
 		name = EVTOPTE_WOL_11301 # Bad choices all...

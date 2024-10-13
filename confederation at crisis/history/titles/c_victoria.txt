@@ -17,7 +17,7 @@
 2662.1.1 = { holder = "18014158" } # Elizabeth III Okafor
 2703.1.1 = { holder = "17014158" } # Elizabeth IV Okafor
 2705.1.1 = {
-	law = succ_ultimogeniture
+	#law = succ_ultimogeniture #i'm sorry i know this is like a lore thing but otherwise the clones won't inherit
 	effect = {
 		add_law = true_cognatic_succession
 		holder_scope = {

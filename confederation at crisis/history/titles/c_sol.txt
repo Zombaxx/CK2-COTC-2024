@@ -5,8 +5,6 @@
 	holder = 3			#Ferdinand Marschall first leader of the USE
 }
 
-2609.1.1 = { effect = { clr_global_flag = flag_no_university_of_the_confederation } }
-
 # Modern era
 2948.1.1 = { holder = 1304931 }		# Lucia Salazar (died in office)
 2963.1.1 = { holder = 120167 }		# Jacob Weyland (dismissed by vote of no confidence)
@@ -15,7 +13,7 @@
 2980.1.1 = { holder = 1204931 }		# Maria Salazar
 2988.1.1 = { holder = 1107473 }		# Salman Nazari
 2992.1.1 = { holder = 110167 }		# Owen Weyland
-2998.1.1 = { holder = 11013974 }	# Morgan Afolayan
+2996.1.1 = { holder = 11013974 }	# Morgan Afolayan
 # Confederate Civil War ends
 3007.1.18 = {
 	holder = 11112833	# Tao Luo

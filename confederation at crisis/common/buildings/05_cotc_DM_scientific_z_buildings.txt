@@ -430,39 +430,39 @@ temple = {
 	}
 	tp_biogenetics_lab_q_2 = {
 		desc = tp_biogenetics_lab_q_2_desc
-		potential = {}
+		#potential = {}
 		trigger = {
 			TECH_MEDICINE = 3
 		}
 		upgrades_from = tp_biogenetics_lab_q_1
 		prerequisites = {
 			tp_hospital_q_1
-			tp_energy_3
+			tp_energy_2
 		}
 		tech_growth_modifier_culture = 0.15
 		gold_cost = 600
 		build_time = 730
-		liege_piety = 0.2
+		liege_piety = 0.25
 		ai_creation_factor = 125
 		extra_tech_building_start = 0.8
 	}
 	tp_biogenetics_lab_q_3 = {
 		desc = tp_biogenetics_lab_q_3_desc
-		potential = {
-			religion = bio_directionist
-		}
+		#potential = {
+		#	religion = bio_directionist
+		#}
 		trigger = {
 			TECH_MEDICINE = 6
 		}
 		upgrades_from = tp_biogenetics_lab_q_2
 		prerequisites = {
 			tp_hospital_q_2
-			tp_energy_4
+			tp_energy_3
 		}
-		tech_growth_modifier_culture = 0.15
+		tech_growth_modifier_culture = 0.30
 		gold_cost = 900
 		build_time = 1095
-		liege_piety = 0.2
+		liege_piety = 0.5
 		ai_creation_factor = 125
 		extra_tech_building_start = 0.8
 	}

@@ -26,6 +26,7 @@ cosmic_radiation = {
 		if = {
 			limit = {
 				NOR = {
+					has_character_flag = recovered_from_cosmic_radiation
 					has_character_flag = immune_bubonic_plague
 					has_character_flag = got_bubonic_plague
 					trait = has_bubonic_plague
@@ -38,6 +39,10 @@ cosmic_radiation = {
 					modifier = {
 						factor = 0
 						has_character_modifier = in_seclusion
+					}
+					modifier = {
+						factor = 0
+						has_character_flag = recovered_from_cosmic_radiation
 					}
 					modifier = {
 						factor = 0

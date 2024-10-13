@@ -288,5 +288,6 @@ character_event = {
 	option = {
 		name = EVTOPTA6114
 		remove_trait = has_cosmic_radiation
+		set_character_flag = recovered_from_cosmic_radiation
 	}
 }

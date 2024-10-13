@@ -1,27 +1,5 @@
-# Suppressing societies
-1.1.1 = {
-	effect = {
-		set_global_flag = flag_no_university_of_the_confederation
-		set_global_flag = flag_no_university_of_huangjing
-		set_global_flag = flag_no_university_of_encrucijada
-		set_global_flag = flag_no_university_of_makkat_al_jadiida
-		set_global_flag = flag_no_university_of_nyota_mwisho
-		set_global_flag = flag_no_university_of_armstrong
-		set_global_flag = flag_no_university_of_tereshkova
-		set_global_flag = flag_no_university_of_xin_qin
-		set_global_flag = flag_no_university_of_bianjiang
-		set_global_flag = flag_no_university_of_encrucijada
-		set_global_flag = flag_no_university_of_the_reach
-		set_global_flag = flag_no_university_of_paraiso
-		set_global_flag = flag_no_university_of_cauraha
-		set_global_flag = flag_no_university_of_avalon
-		set_global_flag = flag_no_university_of_franklin
-		set_global_flag = flag_no_university_of_hiyokuoka
-		set_global_flag = flag_no_university_of_strugatsky
-		set_global_flag = flag_no_university_of_novyy_edem
-	}
-}
 #Early Space Era
+
 2155.1.1 = {
 	law = centralization_1
 	law = military_vassal_legitimacy_2
@@ -52,7 +30,7 @@
 2980.1.1 = { holder = 1204931 }		# Maria Salazar
 2988.1.1 = { holder = 1107473 }		# Salman Nazari
 2992.1.1 = { holder = 110167 }		# Owen Weyland
-2998.1.1 = {
+2996.1.1 = {
 	law = public_order_0
 	holder = 11013974	# Morgan Afolayan
 }

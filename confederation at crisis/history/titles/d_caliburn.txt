@@ -18,7 +18,7 @@
 2647.1.1 = { holder = "18020022" } # Malcolm IV Bekele
 2685.1.1 = { holder = "17020022" } # Malcolm V Bekele
 2705.1.1 = {
-	law = succ_ultimogeniture
+	#law = succ_ultimogeniture #i'm sorry i know this is like a lore thing but otherwise the clones won't inherit
 	effect = {
 		add_law = true_cognatic_succession
 		holder_scope = {

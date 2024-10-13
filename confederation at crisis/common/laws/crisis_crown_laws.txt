@@ -4301,7 +4301,7 @@ de_jure_laws = {
 					OR = {
 						religion = terran_imperial
 						religion = neo_feudal
-						religion = imperial_cult
+						religion = terran_imperial_cult
 						religion = terran_republican
 						religion = bio_directionist
 						religion = astrist
@@ -4352,7 +4352,7 @@ de_jure_laws = {
 				factor = 0
 				holder_scope = {
 					NOT = { religion = terran_imperial }
-					NOT = { religion = imperial_cult }
+					NOT = { religion = terran_imperial_cult }
 					NOT = { religion = terran_republican }
 					NOT = { religion = astrist }
 					NOT = { religion = neo_socialist }

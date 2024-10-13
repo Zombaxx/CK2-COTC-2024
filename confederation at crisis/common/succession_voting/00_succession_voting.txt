@@ -119,7 +119,7 @@
 #	}
 #}
 
-feudal_elective = {
+feudal_elective = { #voting_rules
 
 	elector_vote_strength = {
 		days = 1
@@ -3533,7 +3533,7 @@ feudal_elective = {
 	#####################################################################################################################################################
 	#Tanistry
 
-tanistry = {
+tanistry = { #voting_rules
 	elector_vote_strength = {
 		days = 1
 	}
@@ -6803,7 +6803,7 @@ tanistry = {
 
 	#Elective Gavelkind
 
-elective_gavelkind = {
+elective_gavelkind = { #voting_rules
 	elector_vote_strength = {
 		days = 1
 	}
@@ -10149,7 +10149,7 @@ elective_gavelkind = {
 
 	#Eldership
 
-eldership_rules = {
+eldership_rules = { #voting_rules
 	elector_stances = {
 		elder_ruler = {
 			icon = 2

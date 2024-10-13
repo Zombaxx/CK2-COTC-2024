@@ -2606,7 +2606,7 @@ letter_event = {
 				# OR = {
 					# religion = terran_imperial
 					# religion = orthodox
-					# religion = imperial_cult
+					# religion = terran_imperial_cult
 				# }
 				# NOT = { trait = pragmatic }
 			# }
@@ -2834,7 +2834,7 @@ letter_event = {
 				# OR = {
 					# religion = terran_imperial
 					# religion = orthodox
-					# religion = imperial_cult
+					# religion = terran_imperial_cult
 				# }
 				# NOT = { trait = pragmatic }
 			# }
@@ -3147,7 +3147,7 @@ letter_event = {
 				# OR = {
 					# religion = terran_imperial
 					# religion = orthodox
-					# religion = imperial_cult
+					# religion = terran_imperial_cult
 				# }
 				# NOT = { trait = pragmatic }
 			# }
@@ -3375,7 +3375,7 @@ letter_event = {
 				# OR = {
 					# religion = terran_imperial
 					# religion = orthodox
-					# religion = imperial_cult
+					# religion = terran_imperial_cult
 				# }
 				# NOT = { trait = pragmatic }
 			# }

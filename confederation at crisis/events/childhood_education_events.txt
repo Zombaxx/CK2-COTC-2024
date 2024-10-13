@@ -5714,7 +5714,8 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTCONFIRM"
-		FROM = { character_event = { id = crisis_culture.0 tooltip = "EVTTOOLTIPCRISISCULTURE0" } }
+		FROM = { culture = ROOT }
+		#FROM = { character_event = { id = crisis_culture.0 tooltip = "EVTTOOLTIPCRISISCULTURE0" } }
 	}
 }
 

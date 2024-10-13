@@ -137,12 +137,12 @@ get_cybernetic_leg_decision;Install Cybernetic Leg;;;;;;;;;;;;x
 get_cybernetic_leg_decision_desc;Your injuries are severe, and your leg is beyond saving. You could arrange to have it replaced with a cybernetic prosthetic.;;;;;;;;;;;;x
 get_cybernetic_skeleton_decision;Install Cybernetic Skeleton;;;;;;;;;;;;x
 get_cybernetic_skeleton_decision_desc;Your body is mangled and crippled beyond recognition, well beyond the power of medical science to save. You may walk again, however, with the assistance of an artificial cybernetic skeletal system.;;;;;;;;;;;;x
-get_relative_cybernetic_limb_decision;Get [Root.FirstName] a [CyberneticLimbName];;;;;;;;;;;;x
-get_relative_cybernetic_limb_decision_desc;[Root.FullName] is badly wounded, and [Root.GetHerHis] arm is beyond the power of medical science to save. You could arrange to have it replaced with a cybernetic prosthetic.;;;;;;;;;;;;x
-get_relative_cybernetic_leg_decision;Get [Root.FirstName] a Cybernetic Leg;;;;;;;;;;;;x
-get_relative_cybernetic_leg_decision_desc;[Root.FullName] is badly wounded, and [Root.GetHerHis] leg is beyond the power of medical science to save. You could arrange to have it replaced with a cybernetic prosthetic.;;;;;;;;;;;;x
-get_relative_cybernetic_skeleton_decision;Get [Root.FirstName] a Cybernetic Skeleton;;;;;;;;;;;;x
-get_relative_cybernetic_skeleton_decision_desc;[Root.FullName] is badly wounded, [Root.GetHerHis] body crippled and mangled. [Root.GetSheHeCap] may walk again, however, with the aid of an artificial cybernetic skeletal system.;;;;;;;;;;;;x
+get_relative_cybernetic_limb_decision;Get [Root.getFirstName] a [CyberneticLimbName];;;;;;;;;;;;x
+get_relative_cybernetic_limb_decision_desc;[Root.getFullName] is either severely wounded or young enough for you to have [Root.GetHerHis] cybernetically enhanced with an advanced cybernetic prosthetic.;;;;;;;;;;;;x
+get_relative_cybernetic_leg_decision;Get [Root.getFirstName] a Cybernetic Leg;;;;;;;;;;;;x
+get_relative_cybernetic_leg_decision_desc;[Root.getFullName] is either severely wounded or young enough for you to have [Root.GetHerHis] cybernetically enhanced with an advanced cybernetic prosthetic.;;;;;;;;;;;;x
+get_relative_cybernetic_skeleton_decision;Get [Root.getFirstName] a Cybernetic Skeleton;;;;;;;;;;;;x
+get_relative_cybernetic_skeleton_decision_desc;[Root.getFullName] is either severely wounded or young enough for you to have [Root.GetHerHis] cybernetically enhanced with an artificial cybernetic skeletal system.;;;;;;;;;;;;x
 get_full_cybernetic_conversion_decision;Get Full Cybernetic Conversion;;;;;;;;;;;;x
 get_full_cybernetic_conversion_decision_desc;By having your body transferred completely into a cybernetic shell, you will grant yourself effective immortality, at the cost of your humanity.;;;;;;;;;;;;x
 EVTDESCCYBERNETICS10000;Your implants are certainly convenient, but you're starting to wonder if maybe they're TOO convenient. You've come to rely on them more and more. Perhaps you should try using them more conservatively, to make sure you don't become too reliant?;;;;;;;;;;;;x

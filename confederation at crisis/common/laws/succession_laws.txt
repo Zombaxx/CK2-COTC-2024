@@ -16,6 +16,7 @@ succession_laws = {
 			}
 			
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {
@@ -45,25 +46,24 @@ succession_laws = {
 	}
 
 	succ_elective_gavelkind = {
+		oldest_child_opinion = -5
 		child_opinion = 15
 		dynasty_opinion = 5
+		vassal_opinion = 5
 
 		potential = {
-			laws_allow_elections = yes
-			laws_allow_inheritance = yes
 			holder_scope = {
 				is_merchant_republic = no
 				is_patrician = no
 				NOT = { is_law_potential = succ_catholic_bishopric }
+				government = pirate_kingdom
 			}
 			requires_open_succession = no
-			always = no
+			NOT = { tier = baron }
 		}
 
 		allow = {
-			liege_allows_inheritance = yes
-#			is_senate_voted_succession = yes
-			base_requeriment_for_succession_change = yes
+			always = yes
 		}
 
 		pass_effect = {
@@ -75,7 +75,7 @@ succession_laws = {
 
 			succession = {
 				base_type = elective_gavelkind
-				voting_rules = generic_election_rules
+				voting_rules = elective_gavelkind
 			}
 		}
 	}
@@ -164,6 +164,7 @@ succession_laws = {
 				holder_scope = { is_patrician = yes }
 			}
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {
@@ -219,6 +220,7 @@ succession_laws = {
 			}
 			laws_allow_inheritance = yes
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {
@@ -285,11 +287,9 @@ succession_laws = {
 				is_patrician = no
 				NOT = { is_law_potential = succ_catholic_bishopric }
 			}
-			OR = {
-				laws_allow_elections = yes
-				laws_allow_inheritance = yes
-			}
+			laws_allow_elections = yes
 			requires_open_succession = no
+			requires_turkish_succession = no
 			#always = no
 		}
 
@@ -369,10 +369,11 @@ succession_laws = {
 			}
 			independent = yes
 			requires_open_succession = no
+			always = no
 		}
 
 		allow = {
-			religion = space_pirate
+			always = yes
 		}
 
 		pass_effect = {
@@ -400,12 +401,14 @@ succession_laws = {
 				is_merchant_republic = no
 				is_patrician = no
 				NOT = { is_law_potential = succ_catholic_bishopric }
+				NOT = { government = pirate_kingdom }
 			}
 			OR = {
-				laws_allow_elections = yes
+				#laws_allow_elections = yes
 				laws_allow_inheritance = yes
 			}
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {
@@ -452,6 +455,7 @@ succession_laws = {
 			}
 			laws_allow_inheritance = yes
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {
@@ -486,7 +490,7 @@ succession_laws = {
 		#dynasty_opinion = 10
 
 		potential = {
-			laws_allow_inheritance = yes
+			#laws_allow_inheritance = yes
 			holder_scope = {
 				is_merchant_republic = no
 				is_patrician = no
@@ -497,22 +501,19 @@ succession_laws = {
 				is_tribal_type_title = yes
 				temporary = yes
 			}
-			holder_scope = {
-				OR = {
-					government = pirate_kingdom
-					AND = {
-						independent = yes
-						is_hereditary_trigger = yes
-					}
-				}
-			}
 			requires_open_succession = no
+			requires_turkish_succession = yes
 		}
 
 		allow = {
-			religion = space_pirate
-			#is_senate_voted_succession = yes
-			base_requeriment_for_succession_change = yes
+			OR = {
+				tier = baron
+				has_law = public_order_2
+				has_law = centralization_4
+				holder_scope = {
+					government = hivemind_government
+				}
+			}
 		}
 
 		pass_effect = {
@@ -537,6 +538,7 @@ succession_laws = {
 				#title = d_fraticelli
 			#}
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {}
@@ -556,11 +558,13 @@ succession_laws = {
 	succ_appointment = {
 
 		potential = {
+			laws_allow_appointment = yes
 			holder_scope = {
 				is_merchant_republic = no
 				is_patrician = no
 				NOT = { is_law_potential = succ_catholic_bishopric }
 			}
+			always = no #the maintenance event set to switch this law to the other kind of appointment automatically leads me to believe this one isn't meant to be used
 			NOT = { has_law = succ_true_appointment }
 			holder_scope = { independent = no }
 			OR = {
@@ -568,6 +572,7 @@ succession_laws = {
 				holder_scope = { government = military_command }
 			}
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {
@@ -594,34 +599,29 @@ succession_laws = {
 				is_merchant_republic = no
 				is_patrician = no
 				NOT = { is_law_potential = succ_catholic_bishopric }
-				laws_allow_elections = yes
-				liege_allows_elections = yes
-				
-				#NAND = {						OLD STUFF for all other governments
-				#	liege_allows_elections = yes
-				#	holder_scope = {
-				#		OR = {
-				#			government = npc_civil_government
-				#			government = npc_rectorial_government
-				#		}
-				#	}
-				#}
 			}
-			#requires_open_succession = yes		If this is uncommented, in theory when public order is 0 nobody except for special case(barons) can become open.
-			holder_scope = {
-				OR = {
-					is_theocracy = no
-					AND = {
-						is_theocracy = yes
-
+			OR = {
+				holder_scope = {
+					OR = {
 						NOR = {
 							religion = orthodox
 							religion = pilgrim
 							religion = terran_imperial_cult
 						}
+						is_theocracy = no
 					}
 				}
+				tier = baron
 			}
+			OR = {
+				holder_scope = {
+					laws_allow_elections = yes
+					liege_allows_elections = yes
+					is_feudal = no
+				}
+				requires_open_succession = yes
+			}
+			requires_turkish_succession = no
 		}
 
 		allow = {
@@ -659,6 +659,7 @@ succession_laws = {
 				}
 			}
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {
@@ -693,6 +694,7 @@ succession_laws = {
 				is_merchant_republic = yes
 			}
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {
@@ -723,6 +725,7 @@ succession_laws = {
 				is_nomadic = yes
 			}
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {}
@@ -750,6 +753,7 @@ succession_laws = {
 				#government = confucian_bureaucracy # To use this with future offmap powers, use an OR clause here with the new government types
 			}
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {}
@@ -778,15 +782,21 @@ succession_laws = {
 			holder_scope = {
 				is_merchant_republic = no
 				is_patrician = no
+				laws_allow_dictatorship = yes
 				NOT = { is_law_potential = succ_catholic_bishopric }
 			}
-			laws_allow_dictatorship = yes
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {
 			liege_allows_inheritance = yes
-			is_dictatorship_trigger = yes
+			OR = {
+				has_law = law_voting_power_0
+				realm = {
+					is_dictatorship_trigger = yes
+				}
+			}
 
 			holder_scope = {
 				show_scope_change = no
@@ -828,19 +838,19 @@ succession_laws = {
 				is_patrician = no
 				NOT = { is_law_potential = succ_catholic_bishopric }
 			}
-			always = yes
+			#always = yes
 			holder_scope = { independent = no }
 			OR = {
 				laws_allow_appointment = yes
 				holder_scope = { government = military_command }
 			}
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {
 			OR = {
 				liege_allows_appointment = yes
-				holder_scope = { government = military_command }
 			}
 
 			holder_scope = {
@@ -885,6 +895,7 @@ succession_laws = {
 			}
 			laws_allow_elections = yes
 			requires_open_succession = no
+			requires_turkish_succession = no
 		}
 
 		allow = {

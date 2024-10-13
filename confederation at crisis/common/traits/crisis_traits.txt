@@ -46,7 +46,8 @@ rebel_leader = {
 # Holds off political marriages for a bit
 not_ready_to_marry = {
 	customizer = no
-	cannot_marry = yes
+	fertility = -1
+	#cannot_marry = yes
 }
 #Diseases
 has_cosmic_radiation = {

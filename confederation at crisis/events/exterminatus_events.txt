@@ -1669,10 +1669,10 @@ narrative_event = {
 			NOT = { is_liege_or_above = FROM }
 		}
 		name = "EVTOPTAINVASION110"
-		FROM = {
-			add_trait = saoshyant
-			any_child = { add_trait = saoshyant_descendant }
-		}
+		#FROM = {
+		#	add_trait = saoshyant
+		#	any_child = { add_trait = saoshyant_descendant }
+		#}
 		b_earth = { set_name = "Earth-That-Was" }
 	}
 
@@ -1693,10 +1693,10 @@ narrative_event = {
 			limit = { NOT = { religion = xenoterran } }
 			piety = -500
 		}
-		FROM = {
-			add_trait = saoshyant
-			any_child = { add_trait = saoshyant_descendant }
-		}
+		#FROM = {
+		#	add_trait = saoshyant
+		#	any_child = { add_trait = saoshyant_descendant }
+		#}
 		b_earth = { set_name = "Earth-That-Was" }
 	}
 
@@ -1712,10 +1712,10 @@ narrative_event = {
 		name = "EVTOPTCINVASION110"
 		prestige = 1000
 		piety = -500
-		FROM = {
-			add_trait = saoshyant
-			any_child = { add_trait = saoshyant_descendant }
-		}
+		#FROM = {
+		#	add_trait = saoshyant
+		#	any_child = { add_trait = saoshyant_descendant }
+		#}
 		b_earth = { set_name = "Earth-That-Was" }
 	}
 }
@@ -1791,16 +1791,16 @@ character_event = {
 	}
 
 	option = {
-		trigger = {
-			siege = {
-				is_attacker = yes
-				# Has sufficient capital ships to carry out the command
-				OR = {
-					knights = 0.1
-					dreadnoughts = 0.1
-				}
-			}
-		}
+		#trigger = {
+		#	siege = {
+		#		is_attacker = yes
+		#		# Has sufficient capital ships to carry out the command
+		#		OR = {
+		#			knights = 0.1
+		#			dreadnoughts = 0.1
+		#		}
+		#	}
+		#}
 		name = "EVTOPTAINVASION120"
 		set_character_flag = flag_used_orbital_bombardment
 		clr_character_flag = flag_using_orbital_bombardment

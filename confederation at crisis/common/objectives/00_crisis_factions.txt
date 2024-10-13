@@ -3252,7 +3252,7 @@ faction_abolish_legislature = {
 			FROM = {
 				OR = {
 					religion = terran_imperial
-					religion = imperial_cult
+					religion = terran_imperial_cult
 					religion = astrist
 					religion = neo_feudal
 				}
@@ -3264,7 +3264,7 @@ faction_abolish_legislature = {
 			FROM = {
 				OR = {
 					religion = terran_imperial
-					religion = imperial_cult
+					religion = terran_imperial_cult
 					religion = astrist
 					religion = neo_feudal
 				}
@@ -3277,7 +3277,7 @@ faction_abolish_legislature = {
 			FROM = {
 				OR = {
 					religion = terran_imperial
-					religion = imperial_cult
+					religion = terran_imperial_cult
 					religion = astrist
 					religion = neo_feudal
 				}
@@ -3461,7 +3461,7 @@ faction_abolish_legislature = {
 			factor = 4
 			OR = {
 				religion = terran_imperial
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				religion = astrist
 				religion = neo_feudal
 			}
@@ -3471,7 +3471,7 @@ faction_abolish_legislature = {
 			factor = 4
 			OR = {
 				religion = terran_imperial
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				religion = astrist
 				religion = neo_feudal
 			}
@@ -3482,7 +3482,7 @@ faction_abolish_legislature = {
 			factor = 4
 			OR = {
 				religion = terran_imperial
-				religion = imperial_cult
+				religion = terran_imperial_cult
 				religion = astrist
 				religion = neo_feudal
 			}
@@ -4704,7 +4704,7 @@ faction_independence = {
 		}
 		modifier = {
 			factor = 0.05
-			religion = imperial_cult
+			religion = terran_imperial_cult
 		}
 
 		modifier = {
@@ -5195,7 +5195,7 @@ faction_independence = {
 
 		modifier = {
 			factor = 0.05
-			religion = imperial_cult
+			religion = terran_imperial_cult
 		}
 
 		modifier = {
@@ -5841,7 +5841,7 @@ faction_no_confidence = {
 		# Ideological Concerns
 		modifier = {
 			factor = 0.05
-			religion = imperial_cult
+			religion = terran_imperial_cult
 			NOT = { trait = pragmatic }
 		}
 	}
@@ -6112,7 +6112,7 @@ faction_no_confidence = {
 		# Ideological Concerns
 		modifier = {
 			factor = 0.05
-			religion = imperial_cult
+			religion = terran_imperial_cult
 			NOT = { trait = pragmatic }
 		}
 	}
@@ -6208,7 +6208,7 @@ faction_no_confidence = {
 			# NOT = { religion = terran_imperial }
 			# NOT = { religion = neo_feudal }
 			# NOT = { religion = bio_directionist }
-			# NOT = { religion = imperial_cult }
+			# NOT = { religion = terran_imperial_cult }
 			# NOT = {
 				# liege = {
 					# primary_title = {
@@ -6252,7 +6252,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 		# }
 		# modifier = {
@@ -6261,7 +6261,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# NOT = { trait = pragmatic }
 		# }
@@ -6271,7 +6271,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# trait = radical
 		# }
@@ -6281,7 +6281,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# religion_authority = 0.2
 		# }
@@ -6291,7 +6291,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# religion_authority = 0.4
 		# }
@@ -6301,7 +6301,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# religion_authority = 0.6
 		# }
@@ -6311,7 +6311,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# religion_authority = 0.8
 		# }
@@ -6321,7 +6321,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# religion_authority = 1.0
 		# }
@@ -6538,7 +6538,7 @@ faction_no_confidence = {
 			# NOT = { religion = terran_imperial }
 			# NOT = { religion = neo_feudal }
 			# NOT = { religion = bio_directionist }
-			# NOT = { religion = imperial_cult }
+			# NOT = { religion = terran_imperial_cult }
 			# NOT = {
 				# liege = {
 					# primary_title = {
@@ -6582,7 +6582,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 		# }
 		# modifier = {
@@ -6591,7 +6591,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# NOT = { trait = pragmatic }
 		# }
@@ -6601,7 +6601,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# trait = radical
 		# }
@@ -6611,7 +6611,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# religion_authority = 0.2
 		# }
@@ -6621,7 +6621,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# religion_authority = 0.4
 		# }
@@ -6631,7 +6631,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# religion_authority = 0.6
 		# }
@@ -6641,7 +6641,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# religion_authority = 0.8
 		# }
@@ -6651,7 +6651,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 			# }
 			# religion_authority = 1.0
 		# }
@@ -7088,7 +7088,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7106,7 +7106,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7125,7 +7125,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7144,7 +7144,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7163,7 +7163,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7182,7 +7182,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7201,7 +7201,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7220,7 +7220,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7421,7 +7421,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7439,7 +7439,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7458,7 +7458,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7477,7 +7477,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7496,7 +7496,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7515,7 +7515,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7534,7 +7534,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7553,7 +7553,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = neo_socialist
 				# religion = cyberneticist
 				# AND = {
@@ -7820,7 +7820,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -7838,7 +7838,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -7857,7 +7857,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -7876,7 +7876,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -7895,7 +7895,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -7914,7 +7914,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -7933,7 +7933,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -7952,7 +7952,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -8172,7 +8172,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -8190,7 +8190,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -8209,7 +8209,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -8228,7 +8228,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -8247,7 +8247,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -8266,7 +8266,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -8285,7 +8285,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {
@@ -8304,7 +8304,7 @@ faction_no_confidence = {
 				# religion = terran_imperial
 				# religion = neo_feudal
 				# religion = bio_directionist
-				# religion = imperial_cult
+				# religion = terran_imperial_cult
 				# religion = terran_federalist
 				# religion = colonial_separatist
 				# AND = {

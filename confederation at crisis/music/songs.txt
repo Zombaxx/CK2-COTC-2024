@@ -1,0 +1,249 @@
+song = {
+	name = "crusaderkings2_maintitle.ogg"
+	
+	chance = {
+		factor = 1
+		# In-universe, this is the Terran anthem.
+		
+			factor = 2
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = terran_imperial
+			}
+		}
+		
+			factor = 2
+			OR = {
+				has_landed_title = e_terran_confederation
+				has_landed_title = k_terran_navy
+				has_landed_title = d_terran_first_fleet
+				has_landed_title = d_terran_second_fleet
+				has_landed_title = d_terran_third_fleet
+				has_landed_title = d_terran_fourth_fleet
+				has_landed_title = d_terran_fifth_fleet
+			}
+		}
+	}
+}
+
+song = {
+	name = "Bach - Aria Sul G.ogg"
+	
+	chance = {
+		factor = 1
+		
+			war = no
+
+	}
+}
+
+song = {
+	name = "Berlin_Philharmonia_String_Quartet_-_Nutcracker.ogg"
+	
+	chance = {
+		factor = 1
+		
+			war = no
+	}
+}
+
+song = {
+	name = "Beethoven - Piano Sonata N.8 Op.13 in c minor Pathetique.ogg"
+	
+	chance = {
+		factor = 1
+		
+			war = no
+
+	}
+}
+
+song = {
+	name = "Berlin_Radio_Symphony_Orchestra_-_Valse_D_amour.ogg"
+	
+	chance = {
+		factor = 1
+		
+			war = no
+
+	}
+}
+
+song = {
+	name = "Holst - The Planets, op.32 - 2. Venus, the Bringer of Peace.ogg"
+	
+	chance = {
+		factor = 1
+		
+			war = no
+	}
+}
+
+song = {
+	name = "Holst - The Planets, op.32 - 3. Mercury, the Winged Messenger.ogg"
+	
+	chance = {
+		factor = 1
+		
+			war = no
+
+	}
+}
+
+song = {
+	name = "Holst - The Planets, op.32 - 4. Jupiter, the Bringer of Jollity.ogg"
+	chance = {
+		factor = 1
+		
+			
+			war = no
+		}
+	}
+}
+
+song = {
+	name = "Holst - The Planets, op.32 - 5. Saturn, the Bringer of Old Age.ogg"
+	chance = {
+		factor = 1
+		
+			war = no
+
+	}
+}
+
+song = {
+	name = "Mozart - Eine Kleine Nachtmusik - I.ogg"
+	chance = {
+		factor = 1
+		
+			war = no
+
+	}
+}
+
+
+song = {
+	name = "Mozart - Eine Kleine Nachtmusik - II.ogg"
+	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+song = {
+	name = "Beethoven - Piano Sonata No.14.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+song = {
+	name = "Berlin_Philharmonia_String_Quartet_-_Symphony_No6_Tragic.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+song = {
+	name = "Berlin_Philharmonia_String_Quartet_-_Symphony_No7_E_Major.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+song = {
+	name = "Dvorak - From The New World.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+song = {
+	name = "Holst - The Planets, op.32 - 1. Mars, the Bringer of War.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+song = {
+	name = "Holst - The Planets, op.32 - 6. Uranus, the Magician.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+song = {
+	name = "Holst - The Planets, op.32 - 7. Neptune, the Mystic.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+
+song = {
+	name = "mus_institute_camillesaintsaens_carnivalcuckoos.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+
+song = {
+	name = "mus_institute_chopin_nocturneeflatmajor.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+
+song = {
+	name = "Staatskapelle_Berlin_-_Symphony_No_1_In_C_Minor.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+			
+		}
+	}
+
+
+song = {
+	name = "Wagner - Die Walk++re, Akt III - Vorspiel.ogg" 	
+	chance = {
+		factor = 2
+		
+			
+		}
+	}
+}

@@ -7,11 +7,6 @@ targetted_decisions = {
 			is_ruler = yes
 			is_landed = yes # Must actually have land somewhere
 			NOT = { has_character_flag = flag_cloning_decision_active }
-		}
-		allow = {
-			# Clones are expensive
-			wealth = 100
-			prisoner = no
 			location = {
 				any_province_lord = {
 					NOT = { war_with = ROOT }
@@ -22,6 +17,12 @@ targetted_decisions = {
 					}
 				}
 			}
+		}
+		allow = {
+			# Clones are expensive
+			wealth = 100
+			prisoner = no
+			age = 18
 			OR = {
 				AND = {
 					trait = ambitious
@@ -91,6 +92,119 @@ targetted_decisions = {
 				factor = 0
 				has_character_flag = flag_cloning_in_progress
 			}
+			modifier = {
+				factor = 0.1
+				num_of_children = 3 # Oh just GIVE UP already
+			}
+			modifier = {
+				factor = 2
+				religion = bio_directionist
+			}
+			modifier = {
+				factor = 10
+				trait = clone
+				OR = {
+					religion = neo_feudal
+					religion = bio_directionist
+				}
+			}
+			modifier = {
+				factor = 5
+				trait = clone
+				has_children = no
+			}
+			modifier = {
+				factor = 5
+				trait = clone
+				age = 30
+				has_children = no
+			}
+			modifier = {
+				factor = 5
+				trait = clone
+				#age = 30
+				has_children = no
+			}
+			modifier = {
+				factor = 5
+				religion = bio_directionist
+				age = 30
+				has_children = no
+			}
+			modifier = {
+				factor = 5
+				trait = clone
+				religion = neo_feudal
+				age = 30
+				has_children = no
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					has_children = no
+					age = 30
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					has_children = no
+					age = 35
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					has_children = no
+					age = 40
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					has_children = no
+					age = 50
+				}
+			}
+			modifier = {
+				factor = 50
+				AND = {
+					has_children = no
+					OR = {
+						age = 60
+						AND = {
+							age = 45
+							is_female = yes
+						}
+					}
+				}
+			}
+			additive_modifier = {
+				factor = 10
+				OR = { 
+					religion = neo_feudal
+					religion = bio_directionist
+				}
+				age = 20
+				trait = clone
+				OR = {
+					NOT = { any_child = { trait = clone } }
+					has_children = no
+				}
+			}
+			additive_modifier = {
+				factor = 90
+				OR = { 
+					religion = neo_feudal
+					religion = bio_directionist
+				}
+				age = 30
+				trait = clone
+				OR = {
+					NOT = { any_child = { trait = clone } }
+					has_children = no
+				}
+			}
 		}
 	}
 
@@ -99,8 +213,20 @@ targetted_decisions = {
 		filter = court
 		ai_target_filter = court
 		from_potential = {
+			is_ruler = yes
+			is_landed = yes # Must actually have land somewhere
 			NOT = { trait = incapable }
 			prisoner = no
+			location = {
+				any_province_lord = {
+					NOT = { war_with = ROOT }
+					any_demesne_title = {
+						tier = baron
+						location = { province_id = PREVPREVPREV }
+						has_building = tp_biogenetics_lab_q_1
+					}
+				}
+			}
 		}
 		ai_check_interval = 80
 		potential = {
@@ -116,16 +242,6 @@ targetted_decisions = {
 		allow = {
 		    FROM = { wealth = 100 }
 			prisoner = no
-			location = {
-				any_province_lord = {
-					NOT = { war_with = ROOT }
-					any_demesne_title = {
-						tier = baron
-						location = { province_id = PREVPREVPREV }
-						has_building = tp_biogenetics_lab_q_1
-					}
-				}
-			}
 			ROOT = {
 			    OR = {
 					religion = bio_directionist
@@ -162,6 +278,39 @@ targetted_decisions = {
 				factor = 0.1
 			}
 			modifier = {
+				factor = 10
+				ROOT = { 
+					age = 30
+					is_child_of = FROM
+					trait = clone
+					NOT = { any_child = { trait = clone } }
+				}
+				FROM = {
+					OR = {
+						religion = bio_directionist
+						religion = neo_feudal
+						trait = clone
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				ROOT = { 
+					is_heir = yes 
+					age = 25
+					is_child_of = FROM
+					trait = clone
+					NOT = { any_child = { trait = clone } }
+				}
+				FROM = {
+					OR = {
+						religion = bio_directionist
+						religion = neo_feudal
+						trait = clone
+					}
+				}
+			}
+			modifier = {
 				factor = 5
 				FROM = { religion = bio_directionist }
 			}
@@ -170,6 +319,22 @@ targetted_decisions = {
 				FROM = {
 					religion_group = religious_group
 					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				ROOT = {
+					NOT = {
+						is_child_of = FROM
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				ROOT = {
+					NOT = {
+						is_close_relative = FROM
+					}
 				}
 			}
 			modifier = {
@@ -286,11 +451,6 @@ targetted_decisions = {
 				is_married = yes
 				is_married_matrilineally = yes
 			}
-		}
-		allow = {
-			# Multi-donor clones are more expensive than standard clones
-			wealth = 500
-			prisoner = no
 			location = {
 				any_province_lord = {
 					NOT = { war_with = ROOT }
@@ -301,6 +461,11 @@ targetted_decisions = {
 					}
 				}
 			}
+		}
+		allow = {
+			# Multi-donor clones are more expensive than standard clones
+			wealth = 500
+			prisoner = no
 			OR = {
 				AND = {
 					trait = ambitious
@@ -308,7 +473,7 @@ targetted_decisions = {
 				}
 			    religion = bio_directionist
 				religion = xenoterran
-				religion = imperial_cult
+				religion = terran_imperial_cult
 			    trait = clone
 				trait = vat_born
 			    AND = {

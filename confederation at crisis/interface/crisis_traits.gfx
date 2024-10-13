@@ -1611,22 +1611,8 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
-		name = "GFX_trait_economist"
-		texturefile = "gfx/traits/economist.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-	spriteType = {
-		name = "GFX_trait_lawyer"
-		texturefile = "gfx/traits/lawyer.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-	spriteType = {
-		name = "GFX_trait_scientist"
-		texturefile = "gfx/traits/scientist.tga"
+		name = "GFX_trait_living_armageddon"
+		texturefile = "gfx/traits/living_armageddon.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"

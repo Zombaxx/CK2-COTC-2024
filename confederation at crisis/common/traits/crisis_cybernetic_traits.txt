@@ -4,6 +4,7 @@
 dni = {
 	#cached = yes # Helpfully marks characters whose brains have an internet connection.
 	health = 2
+	transhumanist_group_opinion = 5
 }
 
 # Stat-enhancing implants
@@ -16,6 +17,7 @@ iaei_mk_i = {
 		iaei_mk_iv
 		iaei_mk_v
 	}
+	transhumanist_group_opinion = 5
 	diplomacy = 2
 }
 iaei_mk_ii = {
@@ -27,6 +29,7 @@ iaei_mk_ii = {
 		iaei_mk_iv
 		iaei_mk_v
 	}
+	transhumanist_group_opinion = 5
 	diplomacy = 4
 }
 iaei_mk_iii = {
@@ -38,6 +41,7 @@ iaei_mk_iii = {
 		iaei_mk_iv
 		iaei_mk_v
 	}
+	transhumanist_group_opinion = 5
 	diplomacy = 6
 }
 iaei_mk_iv = {
@@ -49,6 +53,7 @@ iaei_mk_iv = {
 		iaei_mk_iii
 		iaei_mk_v
 	}
+	transhumanist_group_opinion = 5
 	diplomacy = 8
 }
 iaei_mk_v = {
@@ -60,6 +65,7 @@ iaei_mk_v = {
 		iaei_mk_iii
 		iaei_mk_iv
 	}
+	transhumanist_group_opinion = 5
 	diplomacy = 10
 }
 # Odin Cybernetic Eye - Martial Buff
@@ -72,6 +78,7 @@ odin_mk_i = {
 		odin_mk_v
 		blinded
 	}
+	transhumanist_group_opinion = 5
 	martial = 2
 	combat_rating = 10
 }
@@ -85,6 +92,7 @@ odin_mk_ii = {
 		odin_mk_v
 		blinded
 	}
+	transhumanist_group_opinion = 5
 	martial = 4
 	combat_rating = 20
 }
@@ -98,6 +106,7 @@ odin_mk_iii = {
 		odin_mk_v
 		blinded
 	}
+	transhumanist_group_opinion = 5
 	martial = 6
 	combat_rating = 30
 }
@@ -111,6 +120,7 @@ odin_mk_iv = {
 		odin_mk_v
 		blinded
 	}
+	transhumanist_group_opinion = 5
 	martial = 8
 	combat_rating = 40
 }
@@ -124,6 +134,7 @@ odin_mk_v = {
 		odin_mk_iv
 		blinded
 	}
+	transhumanist_group_opinion = 5
 	martial = 10
 	combat_rating = 50
 }
@@ -136,6 +147,7 @@ pci_mk_i = {
 		pci_mk_iv
 		pci_mk_v
 	}
+	transhumanist_group_opinion = 5
 	stewardship = 2
 }
 pci_mk_ii = {
@@ -147,6 +159,7 @@ pci_mk_ii = {
 		pci_mk_iv
 		pci_mk_v
 	}
+	transhumanist_group_opinion = 5
 	stewardship = 4
 }
 pci_mk_iii = {
@@ -158,6 +171,7 @@ pci_mk_iii = {
 		pci_mk_iv
 		pci_mk_v
 	}
+	transhumanist_group_opinion = 5
 	stewardship = 6
 }
 pci_mk_iv = {
@@ -169,6 +183,7 @@ pci_mk_iv = {
 		pci_mk_iii
 		pci_mk_v
 	}
+	transhumanist_group_opinion = 5
 	stewardship = 8
 }
 pci_mk_v = {
@@ -180,6 +195,7 @@ pci_mk_v = {
 		pci_mk_iii
 		pci_mk_iv
 	}
+	transhumanist_group_opinion = 5
 	stewardship = 10
 }
 # Pluto Information Analysis Line - Intrigue Buff
@@ -191,6 +207,7 @@ pluto_mk_i = {
 		pluto_mk_iv
 		pluto_mk_v
 	}
+	transhumanist_group_opinion = 5
 	intrigue = 2
 }
 pluto_mk_ii = {
@@ -202,6 +219,7 @@ pluto_mk_ii = {
 		pluto_mk_iv
 		pluto_mk_v
 	}
+	transhumanist_group_opinion = 5
 	intrigue = 4
 }
 pluto_mk_iii = {
@@ -213,6 +231,7 @@ pluto_mk_iii = {
 		pluto_mk_iv
 		pluto_mk_v
 	}
+	transhumanist_group_opinion = 5
 	intrigue = 6
 }
 pluto_mk_iv = {
@@ -224,6 +243,7 @@ pluto_mk_iv = {
 		pluto_mk_iii
 		pluto_mk_v
 	}
+	transhumanist_group_opinion = 5
 	intrigue = 8
 }
 pluto_mk_v = {
@@ -235,6 +255,7 @@ pluto_mk_v = {
 		pluto_mk_iii
 		pluto_mk_iv
 	}
+	transhumanist_group_opinion = 5
 	intrigue = 10
 }
 
@@ -247,6 +268,7 @@ thoth_mk_i = {
 		thoth_mk_iv
 		thoth_mk_v
 	}
+	transhumanist_group_opinion = 5
 	learning = 2
 }
 thoth_mk_ii = {
@@ -258,6 +280,7 @@ thoth_mk_ii = {
 		thoth_mk_iv
 		thoth_mk_v
 	}
+	transhumanist_group_opinion = 5
 	learning = 4
 }
 thoth_mk_iii = {
@@ -269,6 +292,7 @@ thoth_mk_iii = {
 		thoth_mk_iv
 		thoth_mk_v
 	}
+	transhumanist_group_opinion = 5
 	learning = 6
 }
 thoth_mk_iv = {
@@ -280,6 +304,7 @@ thoth_mk_iv = {
 		thoth_mk_iii
 		thoth_mk_v
 	}
+	transhumanist_group_opinion = 5
 	learning = 8
 }
 thoth_mk_v = {
@@ -291,6 +316,7 @@ thoth_mk_v = {
 		thoth_mk_iii
 		thoth_mk_iv
 	}
+	transhumanist_group_opinion = 5
 	learning = 10
 }
 # Other assorted cybernetic implants
@@ -299,6 +325,8 @@ cybernetic_limb = { # Generic limb in vanilla, arm with Reaper's Due
 	health = 1
 	opposites = { one_handed }
 	combat_rating = 10
+	cyberneticist_opinion = 5
+	machine_cultist_opinion = 5
 }
 cybernetic_leg = {
 	is_health = yes
@@ -306,12 +334,16 @@ cybernetic_leg = {
 	potential = { has_dlc = "Reapers" }
 	opposites = { one_legged }
 	combat_rating = 5
+	cyberneticist_opinion = 5
+	machine_cultist_opinion = 5
 }
 cybernetic_skeleton = {
 	is_health = yes
 	health = 1
 	potential = { has_dlc = "Reapers" }
 	opposites = { mangled }
+	cyberneticist_opinion = 10
+	machine_cultist_opinion = 10
 }
 full_cybernetic_conversion = {
 	random = no
@@ -336,6 +368,7 @@ full_cybernetic_conversion = {
 	health = 100 # A hack because immortal apparently doesn't actually work! This makes you EFFECTIVELY immortal.
 	general_opinion = -50 # Creeepy
 	same_opinion = 25 # Not quite so creepy
+	machine_cultist_opinion = 50
 	fertility = -10000
 	ruler_designer_cost = 20 # The game apparently severely undervalues "no fertility" relative to "lives forever."
 	combat_rating = 30
@@ -370,7 +403,7 @@ hiver_implant = {
 	cached = yes
 	ai_ambition = 100
 	ai_zeal = 100 # We are the Borg.
-	general_opinion = -100 # Resistance is futile.
+	general_opinion = -200 # Resistance is futile.
 	same_opinion = 10000 # You will be assimilated.
-	infidel_opinion = -50
+	infidel_opinion = -100
 }

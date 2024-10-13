@@ -94,10 +94,12 @@ character_event = {
 			religion = ROOT
 			dynasty = ROOT
 			race = ROOT
+			name = [Root.GetFirstName]
 		}
 		new_character = {
 			set_father = ROOT
 			dynasty = ROOT
+			set_graphical_culture = ROOT
 			add_trait = clone
 			# Chance of gaining cloning defects
 			if = {
@@ -338,6 +340,7 @@ character_event = {
 			}
 			# Send to parent's court
 			ROOT = { reverse_banish = PREV }
+			set_name = father #needed for some reason, you'd think setting their name earlier would be enough
 		}
 		if = {
 				limit = { is_landed = no }
@@ -367,6 +370,7 @@ character_event = {
 			religion = ROOT
 			dynasty = ROOT
 			race = ROOT
+			name = [Root.GetFirstName]
 		}
 		new_character = {
 			set_mother = ROOT
@@ -611,6 +615,7 @@ character_event = {
 			}
 			# Send to parent's court
 			ROOT = { reverse_banish = ROOT }
+			set_name = mother #needed for some reason, you'd think setting their name earlier would be enough
 		}
 		if = {
 				limit = { is_landed = no }

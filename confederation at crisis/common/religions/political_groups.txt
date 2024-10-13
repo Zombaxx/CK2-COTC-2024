@@ -218,7 +218,7 @@ political_terran_group = {
 		scripture_name = THE_THESIS
 		piety_name = LEGITIMACY
 		high_god_name = GOD_GOD
-		god_names = { GOD_UNITY REGULAR_TERRA GOD_THE_EMPEROR }
+		god_names = { GOD_UNITY REGULAR_TERRA } #GOD_THE_EMPEROR
 		priest_title = RECTOR
 		evil_god_names = {
 			EVIL_REPUBLICANISM EVIL_SEPARATISM

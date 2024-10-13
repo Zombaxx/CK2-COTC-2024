@@ -88,7 +88,7 @@ vat_born_desc;This character was decanted in a VAT chamber, an artificially-crea
 heavy_worlder;Heavy Worlder;;;;;;;;;;;;;x
 heavy_worlder_desc;This character, or an ancestor, was genetically modified to survive on high gravity worlds.;;;;;;;;;;;;;x
 spacer_physiology;Spacer Physiology;;;;;;;;;;;;;x
-spacer_physiology_desc;This character's physiology has been changed from multiple generations spent in low gravity. They are much taller and thinner on average than other humans and cannot survive on a high gravity planet for very long without a water tank.;;;;;;;;;;;;;x
+spacer_physiology_desc;This character's physiology has been changed from multiple generations spent in low gravity. They are much taller and thinner on average than other humans and cannot survive on a high gravity planet for very long without a water tank, their physical deterioration has allowed their brains to devote more of it's capabilities towards intellectual pursuits;;;;;;;;;;;;;x
 mobster;Mobster;;;;;;;;;;;;;x
 mobster_desc;This person is of an organized crime syndicate originating from back before space travel.;;;;;;;;;;;;;x
 organic_wifi;BiFi;;;;;;;;;;;;;x

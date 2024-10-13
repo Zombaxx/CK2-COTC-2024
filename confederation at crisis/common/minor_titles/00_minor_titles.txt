@@ -43,7 +43,10 @@ title_court_physician = {
 		}
 		custom_tooltip = {
 			text = court_physician_tooltip_2
-			gender_compatible_trigger = yes
+			OR = {
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+			}
 		}
 
 		OR = {
@@ -129,11 +132,20 @@ title_appointed_regent = {
 	monthly_salary = 0.05
 	monthly_prestige = 0.02
 
-	allowed_to_grant = { has_regent = no }
+	allowed_to_grant = {
+		has_regent = no
+		NOT = {
+			has_game_rule = {
+				name = regencies
+				value = off
+			}
+		}
+	}
 
 	allowed_to_hold = {
 		is_adult = yes
 		prisoner = no
+		NOT = { trait = incapable }
 		has_regent = no
 	}
 
@@ -905,7 +917,7 @@ title_prince_royal = {
 		OR = {
 			religion = neo_feudal
 			religion = terran_imperial
-			religion = imperial_cult
+			religion = terran_imperial_cult
 			government = military_monarchy
 			government = corporate_monarchy
 			government = administrative_monarchy

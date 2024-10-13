@@ -76,7 +76,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 320
+		months = 3200
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
@@ -89,23 +89,23 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 1 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 2 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 3 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 4 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 5 } }
 		}
 	}
@@ -175,7 +175,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 320
+		months = 3200
 		modifier = {
 			factor = 4
 			has_disease = yes
@@ -192,23 +192,23 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 1 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 2 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 3 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 4 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 5 } }
 		}
 	}
@@ -314,7 +314,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 320
+		months = 3200
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
@@ -327,23 +327,23 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 1 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 2 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 3 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 4 } }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			owner = { check_variable = { which = "nomad_relations" value = 5 } }
 		}
 	}
