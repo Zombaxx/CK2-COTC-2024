@@ -302,7 +302,7 @@ society_army_light_rank_3_male;Light Blessed;;;;;;;;;;;;;x
 society_army_light_rank_4_male;Grand Master;;;;;;;;;;;;;x
 #society_western_guild
 society_western_guild;The Round Table;;;;;;;;;;;;;x
-society_western_guild_desc;Taking some inspirations from the knights of the round table of yore, with less focus on the holy quest and more on personal prestige and honor, this fighters guilds is the pride of the western world. Young knights come from all corners to join them in their quest for Glory!\nTheir skills are greatly solicited, be it for military advice or bounty hunting.;;;;;;;;;;;;;x
+society_western_guild_desc;Taking some inspirations from the knights of the round table of yore, with less focus on the holy quest and more on personal prestige and honor, this Fighter Pilot Academies is the pride of the western world. Young knights come from all corners to join them in their quest for Glory!\nTheir skills are greatly solicited, be it for military advice or bounty hunting.;;;;;;;;;;;;;x
 society_western_guild_leader_desc;The Champion of the Round Table.;;;;;;;;;;;;;x
 society_western_guild_rank_1_female;Novice;;;;;;;;;;;;;x
 society_western_guild_rank_2_female;Veteran;;;;;;;;;;;;;x
@@ -314,7 +314,7 @@ society_western_guild_rank_3_male;Pretender;;;;;;;;;;;;;x
 society_western_guild_rank_4_male;Champion;;;;;;;;;;;;;x
 #society_southern_guild
 society_southern_guild;The Sandpit;;;;;;;;;;;;;x
-society_southern_guild_desc;Travelers can sometime see massive circles dug into the dunes. One may think they are but dried oasis, but they'll only find blood soaked sand. These sandpits are the arenas in which the members of this fighters guilds bet their lives for Glory. They will not hesitate to cut down heads for money and will provide their martial services to anyone to improve their prestige. Few can stand unfazed in front of these children of the sands.;;;;;;;;;;;;;x
+society_southern_guild_desc;Travelers can sometime see massive circles dug into the dunes. One may think they are but dried oasis, but they'll only find blood soaked sand. These sandpits are the arenas in which the members of this Fighter Pilot Academies bet their lives for Glory. They will not hesitate to cut down heads for money and will provide their martial services to anyone to improve their prestige. Few can stand unfazed in front of these children of the sands.;;;;;;;;;;;;;x
 society_southern_guild_leader_desc;The Champion of the Sandpit.;;;;;;;;;;;;;x
 society_southern_guild_rank_1_female;Novice;;;;;;;;;;;;;x
 society_southern_guild_rank_2_female;Veteran;;;;;;;;;;;;;x
@@ -337,17 +337,17 @@ society_northern_guild_rank_2_male;Veteran;;;;;;;;;;;;;x
 society_northern_guild_rank_3_male;Pretender;;;;;;;;;;;;;x
 society_northern_guild_rank_4_male;Champion;;;;;;;;;;;;;x
 #society_eastern_guild
-society_eastern_guild;The Wheel of Life and Death;;;;;;;;;;;;;x
-society_eastern_guild_desc;Various people believe in some form of rebirth. While their goals is usually to put an end to it, there are others who much prefer this mortal plane where they can perpetually improve themselves in mind and body. These fighters are well known for their combat abilities and knowledge of war, they are often relied upon by lords for various tasks.\nThere are rumors that some members have spent several lives in the organization.;;;;;;;;;;;;;x
-society_eastern_guild_leader_desc;The Champion of the Wheel of Life and Death.;;;;;;;;;;;;;x
-society_eastern_guild_rank_1_female;Novice;;;;;;;;;;;;;x
-society_eastern_guild_rank_2_female;Veteran;;;;;;;;;;;;;x
-society_eastern_guild_rank_3_female;Pretender;;;;;;;;;;;;;x
-society_eastern_guild_rank_4_female;Champion;;;;;;;;;;;;;x
-society_eastern_guild_rank_1_male;Novice;;;;;;;;;;;;;x
-society_eastern_guild_rank_2_male;Veteran;;;;;;;;;;;;;x
-society_eastern_guild_rank_3_male;Pretender;;;;;;;;;;;;;x
-society_eastern_guild_rank_4_male;Champion;;;;;;;;;;;;;x
+society_eastern_guild;Vimana Starfighter Academy;;;;;;;;;;;;;x
+society_eastern_guild_desc;The Vimana Starfighter Corps is an elite fighter pilot academy inspired by ancient myths and powered by advanced cybernetics. Operating in the galaxy’s most technologically advanced sector, the Corps trains pilots to master starcraft designed for precision and speed. With a focus on neural augmentation and aerial strategy, they blend tradition with cutting-edge technology, crafting warriors who soar through space like legends reborn.;;;;;;;;;;;;;x
+society_eastern_guild_leader_desc;Supreme Winglord ;;;;;;;;;;;;;x
+society_eastern_guild_rank_1_female;Cadet;;;;;;;;;;;;;x
+society_eastern_guild_rank_2_female;Pilot;;;;;;;;;;;;;x
+society_eastern_guild_rank_3_female;Skyblade;;;;;;;;;;;;;x
+society_eastern_guild_rank_4_female;Winglord ;;;;;;;;;;;;;x
+society_eastern_guild_rank_1_male;Cadet;;;;;;;;;;;;;x
+society_eastern_guild_rank_2_male;Pilot;;;;;;;;;;;;;x
+society_eastern_guild_rank_3_male;Skyblade;;;;;;;;;;;;;x
+society_eastern_guild_rank_4_male;Winglord ;;;;;;;;;;;;;x
 #modded society
 #livonian_brothers_of_the_sword
 society_livonian_brothers_of_the_sword;The Livonian Brothers of the Sword;;;;;;;;;;;;;x
@@ -641,14 +641,14 @@ society_holy_one_rank_4_male;Grand Master;;;;;;;;;;;;;x
 society_generic_fighter_guild;Fighter Pilot Academy;;;;;;;;;;;;;x
 society_generic_fighter_guild_desc;The Fighter Pilot Academy is an elite, neutral training ground open to all political ideologies across the galaxy. It offers cutting-edge spacecraft and combat simulators. Cadets hone their skills in dogfighting, tactical maneuvers, and survival, preparing for a future where allegiance is secondary to mastery of the stars.;;;;;;;;;;;;;x
 society_generic_fighter_guild_leader_desc;The Commandant of the Fighter Pilot Academy.;;;;;;;;;;;;;x
-society_generic_fighter_guild_rank_1_female;Gunner;;;;;;;;;;;;;x
+society_generic_fighter_guild_rank_1_female;Cadet;;;;;;;;;;;;;x
 society_generic_fighter_guild_rank_2_female;Pilot;;;;;;;;;;;;;x
 society_generic_fighter_guild_rank_3_female;Navigator;;;;;;;;;;;;;x
-society_generic_fighter_guild_rank_4_female;Quartermaster;;;;;;;;;;;;;x
-society_generic_fighter_guild_rank_1_male;Gunner;;;;;;;;;;;;;x
+society_generic_fighter_guild_rank_4_female;Admiral;;;;;;;;;;;;;x
+society_generic_fighter_guild_rank_1_male;Cadet;;;;;;;;;;;;;x
 society_generic_fighter_guild_rank_2_male;Pilot;;;;;;;;;;;;;x
 society_generic_fighter_guild_rank_3_male;Navigator;;;;;;;;;;;;;x
-society_generic_fighter_guild_rank_4_male;Quartermaster;;;;;;;;;;;;;x
+society_generic_fighter_guild_rank_4_male;Admiral;;;;;;;;;;;;;x
 #society_risk_fighter_guild
 society_risk_fighter_guild;Void Corsair Academy;;;;;;;;;;;;;x
 society_risk_fighter_guild_desc;The Void Corsair Academy is a covert training ground for space pirates and rogue pilots. Hidden in the shadows of uncharted space, it teaches guerrilla tactics, smuggling routes, and starship hijacking. Only the bold and rebellious are recruited, forging a brotherhood of marauders who thrive on outwitting law enforcement and rival factions across the galaxy.;;;;;;;;;;;;;x
@@ -799,11 +799,11 @@ must_be_allowed_to_rank_up_chivalry_tooltip;Must have been at the §Y[Root.GetSoc
 must_be_allowed_to_rank_up_fighter_tooltip;Must have held the rank for a year\n;;;;;;;;;;;;;;;;;x
 request_to_rank_up_within_fighter_societies;Request to rank up by combat.;;;;;;;;;;;;;x
 chivalry_rank_up_tooltip;[Root.GetFighterRankUpTooltip];;;;;;;;;;;;;x
-request_to_rank_up_within_fighter_society_currency_tt;Ranking up without a fight is not well seen within the Fighters Guilds.\n        [Root.GetFighterRankUpTooltip];;;;;;;;;;;;;x #unused
+request_to_rank_up_within_fighter_society_currency_tt;Ranking up without a test is not well seen within the Fighter Pilot Academies.\n        [Root.GetFighterRankUpTooltip];;;;;;;;;;;;;x #unused
 request_to_rank_up_within_fighter_society_attemps;Must wait 6 months between challenges;;;;;;;;;;;;;x
 request_to_rank_up_within_fighter_society_available;A higher rank member is available;;;;;;;;;;;;;x
-GetFighterRankUpTooltip_Standard_Rank1;If you have §Y1000 [Root.GetMaalSocietyCurrency]§! and §Y250 prestige§! you can rank up without a fight but it is not well seen within the Fighters Guilds.;;;;;;;;;;;;;x
-GetFighterRankUpTooltip_Standard_Rank2;If you have §Y2000 [Root.GetMaalSocietyCurrency]§! and §Y500 prestige§! you can rank up without a fight but it is not well seen within the Fighters Guilds.;;;;;;;;;;;;;x
+GetFighterRankUpTooltip_Standard_Rank1;If you have §Y1000 [Root.GetMaalSocietyCurrency]§! and §Y250 prestige§! you can rank up without a fight but it is not well seen within the Fighter Pilot Academies.;;;;;;;;;;;;;x
+GetFighterRankUpTooltip_Standard_Rank2;If you have §Y2000 [Root.GetMaalSocietyCurrency]§! and §Y500 prestige§! you can rank up without a fight but it is not well seen within the Fighter Pilot Academies.;;;;;;;;;;;;;x
 GetFighterRankUpTooltip_Standard_Rank3;You cannot rank up to §YChampion§! without a fight!;;;;;;;;;;;;;x
 GetChivalryRankUpTooltip_Standard_Rank1;Has §Y[Root.GetMaalSocietyCurrency]§! greater or equal to §Y750§! and §Y500 [Root.Religion.GetPietyName]§!;;;;;;;;;;;;;x
 GetChivalryRankUpTooltip_Standard_Rank2;Has §Y[Root.GetMaalSocietyCurrency]§! greater or equal to §Y1000§! and §Y500 [Root.Religion.GetPietyName]§!;;;;;;;;;;;;;x
@@ -823,7 +823,7 @@ chivalry_not_on_a_mission;Is not already on a mission;;;;;;;;;;;;x
 IS_HOLYORDER_SOCIETIES_TRIGGER;Is a member of a Holy Order Society;;;;;;;;;;;;;x
 IS_FEMINIST_HOLYORDER_SOCIETIES_TRIGGER;Is a member of a Holy Order Society that allow women;;;;;;;;;;;;;x
 IS_HERETIC_HOLYORDER_SOCIETIES_TRIGGER;Is a member of a Holy Order Society that allow heretics;;;;;;;;;;;;;x
-IS_FIGHTER_SOCIETIES_TRIGGER;Is a member of a Fighters Guild Society;;;;;;;;;;;;;x
+IS_FIGHTER_SOCIETIES_TRIGGER;Is a member of a Fighter Pilot Academy Society;;;;;;;;;;;;;x
 IS_CHIVALRY_EDUCATION;Has a Martial Education or is an Accomplished Squire;;;;;;;;;;;;;x
 is_inaccessible_tooltip;Is NOT in Hiding, in Seclusion, or out traveling\n;Ne se cache pas, ne vit pas en réclusion et n'est pas en voyage\n;Ist NICHT im Versteck oder auf Reisen\n;;NO está oculto, recluido o viajando\n;;;;;;;;;x
 is_incapable_tooltip;Is NOT in Incapable or Bedridden\n;N'est pas Incapable ou Alité.\n;Ist NICHT in Unfähig oder bettlägerig\n;;NO está en Incapable o postrado en la cama.\n;;;;;;;;;x
@@ -834,18 +834,18 @@ CHIVALRY_RULE_HOLY_DEFAULT;Default;;;;;;;;;;;;;x
 CHIVALRY_RULE_HOLY_DEFAULT_DESC;Holy Order societies will appear when their orders are created.\nHIP's and CK2Plus' orders are supported.\nNon european map mods are not supported, so in those cases use the None rule.\n;;;;;;;;;;;;;x
 CHIVALRY_RULE_HOLY_NONE;None;;;;;;;;;;;;;x
 CHIVALRY_RULE_HOLY_NONE_DESC;The Holy Order societies will not appear.\nYou can still manually assign a society to a Holy Order.\n;;;;;;;;;;;;;x
-CHIVALRY_RULE_FIGHT_NAME;Fighters Guilds;;;;;;;;;;;;;x
+CHIVALRY_RULE_FIGHT_NAME;Fighter Pilot Academies;;;;;;;;;;;;;x
 CHIVALRY_RULE_FIGHT_EUROPE;European Map;;;;;;;;;;;;;x
-CHIVALRY_RULE_FIGHT_EUROPE_DESC;The Fighters Guilds will be available to people of the right european culture.\nHIP's and CK2Plus' cultures are supported.\n;;;;;;;;;;;;;x
+CHIVALRY_RULE_FIGHT_EUROPE_DESC;The Fighter Pilot Academies will be available to people of the right european culture.\nHIP's and CK2Plus' cultures are supported.\n;;;;;;;;;;;;;x
 CHIVALRY_RULE_FIGHT_EUROPEXTRA;Europe With Extras;;;;;;;;;;;;;x
-CHIVALRY_RULE_FIGHT_EUROPEXTRA_DESC;The Fighters Guilds will be available to people of the right european culture, alongside three generic societies.\nThis many societies could feel crowded.\n;;;;;;;;;;;;;x
+CHIVALRY_RULE_FIGHT_EUROPEXTRA_DESC;The Fighter Pilot Academies will be available to people of the right european culture, alongside three generic societies.\nThis many societies could feel crowded.\n;;;;;;;;;;;;;x
 CHIVALRY_RULE_FIGHT_EXTRA;Non European map;;;;;;;;;;;;;x
 CHIVALRY_RULE_FIGHT_EXTRA_DESC;The game will only spawn the extra societies.\nMade for total conversion mods, but can be used in the normal map.\n;;;;;;;;;;;;;x
 CHIVALRY_RULE_FIGHT_NONE;None;;;;;;;;;;;;;x
-CHIVALRY_RULE_FIGHT_NONE_DESC;No Fighters Guilds societies will appear.\n;;;;;;;;;;;;;x
+CHIVALRY_RULE_FIGHT_NONE_DESC;No Fighter Pilot Academies societies will appear.\n;;;;;;;;;;;;;x
 CHIVALRY_RULE_BOUNTY_NAME;Bounty Hunting;;;;;;;;;;;;;x
 CHIVALRY_RULE_BOUNTY_DEFAULT;Default;;;;;;;;;;;;;x
-CHIVALRY_RULE_BOUNTY_DEFAULT_DESC;A bounty can be set and the target will be hunted by members of a Fighters Guilds.\n;;;;;;;;;;;;;x
+CHIVALRY_RULE_BOUNTY_DEFAULT_DESC;A bounty can be set and the target will be hunted by members of a Fighter Pilot Academies.\n;;;;;;;;;;;;;x
 CHIVALRY_RULE_BOUNTY_NONE;None;;;;;;;;;;;;;x
 CHIVALRY_RULE_BOUNTY_NONE_DESC;Bounty system disabled.\n;;;;;;;;;;;;;x
 CHIVALRY_RULE_TITLE_NAME;Custom Holy Orders;;;;;;;;;;;;;x
@@ -897,7 +897,7 @@ chivalry_power_arena_champ_dummy;Set up Championship;;;;;;;;;;;;;x
 chivalry_power_arena_champ_dummy_desc;Championship Dummy;;;;;;;;;;;;;x
 chivalry_power_arena_champ_dummy_power_desc;§GHolding Decision§! Lets you right-click on your own province's holdings to upgrade a rank II Tournament to a rank III Championship. There can be only one Championship per holding.;;;;;;;;;;;;;x
 chivalry_decision_pay_bounty;Pay off your Bounty;;;;;;;;;;;;;x
-chivalry_decision_pay_bounty_desc;Either spend double the amount of the bounty on your head to clear it or join a Fighters Guilds to temporarily stop hunters.;;;;;;;;;;;;;x
+chivalry_decision_pay_bounty_desc;Either spend double the amount of the bounty on your head to clear it or join a Fighter Pilot Academies to temporarily stop hunters.;;;;;;;;;;;;;x
 decision_mission_chivalry_helpwar;Help in the War (Mission);;;;;;;;;;;;;x
 decision_mission_chivalry_helpwar_desc;Offer to help [Root.GetFirstName] in [Root.GetHerHis] war.;;;;;;;;;;;;;x
 decision_mission_chivalry_training;Start Training (Mission);;;;;;;;;;;;;x
@@ -905,7 +905,7 @@ decision_mission_chivalry_training_desc;Offer to start [Root.GetHerHis] training
 decision_mission_chivalry_hunt;Hunt your Target (Mission);;;;;;;;;;;;;x
 decision_mission_chivalry_hunt_desc;Challenge your marked foe to a death match.;;;;;;;;;;;;;x
 decision_chivalry_set_bounty;Place a Bounty;;;;;;;;;;;;;x
-decision_chivalry_set_bounty_desc;Mark this character as a target for bounty hunters. [Root.GetSheHe] will be targeted by members of local Fighters Guilds, if there is any, who will hunt [Root.GetHerHim] until death.;;;;;;;;;;;;;x
+decision_chivalry_set_bounty_desc;Mark this character as a target for bounty hunters. [Root.GetSheHe] will be targeted by members of local Fighter Pilot Academies, if there is any, who will hunt [Root.GetHerHim] until death.;;;;;;;;;;;;;x
 decision_chivalry_remove_bounty;Clear Bounty;;;;;;;;;;;;;x
 decision_chivalry_remove_bounty_desc;Remove the Bounty you placed. This will not refund the ducats you had spent.;;;;;;;;;;;;;x
 decision_chivalry_remove_bounty_target;Clear Bounty;;;;;;;;;;;;;x
@@ -982,7 +982,7 @@ chivalry_merc_governement;Transition into a Mercenary Band;;;;;;;;;;;;;x
 chivalry_merc_governement_desc;Change your government to that of a Mercenary Band.;;;;;;;;;;;;;x
 chivalry_true_order_ducal;-All duke level titles that are not Holy Orders will be destroyed.\n-Your succession will become Open Elective and your vassals Appointed.\n-Marriage is not allowed.;;;;;;;;;;;;;x
 decision_chivalry_hide_rank_up;Hide/Show Rank Up Alert;;;;;;;;;;;;;x
-decision_chivalry_hide_rank_up_desc;Enabling this will prevent you from pressing the Rank Up button for Fighters Guilds, and therefore will prevent the alert spam.\nPress this to enable ranking up again.;;;;;;;;;;;;;x
+decision_chivalry_hide_rank_up_desc;Enabling this will prevent you from pressing the Rank Up button for Fighter Pilot Academies, and therefore will prevent the alert spam.\nPress this to enable ranking up again.;;;;;;;;;;;;;x
 chivalry_hide_rank_up_tooltip;Hasn't used the character decision to hide the Rank Up alert;;;;;;;;;;;;;x
 decision_chivalry_holy_society_one;*Create a Society*;;;;;;;;;;;;;x
 decision_chivalry_holy_society_one_desc;Give this Holy Order a society.\nChoose well, only one society can be created.;;;;;;;;;;;;;x
@@ -1085,7 +1085,7 @@ master_warrior_desc;This character is one of the greatest warriors in the world,
 poor_warrior;Novice Fighter;Mauvais combattant;Novice Fighter;;Luchador novato;;;;;;;;;x
 poor_warrior_desc;This character understands the basics of combat, but is sloppy, overconfident, and inexperienced.;Ce personnage comprend les bases du combat, mais il est négligent, présomptueux et inexpérimenté.;This character understands the basics of combat, but is sloppy, overconfident, and inexperienced.;;Este personaje comprende lo básico del combate, pero es torpe, confiado e inexperto.;;;;;;;;;x
 skilled_warrior;Skilled Fighter;Combattant talentueux;Skilled Fighter;;Luchador hábil;;;;;;;;;x
-skilled_warrior_desc;This character possesses a certain talent for battle and swordplay.;Ce personnage possède un certain talent pour les batailles et les duels à l'épée.;This character possesses a certain talent for battle and swordplay.;;Este personaje posee cierto talento para la batalla y la esgrima.;;;;;;;;;x
+skilled_warrior_desc;This character possesses a certain talent for piloting and gunning.;Ce personnage possède un certain talent pour les batailles et les duels à l'épée.;This character possesses a certain talent for battle and swordplay.;;Este personaje posee cierto talento para la batalla y la esgrima.;;;;;;;;;x
 trained_warrior;Trained Fighter;Combattant entraîné;Trained Fighter;;Luchador avanzado;;;;;;;;;x
 trained_warrior_desc;This character has received training in the art of combat. While no master, they can hold their own in a fight.;Ce personnage a suivit un entrainement dans l'art de la guerre. S'il n'est pas un maître, il peut se débrouiller dans un combat.;This character has received training in the art of combat. While no master, they can hold their own in a fight.;;Este personaje ha recibido entrenamiento en el arte de la guerra. Aunque no es un maestro, se defiende bien en combate.;;;;;;;;;x
 chivalry_squire_one;Page;;;;;;;;;;;;;x
@@ -1095,9 +1095,9 @@ chivalry_squire_two_desc;Has spent a few years of [From.GetHerHis] childhood tra
 chivalry_squire_three;Shield Bearer;;;;;;;;;;;;;x
 chivalry_squire_three_desc;Has spent most of its youth in the service of a lord and has a better knowledge of warfare and combat. This negatively impacted the regular curriculum.;;;;;;;;;;;;;x
 chivalry_squire_four;Accomplished [From.GetSquire];;;;;;;;;;;;;x
-chivalry_squire_four_desc;Has spent all of [From.GetHerHis] childhood spare time learning about warfare, making [From.GetHerHim] very proficient in the subject at the cost of [From.GetHerHis] general education.\n§YAllow [From.GetHerHim] to bypass some requirements to join a Holy Order or Fighters Guild.§!;;;;;;;;;;;;;x
+chivalry_squire_four_desc;Has spent all of [From.GetHerHis] childhood spare time learning about warfare, making [From.GetHerHim] very proficient in the subject at the cost of [From.GetHerHis] general education.\n§YAllow [From.GetHerHim] to bypass some requirements to join a Holy Order or Fighter Pilot Academy.§!;;;;;;;;;;;;;x
 # chivalry_lady_four;Accomplished Lady-in-waiting;;;;;;;;;;;;;x
-# chivalry_lady_four_desc;The Lady-in-waiting has spent all of her spare time learning about warfare, making her very proficient in the subject at the cost of her general education.\n§YAllow her to bypass some requirements to join a Holy Order or Fighters Guild.§!;;;;;;;;;;;;;x
+# chivalry_lady_four_desc;The Lady-in-waiting has spent all of her spare time learning about warfare, making her very proficient in the subject at the cost of her general education.\n§YAllow her to bypass some requirements to join a Holy Order or Fighter Pilot Academy.§!;;;;;;;;;;;;;x
 chivalry_fight_aggressive_leader;Enraged Leader;;;;;;;;;;;;;x
 chivalry_fight_aggressive_leader_desc;This character will recklessly charge the enemy army, motivating [From.GetHerHis] army behind to do the same.;;;;;;;;;;;;;x
 chivalry_holy_aggressive_leader;Fanatical Leader;;;;;;;;;;;;;x
@@ -1170,7 +1170,7 @@ chivalry_jungle_terrain_leader;Jungler;;;;;;;;;;;;;x
 chivalry_jungle_terrain_leader_desc;This character is a master at leading troops in the jungle and has knowledge of all the dangerous wildlife.;;;;;;;;;;;;;x
 chivalry_warrior_pilgrim;On a Warrior Pilgrimage;;;;;;;;;;;;;x
 chivalry_warrior_pilgrim_desc;This character is on a dangerous journey to improve as a warrior.;;;;;;;;;;;;;x
-chivalry_commander;Live for the sword;;;;;;;;;;;;;x
+chivalry_commander;Live for battle;;;;;;;;;;;;;x
 chivalry_commander_desc;This character has no interest in politic or love, [From.GetSheHe] lives only to fight and improve [From.GetHerHis] skills.;;;;;;;;;;;;;x
 #artifact
 chivalry_item_skull;[From.OriginalOwner.GetFirstName]'s Head;;;;;;;;;;;;;x
@@ -1227,7 +1227,7 @@ EVTOPTB_CHI_146;I am that amazing.;;;;;;;;;;;;;x
 #
 mission_chivalry_helpwar;Help in a War;;;;;;;;;;;;;x 
 mission_chivalry_helpwar_fallback;Help in a War;;;;;;;;;;;;;x
-mission_chivalry_helpwar_desc;Members of a Fighters Guilds or Holy Orders can be called to help outsiders in their wars. It doesn't need to be a direct involvement, they can offer them support in various ways that doesn't get them in the war.;;;;;;;;;;;;;x
+mission_chivalry_helpwar_desc;Members of a Fighter Pilot Academies or Holy Orders can be called to help outsiders in their wars. It doesn't need to be a direct involvement, they can offer them support in various ways that doesn't get them in the war.;;;;;;;;;;;;;x
 mission_chivalry_helpwar_tooltip;Start the §YHelp in a War§! event chain in the target's decision list.;;;;;;;;;;;;;x
 #
 EVTDESC_CHI_151;[Root.GetSocietyRank] [Root.GetFirstName], we have situation that require your attention.\nA fellow member of the [From.Religion.GetName] faith is under attack by infidels! The order is unfortunately occupied elsewhere to offer assistance. I request your help in assisting [mission_chivalry_helpwar_target.GetTitledFirstName] in any way you possibly can.\n\nAct with due haste,\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
@@ -1491,7 +1491,7 @@ EVTOPTA_CHI_310;Ask for a duel.;;;;;;;;;;;;;x
 EVTOPTB_CHI_310;Use your influence to pass to the next rank.;;;;;;;;;;;;;x
 EVTOPTC_CHI_310;Abort the meeting.;;;;;;;;;;;;;x
 EVTDESC_CHI_3101;A Challenger has appeared!\n\nThe [From.GetSocietyRank] [From.GetFirstName] has issued an official duel request approved by the tournaments organizers. Losing or refusing the duel would both end in losing your rank within the [Root.Society.GetName].;;;;;;;;;;;;;x
-EVTOPTA_CHI_3101;Bring me my sword!;;;;;;;;;;;;;x
+EVTOPTA_CHI_3101;Bring me my gun!;;;;;;;;;;;;;x
 EVTOPTB_CHI_3101;I suddenly do not feel so well...;;;;;;;;;;;;;x
 chivalry_rank_down_tooltip;You will rank down to [From.GetSocietyRank].;;;;;;;;;;;;;x
 EVTDESC_CHI_3102_1_2;[From.GetFirstName] has accepted the duel, it is not like [From.GetSheHe] has any choices to begin with. Should you be victorious you will take his rank in [Root.Society.GetName].\nBut if you find defeat you will taste shame and humiliation.;;;;;;;;;;;;;x
@@ -1669,7 +1669,7 @@ EVTOPTA_CHI_335;Start a bar fight!;;;;;;;;;;;;;;x
 EVTOPTB_CHI_335;Rent the whole inn, everybody out.;;;;;;;;;;;;;;x
 EVTOPTC_CHI_335;Ignore him and rent a single room.;;;;;;;;;;;;;;x
 EVTOPTD_CHI_335;Leave the inn and spend the night on the road.;;;;;;;;;;;;;;x
-EVTDESC_CHI_336;While roaming the lone road you suddenly come face to face with a fairly old man. He announce himself as [chivalry_event_commander.GetFirstName], swordmaster.\nHe claim to have heard of your quest and offer to train you body and mind to the art of war.;;;;;;;;;;;;;;x
+EVTDESC_CHI_336;While roaming the lone road you suddenly come face to face with a fairly old man. He announce himself as [chivalry_event_commander.GetFirstName], ace-pilot.\nHe claim to have heard of your quest and offer to train you body and mind to the art of war.;;;;;;;;;;;;;;x
 EVTOPTA_CHI_336;Teach me.;;;;;;;;;;;;;;x
 EVTOPTB_CHI_336;I am ready for anything!;;;;;;;;;;;;;;x
 EVTOPTC_CHI_336;Why don't you come to my court?;;;;;;;;;;;;;;x
@@ -1876,6 +1876,6 @@ EVTDESC_CHI_3760_LOSE;;;;;;;;;;;;;;x
 EVTDESC_CHI_3760_INVALID;;;;;;;;;;;;;;x
 EVTOPTA_CHI_3760;Time to find another employer.;;;;;;;;;;;;;x
 #
-EVTDESC_CHI_391;Without the prestige and presence of a Fighters Guilds, the various tournaments in your demesne slowly lost participants, to the point that they cannot be considered to have the same renown as before. Those that were already small were not salvageable and were dismantled.;;;;;;;;;;;;;x
+EVTDESC_CHI_391;Without the prestige and presence of a Fighter Pilot Academies, the various tournaments in your demesne slowly lost participants, to the point that they cannot be considered to have the same renown as before. Those that were already small were not salvageable and were dismantled.;;;;;;;;;;;;;x
 EVTOPTA_CHI_391;It was a waste of ducats, anyways.;;;;;;;;;;;;;x
 risk_society_extra_reward_tooltip;Berserker Bonus;;;;;;;;;;;;;x
