@@ -1,0 +1,91 @@
+western_champion_bloodline = {
+	picture = GFX_chivalry_champion_bloodline
+	inheritance = patrilineal
+	allow_bastards = yes
+	command_modifier = {
+		morale_offence = 0.05
+	}
+	sex_appeal_opinion = 5
+	combat_rating = 10
+	monthly_character_prestige = 0.1
+	bloodline_effect_chivalry_champion = 1
+	flags = { chivalry champion }
+}
+southern_champion_bloodline = {
+	picture = GFX_chivalry_champion_bloodline
+	inheritance = patrilineal
+	allow_bastards = yes
+	command_modifier = {
+		morale_offence = 0.05
+	}
+	sex_appeal_opinion = 5
+	combat_rating = 10
+	monthly_character_prestige = 0.1
+	bloodline_effect_chivalry_champion = 1
+	flags = { chivalry champion }
+}
+northern_champion_bloodline = {
+	picture = GFX_chivalry_champion_bloodline
+	inheritance = patrilineal
+	allow_bastards = yes
+	command_modifier = {
+		morale_offence = 0.05
+	}
+	sex_appeal_opinion = 5
+	combat_rating = 10
+	monthly_character_prestige = 0.1
+	bloodline_effect_chivalry_champion = 1
+	flags = { chivalry champion }
+}
+eastern_champion_bloodline = {
+	picture = GFX_chivalry_champion_bloodline
+	inheritance = patrilineal
+	allow_bastards = yes
+	command_modifier = {
+		morale_offence = 0.05
+	}
+	sex_appeal_opinion = 5
+	combat_rating = 10
+	monthly_character_prestige = 0.1
+	bloodline_effect_chivalry_champion = 1
+	flags = { chivalry champion }
+}
+generic_champion_bloodline = {
+	picture = GFX_chivalry_champion_bloodline
+	inheritance = patrilineal
+	allow_bastards = yes
+	command_modifier = {
+		morale_offence = 0.05
+	}
+	sex_appeal_opinion = 5
+	combat_rating = 10
+	monthly_character_prestige = 0.1
+	bloodline_effect_chivalry_champion = 1
+	flags = { chivalry champion }
+}
+risk_champion_bloodline = {
+	picture = GFX_chivalry_champion_bloodline
+	inheritance = patrilineal
+	allow_bastards = yes
+	command_modifier = {
+		morale_offence = 0.1
+	}
+	sex_appeal_opinion = 10
+	combat_rating = 20
+	monthly_character_prestige = 0.2
+	bloodline_effect_chivalry_champion = 1
+	flags = { chivalry champion }
+}
+female_champion_bloodline = {
+	picture = GFX_chivalry_champion_bloodline
+	inheritance = matrilineal
+	allow_bastards = yes
+	command_modifier = {
+		morale_offence = 0.05
+	}
+	sex_appeal_opinion = 5
+	combat_rating = 10
+	monthly_character_prestige = 0.1
+	bloodline_effect_chivalry_champion = 1
+	flags = { chivalry champion }
+}

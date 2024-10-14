@@ -1,0 +1,5616 @@
+decisions = {
+	chivalry_decision_pay_bounty = { 
+		is_high_prio = yes
+		# ai = no
+		ai_check_interval = 24
+		potential = {
+			is_fighter_societies_trigger = no
+			has_character_flag = chivalry_hunt_bounty
+			has_character_flag = mission_was_hunted
+		}
+
+		allow = {
+			always = yes
+		}
+
+		effect = {
+			random_opinion_modifier_target = {
+				limit = {
+					ROOT = {
+						has_opinion_modifier = {
+							who = PREV
+							modifier = opinion_chivalry_client
+						}
+					}
+				}
+				save_event_target_as = target_client
+				ROOT = { character_event = { id = CHI.2071 } }
+			}
+			if = {
+				limit = {
+					tier = emperor
+				}
+				wealth = -1000
+			}
+			else_if = {
+				limit = {
+					tier = king
+				}
+				wealth = -800
+			}
+			else_if = {
+				limit = {
+					tier = duke
+				}
+				wealth = -600
+			}
+			else_if = {
+				limit = {
+					tier = count
+				}
+				wealth = -400
+			}
+			else_if = {
+				limit = {
+					tier = baron
+				}
+				wealth = -200
+			}
+			else = {
+				wealth = -100
+			}
+			clr_character_flag = mission_was_hunted
+			clr_character_flag = chivalry_hunt_bounty
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_ruler = no
+						wealth < 80
+					}
+					AND = {
+						tier = baron
+						wealth < 150
+					}
+					AND = {
+						tier = count
+						wealth < 300
+					}
+					AND = {
+						tier = duke
+						wealth < 500
+					}
+					AND = {
+						tier = king
+						wealth < 650
+					}
+					AND = {
+						tier = emperor
+						wealth < 800
+					}
+				}
+			}
+		}
+	}
+	chivalry_power_holy_governement_break = { 
+		ai = no
+		potential = {
+			has_holy_order_government = yes
+			OR = {
+				has_game_rule = {
+					name = chivalry_rule_title
+					value = true
+				}
+				tier = king
+				tier = emperor
+			}
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			character_event = { id = CHI.372 }
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_merc_governement = { 
+		ai = no
+		potential = {
+			NOT = { government = mercenary_government }
+			has_holy_order_government = yes
+		}
+
+		allow = {
+			OR = {
+				primary_title = { has_law = chivalry_militarization_2 }
+				primary_title = { has_law = chivalry_militarization_3 }
+				primary_title = { has_law = chivalry_militarization_4 }
+			}
+			is_patrician = no
+			is_tribal = no
+			tier = duke
+			NOT = { tier = king }
+			war = no
+			prestige = 500
+		}
+
+		effect = {
+			liege = { save_global_event_target_as = chivalry_merc_liege }
+			prestige = -500
+			if = {
+				limit = {
+					d_chivalry_holy_hand = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_holy_hand = { set_title_flag = chivalry_merc_title }
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_warden = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_holy_warden = { set_title_flag = chivalry_merc_title }
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_scion = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_holy_scion = { set_title_flag = chivalry_merc_title }
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_rose = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_holy_rose = { set_title_flag = chivalry_merc_title }
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_hand_true = { holder_scope = { character = ROOT  } }
+				}
+				hidden_tooltip = {
+					d_chivalry_holy_hand = {
+						grant_title = ROOT
+						make_primary_title = yes
+						culture = ROOT
+						religion = ROOT
+						set_title_flag = chivalry_merc_title
+					}
+					d_chivalry_holy_hand_true = { unsafe_destroy_landed_title = THIS }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_warden_true = { holder_scope = { character = ROOT  } }
+				}
+				hidden_tooltip = {
+					d_chivalry_holy_warden = {
+						grant_title = ROOT
+						make_primary_title = yes
+						culture = ROOT
+						religion = ROOT
+						set_title_flag = chivalry_merc_title
+					}
+					d_chivalry_holy_warden_true = { unsafe_destroy_landed_title = THIS }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_scion_true = { holder_scope = { character = ROOT  } }
+				}
+				hidden_tooltip = {
+					d_chivalry_holy_scion = {
+						grant_title = ROOT
+						make_primary_title = yes
+						culture = ROOT
+						religion = ROOT
+						set_title_flag = chivalry_merc_title
+					}
+					d_chivalry_holy_scion_true = { unsafe_destroy_landed_title = THIS }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_rose_true = { holder_scope = { character = ROOT  } }
+				}
+				hidden_tooltip = {
+					d_chivalry_holy_rose = {
+						grant_title = ROOT
+						make_primary_title = yes
+						culture = ROOT
+						religion = ROOT
+						set_title_flag = chivalry_merc_title
+					}
+					d_chivalry_holy_rose_true = { unsafe_destroy_landed_title = THIS }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_merc_black = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_merc_black = { clr_title_flag = chivalry_holy_title }
+			}
+			else_if = {
+				limit = {
+					d_chivalry_merc_cloak = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_merc_cloak = { clr_title_flag = chivalry_holy_title }
+			}
+			else_if = {
+				limit = {
+					d_chivalry_merc_falcon = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_merc_falcon = { clr_title_flag = chivalry_holy_title }
+			}
+			else_if = {
+				limit = {
+					d_chivalry_merc_hound = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_merc_hound = { clr_title_flag = chivalry_holy_title }
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_black_true = { holder_scope = { character = ROOT  } }
+				}
+				hidden_tooltip = {
+					d_chivalry_merc_black = {
+						grant_title = ROOT
+						make_primary_title = yes
+						culture = ROOT
+						religion = ROOT
+					}
+					d_chivalry_holy_black_true = { unsafe_destroy_landed_title = THIS }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_cloak_true = { holder_scope = { character = ROOT  } }
+				}
+				hidden_tooltip = {
+					d_chivalry_merc_cloak = {
+						grant_title = ROOT
+						make_primary_title = yes
+						culture = ROOT
+						religion = ROOT
+					}
+					d_chivalry_holy_cloak_true = { unsafe_destroy_landed_title = THIS }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_falcon_true = { holder_scope = { character = ROOT  } }
+				}
+				hidden_tooltip = {
+					d_chivalry_merc_falcon = {
+						grant_title = ROOT
+						make_primary_title = yes
+						culture = ROOT
+						religion = ROOT
+					}
+					d_chivalry_holy_falcon_true = { unsafe_destroy_landed_title = THIS }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_hound_true = { holder_scope = { character = ROOT  } }
+				}
+				hidden_tooltip = {
+					d_chivalry_merc_hound = {
+						grant_title = ROOT
+						make_primary_title = yes
+						culture = ROOT
+						religion = ROOT
+					}
+					d_chivalry_holy_hound_true = { unsafe_destroy_landed_title = THIS }
+				}
+			}
+			set_government_type = mercenary_government
+			hidden_tooltip = {
+				set_defacto_liege = global_event_target:chivalry_merc_liege
+			}
+			clear_global_event_target = chivalry_merc_liege
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_holy_governement = { 
+		ai = no
+		potential = {
+			NOT = { has_holy_order_government = yes }
+			government = mercenary_government
+		}
+
+		allow = {
+			primary_title = { has_law = chivalry_militarization_0 }
+			is_patrician = no
+			is_tribal = no
+			tier = duke
+			NOT = { tier = king }
+			war = no
+			piety = 500
+		}
+
+		effect = {
+			liege = { save_global_event_target_as = chivalry_merc_liege }
+			piety = -500
+			if = {
+				limit = {
+					d_chivalry_holy_hand = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_holy_hand = { clr_title_flag = chivalry_merc_title }
+				if = {
+					limit = {
+						has_game_rule = {
+							name = chivalry_rule_title
+							value = true
+						}
+					}
+					hidden_tooltip = {
+						d_chivalry_holy_hand_true = {
+							grant_title = ROOT
+							make_primary_title = yes
+							culture = ROOT
+							religion = ROOT
+						}
+						any_demesne_title = {
+							limit = {
+								holder_scope = { character = ROOT }
+								tier = duke
+								holy_order = no
+							}
+							destroy_landed_title = yes
+						}
+					}
+					custom_tooltip = { text = chivalry_true_order_ducal }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_warden = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_holy_warden = { clr_title_flag = chivalry_merc_title }
+				if = {
+					limit = {
+						has_game_rule = {
+							name = chivalry_rule_title
+							value = true
+						}
+					}
+					hidden_tooltip = {
+						d_chivalry_holy_warden_true = {
+							grant_title = ROOT
+							make_primary_title = yes
+							culture = ROOT
+							religion = ROOT
+						}
+						any_demesne_title = {
+							limit = {
+								holder_scope = { character = ROOT }
+								tier = duke
+								holy_order = no
+							}
+							destroy_landed_title = yes
+						}
+					}
+					custom_tooltip = { text = chivalry_true_order_ducal }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_scion = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_holy_scion = { clr_title_flag = chivalry_merc_title }
+				if = {
+					limit = {
+						has_game_rule = {
+							name = chivalry_rule_title
+							value = true
+						}
+					}
+					hidden_tooltip = {
+						d_chivalry_holy_scion_true = {
+							grant_title = ROOT
+							make_primary_title = yes
+							culture = ROOT
+							religion = ROOT
+						}
+						any_demesne_title = {
+							limit = {
+								holder_scope = { character = ROOT }
+								tier = duke
+								holy_order = no
+							}
+							destroy_landed_title = yes
+						}
+					}
+					custom_tooltip = { text = chivalry_true_order_ducal }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_holy_rose = { holder_scope = { character = ROOT  } }
+				}
+				d_chivalry_holy_rose = { clr_title_flag = chivalry_merc_title }
+				if = {
+					limit = {
+						has_game_rule = {
+							name = chivalry_rule_title
+							value = true
+						}
+					}
+					hidden_tooltip = {
+						d_chivalry_holy_rose_true = {
+							grant_title = ROOT
+							make_primary_title = yes
+							culture = ROOT
+							religion = ROOT
+						}
+						any_demesne_title = {
+							limit = {
+								holder_scope = { character = ROOT }
+								tier = duke
+								holy_order = no
+							}
+							destroy_landed_title = yes
+						}
+					}
+					custom_tooltip = { text = chivalry_true_order_ducal }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_merc_black = { holder_scope = { character = ROOT  } }
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							name = chivalry_rule_title
+							value = true
+						}
+					}
+					hidden_tooltip = {
+						d_chivalry_holy_black_true = {
+							grant_title = ROOT
+							make_primary_title = yes
+							culture = ROOT
+							religion = ROOT
+						}
+						any_demesne_title = {
+							limit = {
+								holder_scope = { character = ROOT }
+								tier = duke
+								holy_order = no
+							}
+							destroy_landed_title = yes
+						}
+					}
+					custom_tooltip = { text = chivalry_true_order_ducal }
+				}
+				else = {
+					d_chivalry_merc_black = { set_title_flag = chivalry_holy_title }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_merc_cloak = { holder_scope = { character = ROOT  } }
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							name = chivalry_rule_title
+							value = true
+						}
+					}
+					hidden_tooltip = {
+						d_chivalry_holy_cloak_true = {
+							grant_title = ROOT
+							make_primary_title = yes
+							culture = ROOT
+							religion = ROOT
+						}
+						any_demesne_title = {
+							limit = {
+								holder_scope = { character = ROOT }
+								tier = duke
+								holy_order = no
+							}
+							destroy_landed_title = yes
+						}
+					}
+					custom_tooltip = { text = chivalry_true_order_ducal }
+				}
+				else = {
+					d_chivalry_merc_cloak = { set_title_flag = chivalry_holy_title }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_merc_falcon = { holder_scope = { character = ROOT  } }
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							name = chivalry_rule_title
+							value = true
+						}
+					}
+					hidden_tooltip = {
+						d_chivalry_holy_falcon_true = {
+							grant_title = ROOT
+							make_primary_title = yes
+							culture = ROOT
+							religion = ROOT
+						}
+						any_demesne_title = {
+							limit = {
+								holder_scope = { character = ROOT }
+								tier = duke
+								holy_order = no
+							}
+							destroy_landed_title = yes
+						}
+					}
+					custom_tooltip = { text = chivalry_true_order_ducal }
+				}
+				else = {
+					d_chivalry_merc_falcon = { set_title_flag = chivalry_holy_title }
+				}
+			}
+			else_if = {
+				limit = {
+					d_chivalry_merc_hound = { holder_scope = { character = ROOT  } }
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							name = chivalry_rule_title
+							value = true
+						}
+					}
+					hidden_tooltip = {
+						d_chivalry_holy_hound_true = {
+							grant_title = ROOT
+							make_primary_title = yes
+							culture = ROOT
+							religion = ROOT
+						}
+						any_demesne_title = {
+							limit = {
+								holder_scope = { character = ROOT }
+								tier = duke
+								holy_order = no
+							}
+							destroy_landed_title = yes
+						}
+					}
+					custom_tooltip = { text = chivalry_true_order_ducal }
+				}
+				else = {
+					d_chivalry_merc_hound = { set_title_flag = chivalry_holy_title }
+				}
+			}
+			set_holy_order_government = yes
+			hidden_tooltip = {
+				set_defacto_liege = global_event_target:chivalry_merc_liege
+			}
+			clear_global_event_target = chivalry_merc_liege
+			hidden_tooltip = {
+				any_vassal = {
+					limit = {
+						any_liege = {
+							religion = ROOT
+						}
+						ai = yes
+						NAND = { 
+							is_government_potential = merchant_republic_government 
+							OR = {
+								tier = DUKE
+								is_patrician = yes
+							}
+							any_demesne_province = {
+								any_province_holding = {
+									OR = {
+										AND = {
+											tier = BARON
+											holding_type = family_palace
+										}
+										AND = {
+											NOT = {
+												tier = BARON
+											}
+											holding_type = city
+										}
+									}
+								}
+							}
+						}
+					}
+					# set_holy_order_government = {
+						if = {
+							limit = {
+								ROOT = { holy_order = yes }
+							}
+							set_government_type = order_government
+						}
+						else = {
+							limit = {
+								ROOT = { NOT = { holy_order = yes } }
+							}
+							set_government_type = holy_order_government
+						}
+					# }
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_merc_bribe_liege = {
+		is_high_prio = yes
+		ai = no
+		potential = {
+			government = mercenary_government
+			independent = no
+			LIEGE = {
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_chivalry_merc_bribe
+					}
+				}
+			}
+		}
+
+		allow = {
+			always = yes
+		}
+
+		effect = {
+			LIEGE = {
+				opinion = {
+					who = ROOT
+					modifier = opinion_chivalry_merc_bribe
+					years = 5
+				}
+			}
+			ROOT = {
+				opinion = {
+					who = LIEGE
+					modifier = opinion_chivalry_merc_loyal
+					years = 5
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Conclave"
+				}
+				reverse_add_favor = LIEGE
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+			#is_inaccessible_or_incapable_chivalry_trigger = yes
+society_decisions = {
+	#Generic
+	request_to_rank_up_within_holyorder_societies = {
+
+		hide_in_decisions_list = yes # This is shown in the Society View
+		potential = {
+			hidden_tooltip = {
+				society_rank <= 2 #is not max rank
+				days_in_society > 1825 #days requirement
+				is_in_society = yes #obviously
+				is_holyorder_societies_trigger = yes
+				OR = { #Players can always rank up (if they have the power), ai won't if there is no room
+					ai = no
+					AND = {
+						ai = yes
+						society_can_rank_up = yes
+					}
+				}
+			}
+		}
+
+		allow = {
+			NOT = { has_character_flag = chivalry_block_currency } #prevent exploits
+			NOT = { trait = chivalry_warrior_pilgrim }
+			#Rank requirements. IMPORTANT!!! If you change the requirements, the customizable loc keys "GetSocietyRankUpTooltip" 1, 2, 3, and 4 must be updated, as it displays these requirements.
+			custom_tooltip = { # Sufficient currency
+				text = request_to_rank_up_within_chivalry_society_currency_tt
+				OR = {
+					AND = {
+						society_rank == 1
+						society_currency >= 750
+						piety = 500
+					}
+					AND = {
+						society_rank == 2
+						society_currency >= 1000
+						piety = 500
+					}
+					# society_currency >= 2000 # rank 4 not allowed
+				}
+			}
+
+			custom_tooltip = {
+				text = must_not_have_sent_request_already_tooltip 
+				NOT = { has_character_flag = has_sent_request_to_rank_up }
+			}
+
+			custom_tooltip = {
+				text = must_be_allowed_to_rank_up_chivalry_tooltip 
+				days_at_current_society_rank >= 1825 #IMPORTANT! Update tooltip.
+			}
+
+			custom_tooltip = {
+				text = must_have_grandmaster_tooltip #You must have a grand master
+				any_society_member = {
+					is_society_grandmaster = yes
+					same_society_as = ROOT
+				}
+			}
+		}
+
+		effect = {
+			#Rank up cost
+			if = {
+				limit = { society_rank == 1 }
+				change_society_currency = -750
+				piety = -500
+			}
+			if = {
+				limit = { society_rank == 2 }
+				change_society_currency = -1000
+				piety = -500
+			}
+			# if = {
+				# limit = { society_rank == 3 }
+				# change_society_currency = -2000
+			# }
+
+			#Perform rank up
+			hidden_tooltip = {
+				save_event_target_as = rank_up_target #mark the character as the one ranking up
+				set_character_flag = has_sent_request_to_rank_up
+				character_event = { id = CHI.110 days = 20 random = 10 } # sends hidden delayed event to self, which then sends request to Leader of the society
+				
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	request_to_rank_up_within_fighter_societies = {
+
+		ai_check_interval = 6
+		hide_in_decisions_list = yes # This is shown in the Society View
+		potential = {
+			hidden_tooltip = {
+				society_rank <= 3
+				# days_in_society > 1095 #no timer for fighters
+				is_in_society = yes 
+				is_fighter_societies_trigger = yes
+				days_in_society > 365 #days requirement
+				# society_can_rank_up = yes #if there is no room, just beat the shit outa them, keep commented
+			}
+		}
+
+		allow = {
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+			hidden_tooltip = {
+				NAND = {
+					trait = wounded
+					ai = yes
+				}
+			}
+			custom_tooltip = {
+				text = chivalry_hide_rank_up_tooltip
+				NOT = { has_character_flag = chivalry_hide_rank_up }
+			}
+			NOT = { trait = chivalry_warrior_pilgrim }
+			custom_tooltip = {
+				text = chivalry_resting_tooltip
+				NOT = { has_character_modifier = chivalry_unjustified_rest }
+				NOT = { has_character_modifier = chivalry_justified_rest }
+			}
+			NOT = { has_character_flag = chivalry_block_currency } #prevent exploits
+			custom_tooltip = { # only attempt twice a year
+				text = request_to_rank_up_within_fighter_society_attemps
+				# NOT = {  }
+				OR = {
+					NOT = { has_character_flag = chivalry_recent_duel }
+					had_character_flag = { flag = chivalry_recent_duel days = 180 } #slow AI spam
+				}
+			}
+			custom_tooltip = {
+				text = must_be_allowed_to_rank_up_fighter_tooltip 
+				days_at_current_society_rank >= 365 #IMPORTANT! Update tooltip.
+			}
+			custom_tooltip = { # Sufficient currency
+				text = request_to_rank_up_within_fighter_society_available
+				society = {
+					any_society_member = {
+						# limit = {
+							chivalry_valid_target = yes
+							OR = {
+								AND = {
+									OR = {
+										NOT = { has_character_flag = chivalry_recent_duel }
+										had_character_flag = { flag = chivalry_recent_duel days = 500 }
+										AND = {
+											had_character_flag = { flag = chivalry_recent_duel days = 365 }
+											AI = yes
+										}
+									}
+									society_rank == 2
+									ROOT = { society_rank == 1 }
+								}
+								AND = {
+									OR = {
+										NOT = { has_character_flag = chivalry_recent_duel }
+										had_character_flag = { flag = chivalry_recent_duel days = 500 }
+										AND = {
+											had_character_flag = { flag = chivalry_recent_duel days = 365 }
+											AI = yes
+										}
+									}
+									society_rank == 3
+									ROOT = { society_rank == 2 }
+								}
+								AND = {
+									OR = {
+										NOT = { has_character_flag = chivalry_recent_duel }
+										AND = {
+											had_character_flag = { flag = chivalry_recent_duel days = 180 }
+											# society_rank == 4
+											AI = no
+										}
+										AND = {
+											had_character_flag = { flag = chivalry_recent_duel days = 90 }
+											# society_rank == 4
+											AI = yes
+										}
+									}
+									OR = {
+										society_rank == 4
+										NOT = {
+											society = {
+												any_society_member = {
+													is_society_grandmaster = yes
+												}
+											}
+										}
+									}
+									ROOT = { society_rank == 3 }
+								}
+							}
+						# }
+					}
+				}
+			}
+
+			custom_tooltip = {
+				text = must_not_have_sent_request_already_tooltip 
+				NOT = { has_character_flag = has_sent_request_to_rank_up }
+			}
+
+			# custom_tooltip = { #no timer for fighters
+				# text = must_be_allowed_to_rank_up_tooltip 
+				# days_at_current_society_rank >= 1095 #IMPORTANT! Update tooltip.
+			# }
+
+			custom_tooltip = {
+				text = must_have_grandmaster_tooltip #You must have a grand master
+				# any_society_member = {
+					# is_society_grandmaster = yes
+					# same_society_as = ROOT
+				# }
+				NOT = { society_rank == 4 }
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				if = {
+					limit = {
+						society_rank == 3
+					}
+					set_variable = { which = chivalry_champion_bloodline_var value = 0 }
+				}
+			}
+			custom_tooltip = {
+				text = chivalry_rank_up_tooltip
+				# set_character_flag = has_sent_request_to_rank_up
+				random_list = {
+					15 = { #rank up event
+						set_character_flag = has_sent_request_to_rank_up
+						if = {
+							limit = {
+								ai = yes
+							}
+							character_event = { id = CHI.310 days = 30 } 
+						}
+						else = {
+							character_event = { id = CHI.310 } 
+						}
+					}
+					5 = { #AI skip to fill higher ranks faster
+						trigger = {
+							ai = yes
+							society_can_rank_up = yes
+						}
+						modifier = {
+							factor = 100
+							society_rank == 3
+							NOT = {
+								society = {
+									any_society_member = {
+										is_society_grandmaster = yes
+									}
+								}
+							}
+						}
+						society_rank_up = 1
+						if = { 
+							limit = {
+								society_rank == 4
+							}
+							set_society_grandmaster = yes
+						}
+						clr_character_flag = chivalry_recent_duel
+						set_character_flag = chivalry_recent_duel
+					}
+				}
+			}
+			#Rank up cost
+			# if = {
+				# limit = { society_rank == 1 }
+				# change_society_currency = -1000
+				# prestige = -250
+			# }
+			# if = {
+				# limit = { society_rank == 2 }
+				# change_society_currency = -2000
+				# prestige = -500
+			# }
+
+			#Perform rank up
+			# hidden_tooltip = {
+				# save_event_target_as = rank_up_target #mark the character as the one ranking up
+				# set_character_flag = has_sent_request_to_rank_up
+				# character_event = { id = CHI.110 days = 20 random = 10 } # sends hidden delayed event to self, which then sends request to Leader of the society
+				
+			# }
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	#Show/Hide decisions
+	chivalry_show_decisions_on = {
+		# is_in_society = yes
+		
+		potential = {
+			OR = {
+				is_holyorder_societies_trigger = yes
+				is_fighter_societies_trigger = yes
+			}
+			NOT = { has_character_flag = chivalry_show_decision }
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_character_flag = chivalry_show_decision
+			sound_effect = land_battle_sword_4
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chivalry_show_decisions_off = {
+		# is_in_society = yes
+		ai = no
+		potential = {
+			OR = {
+				is_holyorder_societies_trigger = yes
+				is_fighter_societies_trigger = yes
+			}
+			has_character_flag = chivalry_show_decision
+		}
+
+		allow = {
+		}
+
+		effect = {
+			clr_character_flag = chivalry_show_decision
+			sound_effect = land_battle_sword_2
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	#Non power decision
+	chivalry_decision_rest = { 
+		ai = no
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_fighter_societies_trigger = yes
+			# custom_tooltip = {
+				# text = chivalry_resting_tooltip
+				NOT = { has_character_modifier = chivalry_unjustified_rest }
+				NOT = { has_character_modifier = chivalry_justified_rest }
+			# }
+		}
+
+		allow = {
+			society_currency = 100
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			custom_tooltip = {
+				text = chivalry_not_dueling_tooltip
+				NOT = { has_character_flag = chivalry_duel_ongoing }
+			}
+			NOT = { trait = chivalry_warrior_pilgrim }
+		}
+
+		effect = {
+			change_society_currency = -100
+			add_character_modifier = {
+				name = chivalry_unjustified_rest
+				duration = -1
+			}
+			if = {
+				limit = {
+					society_rank = 4
+				}
+				character_event = { id = CHI.360 days = 30 }  #check to downrank champion
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_decision_wake = { 
+		ai = no
+		potential = {
+			has_character_flag = chivalry_show_decision
+			# is_fighter_societies_trigger = yes
+			OR = {
+				has_character_modifier = chivalry_unjustified_rest
+				has_character_modifier = chivalry_justified_rest
+			}
+		}
+
+		allow = {
+			always = yes
+		}
+
+		effect = {
+			remove_character_modifier = chivalry_unjustified_rest
+			remove_character_modifier = chivalry_justified_rest
+			# clear_delayed_event = { id = CHI.360 }
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_decision_recovering = { 
+		is_high_prio = yes
+		ai_check_interval = 6
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_fighter_societies_trigger = yes
+			has_injury_trigger = yes
+			# custom_tooltip = {
+				# text = chivalry_resting_tooltip
+				NOT = { has_character_modifier = chivalry_unjustified_rest }
+				NOT = { has_character_modifier = chivalry_justified_rest }
+			# }
+		}
+
+		allow = {
+			has_injury_trigger = yes
+			# society_currency = 50
+			custom_tooltip = {
+				text = chivalry_not_dueling_tooltip
+				NOT = { has_character_flag = chivalry_duel_ongoing }
+			}
+			custom_tooltip = {
+				text = chivalry_flesh_wound_tooltip
+				has_character_modifier = chivalry_flesh_wound_timer
+			}
+			NOT = { trait = chivalry_warrior_pilgrim }
+		}
+
+		effect = {
+			# change_society_currency = -50
+			add_character_modifier = {
+				name = chivalry_justified_rest
+				months = 18
+			}
+			hidden_tooltip = {
+				remove_character_modifier = chivalry_flesh_wound_timer
+			}
+			if = {
+				limit = {
+					society_rank = 4
+				}
+				character_event = { id = CHI.360 days = 30 }  #check to downrank champion
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 0
+				society_rank == 4
+			}
+		}
+	}
+	chivalry_decision_merge_trophy = {
+		is_high_prio = yes
+		ai_check_interval = 12
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_fighter_societies_trigger = yes
+			OR = {
+				has_artifact = chivalry_item_skull
+				has_artifact = chivalry_item_broke
+			}
+			NOT = { has_character_flag = chivalry_merged_trophy }
+			# OR = {
+				# AND = { 
+					# NOT = { has_artifact = chivalry_item_skull_stack }
+					# OR = {
+						# is_tribal = yes
+						# is_nomadic = yes
+					# }
+				# }
+				# AND = {
+					# NOT = { has_artifact = chivalry_item_broke_stack }
+					# is_tribal = no
+					# is_nomadic = no
+				# }
+			# }
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = chivalry_decision_merge_trophy_tooltip
+				OR = {
+					any_artifact = { #maybe find how to limit count = 10?
+						count = 10
+						artifact_type = chivalry_item_skull
+					}
+					any_artifact = {
+						count = 10
+						artifact_type = chivalry_item_broke
+					}
+				}
+			}
+		}
+		
+		effect = {
+			any_artifact = {
+				limit = { 
+					OR = {
+						artifact_type = chivalry_item_skull
+						artifact_type = chivalry_item_broke
+					}
+				}
+				destroy_artifact = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+				add_artifact = chivalry_item_skull_stack
+			}
+			else = {
+				add_artifact = chivalry_item_broke_stack
+			}
+			set_character_flag = chivalry_merged_trophy
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Powers
+	chivalry_power_weapon = {
+		is_high_prio = yes
+		ai_check_interval = 12
+		potential = {
+			has_character_flag = chivalry_show_decision
+			OR = {
+				has_dlc = "Mystics"
+				has_dlc = "Jade Dragon"
+			}
+			is_fighter_societies_trigger = yes
+			NOT = {
+				any_artifact = {
+					OR = {
+						has_artifact_flag = combat
+						has_artifact_flag = combat_weapon
+					}
+				}
+			}
+		}
+
+		allow = {
+			society_currency = 100
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+			custom_tooltip = {
+				text = chivalry_weapon_available
+				society = {
+					any_society_member = {
+						NOT = { character = ROOT }
+						NOT = { has_character_flag = chivalry_wont_sell_weapons }
+						any_artifact = {
+							count = 2
+							OR = {
+								has_artifact_flag = combat
+								has_artifact_flag = combat_weapon
+							}
+							NOT = { has_artifact_flag = chivalry_unsellable }
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			change_society_currency = -100
+			hidden_tooltip = {
+				society = {
+					random_society_member = {
+						limit = {
+							NOT = { character = ROOT }
+							NOT = { has_character_flag = chivalry_wont_sell_weapons }
+							any_artifact = {
+								OR = {
+									has_artifact_flag = combat_weapon
+									has_artifact_flag = combat
+								}
+								count = 2
+								NOT = { has_artifact_flag = chivalry_unsellable }
+							}
+						}
+						character_event = { id = CHI.351 }
+					}
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				is_ruler = no
+			}
+    		modifier = {
+    			OR = {
+    				tier = KING	
+    				tier = EMPEROR
+    			}
+    			factor = 2
+    		}
+    		modifier = {
+    			lower_tier_than = DUKE
+    			factor = 0.1
+    		}
+		}
+	}
+	chivalry_power_training = { 
+		ai_check_interval = 12
+		potential = {
+			has_character_flag = chivalry_show_decision
+			OR = {
+				is_fighter_societies_trigger = yes
+				is_holyorder_societies_trigger = yes
+			}
+			society_rank >= 1
+			NOT = { has_character_flag = chivalry_requested_training }
+			NOT = { has_character_flag = chivalry_being_trained }
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			NOT = { has_quest = mission_chivalry_training }
+			society_currency = 100
+			custom_tooltip = {
+				text = chivalry_timer_training_tooltip
+				OR = {
+					NOT = { has_character_flag = chivalry_timer_training_flag }
+					had_character_flag = { flag = chivalry_timer_training_flag days = 720 }
+				}
+			}
+			custom_tooltip = {
+				text = chivalry_resting_tooltip
+				NOT = { has_character_modifier = chivalry_unjustified_rest }
+				NOT = { has_character_modifier = chivalry_justified_rest }
+			}
+			NOT = { trait = chivalry_warrior_pilgrim }
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+		}
+
+		effect = {
+			change_society_currency = -100
+			set_character_flag = chivalry_requested_training
+			set_character_flag = chivalry_timer_training_flag
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.5
+
+			modifier = {
+				factor = 0.5 
+				is_ruler = no
+			}
+		}
+	}
+	chivalry_power_training_stop = { 
+		ai = no
+		potential = {
+			has_character_flag = chivalry_show_decision
+			# OR = {
+				# is_fighter_societies_trigger = yes
+				# is_holyorder_societies_trigger = yes
+			# }
+			OR = {
+				has_character_flag = chivalry_being_trained
+				has_character_flag = chivalry_requested_training
+				has_character_flag = chivalry_timer_training_flag
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			clr_character_flag = chivalry_requested_training
+			clr_character_flag = chivalry_timer_training_flag
+			clr_character_flag = chivalry_being_trained
+			clr_character_flag = mission_chivalry_training_option_book
+			clr_character_flag = mission_chivalry_training_option_spare
+			clr_character_flag = mission_chivalry_training_option_meditate
+			clr_character_flag = mission_chivalry_training_option_talk
+			clr_character_flag = mission_chivalry_training_option_waterfall
+			clr_character_flag = mission_chivalry_training_option_pray
+			clr_character_flag = mission_chivalry_training_option_train
+			clr_character_flag = mission_chivalry_training_option_drug
+			clr_character_flag = mission_chivalry_training_option_fake
+			clr_character_flag = mission_chivalry_training_option_group
+			clr_character_flag = mission_chivalry_training_poor
+			clr_character_flag = mission_chivalry_training_good
+			clr_character_flag = mission_chivalry_training_guess
+			hidden_tooltip = { 
+				set_variable = { which = mission_chivalry_training_variable value = 0 }
+				set_variable = { which = mission_chivalry_training_variable_round value = 0 }
+				society = {
+					any_society_member = {
+						limit = {
+							has_quest = quest_indian_monastic_order_pilgrimage
+							ROOT = { is_quest_target_of = PREV }
+						}
+						clr_quest = mission_chivalry_training
+						clr_character_flag = mission_chivalry_training_flag
+						change_society_currency = 50
+					}
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_power_gym = { 
+		ai_check_interval = 12
+		potential = {
+			has_character_flag = chivalry_show_decision
+			OR = {
+				is_fighter_societies_trigger = yes
+				is_holyorder_societies_trigger = yes
+			}
+			society_rank >= 1
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			society_currency = 100
+			custom_tooltip = {
+				text = chivalry_gym_cooldown_tt
+				NOT = {
+					has_character_modifier = chivalry_gym_timer
+				}
+			}
+			NOT = { trait = chivalry_warrior_pilgrim }
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+		}
+
+		effect = {
+			change_society_currency = -100
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = chivalry_gym_timer
+					duration = 300
+					hidden = yes
+				}
+				character_event = { id = CHI.410 }
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.45
+
+			modifier = {
+				factor = 2
+				OR = {
+					trait = is_fat
+					trait = is_malnourished
+				}
+			}
+		}
+	}
+	chivalry_power_commander_fighter = { 
+		
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_fighter_societies_trigger = yes
+			society_rank >= 2
+			is_landed = yes
+			OR = {
+				ai = no
+				OR = {
+					AND = {
+						tier = COUNT
+						NOT = {
+							any_realm_character = {
+								count = 2
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+					AND = {
+						tier = DUKE
+						NOT = {
+							any_realm_character = {
+								count = 4
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+					AND = {
+						tier = KING
+						is_nomadic = no
+						NOT = {
+							any_realm_character = {
+								count = 6
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+					AND = {
+						tier = EMPEROR
+						is_nomadic = no
+						NOT = {
+							any_realm_character = {
+								count = 8
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+					AND = {
+						tier = KING
+						is_nomadic = yes
+						NOT = {
+							any_realm_character = {
+								count = 2
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+					AND = {
+						tier = EMPEROR
+						is_nomadic = yes
+						NOT = {
+							any_realm_character = {
+								count = 4
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+				}
+			}
+		}
+
+		allow = {
+			society_currency = 500
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+		}
+
+		effect = {
+			change_society_currency = -500
+			character_event = { id = CHI.330 }
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.05
+		}
+	}
+	chivalry_power_commander_holy = { 
+		
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_holyorder_societies_trigger = yes
+			society_rank >= 2
+			is_landed = yes
+			OR = {
+				ai = no
+				OR = {
+					AND = {
+						tier = COUNT
+						NOT = {
+							any_realm_character = {
+								count = 2
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+					AND = {
+						tier = DUKE
+						NOT = {
+							any_realm_character = {
+								count = 4
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+					AND = {
+						tier = KING
+						is_nomadic = no
+						NOT = {
+							any_realm_character = {
+								count = 6
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+					AND = {
+						tier = EMPEROR
+						is_nomadic = no
+						NOT = {
+							any_realm_character = {
+								count = 8
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+					AND = {
+						tier = KING
+						is_nomadic = yes
+						NOT = {
+							any_realm_character = {
+								count = 2
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+					AND = {
+						tier = EMPEROR
+						is_nomadic = yes
+						NOT = {
+							any_realm_character = {
+								count = 4
+								liege = { character = ROOT }
+								has_minor_title = title_commander
+							}
+						}
+					}
+				}
+			}
+		}
+
+		allow = {
+			society_currency = 500
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+		}
+
+		effect = {
+			change_society_currency = -500
+			character_event = { id = CHI.331 }
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.05
+
+			modifier = {
+				factor = 0
+				is_landed = no
+			}
+		}
+	}
+	chivalry_power_commander_fighter_upgrade = { 
+		
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_fighter_societies_trigger = yes
+			society_rank >= 2
+			is_landed = yes
+		}
+
+		allow = {
+			society_currency = 500
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+			chivalry_leader_trait_upgradable = yes
+			NOT = { trait = chivalry_warrior_pilgrim }
+			custom_tooltip = {
+				text = chivalry_resting_tooltip
+				NOT = { has_character_modifier = chivalry_unjustified_rest }
+				NOT = { has_character_modifier = chivalry_justified_rest }
+			}
+		}
+
+		effect = {
+			change_society_currency = -500
+			add_trait = chivalry_warrior_pilgrim
+			character_event = { id = CHI.332 }
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.05
+		}
+	}
+	chivalry_power_commander_holy_upgrade = { 
+		
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_holyorder_societies_trigger = yes
+			society_rank >= 2
+			is_landed = yes
+		}
+
+		allow = {
+			society_currency = 500
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			chivalry_leader_trait_upgradable = yes
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+			NOT = { trait = chivalry_warrior_pilgrim }
+			custom_tooltip = {
+				text = chivalry_resting_tooltip
+				NOT = { has_character_modifier = chivalry_unjustified_rest }
+				NOT = { has_character_modifier = chivalry_justified_rest }
+			}
+		}
+
+		effect = {
+			change_society_currency = -500
+			add_trait = chivalry_warrior_pilgrim
+			character_event = { id = CHI.333 }
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.05
+		}
+	}
+	chivalry_power_vote_law = { 
+		
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_holyorder_societies_trigger = yes
+			society_rank = 3
+		}
+
+		allow = {
+			society_currency = 800
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			custom_tooltip = { 
+				text = chivalry_power_law_timer_tooltip
+				OR = {
+					NOT = { has_character_flag = chivalry_power_law_timer }
+					had_character_flag = { flag = chivalry_power_law_timer days = 1825 }
+				}
+			}
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+		}
+
+		effect = {
+			change_society_currency = -800
+			character_event = { id = CHI.340 }
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+	chivalry_power_holy_castle = {
+		
+		ai_check_interval = 120
+		only_playable = yes
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_holyorder_societies_trigger = yes
+			society_rank == 3
+			is_landed = yes
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			is_nomadic = no
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+			society_currency = 700
+			liege = { 
+				holy_order = no 
+				religion = ROOT
+			}
+			has_dlc = "Sons of Abraham"
+			any_demesne_province = {
+				OR = {
+					has_empty_holding = yes
+					AND = {
+						has_dlc = "Reapers"
+						has_province_modifier = prosperity_modifier_3
+						custom_tooltip = {
+							text = chivalry_allow_holy_castle_tooltip
+							has_empty_holding = no
+							NOT = {
+								num_of_max_settlements = 7
+							}
+						}
+						ROOT = { scaled_wealth = { value = 2.5 min = 750 } }
+					}
+				}
+				hidden_tooltip = {
+				# custom_tooltip = {
+					# text = chivalry_no_holy_castle_tooltip
+					NOT = {
+						any_province_holding = {
+							OR = {
+								owner = { primary_title = { holy_order = yes } }
+								owner = { liege = { primary_title = { holy_order = yes } } }
+								# owner = { liege = { NOT = { character = root } } }
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			set_character_flag = chivalry_block_currency
+			custom_tooltip = {
+				text = chivalry_start_holy_castle_tooltip
+				society = { # event to grand master
+					random_society_member = {
+						limit = {
+							is_society_grandmaster = yes
+						}
+						save_event_target_as = grand_master_target
+						character_event = { id = CHI.400 }
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	chivalry_power_take_bounty = {
+		ai_check_interval = 12
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_fighter_societies_trigger = yes
+		}
+
+		allow = {
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+			custom_tooltip = {
+				text = chivalry_not_dueling_tooltip
+				NOT = { has_character_flag = chivalry_duel_ongoing }
+			}
+			NOR = {
+				has_character_modifier = chivalry_unjustified_rest
+				has_character_modifier = chivalry_justified_rest
+			}
+			hidden_tooltip = {
+				OR = {
+					ai = no
+					AND = {
+						combat_rating >= 3
+						NOT = { has_injury_trigger = yes }
+					}
+				}
+			}
+		}
+		
+		effect = {
+			set_character_flag = chivalry_duel_ongoing
+			character_event = { id = CHI.209 }
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+	chivalry_power_army_fighter = { 
+		only_playable = yes
+		is_mercenary = yes
+		ai_check_interval = 12	
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_fighter_societies_trigger = yes
+			society_rank >= 2
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = chivalry_army_timer_tt
+				NOT = { has_character_modifier = chivalry_army_timer }
+			}
+			war = yes
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			society_currency = 1000
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = chivalry_army_timer
+					duration = 720
+					hidden = yes
+				}
+			}
+			sound_effect = army_selected
+			change_society_currency = -1000
+			capital_scope = {
+				ROOT = {
+					if = {
+						limit = {
+							ROOT = {
+								OR = {
+									AND = {
+										tier = EMPEROR
+										is_nomadic = no
+									}
+									AND = {
+										is_nomadic = yes
+										num_of_count_titles_in_realm > 16
+									}
+								}
+							}
+						}
+						spawn_unit = {
+							owner = ROOT
+							home = PREV
+							province = PREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.25
+							attrition = 1.0 
+							
+							troops = {
+								archers = { 1000 1000 }
+								light_infantry = { 2000 2000 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							ROOT = {
+								OR = {
+									tier = KING
+									AND = {
+										is_nomadic = yes
+										num_of_count_titles_in_realm > 12
+									}
+								}
+							}
+						}
+						spawn_unit = {
+							owner = ROOT
+							home = PREV
+							province = PREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.25
+							attrition = 1.0 
+							
+							troops = {
+								archers = { 750 750 }
+								light_infantry = { 1500 1500 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							ROOT = {
+								OR = {
+									tier = DUKE
+									AND = {
+										is_nomadic = yes
+										AND = {
+											is_nomadic = yes
+											num_of_count_titles_in_realm > 8
+										}
+									}
+								}
+							}
+						}
+						spawn_unit = {
+							owner = ROOT
+							home = PREV
+							province = PREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.25
+							attrition = 1.0 
+							
+							troops = {
+								archers = { 500 500 }
+								light_infantry = { 1000 1000 }
+							}
+						}
+					}
+					else = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREV
+							province = PREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.25
+							attrition = 1.0 
+							
+							troops = {
+								archers = { 350 350 }
+								light_infantry = { 750 750 }
+							}
+						}
+					}
+				}
+			}
+			any_realm_province = { #any_demesne_province
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_light_infantry_mod_1
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								light_infantry = { 200 200 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_light_infantry_mod_2
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								light_infantry = { 400 400 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_light_infantry_mod_3
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								light_infantry = { 600 600 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_archers_mod_1
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								archers = { 150 150 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_archers_mod_2
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								archers = { 300 300 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_archers_mod_3
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								archers = { 450 450 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_heavy_infantry_mod_1
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								heavy_infantry = { 150 150 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_heavy_infantry_mod_2
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								heavy_infantry = { 300 300 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_heavy_infantry_mod_3
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								heavy_infantry = { 450 450 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_pikemen_mod_1
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								pikemen = { 100 150 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_pikemen_mod_2
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								pikemen = { 300 300 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_pikemen_mod_3
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								pikemen = { 450 450 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_light_cavalry_mod_1
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								light_cavalry = { 150 150 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_light_cavalry_mod_2
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								light_cavalry = { 300 300 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_light_cavalry_mod_3
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								light_cavalry = { 450 450 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_knights_mod_1
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								knights = { 75 75 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_knights_mod_2
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								knights = { 150 150 }
+							}
+						}
+					}
+				}
+				any_province_holding = { 
+					limit = {
+						owner = { character = ROOT }
+						has_holding_modifier = chivalry_knights_mod_3
+					}
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREVPREV
+							province = PREVPREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.50
+							attrition = 1.0 
+							
+							troops = {
+								knights = { 225 225 }
+							}
+						}
+					}
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0  #?decisions with the "is_mercenary" will not be calculated from the script?
+		}
+	}
+	chivalry_power_army_holy = { 
+		only_playable = yes
+		is_mercenary = yes
+		ai_check_interval = 12	
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_holyorder_societies_trigger = yes
+			society_rank >= 2
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = chivalry_army_timer_tt
+				NOT = { has_character_modifier = chivalry_army_timer }
+			}
+			war = yes
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+			# custom_tooltip = {
+				# text = raise_defensive_unit_tooltip
+
+				# hidden_tooltip = {
+					any_war = {
+						OR = {
+							AND = {
+								any_defender = {
+									character = ROOT
+									is_primary_war_defender = yes
+								}
+								any_attacker = {
+									OR = {
+										NOT = { religion_group = ROOT }
+										is_heresy_of = ROOT
+										is_parent_religion = ROOT
+									}
+								}
+								ROOT = { society_currency = 750 }
+							}
+							AND = {
+								any_attacker = {
+									character = ROOT
+									is_primary_war_attacker = yes
+								}
+								any_defender = {
+									OR = {
+										NOT = { religion_group = ROOT }
+										is_heresy_of = ROOT
+										is_parent_religion = ROOT
+									}
+								}
+								ROOT = { society_currency = 1000 }
+							}
+						}
+					}
+				# }
+			# }
+		}
+
+		effect = {
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = chivalry_army_timer
+					duration = 720
+					hidden = yes
+				}
+			}
+			sound_effect = army_selected
+			if = {
+				limit = {
+					any_war = {
+						OR = {
+							AND = {
+								any_defender = {
+									character = ROOT
+									is_primary_war_defender = yes
+								}
+								any_attacker = {
+									OR = {
+										NOT = { religion_group = ROOT }
+										is_heresy_of = ROOT
+										is_parent_religion = ROOT
+									}
+								}
+							}
+						}
+					}
+				}
+				change_society_currency = -750
+				capital_scope = {
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREV
+							province = PREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0 #no maintenance for defence
+							attrition = 1.0 
+							#match them with influence later on forget
+							# match_character = ROOT
+							# match_mult = 0.2
+							# match_min = 1000
+							# match_max = 15000
+							
+							troops = {
+								archers = { 800 800 }
+								heavy_infantry = { 1000 1000 }
+								knights = { 200 200 }
+							}
+						}
+					}
+				}
+			}
+			else = {
+				change_society_currency = -1000
+				capital_scope = {
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							home = PREV
+							province = PREV
+							disband_on_peace = yes
+							cannot_inherit = yes
+							maintenance_multiplier = 0.5
+							attrition = 1.0 
+							#match them with influence later on
+							# match_character = ROOT
+							# match_mult = 0.2
+							# match_min = 1000
+							# match_max = 15000
+							
+							troops = {
+								archers = { 800 800 }
+								heavy_infantry = { 1000 1000 }
+								knights = { 200 200 }
+							}
+						}
+					}
+				}
+			}
+			any_demesne_province = {
+				limit = {
+					capital_holding = {
+						has_holding_modifier = chivalry_holy_castle
+					}
+				}
+				ROOT = {
+					spawn_unit = {
+						owner = ROOT
+						home = PREV
+						province = PREV
+						disband_on_peace = yes
+						cannot_inherit = yes
+						maintenance_multiplier = 0.5
+						attrition = 1.0 
+						#match them with influence later on
+						# match_character = ROOT
+						# match_mult = 0.2
+						# match_min = 1000
+						# match_max = 15000
+						
+						troops = {
+							archers = { 160 160 }
+							heavy_infantry = { 200 200 }
+							knights = { 40 40 }
+						}
+					}
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0  #?decisions with the "is_mercenary" will not be calculated from the script?
+		}
+	}
+	chivalry_power_holy_governement = { 
+		ai = no
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_holyorder_societies_trigger = yes
+			society_rank = 3
+			NOT = { has_holy_order_government = yes }
+			NOT = { has_character_flag = chivalry_holy_order_created }
+			d_chivalry_holy_hand = { has_holder = no }
+			d_chivalry_holy_warden = { has_holder = no }
+			d_chivalry_holy_scion = { has_holder = no }
+			d_chivalry_holy_rose = { has_holder = no }
+			d_chivalry_holy_hand_true = { has_holder = no }
+			d_chivalry_holy_warden_true = { has_holder = no }
+			d_chivalry_holy_scion_true = { has_holder = no }
+			d_chivalry_holy_rose_true = { has_holder = no }
+			d_chivalry_merc_black = { has_holder = no }
+			d_chivalry_merc_cloak = { has_holder = no }
+			d_chivalry_merc_falcon = { has_holder = no }
+			d_chivalry_merc_hound = { has_holder = no }
+			d_chivalry_holy_black_true = { has_holder = no }
+			d_chivalry_holy_cloak_true = { has_holder = no }
+			d_chivalry_holy_falcon_true = { has_holder = no }
+			d_chivalry_holy_hound_true = { has_holder = no }
+		}
+
+		allow = {
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+			is_patrician = no
+			is_tribal = no
+			OR = {
+				tier = duke
+				AND = {
+					tier = count
+					demesne_size_compared_to_limit = 1
+					OR = {
+						independent = yes
+						liege = { higher_tier_than = duke }
+					}
+				}
+			}
+			NOT = { tier = king }
+			war = no
+			society_currency = 2000
+			piety = 500
+			prestige = 250
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+		}
+
+		effect = {
+			change_society_currency = -2000
+			piety = -500
+			prestige = -250
+			character_event = { id = CHI.370 }
+			set_character_flag = chivalry_holy_order_created
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_power_merc_governement = { 
+		ai = no
+		potential = {
+			has_character_flag = chivalry_show_decision
+			is_fighter_societies_trigger = yes
+			society_rank = 3
+			NOT = { government = mercenary_government }
+			NOT = { has_character_flag = chivalry_holy_order_created }
+			d_chivalry_holy_hand = { has_holder = no }
+			d_chivalry_holy_warden = { has_holder = no }
+			d_chivalry_holy_scion = { has_holder = no }
+			d_chivalry_holy_rose = { has_holder = no }
+			d_chivalry_holy_hand_true = { has_holder = no }
+			d_chivalry_holy_warden_true = { has_holder = no }
+			d_chivalry_holy_scion_true = { has_holder = no }
+			d_chivalry_holy_rose_true = { has_holder = no }
+			d_chivalry_merc_black = { has_holder = no }
+			d_chivalry_merc_cloak = { has_holder = no }
+			d_chivalry_merc_falcon = { has_holder = no }
+			d_chivalry_merc_hound = { has_holder = no }
+			d_chivalry_holy_black_true = { has_holder = no }
+			d_chivalry_holy_cloak_true = { has_holder = no }
+			d_chivalry_holy_falcon_true = { has_holder = no }
+			d_chivalry_holy_hound_true = { has_holder = no }
+		}
+
+		allow = {
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+			is_patrician = no
+			is_tribal = no
+			OR = {
+				tier = duke
+				AND = {
+					tier = count
+					demesne_size_compared_to_limit = 1
+					OR = {
+						independent = yes
+						liege = { higher_tier_than = duke }
+					}
+				}
+			}
+			NOT = { tier = king }
+			war = no
+			society_currency = 2000
+			prestige = 750
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					has_character_flag = chivalry_block_currency
+				}
+			}
+		}
+
+		effect = {
+			change_society_currency = -2000
+			prestige = -750
+			character_event = { id = CHI.371 }
+			set_character_flag = chivalry_holy_order_created
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_power_squire_dummy = { #fake
+		ai = no 
+		potential = {
+			always = no
+		}
+
+		allow = {
+			always = no
+		}
+
+		effect = {
+
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_power_arena_dummy = { #fake
+		ai = no 
+		potential = {
+			always = no
+		}
+
+		allow = {
+			always = no
+		}
+
+		effect = {
+
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_power_arena_champ_dummy = { #fake
+		ai = no 
+		potential = {
+			always = no
+		}
+
+		allow = {
+			always = no
+		}
+
+		effect = {
+
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	chivalry_power_arena_AI = { #so they do not check 18 decisions for each of their provinces every year
+		
+		ai_check_interval = 12
+		only_rulers = yes
+		potential = {
+			ai = yes
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+			is_landed = yes
+			is_nomadic = no
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+		}
+		
+		allow = {
+			society_currency = 300
+		}
+		
+		effect = {
+			# random_demesne_province = { #random_realm_province
+				# limit = {
+					# any_province_holding = { owner = { character = ROOT } }
+				# }
+			random_demesne_title = {
+				limit = { lower_tier_than = duke }
+				location = {
+					random_province_holding = {
+						limit = {
+							OR = {
+								holding_type = tribal
+								holding_type = temple
+								holding_type = castle
+								holding_type = city
+							}
+							owner = { character = ROOT }
+						}
+						random_list = {
+							50 = { } #filler
+							10 = {
+								trigger = {
+									NOT = { has_holding_modifier = chivalry_light_infantry_mod_1 }
+									NOT = { has_holding_modifier = chivalry_light_infantry_mod_2 }
+									NOT = { has_holding_modifier = chivalry_light_infantry_mod_3 }
+								}
+								modifier = {
+									factor = 2
+									holding_type = tribal
+								}
+								modifier = {
+									factor = 0
+									holding_type = tribal
+									has_any_arena_modifier = yes
+								}
+								modifier = {
+									factor = 0
+									has_2_rank1_arena_modifier = yes
+								}
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_light_infantry_mod_1
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_light_infantry_mod_1
+								}
+								modifier = {
+									factor = 0.1
+									has_any_rank2_arena_modifier = yes
+								}
+								remove_holding_modifier = chivalry_light_infantry_mod_1
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_light_infantry_mod_2
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_light_infantry_mod_2
+									ROOT = { society_rank = 4 }
+									ROOT = { society_currency = 800 }
+									NOT = { has_any_rank3_arena_modifier = yes }
+								}
+								remove_holding_modifier = chivalry_light_infantry_mod_2
+								ROOT = { change_society_currency = -800 }
+								add_holding_modifier = {
+									name = chivalry_light_infantry_mod_3
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									NOT = { has_holding_modifier = chivalry_archers_mod_1 }
+									NOT = { has_holding_modifier = chivalry_archers_mod_2 }
+									NOT = { has_holding_modifier = chivalry_archers_mod_3 }
+								}
+								modifier = {
+									factor = 0.5
+									holding_type = castle
+								}
+								modifier = {
+									factor = 0
+									holding_type = tribal
+									has_any_arena_modifier = yes
+								}
+								modifier = {
+									factor = 0
+									has_2_rank1_arena_modifier = yes
+								}
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_archers_mod_1
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_archers_mod_1
+								}
+								modifier = {
+									factor = 0.1
+									has_any_rank2_arena_modifier = yes
+								}
+								remove_holding_modifier = chivalry_archers_mod_1
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_archers_mod_2
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_archers_mod_2
+									ROOT = { society_rank = 4 }
+									ROOT = { society_currency = 800 }
+									NOT = { has_any_rank3_arena_modifier = yes }
+								}
+								remove_holding_modifier = chivalry_archers_mod_2
+								ROOT = { change_society_currency = -800 }
+								add_holding_modifier = {
+									name = chivalry_archers_mod_3
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									NOT = { has_holding_modifier = chivalry_heavy_infantry_mod_1 }
+									NOT = { has_holding_modifier = chivalry_heavy_infantry_mod_2 }
+									NOT = { has_holding_modifier = chivalry_heavy_infantry_mod_3 }
+								}
+								modifier = {
+									factor = 0.5
+									holding_type = tribal
+								}
+								modifier = {
+									factor = 0
+									holding_type = tribal
+									ROOT = {
+										OR = {
+											culture_group = altaic
+											culture_group = magyar
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									holding_type = city
+								}
+								modifier = {
+									factor = 0
+									holding_type = tribal
+									has_any_arena_modifier = yes
+								}
+								modifier = {
+									factor = 0
+									has_2_rank1_arena_modifier = yes
+								}
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_heavy_infantry_mod_1
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_heavy_infantry_mod_1
+								}
+								modifier = {
+									factor = 0.1
+									has_any_rank2_arena_modifier = yes
+								}
+								remove_holding_modifier = chivalry_heavy_infantry_mod_1
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_heavy_infantry_mod_2
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_heavy_infantry_mod_2
+									ROOT = { society_rank = 4 }
+									ROOT = { society_currency = 800 }
+									NOT = { has_any_rank3_arena_modifier = yes }
+								}
+								remove_holding_modifier = chivalry_heavy_infantry_mod_2
+								ROOT = { change_society_currency = -800 }
+								add_holding_modifier = {
+									name = chivalry_heavy_infantry_mod_3
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									NOT = { has_holding_modifier = chivalry_pikemen_mod_1 }
+									NOT = { has_holding_modifier = chivalry_pikemen_mod_2 }
+									NOT = { has_holding_modifier = chivalry_pikemen_mod_3 }
+								}
+								modifier = {
+									factor = 0.5
+									holding_type = castle
+								}
+								modifier = {
+									factor = 0
+									holding_type = temple
+									holding_type = tribal
+								}
+								modifier = {
+									factor = 0
+									has_2_rank1_arena_modifier = yes
+								}
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_pikemen_mod_1
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_pikemen_mod_1
+								}
+								modifier = {
+									factor = 0.1
+									has_any_rank2_arena_modifier = yes
+								}
+								remove_holding_modifier = chivalry_pikemen_mod_1
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_pikemen_mod_2
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_pikemen_mod_2
+									ROOT = { society_rank = 4 }
+									ROOT = { society_currency = 800 }
+									NOT = { has_any_rank3_arena_modifier = yes }
+								}
+								remove_holding_modifier = chivalry_pikemen_mod_2
+								ROOT = { change_society_currency = -800 }
+								add_holding_modifier = {
+									name = chivalry_pikemen_mod_3
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									NOT = { has_holding_modifier = chivalry_light_cavalry_mod_1 }
+									NOT = { has_holding_modifier = chivalry_light_cavalry_mod_2 }
+									NOT = { has_holding_modifier = chivalry_light_cavalry_mod_3 }
+								}
+								modifier = {
+									factor = 0.5
+									holding_type = tribal
+								}
+								modifier = {
+									factor = 0
+									holding_type = tribal
+									ROOT = {
+										NOR = {
+											culture_group = altaic
+											culture_group = magyar
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									holding_type = city
+									holding_type = temple
+								}
+								modifier = {
+									factor = 0
+									holding_type = tribal
+									has_any_arena_modifier = yes
+								}
+								modifier = {
+									factor = 0
+									has_2_rank1_arena_modifier = yes
+								}
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_light_cavalry_mod_1
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_light_cavalry_mod_1
+								}
+								modifier = {
+									factor = 0.1
+									has_any_rank2_arena_modifier = yes
+								}
+								remove_holding_modifier = chivalry_light_cavalry_mod_1
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_light_cavalry_mod_2
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_light_cavalry_mod_2
+									ROOT = { society_rank = 4 }
+									ROOT = { society_currency = 800 }
+									NOT = { has_any_rank3_arena_modifier = yes }
+								}
+								remove_holding_modifier = chivalry_light_cavalry_mod_2
+								ROOT = { change_society_currency = -800 }
+								add_holding_modifier = {
+									name = chivalry_light_cavalry_mod_3
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									NOT = { has_holding_modifier = chivalry_knights_mod_1 }
+									NOT = { has_holding_modifier = chivalry_knights_mod_2 }
+									NOT = { has_holding_modifier = chivalry_knights_mod_3 }
+								}
+								modifier = {
+									factor = 0.5
+									holding_type = castle
+								}
+								modifier = {
+									factor = 0
+									holding_type = city
+									holding_type = temple
+									holding_type = tribal
+								}
+								modifier = {
+									factor = 0
+									has_2_rank1_arena_modifier = yes
+								}
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_knights_mod_1
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_knights_mod_1
+								}
+								modifier = {
+									factor = 0.1
+									has_any_rank2_arena_modifier = yes
+								}
+								remove_holding_modifier = chivalry_knights_mod_1
+								ROOT = { change_society_currency = -300 }
+								add_holding_modifier = {
+									name = chivalry_knights_mod_2
+									duration = -1
+								}
+							}
+							10 = {
+								trigger = {
+									has_holding_modifier = chivalry_knights_mod_2
+									ROOT = { society_rank = 4 }
+									ROOT = { society_currency = 800 }
+									NOT = { has_any_rank3_arena_modifier = yes }
+								}
+								remove_holding_modifier = chivalry_knights_mod_2
+								ROOT = { change_society_currency = -800 }
+								add_holding_modifier = {
+									name = chivalry_knights_mod_3
+									duration = -1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+targeted_decisions = {
+	decision_mission_chivalry_helpwar = {
+		is_in_society = yes
+		only_playable = yes
+		ai_target_filter = self
+		ai = no
+		
+		from_potential = {
+			ai = no
+			has_quest = mission_chivalry_helpwar
+			OR = {
+				is_fighter_societies_trigger = yes
+				is_holyorder_societies_trigger = yes
+			}
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+			# NOT = { has_character_flag = mission_chivalry_helpwar_flag }
+		}
+		
+		potential = {
+			NOT = { character = FROM }
+			OR = {
+				is_quest_target_of = FROM
+				location = { capital_holding = { is_quest_target_of = FROM } }
+			}
+
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = chivalry_not_on_a_mission
+				FROM = { NOT = { has_character_flag = mission_chivalry_helpwar_flag } }
+			}
+		}
+		
+		effect = {
+			FROM = { set_character_flag = mission_chivalry_helpwar_flag } #cant start helping while helping
+			if = {
+				limit = {
+					FROM = { is_holyorder_societies_trigger = yes }
+				}
+				ROOT = { character_event = { id = CHI.152 } }
+			}
+			if = {
+				limit = {
+					FROM = { is_fighter_societies_trigger = yes }
+				}
+				ROOT = { character_event = { id = CHI.162 } }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	decision_mission_chivalry_training = { 
+		is_in_society = yes
+		only_playable = yes
+		ai_target_filter = self
+		ai = no
+		
+		from_potential = {
+			ai = no
+			has_quest = mission_chivalry_training
+			OR = {
+				is_fighter_societies_trigger = yes
+				is_holyorder_societies_trigger = yes
+			}
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+			# OR = {
+				# NOT = { has_character_flag = mission_chivalry_training_flag }
+				# had_character_flag = { flag = mission_chivalry_training_flag days = 720 }
+			# }
+		}
+		
+		potential = {
+			NOT = { character = FROM }
+			OR = {
+				is_quest_target_of = FROM
+				location = { capital_holding = { is_quest_target_of = FROM } }
+			}
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = chivalry_not_on_a_mission
+				OR = {
+					FROM = { NOT = { has_character_flag = mission_chivalry_training_flag } }
+					FROM = { had_character_flag = { flag = mission_chivalry_training_flag days = 720 } }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { set_character_flag = mission_chivalry_training_flag } #cant start training while training
+			if = {
+				limit = {
+					FROM = { is_holyorder_societies_trigger = yes }
+				}
+				ROOT = { character_event = { id = CHI.172 } }
+			}
+			if = {
+				limit = {
+					FROM = { is_fighter_societies_trigger = yes }
+				}
+				ROOT = { character_event = { id = CHI.182 } }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	decision_mission_chivalry_hunt = { 
+		is_in_society = yes
+		ai_target_filter = self
+		ai = no
+
+		from_potential = {
+			ai = no
+			OR = {
+				has_quest = mission_chivalry_hunt_heretic
+				has_quest = mission_chivalry_hunt_bounty
+			}
+			OR = {
+				is_fighter_societies_trigger = yes
+				is_holyorder_societies_trigger = yes
+			}
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			OR = {
+				is_quest_target_of = FROM
+				location = { capital_holding = { is_quest_target_of = FROM } }
+			}
+			is_inaccessible_or_incapable_chivalry_trigger = yes
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = chivalry_not_dueling_tooltip
+				ROOT = { NOT = { has_character_flag = chivalry_duel_ongoing } }
+				FROM = { NOT = { has_character_flag = chivalry_duel_ongoing } }
+			}
+			custom_tooltip = {
+				text = chivalry_not_on_a_mission
+				FROM = { NOT = { has_character_flag = mission_chivalry_hunt_flag } }
+			}
+		}
+		
+		effect = {
+			FROM = { set_character_flag = mission_chivalry_hunt_flag }
+			set_character_flag = mission_was_hunted
+			if = {
+				limit = {
+					FROM = { is_holyorder_societies_trigger = yes }
+				}
+				ROOT = { character_event = { id = CHI.192 } }
+			}
+			if = {
+				limit = {
+					FROM = { is_fighter_societies_trigger = yes }
+				}
+				ROOT = { character_event = { id = CHI.202 } }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	decision_chivalry_set_bounty = {
+		filter = all
+		ai_target_filter = realm
+		ai_check_interval = 36
+		
+		from_potential = {
+			OR = {
+				is_fighter_societies_trigger = no
+				AI = no
+			}
+			is_playable = yes
+			prisoner = no
+			NOT = { has_any_opinion_modifier = opinion_chivalry_bounty }
+			has_game_rule = {
+				name = chivalry_rule_bounty
+				value = default
+			}
+		}
+
+		potential = {
+			is_adult = yes
+			NOT = { character = FROM }
+			prisoner = no
+			NOT = { trait = in_hiding }
+		}
+
+		allow = {
+			NOT = { is_fighter_societies_trigger = yes }
+			FROM = { NOT = { is_fighter_societies_trigger = yes } }
+			FROM = { is_incapable = no }
+			custom_tooltip = {
+				text = chivalry_no_bounty_tooltip
+				FROM = { NOT = { has_character_flag = chivalry_hunt_bounty } }
+				FROM = { NOT = { has_character_flag = chivalry_hunt_target } }
+			}
+			# custom_tooltip = {
+				# text = chivalry_has_set_bounty_tooltip
+				# OR = {
+					# FROM = { NOT = { has_character_flag = chivalry_has_set_bounty } } #event keep appling it until the target die and can't
+					# FROM = { had_character_flag = { flag = chivalry_has_set_bounty days = 120 } }
+				# }
+			# }
+			FROM = { NOT = { opinion = { who = ROOT value = -30 } } }
+			hidden_tooltip = {
+				OR = {
+					FROM = { NOT = { opinion = { who = ROOT value = -40 } } }
+					FROM = { ai = no }
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_chivalry_bounty
+						years = 1000
+					}
+				}
+			}
+			hidden_tooltip = {
+				ROOT = {
+					opinion = {
+						who = FROM
+						modifier = opinion_chivalry_client
+						years = 1000
+					}
+				}
+			}
+			set_character_flag = chivalry_hunt_bounty
+			if = {
+				limit = {
+					ROOT = { tier = emperor }
+				}
+				FROM = { wealth = -500 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { tier = king }
+				}
+				FROM = { wealth = -400 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { tier = duke }
+				}
+				FROM = { wealth = -300 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { tier = count }
+				}
+				FROM = { wealth = -200 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { tier = baron }
+				}
+				FROM = { wealth = -100 }
+			}
+			else = {
+				FROM = { wealth = -50 }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						ROOT = { is_ruler = no }
+						ROOT = { has_minor_title = yes }
+					}
+					AND = {
+						ROOT = { is_ruler = no }
+						FROM = { NOT = { is_liege_of = ROOT } }
+					}
+					AND = {
+						ROOT = { is_ruler = no }
+						FROM = { NOT = { wealth = 50 } }
+					}
+					AND = {
+						ROOT = { tier = baron }
+						FROM = { NOT = { wealth = 100 } }
+					}
+					AND = {
+						ROOT = { tier = count }
+						FROM = { NOT = { wealth = 200 } }
+					}
+					AND = {
+						ROOT = { tier = duke }
+						FROM = { NOT = { wealth = 300 } }
+					}
+					AND = {
+						ROOT = { tier = king }
+						FROM = { NOT = { wealth = 400 } }
+					}
+					AND = {
+						ROOT = { tier = emperor }
+						FROM = { NOT = { wealth = 500 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = { opinion = { who = ROOT value = -50 } }
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = { is_ruler = no }
+			}
+			modifier = {
+				factor = 1.2
+				trait = slothful
+			}
+			modifier = {
+				factor = 1.2
+				trait = envious
+			}
+			modifier = {
+				factor = 1.2
+				trait = proud
+			}
+			modifier = {
+				factor = 1.2
+				trait = deceitful
+			}
+			modifier = {
+				factor = 1.2
+				trait = cruel
+			}
+			modifier = {
+				factor = 0.8
+				trait = temperate
+			}
+			modifier = {
+				factor = 0.8
+				trait = charitable
+			}
+			modifier = {
+				factor = 0.8
+				trait = diligent
+			}
+			modifier = {
+				factor = 0.8
+				trait = kind
+			}
+			modifier = {
+				factor = 0.8
+				trait = humble
+			}
+			modifier = {
+				factor = 1.5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 1.5
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 0.5
+				trait = just
+			}
+			modifier = {
+				factor = 2
+				is_foe = FROM
+			}
+			modifier = {
+				factor = 2
+				trait = craven
+			}
+			modifier = {
+				factor = 0.1
+				trait = duelist
+			}
+			modifier = {
+				factor = 0.1
+				trait = brave
+			}
+		}
+	}
+	decision_chivalry_remove_bounty = {
+		filter = self
+		ai_target_filter = self
+		ai = no
+	
+		potential = {
+			ai = no
+			has_any_opinion_modifier = opinion_chivalry_bounty
+		}
+		
+		effect = {
+			custom_tooltip = { text = chivalry_not_dueling_effet_tooltip }
+			random_opinion_modifier_target = {
+				limit = {
+					ROOT = {
+						has_opinion_modifier = {
+							who = PREV
+							modifier = opinion_chivalry_bounty
+						}
+					}
+					NOT = { has_character_flag = chivalry_hunt_target }
+				}
+				save_event_target_as = target_bounty
+				ROOT = { character_event = { id = CHI.207 } }
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	decision_chivalry_remove_bounty_target = {
+		ai_target_filter = realm
+		ai = no
+	
+		from_potential = {
+			ai = no
+			has_any_opinion_modifier = opinion_chivalry_bounty
+		}
+		
+		potential = {
+			FROM = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = opinion_chivalry_bounty
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = chivalry_not_dueling_tooltip
+				ROOT = { NOT = { has_character_flag = chivalry_duel_ongoing } }
+				FROM = { NOT = { has_character_flag = chivalry_duel_ongoing } }
+				FROM = { NOT = { has_character_flag = chivalry_hunt_target } }
+			}
+		}
+		
+		effect = {
+			save_event_target_as = target_bounty
+			hidden_tooltip = {
+				FROM = { character_event = { id = CHI.207 } }
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	decision_chivalry_hide_rank_up = {
+		filter = self
+		ai_target_filter = self
+		ai = no
+	
+		from_potential = {
+			is_fighter_societies_trigger = yes
+		}
+		
+		potential = {
+			is_fighter_societies_trigger = yes
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_character_flag = chivalry_hide_rank_up }
+				}
+				set_character_flag = chivalry_hide_rank_up
+			}
+			else = {
+				clr_character_flag = chivalry_hide_rank_up
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	decision_chivalry_holy_society_one = { 
+		filter = all
+		ai_target_filter = self
+		ai = no
+		
+		from_potential = {
+			NOT = { has_global_flag = chivalry_holy_society_one_global }
+		}
+
+		potential = {
+			primary_title = { holy_order = yes } 
+			NOT = { primary_title = { title = d_hashshashin } }
+			is_holyorder_title_trigger = no
+		}
+
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				set_global_flag = chivalry_holy_society_one_global
+				primary_title = { set_title_flag = chivalry_holy_society_one_flag }
+				primary_title = { save_global_event_target_as = chivalry_holy_society_one_name }
+				leave_society = yes
+				join_society = society_holy_one
+				set_society_grandmaster = yes
+				character_event = { id = CHI.105 days = 180 }
+				any_courtier = {
+					limit = {
+						AND = {
+							has_holyorder_societies_prerequisites_notrait = yes
+							religion = root
+						}
+					}
+					join_society = society_holy_one
+				}
+				any_vassal = {
+					limit = {
+						AND = {
+							has_holyorder_societies_prerequisites_notrait = yes
+							religion = root
+						}
+					}
+					join_society = society_holy_one
+				}
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	decision_chivalry_holy_society_one_feminist = { 
+		filter = all
+		ai_target_filter = self
+		ai = no
+		
+		from_potential = {
+			NOT = { has_global_flag = chivalry_holy_society_one_global }
+		}
+
+		potential = {
+			primary_title = { holy_order = yes }
+			NOT = { primary_title = { title = d_hashshashin } }
+			is_holyorder_title_trigger = no
+		}
+
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				set_global_flag = chivalry_holy_society_one_global
+				primary_title = { set_title_flag = chivalry_holy_society_one_flag }
+				primary_title = { save_global_event_target_as = chivalry_holy_society_one_name }
+				leave_society = yes
+				join_society = society_holy_one
+				set_society_grandmaster = yes
+				add_character_modifier = {
+					modifier = chivalry_law_feminist
+					duration = -1
+					inherit = yes
+				}
+				character_event = { id = CHI.105 days = 180 }
+				any_courtier = {
+					limit = {
+						AND = {
+							has_holyorder_societies_prerequisites_notrait = yes
+							religion = root
+						}
+					}
+					join_society = society_holy_one
+				}
+				any_vassal = {
+					limit = {
+						AND = {
+							has_holyorder_societies_prerequisites_notrait = yes
+							religion = root
+						}
+					}
+					join_society = society_holy_one
+				}
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+settlement_decisions = {
+	chivalry_light_infantry_dec_1 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			NOT = { has_holding_modifier = chivalry_light_infantry_mod_1 }
+			NOT = { has_holding_modifier = chivalry_light_infantry_mod_2 }
+			NOT = { has_holding_modifier = chivalry_light_infantry_mod_3 }
+		}
+		allow = {
+			FROM = { society_currency = 250 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -250 }
+			add_holding_modifier = {
+				name = chivalry_light_infantry_mod_1
+				duration = -1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 2
+				ROOT = {
+					holding_type = tribal
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					holding_type = tribal
+					has_any_arena_modifier = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					has_2_rank1_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_light_infantry_dec_2 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_light_infantry_mod_1
+		}
+		allow = {
+			FROM = { society_currency = 500 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -500 }
+			add_holding_modifier = {
+				name = chivalry_light_infantry_mod_2
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_light_infantry_mod_1
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0.1
+				ROOT = {
+					has_any_rank2_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_light_infantry_dec_3 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 6
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank = 4
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_light_infantry_mod_2
+			NOT = { has_any_rank3_arena_modifier = yes }
+		}
+		allow = {
+			FROM = { society_currency = 1000 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -1000 }
+			add_holding_modifier = {
+				name = chivalry_light_infantry_mod_3
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_light_infantry_mod_2
+
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chivalry_light_infantry_dec_down = {
+		filter = owned
+		ai_target_filter = owned
+		only_rulers = yes
+		# ai = no
+		ai_check_interval = 12
+		
+		from_potential = {
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			OR = {
+				has_holding_modifier = chivalry_light_infantry_mod_1
+				has_holding_modifier = chivalry_light_infantry_mod_2
+				has_holding_modifier = chivalry_light_infantry_mod_3
+			}
+		}
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_holding_modifier = chivalry_light_infantry_mod_1
+				}
+				remove_holding_modifier = chivalry_light_infantry_mod_1
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_light_infantry_mod_2
+				}
+				add_holding_modifier = {
+					name = chivalry_light_infantry_mod_1
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_light_infantry_mod_2
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_light_infantry_mod_3
+				}
+				add_holding_modifier = {
+					name = chivalry_light_infantry_mod_2
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_light_infantry_mod_3
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 5
+				FROM = { NOT = { wealth = 1 } }
+			}
+			modifier = {
+				factor = 5
+				FROM = { NOT = { is_fighter_societies_trigger = yes } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { is_fighter_societies_trigger = yes }
+			}
+		}
+	}
+	chivalry_archers_dec_1 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			NOT = { has_holding_modifier = chivalry_archers_mod_1 }
+			NOT = { has_holding_modifier = chivalry_archers_mod_2 }
+			NOT = { has_holding_modifier = chivalry_archers_mod_3 }
+		}
+		allow = {
+			FROM = { society_currency = 250 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -250 }
+			add_holding_modifier = {
+				name = chivalry_archers_mod_1
+				duration = -1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0
+				ROOT = {
+					holding_type = tribal
+					has_any_arena_modifier = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					has_2_rank1_arena_modifier = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					holding_type = castle
+				}
+			}
+		}
+	}
+	chivalry_archers_dec_2 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_archers_mod_1
+		}
+		allow = {
+			FROM = { society_currency = 500 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -500 }
+			add_holding_modifier = {
+				name = chivalry_archers_mod_2
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_archers_mod_1
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0.1
+				ROOT = {
+					has_any_rank2_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_archers_dec_3 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 6
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank = 4
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_archers_mod_2
+			NOT = { has_any_rank3_arena_modifier = yes }
+		}
+		allow = {
+			FROM = { society_currency = 1000 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -1000 }
+			add_holding_modifier = {
+				name = chivalry_archers_mod_3
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_archers_mod_2
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chivalry_archers_dec_down = {
+		filter = owned
+		ai_target_filter = owned
+		only_rulers = yes
+		# ai = no
+		ai_check_interval = 12
+		
+		from_potential = {
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			OR = {
+				has_holding_modifier = chivalry_archers_mod_1
+				has_holding_modifier = chivalry_archers_mod_2
+				has_holding_modifier = chivalry_archers_mod_3
+			}
+		}
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_holding_modifier = chivalry_archers_mod_1
+				}
+				remove_holding_modifier = chivalry_archers_mod_1
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_archers_mod_2
+				}
+				add_holding_modifier = {
+					name = chivalry_archers_mod_1
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_archers_mod_2
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_archers_mod_3
+				}
+				add_holding_modifier = {
+					name = chivalry_archers_mod_2
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_archers_mod_3
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 5
+				FROM = { NOT = { wealth = 1 } }
+			}
+			modifier = {
+				factor = 5
+				FROM = { NOT = { is_fighter_societies_trigger = yes } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { is_fighter_societies_trigger = yes }
+			}
+		}
+	}
+	chivalry_heavy_infantry_dec_1 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			NOT = { has_holding_modifier = chivalry_heavy_infantry_mod_1 }
+			NOT = { has_holding_modifier = chivalry_heavy_infantry_mod_2 }
+			NOT = { has_holding_modifier = chivalry_heavy_infantry_mod_3 }
+		}
+		allow = {
+			FROM = { society_currency = 250 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -250 }
+			add_holding_modifier = {
+				name = chivalry_heavy_infantry_mod_1
+				duration = -1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					holding_type = tribal
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					holding_type = tribal
+					has_any_arena_modifier = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					holding_type = tribal
+				}
+				FROM = {
+					OR = {
+						culture_group = altaic
+						culture_group = magyar
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					holding_type = city
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					has_2_rank1_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_heavy_infantry_dec_2 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_heavy_infantry_mod_1
+		}
+		allow = {
+			FROM = { society_currency = 500 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -500 }
+			add_holding_modifier = {
+				name = chivalry_heavy_infantry_mod_2
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_heavy_infantry_mod_1
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0.1
+				ROOT = {
+					has_any_rank2_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_heavy_infantry_dec_3 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 6
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank = 4
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_heavy_infantry_mod_2
+			NOT = { has_any_rank3_arena_modifier = yes }
+		}
+		allow = {
+			FROM = { society_currency = 1000 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -1000 }
+			add_holding_modifier = {
+				name = chivalry_heavy_infantry_mod_3
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_heavy_infantry_mod_2
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chivalry_heavy_infantry_dec_down = {
+		filter = owned
+		ai_target_filter = owned
+		only_rulers = yes
+		# ai = no
+		ai_check_interval = 12
+		
+		from_potential = {
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			OR = {
+				has_holding_modifier = chivalry_heavy_infantry_mod_1
+				has_holding_modifier = chivalry_heavy_infantry_mod_2
+				has_holding_modifier = chivalry_heavy_infantry_mod_3
+			}
+		}
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_holding_modifier = chivalry_heavy_infantry_mod_1
+				}
+				remove_holding_modifier = chivalry_heavy_infantry_mod_1
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_heavy_infantry_mod_2
+				}
+				add_holding_modifier = {
+					name = chivalry_heavy_infantry_mod_1
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_heavy_infantry_mod_2
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_heavy_infantry_mod_3
+				}
+				add_holding_modifier = {
+					name = chivalry_heavy_infantry_mod_2
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_heavy_infantry_mod_3
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 5
+				FROM = { NOT = { wealth = 1 } }
+			}
+			modifier = {
+				factor = 5
+				FROM = { NOT = { is_fighter_societies_trigger = yes } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { is_fighter_societies_trigger = yes }
+			}
+		}
+	}
+	chivalry_pikemen_dec_1 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			NOT = { has_holding_modifier = chivalry_pikemen_mod_1 }
+			NOT = { has_holding_modifier = chivalry_pikemen_mod_2 }
+			NOT = { has_holding_modifier = chivalry_pikemen_mod_3 }
+		}
+		allow = {
+			FROM = { society_currency = 250 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -250 }
+			add_holding_modifier = {
+				name = chivalry_pikemen_mod_1
+				duration = -1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					holding_type = castle
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					OR = {
+						holding_type = temple
+						holding_type = tribal
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					has_2_rank1_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_pikemen_dec_2 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_pikemen_mod_1
+		}
+		allow = {
+			FROM = { society_currency = 500 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -500 }
+			add_holding_modifier = {
+				name = chivalry_pikemen_mod_2
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_pikemen_mod_1
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0.1
+				ROOT = {
+					has_any_rank2_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_pikemen_dec_3 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 6
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank = 4
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_pikemen_mod_2
+			NOT = { has_any_rank3_arena_modifier = yes }
+		}
+		allow = {
+			FROM = { society_currency = 1000 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -1000 }
+			add_holding_modifier = {
+				name = chivalry_pikemen_mod_3
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_pikemen_mod_2
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chivalry_pikemen_dec_down = {
+		filter = owned
+		ai_target_filter = owned
+		only_rulers = yes
+		# ai = no
+		ai_check_interval = 12
+		
+		from_potential = {
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			OR = {
+				has_holding_modifier = chivalry_pikemen_mod_1
+				has_holding_modifier = chivalry_pikemen_mod_2
+				has_holding_modifier = chivalry_pikemen_mod_3
+			}
+		}
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_holding_modifier = chivalry_pikemen_mod_1
+				}
+				remove_holding_modifier = chivalry_pikemen_mod_1
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_pikemen_mod_2
+				}
+				add_holding_modifier = {
+					name = chivalry_pikemen_mod_1
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_pikemen_mod_2
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_pikemen_mod_3
+				}
+				add_holding_modifier = {
+					name = chivalry_pikemen_mod_2
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_pikemen_mod_3
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 5
+				FROM = { NOT = { wealth = 1 } }
+			}
+			modifier = {
+				factor = 5
+				FROM = { NOT = { is_fighter_societies_trigger = yes } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { is_fighter_societies_trigger = yes }
+			}
+		}
+	}
+	chivalry_light_cavalry_dec_1 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			NOT = { has_holding_modifier = chivalry_light_cavalry_mod_1 }
+			NOT = { has_holding_modifier = chivalry_light_cavalry_mod_2 }
+			NOT = { has_holding_modifier = chivalry_light_cavalry_mod_3 }
+		}
+		allow = {
+			FROM = { society_currency = 250 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -250 }
+			add_holding_modifier = {
+				name = chivalry_light_cavalry_mod_1
+				duration = -1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0
+				ROOT = {
+					OR = {
+						holding_type = temple
+						holding_type = tribal
+						holding_type = city
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					has_2_rank1_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_light_cavalry_dec_2 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_light_cavalry_mod_1
+		}
+		allow = {
+			FROM = { society_currency = 500 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -500 }
+			add_holding_modifier = {
+				name = chivalry_light_cavalry_mod_2
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_light_cavalry_mod_1
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0.1
+				ROOT = {
+					has_any_rank2_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_light_cavalry_dec_3 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 6
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank = 4
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_light_cavalry_mod_2
+			NOT = { has_any_rank3_arena_modifier = yes }
+		}
+		allow = {
+			FROM = { society_currency = 1000 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -1000 }
+			add_holding_modifier = {
+				name = chivalry_light_cavalry_mod_3
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_light_cavalry_mod_2
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chivalry_light_cavalry_dec_down = {
+		filter = owned
+		ai_target_filter = owned
+		only_rulers = yes
+		# ai = no
+		ai_check_interval = 12
+		
+		from_potential = {
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			OR = {
+				has_holding_modifier = chivalry_light_cavalry_mod_1
+				has_holding_modifier = chivalry_light_cavalry_mod_2
+				has_holding_modifier = chivalry_light_cavalry_mod_3
+			}
+		}
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_holding_modifier = chivalry_light_cavalry_mod_1
+				}
+				remove_holding_modifier = chivalry_light_cavalry_mod_1
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_light_cavalry_mod_2
+				}
+				add_holding_modifier = {
+					name = chivalry_light_cavalry_mod_1
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_light_cavalry_mod_2
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_light_cavalry_mod_3
+				}
+				add_holding_modifier = {
+					name = chivalry_light_cavalry_mod_2
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_light_cavalry_mod_3
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 5
+				FROM = { NOT = { wealth = 1 } }
+			}
+			modifier = {
+				factor = 5
+				FROM = { NOT = { is_fighter_societies_trigger = yes } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { is_fighter_societies_trigger = yes }
+			}
+		}
+	}
+	chivalry_knights_dec_1 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			NOT = { has_holding_modifier = chivalry_knights_mod_1 }
+			NOT = { has_holding_modifier = chivalry_knights_mod_2 }
+			NOT = { has_holding_modifier = chivalry_knights_mod_3 }
+		}
+		allow = {
+			FROM = { society_currency = 250 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -250 }
+			add_holding_modifier = {
+				name = chivalry_knights_mod_1
+				duration = -1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					holding_type = castle
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					OR = {
+						holding_type = city
+						holding_type = temple
+						holding_type = tribal
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					has_2_rank1_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_knights_dec_2 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 12
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank >= 3
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_knights_mod_1
+		}
+		allow = {
+			FROM = { society_currency = 500 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -500 }
+			add_holding_modifier = {
+				name = chivalry_knights_mod_2
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_knights_mod_1
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0.1
+				ROOT = {
+					has_any_rank2_arena_modifier = yes
+				}
+			}
+		}
+	}
+	chivalry_knights_dec_3 = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_rulers = yes
+		ai_check_interval = 6
+		
+		from_potential = {
+			is_fighter_societies_trigger = yes
+			society_rank = 4
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			has_holding_modifier = chivalry_knights_mod_2
+			NOT = { has_any_rank3_arena_modifier = yes }
+		}
+		allow = {
+			FROM = { society_currency = 1000 }
+			custom_tooltip = {
+				text = chivalry_block_currency_tooltip
+				NOT = {
+					FROM = { has_character_flag = chivalry_block_currency }
+				}
+			}
+		}
+		
+		effect = {
+			FROM = { change_society_currency = -1000 }
+			add_holding_modifier = {
+				name = chivalry_knights_mod_3
+				duration = -1
+			}
+			remove_holding_modifier = chivalry_knights_mod_2
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chivalry_knights_dec_down = {
+		filter = owned
+		ai_target_filter = owned
+		only_rulers = yes
+		# ai = no
+		ai_check_interval = 12
+		
+		from_potential = {
+
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			OR = {
+				holding_type = tribal
+				holding_type = temple
+				holding_type = castle
+				holding_type = city
+			}
+			OR = {
+				has_holding_modifier = chivalry_knights_mod_1
+				has_holding_modifier = chivalry_knights_mod_2
+				has_holding_modifier = chivalry_knights_mod_3
+			}
+		}
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_holding_modifier = chivalry_knights_mod_1
+				}
+				remove_holding_modifier = chivalry_knights_mod_1
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_knights_mod_2
+				}
+				add_holding_modifier = {
+					name = chivalry_knights_mod_1
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_knights_mod_2
+			}
+			else_if = {
+				limit = {
+					has_holding_modifier = chivalry_knights_mod_3
+				}
+				add_holding_modifier = {
+					name = chivalry_knights_mod_2
+					duration = -1
+				}
+				remove_holding_modifier = chivalry_knights_mod_3
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 5
+				FROM = { NOT = { wealth = 1 } }
+			}
+			modifier = {
+				factor = 5
+				FROM = { NOT = { is_fighter_societies_trigger = yes } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { is_fighter_societies_trigger = yes }
+			}
+		}
+	}
+	chivalry_power_holy_castle_province = {
+		filter = owned
+		ai_target_filter = owned
+		ai = no
+		only_playable = yes
+		from_potential = {
+			has_character_flag = chivalry_show_decision
+			is_holyorder_societies_trigger = yes
+			society_rank == 3
+			is_landed = yes
+		}
+		
+		potential = {
+			owner = { character = FROM }
+			is_capital = yes
+			location = {
+				# OR = {
+					# has_empty_holding = yes
+					# AND = {
+						# has_dlc = "Reapers"
+						# has_province_modifier = prosperity_modifier_3
+						# NOT = { num_of_max_settlements = 7 }
+					# }
+					# any_province_holding = {
+						# is_capital = no
+						# holding_type = castle
+						# owner = { character = ROOT }
+					# }
+				# }
+				NOT = {
+					any_province_holding = {
+						OR = {
+							owner = { primary_title = { holy_order = yes } }
+							owner = { liege = { primary_title = { holy_order = yes } } }
+						}
+					}
+				}
+			}
+		}
+
+		allow = {
+			FROM = {
+				custom_tooltip = {
+					text = chivalry_block_currency_tooltip
+					NOT = {
+						has_character_flag = chivalry_block_currency
+					}
+				}
+				is_nomadic = no
+				prisoner = no
+				is_incapable = no
+				society_currency = 700
+				liege = { 
+					holy_order = no 
+					religion = PREV
+				}
+				has_dlc = "Sons of Abraham"
+			}
+			location = {
+				OR = {
+					has_empty_holding = yes
+					AND = {
+						has_dlc = "Reapers"
+						has_province_modifier = prosperity_modifier_3
+						custom_tooltip = {
+							text = chivalry_allow_holy_castle_tooltip
+							has_empty_holding = no
+							NOT = {
+								num_of_max_settlements = 7
+							}
+						}
+						FROM = { scaled_wealth = { value = 2.5 min = 750 } }
+					}
+					any_province_holding = {
+						is_capital = no
+						holding_type = castle
+						owner = { character = FROM }
+					}
+				}
+				hidden_tooltip = {
+				# custom_tooltip
+					# text = chivalry_no_holy_castle_tooltip
+					NOT = {
+						any_province_holding = {
+							OR = {
+								owner = { primary_title = { holy_order = yes } }
+								owner = { liege = { primary_title = { holy_order = yes } } }
+								# owner = { liege = { NOT = { character = root } } }
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			location = {
+				save_event_target_as = province_target
+			}
+			FROM = {
+				set_character_flag = chivalry_block_currency
+				custom_tooltip = {
+					text = chivalry_start_holy_castle_tooltip
+					society = { # event to grand master
+						random_society_member = {
+							limit = {
+								is_society_grandmaster = yes
+							}
+							save_event_target_as = grand_master_target
+							character_event = { id = CHI.403 }
+						}
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+	}
+}

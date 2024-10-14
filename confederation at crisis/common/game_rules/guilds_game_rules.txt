@@ -1,0 +1,65 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+
+guilds_rule_master = {
+	name = "GUILDS_RULE_MASTER_NAME"
+	group = "GUILDS_RULE_GROUP"
+	option = {
+		name = default
+		# achievements = no
+		text = "GUILDS_RULE_MASTER_DEFAULT"
+		desc = "GUILDS_RULE_MASTER_DEFAULT_DESC"
+	}
+	option = {
+		name = none
+		# achievements = no
+		text = "GUILDS_RULE_MASTER_NONE"
+		desc = "GUILDS_RULE_MASTER_NONE_DESC"
+	}
+}
+
+guilds_rule_war = {
+	name = "GUILDS_RULE_WAR_NAME"
+	group = "GUILDS_RULE_GROUP"
+	option = {
+		name = default
+		# achievements = no
+		text = "GUILDS_RULE_WAR_DEFAULT"
+		desc = "GUILDS_RULE_WAR_DEFAULT_DESC"
+	}
+	option = {
+		name = none
+		# achievements = no
+		text = "GUILDS_RULE_WAR_NONE"
+		desc = "GUILDS_RULE_WAR_NONE_DESC"
+	}
+}
+
+guilds_rule_resource = {
+	name = "GUILDS_RULE_RESOURCE_NAME"
+	group = "GUILDS_RULE_GROUP"
+	option = {
+		name = default
+		# achievements = no
+		text = "GUILDS_RULE_RESOURCE_DEFAULT"
+		desc = "GUILDS_RULE_RESOURCE_DEFAULT_DESC"
+	}
+	option = {
+		name = none
+		# achievements = no
+		text = "GUILDS_RULE_RESOURCE_NONE"
+		desc = "GUILDS_RULE_RESOURCE_NONE_DESC"
+	}
+}

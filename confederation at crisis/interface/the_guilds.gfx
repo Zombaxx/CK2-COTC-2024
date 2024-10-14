@@ -1,0 +1,689 @@
+objectTypes = {
+	EMFXActorType = {
+		name = "westerngfx_job_cartographer"
+		actorfile = "gfx\models\Mapindicators\Western_treasurer.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_treasurer_idle.xsm"
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "easterngfx_job_cartographer"
+		actorfile = "gfx\models\Mapindicators\Western_treasurer.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_treasurer_idle.xsm"
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "muslimgfx_job_cartographer"
+		actorfile = "gfx\models\Mapindicators\Western_treasurer.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_treasurer_idle.xsm"
+		scale = 1.0f
+	}
+}
+
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_the_guilds_ranks"
+		texturefile = "gfx\\interface\\societies\\rank_icons_guilds.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_the_guilds_ranks_highlight"
+		texturefile = "gfx\\interface\\societies\\rank_icons_guilds_highlight.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_the_guilds_ranks_locked"
+		texturefile = "gfx\\interface\\societies\\rank_icons_guilds_locked.dds"
+		noOfFrames = 4
+	}
+	##### Event borders ######
+	
+	spriteType = {
+		name = "GFX_event_letter_frame_economy_guilds"
+		texturefile = "gfx\\interface\\event_letter_frame_economy_guilds.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_event_long_frame_economy_guilds"
+		texturefile = "gfx\\interface\\event_long_frame_economy_guilds.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_event_narrative_frame_economy_guilds"
+		texturefile = "gfx\\interface\\event_narrative_frame_economy_guilds.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_event_normal_frame_economy_guilds"
+		texturefile = "gfx\\interface\\event_normal_frame_economy_guilds.tga"
+		allwaystransparent = yes
+	}
+	
+	##### guilds #####
+	
+	spriteType = {
+		name = "GFX_society_main_background_the_guilds"
+		texturefile = "gfx\\interface\\societies\\society_bg_guilds.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_the_guilds"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_guilds.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_the_guilds"
+		texturefile = "gfx\\interface\\societies\\symbol_small_guilds.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_influence_the_guilds"
+		texturefile = "gfx\\interface\\societies\\society_influence_guilds.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_the_guilds"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_guilds.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_the_guilds"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_guilds.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_the_guilds"
+		texturefile = "gfx\\interface\\societies\\society_currency_guilds.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_the_guilds"
+		textureFile = "gfx/interface/society_quest/mission_bg_guilds.dds"
+	}
+############Decisions############	
+	spriteType = {
+		name = "GFX_guilds_show_decisions_on"
+		texturefile = "gfx\\interface\\decision_icon_guilds_on.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_show_decisions_off"
+		texturefile = "gfx\\interface\\decision_icon_guilds_off.dds"
+	}
+
+	spriteType = {
+		name = "GFX_guilds_bribe_leaders"
+		texturefile = "gfx\\interface\\decision_icon_guilds_shopping.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_shopping"
+		texturefile = "gfx\\interface\\decision_icon_guilds_shopping.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_caravan_option"
+		texturefile = "gfx\\interface\\decision_icon_guilds_caravan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_loaning_one"
+		texturefile = "gfx\\interface\\decision_icon_guilds_loan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_loaning_two"
+		texturefile = "gfx\\interface\\decision_icon_guilds_loan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_loaning_three"
+		texturefile = "gfx\\interface\\decision_icon_guilds_loan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_become_republic"
+		texturefile = "gfx\\interface\\decision_icon_guilds_republic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_buy_shop"
+		texturefile = "gfx\\interface\\decision_icon_guilds_stall.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_build_warehouse_button"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_decorated_warehouse_gold"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_gold.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_decorated_warehouse_incense"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_incense.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_decorated_warehouse_silk"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_silk.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_decorated_warehouse_book"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_book.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_decorated_warehouse_guilds"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_guilds.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_decorated_warehouse_custom"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_sell.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_discard_warehouse"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_discard.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_sell_warehouse"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_sell.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_discard_warehouse_outsider"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_discard.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_sell_warehouse_outsider"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_sell.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_show_warehouse_on"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_on.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_show_warehouse_off"
+		texturefile = "gfx\\interface\\decision_icon_guilds_warehouse_off.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_guarding_warehouse_on"
+		texturefile = "gfx\\interface\\decision_icon_guilds_guard_on.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_guarding_warehouse_off"
+		texturefile = "gfx\\interface\\decision_icon_guilds_guard_off.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_guarding_warehouse_out_on"
+		texturefile = "gfx\\interface\\decision_icon_guilds_guard_on.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_guarding_warehouse_out_off"
+		texturefile = "gfx\\interface\\decision_icon_guilds_guard_off.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_delivery_button"
+		texturefile = "gfx\\interface\\decision_icon_guilds_delivery.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_craft_button"
+		texturefile = "gfx\\interface\\decision_icon_guilds_craft.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_create_center"
+		texturefile = "gfx\\interface\\decision_icon_guilds_center.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_repair_center"
+		texturefile = "gfx\\interface\\decision_icon_guilds_center_repair.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_society_mapmode_buy"
+		texturefile = "gfx\\interface\\decision_icon_guilds_mapmode.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_society_mapmode_look"
+		texturefile = "gfx\\interface\\decision_icon_guilds_mapmode.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_clear_debt"
+		texturefile = "gfx\\interface\\decision_icon_guilds_clear_debt.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_start_resource"
+		texturefile = "gfx\\interface\\decision_icon_guilds_resources.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_guilds_get_bloodline"
+		texturefile = "gfx\\interface\\decision_icon_guilds_get_bloodline.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_guilds_trait_trader"
+		texturefile = "gfx/traits/guilds_trait_trader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_guilds_trait_master"
+		texturefile = "gfx/traits/guilds_trait_master.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_guilds_trait_apprentice"
+		texturefile = "gfx/traits/guilds_trait_apprentice.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_guilds_nun"
+		texturefile = "gfx/traits/nun.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+############Items############
+	spriteType = {
+		name = "GFX_guilds_iron_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_iron_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_iron"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_iron.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_stone_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_stone_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_stone"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_stone.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_steel_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_steel_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_steel"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_steel.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_gem_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_gem_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_gem"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_gem.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_silver_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_silver_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_silver"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_silver.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_gold_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_gold_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_gold"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_gold.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_grain_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_grain_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_grain"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_grain.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_linen_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_linen_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_linen"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_linen.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_lumber_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_lumber_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_lumber"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_lumber.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_incense_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_incense_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_incense"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_incense.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_spices_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_spices_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_spices"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_spices.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_meat_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_meat_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_meat"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_meat.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_wool_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_wool_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_wool"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_wool.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_hide_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_hide_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_hide"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_hide.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_ivory_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_ivory_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_ivory"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_ivory.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_silk_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_silk_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_silk"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_silk.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_pottery_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_pottery_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_pottery"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_pottery.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_alcohol_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_alcohol_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_alcohol"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_alcohol.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_armor_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_armor_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_armor"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_jewelry_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_jewelry_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_jewelry"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_jewelry.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_book_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_book_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_book"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_book.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_armor_fake_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_armor_fake_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_armor_fake"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_armor_fake.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_stall_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_stall_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_stall"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_stall.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_caravan_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_caravan_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_caravan"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_caravan.dds"
+	}#crafted bellow
+	spriteType = {
+		name = "GFX_guilds_statue_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_statue_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_statue"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_statue.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_music_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_music_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_music"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_music.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_glassware_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_glassware_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_glassware"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_glassware.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_dye_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_dye_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_dye"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_dye.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_velvet_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_velvet_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_velvet"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_velvet.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_fur_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_fur_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_fur"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_fur.dds"
+	}
+	#warehouse artifact
+	spriteType = {
+		name = "GFX_guilds_warehouse_none"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_none.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_custom"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_custom.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_gold"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_gold.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_silk"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_silk.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_book"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_book.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_incense"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_incense.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_guilds"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_guilds.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_guard"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_guard.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_none_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_none_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_custom_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_custom_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_gold_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_gold_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_silk_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_silk_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_book_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_book_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_incense_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_incense_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_guard_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_guard_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_warehouse_guilds_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_warehouse_guilds_small.dds"
+	}
+	#holo
+	spriteType = {
+		name = "GFX_guilds_holo_charm"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_holo_charm.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_holo_charm_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_holo_charm_small.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_holo_hair"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_holo_hair.dds"
+	}
+	spriteType = {
+		name = "GFX_guilds_holo_hair_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\guilds_holo_hair_small.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_guilds_holo_event"
+		texturefile = "gfx\\event_pictures\guilds_holo_event.dds"
+		allwaystransparent = yes
+	}
+	
+	#Unused vanilla pictures
+	spriteType = {
+		name = "GFX_evt_council_quarrelling_unused"
+		texturefile = "gfx\\event_pictures\council_quarrelling_ze.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_council_agreement_unused"
+		texturefile = "gfx\\event_pictures\council_agreement_ze.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_leaving_table_angrily_unused"
+		texturefile = "gfx\\event_pictures\councillor_leaving_room_angrily_ze.dds"
+		allwaystransparent = yes
+	}
+	
+	#bloodline
+	spriteType = {
+		name = "GFX_guilds_bloodlines"
+		texturefile = "gfx\\bloodlines\\guilds_bloodlines.dds"
+	}
+	
+	#cartographer
+	spriteType = {
+		name = "GFX_TSD_action_standby"
+		texturefile = "gfx\\interface\\job_TSD_action_standby.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_guilds_action_goods"
+		texturefile = "gfx\\interface\\job_guilds_action_goods.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_guilds_action_resource"
+		texturefile = "gfx\\interface\\job_guilds_action_resource.dds"
+		noOfFrames = 2
+	}
+}

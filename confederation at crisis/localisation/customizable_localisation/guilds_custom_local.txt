@@ -1,0 +1,382 @@
+defined_text = {
+	name = GetGuildsInfluenceCostShopping
+
+	text = {
+		trigger = {
+			society_influence < 20
+		}
+		localisation_key = 125
+	}
+	text = {
+		trigger = {
+			society_influence >= 20
+			society_influence < 40
+		}
+		localisation_key = 100
+	}
+	text = {
+		trigger = {
+			society_influence >= 40
+			society_influence < 60
+		}
+		localisation_key = 75
+	}
+	text = {
+		trigger = {
+			society_influence >= 60
+			society_influence < 80
+		}
+		localisation_key = 50
+	}
+	text = {
+		trigger = {
+			society_influence >= 80
+		}
+		localisation_key = 25
+	}
+}
+
+defined_text = {
+	name = GetGuildsInfluenceCostCaravan
+
+	text = {
+		trigger = {
+			society_influence < 20
+		}
+		localisation_key = 250
+	}
+	text = {
+		trigger = {
+			society_influence >= 20
+			society_influence < 40
+		}
+		localisation_key = 200
+	}
+	text = {
+		trigger = {
+			society_influence >= 40
+			society_influence < 60
+		}
+		localisation_key = 150
+	}
+	text = {
+		trigger = {
+			society_influence >= 60
+			society_influence < 80
+		}
+		localisation_key = 100
+	}
+	text = {
+		trigger = {
+			society_influence >= 80
+		}
+		localisation_key = 50
+	}
+}
+
+defined_text = { #double the spending because it happen twice
+	name = GetGuildsInfluenceCostBuying
+
+	text = {
+		trigger = {
+			society_influence < 20
+		}
+		localisation_key = 200
+	}
+	text = {
+		trigger = {
+			society_influence >= 20
+			society_influence < 40
+		}
+		localisation_key = 150
+	}
+	text = {
+		trigger = {
+			society_influence >= 40
+			society_influence < 60
+		}
+		localisation_key = 100
+	}
+	text = {
+		trigger = {
+			society_influence >= 60
+			society_influence < 80
+		}
+		localisation_key = 60
+	}
+	text = {
+		trigger = {
+			society_influence >= 80
+		}
+		localisation_key = 30
+	}
+}
+
+defined_text = {
+	name = GetGuildsInfluenceCostBuyingDesc
+
+	text = {
+		trigger = {
+			society_influence < 20
+		}
+		localisation_key = 100
+	}
+	text = {
+		trigger = {
+			society_influence >= 20
+			society_influence < 40
+		}
+		localisation_key = 75
+	}
+	text = {
+		trigger = {
+			society_influence >= 40
+			society_influence < 60
+		}
+		localisation_key = 50
+	}
+	text = {
+		trigger = {
+			society_influence >= 60
+			society_influence < 80
+		}
+		localisation_key = 30
+	}
+	text = {
+		trigger = {
+			society_influence >= 80
+		}
+		localisation_key = 15
+	}
+}
+
+defined_text = {
+	name = GetMaalSocietyCurrency
+
+	text = {
+		localisation_key = fighter_societies_currency
+		trigger = { is_fighter_societies_trigger = yes }
+	}
+	text = {
+		localisation_key = holyorder_societies_currency
+		trigger = { is_holyorder_societies_trigger = yes }
+	}
+	text = {
+		localisation_key = currency_name_TSD
+		trigger = { society_member_of = TSD_fellowship_society }
+	}
+	text = {
+		localisation_key = currency_name_TSD
+		trigger = { society_member_of = TSD_fingers_society }
+	}
+	text = {
+		localisation_key = currency_name_TSD
+		trigger = { society_member_of = TSD_masquerade_society }
+	}
+	text = {
+		localisation_key = currency_name_the_guilds
+		trigger = { society_member_of = the_guilds }
+	}
+}
+
+defined_text = {
+	name = GetGuildsRankUpTooltip1
+
+	text = {
+		trigger = {  society_rank == 1 }
+		localisation_key = GetGuildsRankUpTooltip1_Standard_Rank1
+	}
+	text = {
+		trigger = { society_rank == 2 }
+		localisation_key = GetGuildsRankUpTooltip1_Standard_Rank2
+	}
+	text = {
+		trigger = { society_rank == 3 }
+		localisation_key = GetGuildsRankUpTooltip1_Standard_Rank3
+	}
+}
+
+defined_text = {
+	name = GetSocietyRank
+
+	text = {
+		localisation_key = the_guilds_rank_1_female
+		trigger = { is_female = yes society_rank = { society = the_guilds rank == 1 } }
+	}
+	text = {
+		localisation_key = the_guilds_rank_1_male
+		trigger = { is_female = no society_rank = { society = the_guilds rank == 1 } }
+	}
+	text = {
+		localisation_key = the_guilds_rank_2_female
+		trigger = { is_female = yes society_rank = { society = the_guilds rank == 2 } }
+	}
+	text = {
+		localisation_key = the_guilds_rank_2_male
+		trigger = { is_female = no society_rank = { society = the_guilds rank == 2 } }
+	}
+	text = {
+		localisation_key = the_guilds_rank_3_female
+		trigger = { is_female = yes society_rank = { society = the_guilds rank == 3 } }
+	}
+	text = {
+		localisation_key = the_guilds_rank_3_male
+		trigger = { is_female = no society_rank = { society = the_guilds rank == 3 } }
+	}
+	text = {
+		localisation_key = the_guilds_rank_4_female
+		trigger = { is_female = yes society_rank = { society = the_guilds rank == 4 } }
+	}
+	text = {
+		localisation_key = the_guilds_rank_4_male
+		trigger = { is_female = no society_rank = { society = the_guilds rank == 4 } }
+	}
+}
+
+defined_text = {
+	name = GetSocietyName # Returns the name of target's society
+
+	text = {
+		localisation_key = string_guilds
+		trigger = { society_member_of = the_guilds }
+	}
+}
+
+defined_text = {
+	name = GetSocietyNameCap # Returns the name of target's society with inital Capital letter
+
+	text = {
+		localisation_key = the_guilds
+		trigger = { society_member_of = the_guilds }
+	}
+}
+
+defined_text = {
+	name = GetGuildsResource
+
+	text = {
+		localisation_key = JOB_STONE_TT
+		trigger = { has_province_modifier = guilds_res_stone }
+	}
+	text = {
+		localisation_key = JOB_STEEL_TT
+		trigger = { has_province_modifier = guilds_res_steel }
+	}
+	text = {
+		localisation_key = JOB_GEM_TT
+		trigger = { has_province_modifier = guilds_res_gem }
+	}
+	text = {
+		localisation_key = JOB_SILVER_TT
+		trigger = { has_province_modifier = guilds_res_silver }
+	}
+	text = {
+		localisation_key = JOB_GOLD_TT
+		trigger = { has_province_modifier = guilds_res_gold }
+	}
+	text = {
+		localisation_key = JOB_GRAIN_TT
+		trigger = { has_province_modifier = guilds_res_grain }
+	}
+	text = {
+		localisation_key = JOB_LUMBER_TT
+		trigger = { has_province_modifier = guilds_res_lumber }
+	}
+	text = {
+		localisation_key = JOB_LINEN_TT
+		trigger = { has_province_modifier = guilds_res_linen }
+	}
+	text = {
+		localisation_key = JOB_INCENSE_TT
+		trigger = { has_province_modifier = guilds_res_incense }
+	}
+	text = {
+		localisation_key = JOB_SPICES_TT
+		trigger = { has_province_modifier = guilds_res_spices }
+	}
+	text = {
+		localisation_key = JOB_MEAT_TT
+		trigger = { has_province_modifier = guilds_res_meat }
+	}
+	text = {
+		localisation_key = JOB_WOOL_TT
+		trigger = { has_province_modifier = guilds_res_wool }
+	}
+	text = {
+		localisation_key = JOB_HIDE_TT
+		trigger = { has_province_modifier = guilds_res_hide }
+	}
+	text = {
+		localisation_key = JOB_IVORY_TT
+		trigger = { has_province_modifier = guilds_res_ivory }
+	}
+	text = {
+		localisation_key = JOB_SILK_TT
+		trigger = { has_province_modifier = guilds_res_silk }
+	}
+}
+
+defined_text = {
+	name = GetGuildsResourceFlag
+
+	text = {
+		localisation_key = JOB_STONE_TT
+		trigger = { has_character_flag = guilds_resource_flag_stone }
+	}
+	text = {
+		localisation_key = JOB_STEEL_TT
+		trigger = { has_character_flag = guilds_resource_flag_steel }
+	}
+	text = {
+		localisation_key = JOB_GEM_TT
+		trigger = { has_character_flag = guilds_resource_flag_gem }
+	}
+	text = {
+		localisation_key = JOB_SILVER_TT
+		trigger = { has_character_flag = guilds_resource_flag_silver }
+	}
+	text = {
+		localisation_key = JOB_GOLD_TT
+		trigger = { has_character_flag = guilds_resource_flag_gold }
+	}
+	text = {
+		localisation_key = JOB_GRAIN_TT
+		trigger = { has_character_flag = guilds_resource_flag_grain }
+	}
+	text = {
+		localisation_key = JOB_LUMBER_TT
+		trigger = { has_character_flag = guilds_resource_flag_lumber }
+	}
+	text = {
+		localisation_key = JOB_LINEN_TT
+		trigger = { has_character_flag = guilds_resource_flag_linen }
+	}
+	text = {
+		localisation_key = JOB_INCENSE_TT
+		trigger = { has_character_flag = guilds_resource_flag_incense }
+	}
+	text = {
+		localisation_key = JOB_SPICES_TT
+		trigger = { has_character_flag = guilds_resource_flag_spices }
+	}
+	text = {
+		localisation_key = JOB_MEAT_TT
+		trigger = { has_character_flag = guilds_resource_flag_meat }
+	}
+	text = {
+		localisation_key = JOB_WOOL_TT
+		trigger = { has_character_flag = guilds_resource_flag_wool }
+	}
+	text = {
+		localisation_key = JOB_HIDE_TT
+		trigger = { has_character_flag = guilds_resource_flag_hide }
+	}
+	text = {
+		localisation_key = JOB_IVORY_TT
+		trigger = { has_character_flag = guilds_resource_flag_ivory }
+	}
+	text = {
+		localisation_key = JOB_SILK_TT
+		trigger = { has_character_flag = guilds_resource_flag_silk }
+	}
+}

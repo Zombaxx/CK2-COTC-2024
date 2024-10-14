@@ -1,0 +1,50 @@
+# hair, mouth, chin, nose, eyes, cheek, ear, neck
+spriteTypes = {
+	
+	#Guild Master female
+	portraitType = {
+		name = "PORTRAIT_holo_hood_female"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				portrait_has_trait = guilds_immortal
+			}
+		}
+
+		layer = {
+			"GFX_western_female_headgear_behind:c1"
+			"GFX_western_female_headgear_mid:c3"  
+			"GFX_western_female_headgear:c5"
+			# "GFX_empty:c0"
+			# "GFX_empty:c2"
+			"GFX_western_female_clothes_behind:c0"
+			"GFX_western_female_clothes:c2"
+			"GFX_empty:c4"
+		}
+		
+		# No hair, correct rank
+		allow_property_values = {
+			1 = {
+				6 = {
+					always = yes
+				}
+			}
+			3 = {
+				6 = {
+					always = yes
+				}
+			}
+			5 = {
+				6 = {
+					always = yes
+				}
+			}
+		}
+	}
+}
+

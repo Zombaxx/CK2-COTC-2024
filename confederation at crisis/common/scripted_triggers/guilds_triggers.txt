@@ -1,0 +1,255 @@
+influence_cost_caravan_trigger = {
+	custom_tooltip = {
+		text = guilds_influence_influence_cost_caravan
+		OR = {
+			AND = {
+				society_influence < 20
+				society_currency = 250
+			}
+			AND = {
+				society_influence >= 20
+				society_influence < 40
+				society_currency = 200
+			}
+			AND = {
+				society_influence >= 40
+				society_influence < 60
+				society_currency = 150
+			}
+			AND = {
+				society_influence >= 60
+				society_influence < 80
+				society_currency = 100
+			}
+			AND = {
+				society_influence >= 80
+				society_currency = 50
+			}
+		}
+	}
+}
+
+influence_cost_shopping_trigger = {
+	custom_tooltip = {
+		text = guilds_influence_influence_cost_shopping
+		OR = {
+			AND = {
+				society_influence < 20
+				society_currency = 125
+			}
+			AND = {
+				society_influence >= 20
+				society_influence < 40
+				society_currency = 100
+			}
+			AND = {
+				society_influence >= 40
+				society_influence < 60
+				society_currency = 75
+			}
+			AND = {
+				society_influence >= 60
+				society_influence < 80
+				society_currency = 50
+			}
+			AND = {
+				society_influence >= 80
+				society_currency = 25
+			}
+		}
+	}
+}
+
+influence_cost_buying_trigger = {
+	custom_tooltip = {
+		text = guilds_influence_influence_cost_buying
+		OR = {
+			AND = {
+				NOT = { society_member_of = the_guilds }
+				any_owned_bloodline = {
+					has_bloodline_flag = the_guilds
+				}
+				NOT = { has_character_modifier = guilds_buy_timer_golden }
+			}
+			AND = {
+				society_influence < 20
+				society_currency = 200
+			}
+			AND = {
+				society_influence >= 20
+				society_influence < 40
+				society_currency = 150
+			}
+			AND = {
+				society_influence >= 40
+				society_influence < 60
+				society_currency = 100
+			}
+			AND = {
+				society_influence >= 60
+				society_influence < 80
+				society_currency = 60
+			}
+			AND = {
+				society_influence >= 80
+				society_currency = 30
+			}
+		}
+	}
+}
+
+has_guilds_currency_tiny_trigger = {
+	society_currency >= 50
+}
+
+has_guilds_shipment = {
+	OR = {
+		has_province_modifier = guilds_buff_stone
+		has_province_modifier = guilds_buff_steel
+		has_province_modifier = guilds_buff_gem
+		has_province_modifier = guilds_buff_silver
+		has_province_modifier = guilds_buff_gold
+		has_province_modifier = guilds_buff_grain
+		has_province_modifier = guilds_buff_lumber
+		has_province_modifier = guilds_buff_linen
+		has_province_modifier = guilds_buff_incense
+		has_province_modifier = guilds_buff_spices
+		has_province_modifier = guilds_buff_meat
+		has_province_modifier = guilds_buff_wool
+		has_province_modifier = guilds_buff_hide
+		has_province_modifier = guilds_buff_ivory
+		has_province_modifier = guilds_buff_silk
+		has_province_modifier = guilds_buff_pottery
+		has_province_modifier = guilds_buff_alcohol
+		has_province_modifier = guilds_buff_armor
+		has_province_modifier = guilds_buff_jewelry
+		has_province_modifier = guilds_buff_book
+		has_province_modifier = guilds_buff_statue
+		has_province_modifier = guilds_buff_music
+		has_province_modifier = guilds_buff_glassware
+		has_province_modifier = guilds_buff_dye
+		has_province_modifier = guilds_buff_velvet
+		has_province_modifier = guilds_buff_fur
+	}
+}
+
+has_any_warehouse = { 
+	custom_tooltip = {
+		text = has_any_warehouse_tootlip 
+		capital_holding = {
+			OR = {
+				has_building = guilds_warehouse_1_city
+				has_building = guilds_warehouse_1_castle
+				has_building = guilds_warehouse_1_temple
+				has_building = guilds_warehouse_1_tribal
+				has_building = guilds_warehouse_1_nomad
+				has_building = guilds_warehouse_2_city
+				has_building = guilds_warehouse_2_castle
+				has_building = guilds_warehouse_2_temple
+				has_building = guilds_warehouse_2_tribal
+				has_building = guilds_warehouse_2_nomad
+				has_building = guilds_warehouse_3_city
+				has_building = guilds_warehouse_3_castle
+				has_building = guilds_warehouse_3_temple
+				has_building = guilds_warehouse_3_tribal
+				has_building = guilds_warehouse_3_nomad
+			}
+		}
+	}
+}
+
+has_no_warehouse = { 
+	custom_tooltip = {
+		capital_holding = {
+			NOR = {
+				has_building = guilds_warehouse_1_city
+				has_building = guilds_warehouse_1_castle
+				has_building = guilds_warehouse_1_temple
+				has_building = guilds_warehouse_1_tribal
+				has_building = guilds_warehouse_1_nomad
+				has_building = guilds_warehouse_2_city
+				has_building = guilds_warehouse_2_castle
+				has_building = guilds_warehouse_2_temple
+				has_building = guilds_warehouse_2_tribal
+				has_building = guilds_warehouse_2_nomad
+				has_building = guilds_warehouse_3_city
+				has_building = guilds_warehouse_3_castle
+				has_building = guilds_warehouse_3_temple
+				has_building = guilds_warehouse_3_tribal
+				has_building = guilds_warehouse_3_nomad
+			}
+		}
+	}
+}
+
+has_safe_warehouse = {
+	custom_tooltip = {
+		text = has_safe_warehouse_tootlip 
+		capital_holding = {
+			OR = {
+				has_building = guilds_warehouse_3_city
+				has_building = guilds_warehouse_3_castle
+				has_building = guilds_warehouse_3_temple
+				has_building = guilds_warehouse_3_tribal
+				has_building = guilds_warehouse_3_nomad
+			}
+		}
+	}
+}
+
+is_inaccessible_or_incapable_guilds_trigger = {  #Remember to write this "is_inaccessible_trigger = no" when scripting, or the tooltip will be messed up (it reads "Is NOT in Hiding, in Seclusion, or out traveling")
+	AND = {  
+		custom_tooltip = {
+			text = is_inaccessible_tooltip
+			hidden_tooltip = {
+				NOR = {
+					trait = in_hiding
+					trait = on_hajj
+					trait = on_pilgrimage
+					trait = on_indian_pilgrimage
+					trait = kow_tow_travels
+					has_character_modifier = in_seclusion
+					has_character_modifier = in_meditation
+					has_character_modifier = doing_penance
+					has_character_modifier = out_traveling
+				}
+			}
+		}
+		custom_tooltip = {
+			text = is_incapable_tooltip
+			hidden_tooltip = {
+				NOR = {
+					is_incapable = yes
+					trait = incapable
+				}
+			}
+		}
+		prisoner = no
+	}
+}
+
+#CROSS MOD STUFF
+#has_global_flag = the_great_trade_league_active
+is_fighter_societies_trigger = {
+	has_global_flag = the_orders_of_chivalry_active
+}
+
+is_holyorder_societies_trigger = {
+	has_global_flag = the_orders_of_chivalry_active
+}
+
+TSD_trigger_fellowship_know_medium = {
+	has_global_flag = the_shadow_dwellers_active
+}
+
+TSD_trigger_fingers_know_medium = {
+	has_global_flag = the_shadow_dwellers_active
+}
+
+TSD_trigger_masquerade_know_medium = {
+	has_global_flag = the_shadow_dwellers_active
+}
+
+TSD_trigger_is_member = {
+	has_global_flag = the_shadow_dwellers_active
+}

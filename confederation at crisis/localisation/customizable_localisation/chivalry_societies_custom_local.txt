@@ -1,0 +1,502 @@
+defined_text = {
+	name = DuelTypeFrom
+
+	text = {
+		localisation_key = chivalry_duel_type_score_from
+		trigger = { 
+			NOT = { has_character_flag = chivalry_duel_wounded } 
+			NOT = { has_character_flag = chivalry_duel_death }
+		}
+	}
+	text = {
+		localisation_key = chivalry_duel_type_wound
+		trigger = { has_character_flag = chivalry_duel_wounded }
+	}
+	text = {
+		localisation_key = chivalry_duel_type_death
+		trigger = { has_character_flag = chivalry_duel_death }
+	}
+}
+
+defined_text = {
+	name = DuelTypeFromFrom
+
+	text = {
+		localisation_key = chivalry_duel_type_score_fromfrom
+		trigger = { 
+			NOT = { has_character_flag = chivalry_duel_wounded } 
+			NOT = { has_character_flag = chivalry_duel_death }
+		}
+	}
+	text = {
+		localisation_key = chivalry_duel_type_wound
+		trigger = { has_character_flag = chivalry_duel_wounded }
+	}
+	text = {
+		localisation_key = chivalry_duel_type_death
+		trigger = { has_character_flag = chivalry_duel_death }
+	}
+}
+
+defined_text = {
+	name = GetSquire
+
+	text = {
+		localisation_key = title_chivalry_squire_clocal
+		trigger = { is_female = no }
+	}
+	text = {
+		localisation_key = title_chivalry_ladywaiting_clocal
+		trigger = { is_female = yes }
+	}
+}
+
+defined_text = {
+	name = GetFighterRankUpTooltip
+
+	text = {
+		trigger = {  society_rank == 1 }
+		localisation_key = GetFighterRankUpTooltip_Standard_Rank1
+	}
+	text = {
+		trigger = { society_rank == 2 }
+		localisation_key = GetFighterRankUpTooltip_Standard_Rank2
+	}
+	text = {
+		trigger = { society_rank == 3 }
+		localisation_key = GetFighterRankUpTooltip_Standard_Rank3
+	}
+}
+
+defined_text = {
+	name = GetChivalryRankUpTooltip
+
+	text = {
+		trigger = {  society_rank == 1 }
+		localisation_key = GetChivalryRankUpTooltip_Standard_Rank1
+	}
+	text = {
+		trigger = { society_rank == 2 }
+		localisation_key = GetChivalryRankUpTooltip_Standard_Rank2
+	}
+	text = {
+		trigger = { society_rank == 3 }
+		localisation_key = GetChivalryRankUpTooltip_Standard_Rank3
+	}
+}
+
+# defined_text = {
+	# name = GetSocietyRank
+
+	# text = {
+		# localisation_key = the_guilds_rank_1_female
+		# trigger = { is_female = yes society_rank = { society = the_guilds rank == 1 } }
+	# }
+	# text = {
+		# localisation_key = the_guilds_rank_1_male
+		# trigger = { is_female = no society_rank = { society = the_guilds rank == 1 } }
+	# }
+	# text = {
+		# localisation_key = the_guilds_rank_2_female
+		# trigger = { is_female = yes society_rank = { society = the_guilds rank == 2 } }
+	# }
+	# text = {
+		# localisation_key = the_guilds_rank_2_male
+		# trigger = { is_female = no society_rank = { society = the_guilds rank == 2 } }
+	# }
+	# text = {
+		# localisation_key = the_guilds_rank_3_female
+		# trigger = { is_female = yes society_rank = { society = the_guilds rank == 3 } }
+	# }
+	# text = {
+		# localisation_key = the_guilds_rank_3_male
+		# trigger = { is_female = no society_rank = { society = the_guilds rank == 3 } }
+	# }
+	# text = {
+		# localisation_key = the_guilds_rank_4_female
+		# trigger = { is_female = yes society_rank = { society = the_guilds rank == 4 } }
+	# }
+	# text = {
+		# localisation_key = the_guilds_rank_4_male
+		# trigger = { is_female = no society_rank = { society = the_guilds rank == 4 } }
+	# }
+# }
+
+# defined_text = {
+	# name = GetSocietyName # Returns the name of target's society
+	
+	# text = {
+		# localisation_key = string_knights_templar 
+		# trigger = { society_member_of = society_knights_templar }
+	# }
+	# text = {
+		# localisation_key = string_knights_hospitaller 
+		# trigger = { society_member_of = society_knights_hospitaller }
+	# }
+	# text = {
+		# localisation_key = string_teutonic_order 
+		# trigger = { society_member_of = society_teutonic_order }
+	# }
+	# text = {
+		# localisation_key = string_knights_calatrava 
+		# trigger = { society_member_of = society_knights_calatrava }
+	# }
+	# text = {
+		# localisation_key = string_knights_santiago 
+		# trigger = { society_member_of = society_knights_santiago }
+	# }
+	# text = {
+		# localisation_key = string_holy_sepulchre 
+		# trigger = { society_member_of = society_holy_sepulchre }
+	# }
+	# text = {
+		# localisation_key = string_saint_anthony 
+		# trigger = { society_member_of = society_saint_anthony }
+	# }
+	# text = {
+		# localisation_key = string_saint_addai 
+		# trigger = { society_member_of = society_saint_addai }
+	# }
+	# text = {
+		# localisation_key = string_bektashi 
+		# trigger = { society_member_of = society_bektashi }
+	# }
+	# text = {
+		# localisation_key = string_haruriyyah 
+		# trigger = { society_member_of = society_haruriyyah }
+	# }
+	# text = {
+		# localisation_key = string_zealots 
+		# trigger = { society_member_of = society_zealots }
+	# }
+	# text = {
+		# localisation_key = string_immortals 
+		# trigger = { society_member_of = society_immortals }
+	# }
+	# text = {
+		# localisation_key = string_jomsvikings 
+		# trigger = { society_member_of = society_jomsvikings }
+	# }
+	# text = {
+		# localisation_key = string_sky_lords 
+		# trigger = { society_member_of = society_sky_lords }
+	# }
+	# text = {
+		# localisation_key = string_spirit_guardians 
+		# trigger = { society_member_of = society_spirit_guardians }
+	# }
+	# text = {
+		# localisation_key = string_warriors_perun 
+		# trigger = { society_member_of = society_warriors_perun }
+	# }
+	# text = {
+		# localisation_key = string_chosen_perkunas 
+		# trigger = { society_member_of = society_chosen_perkunas }
+	# }
+	# text = {
+		# localisation_key = string_sons_kaleva 
+		# trigger = { society_member_of = society_sons_kaleva }
+	# }
+	# text = {
+		# localisation_key = string_huitzilopochtli 
+		# trigger = { society_member_of = society_huitzilopochtli }
+	# }
+	# text = {
+		# localisation_key = string_ashokas_chosen 
+		# trigger = { society_member_of = society_ashokas_chosen }
+	# }
+	# text = {
+		# localisation_key = string_followers_arjuna 
+		# trigger = { society_member_of = society_followers_arjuna }
+	# }
+	# text = {
+		# localisation_key = string_bulls_rishabha 
+		# trigger = { society_member_of = society_bulls_rishabha }
+	# }
+	# text = {
+		# localisation_key = string_zun_warriors 
+		# trigger = { society_member_of = society_zun_warriors }
+	# }
+	# text = {
+		# localisation_key = string_army_light
+		# trigger = { society_member_of = society_army_light }
+	# }
+	# text = {
+		# localisation_key = string_western_guild 
+		# trigger = { society_member_of = society_western_guild }
+	# }
+	# text = {
+		# localisation_key = string_southern_guild 
+		# trigger = { society_member_of = society_southern_guild }
+	# }
+	# text = {
+		# localisation_key = string_northern_guild 
+		# trigger = { society_member_of = society_northern_guild }
+	# }
+	# text = {
+		# localisation_key = string_eastern_guild 
+		# trigger = { society_member_of = society_eastern_guild }
+	# }
+# }
+
+defined_text = {
+	name = GetSocietyName#Cap # Returns the name of target's society with inital Capital letter
+
+	text = {
+		localisation_key = society_knights_templar 
+		trigger = { society_member_of = society_knights_templar }
+	}
+	text = {
+		localisation_key = society_knights_hospitaller 
+		trigger = { society_member_of = society_knights_hospitaller }
+	}
+	text = {
+		localisation_key = society_teutonic_order 
+		trigger = { society_member_of = society_teutonic_order }
+	}
+	text = {
+		localisation_key = society_knights_calatrava 
+		trigger = { society_member_of = society_knights_calatrava }
+	}
+	text = {
+		localisation_key = society_knights_santiago 
+		trigger = { society_member_of = society_knights_santiago }
+	}
+	text = {
+		localisation_key = society_holy_sepulchre 
+		trigger = { society_member_of = society_holy_sepulchre }
+	}
+	text = {
+		localisation_key = society_saint_anthony 
+		trigger = { society_member_of = society_saint_anthony }
+	}
+	text = {
+		localisation_key = society_saint_addai 
+		trigger = { society_member_of = society_saint_addai }
+	}
+	text = {
+		localisation_key = society_bektashi 
+		trigger = { society_member_of = society_bektashi }
+	}
+	text = {
+		localisation_key = society_haruriyyah 
+		trigger = { society_member_of = society_haruriyyah }
+	}
+	text = {
+		localisation_key = society_zealots 
+		trigger = { society_member_of = society_zealots }
+	}
+	text = {
+		localisation_key = society_immortals 
+		trigger = { society_member_of = society_immortals }
+	}
+	text = {
+		localisation_key = society_jomsvikings 
+		trigger = { society_member_of = society_jomsvikings }
+	}
+	text = {
+		localisation_key = society_sky_lords 
+		trigger = { society_member_of = society_sky_lords }
+	}
+	text = {
+		localisation_key = society_spirit_guardians 
+		trigger = { society_member_of = society_spirit_guardians }
+	}
+	text = {
+		localisation_key = society_warriors_perun 
+		trigger = { society_member_of = society_warriors_perun }
+	}
+	text = {
+		localisation_key = society_chosen_perkunas 
+		trigger = { society_member_of = society_chosen_perkunas }
+	}
+	text = {
+		localisation_key = society_sons_kaleva 
+		trigger = { society_member_of = society_sons_kaleva }
+	}
+	text = {
+		localisation_key = society_huitzilopochtli 
+		trigger = { society_member_of = society_huitzilopochtli }
+	}
+	text = {
+		localisation_key = society_ashokas_chosen 
+		trigger = { society_member_of = society_ashokas_chosen }
+	}
+	text = {
+		localisation_key = society_followers_arjuna 
+		trigger = { society_member_of = society_followers_arjuna }
+	}
+	text = {
+		localisation_key = society_bulls_rishabha 
+		trigger = { society_member_of = society_bulls_rishabha }
+	}
+	text = {
+		localisation_key = society_zun_warriors
+		trigger = { society_member_of = society_zun_warriors }
+	}
+	text = {
+		localisation_key = society_army_light
+		trigger = { society_member_of = society_army_light }
+	}
+	text = {
+		localisation_key = society_western_guild 
+		trigger = { society_member_of = society_western_guild }
+	}
+	text = {
+		localisation_key = society_southern_guild 
+		trigger = { society_member_of = society_southern_guild }
+	}
+	text = {
+		localisation_key = society_northern_guild 
+		trigger = { society_member_of = society_northern_guild }
+	}
+	text = {
+		localisation_key = society_eastern_guild 
+		trigger = { society_member_of = society_eastern_guild }
+	}
+	text = {
+		localisation_key = society_myrmidons
+		trigger = { society_member_of = society_myrmidons }
+	}
+	text = {
+		localisation_key = society_dralhas_children
+		trigger = { society_member_of = society_dralhas_children }
+	}
+	text = {
+		localisation_key = society_livonian_brothers_of_the_sword
+		trigger = { society_member_of = society_livonian_brothers_of_the_sword }
+	}
+	text = {
+		localisation_key = society_saint_blaise
+		trigger = { society_member_of = society_saint_blaise }
+	}
+	text = {
+		localisation_key = society_knights_saint_mark
+		trigger = { society_member_of = society_knights_saint_mark }
+	}
+	text = {
+		localisation_key = society_army_lucifer
+		trigger = { society_member_of = society_army_lucifer }
+	}
+	text = {
+		localisation_key = society_arsiyah
+		trigger = { society_member_of = society_arsiyah }
+	}
+	text = {
+		localisation_key = society_saqaliba
+		trigger = { society_member_of = society_saqaliba }
+	}
+	text = {
+		localisation_key = society_devotees_of_the_true_prophet
+		trigger = { society_member_of = society_devotees_of_the_true_prophet }
+	}
+	text = {
+		localisation_key = society_ansar
+		trigger = { society_member_of = society_ansar }
+	}
+	text = {
+		localisation_key = society_ghazi_sunni
+		trigger = { society_member_of = society_ghazi_sunni }
+	}
+	text = {
+		localisation_key = society_ghazi_shiite
+		trigger = { society_member_of = society_ghazi_shiite }
+	}
+	text = {
+		localisation_key = society_sons_of_judea
+		trigger = { society_member_of = society_sons_of_judea }
+	}
+	text = {
+		localisation_key = society_braedralag
+		trigger = { society_member_of = society_braedralag }
+	}
+	text = {
+		localisation_key = society_harii
+		trigger = { society_member_of = society_harii }
+	}
+	text = {
+		localisation_key = society_fianna
+		trigger = { society_member_of = society_fianna }
+	}
+	text = {
+		localisation_key = society_gwydion
+		trigger = { society_member_of = society_gwydion }
+	}
+	text = {
+		localisation_key = society_red_dragons
+		trigger = { society_member_of = society_red_dragons }
+	}
+	text = {
+		localisation_key = society_anubis
+		trigger = { society_member_of = society_anubis }
+	}
+	text = {
+		localisation_key = society_horus
+		trigger = { society_member_of = society_horus }
+	}
+	text = {
+		localisation_key = society_herculean
+		trigger = { society_member_of = society_herculean }
+	}
+	text = {
+		localisation_key = society_sacred_band
+		trigger = { society_member_of = society_sacred_band }
+	}
+	text = {
+		localisation_key = society_great_host
+		trigger = { society_member_of = society_great_host }
+	}
+	text = {
+		localisation_key = society_guardians_of_the_sacred_flame
+		trigger = { society_member_of = society_guardians_of_the_sacred_flame }
+	}
+	text = {
+		localisation_key = society_disciples_of_the_old_gods
+		trigger = { society_member_of = society_disciples_of_the_old_gods }
+	}
+	text = {
+		localisation_key = society_generic_fighter_guild 
+		trigger = { society_member_of = society_generic_fighter_guild }
+	}
+	text = {
+		localisation_key = society_risk_fighter_guild 
+		trigger = { society_member_of = society_risk_fighter_guild }
+	}
+	text = {
+		localisation_key = society_female_fighter_guild 
+		trigger = { society_member_of = society_female_fighter_guild }
+	}
+	text = {
+		localisation_key = society_holy_one 
+		trigger = { society_member_of = society_holy_one }
+	}
+}
+
+defined_text = {
+	name = GetMaalSocietyCurrency
+
+	text = {
+		localisation_key = fighter_societies_currency
+		trigger = { is_fighter_societies_trigger = yes }
+	}
+	text = {
+		localisation_key = holyorder_societies_currency
+		trigger = { is_holyorder_societies_trigger = yes }
+	}
+	text = {
+		localisation_key = currency_name_TSD
+		trigger = { society_member_of = TSD_fellowship_society }
+	}
+	text = {
+		localisation_key = currency_name_TSD
+		trigger = { society_member_of = TSD_fingers_society }
+	}
+	text = {
+		localisation_key = currency_name_TSD
+		trigger = { society_member_of = TSD_masquerade_society }
+	}
+	text = {
+		localisation_key = currency_name_the_guilds
+		trigger = { society_member_of = the_guilds }
+	}
+}

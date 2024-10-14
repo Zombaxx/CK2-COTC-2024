@@ -1,0 +1,151 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+
+# chivalry_rule_fight = {
+	# name = "CHIVALRY_RULE_FIGHT_NAME"
+	# group = "CHIVALRY_RULE_GROUP"
+	# option = {
+		# name = default
+		# achievements = no
+		# text = "CHIVALRY_RULE_FIGHT_DEFAULT"
+		# desc = "CHIVALRY_RULE_FIGHT_DEFAULT_DESC"
+	# }
+	# option = {
+		# name = none
+		# achievements = no
+		# text = "CHIVALRY_RULE_FIGHT_NONE"
+		# desc = "CHIVALRY_RULE_FIGHT_NONE_DESC"
+	# }
+# }
+
+chivalry_rule_fight = {
+	name = "CHIVALRY_RULE_FIGHT_NAME"
+	group = "CHIVALRY_RULE_GROUP"
+	option = {
+		name = europe
+		# achievements = no
+		text = "CHIVALRY_RULE_FIGHT_EUROPE"
+		desc = "CHIVALRY_RULE_FIGHT_EUROPE_DESC"
+	}
+	option = {
+		name = europextra
+		# achievements = no
+		text = "CHIVALRY_RULE_FIGHT_EUROPEXTRA"
+		desc = "CHIVALRY_RULE_FIGHT_EUROPEXTRA_DESC"
+	}
+	option = {
+		name = extra
+		# achievements = no
+		text = "CHIVALRY_RULE_FIGHT_EXTRA"
+		desc = "CHIVALRY_RULE_FIGHT_EXTRA_DESC"
+	}
+	option = {
+		name = none
+		# achievements = no
+		text = "CHIVALRY_RULE_FIGHT_NONE"
+		desc = "CHIVALRY_RULE_FIGHT_NONE_DESC"
+	}
+}
+
+chivalry_rule_holy = {
+	name = "CHIVALRY_RULE_HOLY_NAME"
+	group = "CHIVALRY_RULE_GROUP"
+	option = {
+		name = default
+		# achievements = no
+		text = "CHIVALRY_RULE_HOLY_DEFAULT"
+		desc = "CHIVALRY_RULE_HOLY_DEFAULT_DESC"
+	}
+	option = {
+		name = none
+		# achievements = no
+		text = "CHIVALRY_RULE_HOLY_NONE"
+		desc = "CHIVALRY_RULE_HOLY_NONE_DESC"
+	}
+}
+
+chivalry_rule_bounty = {
+	name = "CHIVALRY_RULE_BOUNTY_NAME"
+	group = "CHIVALRY_RULE_GROUP"
+	option = {
+		name = default
+		# achievements = no
+		text = "CHIVALRY_RULE_BOUNTY_DEFAULT"
+		desc = "CHIVALRY_RULE_BOUNTY_DEFAULT_DESC"
+	}
+	option = {
+		name = none
+		# achievements = no
+		text = "CHIVALRY_RULE_BOUNTY_NONE"
+		desc = "CHIVALRY_RULE_BOUNTY_NONE_DESC"
+	}
+}
+
+chivalry_rule_title = {
+	name = "CHIVALRY_RULE_TITLE_NAME"
+	group = "CHIVALRY_RULE_GROUP"
+	option = {
+		name = default
+		# achievements = no
+		text = "CHIVALRY_RULE_TITLE_DEFAULT"
+		desc = "CHIVALRY_RULE_TITLE_DEFAULT_DESC"
+	}
+	option = {
+		name = true
+		# achievements = no
+		text = "CHIVALRY_RULE_TITLE_TRUE"
+		desc = "CHIVALRY_RULE_TITLE_TRUE_DESC"
+	}
+}
+
+# chivalry_rule_extra = {
+	# name = "CHIVALRY_RULE_EXTRA_NAME"
+	# group = "CHIVALRY_RULE_GROUP"
+	# option = {
+		# name = default
+		# achievements = no
+		# text = "CHIVALRY_RULE_EXTRA_DEFAULT"
+		# desc = "CHIVALRY_RULE_EXTRA_DEFAULT_DESC"
+	# }
+	# option = {
+		# name = all
+		# achievements = no
+		# text = "CHIVALRY_RULE_EXTRA_ALL"
+		# desc = "CHIVALRY_RULE_EXTRA_ALL_DESC"
+	# }
+	# option = {
+		# name = none
+		# achievements = no
+		# text = "CHIVALRY_RULE_EXTRA_NONE"
+		# desc = "CHIVALRY_RULE_EXTRA_NONE_DESC"
+	# }
+# }
+
+chivalry_rule_death = {
+	name = "CHIVALRY_RULE_DEATH_NAME"
+	group = "CHIVALRY_RULE_GROUP"
+	option = {
+		name = default
+		# achievements = no
+		text = "CHIVALRY_RULE_DEATH_DEFAULT"
+		desc = "CHIVALRY_RULE_DEATH_DEFAULT_DESC"
+	}
+	option = {
+		name = none
+		# achievements = no
+		text = "CHIVALRY_RULE_DEATH_NONE"
+		desc = "CHIVALRY_RULE_DEATH_NONE_DESC"
+	}
+}

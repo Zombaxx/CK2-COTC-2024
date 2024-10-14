@@ -1,0 +1,1528 @@
+# Audax Validator "!" Ignore_1001
+# Audax Validator "!" Ignore_NEXT
+
+is_inaccessible_or_incapable_chivalry_trigger = {  #Remember to write this "is_inaccessible_trigger = no" when scripting, or the tooltip will be messed up (it reads "Is NOT in Hiding, in Seclusion, or out traveling")
+	AND = {  
+		custom_tooltip = {
+			text = is_inaccessible_tooltip
+			hidden_tooltip = {
+				NOR = {
+					trait = in_hiding
+					trait = on_hajj
+					trait = on_pilgrimage
+					trait = on_indian_pilgrimage
+					trait = kow_tow_travels
+					has_character_modifier = in_seclusion
+					has_character_modifier = in_meditation
+					has_character_modifier = doing_penance
+					has_character_modifier = out_traveling
+				}
+			}
+		}
+		custom_tooltip = {
+			text = is_incapable_tooltip
+			hidden_tooltip = {
+				NOR = {
+					is_incapable = yes
+					trait = incapable
+				}
+			}
+		}
+		prisoner = no
+	}
+}
+
+is_chivalry_martial_education = {
+	custom_tooltip = {
+		text = IS_CHIVALRY_EDUCATION
+		OR = {
+			has_global_flag = ELDERKINGS_ACTIVE
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			trait = chivalry_squire_four
+			trait = chivalry_lady_four
+		}
+	}
+}
+
+chivalry_leader_trait = {
+	custom_tooltip = {
+		text = IS_CHIVALRY_LEADER
+		OR = {
+			trait = chivalry_fight_aggressive_leader
+			trait = chivalry_holy_aggressive_leader
+			trait = chivalry_fight_inspiring_leader
+			trait = chivalry_holy_inspiring_leader
+			trait = chivalry_fight_unyielding_leader
+			trait = chivalry_holy_unyielding_leader
+			trait = chivalry_fight_flanker
+			trait = chivalry_holy_flanker
+			trait = chivalry_fight_defensive_leader
+			trait = chivalry_holy_defensive_leader
+			trait = chivalry_fight_siege_leader
+			trait = chivalry_holy_siege_leader
+			trait = chivalry_fight_narrow_flank_leader
+			trait = chivalry_holy_narrow_flank_leader
+			trait = chivalry_fight_experimenter
+			trait = chivalry_holy_experimenter
+			trait = chivalry_fight_organizer
+			trait = chivalry_holy_organizer
+			trait = chivalry_fight_trickster
+			trait = chivalry_holy_trickster
+			trait = chivalry_fight_holy_warrior
+			trait = chivalry_fight_war_elephant_leader
+			trait = chivalry_holy_war_elephant_leader
+			trait = chivalry_fight_light_foot_leader 
+			trait = chivalry_holy_light_foot_leader 
+			trait = chivalry_fight_heavy_infantry_leader
+			trait = chivalry_holy_heavy_infantry_leader
+			trait = chivalry_fight_cavalry_leader
+			trait = chivalry_holy_cavalry_leader
+			trait = chivalry_flat_terrain_leader 
+			trait = chivalry_rough_terrain_leader 
+			trait = chivalry_mountain_terrain_leader 
+			trait = chivalry_desert_terrain_leader 
+			trait = chivalry_jungle_terrain_leader
+			trait = chivalry_winter_soldier    
+		}
+	}
+}
+
+chivalry_leader_trait_upgradable = {
+	custom_tooltip = {
+		text = chivalry_leader_upgrade_tooltip
+		OR = { 
+			trait = light_foot_leader 
+			trait = heavy_infantry_leader 
+			trait = cavalry_leader
+			trait = inspiring_leader 
+			trait = trickster 
+			trait = organizer 
+			trait = defensive_leader 
+			trait = experimenter
+			trait = flanker
+			trait = aggressive_leader 
+			trait = siege_leader 
+			trait = flat_terrain_leader 
+			trait = rough_terrain_leader 
+			trait = mountain_terrain_leader 
+			trait = desert_terrain_leader 
+			trait = holy_warrior 
+			trait = unyielding_leader
+			trait = narrow_flank_leader 
+			trait = war_elephant_leader  
+			trait = jungle_terrain_leader 
+			trait = winter_soldier    
+		}
+	}
+}
+
+is_holyorder_societies_trigger = {
+	custom_tooltip = {
+		text = IS_HOLYORDER_SOCIETIES_TRIGGER
+		OR = {
+			society_member_of = society_knights_templar
+			society_member_of = society_knights_hospitaller
+			society_member_of = society_teutonic_order
+			society_member_of = society_knights_calatrava
+			society_member_of = society_knights_santiago
+			society_member_of = society_holy_sepulchre
+			society_member_of = society_saint_anthony
+			society_member_of = society_saint_addai
+			society_member_of = society_bektashi
+			society_member_of = society_haruriyyah
+			society_member_of = society_zealots
+			society_member_of = society_immortals
+			society_member_of = society_jomsvikings
+			society_member_of = society_sky_lords
+			society_member_of = society_spirit_guardians
+			society_member_of = society_warriors_perun
+			society_member_of = society_chosen_perkunas
+			society_member_of = society_sons_kaleva
+			society_member_of = society_huitzilopochtli
+			society_member_of = society_ashokas_chosen
+			society_member_of = society_followers_arjuna
+			society_member_of = society_bulls_rishabha
+		    society_member_of = society_zun_warriors
+			society_member_of = society_army_light
+			society_member_of = society_myrmidons
+			society_member_of = society_dralhas_children
+			#modded
+			society_member_of = society_livonian_brothers_of_the_sword
+			society_member_of = society_saint_blaise
+			society_member_of = society_knights_saint_mark
+			society_member_of = society_army_lucifer
+			society_member_of = society_arsiyah
+			society_member_of = society_saqaliba
+			society_member_of = society_arsiyah
+			society_member_of = society_devotees_of_the_true_prophet
+			society_member_of = society_ansar
+			society_member_of = society_ghazi_sunni
+			society_member_of = society_ghazi_shiite
+			society_member_of = society_sons_of_judea
+			society_member_of = society_braedralag
+			society_member_of = society_harii
+			society_member_of = society_fianna
+			society_member_of = society_gwydion
+			society_member_of = society_red_dragons
+			society_member_of = society_anubis
+			society_member_of = society_horus
+			society_member_of = society_herculean
+			society_member_of = society_sacred_band
+			society_member_of = society_great_host
+			society_member_of = society_guardians_of_the_sacred_flame
+			society_member_of = society_disciples_of_the_old_gods
+			#extra
+			society_member_of = society_holy_one
+		}
+	}
+}
+
+is_holyorder_title_trigger = {
+	OR = {
+		has_landed_title = d_knights_templar
+		has_landed_title = d_knights_hospitaler
+		# has_landed_title = d_teutonic_order
+		is_teutonic_order_owner = yes
+		has_landed_title = d_knights_calatrava
+		has_landed_title = d_knights_santiago
+		has_landed_title = d_holy_sepulchre
+		has_landed_title = d_saint_anthony
+		has_landed_title = d_saint_addai
+		has_landed_title = d_bektashi
+		has_landed_title = d_haruriyyah
+		has_landed_title = d_zealots
+		has_landed_title = d_immortals
+		has_landed_title = d_jomsvikings
+		has_landed_title = d_sky_lords
+		has_landed_title = d_spirit_guardians
+		has_landed_title = d_warriors_perun
+		has_landed_title = d_chosen_perkunas
+		has_landed_title = d_sons_kaleva
+		has_landed_title = d_huitzilopochtli
+		has_landed_title = d_ashokas_chosen
+		has_landed_title = d_followers_arjuna
+		has_landed_title = d_bulls_rishabha
+		has_landed_title = d_zun_warriors
+		has_landed_title = d_army_light
+		is_livonian_order_owner = yes
+		has_landed_title = d_myrmidons
+		has_landed_title = d_dralhas_children
+		AND = {
+			has_global_flag = HIPEMF_ACTIVE
+			OR = {
+				# has_landed_title = d_livonian_brothers_of_the_sword
+				has_landed_title = d_saint_blaise
+				has_landed_title = d_knights_saint_mark
+				has_landed_title = d_army_lucifer
+				has_landed_title = d_arsiyah
+				has_landed_title = d_saqaliba
+			}
+		}
+		AND = {
+			has_global_flag = CK2PLUS_ACTIVE
+			OR = {
+				has_landed_title = d_saint_blaise
+				has_landed_title = d_knights_saint_mark
+				has_landed_title = d_army_lucifer
+				has_landed_title = d_devotees_of_the_true_prophet
+				has_landed_title = d_ansar
+				has_landed_title = d_ghazi_sunni
+				has_landed_title = d_ghazi_shiite
+				has_landed_title = d_sons_of_judea
+				has_landed_title = d_braedralag
+				has_landed_title = d_harii
+				has_landed_title = d_fianna
+				has_landed_title = d_gwydion
+				has_landed_title = d_red_dragons
+				has_landed_title = d_anubis
+				has_landed_title = d_horus
+				has_landed_title = d_herculean
+				has_landed_title = d_sacred_band
+				has_landed_title = d_great_host
+				has_landed_title = d_guardians_of_the_sacred_flame
+				has_landed_title = d_disciples_of_the_old_gods
+			}
+		}
+	}
+}
+
+is_livonian_order_active = {
+	OR = { #forget check when HIP update
+		AND = {
+			has_global_flag = HIPEMF_ACTIVE
+			is_title_active = d_livonian_brothers_of_the_sword
+		}
+		AND = {
+			NOT = { has_global_flag = HIPEMF_ACTIVE }
+			is_title_active = d_livonian_order
+		}
+	}
+}
+
+is_livonian_order_owner = {
+	OR = { #forget check when HIP update
+		hidden_trigger = {
+			AND = {
+				has_global_flag = HIPEMF_ACTIVE
+				has_landed_title = d_livonian_brothers_of_the_sword
+			}
+		}
+		AND = {
+			NOT = { has_global_flag = HIPEMF_ACTIVE }
+			has_landed_title = d_livonian_order
+		}
+	}
+}
+
+is_teutonic_order_active = { #forget check when HIP/plus update
+	OR = {
+		is_title_active = d_teutonic_order
+		is_title_active = k_teutonic_state
+	}
+}
+
+is_teutonic_order_owner = {
+	OR = {
+		has_landed_title = d_teutonic_order
+		has_landed_title = k_teutonic_state
+	}
+}
+
+has_holy_order_government = {
+	OR = {
+		government = order_government
+		government = holy_order_government
+	}
+}
+
+has_custom_chivalry_title = {
+	OR = {
+		has_landed_title = d_chivalry_holy_hand
+		has_landed_title = d_chivalry_holy_warden
+		has_landed_title = d_chivalry_holy_scion
+		has_landed_title = d_chivalry_holy_rose
+		has_landed_title = d_chivalry_holy_hand_true
+		has_landed_title = d_chivalry_holy_warden_true
+		has_landed_title = d_chivalry_holy_scion_true
+		has_landed_title = d_chivalry_holy_rose_true
+		has_landed_title = d_chivalry_merc_black
+		has_landed_title = d_chivalry_merc_cloak
+		has_landed_title = d_chivalry_merc_falcon
+		has_landed_title = d_chivalry_merc_hound
+		has_landed_title = d_chivalry_holy_black_true
+		has_landed_title = d_chivalry_holy_cloak_true
+		has_landed_title = d_chivalry_holy_falcon_true
+		has_landed_title = d_chivalry_holy_hound_true	
+	}
+}
+
+is_feminist_holyorder_societies_trigger = {
+	custom_tooltip = {
+		text = IS_FEMINIST_HOLYORDER_SOCIETIES_TRIGGER
+		OR = {
+			society_member_of = society_knights_templar
+			society_member_of = society_knights_santiago
+			society_member_of = society_spirit_guardians
+			society_member_of = society_bulls_rishabha
+			society_member_of = society_army_lucifer
+			society_member_of = society_braedralag
+			society_member_of = society_fianna
+			society_member_of = society_saqaliba
+			society_member_of = society_ansar
+			society_member_of = society_dralhas_children
+		}
+	}
+}
+
+is_heretic_holyorder_societies_trigger = {
+	custom_tooltip = {
+		text = IS_HERETIC_HOLYORDER_SOCIETIES_TRIGGER
+		OR = {
+			society_member_of = society_jomsvikings
+			society_member_of = society_gwydion
+			society_member_of = society_sons_of_judea
+			society_member_of = society_sacred_band
+			society_member_of = society_great_host
+			society_member_of = society_guardians_of_the_sacred_flame
+			society_member_of = society_disciples_of_the_old_gods
+			society_member_of = society_ansar
+		}
+	}
+}
+
+is_fighter_societies_trigger = {
+	custom_tooltip = {
+		text = IS_FIGHTER_SOCIETIES_TRIGGER
+		OR = {
+			society_member_of = society_western_guild
+			society_member_of = society_southern_guild
+			society_member_of = society_northern_guild
+			society_member_of = society_eastern_guild
+			society_member_of = society_generic_fighter_guild
+			society_member_of = society_risk_fighter_guild
+			society_member_of = society_female_fighter_guild
+		}
+	}
+}
+
+has_holyorder_societies_prerequisites = {
+	AND = {
+		# show_only_failed_conditions = yes
+		is_adult = yes
+		prisoner = no
+		is_incapable = no
+		hidden_tooltip = { #make tooltip smaller, there aren't playable anyways
+			is_in_society = no
+			OR = {
+				ai = no
+				AND = {
+					is_republic = no 
+					NOT = { mercenary = yes }
+					liege = { NOT = { mercenary = yes } }
+					controls_religion = no
+				}
+			}
+		}
+		custom_tooltip = {
+			text = court_physician_tooltip_1
+			NOT = {
+				primary_title = { temporary = yes } 
+			}
+		}
+		OR = {
+			is_chivalry_martial_education = yes
+			# trait = crusader
+			custom_tooltip = {
+				text = chivalry_is_crusader_tooltip
+				OR = {
+					has_crusade_trait_trigger = yes
+					is_ascetic_trigger = yes
+				}
+			}
+			AND = {
+				martial = 10
+				trait = zealous
+			}
+			custom_tooltip = {
+				text = chivalry_society_diplomat_tooltip
+				AND = { 
+					FROM = { 
+						leader = { 
+							has_character_modifier = chivalry_law_diplomat
+						} 
+					}
+					has_education_diplomacy_trigger = yes
+				}
+			}
+			custom_tooltip = {
+				text = chivalry_society_steward_tooltip
+				AND = { 
+					FROM = { 
+						leader = { 
+							has_character_modifier = chivalry_law_steward
+						} 
+					}
+					has_education_stewardship_trigger = yes
+				}
+			}
+			custom_tooltip = {
+				text = chivalry_society_spy_tooltip
+				AND = { 
+					FROM = { 
+						leader = { 
+							has_character_modifier = chivalry_law_spy
+						} 
+					}
+					has_education_intrigue_trigger = yes
+				}
+			}
+			custom_tooltip = {
+				text = chivalry_society_scholar_tooltip
+				AND = { 
+					FROM = { 
+						leader = { 
+							has_character_modifier = chivalry_law_scholar
+						} 
+					}
+					has_education_learning_trigger = yes
+				}
+			}
+		}
+		OR = {
+			is_female = no
+			has_game_rule = {
+				name = gender
+				value = all
+			}
+			custom_tooltip = {
+				text = chivalry_society_feminist_tooltip
+				FROM = { 
+					leader = { 
+						has_character_modifier = chivalry_law_feminist
+					} 
+				}
+			}
+		}
+		OR = {
+			is_heretic = no
+			custom_tooltip = {
+				text = chivalry_society_heretic_tooltip
+				OR = {
+					FROM = { 
+						leader = { 
+							has_character_modifier = chivalry_law_heretic
+						} 
+					}
+					FROM = { 
+						leader = { 
+							is_heretic = yes
+						} 
+					}
+				}
+			}
+		}
+		OR = {
+			chivalry_animal_culture_trigger = yes
+			custom_tooltip = {
+				text = chivalry_society_animal_kingdoms_tooltip
+				has_global_flag = chivalry_animals_kingdom_active
+			}
+			custom_tooltip = {
+				text = chivalry_society_animal_tooltip
+				OR = {
+					FROM = { 
+						leader = { 
+							has_character_modifier = chivalry_law_animal
+						} 
+					}
+				}
+			}
+		}
+	}
+}
+
+has_holyorder_societies_prerequisites_notrait = {
+	AND = {
+		# show_only_failed_conditions = yes
+		is_adult = yes
+		prisoner = no
+		is_in_society = no
+		is_incapable = no
+		hidden_tooltip = { #make tooltip smaller, there aren't playable anyways
+			OR = {
+				ai = no
+				AND = {
+					is_republic = no 
+					NOT = { mercenary = yes }
+					liege = { NOT = { mercenary = yes } }
+					controls_religion = no
+				}
+			}
+		}
+		custom_tooltip = {
+			text = court_physician_tooltip_1
+			NOT = {
+				primary_title = { temporary = yes } 
+			}
+		}
+		OR = {
+			is_female = no
+			has_game_rule = {
+				name = gender
+				value = all
+			}
+			custom_tooltip = {
+				text = chivalry_society_feminist_tooltip
+				FROM = { 
+					leader = { 
+						has_character_modifier = chivalry_law_feminist
+					}
+				}
+			}
+		}
+		OR = {
+			is_heretic = no
+			custom_tooltip = {
+				text = chivalry_society_heretic_tooltip
+				OR = {
+					FROM = { 
+						leader = { 
+							has_character_modifier = chivalry_law_heretic
+						} 
+					}
+					FROM = { 
+						leader = { 
+							is_heretic = yes
+						} 
+					}
+				}
+			}
+		}
+		OR = {
+			chivalry_animal_culture_trigger = yes
+			custom_tooltip = {
+				text = chivalry_society_animal_kingdoms_tooltip
+				has_global_flag = chivalry_animals_kingdom_active
+			}
+			custom_tooltip = {
+				text = chivalry_society_animal_tooltip
+				OR = {
+					FROM = { 
+						leader = { 
+							has_character_modifier = chivalry_law_animal
+						} 
+					}
+				}
+			}
+		}
+	}
+}
+
+has_holyorder_societies_religion_catholic = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = catholic
+			# religion = cathar
+			# religion = fraticelli
+			# religion = waldensian
+			# religion = lollard
+			# religion = adoptionist #HIP
+			# religion = arian #HIP
+			# AND = {
+				# religion = chalcedonian #PLUS
+				# NOT = { has_global_flag = schism_mended	}
+			# }
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+	NOT = { trait = excommunicated }
+}
+
+has_holyorder_societies_religion_orthodox = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# AND = {
+				# NOT = { has_global_flag = HIPEMF_ACTIVE }
+				# NOT = { has_global_flag = CK2PLUS_ACTIVE }
+				# OR = {
+					# religion = orthodox
+					# religion = bogomilist
+					# religion = monothelite
+					# religion = iconoclast
+					# religion = paulician
+				# }
+			# }
+			# AND = {
+				# OR = {
+					# has_global_flag = HIPEMF_ACTIVE
+					# has_global_flag = CK2PLUS_ACTIVE
+				# }
+				# OR = {
+					# religion = orthodox
+					# religion = bogomilist
+					# religion = monothelite
+					# religion = iconoclast
+				# }
+			# }
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+	NOT = { trait = excommunicated }
+}
+
+has_holyorder_societies_religion_apostolic = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = apostolic #HIP+PLUS
+			# religion = paulician
+			# religion = tondrakian #HIP+PLUS
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+	NOT = { trait = excommunicated }
+}
+
+has_holyorder_societies_religion_miaphysite = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = miaphysite
+			# religion = monophysite
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+	NOT = { trait = excommunicated }
+}
+
+has_holyorder_societies_religion_nestorian = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = nestorian
+			# religion = messalian
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+	NOT = { trait = excommunicated }
+}
+
+has_holyorder_societies_religion_messalian = {
+	# hidden_tooltip = { #heretic
+		# OR = {
+			# AI = no
+			# religion = messalian
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+	NOT = { trait = excommunicated }
+}
+
+has_holyorder_societies_religion_sunni = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# AND = {
+				# NOT = { has_global_flag = HIPEMF_ACTIVE }
+				# NOT = { has_global_flag = CK2PLUS_ACTIVE }
+				# OR = {
+					# religion = sunni
+					# religion = zikri
+					# religion = yazidi
+				# }
+			# }
+			# AND = {
+				# OR = {
+					# has_global_flag = HIPEMF_ACTIVE
+					# has_global_flag = CK2PLUS_ACTIVE
+				# }
+				# OR = {
+					# religion = sunni
+					# religion = zikri
+					# religion = yazidi #PLUS, HIP made it stand-alone
+					# religion = mahdiyya #HIP
+					# religion = nabawiyya #HIP
+					# religion = quranist #PLUS
+					# religion = arab_pagan #PLUS
+				# }
+			# }
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+	NOT = { trait = decadent }
+}
+
+has_holyorder_societies_religion_ibadi = {
+	# hidden_tooltip = {
+		# AI = no
+		# OR = {
+			# religion = ibadi
+			# religion = kharijite
+			# religion = haruri #HIP
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+	NOT = { trait = decadent }
+}
+
+has_holyorder_societies_religion_shiite = {
+	# hidden_tooltip = { #no vanilla order in my mod
+		# OR = {
+			# AI = no
+			# religion = shiite
+			# religion = waqifi #HIP
+			# religion = hurufi #HIP+PLUS
+			# religion = ismaili #HIP
+			# religion = qarmatian #HIP+PLUS
+			# religion = bektashi #PLUS
+			# religion = druze #PLUS, HIP made it stand-alone
+			religion = zaydi #HIP, unused
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+	NOT = { trait = decadent }
+}
+
+has_holyorder_societies_religion_ismaili = {
+	# hidden_tooltip = { #heretic
+		# OR = {
+			# AI = no
+			# religion = ismaili #HIP
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+	NOT = { trait = decadent }
+}
+
+has_holyorder_societies_religion_jewish = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = jewish
+			# religion = samaritan
+			# religion = karaite
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_zoroastrian = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# AND = {
+				# NOT = { has_global_flag = HIPEMF_ACTIVE }
+				# NOT = { has_global_flag = CK2PLUS_ACTIVE }
+				# OR = {
+					# religion = zoroastrian
+					# religion = mazdaki
+					# religion = manichean
+					# religion = khurmazta
+				# }
+			# }
+			# AND = {
+				# OR = {
+					# has_global_flag = HIPEMF_ACTIVE
+					# has_global_flag = CK2PLUS_ACTIVE
+				# }
+				# OR = {
+					# religion = zoroastrian
+					# religion = mazdaki
+					# religion = khurmazta
+					# religion = zurvanist #HIP+PLUS
+				# }
+			# }
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_manichean = {
+	# hidden_tooltip = { #heretic in vanilla
+		# OR = {
+			# AI = no
+			# religion = manichean
+			# religion = mandaean #HIP
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_norse = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = norse_pagan
+			# religion = norse_pagan_reformed
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_german = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = german_pagan #PLUS
+			# religion = german_pagan_reformed #PLUS
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_celtic = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = celtic_pagan #PLUS
+			# religion = celtic_pagan_reformed #PLUS
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_egyptian = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = egyptian_pagan #PLUS
+			# religion = aten_pagan #PLUS
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_hellenic = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = hellenic_pagan #PLUS
+			# religion = promethean_pagan #PLUS
+			## religion = roman_pagan #PLUS #weird, check when plus update forget
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_tengri = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = tengri_pagan
+			# religion = tengri_pagan_reformed
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_wafrican = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = west_african_pagan
+			# religion = west_african_pagan_reformed
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_slavic = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = slavic_pagan
+			# religion = slavic_pagan_reformed
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_baltic = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = baltic_pagan
+			# religion = baltic_pagan_reformed
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_finnish = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = finnish_pagan
+			# religion = finnish_pagan_reformed
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_aztec = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = aztec
+			# religion = aztec_reformed
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_buddhist = {
+	hidden_tooltip = {
+		religion = buddhist
+	}
+}
+
+has_holyorder_societies_religion_hindu = {
+	hidden_tooltip = {
+		religion = hindu
+	}
+}
+
+has_holyorder_societies_religion_jain = {
+	hidden_tooltip = {
+		religion = jain
+	}
+}
+
+has_holyorder_societies_religion_bon = {
+	hidden_tooltip = {
+		religion = bon_reformed
+	}
+}
+
+has_holyorder_societies_religion_zun = {
+	# hidden_tooltip = {
+		# OR = {
+			# AI = no
+			# religion = zun_pagan
+			# religion = zun_pagan_reformed
+		# }
+	# }
+	has_holyorder_societies_religion_holy = yes
+}
+
+has_holyorder_societies_religion_holy = {
+	custom_tooltip = { 
+		text = chivalry_holy_society_religion_tooltip
+		OR = {
+			# ai = yes
+			# AND = {
+				FROM = { leader = { religion = ROOT } }
+				# ai = no
+			# }
+			# AND = {
+				# is_heretic = yes
+				# FROM = { leader = { religion = ROOT } }
+				# FROM = { leader = { is_heretic = yes } }
+			# }
+			# AND = {
+				# is_heretic = no
+				# FROM = { leader = { religion = ROOT } }
+			# }
+			AND = {
+				# is_heresy_of = { character = { FROM = leader } }
+				FROM = { leader = { is_parent_religion = ROOT } }
+				FROM = { 
+					leader = { 
+						has_character_modifier = chivalry_law_heretic
+					} 
+				}
+				# ai = no
+			}
+		}
+	}
+}
+
+has_fighter_societies_prerequisites = {
+	AND = {
+		# show_only_failed_conditions = yes
+		is_adult = yes
+		prisoner = no
+		is_incapable = no
+		hidden_tooltip = { #make tooltip smaller, there aren't playable anyways
+			is_in_society = no
+			OR = {
+				ai = no
+				AND = {
+					is_republic = no 
+					NOT = { mercenary = yes }
+					liege = { NOT = { mercenary = yes } }
+					controls_religion = no
+					OR = {
+						primary_title = { holy_order = no }
+						liege = { primary_title = { holy_order = no }  }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = court_physician_tooltip_1
+			NOT = {
+				primary_title = { temporary = yes } 
+			}
+		}
+		OR = {
+			is_ruler = yes
+			has_minor_title = title_commander
+			liege = { primary_title = { mercenary = yes }  }
+			# hidden_tooltip = {
+				# AND = {
+					# AI = yes
+					# is_female = yes
+					# OR = {
+						# is_married = no
+						# is_married_matrilineally = yes
+					# }
+					# OR = {
+						# trait = brave
+						# trait = ambitious
+						# trait = wroth
+						# martial = 10
+						# combat_rating = 1
+					# }
+				# }
+			# }
+		}
+
+		trigger_if = {
+			limit = { 
+				NOT = {
+					any_owned_bloodline = {
+						has_bloodline_flag = champion
+					}
+				}
+			}
+			OR = {
+				is_chivalry_martial_education = yes
+				has_focus = focus_war
+			}
+		}
+	}
+}
+
+has_female_fighter_societies_prerequisites = {
+	AND = {
+		# show_only_failed_conditions = yes
+		is_adult = yes
+		prisoner = no
+		is_incapable = no
+		hidden_tooltip = { #make tooltip smaller, there aren't playable anyways
+			is_in_society = no
+			OR = {
+				ai = no
+				AND = {
+					is_republic = no 
+					NOT = { mercenary = yes }
+					liege = { NOT = { mercenary = yes } }
+					controls_religion = no
+					OR = {
+						primary_title = { holy_order = no }
+						liege = { primary_title = { holy_order = no }  }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = court_physician_tooltip_1
+			NOT = {
+				primary_title = { temporary = yes } 
+			}
+		}
+		OR = {
+			is_ruler = yes
+			has_minor_title = title_commander
+			liege = { primary_title = { mercenary = yes }  }
+			hidden_tooltip = {
+				AND = {
+					AI = yes
+					is_female = yes
+					OR = {
+						is_married = no
+						is_married_matrilineally = yes
+					}
+					OR = {
+						trait = brave
+						trait = ambitious
+						trait = wroth
+						martial = 10
+						combat_rating = 10
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = { 
+				NOT = {
+					any_owned_bloodline = {
+						has_bloodline_flag = champion
+					}
+				}
+			}
+			OR = {
+				is_chivalry_martial_education = yes
+				has_focus = focus_war
+			}
+		}
+	}
+}
+
+has_fighter_societies_same_as_ROOT_culture = {
+	OR = {
+		AND = {
+			ROOT = { society_member_of = society_western_guild }
+			FROM = { has_fighter_societies_western_culture = yes }
+		}
+		AND = {
+			ROOT = { society_member_of = society_southern_guild }
+			FROM = { has_fighter_societies_southern_culture = yes }
+		}
+		AND = {
+			ROOT = { society_member_of = society_northern_guild }
+			FROM = { has_fighter_societies_northern_culture = yes }
+		}
+		AND = {
+			ROOT = { society_member_of = society_eastern_guild }
+			FROM = { has_fighter_societies_eastern_culture = yes }
+		}
+		AND = {
+			ROOT = { society_member_of = society_generic_fighter_guild }
+			FROM = { has_fighter_societies_generic = yes }
+		}
+		AND = {
+			ROOT = { society_member_of = society_risk_fighter_guild }
+			FROM = { has_fighter_societies_risk = yes }
+		}
+		AND = {
+			ROOT = { society_member_of = society_female_fighter_guild }
+			FROM = { has_fighter_societies_female = yes }
+		}
+	}
+}
+
+has_fighter_societies_same_as_FROM_culture = {
+	OR = {
+		AND = {
+			FROM = { society_member_of = society_western_guild }
+			ROOT = { has_fighter_societies_western_culture = yes }
+		}
+		AND = {
+			FROM = { society_member_of = society_southern_guild }
+			ROOT = { has_fighter_societies_southern_culture = yes }
+		}
+		AND = {
+			FROM = { society_member_of = society_northern_guild }
+			ROOT = { has_fighter_societies_northern_culture = yes }
+		}
+		AND = {
+			FROM = { society_member_of = society_eastern_guild }
+			ROOT = { has_fighter_societies_eastern_culture = yes }
+		}
+		AND = {
+			FROM = { society_member_of = society_generic_fighter_guild }
+			ROOT = { has_fighter_societies_generic = yes }
+		}
+		AND = {
+			FROM = { society_member_of = society_risk_fighter_guild }
+			ROOT = { has_fighter_societies_risk = yes }
+		}
+		AND = {
+			FROM = { society_member_of = society_female_fighter_guild }
+			ROOT = { has_fighter_societies_female = yes }
+		}
+	}
+}
+
+has_fighter_societies_same_as_SCOPE_culture = {
+	OR = {
+		AND = {
+			ROOT = { society_member_of = society_western_guild }
+			has_fighter_societies_western_culture = yes
+		}
+		AND = {
+			ROOT = { society_member_of = society_southern_guild }
+			has_fighter_societies_southern_culture = yes
+		}
+		AND = {
+			ROOT = { society_member_of = society_northern_guild }
+			has_fighter_societies_northern_culture = yes
+		}
+		AND = {
+			ROOT = { society_member_of = society_eastern_guild }
+			has_fighter_societies_eastern_culture = yes
+		}
+		AND = {
+			ROOT = { society_member_of = society_generic_fighter_guild }
+			has_fighter_societies_generic = yes
+		}
+		AND = {
+			ROOT = { society_member_of = society_risk_fighter_guild }
+			has_fighter_societies_risk = yes
+		}
+		AND = {
+			ROOT = { society_member_of = society_female_fighter_guild }
+			has_fighter_societies_female = yes
+		}
+	}
+}
+
+has_fighter_societies_western_culture = {
+	hidden_tooltip = {
+		OR = {
+			culture_group = central_germanic
+			culture_group = west_germanic
+			culture_group = latin
+			culture_group = iberian
+			culture_group = celtic
+			culture_group = byzantine
+			culture_group = west_slavic
+			culture_group = south_slavic
+			culture_group = italian_group #HIP+PLUS
+			culture_group = franco_germanic #PLUS
+			culture_group = island_romance #PLUS
+			culture_group = east_romance #PLUS
+			culture_group = vasconic #PLUS
+			culture_group = crusader_group #PLUS
+			# culture = frankish #PLUS hotfix
+			# culture = norman #PLUS hotfix
+			# culture = occitan #PLUS hotfix
+			# culture = roman #PLUS hotfix
+		}
+	}
+}
+
+has_fighter_societies_southern_culture = {
+	hidden_tooltip = {
+		OR = {
+			culture_group = arabic
+			culture_group = iranian
+			culture_group = israelite
+			culture_group = east_african
+			culture_group = west_african
+			culture_group = central_african #PLUS
+			culture_group = aramaic #HIP+PLUS
+			culture_group = north_african #HIP
+			culture_group = maghrebi #PLUS
+			culture_group = amazigh #PLUS
+			culture_group = coptic_group #PLUS
+		}
+	}
+}
+
+has_fighter_societies_northern_culture = {
+	hidden_tooltip = {
+		OR = {
+			culture_group = north_germanic
+			culture_group = finno_ugric
+			culture_group = baltic
+			culture_group = altaic
+			culture_group = east_slavic
+			culture_group = magyar
+			culture_group = mesoamerican
+			culture_group = east_germanic #PLUS
+		}
+	}
+}
+
+has_fighter_societies_eastern_culture = {
+	hidden_tooltip = {
+		OR = {
+			culture_group = indo_aryan_group
+			culture_group = dravidian_group
+			culture_group = tibetan_group
+			culture_group = chinese_group
+			culture_group = tocharian_group #PLUS
+		}
+	}
+}
+
+has_fighter_societies_generic = {
+	hidden_tooltip = {
+		always = yes
+	}
+}
+
+has_fighter_societies_risk = {
+	hidden_tooltip = {
+		OR = {
+			AI = no
+			AND = {
+				AI = yes
+				lower_tier_than = king
+			}
+		}
+	}
+}
+
+has_fighter_societies_female = {
+	is_female = yes
+}
+
+chivalry_valid_target = {
+	# custom_tooltip = {
+		# text = 
+		in_battle = no
+		# NAND = {
+			# ai = yes
+			# in_command = yes
+		# }
+		NOT = { character = ROOT }
+		is_incapable = no
+		is_inaccessible_trigger = no
+		prisoner = no
+		NOT = { has_character_flag = has_sent_request_to_rank_up }
+		NOT = { has_character_flag = chivalry_rank_up_foe }
+		NOT = { has_character_flag = chivalry_rank_up_pretender }
+		NOT = { has_character_flag = chivalry_hunt_target }
+		NOT = { has_character_flag = chivalry_being_trained } 
+		NOT = { trait = chivalry_warrior_pilgrim }
+		NOT = { has_character_flag = chivalry_duel_ongoing }
+		NOT = { has_character_flag = mission_chivalry_hunt_flag }
+		NOT = { has_character_modifier = chivalry_unjustified_rest }
+		NOT = { has_character_modifier = chivalry_justified_rest }
+	# }
+}
+
+has_any_arena_modifier = {
+	OR = {
+		has_holding_modifier = chivalry_light_infantry_mod_1
+		has_holding_modifier = chivalry_light_infantry_mod_2	
+		has_holding_modifier = chivalry_light_infantry_mod_3
+		has_holding_modifier = chivalry_archers_mod_1
+		has_holding_modifier = chivalry_archers_mod_2
+		has_holding_modifier = chivalry_archers_mod_3
+		has_holding_modifier = chivalry_heavy_infantry_mod_1
+		has_holding_modifier = chivalry_heavy_infantry_mod_2
+		has_holding_modifier = chivalry_heavy_infantry_mod_3
+		has_holding_modifier = chivalry_pikemen_mod_1
+		has_holding_modifier = chivalry_pikemen_mod_2
+		has_holding_modifier = chivalry_pikemen_mod_3
+		has_holding_modifier = chivalry_light_cavalry_mod_1
+		has_holding_modifier = chivalry_light_cavalry_mod_2
+		has_holding_modifier = chivalry_light_cavalry_mod_3
+		has_holding_modifier = chivalry_knights_mod_1
+		has_holding_modifier = chivalry_knights_mod_2
+		has_holding_modifier = chivalry_knights_mod_3
+	}
+}
+
+has_2_rank1_arena_modifier = {
+	OR = {
+		AND = {
+			has_holding_modifier = chivalry_light_infantry_mod_1
+			has_holding_modifier = chivalry_archers_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_light_infantry_mod_1
+			has_holding_modifier = chivalry_heavy_infantry_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_light_infantry_mod_1
+			has_holding_modifier = chivalry_pikemen_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_light_infantry_mod_1
+			has_holding_modifier = chivalry_light_cavalry_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_light_infantry_mod_1
+			has_holding_modifier = chivalry_knights_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_archers_mod_1
+			has_holding_modifier = chivalry_heavy_infantry_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_archers_mod_1
+			has_holding_modifier = chivalry_pikemen_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_archers_mod_1
+			has_holding_modifier = chivalry_light_cavalry_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_archers_mod_1
+			has_holding_modifier = chivalry_knights_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_heavy_infantry_mod_1
+			has_holding_modifier = chivalry_pikemen_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_heavy_infantry_mod_1
+			has_holding_modifier = chivalry_light_cavalry_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_heavy_infantry_mod_1
+			has_holding_modifier = chivalry_knights_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_pikemen_mod_1
+			has_holding_modifier = chivalry_light_cavalry_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_pikemen_mod_1
+			has_holding_modifier = chivalry_knights_mod_1
+		}
+		AND = {
+			has_holding_modifier = chivalry_light_cavalry_mod_1
+			has_holding_modifier = chivalry_knights_mod_1
+		}
+	}
+}
+
+has_any_rank2_arena_modifier = {
+	OR = {
+		has_holding_modifier = chivalry_light_infantry_mod_2	
+		has_holding_modifier = chivalry_archers_mod_2
+		has_holding_modifier = chivalry_heavy_infantry_mod_2
+		has_holding_modifier = chivalry_pikemen_mod_2
+		has_holding_modifier = chivalry_light_cavalry_mod_2
+		has_holding_modifier = chivalry_knights_mod_2
+	}
+}
+
+has_any_rank3_arena_modifier = {
+	OR = {
+		has_holding_modifier = chivalry_light_infantry_mod_3
+		has_holding_modifier = chivalry_archers_mod_3
+		has_holding_modifier = chivalry_heavy_infantry_mod_3
+		has_holding_modifier = chivalry_pikemen_mod_3
+		has_holding_modifier = chivalry_light_cavalry_mod_3
+		has_holding_modifier = chivalry_knights_mod_3
+	}
+}
+
+chivalry_animal_culture_trigger = {
+	custom_tooltip = {
+		text = chivalry_animal_culture_tt
+		NOR = {
+			culture = horse
+			culture = bear
+			culture = cat
+			culture = hedgehog_culture
+			culture = dragon_culture
+			culture = elephant_culture
+			culture = dog_culture
+			culture = duck_culture
+		}
+	}
+}
+
+# Referenced by the "Leave Crusade" button in the Crusade defender view for Crusades using the new Crusade system
+defender_unpledge_crusade_trigger = { #empty in vanilla, force HO to stay
+	conditional_tooltip = {
+		trigger = {
+			has_character_flag = forced_to_crusade
+		}
+
+		custom_tooltip = { 
+			text = forced_to_defend_crusade_TT 
+
+			always = no
+		}
+	}
+
+	conditional_tooltip = {
+		trigger = {
+			NOT = {
+				has_character_flag = forced_to_crusade
+			}
+		}
+
+		custom_tooltip = {
+			text = unpledge_crusade_trigger_TT
+			NOT = { any_war = { using_cb = new_crusade } }
+		}
+	}
+}
+
+#CROSS MOD STUFF
+#has_global_flag = the_great_trade_league_active
+# is_fighter_societies_trigger = {
+	# has_global_flag = the_orders_of_chivalry_active
+# }
+
+# is_holyorder_societies_trigger = {
+	# has_global_flag = the_orders_of_chivalry_active
+# }
+
+TSD_trigger_fellowship_know_medium = {
+	has_global_flag = the_shadow_dwellers_active
+}
+
+TSD_trigger_fingers_know_medium = {
+	has_global_flag = the_shadow_dwellers_active
+}
+
+TSD_trigger_masquerade_know_medium = {
+	has_global_flag = the_shadow_dwellers_active
+}

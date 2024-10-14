@@ -1,0 +1,18 @@
+opinion_distance_six = {
+	opinion = -18
+}
+opinion_distance_five = {
+	opinion = -15
+}
+opinion_distance_four = {
+	opinion = -12
+}
+opinion_distance_three = {
+	opinion = -9
+}
+opinion_distance_two = {
+	opinion = -6
+}
+opinion_distance_one = {
+	opinion = -3
+}

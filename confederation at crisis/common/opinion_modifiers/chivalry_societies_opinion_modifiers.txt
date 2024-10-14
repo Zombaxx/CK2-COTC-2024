@@ -1,0 +1,31 @@
+opinion_chivalry_bounty = {
+	opinion = 0
+}
+
+opinion_chivalry_client = {
+	opinion = 0
+}
+
+opinion_chivalry_helped_war = {
+	opinion = 20
+}
+
+opinion_chivalry_bad_teacher = {
+	opinion = -10
+}
+
+opinion_chivalry_bad_student = {
+	opinion = -10
+}
+
+opinion_bound_honor = {
+	opinion = 50
+}
+
+opinion_chivalry_merc_bribe = {
+	opinion = 50
+}
+
+opinion_chivalry_merc_loyal = {
+	opinion = 200
+}

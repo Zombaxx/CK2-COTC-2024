@@ -1,0 +1,693 @@
+loyalist_pattern_for = {
+	chivalry_mobilization_0 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_1 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_2 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_3 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_4 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+}
+loyalist_pattern_against = {
+	chivalry_mobilization_0 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_1 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_2 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_3 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_4 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_0 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_1 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_2 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_3 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_4 = { NOT = { liege = { character = FROM } } }
+}
+
+pragmatist_pattern_for = {
+	chivalry_mobilization_0 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mob_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_mobilization_1 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mob_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_mobilization_2 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mob_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_mobilization_3 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mob_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_mobilization_4 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mob_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mil_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_1
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mil_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_4
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mil_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+}
+pragmatist_pattern_against = {
+	chivalry_mobilization_0 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mob_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_mobilization_1 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mob_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_mobilization_2 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mob_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_mobilization_3 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mob_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_mobilization_4 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mob_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mil_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_2
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mil_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_2
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = chivalry_pragmatic_vote_mil_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+}
+
+glory_hound_pattern_for = {
+	chivalry_mobilization_0 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mob_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_mobilization_1 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mob_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_mobilization_2 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_mobilization_2 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mob_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_mobilization_3 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_mobilization_3 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mob_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_mobilization_4 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_mobilization_4 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mob_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mil_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_militarization_2 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_militarization_3 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_militarization_4 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mil_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+}
+glory_hound_pattern_against = {
+	chivalry_mobilization_0 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mob_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_mobilization_1 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mob_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_mobilization_2
+					}
+				}
+			}
+		}
+	}
+	chivalry_mobilization_2 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mob_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_mobilization_3
+					}
+				}
+			}
+		}
+	}
+	chivalry_mobilization_3 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mob_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_mobilization_4
+					}
+				}
+			}
+		}
+	}
+	chivalry_mobilization_4 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mob_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mil_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_2
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_3
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_4
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = chivalry_glory_vote_mil_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+}
+
+zealot_pattern_for = {
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_2
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_3
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_4
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+
+}
+zealot_pattern_against = {
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_militarization_2 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_militarization_3 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_militarization_4 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+}
+
+malcontent_pattern_for = {
+	chivalry_mobilization_0 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_1 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_2 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_3 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_4 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_0 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_1 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_2 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_3 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_4 = { NOT = { liege = { character = FROM } } }
+}
+malcontent_pattern_against = {
+	chivalry_mobilization_0 = { 
+		custom_tooltip = {
+			text = chivalry_malcontent_vote_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_1 = { 
+		custom_tooltip = {
+			text = chivalry_malcontent_vote_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_2 = { 
+		custom_tooltip = {
+			text = chivalry_malcontent_vote_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_3 = { 
+		custom_tooltip = {
+			text = chivalry_malcontent_vote_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_4 = { 
+		custom_tooltip = {
+			text = chivalry_malcontent_vote_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = chivalry_malcontent_vote_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = chivalry_malcontent_vote_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = chivalry_malcontent_vote_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = chivalry_malcontent_vote_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = chivalry_malcontent_vote_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+}

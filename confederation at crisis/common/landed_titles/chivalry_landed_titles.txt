@@ -1,0 +1,435 @@
+#Empty Title
+d_chivalry_temporary = { #will be destroyed
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	gain_effect = {
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 1
+}
+
+#fake holy orders
+d_chivalry_holy_hand = { #Knights of the Silver Hand
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_hand_rank_4_male
+	title_female = society_hand_rank_4_female
+	foa = "CHIVALRY_HAND_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_holy_warden = { #Grey Warden
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_warden_rank_4_male
+	title_female = society_warden_rank_4_female
+	foa = "CHIVALRY_WARDEN_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_holy_scion = { #Scion of the seven dawn
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_scion_rank_4_male
+	title_female = society_scion_rank_4_female
+	foa = "CHIVALRY_SCION_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_holy_rose = { #Order of the Flaming Rose
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_rose_rank_4_male
+	title_female = society_rose_rank_4_female
+	foa = "CHIVALRY_ROSE_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+#real holy orders
+d_chivalry_holy_hand_true = { #Knights of the Silver Hand
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_hand_rank_4_male
+	title_female = society_hand_rank_4_female
+	foa = "CHIVALRY_HAND_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	primary = yes
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_holy_warden_true = { #Grey Warden
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_warden_rank_4_male
+	title_female = society_warden_rank_4_female
+	foa = "CHIVALRY_WARDEN_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	primary = yes
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_holy_scion_true = { #Scion of the seven dawn
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_scion_rank_4_male
+	title_female = society_scion_rank_4_female
+	foa = "CHIVALRY_SCION_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	primary = yes
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_holy_rose_true = { #Order of the Flaming Rose
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_rose_rank_4_male
+	title_female = society_rose_rank_4_female
+	foa = "CHIVALRY_ROSE_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	primary = yes
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+
+#mercenaries
+d_chivalry_merc_black = { #Black compagny
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_black_rank_4_male
+	title_female = society_black_rank_4_female
+	foa = "CHIVALRY_BLACK_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	gain_effect = {
+		set_government_type = mercenary_government
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_merc_cloak = { #stormcloaks
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_cloak_rank_4_male
+	title_female = society_cloak_rank_4_female
+	foa = "CHIVALRY_CLOAK_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	gain_effect = {
+		set_government_type = mercenary_government
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_merc_falcon = { #band of the hawk
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_falcon_rank_4_male
+	title_female = society_falcon_rank_4_female
+	foa = "CHIVALRY_FALCON_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	gain_effect = {
+		set_government_type = mercenary_government
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_merc_hound = { #dogs of war
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_hound_rank_4_male
+	title_female = society_hound_rank_4_female
+	foa = "CHIVALRY_HOUND_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	gain_effect = {
+		set_government_type = mercenary_government
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+#mercenaries as holy order
+d_chivalry_holy_black_true = { #Black compagny
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_black_rank_4_male
+	title_female = society_black_rank_4_female
+	foa = "CHIVALRY_BLACK_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	primary = yes
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_holy_cloak_true = { #stormcloaks
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_cloak_rank_4_male
+	title_female = society_cloak_rank_4_female
+	foa = "CHIVALRY_CLOAK_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	primary = yes
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_holy_falcon_true = { #band of the hawk
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_falcon_rank_4_male
+	title_female = society_falcon_rank_4_female
+	foa = "CHIVALRY_FALCON_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	primary = yes
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}
+
+d_chivalry_holy_hound_true = { #dogs of war
+	color={ 100 100 100 }
+	color2={ 255 255 255 }
+	
+	capital = 138 # Orleans
+	
+	title = society_hound_rank_4_male
+	title_female = society_hound_rank_4_female
+	foa = "CHIVALRY_HOUND_FOA"
+	landless = no
+	can_be_claimed = no
+	can_be_usurped = no
+	holy_order = yes
+	mercenary_type = knights_templar_composition
+	primary = yes
+	gain_effect = {
+		set_holy_order_government = yes
+	}
+	short_name = yes 
+	dynasty_title_names = no
+	creation_requires_capital = no
+	allow = {
+		always = no
+	}
+	dignity = 100
+}

@@ -1,0 +1,70 @@
+########################################################################################################
+# WARNING: IF YOU DON'T ADD NEW TRAITS LAST (IN THE LAST READ TRAIT FILE), IT WILL BREAK OLD SAVE GAMES!
+########################################################################################################
+
+guilds_trait_trader = { 
+	stewardship = 3
+	martial = -1
+	learning = -1
+	diplomacy = -1
+
+	ai_honor = -10
+	ai_ambition = 10
+	ai_greed = 25
+	
+	customizer = no
+ 	random = no 
+}
+
+guilds_trait_master = { 
+	stewardship = 4
+	intrigue = -1
+	martial = -1
+	learning = -1
+	diplomacy = -1
+	
+	ai_honor = -10
+	ai_ambition = 15
+	ai_greed = 50
+	
+	customizer = no
+ 	random = no 
+}
+
+guilds_trait_apprentice = {
+	stewardship = 2
+	martial = -1
+	learning = -1
+	
+	ai_honor = -10
+	ai_ambition = 5
+	ai_greed = 10
+	
+	customizer = no
+	random = no
+}
+
+guilds_nun = { #is now the cartographer test
+	# potential = {
+		# is_female = yes
+	# }
+	
+	# monthly_character_piety = 0.3
+	# same_religion_opinion = 5
+
+	# cannot_marry = yes
+	# cannot_inherit = yes
+	customizer = no
+	random = no
+	incapacitating = yes 
+	# female_compliment = COMPL_NUN
+}
+
+guilds_immortal = {
+	health = 10
+	defensive_plot_power_modifier = 100
+	hidden = yes
+	customizer = no
+	random = no
+	immortal = yes
+}

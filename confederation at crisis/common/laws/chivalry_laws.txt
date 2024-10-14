@@ -1,0 +1,434 @@
+# Demesne type (de facto) laws (set for the PRIMARY title in a demesne but affects the whole demesne)
+
+law_groups = {
+	chivalry_mobilization = {
+		law_type = realm
+	}
+	chivalry_militarization = {
+		law_type = realm
+	}
+}
+
+laws = {
+
+	# chivalry_mobilization LAWS
+	##############################
+	
+	chivalry_mobilization_0 = {
+		group = chivalry_mobilization
+		
+		allow = {
+			always = yes
+			# OR = {
+				# has_law = chivalry_mobilization_1
+				# AND = {
+					# NOT = {	has_law = chivalry_mobilization_0 }
+					# NOT = {	has_law = chivalry_mobilization_1 }
+					# NOT = {	has_law = chivalry_mobilization_2 }
+					# NOT = {	has_law = chivalry_mobilization_3 }
+					# NOT = {	has_law = chivalry_mobilization_4 }
+				# }
+			# }
+		}
+		potential = {
+			OR = {
+				holder_scope = { has_holy_order_government = yes }
+				holder_scope = { government = mercenary_government }
+			}
+		}
+		# effect = {
+		# }
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = chivalry_mobilization_1
+				revoke_law = chivalry_mobilization_2
+				revoke_law = chivalry_mobilization_3
+				revoke_law = chivalry_mobilization_4
+			}
+		}
+		global_levy_size = -0.3
+		global_tax_modifier = 0.15
+		global_revolt_risk = -0.01
+	}
+	
+	chivalry_mobilization_1 = {
+		group = chivalry_mobilization
+		default = yes
+		
+		allow = {
+			OR = { 
+				has_law = chivalry_mobilization_0
+				has_law = chivalry_mobilization_2
+			}
+		}
+		potential = {
+			OR = {
+				holder_scope = { has_holy_order_government = yes }
+				holder_scope = { government = mercenary_government }
+			}
+		}
+		# effect = {
+		# }
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = chivalry_mobilization_0
+				revoke_law = chivalry_mobilization_2
+				revoke_law = chivalry_mobilization_3
+				revoke_law = chivalry_mobilization_4
+			}
+		}
+	}
+	
+	chivalry_mobilization_2 = {
+		group = chivalry_mobilization
+		
+		allow = {
+			OR = { 
+				has_law = chivalry_mobilization_1
+				has_law = chivalry_mobilization_3
+			}
+		}
+		potential = {
+			OR = {
+				holder_scope = { has_holy_order_government = yes }
+				holder_scope = { government = mercenary_government }
+			}
+		}
+		# effect = {
+		# }
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = chivalry_mobilization_0
+				revoke_law = chivalry_mobilization_1
+				revoke_law = chivalry_mobilization_3
+				revoke_law = chivalry_mobilization_4
+			}
+		}
+		global_levy_size = 0.30
+		global_tax_modifier = -0.15
+	}
+	
+	chivalry_mobilization_3 = {
+		group = chivalry_mobilization
+		
+		allow = {
+			OR = { 
+				has_law = chivalry_mobilization_2
+				has_law = chivalry_mobilization_4
+			}
+		}
+		potential = {
+			OR = {
+				holder_scope = { has_holy_order_government = yes }
+				holder_scope = { government = mercenary_government }
+			}
+		}
+		# effect = {
+		# }
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = chivalry_mobilization_0
+				revoke_law = chivalry_mobilization_1
+				revoke_law = chivalry_mobilization_2
+				revoke_law = chivalry_mobilization_4
+			}
+		}
+		global_levy_size = 0.60
+		global_tax_modifier = -0.30
+		castle_vassal_min_levy = 0.25
+		temple_vassal_min_levy = 0.25
+		city_vassal_min_levy = 0.25
+		castle_vassal_max_levy = 0.25
+		temple_vassal_max_levy = 0.25
+		city_vassal_max_levy = 0.25
+		feudal_opinion = -10
+		temple_opinion = -10
+		city_opinion = -10
+	}
+	
+	chivalry_mobilization_4 = {
+		group = chivalry_mobilization
+		
+		allow = {
+			has_law = chivalry_mobilization_3
+		}
+		potential = {
+			OR = {
+				holder_scope = { has_holy_order_government = yes }
+				holder_scope = { government = mercenary_government }
+			}
+		}
+		# effect = {
+		# }
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = chivalry_mobilization_0
+				revoke_law = chivalry_mobilization_1
+				revoke_law = chivalry_mobilization_2
+				revoke_law = chivalry_mobilization_3
+			}
+		}
+		global_levy_size = 1
+		global_tax_modifier = -0.50
+		castle_vassal_min_levy = 0.5
+		temple_vassal_min_levy = 0.5
+		city_vassal_min_levy = 0.5
+		castle_vassal_max_levy = 0.5
+		temple_vassal_max_levy = 0.5
+		city_vassal_max_levy = 0.5
+		feudal_opinion = -20
+		temple_opinion = -20
+		city_opinion = -20
+	}
+	
+	# chivalry_militarization LAWS
+	##############################
+	
+	chivalry_militarization_0 = {
+		group = chivalry_militarization
+		
+		allow = {
+			has_law = chivalry_militarization_1
+		}
+		potential = {
+			OR = {
+				holder_scope = { has_holy_order_government = yes }
+				holder_scope = { government = mercenary_government }
+			}
+		}
+		# effect = {
+		# }
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			custom_tooltip = {
+				text = chivalry_law_become_merc
+			}
+			hidden_tooltip = {
+				revoke_law = chivalry_militarization_1
+				revoke_law = chivalry_militarization_2
+				revoke_law = chivalry_militarization_3
+				revoke_law = chivalry_militarization_4
+			}
+		}
+		global_revolt_risk = -0.01
+		threat_decay_speed = 0.2
+		global_levy_size = -0.3
+		demesne_size = 1
+		# religion_flex = 1
+	}
+	
+	chivalry_militarization_1 = {
+		group = chivalry_militarization
+		
+		allow = {
+			OR = { 
+				has_law = chivalry_militarization_0
+				has_law = chivalry_militarization_2
+			}
+		}
+		potential = {
+			OR = {
+				holder_scope = { has_holy_order_government = yes }
+				holder_scope = { government = mercenary_government }
+			}
+		}
+		# effect = {
+		# }
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = chivalry_militarization_0
+				revoke_law = chivalry_militarization_2
+				revoke_law = chivalry_militarization_3
+				revoke_law = chivalry_militarization_4
+			}
+		}
+		global_revolt_risk = -0.005
+		threat_decay_speed = 0.1
+		demesne_size = 1
+		global_levy_size = -0.15
+		# religion_flex = 0.5
+	}
+	
+	chivalry_militarization_2 = {
+		group = chivalry_militarization
+		default = yes
+		
+		allow = {
+			OR = { 
+				has_law = chivalry_militarization_1
+				has_law = chivalry_militarization_3
+			}
+			# OR = {
+				# holder_scope = { government = mercenary_government }
+				# has_law = chivalry_mobilization_2
+			# }
+		}
+		potential = {
+			OR = {
+				holder_scope = { has_holy_order_government = yes }
+				holder_scope = { government = mercenary_government }
+			}
+		}
+		# effect = {
+		# }
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			custom_tooltip = {
+				text = chivalry_law_become_holy
+			}
+			hidden_tooltip = {
+				revoke_law = chivalry_militarization_0
+				revoke_law = chivalry_militarization_1
+				revoke_law = chivalry_militarization_3
+				revoke_law = chivalry_militarization_4
+			}
+		}
+	}
+	
+	chivalry_militarization_3 = {
+		group = chivalry_militarization
+		
+		allow = {
+			OR = { 
+				has_law = chivalry_militarization_2
+				has_law = chivalry_militarization_4
+			}
+			has_law = chivalry_mobilization_2
+		}
+		potential = {
+			OR = {
+				holder_scope = { has_holy_order_government = yes }
+				holder_scope = { government = mercenary_government }
+			}
+		}
+		# effect = {
+		# }
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = chivalry_militarization_0
+				revoke_law = chivalry_militarization_1
+				revoke_law = chivalry_militarization_2
+				revoke_law = chivalry_militarization_4
+			}
+		}
+		vassal_limit = 5
+		global_revolt_risk = 0.005
+		threat_decay_speed = -0.1
+	}
+	
+	chivalry_militarization_4 = {
+		group = chivalry_militarization
+		
+		allow = {
+			has_law = chivalry_militarization_3
+			has_law = chivalry_mobilization_3
+		}
+		potential = {
+			OR = {
+				holder_scope = { has_holy_order_government = yes }
+				holder_scope = { government = mercenary_government }
+			}
+		}
+		# effect = {
+		# }
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = chivalry_militarization_0
+				revoke_law = chivalry_militarization_1
+				revoke_law = chivalry_militarization_2
+				revoke_law = chivalry_militarization_3
+			}
+		}
+		vassal_limit = 10
+		global_revolt_risk = 0.01
+		threat_decay_speed = -0.2
+	}
+}

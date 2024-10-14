@@ -1,0 +1,81 @@
+# DO NOT ALTER THE NAME OR NUMBER OF THESE!
+
+succession_laws = {
+	succ_chiholy_elective = {
+		oldest_child_opinion = -15
+		child_opinion = -5
+		dynasty_opinion = -5
+		vassal_opinion = 10
+		church_opinion = 10
+		# vassal_limit = 20
+		potential = {
+			NOT = { any_demesne_title = { has_title_flag = chivalry_merc_title } }
+			NOT = { holy_order = yes } #use the normal holy order gov
+			OR = {
+				OR = {
+					has_landed_title = d_chivalry_holy_hand
+					has_landed_title = d_chivalry_holy_warden
+					has_landed_title = d_chivalry_holy_scion
+					has_landed_title = d_chivalry_holy_rose
+				}
+				any_demesne_title = { has_title_flag = chivalry_holy_title }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = succ_chiholy_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	# succ_chimerc_elective = {
+		# oldest_child_opinion = -15
+		# child_opinion = -5
+		# dynasty_opinion = -5
+		# vassal_opinion = 10
+		## city_opinion = 10
+		## vassal_limit = 20
+		# potential = {
+			# NOT = { holy_order = yes }
+			# NOT = { any_demesne_title = { has_title_flag = chivalry_holy_title } }
+			# OR = {
+				# primary_title = { mercenary = yes } 
+				# OR = { 
+					# has_landed_title = d_chivalry_merc_black
+					# has_landed_title = d_chivalry_merc_cloak
+					# has_landed_title = d_chivalry_merc_falcon
+					# has_landed_title = d_chivalry_merc_hound
+				# }
+				# any_demesne_title = { has_title_flag = chivalry_merc_title }
+			# }
+		# }
+		# allow = {
+			# custom_tooltip = {
+				# text = not_forced_tt
+				# hidden_tooltip = {
+					# holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				# }
+			# }
+		# }
+		# effect = {
+			# succession = {
+				# base_type = feudal_elective
+				# voting_rules = succ_chimerc_elective
+			# }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }			
+	# }
+}

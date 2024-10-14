@@ -1,0 +1,145 @@
+on_startup = {
+	events = {
+		SNW.280 #tutorial
+		# SNW.281 #warehouse mod to artifact
+		# SNW.282 #warehouse exterminator
+		SNW.390 #resources
+		# SNW.996 #test vassal distance
+	}
+}
+
+on_character_ask_to_join_society = {
+	events = {
+		SNW.100 #Join Guilds
+	}
+}
+
+on_five_year_pulse = {
+	events = {
+		SNW.110 # Have AI characters join societies
+		SNW.342 #Center of trade rewards
+	}
+}
+
+on_decade_pulse = {
+	events = {
+	}
+}
+
+on_death = {
+	events = {
+		SNW.152
+		SNW.153
+		SNW.154
+		SNW.195 #levy caravan
+		# SNW.2651 #dead trade_master #should be automatic
+		SNW.297 #holo husband
+		SNW.3190 #dead apprentice removal
+	}
+}
+
+#character. Triggers if someone becomes imprisoned by the diplo-action - ROOT is prisoner, FROM is imprisoner
+on_became_imprisoned = {
+	events = {
+ 		SNW.2951 #prison holo
+		SNW.268 #trade master
+ 	}
+}
+
+#character. Triggers if someone is exiled
+on_exiled = {
+	events = {
+ 		SNW.2951 #exile holo
+ 	}
+}
+
+# From = Divorcer, Root = Spouse, New = Religious head if applicable
+on_divorce = {
+	events = {
+		SNW.2951 #divorce holo
+	}
+}
+
+on_birth = {
+	events = {
+		SNW.296 #holo family
+	}
+}
+
+on_adulthood = {
+	events = {
+		# SNW.3100
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		SNW.200 #No society ingredients
+		SNW.201 #No society goods
+		SNW.341 #Center of trade rewards
+		SNW.380 #trade war start
+		SNW.383 #trade war contribution
+		# SNW.384 #trade war end check
+		# SNW.996 #test vassal distance
+	}
+}
+
+# Fires every two years for characters who are members of any society
+on_society_bi_yearly_pulse = {
+	events = {
+		SNW.300 #Quest tombola
+		SNW.220 #thieves
+		SNW.221 #highway
+		SNW.222 #smuggler
+		SNW.2300 #warehouse thief
+		SNW.350 #AI ask for help
+		SNW.353 #rank 1 Ai sell
+	}
+	random_events = {
+		200 = SNW.400 #apprentice events
+	}
+}
+
+# Fires for the owner of the winning unit (ROOT). The taken Holding title is in FROM.
+on_siege_over_winner = {
+	events = {
+		SNW.210 #loot goods in province
+	}
+}
+
+#from=attacker, root=defender
+on_war_started = {
+	events = {
+		SNW.240 #faked AI vs Human sabotage start
+	}
+}
+
+# ROOT = Builder, FROM = Title
+on_settlement_construction_completed = {
+	events = {
+		SNW.364
+	}
+}
+
+# ROOT = Builder, FROM = Province
+on_trade_post_construction_completed = {
+	events = {
+	}
+}
+
+# A character selects a focus
+# Root = Character
+on_focus_selected = {
+	events = {
+		SNW.412
+	}
+}
+
+# A character succeeds in a quest. This happens just before the quest disappears, so you can access the quest itself. Only invoked when a quest is cleared via script. E.G., does not happen on death
+# Root = Character
+on_quest_success = {
+	events = {
+		# MNM.6666
+		# SNW.6666 #counter MNM.6666 #now modiying the scripted effect itself
+	}
+}

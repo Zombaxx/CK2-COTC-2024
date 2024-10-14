@@ -1,0 +1,483 @@
+influence_cost_caravan_effect = {
+	if = {
+		limit = {
+			society_influence < 20
+		}
+		change_society_currency = -250
+	}
+	else_if = {
+		limit = {
+			society_influence >= 20
+			society_influence < 40
+		}
+		change_society_currency = -200
+	}
+	else_if = {
+		limit = {
+			society_influence >= 40
+			society_influence < 60
+		}
+		change_society_currency = -150
+	}
+	else_if = {
+		limit = {
+			society_influence >= 60
+			society_influence < 80
+		}
+		change_society_currency = -100
+	}
+	else = {
+		change_society_currency = -50
+	}
+}
+
+influence_cost_shopping_effect = {
+	if = {
+		limit = {
+			society_influence < 20
+		}
+		change_society_currency = -125
+	}
+	else_if = {
+		limit = {
+			society_influence >= 20
+			society_influence < 40
+		}
+		change_society_currency = -100
+	}
+	else_if = {
+		limit = {
+			society_influence >= 40
+			society_influence < 60
+		}
+		change_society_currency = -75
+	}
+	else_if = {
+		limit = {
+			society_influence >= 60
+			society_influence < 80
+		}
+		change_society_currency = -50
+	}
+	else = {
+		change_society_currency = -25
+	}
+}
+
+influence_cost_buying_effect = { 
+	if = {
+		limit = {
+			NOT = { society_member_of = the_guilds }
+			any_owned_bloodline = {
+				has_bloodline_flag = the_guilds
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			society_influence < 20
+		}
+		change_society_currency = -100
+	}
+	else_if = {
+		limit = {
+			society_influence >= 20
+			society_influence < 40
+		}
+		change_society_currency = -75
+	}
+	else_if = {
+		limit = {
+			society_influence >= 40
+			society_influence < 60
+		}
+		change_society_currency = -50
+	}
+	else_if = {
+		limit = {
+			society_influence >= 60
+			society_influence < 80
+		}
+		change_society_currency = -30
+	}
+	else = {
+		change_society_currency = -15
+	}
+}
+
+join_prev_guilds_society = {
+	if = {
+		limit = { PREV = { society_member_of = the_guilds } }
+		join_society = the_guilds
+	}
+}
+
+join_from_guilds_society = {
+	FROM = {
+		if = {
+			limit = {
+				society_member_of = the_guilds
+			}
+			ROOT = {
+				join_society = the_guilds
+			}
+		}
+	}
+}
+
+
+detract_guilds_currency_tiny_effect = {
+	change_society_currency = -50
+}
+
+# guilds_add_random_goods = {
+	# random_list = {
+		# 50 = {
+			# add_artifact = guilds_item_stone
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_steel
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_gem
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_silver
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_gold
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_grain
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_linen
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_lumber
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_incense
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_spices
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_meat
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_wool
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_hide
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_ivory
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_silk
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_pottery
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_alcohol
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_armor
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_jewelry
+		# }
+		# 50 = {
+			# add_artifact = guilds_item_book
+		# }
+	# }
+# }
+
+# guilds_add_random_buff = {
+	# random_list = {
+		# 50 = {
+			# add_province_modifier = guilds_buff_stone
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_steel
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_gem
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_silver
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_gold
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_grain
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_linen
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_lumber
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_incense
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_spices
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_meat
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_wool
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_hide
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_ivory
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_silk
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_pottery
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_alcohol
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_armor
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_jewelry
+		# }
+		# 50 = {
+			# add_province_modifier = guilds_buff_book
+		# }
+	# }
+# }
+
+
+# clean_up_after_leaving_society_effect = {
+	# hidden_effect = {
+		# clr_character_flag = do_not_disturb
+		# remove_character_modifier = quest_cooldown_timer
+
+	# }
+# }
+
+guilds_holo_happy_trigger = {
+	hidden_tooltip = {
+		FROM = { change_variable = { which = "guilds_holo_variable" value = 2 } }
+		reverse_opinion = {
+			modifier = opinion_happy #+15
+			who = FROM
+			years = 1
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					has_character_flag = guilds_is_holo
+					NOR = { 
+						has_character_flag = guilds_holo_alone
+						has_character_flag = guilds_holo_lover
+					}
+				}
+			}
+			FROM = { character_event = { id = SNW.29100 } }
+		}
+	}
+}
+guilds_holo_pleased_trigger = {
+		hidden_tooltip = {
+			FROM = { change_variable = { which = "guilds_holo_variable" value = 1 } }
+			reverse_opinion = {
+				modifier = opinion_pleased #+5
+				who = FROM
+				years = 1
+			}
+			if = {
+				limit = {
+					any_courtier = {
+						has_character_flag = guilds_is_holo
+						NOR = { 
+							has_character_flag = guilds_holo_alone
+							has_character_flag = guilds_holo_lover
+						}
+					}
+				}
+				FROM = { character_event = { id = SNW.29101 } }
+			}
+		}
+}
+guilds_holo_irritated_trigger = {
+		hidden_tooltip = {
+			reverse_opinion = {
+				modifier = opinion_irritated #-5
+				who = FROM
+				years = 1
+			}
+			if = {
+				limit = {
+					any_courtier = {
+						has_character_flag = guilds_is_holo
+						NOR = { 
+							has_character_flag = guilds_holo_alone
+							has_character_flag = guilds_holo_lover
+						}
+					}
+				}
+				FROM = { character_event = { id = SNW.29102 } }
+			}
+		}
+}
+guilds_holo_unhappy_trigger = {
+		hidden_tooltip = {
+			FROM = { change_variable = { which = "guilds_holo_variable" value = -1 } }
+			reverse_opinion = {
+				modifier = opinion_unhappy #-20
+				who = FROM
+				years = 1
+			}
+			if = {
+				limit = {
+					any_courtier = {
+						has_character_flag = guilds_is_holo
+						NOR = { 
+							has_character_flag = guilds_holo_alone
+							has_character_flag = guilds_holo_lover
+						}
+					}
+				}
+				FROM = { character_event = { id = SNW.29103 } }
+			}
+		}
+}
+#influence stuff
+guilds_add_influence_very_good_deal = { 
+	add_society_modifier = 	{
+		modifier = guilds_influence_very_good_deal
+		years = 3
+	}
+}
+guilds_add_influence_good_deal = { 
+	add_society_modifier = 	{
+		modifier = guilds_influence_good_deal
+		years = 3
+	}
+}
+guilds_add_influence_bad_deal = { 
+	add_society_modifier = 	{
+		modifier = guilds_influence_bad_deal
+		years = 3
+	}
+}
+guilds_add_influence_very_bad_deal = { 
+	add_society_modifier = 	{
+		modifier = guilds_influence_very_bad_deal
+		years = 3
+	}
+}
+guilds_add_influence_inflation = { 
+	add_society_modifier = 	{
+		modifier = guilds_influence_inflation
+		years = 3
+	}
+}
+guilds_add_influence_inflation_long = { 
+	add_society_modifier = 	{
+		modifier = guilds_influence_inflation
+		years = 10
+	}
+}
+guilds_add_influence_debt = { 
+	add_society_modifier = 	{
+		modifier = guilds_influence_debt
+		years = 5
+	}
+}
+guilds_add_influence_market_crash = {
+	add_society_modifier = 	{
+		modifier = guilds_influence_crash
+		years = 5
+	}
+	add_society_modifier = 	{
+		modifier = guilds_influence_crash
+		years = 10
+	}
+	add_society_modifier = 	{
+		modifier = guilds_influence_crash
+		years = 15
+	}
+	add_society_modifier = 	{
+		modifier = guilds_influence_crash
+		years = 20
+	}
+	add_society_modifier = 	{
+		modifier = guilds_influence_crash
+		years = 25
+	}
+}
+guilds_add_influence_market_boom = { 
+	add_society_modifier = 	{
+		modifier = guilds_influence_boom
+		years = 5
+	}
+	add_society_modifier = 	{
+		modifier = guilds_influence_boom
+		years = 10
+	}
+	add_society_modifier = 	{
+		modifier = guilds_influence_boom
+		years = 15
+	}
+	add_society_modifier = 	{
+		modifier = guilds_influence_boom
+		years = 20
+	}
+	add_society_modifier = 	{
+		modifier = guilds_influence_boom
+		years = 25
+	}
+}
+
+add_guilds_mission_succeed_influence_effect = { 
+	# add_society_modifier = 	{
+		# modifier = successful_guilds_mission
+		# years = 5
+	# }
+	add_society_modifier = 	{
+		modifier = guilds_influence_good_deal
+		years = 5
+	}
+}
+
+add_guilds_mission_fail_influence_effect = { 
+	# add_society_modifier = 	{
+		# modifier = failed_guilds_mission
+		# years = 5
+	# }
+	add_society_modifier = 	{
+		modifier = guilds_influence_bad_deal
+		years = 5
+	}
+}
+
+add_mission_succeed_influence_effect = {  #vanilla influence effect, adding counter for league
+	# add_society_modifier = 	{
+		# modifier = successful_mission
+		# years = 10
+	# }
+	if = {
+		limit = {
+			society_member_of = the_guilds
+		}
+		add_society_modifier = 	{
+			modifier = failed_guilds_mission_counter
+			years = 10
+		}
+	}
+}

@@ -1,0 +1,166 @@
+title_chivalry_squire = {
+	is_high_prio = no
+	attribute = martial
+    dignity = 1
+    realm_in_name = no
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0
+	monthly_prestige = 0.1
+	
+	allowed_to_grant = {
+		is_playable = yes
+		OR = {
+			is_holyorder_societies_trigger = yes
+			is_fighter_societies_trigger = yes
+		}
+		# NOT = { has_assigned_minor_title = title_chivalry_ladywaiting }
+		# NOT = { 
+			# any_courtier = {
+				# has_minor_title = title_chivalry_ladywaiting
+			# }
+		# }
+	}
+	
+	allowed_to_hold = {
+		age = 6
+		NOT = { age = 16 }
+		OR = {
+			NOT = { is_female = yes }
+			AND = {
+				is_female = yes
+				FROM = {
+					OR = {
+						is_fighter_societies_trigger = yes
+						AND = {
+							is_holyorder_societies_trigger = yes
+							OR = {
+								has_game_rule = {
+									name = gender
+									value = all
+								}
+								custom_tooltip = {
+									text = chivalry_society_feminist_tooltip
+									society = {
+										any_society_member = {
+											is_society_grandmaster = yes
+											has_character_modifier = chivalry_law_feminist
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		is_abroad = no
+		is_ruler = no
+		NOT = { trait = incapable }
+		prisoner = no
+		custom_tooltip = {
+			text = chivalry_was_squire_tooltip
+			OR = {
+				NOT = { has_character_flag = chivalry_was_squire }
+				had_character_flag = { flag = chivalry_was_squire days = 1100 }
+			}
+		}
+	}
+
+	revoke_trigger = {
+	}
+	
+	gain_effect = {
+		character_event = { id = CHI.300 days = 730 }
+	}
+	lose_effect = {
+		set_character_flag = chivalry_was_squire
+	}
+	retire_effect = {
+		set_character_flag = chivalry_was_squire
+	}
+
+	message = yes
+}
+
+title_chivalry_ladywaiting = {
+	is_high_prio = no
+	attribute = martial
+    dignity = 1
+    realm_in_name = no
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0
+	monthly_prestige = 0.1
+	
+	allowed_to_grant = {
+		always = no #for now
+		is_playable = yes
+		OR = {
+			is_fighter_societies_trigger = yes
+			AND = {
+				is_holyorder_societies_trigger = yes
+				OR = {
+					has_game_rule = {
+						name = gender
+						value = all
+					}
+					society = {
+						any_society_member = {
+							is_society_grandmaster = yes
+							has_character_modifier = chivalry_law_feminist
+						}
+					}
+				}
+			}
+		}
+		# NOT = { 
+			# any_courtier = {
+				# has_minor_title  = title_chivalry_squire
+			# }
+		# }
+		NOT = { has_assigned_minor_title = title_chivalry_squire }
+	}
+	
+	allowed_to_hold = {
+		age = 6
+		NOT = { age = 16 }
+		is_female = yes
+		is_abroad = no
+		is_ruler = no
+		NOT = { trait = incapable }
+		prisoner = no
+		custom_tooltip = {
+			text = chivalry_was_squire_tooltip
+			OR = {
+				NOT = { has_character_flag = chivalry_was_squire }
+				had_character_flag = { flag = chivalry_was_squire days = 1100 }
+			}
+		}
+	}
+
+	revoke_trigger = {
+		OR = {
+			is_abroad = yes 
+			age = 16
+			FROM = { 
+				NOR = {
+					is_holyorder_societies_trigger = yes
+					is_fighter_societies_trigger = yes
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		character_event = { id = CHI.300 days = 730 }  #gain traits
+	}
+	lose_effect = {
+		set_character_flag = chivalry_was_squire
+	}
+	retire_effect = {
+		set_character_flag = chivalry_was_squire
+	}
+
+	message = yes
+}

@@ -1,0 +1,2168 @@
+namespace = SNW
+
+#Holo start
+character_event = {
+	id = SNW.290
+
+	hide_window = yes
+
+	ai = no
+	only_rulers = yes
+	prisoner = no
+	min_age = 16
+	is_triggered_only = yes
+	
+	# trigger = {
+		# NOT = {
+			# has_game_rule = {
+				# name = supernatural_events
+				# value = off
+			# }
+		# }
+		# NOT = { has_global_flag = guils_holo_spawned }
+	# }
+
+	immediate = {
+		set_global_flag = guils_holo_spawned
+		create_character = {
+			name = "Holo"
+			random_traits = no
+			dynasty = NONE
+			religion = ROOT
+			culture = random
+			female = yes
+			# age = 600
+			age = 16
+			# immortal_age = 16
+			health = 10
+			# trait = guilds_nun
+			trait = nun
+			trait = celibate
+			trait = cynical
+			trait = gluttonous
+			trait = proud
+			trait = quick
+			trait = guilds_immortal #hidden
+			trait = charismatic_negotiator
+			attributes = {
+				diplomacy = 10
+				martial = 5
+				stewardship = 10
+				intrigue = 10
+				learning = 5
+			}
+			historical = yes
+		}
+		new_character = {
+			set_character_flag = guilds_is_holo
+			save_event_target_as = guilds_holo
+			# add_artifact = guilds_holo_charm #to avoid giving it while killing her
+			# diplomatic_immunity = yes
+			give_nickname = nick_the_nun
+			character_event = { id = SNW.2901 }
+			
+		}
+	}
+}
+
+#Holo home pick
+character_event = {
+	id = SNW.2901
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { 
+				culture = FROM
+			}
+			culture = random
+		}
+		random_province = {
+			limit = { culture = ROOT }
+			save_event_target_as = guilds_holo_home
+		}
+		liege = {
+			random_realm_province = { province_event = { id = SNW.2902 } }
+		}
+	}
+}
+
+#Holo home ping holo
+province_event = {
+	id = SNW.2902
+
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROMFROM = { narrative_event = { id = SNW.2903 } }
+	}
+}
+
+#Holo's home greet ruler
+narrative_event = {
+	id = SNW.2903
+	title = EVTNAME_SNW_2903
+	desc = EVTDESC_SNW_2903
+	picture = GFX_evt_guilds_holo_event
+	border = GFX_event_narrative_frame_economy_guilds
+
+	is_triggered_only = yes
+	
+	option = { #start chain
+		name = EVTOPTA_SNW_2903
+		custom_tooltip = { text = guilds_holo_met_tooltip }
+		event_target:guilds_holo = { character_event = { id = SNW.2904 } }
+	}
+	option = { #terminate event
+		name = EVTOPTB_SNW_2903
+		custom_tooltip = { 
+			text = guilds_holo_ignored_tooltip
+			FROMFROM = { character_event = { id = SNW.295 } }
+		}
+		clr_global_flag = guilds_holo_spawned
+	}
+}
+
+#Holo ping greetings
+character_event = {
+	id = SNW.2904
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = { which = "guilds_holo_variable" value = 5 }
+		FROM = { character_event = { id = SNW.2905 } }
+	}
+}
+
+#Holo greetings
+character_event = {
+	id = SNW.2905
+	desc = EVTDESC_SNW_2905
+	picture = GFX_evt_guilds_holo_event
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+
+	immediate = { set_character_flag = guilds_is_using_goods }
+	
+	option = { #normal greetings
+		name = EVTOPTA_SNW_2905
+	}
+	option = { #gift
+		name = EVTOPTB_SNW_2905
+		trigger = {
+			OR = { 
+				has_artifact = guilds_item_grain
+				has_artifact = guilds_item_meat
+			}
+		}
+		random_artifact = {
+			limit = {
+				OR = {
+					artifact_type = guilds_item_grain
+					artifact_type = guilds_item_meat
+				}
+			}
+			destroy_artifact = yes
+		}
+		hidden_tooltip = { FROM = { change_variable = { which = "guilds_holo_variable" value = 1 } } }
+	}
+	option = { #cynical 
+		name = EVTOPTC_SNW_2905
+		tooltip_info = cynical
+		trigger = {
+			trait = cynical
+		}
+		hidden_tooltip = { FROM = { change_variable = { which = "guilds_holo_variable" value = 1 } } }
+	}
+	option = { #religious
+		name = EVTOPTD_SNW_2905
+		tooltip_info = zealous
+		trigger = {
+			trait = zealous
+		}
+		hidden_tooltip = { FROM = { change_variable = { which = "guilds_holo_variable" value = -1 } } }
+	}
+	option = { #Cruel
+		name = EVTOPTE_SNW_2905
+		tooltip_info = cruel
+		trigger = {
+			trait = cruel
+		}
+		hidden_tooltip = { FROM = { change_variable = { which = "guilds_holo_variable" value = -1 } } }
+	}
+	option = { #content
+		name = EVTOPTF_SNW_2905
+		tooltip_info = content
+		trigger = {
+			trait = content
+		}
+		hidden_tooltip = { FROM = { change_variable = { which = "guilds_holo_variable" value = 1 } } }
+	}
+	option = { #lustful 
+		name = EVTOPTG_SNW_2905
+		tooltip_info = lustful
+		trigger = {
+			trait = lustful
+		}
+		hidden_tooltip = { FROM = { change_variable = { which = "guilds_holo_variable" value = -1 } } }
+	}
+	option = { #kind
+		name = EVTOPTH_SNW_2905
+		tooltip_info = kind
+		trigger = {
+			trait = kind
+		}
+		hidden_tooltip = { FROM = { change_variable = { which = "guilds_holo_variable" value = 1 } } }
+	}
+	after = {
+		set_character_flag = guilds_met_holo
+		clr_character_flag = guilds_is_using_goods
+	}
+}
+
+#Holo random events
+character_event = {
+	id = SNW.291
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		random_artifact = {
+			limit = {
+				OR = {
+					artifact_type = guilds_item_grain
+					artifact_type = guilds_item_meat
+				}
+			}
+			destroy_artifact = yes
+		} 
+		if = {
+			limit = { 
+				NOT = { check_variable = { which = guilds_holo_variable value = 1 } }
+			}		
+			FROM = { character_event = { id = SNW.2952 days = 30 random = 15 } }
+			death = { death_reason = death_missing }
+			break = yes
+		}
+		if = {
+			limit = { 
+				check_variable = { which = guilds_holo_variable value >= 15 }
+				NOT = { has_character_flag = guilds_holo_friend }
+			}
+			FROM = { narrative_event = { id = SNW.293 days = 30 random = 10 } } #reveal wolfness + friend, reject to get wolf hair charm
+		}
+		# if = {
+			# limit = { 
+				# check_variable = { which = guilds_holo_variable value >= 25 }
+				# NOR = { 
+					# has_character_flag = guilds_holo_alone
+					# has_character_flag = guilds_holo_lover
+				# }
+			# }
+			# FROM = { narrative_event = { id = SNW.294 days = 30 random = 10 } } #reveal her love, but will leave if not married in 2 years and give charm 
+		# }
+		FROM = {
+			random_list = {
+				10 = { 
+					trigger = {
+						ROOT = {
+							NOR = {
+								has_character_flag = guilds_holo_alone
+								has_character_flag = guilds_holo_lover
+							}
+						}
+					}
+					character_event = { id = SNW.2910 } #hungry at the market
+				}
+				10 = { 
+					trigger = {
+						ROOT = {
+							NOR = {
+								has_character_flag = guilds_holo_alone
+								has_character_flag = guilds_holo_lover
+							}
+						}
+					}
+					character_event = { id = SNW.2911 } #thirsty
+				}
+				5 = { character_event = { id = SNW.2912 } } #offer advice fur
+				10 = { 
+					trigger = {
+						ROOT = {
+							NOR = {
+								has_character_flag = guilds_holo_alone
+								has_character_flag = guilds_holo_lover
+							}
+						}
+					}
+					character_event = { id = SNW.2913 } #let her haggle
+				}
+				10 = { 
+					trigger = {
+						ROOT = {
+							NOR = {
+								has_character_flag = guilds_holo_alone
+								has_character_flag = guilds_holo_lover
+							}
+						}
+					}
+					character_event = { id = SNW.2914 } #preacher
+				}
+				10 = { 
+					trigger = {
+						ROOT = {
+							NOR = {
+								has_character_flag = guilds_holo_alone
+								has_character_flag = guilds_holo_lover
+							}
+						}
+					}
+					character_event = { id = SNW.2915 } #shepherd
+				}
+				10 = { 
+					trigger = {
+						ROOT = {
+							NOR = {
+								has_character_flag = guilds_holo_alone
+								has_character_flag = guilds_holo_lover
+							}
+						}
+					}
+					character_event = { id = SNW.2916 } #bragging
+				}
+				10 = { 
+					trigger = {
+						ROOT = {
+							NOR = {
+								has_character_flag = guilds_holo_alone
+								has_character_flag = guilds_holo_lover
+							}
+						}
+					}
+					character_event = { id = SNW.2917 } #orphan
+				}
+				10 = { 
+					trigger = {
+						ROOT = {
+							NOR = {
+								has_character_flag = guilds_holo_alone
+								has_character_flag = guilds_holo_lover
+							}
+						}
+					}
+					character_event = { id = SNW.2918 } #wolf pack
+				}
+				5 = { character_event = { id = SNW.2919 } } #music
+				5 = { character_event = { id = SNW.2920 } } #velvet
+				5 = { character_event = { id = SNW.2921 } } #glass
+				5 = { character_event = { id = SNW.2922 } } #dye
+				5 = { character_event = { id = SNW.2923 } } #statue
+			}
+		}
+	}
+}
+
+#Holo hungry at the market
+character_event = {
+	id = SNW.2910
+	desc = EVTDESC_SNW_2910
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #apple
+		name = EVTOPTA_SNW_2910
+		wealth = -1
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #chicken
+		name = EVTOPTB_SNW_2910
+		wealth = -10
+		guilds_holo_pleased_trigger = yes
+	}
+	option = { #loaf of bread
+		name = EVTOPTC_SNW_2910
+		wealth = -5
+		guilds_holo_irritated_trigger = yes
+	}
+	option = { #nothing
+		name = EVTOPTD_SNW_2910
+		guilds_holo_unhappy_trigger = yes
+	}
+}
+
+#Holo thirsty at the market
+character_event = {
+	id = SNW.2911
+	desc = EVTDESC_SNW_2911
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #clean water
+		name = EVTOPTA_SNW_2911
+		wealth = -10
+		guilds_holo_irritated_trigger = yes
+	}
+	option = { #milk
+		name = EVTOPTB_SNW_2911
+		guilds_holo_pleased_trigger = yes
+		wealth = -5
+	}
+	option = { #alcohol
+		name = EVTOPTC_SNW_2911
+		wealth = -5
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #nothing
+		name = EVTOPTD_SNW_2911
+		guilds_holo_unhappy_trigger = yes
+	}
+}
+
+#Holo offer advice fur
+character_event = {
+	id = SNW.2912
+	desc = EVTDESC_SNW_2912
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #trust her
+		name = EVTOPTA_SNW_2912
+		random = {
+			chance = 25
+			add_trait = trusting
+		}
+		add_artifact = guilds_item_fur
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_fur_tooltip }
+		scaled_wealth = { value = -0.80 min = -80 max = -800 }
+		if = {
+			limit = { location = { is_winter = yes } }
+			custom_tooltip = { text = guilds_goods_bonus_terrain_tooltip }
+			scaled_wealth = { value = -0.20 min = -20 max = -200 } #terrain bonus
+		}
+		if = {
+			limit = {
+				location = {
+					OR = {
+						terrain = forest
+						terrain = arctic
+						terrain = steppe 
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_terrain_tooltip }
+			scaled_wealth = { value = 0.05 min = 5 max = 50 } #terrain malus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				location = { 
+					has_province_modifier = prosperity_modifier_1
+				} 
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #prosperity bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				location = { 
+					has_province_modifier = prosperity_modifier_2
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.075 min = -7 max =  -75 } #prosperity bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				location = { 
+					has_province_modifier = prosperity_modifier_3
+				} 
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.10 min = -10 max = -100 } #prosperity bonus
+		}
+		if = {
+			limit = { 
+				OR = {
+					has_character_flag = holding_blot
+					has_character_flag = holding_ukon_juhla
+					has_character_flag = holding_uzgavenes
+					has_character_flag = holding_jarilo
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_festivitie_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #festivitie bonus
+		}
+		hidden_tooltip = {
+			FROM = { change_variable = { which = "guilds_holo_variable" value = 1 } }
+			reverse_opinion = {
+				modifier = opinion_happy #+15
+				who = FROM
+				years = 1
+			}
+			if = {
+				limit = {
+					any_courtier = {
+						has_character_flag = guilds_is_holo
+						NOR = { 
+							has_character_flag = guilds_holo_alone
+							has_character_flag = guilds_holo_lover
+						}
+					}
+				}
+				FROM = { character_event = { id = SNW.29100 } }
+			}
+		}
+		FROM = { character_event = { id = SNW.29121 days = 5 } }
+	}
+	option = { #don't trust her
+		name = EVTOPTB_SNW_2912
+		add_artifact = guilds_item_fur
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_fur_tooltip }
+		scaled_wealth = { value = -0.80 min = -80 max = -800 }
+		if = {
+			limit = { location = { is_winter = yes } }
+			custom_tooltip = { text = guilds_goods_bonus_terrain_tooltip }
+			scaled_wealth = { value = -0.20 min = -20 max = -200 } #terrain bonus
+		}
+		if = {
+			limit = {
+				location = {
+					OR = {
+						terrain = forest
+						terrain = arctic
+						terrain = steppe 
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_terrain_tooltip }
+			scaled_wealth = { value = 0.05 min = 5 max = 50 } #terrain malus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				location = { 
+					has_province_modifier = prosperity_modifier_1
+				} 
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #prosperity bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				location = { 
+					has_province_modifier = prosperity_modifier_2
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.075 min = -7 max =  -75 } #prosperity bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				location = { 
+					has_province_modifier = prosperity_modifier_3
+				} 
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.10 min = -10 max = -100 } #prosperity bonus
+		}
+		if = {
+			limit = { 
+				OR = {
+					has_character_flag = holding_blot
+					has_character_flag = holding_ukon_juhla
+					has_character_flag = holding_uzgavenes
+					has_character_flag = holding_jarilo
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_festivitie_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #festivitie bonus
+		}
+		guilds_holo_unhappy_trigger = yes
+	}
+	option = { #nothing
+		name = EVTOPTC_SNW_2912
+		guilds_holo_irritated_trigger = yes
+	}
+}
+
+#Holo offer advice fur ping
+character_event = {
+	id = SNW.29121
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { character_event = { id = SNW.29122 } }
+	}
+}
+
+#Holo offer advice fur end
+character_event = {
+	id = SNW.29122
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	desc = {
+		trigger = { has_character_flag = guilds_holo_was_right }
+		text = EVTDESC_SNW_29122_A
+	}
+	desc = {
+		trigger = { NOT = { has_character_flag = guilds_holo_was_right } }
+		text = EVTDESC_SNW_29122_B
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random = {
+			chance = 66
+			set_character_flag = guilds_holo_was_right
+		}
+	}
+	
+	option = { #she was right
+		name = EVTOPTA_SNW_29122
+		trigger = {
+			has_character_flag = guilds_holo_was_right
+		}
+		scaled_wealth = { value = 0.20 min = 20 max = 200 }
+		hidden_tooltip = {
+			reverse_opinion = {
+				modifier = opinion_pleased #+5
+				who = FROM
+				years = 1
+			}
+		}
+	}
+	
+	option = { #she was not right
+		name = EVTOPTB_SNW_29122
+		trigger = {
+			NOT = { has_character_flag = guilds_holo_was_right }
+		}
+		scaled_wealth = { value = -0.20 min = -20 max = -200 }
+		hidden_tooltip = { FROM = { change_variable = { which = "guilds_holo_variable" value = 1 } } }
+	}
+	
+	after = {
+		clr_character_flag = guilds_holo_was_right
+	}
+}
+
+#Holo haggle
+character_event = {
+	id = SNW.2913
+	desc = EVTDESC_SNW_2913
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #let her
+		name = EVTOPTA_SNW_2913
+		random_list = { 
+			33 = { scaled_wealth = { value = 0.10 min = 10 max = 100 } }
+			33 = { scaled_wealth = { value = -0.10 min = -10 max = -100 } }
+			33 = { }
+		}
+		guilds_holo_pleased_trigger = yes
+	}
+	
+	option = { #don't
+		name = EVTOPTB_SNW_2913
+		hidden_tooltip = { FROM = { change_variable = { which = "guilds_holo_variable" value = -1 } } }
+		guilds_holo_irritated_trigger = yes
+	}
+}
+
+#Holo preacher
+character_event = {
+	id = SNW.2914
+	desc = EVTDESC_SNW_2914
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #say a prayer
+		name = EVTOPTA_SNW_2914
+		add_trait = zealous
+		guilds_holo_unhappy_trigger = yes
+	}
+	option = { #greet them
+		name = EVTOPTB_SNW_2914
+		guilds_holo_irritated_trigger = yes
+
+	}
+	option = { #roll your eyes
+		name = EVTOPTC_SNW_2914
+		add_trait = cynical
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #ignore them
+		name = EVTOPTD_SNW_2914
+		guilds_holo_pleased_trigger = yes
+	}
+}
+
+#Holo shepherd
+character_event = {
+	id = SNW.2915
+	desc = EVTDESC_SNW_2915
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	immediate = { set_character_flag = guilds_is_using_goods }
+	
+	option = { #what with that look
+		name = EVTOPTA_SNW_2915
+		random = {
+			chance = 25
+			add_trait = deceitful
+		}
+		guilds_holo_irritated_trigger = yes
+	}
+	option = { #bribe her with mutton
+		name = EVTOPTB_SNW_2915
+		if = {
+			limit = {
+				has_artifact = guilds_item_meat
+			}
+			random_artifact = {
+	    		limit = { artifact_type = guilds_item_meat }
+				transfer_artifact = {
+					from = ROOT
+					to = FROM
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_artifact = guilds_item_meat }
+			}
+			scaled_wealth = { value = -0.10 min = -10 max = -100 }
+			FROM = { add_artifact = guilds_item_meat }
+			hidden_tooltip = {
+				ROOT = {
+					change_variable = { which = guildsxp value = 1 }
+				}
+			}
+		}
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #admit you got lost
+		name = EVTOPTC_SNW_2915
+		random = {
+			chance = 25
+			add_trait = honest
+		}
+		guilds_holo_pleased_trigger = yes
+	}
+	option = { #ignore her
+		name = EVTOPTD_SNW_2915
+		guilds_holo_unhappy_trigger = yes
+	}
+	after = {
+		clr_character_flag = guilds_is_using_goods
+	}
+}
+
+#Holo brag
+character_event = {
+	id = SNW.2916
+	desc = EVTDESC_SNW_2916
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #brag back
+		name = EVTOPTA_SNW_2916
+		random = {
+			chance = 50
+			add_trait = proud
+		}
+		guilds_holo_pleased_trigger = yes
+	}
+	option = { #sneaky comeback
+		name = EVTOPTB_SNW_2916
+		random = {
+			chance = 25
+			add_trait = gregarious
+		}
+		guilds_holo_irritated_trigger = yes
+	}
+	option = { #bow to her
+		name = EVTOPTC_SNW_2916
+		random = {
+			chance = 25
+			add_trait = humble
+		}
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #ignore her
+		name = EVTOPTD_SNW_2916
+		random = {
+			chance = 10
+			add_trait = shy
+		}
+		guilds_holo_unhappy_trigger = yes
+	}
+}
+
+#Holo orphan
+character_event = {
+	id = SNW.2917
+	desc = EVTDESC_SNW_2917
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #report the kid
+		name = EVTOPTA_SNW_2917
+		random_list = {
+			10 = { add_trait = just }
+			10 = { add_trait = arbitrary }
+			80 = {  }
+		}
+		guilds_holo_unhappy_trigger = yes
+	}
+	option = { #give coins
+		name = EVTOPTB_SNW_2917
+		random = {
+			chance = 25
+			add_trait = charitable
+		}
+		scaled_wealth = { value = -0.05 min = -5 max = -50 }
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #give holo coins so she take care of it
+		name = EVTOPTC_SNW_2917
+		random = {
+			chance = 25
+			add_trait = kind
+		}
+		scaled_wealth = { value = -0.10 min = -10 max = -100 }
+		guilds_holo_pleased_trigger = yes
+	}
+	option = { #ignore the kid
+		name = EVTOPTD_SNW_2917
+		random = {
+			chance = 25
+			add_trait = proud
+		}
+		guilds_holo_irritated_trigger = yes
+	}
+}
+
+#Holo wolf pack
+character_event = {
+	id = SNW.2918
+	desc = EVTDESC_SNW_2918
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #hire hunter
+		name = EVTOPTA_SNW_2918
+		scaled_wealth = { value = -0.2 min = -20 max = -150 }
+		guilds_holo_unhappy_trigger = yes
+	}
+	option = { #put warning signs
+		name = EVTOPTB_SNW_2918
+		scaled_wealth = { value = -0.02 min = -2 max = -20 }
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #these dogs pose no threat
+		name = EVTOPTC_SNW_2918
+		guilds_holo_irritated_trigger = yes
+	}
+	option = { #ignore them
+		name = EVTOPTD_SNW_2918
+		guilds_holo_pleased_trigger = yes
+	}
+}
+
+#Holo music
+character_event = {
+	id = SNW.2919
+	desc = EVTDESC_SNW_2919
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #buy instrument
+		name = EVTOPTA_SNW_2919
+		add_artifact = guilds_item_music
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_music_tooltip }
+		scaled_wealth = { value = -0.80 min = -80 max = -800 }
+		if = {
+			limit = { 
+				FROM = { 
+					owner = {
+						or = {
+							has_character_modifier = guilds_buff_feast
+							has_character_modifier = fabulous_feast
+							has_character_modifier = holding_large_feast
+							has_character_modifier = holding_diwali_feast 
+							has_character_modifier = holding_kali_puja_feast
+							has_character_modifier = holding_zun_feast
+							has_character_flag = holding_blot
+							has_character_flag = holding_ukon_juhla
+							has_character_flag = holding_uzgavenes
+							has_character_flag = holding_jarilo
+							has_character_modifier = holding_summer_fair
+							has_character_flag = tournament_begins
+							has_character_flag = tournament_begins_furusiyya
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_festivitie_tooltip }
+			scaled_wealth = { value = -0.15 min = -15 max = -150 } #festivitie bonus
+		}
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						OR = {
+							has_province_modifier = depopulated_1
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_3
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = 0.1 min = 10 max = 100 } #prosperity malus
+		}
+		if = {
+			limit = { FROM = { location = { has_epidemic = yes } } }
+			custom_tooltip = { text = guilds_goods_bonus_epidemic_tooltip }
+			scaled_wealth = { value = 0.05 min = 5 max = 50 } #epidemic malus
+		}
+		guilds_holo_pleased_trigger = yes
+	}
+	option = { #buy and play instrument
+		name = EVTOPTB_SNW_2919
+		add_artifact = guilds_item_music
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_music_tooltip }
+		scaled_wealth = { value = -0.80 min = -80 max = -800 }
+		if = {
+			limit = { 
+				FROM = { 
+					owner = {
+						or = {
+							has_character_modifier = guilds_buff_feast
+							has_character_modifier = fabulous_feast
+							has_character_modifier = holding_large_feast
+							has_character_modifier = holding_diwali_feast 
+							has_character_modifier = holding_kali_puja_feast
+							has_character_modifier = holding_zun_feast
+							has_character_flag = holding_blot
+							has_character_flag = holding_ukon_juhla
+							has_character_flag = holding_uzgavenes
+							has_character_flag = holding_jarilo
+							has_character_modifier = holding_summer_fair
+							has_character_flag = tournament_begins
+							has_character_flag = tournament_begins_furusiyya
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_festivitie_tooltip }
+			scaled_wealth = { value = -0.15 min = -15 max = -150 } #festivitie bonus
+		}
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						OR = {
+							has_province_modifier = depopulated_1
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_3
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = 0.1 min = 10 max = 100 } #prosperity malus
+		}
+		if = {
+			limit = { FROM = { location = { has_epidemic = yes } } }
+			custom_tooltip = { text = guilds_goods_bonus_epidemic_tooltip }
+			scaled_wealth = { value = 0.05 min = 5 max = 50 } #epidemic malus
+		}
+		random_list = {
+			50 = {
+				location = {
+					add_province_modifier = {
+						name = guilds_music_good
+						months = 12
+					}
+				}
+			}
+			50 = {
+				location = {
+					add_province_modifier = {
+						name = guilds_music_bad
+						months = 12
+					}
+				}
+			}
+		}
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #buy and resell
+		name = EVTOPTC_SNW_2919
+		scaled_wealth = { value = -0.40 min = -40 max = -400 }
+		location = {
+			add_province_modifier = {
+				name = guilds_buff_music
+				months = 48
+			}
+		}
+		guilds_holo_irritated_trigger = yes
+	}
+	option = { #refuse
+		name = EVTOPTD_SNW_2919
+		guilds_holo_unhappy_trigger = yes
+	}
+}
+
+#Holo velvet
+character_event = {
+	id = SNW.2920
+	desc = EVTDESC_SNW_2920
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #buy velvet
+		name = EVTOPTA_SNW_2920
+		add_artifact = guilds_item_velvet
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_velvet_tooltip }
+		scaled_wealth = { value = -0.80 min = -80 max = -800 }
+		if = {
+			limit = { FROM = { location = { has_province_modifier = guilds_buff_dye } } }
+			custom_tooltip = { text = guilds_goods_bonus_goods_tooltip }
+			scaled_wealth = { value = -0.10 min = -10 max = -100 } #goods bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = { 
+					location = {
+						has_province_modifier = prosperity_modifier_3
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.1 min = -10 max = -100 } #prosperity bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = { 
+					location = {
+						OR = {
+							has_province_modifier = depopulated_1
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_3
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = 0.2 min = 20 max = 200 } #prosperity malus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = { 
+					location = {
+						NOR = {
+							has_province_modifier = prosperity_modifier_3
+							has_province_modifier = prosperity_modifier_2
+							has_province_modifier = depopulated_1
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_3
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = 0.1 min = 10 max = 100 } #prosperity malus
+		}
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #buy linen
+		name = EVTOPTB_SNW_2920
+		add_artifact = guilds_item_linen
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_linen_tooltip }
+		scaled_wealth = { value = -0.55 min = -55 max = -550 }
+		if = {
+			limit = { FROM = { location = { has_province_modifier = guilds_buff_dye } } }
+			custom_tooltip = { text = guilds_goods_bonus_goods_tooltip }
+			scaled_wealth = { value = -0.10 min = -10 max = -100 } #goods bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = { 
+					location = { 
+						OR = {
+							has_province_modifier = prosperity_modifier_2
+							has_province_modifier = prosperity_modifier_3
+						}
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.1 min = -10 max = -100 } #prosperity bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = { 
+					location = {
+						OR = {
+							has_province_modifier = depopulated_1
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_3
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = 0.1 min = 10 max = 100 } #prosperity malus
+		}
+		if = {
+			limit = {
+				FROM = { 
+					location = {
+						OR = {
+							terrain = farmlands
+							terrain = jungle
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_terrain_tooltip }
+			scaled_wealth = { value = 0.05 min = 5 max = 50 } #terrain malus
+		}
+		if = {
+			limit = {
+				FROM = { 
+					location = {
+						OR = {
+							terrain = desert
+							terrain = arctic
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_terrain_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #terrain bonus
+		}
+		guilds_holo_irritated_trigger = yes
+	}
+	option = { #buy wool
+		name = EVTOPTC_SNW_2920
+		add_artifact = guilds_item_wool
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_wool_tooltip }
+		scaled_wealth = { value = -0.3 min = -30 max = -300 }
+		if = {
+			limit = { FROM = { location = { has_province_modifier = guilds_buff_dye } } }
+			custom_tooltip = { text = guilds_goods_bonus_goods_tooltip }
+			scaled_wealth = { value = -0.10 min = -10 max = -100 } #goods bonus
+		}
+		if = {
+			limit = {
+				FROM = {
+					location = {
+						OR = {
+							terrain = farmlands
+							terrain = plains
+							terrain = steppe 
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_terrain_tooltip }
+			scaled_wealth = { value = 0.05 min = 5 max = 50 } #terrain malus
+		}
+		if = {
+			limit = {
+				FROM = {
+					location = {
+						OR = {
+							terrain = arctic
+							is_winter = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_terrain_tooltip }
+			scaled_wealth = { value = -0.1 min = -10 max = -100 } #terrain bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+				location = { 
+						OR = {
+							has_province_modifier = prosperity_modifier_2
+							has_province_modifier = prosperity_modifier_3
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = 0.05 min = 5 max = 50 } #prosperity malus
+		}
+		guilds_holo_pleased_trigger = yes
+	}
+	option = { #refuse
+		name = EVTOPTD_SNW_2920
+		guilds_holo_unhappy_trigger = yes
+	}
+}
+
+#Holo glass
+character_event = {
+	id = SNW.2921
+	desc = EVTDESC_SNW_2921
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #buy instrument
+		name = EVTOPTA_SNW_2921
+		add_artifact = guilds_item_glassware
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_glassware_tooltip }
+		scaled_wealth = { value = -0.80 min = -80 max = -800 }
+		custom_tooltip = { text = guilds_charming_discount }
+		scaled_wealth = { value = 0.20 min = 20 max = 200 }
+		if = {
+			limit = { FROM = { location = { has_settlement_construction = yes } } }
+			custom_tooltip = { text = guilds_goods_bonus_construction_tooltip }
+			scaled_wealth = { value = -0.10 min = -10 max = -100 } #construction bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = { 
+					location = {
+						NOR = {
+							has_province_modifier = depopulated_1
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_3
+							has_province_modifier = prosperity_modifier_1
+							has_province_modifier = prosperity_modifier_2
+							has_province_modifier = prosperity_modifier_3
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = 0.05 min = 5 max = 50 } #prosperity malus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = { 
+					location = { 
+						has_province_modifier = prosperity_modifier_2
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.1 min = -10 max = -100 } #prosperity bonus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = { 
+					location = { 
+						has_province_modifier = prosperity_modifier_3
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.15 min = -15 max = -150 } #prosperity bonus
+		}
+		if = {
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = { 
+					location = {
+						OR = {
+							has_province_modifier = depopulated_1
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_3
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = 0.10 min = 10 max = 100 } #prosperity malus
+		}
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #buy and donate temple
+		name = EVTOPTC_SNW_2921
+		scaled_wealth = { value = -0.80 min = -80 max = -800 }
+		custom_tooltip = { text = guilds_charming_discount }
+		scaled_wealth = { value = 0.20 min = 20 max = 200 }
+		piety = 200
+		location = {
+			add_province_modifier = {
+				name = guilds_buff_glassware
+				months = 48
+			}
+		}
+		# guilds_holo_irritated_trigger = yes
+	}
+	option = { #refuse
+		name = EVTOPTD_SNW_2921
+		guilds_holo_irritated_trigger = yes
+	}
+}
+
+#Holo dye
+character_event = {
+	id = SNW.2922
+	desc = EVTDESC_SNW_2922
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #buy dye
+		name = EVTOPTA_SNW_2922
+		add_artifact = guilds_item_dye
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_dye_tooltip }
+		scaled_wealth = { value = -1.05 min = -105 max = -1050 }
+		if = {
+			limit = { 
+				FROM = { 
+					owner = {
+						OR = {
+							has_character_modifier = holding_diwali_feast 
+							has_character_modifier = holding_kali_puja_feast
+							has_character_modifier = holding_summer_fair
+							has_character_flag = tournament_begins
+							has_character_flag = tournament_begins_furusiyya
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_festivitie_tooltip }
+			scaled_wealth = { value = -0.1 min = -10 max = -100 } #festivitie bonus
+		}
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						OR = {
+							has_province_modifier = depopulated_1
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_3
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = 0.15 min = 15 max = 150 } #prosperity malus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						OR = {
+							has_province_modifier = prosperity_modifier_2
+							has_province_modifier = prosperity_modifier_3
+						}
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #prosperity bonus
+		}
+		guilds_holo_pleased_trigger = yes
+	}
+	option = { #buy food
+		name = EVTOPTC_SNW_2922
+		FROM = { add_artifact = guilds_item_meat }
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		# custom_tooltip = { text = guilds_item_meat_tooltip }
+		scaled_wealth = { value = -0.05 min = -5 max = -50 }
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						OR = { 
+							has_province_modifier = depopulated_1
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_3
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.10 min = -10 max = -100 } #prosperity bonus
+		}
+		if = {
+			limit = { FROM = { owner = { war = yes } } }
+			custom_tooltip = { text = guilds_goods_bonus_war_tooltip }
+			scaled_wealth = { value = -0.025 min = -2 max = -25 } #war bonus
+		}
+		if = {
+			limit = { 
+				FROM = {
+					owner = {
+						or = {
+							has_character_modifier = guilds_buff_feast
+							has_character_modifier = fabulous_feast
+							has_character_modifier = holding_large_feast
+							has_character_modifier = holding_diwali_feast 
+							has_character_modifier = holding_kali_puja_feast
+							has_character_modifier = holding_zun_feast
+							has_character_flag = holding_blot
+							has_character_flag = holding_ukon_juhla
+							has_character_flag = holding_uzgavenes
+							has_character_flag = holding_jarilo
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_festivitie_tooltip }
+			scaled_wealth = { value = -0.02 min = -2 max = -20 } #festivitie bonus
+		}
+		if = {
+			limit = { FROM = { location = { has_province_modifier = guilds_buff_spices } } }
+			custom_tooltip = { text = guilds_goods_bonus_goods_tooltip }
+			scaled_wealth = { value = -0.02 min = -2 max = -20 } #goods bonus
+		}
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #refuse
+		name = EVTOPTD_SNW_2922
+		# guilds_holo_irritated_trigger = yes
+	}
+}
+
+#Holo statue
+character_event = {
+	id = SNW.2923
+	desc = EVTDESC_SNW_2923
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = { #buy a small one
+		name = EVTOPTA_SNW_2923
+		add_artifact = guilds_item_statue
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_statue_tooltip }
+		scaled_wealth = { value = -0.15 min = -15 max = -150 }
+		prestige = -50
+		if = {
+			limit = { FROM = { location = { has_settlement_construction = yes } } }
+			custom_tooltip = { text = guilds_goods_bonus_construction_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #construction bonus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						has_province_modifier = prosperity_modifier_1
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #prosperity bonus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						has_province_modifier = prosperity_modifier_2
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.1 min = -10 max = -100 } #prosperity bonus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						has_province_modifier = prosperity_modifier_3
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.15 min = -15 max = 150 } #prosperity bonus
+		}
+		guilds_holo_happy_trigger = yes
+	}
+	option = { #buy a religious one
+		name = EVTOPTB_SNW_2923
+		add_artifact = guilds_item_statue
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_statue_tooltip }
+		scaled_wealth = { value = -0.30 min = -30 max = -300 }
+		piety = 50
+		if = {
+			limit = { FROM = { location = { has_settlement_construction = yes } } }
+			custom_tooltip = { text = guilds_goods_bonus_construction_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #construction bonus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						has_province_modifier = prosperity_modifier_1
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #prosperity bonus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						has_province_modifier = prosperity_modifier_2
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.1 min = -10 max = -100 } #prosperity bonus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						has_province_modifier = prosperity_modifier_3
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.15 min = -15 max = 150 } #prosperity bonus
+		}
+		guilds_holo_unhappy_trigger = yes
+	}
+	option = { #buy a large one
+		name = EVTOPTC_SNW_2923
+		add_artifact = guilds_item_statue
+		hidden_tooltip = {
+			ROOT = {
+				change_variable = { which = guildsxp value = 1 }
+			}
+		}
+		custom_tooltip = { text = guilds_item_statue_tooltip }
+		scaled_wealth = { value = -0.45 min = -45 max = -450 }
+		prestige = 50
+		if = {
+			limit = { FROM = { location = { has_settlement_construction = yes } } }
+			custom_tooltip = { text = guilds_goods_bonus_construction_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #construction bonus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						has_province_modifier = prosperity_modifier_1
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.05 min = -5 max = -50 } #prosperity bonus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						has_province_modifier = prosperity_modifier_2
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.1 min = -10 max = -100 } #prosperity bonus
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Reapers"
+				FROM = {
+					location = { 
+						has_province_modifier = prosperity_modifier_3
+					} 
+				}
+			}
+			custom_tooltip = { text = guilds_goods_bonus_prosperity_tooltip }
+			scaled_wealth = { value = -0.15 min = -15 max = 150 } #prosperity bonus
+		}
+		guilds_holo_pleased_trigger = yes
+	}
+	option = { #leave
+		name = EVTOPTD_SNW_2923
+		# guilds_holo_irritated_trigger = yes
+	}
+}
+
+#Holo is happy ping
+character_event = {
+	id = SNW.29100
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { character_event = { id = SNW.29104 } }
+	}
+}
+
+#Holo is please ping
+character_event = {
+	id = SNW.29101
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { character_event = { id = SNW.29105 } }
+	}
+}
+
+#Holo is irritated ping
+character_event = {
+	id = SNW.29102
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { character_event = { id = SNW.29106 } }
+	}
+}
+
+#Holo is unhappy ping
+character_event = {
+	id = SNW.29103
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { character_event = { id = SNW.29107 } }
+	}
+}
+
+#holo is happy
+character_event = {
+	id = SNW.29104
+	desc = EVTDESC_SNW_29104
+	picture = GFX_evt_guilds_holo_event
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	# hide_from = yes
+	
+	option = {
+		name = OK 
+	}
+}
+
+#holo is please
+character_event = {
+	id = SNW.29105
+	desc = EVTDESC_SNW_29105
+	picture = GFX_evt_guilds_holo_event
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+
+#holo is irritated
+character_event = {
+	id = SNW.29106
+	desc = EVTDESC_SNW_29106
+	picture = GFX_evt_guilds_holo_event
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+
+#holy is unhappy
+character_event = {
+	id = SNW.29107
+	desc = EVTDESC_SNW_29107
+	picture = GFX_evt_guilds_holo_event
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+
+#Holo become friend and wolfy
+narrative_event = {
+	id = SNW.293
+	title = EVTNAME_SNW_293
+	desc = EVTDESC_SNW_293
+	picture = GFX_evt_guilds_holo_event
+	border = GFX_event_narrative_frame_economy_guilds
+
+	is_triggered_only = yes
+	
+	option = { #become wolf
+		name = EVTOPTA_SNW_293
+		FROM = {
+			set_character_flag = wolf_blood_first_generation
+			add_character_modifier = {
+				modifier = wolf_blood
+				duration = -1
+			}
+			give_nickname = guilds_nick_the_wise_wolf
+		}
+		FROM = { character_event = { id = SNW.2931 } }
+		FROM = { character_event = { id = SNW.2940 days = 1800 random = 100 } }
+	}
+	option = { #burn the heretic
+		name = EVTOPTB_SNW_293
+		FROM = {
+			set_character_flag = wolf_blood_first_generation
+			add_character_modifier = {
+				modifier = wolf_blood
+				duration = -1
+			}
+			give_nickname = guilds_nick_the_wise_wolf
+		}
+		FROM = { character_event = { id = SNW.2933 } }
+	}
+}
+
+#Holo is accepted ping
+character_event = {
+	id = SNW.2931
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { character_event = { id = SNW.2932 } }
+	}
+}
+
+#Holo is rejected ping
+character_event = {
+	id = SNW.2933
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { character_event = { id = SNW.2934 } }
+	}
+}
+
+#Holo friend is accepted
+character_event = {
+	id = SNW.2932
+	desc = EVTDESC_SNW_2932
+	picture = GFX_evt_guilds_holo_event
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SNW_2932
+		custom_tooltip = { text = guilds_holo_councillor }
+		FROM = {
+			set_character_flag = special_chancellor
+			set_character_flag = special_treasurer
+			set_character_flag = special_spymaster
+			set_character_flag = guilds_holo_friend
+		}
+		add_friend = FROM
+	}
+}
+
+#Holo friend is rejected
+character_event = {
+	id = SNW.2934
+	desc = EVTDESC_SNW_2934
+	picture = GFX_evt_guilds_holo_event
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SNW_2934
+		FROM = { add_artifact = guilds_holo_hair }
+		new_artifact = {
+			transfer_artifact = {
+				from = FROM
+				to = ROOT
+			}
+		}
+		FROM = { character_event = { id = SNW.2951 } }
+	}
+}
+
+#Holo deadline ping
+character_event = {
+	id = SNW.2940
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { narrative_event = { id = SNW.294 } }
+	}
+}
+
+#Holo become lover or forever alone
+narrative_event = {
+	id = SNW.294
+	title = EVTNAME_SNW_294
+	# desc = EVTDESC_SNW_294
+	picture = GFX_evt_guilds_holo_event
+	border = GFX_event_narrative_frame_economy_guilds
+
+	desc = {
+		trigger = { is_female = no }
+		text = EVTDESC_SNW_294_A
+	}
+	desc = {
+		trigger = { is_female = yes }
+		text = EVTDESC_SNW_294_B
+	}
+	
+	is_triggered_only = yes
+	
+	option = { #lover
+		name = EVTOPTA_SNW_294
+		trigger = { 
+			is_female = no
+			FROM = { check_variable = { which = guilds_holo_variable value >= 25 } }
+		}
+		add_lover = FROM
+		custom_tooltip = { text = guilds_holo_leave_unless_married }
+		FROM = { set_character_flag = guilds_holo_lover }
+		FROM = { character_event = { id = SNW.2941 days = 720 } }
+	}
+	
+	option = { #stay friend
+		name = EVTOPTB_SNW_294
+		custom_tooltip = { text = guilds_holo_will_leave }
+		FROM = { set_character_flag = guilds_holo_alone }
+		FROM = { character_event = { id = SNW.2941 days = 1800 random = 100 } }
+	}
+}
+
+#Holo is leaving, giving charm ping
+character_event = {
+	id = SNW.2941
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		is_married = no
+	}
+	
+	immediate = {
+		FROM = { narrative_event = { id = SNW.2942 } }
+		character_event = { id = SNW.295 days = 30 } #in case FROM died
+	}
+}
+
+#Holo has left and gave charm
+narrative_event = {
+	id = SNW.2942
+	title = EVTNAME_SNW_2942
+	# desc = EVTDESC_SNW_2942_B
+	picture = GFX_evt_guilds_holo_event
+	border = GFX_event_narrative_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	desc = {
+		trigger = { FROM = { NOT = { is_mother = ROOT } } }
+		text = EVTDESC_SNW_2942_A
+	}
+	desc = {
+		trigger = { FROM = { is_mother = ROOT } }
+		text = EVTDESC_SNW_2942_B
+	}
+	
+	
+	immediate = { 
+	}
+	
+	option = {
+		name = EVTOPTA_SNW_2942
+		FROM = { add_artifact = guilds_holo_charm }
+		new_artifact = {
+			transfer_artifact = {
+				from = FROM
+				to = ROOT
+			}
+		}
+		FROM = { character_event = { id = SNW.295 } }
+	}
+}
+
+#Holo is deleted happy 
+character_event = {
+	id = SNW.295
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		death = { death_reason = death_missing }
+	}
+}
+
+#Holo is deleted unhappy
+character_event = {
+	id = SNW.2951
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = { 
+		has_character_flag = guilds_is_holo
+	}
+	
+	immediate = {
+		FROM = { character_event = { id = SNW.2952 days = 30 random = 15 } }
+		death = { death_reason = death_missing }
+	}
+}
+
+#Holo is deleted unhappy reaction
+character_event = {
+	id = SNW.2952
+	desc = EVTDESC_SNW_2952
+	picture = GFX_evt_merchant_caravan
+	border = GFX_event_normal_frame_economy_guilds
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SNW_2952
+		any_demesne_province = {
+			add_province_modifier = {
+				name = guilds_holo_sheep
+				months = 24
+			}
+		}
+	}
+}
+
+#Holo give family flags to her children on birth
+character_event = {
+	id = SNW.296
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			father = {
+				has_character_flag = guilds_holo_family
+			}
+			mother = {
+				OR = {
+					has_character_flag = guilds_holo_family
+					has_character_flag = guilds_is_holo
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		set_character_flag = guilds_holo_family
+	}
+}
+
+#When laurence die, holo will gain her trait back and leave a few years later
+character_event = {
+	id = SNW.297
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	ai = no
+	
+	trigger = { 
+		# OR = {
+			has_character_flag = guilds_met_holo
+			# has_character_flag = guilds_holo_family
+		# }
+	}
+	immediate = {
+		any_courtier = {
+			limit = { has_character_flag = guilds_is_holo }
+			add_trait = nun
+			add_trait = celibate
+			character_event = { id = SNW.2971 days = 1800 }
+		}
+	}
+}
+
+#Holo is deleted but gave her charm to her child
+character_event = {
+	id = SNW.2971
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		any_child = {
+			limit = { 
+				AI = no
+				has_character_flag = guilds_holo_family
+			}
+			narrative_event = { id = SNW.2942 } #give charm to child 
+		}
+	}
+}

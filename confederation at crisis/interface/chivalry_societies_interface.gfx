@@ -1,0 +1,3026 @@
+spriteTypes = {
+	
+	spriteType = { #The 4 ranks pictures
+		name = "GFX_chivalry_societies_ranks" #make sure that to replace the chivalry_societies in every name by the code name of your society
+		texturefile = "gfx\\interface\\societies\\rank_icons_chivalry_societies.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = { #The rank you are
+		name = "GFX_chivalry_societies_ranks_highlight"
+		texturefile = "gfx\\interface\\societies\\rank_icons_chivalry_societies_highlight.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = { #The ranks when not available
+		name = "GFX_chivalry_societies_ranks_locked"
+		texturefile = "gfx\\interface\\societies\\rank_icons_chivalry_societies_locked.dds"
+		noOfFrames = 4
+	}
+	
+	##### knights_templar #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_knights_templar"
+		texturefile = "gfx\\interface\\societies\\society_bg_knights_templar.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_knights_templar"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_knights_templar"
+		texturefile = "gfx\\interface\\societies\\symbol_small_knights_templar.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_knights_templar"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_knights_templar"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_knights_templar"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_knights_templar"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_knights_templar"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### knights_hospitaller #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_knights_hospitaller"
+		texturefile = "gfx\\interface\\societies\\society_bg_knights_hospitaller.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_knights_hospitaller"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_knights_hospitaller"
+		texturefile = "gfx\\interface\\societies\\symbol_small_knights_hospitaller.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_knights_hospitaller"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_knights_hospitaller"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_knights_hospitaller"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_knights_hospitaller"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_knights_hospitaller"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### teutonic_order #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_teutonic_order"
+		texturefile = "gfx\\interface\\societies\\society_bg_teutonic_order.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_teutonic_order"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_teutonic_order"
+		texturefile = "gfx\\interface\\societies\\symbol_small_teutonic_order.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_teutonic_order"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_teutonic_order"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_teutonic_order"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_teutonic_order"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_teutonic_order"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### knights_calatrava #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_knights_calatrava"
+		texturefile = "gfx\\interface\\societies\\society_bg_knights_calatrava.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_knights_calatrava"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_knights_calatrava"
+		texturefile = "gfx\\interface\\societies\\symbol_small_knights_calatrava.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_knights_calatrava"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_knights_calatrava"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_knights_calatrava"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_knights_calatrava"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_knights_calatrava"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### knights_santiago #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_knights_santiago"
+		texturefile = "gfx\\interface\\societies\\society_bg_knights_santiago.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_knights_santiago"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_knights_santiago"
+		texturefile = "gfx\\interface\\societies\\symbol_small_knights_santiago.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_knights_santiago"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_knights_santiago"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_knights_santiago"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_knights_santiago"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_knights_santiago"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### holy_sepulchre #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_holy_sepulchre"
+		texturefile = "gfx\\interface\\societies\\society_bg_holy_sepulchre.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_holy_sepulchre"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_holy_sepulchre"
+		texturefile = "gfx\\interface\\societies\\symbol_small_holy_sepulchre.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_holy_sepulchre"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_holy_sepulchre"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_holy_sepulchre"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_holy_sepulchre"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_holy_sepulchre"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### saint_anthony #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_saint_anthony"
+		texturefile = "gfx\\interface\\societies\\society_bg_saint_anthony.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_saint_anthony"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_saint_anthony"
+		texturefile = "gfx\\interface\\societies\\symbol_small_saint_anthony.dds" #could be better forget
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_saint_anthony"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_saint_anthony"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_saint_anthony"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_saint_anthony"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_saint_anthony"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### saint_addai #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_saint_addai"
+		texturefile = "gfx\\interface\\societies\\society_bg_saint_addai.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_saint_addai"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_saint_addai"
+		texturefile = "gfx\\interface\\societies\\symbol_small_saint_addai.dds" #could be better forget
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_saint_addai"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_saint_addai"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_saint_addai"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_saint_addai"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_saint_addai"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### bektashi #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_bektashi"
+		texturefile = "gfx\\interface\\societies\\society_bg_bektashi.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_bektashi"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_bektashi"
+		texturefile = "gfx\\interface\\societies\\symbol_small_bektashi.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_bektashi"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_bektashi"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_bektashi"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_bektashi"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_bektashi"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### haruriyyah #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_haruriyyah"
+		texturefile = "gfx\\interface\\societies\\society_bg_haruriyyah.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_haruriyyah"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_haruriyyah"
+		texturefile = "gfx\\interface\\societies\\symbol_small_haruriyyah.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_haruriyyah"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_haruriyyah"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_haruriyyah"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_haruriyyah"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_haruriyyah"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### zealots #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_zealots"
+		texturefile = "gfx\\interface\\societies\\society_bg_zealots.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_zealots"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_zealots"
+		texturefile = "gfx\\interface\\societies\\symbol_small_zealots.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_zealots"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_zealots"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_zealots"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_zealots"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_zealots"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### immortals #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_immortals"
+		texturefile = "gfx\\interface\\societies\\society_bg_immortals.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_immortals"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_immortals"
+		texturefile = "gfx\\interface\\societies\\symbol_small_immortals.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_immortals"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_immortals"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_immortals"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_immortals"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_immortals"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### jomsvikings #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_jomsvikings"
+		texturefile = "gfx\\interface\\societies\\society_bg_jomsvikings.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_jomsvikings"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_jomsvikings"
+		texturefile = "gfx\\interface\\societies\\symbol_small_jomsvikings.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_jomsvikings"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_jomsvikings"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_jomsvikings"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_jomsvikings"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_jomsvikings"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### sky_lords #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_sky_lords"
+		texturefile = "gfx\\interface\\societies\\society_bg_sky_lords.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_sky_lords"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_sky_lords"
+		texturefile = "gfx\\interface\\societies\\symbol_small_sky_lords.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_sky_lords"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_sky_lords"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_sky_lords"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_sky_lords"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_sky_lords"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### spirit_guardians #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_spirit_guardians"
+		texturefile = "gfx\\interface\\societies\\society_bg_spirit_guardians.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_spirit_guardians"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_spirit_guardians"
+		texturefile = "gfx\\interface\\societies\\symbol_small_spirit_guardians.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_spirit_guardians"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_spirit_guardians"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_spirit_guardians"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_spirit_guardians"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_spirit_guardians"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### warriors_perun #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_warriors_perun"
+		texturefile = "gfx\\interface\\societies\\society_bg_warriors_perun.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_warriors_perun"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_warriors_perun"
+		texturefile = "gfx\\interface\\societies\\symbol_small_warriors_perun.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_warriors_perun"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_warriors_perun"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_warriors_perun"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_warriors_perun"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_warriors_perun"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### chosen_perkunas #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_chosen_perkunas"
+		texturefile = "gfx\\interface\\societies\\society_bg_chosen_perkunas.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_chosen_perkunas"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_chosen_perkunas"
+		texturefile = "gfx\\interface\\societies\\symbol_small_chosen_perkunas.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_chosen_perkunas"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_chosen_perkunas"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_chosen_perkunas"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_chosen_perkunas"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_chosen_perkunas"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### sons_kaleva #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_sons_kaleva"
+		texturefile = "gfx\\interface\\societies\\society_bg_sons_kaleva.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_sons_kaleva"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_sons_kaleva"
+		texturefile = "gfx\\interface\\societies\\symbol_small_sons_kaleva.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_sons_kaleva"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_sons_kaleva"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_sons_kaleva"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_sons_kaleva"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_sons_kaleva"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### huitzilopochtli #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_huitzilopochtli"
+		texturefile = "gfx\\interface\\societies\\society_bg_huitzilopochtli.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_huitzilopochtli"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_huitzilopochtli"
+		texturefile = "gfx\\interface\\societies\\symbol_small_huitzilopochtli.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_huitzilopochtli"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_huitzilopochtli"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_huitzilopochtli"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_huitzilopochtli"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_huitzilopochtli"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### ashokas_chosen #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_ashokas_chosen"
+		texturefile = "gfx\\interface\\societies\\society_bg_ashokas_chosen.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_ashokas_chosen"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_ashokas_chosen"
+		texturefile = "gfx\\interface\\societies\\symbol_small_ashokas_chosen.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_ashokas_chosen"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_ashokas_chosen"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_ashokas_chosen"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_ashokas_chosen"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_ashokas_chosen"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### followers_arjuna #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_followers_arjuna"
+		texturefile = "gfx\\interface\\societies\\society_bg_followers_arjuna.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_followers_arjuna"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_followers_arjuna"
+		texturefile = "gfx\\interface\\societies\\symbol_small_followers_arjuna.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_followers_arjuna"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_followers_arjuna"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_followers_arjuna"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_followers_arjuna"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_followers_arjuna"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	#### bulls_rishabha #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_bulls_rishabha"
+		texturefile = "gfx\\interface\\societies\\society_bg_bulls_rishabha.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_bulls_rishabha"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_bulls_rishabha"
+		texturefile = "gfx\\interface\\societies\\symbol_small_bulls_rishabha.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_bulls_rishabha"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_bulls_rishabha"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_bulls_rishabha"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_bulls_rishabha"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_bulls_rishabha"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+
+	##### zun_warriors #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_zun_warriors"
+		texturefile = "gfx\\interface\\societies\\society_bg_zun_warriors.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_zun_warriors"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_zun_warriors"
+		texturefile = "gfx\\interface\\societies\\symbol_small_zun_warriors.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_zun_warriors"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_zun_warriors"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_zun_warriors"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_zun_warriors"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_zun_warriors"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### army_light #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_army_light"
+		texturefile = "gfx\\interface\\societies\\society_bg_army_light.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_army_light"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_army_light"
+		texturefile = "gfx\\interface\\societies\\symbol_small_army_light.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_army_light"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_army_light"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_army_light"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_army_light"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_army_light"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### myrmidons #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_myrmidons"
+		texturefile = "gfx\\interface\\societies\\society_bg_myrmidons.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_myrmidons"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_myrmidons"
+		texturefile = "gfx\\interface\\societies\\symbol_small_myrmidons.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_myrmidons"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_myrmidons"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_myrmidons"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_myrmidons"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_myrmidons"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### dralhas_children #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_dralhas_children"
+		texturefile = "gfx\\interface\\societies\\society_bg_dralhas_children.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_dralhas_children"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_dralhas_children"
+		texturefile = "gfx\\interface\\societies\\symbol_small_dralhas_children.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_dralhas_children"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_dralhas_children"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_dralhas_children"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_dralhas_children"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_dralhas_children"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### western_guild #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_western_guild"
+		texturefile = "gfx\\interface\\societies\\society_bg_western_guild.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_western_guild"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_blood_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_western_guild"
+		texturefile = "gfx\\interface\\societies\\symbol_small_western_guild.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_western_guild"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_western_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_western_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_western_guild"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_western_guild"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_blood_societies.dds"
+	}
+	
+	##### southern_guild #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_southern_guild"
+		texturefile = "gfx\\interface\\societies\\society_bg_southern_guild.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_southern_guild"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_blood_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_southern_guild"
+		texturefile = "gfx\\interface\\societies\\symbol_small_southern_guild.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_southern_guild"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_southern_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_southern_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_southern_guild"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_southern_guild"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_blood_societies.dds"
+	}
+	
+	##### northern_guild #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_northern_guild"
+		texturefile = "gfx\\interface\\societies\\society_bg_northern_guild.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_northern_guild"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_blood_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_northern_guild"
+		texturefile = "gfx\\interface\\societies\\symbol_small_northern_guild.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_northern_guild"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_northern_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_northern_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_northern_guild"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_northern_guild"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_blood_societies.dds"
+	}
+	
+	##### eastern_guild #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_eastern_guild"
+		texturefile = "gfx\\interface\\societies\\society_bg_eastern_guild.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_eastern_guild"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_blood_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_eastern_guild"
+		texturefile = "gfx\\interface\\societies\\symbol_small_eastern_guild.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_eastern_guild"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_eastern_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_eastern_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_eastern_guild"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_eastern_guild"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_blood_societies.dds"
+	}
+
+	### MODDED SOCIETY
+
+	##### livonian_brothers_of_the_sword #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_livonian_brothers_of_the_sword"
+		texturefile = "gfx\\interface\\societies\\society_bg_livonian_brothers_of_the_sword.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_livonian_brothers_of_the_sword"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_livonian_brothers_of_the_sword"
+		texturefile = "gfx\\interface\\societies\\symbol_small_livonian_brothers_of_the_sword.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_livonian_brothers_of_the_sword"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_livonian_brothers_of_the_sword"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_livonian_brothers_of_the_sword"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_livonian_brothers_of_the_sword"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_livonian_brothers_of_the_sword"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### saint_blaise #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_saint_blaise"
+		texturefile = "gfx\\interface\\societies\\society_bg_saint_blaise.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_saint_blaise"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_saint_blaise"
+		texturefile = "gfx\\interface\\societies\\symbol_small_saint_blaise.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_saint_blaise"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_saint_blaise"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_saint_blaise"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_saint_blaise"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_saint_blaise"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### knights_saint_mark #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_knights_saint_mark"
+		texturefile = "gfx\\interface\\societies\\society_bg_knights_saint_mark.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_knights_saint_mark"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_knights_saint_mark"
+		texturefile = "gfx\\interface\\societies\\symbol_small_knights_saint_mark.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_knights_saint_mark"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_knights_saint_mark"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_knights_saint_mark"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_knights_saint_mark"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_knights_saint_mark"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### army_lucifer #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_army_lucifer"
+		texturefile = "gfx\\interface\\societies\\society_bg_army_lucifer.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_army_lucifer"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_army_lucifer"
+		texturefile = "gfx\\interface\\societies\\symbol_small_army_lucifer.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_army_lucifer"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_army_lucifer"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_army_lucifer"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_army_lucifer"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_army_lucifer"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### arsiyah #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_arsiyah"
+		texturefile = "gfx\\interface\\societies\\society_bg_arsiyah.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_arsiyah"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_arsiyah"
+		texturefile = "gfx\\interface\\societies\\symbol_small_arsiyah.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_arsiyah"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_arsiyah"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_arsiyah"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_arsiyah"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_arsiyah"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### saqaliba #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_saqaliba"
+		texturefile = "gfx\\interface\\societies\\society_bg_saqaliba.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_saqaliba"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_saqaliba"
+		texturefile = "gfx\\interface\\societies\\symbol_small_saqaliba.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_saqaliba"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_saqaliba"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_saqaliba"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_saqaliba"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_saqaliba"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### devotees_of_the_true_prophet #####
+	
+	# spriteType = { 
+		# name = "GFX_society_main_background_society_devotees_of_the_true_prophet"
+		# texturefile = "gfx\\interface\\societies\\society_bg_devotees_of_the_true_prophet.dds"
+	# }
+	
+	# spriteType = { #common
+		# name = "GFX_society_expansion_background_society_devotees_of_the_true_prophet"
+		# texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	# }
+	
+	# spriteType = {
+		# name = "GFX_icon_small_society_devotees_of_the_true_prophet"
+		# texturefile = "gfx\\interface\\societies\\symbol_small_devotees_of_the_true_prophet.dds"
+		# noOfFrames = 2
+	# }
+	
+	# spriteType = { #common
+		# name = "GFX_society_influence_society_devotees_of_the_true_prophet"
+		# texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	# }
+	
+	# spriteType = { #common
+		# name = "GFX_society_portrait_ring_society_devotees_of_the_true_prophet"
+		# texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	# }
+	
+	# spriteType = { #common
+		# name = "GFX_society_portrait_ring_small_society_devotees_of_the_true_prophet"
+		# texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	# }
+	
+	# spriteType = { #common
+		# name = "GFX_society_currency_society_devotees_of_the_true_prophet"
+		# texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	# }
+	
+	# spriteType = {
+		# name = "GFX_event_window_society_quest_background_society_devotees_of_the_true_prophet"
+		# textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	# }
+	
+	##### ansar #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_ansar"
+		texturefile = "gfx\\interface\\societies\\society_bg_ansar.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_ansar"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_ansar"
+		texturefile = "gfx\\interface\\societies\\symbol_small_ansar.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_ansar"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_ansar"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_ansar"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_ansar"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_ansar"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### ghazi_sunni #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_ghazi_sunni"
+		texturefile = "gfx\\interface\\societies\\society_bg_ghazi.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_ghazi_sunni"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_ghazi_sunni"
+		texturefile = "gfx\\interface\\societies\\symbol_small_ghazi.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_ghazi_sunni"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_ghazi_sunni"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_ghazi_sunni"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_ghazi_sunni"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_ghazi_sunni"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### ghazi_shiite #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_ghazi_shiite"
+		texturefile = "gfx\\interface\\societies\\society_bg_ghazi.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_ghazi_shiite"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_ghazi_shiite"
+		texturefile = "gfx\\interface\\societies\\symbol_small_ghazi.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_ghazi_shiite"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_ghazi_shiite"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_ghazi_shiite"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_ghazi_shiite"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_ghazi_shiite"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### sons_of_judea #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_sons_of_judea"
+		texturefile = "gfx\\interface\\societies\\society_bg_sons_of_judea.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_sons_of_judea"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_sons_of_judea"
+		texturefile = "gfx\\interface\\societies\\symbol_small_sons_of_judea.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_sons_of_judea"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_sons_of_judea"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_sons_of_judea"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_sons_of_judea"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_sons_of_judea"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### braedralag #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_braedralag"
+		texturefile = "gfx\\interface\\societies\\society_bg_braedralag.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_braedralag"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_braedralag"
+		texturefile = "gfx\\interface\\societies\\symbol_small_braedralag.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_braedralag"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_braedralag"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_braedralag"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_braedralag"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_braedralag"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### harii #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_harii"
+		texturefile = "gfx\\interface\\societies\\society_bg_harii.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_harii"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_harii"
+		texturefile = "gfx\\interface\\societies\\symbol_small_harii.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_harii"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_harii"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_harii"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_harii"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_harii"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### fianna #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_fianna"
+		texturefile = "gfx\\interface\\societies\\society_bg_fianna.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_fianna"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_fianna"
+		texturefile = "gfx\\interface\\societies\\symbol_small_fianna.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_fianna"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_fianna"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_fianna"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_fianna"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_fianna"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### gwydion #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_gwydion"
+		texturefile = "gfx\\interface\\societies\\society_bg_gwydion.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_gwydion"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_gwydion"
+		texturefile = "gfx\\interface\\societies\\symbol_small_gwydion.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_gwydion"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_gwydion"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_gwydion"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_gwydion"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_gwydion"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### red_dragons #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_red_dragons"
+		texturefile = "gfx\\interface\\societies\\society_bg_red_dragons.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_red_dragons"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_red_dragons"
+		texturefile = "gfx\\interface\\societies\\symbol_small_red_dragons.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_red_dragons"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_red_dragons"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_red_dragons"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_red_dragons"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_red_dragons"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### anubis #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_anubis"
+		texturefile = "gfx\\interface\\societies\\society_bg_anubis.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_anubis"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_anubis"
+		texturefile = "gfx\\interface\\societies\\symbol_small_anubis.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_anubis"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_anubis"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_anubis"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_anubis"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_anubis"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### horus #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_horus"
+		texturefile = "gfx\\interface\\societies\\society_bg_horus.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_horus"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_horus"
+		texturefile = "gfx\\interface\\societies\\symbol_small_horus.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_horus"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_horus"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_horus"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_horus"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_horus"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### herculean #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_herculean"
+		texturefile = "gfx\\interface\\societies\\society_bg_herculean.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_herculean"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_herculean"
+		texturefile = "gfx\\interface\\societies\\symbol_small_herculean.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_herculean"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_herculean"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_herculean"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_herculean"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_herculean"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### sacred_band #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_sacred_band"
+		texturefile = "gfx\\interface\\societies\\society_bg_sacred_band.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_sacred_band"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_sacred_band"
+		texturefile = "gfx\\interface\\societies\\symbol_small_sacred_band.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_sacred_band"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_sacred_band"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_sacred_band"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_sacred_band"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_sacred_band"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### great_host #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_great_host"
+		texturefile = "gfx\\interface\\societies\\society_bg_great_host.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_great_host"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_great_host"
+		texturefile = "gfx\\interface\\societies\\symbol_small_great_host.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_great_host"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_great_host"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_great_host"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_great_host"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_great_host"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### guardians_of_the_sacred_flame #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_guardians_of_the_sacred_flame"
+		texturefile = "gfx\\interface\\societies\\society_bg_guardians_of_the_sacred_flame.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_guardians_of_the_sacred_flame"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_guardians_of_the_sacred_flame"
+		texturefile = "gfx\\interface\\societies\\symbol_small_guardians_of_the_sacred_flame.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_guardians_of_the_sacred_flame"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_guardians_of_the_sacred_flame"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_guardians_of_the_sacred_flame"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_guardians_of_the_sacred_flame"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_guardians_of_the_sacred_flame"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### disciples_of_the_old_gods #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_disciples_of_the_old_gods"
+		texturefile = "gfx\\interface\\societies\\society_bg_disciples_of_the_old_gods.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_disciples_of_the_old_gods"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_disciples_of_the_old_gods"
+		texturefile = "gfx\\interface\\societies\\symbol_small_disciples_of_the_old_gods.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_disciples_of_the_old_gods"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_disciples_of_the_old_gods"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_disciples_of_the_old_gods"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_disciples_of_the_old_gods"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_disciples_of_the_old_gods"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	##### generic_fighter_guild #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_generic_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_bg_generic_fighter_guild.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_generic_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_blood_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_generic_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\symbol_small_generic_fighter_guild.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_generic_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_generic_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_generic_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_generic_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_generic_fighter_guild"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_blood_societies.dds"
+	}
+	
+	##### risk_fighter_guild #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_risk_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_bg_risk_fighter_guild.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_risk_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_blood_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_risk_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\symbol_small_risk_fighter_guild.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_risk_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_risk_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_risk_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_risk_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_risk_fighter_guild"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_blood_societies.dds"
+	}
+	
+	##### female_fighter_guild #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_female_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_bg_female_fighter_guild.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_female_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_blood_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_female_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\symbol_small_female_fighter_guild.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_female_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_female_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_female_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_female_fighter_guild"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_female_fighter_guild"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_blood_societies.dds"
+	}
+	
+	##### society_holy_one #####
+	
+	spriteType = { 
+		name = "GFX_society_main_background_society_holy_one"
+		texturefile = "gfx\\interface\\societies\\society_bg_society_holy_one.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_expansion_background_society_holy_one"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_society_holy_one"
+		texturefile = "gfx\\interface\\societies\\symbol_small_society_holy_one.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_influence_society_holy_one"
+		texturefile = "gfx\\interface\\societies\\society_influence_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_society_holy_one"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_portrait_ring_small_society_holy_one"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_chivalry_societies.dds"
+	}
+	
+	spriteType = { #common
+		name = "GFX_society_currency_society_holy_one"
+		texturefile = "gfx\\interface\\societies\\society_currency_chivalry_societies.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_society_holy_one"
+		textureFile = "gfx/interface/society_quest/mission_bg_chivalry_societies.dds"
+	}
+	
+	################ traits ######################
+	spriteType = {
+		name = "GFX_trait_master_warrior"
+		texturefile = "gfx/traits/master_warrior.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_skilled_warrior"
+		texturefile = "gfx/traits/skilled_warrior.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_trained_warrior"
+		texturefile = "gfx/traits/trained_warrior.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_poor_warrior"
+		texturefile = "gfx/traits/poor_warrior.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_squire_one"
+		texturefile = "gfx/traits/chivalry_squire_one.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_squire_two"
+		texturefile = "gfx/traits/chivalry_squire_two.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_squire_three"
+		texturefile = "gfx/traits/chivalry_squire_three.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_squire_four"
+		texturefile = "gfx/traits/chivalry_squire_four.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = { #unused
+		name = "GFX_trait_chivalry_lady_four"
+		texturefile = "gfx/traits/chivalry_squire_four.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	#commander stuff
+	spriteType = {
+		name = "GFX_trait_chivalry_warrior_pilgrim"
+		texturefile = "gfx/traits/chivalry_warrior_pilgrim.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_commander"
+		texturefile = "gfx/traits/chivalry_commander.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	#leadership trait
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_aggressive_leader"
+		texturefile = "gfx/traits/chivalry_fight_aggressive_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_aggressive_leader"
+		texturefile = "gfx/traits/chivalry_holy_aggressive_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_inspiring_leader"
+		texturefile = "gfx/traits/chivalry_fight_inspiring_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_inspiring_leader"
+		texturefile = "gfx/traits/chivalry_holy_inspiring_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_unyielding_leader"
+		texturefile = "gfx/traits/chivalry_fight_unyielding_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_unyielding_leader"
+		texturefile = "gfx/traits/chivalry_holy_unyielding_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_flanker"
+		texturefile = "gfx/traits/chivalry_fight_flanker.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_flanker"
+		texturefile = "gfx/traits/chivalry_holy_flanker.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_defensive_leader"
+		texturefile = "gfx/traits/chivalry_fight_defensive_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_defensive_leader"
+		texturefile = "gfx/traits/chivalry_holy_defensive_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_siege_leader"
+		texturefile = "gfx/traits/chivalry_fight_siege_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_siege_leader"
+		texturefile = "gfx/traits/chivalry_holy_siege_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_narrow_flank_leader"
+		texturefile = "gfx/traits/chivalry_fight_narrow_flank_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_narrow_flank_leader"
+		texturefile = "gfx/traits/chivalry_holy_narrow_flank_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_experimenter"
+		texturefile = "gfx/traits/chivalry_fight_experimenter.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_experimenter"
+		texturefile = "gfx/traits/chivalry_holy_experimenter.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_organizer"
+		texturefile = "gfx/traits/chivalry_fight_organizer.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_organizer"
+		texturefile = "gfx/traits/chivalry_holy_organizer.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_trickster"
+		texturefile = "gfx/traits/chivalry_fight_trickster.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_trickster"
+		texturefile = "gfx/traits/chivalry_holy_trickster.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_holy_warrior"
+		texturefile = "gfx/traits/chivalry_fight_holy_warrior.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_light_foot_leader"
+		texturefile = "gfx/traits/chivalry_fight_light_foot_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_light_foot_leader"
+		texturefile = "gfx/traits/chivalry_holy_light_foot_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_heavy_infantry_leader"
+		texturefile = "gfx/traits/chivalry_fight_heavy_infantry_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_heavy_infantry_leader"
+		texturefile = "gfx/traits/chivalry_holy_heavy_infantry_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_cavalry_leader"
+		texturefile = "gfx/traits/chivalry_fight_cavalry_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_cavalry_leader"
+		texturefile = "gfx/traits/chivalry_holy_cavalry_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_fight_war_elephant_leader"
+		texturefile = "gfx/traits/chivalry_fight_war_elephant_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_holy_war_elephant_leader"
+		texturefile = "gfx/traits/chivalry_holy_war_elephant_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_flat_terrain_leader"
+		texturefile = "gfx/traits/chivalry_flat_terrain_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_rough_terrain_leader"
+		texturefile = "gfx/traits/chivalry_rough_terrain_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_mountain_terrain_leader"
+		texturefile = "gfx/traits/chivalry_mountain_terrain_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_desert_terrain_leader"
+		texturefile = "gfx/traits/chivalry_desert_terrain_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_winter_soldier"
+		texturefile = "gfx/traits/chivalry_winter_soldier.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chivalry_jungle_terrain_leader"
+		texturefile = "gfx/traits/chivalry_jungle_terrain_leader.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	############## Artifacts #############
+	spriteType = {
+		name = "GFX_chivalry_item_skull_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chivalry_item_skull_small.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_item_skull"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chivalry_item_skull.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_item_broke_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chivalry_item_broke_small.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_item_broke"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chivalry_item_broke.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_item_skull_stack_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chivalry_item_skull_stack_small.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_item_skull_stack"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chivalry_item_skull_stack.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_item_broke_stack_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chivalry_item_broke_stack_small.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_item_broke_stack"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\chivalry_item_broke_stack.dds"
+	}
+	############ Decision ###############
+	spriteType = {
+		name = "GFX_chivalry_decision_pay_bounty"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_bribe.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_decision_rest"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_rest.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_decision_wake"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_wake.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_decision_recovering"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_recover.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_weapon"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_weapon.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_training"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_training.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_training_stop"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_training_stop.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_commander_fighter"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_comfight.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_commander_holy"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_comknight.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_commander_fighter_upgrade"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_pilgrim.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_commander_holy_upgrade"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_pilgrim.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_vote_law"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_vote.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_holy_governement"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_createholy.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_merc_governement"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_createmerc.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_holy_governement"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_holymerc.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_merc_governement"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_holymerc.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_holy_governement_break"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_breakholy.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_decision_merge_trophy"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_merge.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_merc_bribe_liege"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_liege.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_take_bounty"
+		texturefile = "gfx\\interface\\decision_icon_take_bounty.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_army_fighter"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_army.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_army_holy"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_army.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_show_decisions_on"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_on.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_show_decisions_off"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_off.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_holy_castle"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_chivalry_power_gym"
+		texturefile = "gfx\\interface\\decision_icon_chivalry_gym.dds"
+	}
+	
+	############## Government #############
+	spriteType = {
+		name = "GFX_charframe_150_holyordergov"
+		texturefile = "gfx\\interface\\charframe_150_holyorder.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_100_holyordergov"
+		texturefile = "gfx\\interface\\charframe_100_holyorder.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_75_holyordergov"
+		texturefile = "gfx\\interface\\charframe_75_holyorder.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_50_holyordergov"
+		texturefile = "gfx\\interface\\charframe_50_holyorder.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_34_holyordergov"
+		texturefile = "gfx\\interface\\charframe_34_holyorder.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_icon_holy_order_government"
+		# texturefile = "gfx\\interface\\government_icon_holyorder.dds"
+		texturefile = "gfx\\interface\\government_icon_order.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_holy_order_government_muslim"
+		texturefile = "gfx\\interface\\government_icon_holyorder_muslim.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_holy_order_government_indian"
+		texturefile = "gfx\\interface\\government_icon_holyorder_indian.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_holy_order_government_pagan"
+		texturefile = "gfx\\interface\\government_icon_holyorder_pagan.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_mercenary_government"
+		texturefile = "gfx\\interface\\government_icon_mercenary.dds"
+	}
+	
+	##### Event borders ######
+	
+	spriteType = {
+		name = "GFX_event_letter_frame_war_chivalry"
+		texturefile = "gfx\\interface\\event_letter_frame_war_chivalry.tga"
+	}
+	spriteType = {
+		name = "GFX_event_long_frame_war_chivalry"
+		texturefile = "gfx\\interface\\event_long_frame_war_chivalry.tga"
+	}
+	spriteType = {
+		name = "GFX_event_narrative_frame_war_chivalry"
+		texturefile = "gfx\\interface\\event_narrative_frame_war_chivalry.tga"
+	}
+	spriteType = {
+		name = "GFX_event_normal_frame_war_chivalry"
+		texturefile = "gfx\\interface\\event_normal_frame_war_chivalry.tga"
+	}
+	
+	#### Event overwrite #####
+	
+		spriteType = {
+		name = "GFX_evt_melee_chivalry"
+		texturefile = "gfx\\event_pictures\\Knights_melee_battle.tga"
+		allwaystransparent = yes
+	}
+	
+	#bloodline
+	spriteType = {
+		name = "GFX_chivalry_champion_bloodline"
+		texturefile = "gfx\\bloodlines\\chivalry_champion_bloodline.dds"
+	}
+}

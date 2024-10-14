@@ -1,0 +1,439 @@
+##########################################
+# COUNCILLOR ACTIONS
+##########################################
+# attribute = [diplomacy/stewardship/intrigue/martial/learning] - Character attribute is multiplied with the modifiers
+# trigger = Province scope trigger to determine if the action is meaningful in a province (the player character is FROM, the councillor is in 'new_character')
+# Events that can trigger off this action. This info is only used by the GUI.
+# All modifiers (like 'local_build_time_modifier') are multiplied by the attribute
+
+# display_on_map = {
+#	tooltip = JOB_PROSELYTIZE_DIFFERENT_RELIGION  # Key of the loc to add to the tooltip
+#	trigger = {                                   # Trigger for when this should happen. Same scopes as the allow/potential for the job action itself
+#		NOT = { religion = FROM }
+#	}
+#	color = { 255 0 0 }                           # What color to use on the map
+# }
+
+
+# Marshal
+
+#cartographer
+TSD_action_standby = {
+	attribute = diplomacy
+	
+	potential = {
+	}
+	
+	offmap = yes
+	
+	events = { }
+}
+
+guilds_action_goods = {
+	attribute = stewardship
+	
+	potential = {
+		FROM = {
+			ai = no
+			society_member_of = the_guilds 
+		}
+	}
+	
+	trigger = {
+		has_owner = yes
+	}
+
+	display_on_map = { #has resource
+		tooltip = JOB_GOODS_TT
+		trigger = {
+			has_guilds_shipment = yes
+			NOT = { has_province_modifier = guilds_shop_caravan }
+			NOT = { has_province_modifier = highway_robber_band }
+			owner = { war = no }
+		}
+		color = { 0 255 0 } #green
+	}
+	display_on_map = { #bandits
+		tooltip = JOB_GOODS_BAND_TT
+		trigger = {
+			has_guilds_shipment = yes
+			NOT = { has_province_modifier = guilds_shop_caravan }
+			OR = {
+				has_province_modifier = highway_robber_band
+				owner = { war = yes }
+			}
+		}
+		color = { 255 50 0 } #green red
+	}
+	display_on_map = { #has_caravan
+		tooltip = JOB_CARAVAN_TT
+		trigger = {
+			has_province_modifier = guilds_shop_caravan
+		}
+		color = { 225 202 0 } #light yellow
+	}
+	
+	display_on_map = {
+		tooltip = JOB_NOTHING_TT
+		trigger = {
+			has_guilds_shipment = no
+			NOT = { has_province_modifier = guilds_shop_caravan }
+		}                               
+		color = { 0 0 0 } #black        
+	}
+	
+	events = { }
+}
+
+guilds_action_resource = {
+	attribute = stewardship
+	
+	potential = {
+		FROM = {
+			ai = no
+		}
+	}
+	
+	trigger = {
+		has_owner = yes
+	}
+
+	display_on_map = {
+		tooltip = JOB_STONE_TT
+		trigger = {
+			has_province_modifier = guilds_res_stone
+		}
+		color = { 70 70 70 } #gray
+	}
+	display_on_map = {
+		tooltip = JOB_STEEL_TT
+		trigger = {
+			has_province_modifier = guilds_res_steel
+		}
+		color = { 150 150 150 } #light gray
+	}
+	display_on_map = {
+		tooltip = JOB_GEM_TT
+		trigger = {
+			has_province_modifier = guilds_res_gem
+		}
+		color = { 0 0 255 } #blue
+	}
+	display_on_map = {
+		tooltip = JOB_SILVER_TT
+		trigger = {
+			has_province_modifier = guilds_res_silver
+		}
+		color = { 143 188 143 } #gray green
+	}
+	display_on_map = {
+		tooltip = JOB_GOLD_TT
+		trigger = {
+			has_province_modifier = guilds_res_gold
+		}
+		color = { 255 255 0 } #yellow gold
+	}
+	display_on_map = {
+		tooltip = JOB_GRAIN_TT
+		trigger = {
+			has_province_modifier = guilds_res_grain
+		}
+		color = { 225 202 59 } #light yellow
+	}
+	display_on_map = {
+		tooltip = JOB_LUMBER_TT
+		trigger = {
+			has_province_modifier = guilds_res_lumber
+		}
+		color = { 0 100 0 } #dark green
+	}
+	display_on_map = {
+		tooltip = JOB_LINEN_TT
+		trigger = {
+			has_province_modifier = guilds_res_linen
+		}
+		color = { 100 149 237 } #pale blue
+	}
+	display_on_map = {
+		tooltip = JOB_INCENSE_TT
+		trigger = {
+			has_province_modifier = guilds_res_incense
+		}
+		color = { 160 82 45 } #brown gray
+	}
+	display_on_map = {
+		tooltip = JOB_SPICES_TT
+		trigger = {
+			has_province_modifier = guilds_res_spices
+		}
+		color = { 255 69 0 } #orange
+	}
+	display_on_map = {
+		tooltip = JOB_MEAT_TT
+		trigger = {
+			has_province_modifier = guilds_res_meat
+		}
+		color = { 255 0 0 } #red
+	}
+	display_on_map = {
+		tooltip = JOB_WOOL_TT
+		trigger = {
+			has_province_modifier = guilds_res_wool
+		}
+		color = { 255 255 255 } #white
+	}
+	display_on_map = {
+		tooltip = JOB_HIDE_TT
+		trigger = {
+			has_province_modifier = guilds_res_hide
+		}
+		color = { 75 51 18 } #dark brown
+	}
+	display_on_map = {
+		tooltip = JOB_IVORY_TT
+		trigger = {
+			has_province_modifier = guilds_res_ivory
+		}
+		color = { 245 239 169 } #beige light
+	}
+	display_on_map = {
+		tooltip = JOB_SILK_TT
+		trigger = {
+			has_province_modifier = guilds_res_silk
+		}
+		color = { 223 138 183 } #pink
+	}
+	
+	display_on_map = {
+		tooltip = JOB_NOTHING_TT
+		trigger = {
+			NOR = {
+				has_province_modifier = guilds_res_stone
+				has_province_modifier = guilds_res_steel
+				has_province_modifier = guilds_res_gem
+				has_province_modifier = guilds_res_silver
+				has_province_modifier = guilds_res_gold
+				has_province_modifier = guilds_res_grain
+				has_province_modifier = guilds_res_lumber
+				has_province_modifier = guilds_res_linen
+				has_province_modifier = guilds_res_incense
+				has_province_modifier = guilds_res_spices
+				has_province_modifier = guilds_res_meat
+				has_province_modifier = guilds_res_wool
+				has_province_modifier = guilds_res_spices
+				has_province_modifier = guilds_res_ivory
+				has_province_modifier = guilds_res_silk
+			}
+		}                               
+		color = { 0 0 0 } #black        
+	}
+	
+	events = { }
+}
+
+TSD_action_turf_fellowship = {
+	attribute = intrigue
+	
+	potential = {
+		FROM = {
+			OR = {
+				AND = {
+					society_member_of = TSD_fellowship_society
+					society_rank <= 2
+				}
+				AND = {
+					TSD_trigger_fellowship_know_medium = yes
+					NAND = {
+						TSD_trigger_fingers_know_medium = yes
+						TSD_trigger_masquerade_know_medium = yes
+					}
+				}
+			}
+			ai = no
+		}
+	}
+	
+	trigger = {
+		has_owner = yes
+	}
+	
+	display_on_map = {
+		tooltip = JOB_FELLOWSHIP_TT
+		trigger = {
+			has_province_modifier = TSD_turf_fellowship
+		}
+		color = { 255 255 0 } #yellow
+	}
+	
+	display_on_map = {
+		tooltip = JOB_NOTHING_TT
+		trigger = {
+			NOT = { has_province_modifier = TSD_turf_fellowship }
+		}
+		color = { 0 0 0 } #black
+	}
+	
+	events = { }
+}
+
+TSD_action_turf_fingers = {
+	attribute = intrigue
+	
+	potential = {
+		FROM = {
+			OR = {
+				AND = {
+					society_member_of = TSD_fingers_society
+					society_rank <= 2
+				}
+				AND = {
+					TSD_trigger_fingers_know_medium = yes
+					NAND = {
+						TSD_trigger_fellowship_know_medium = yes
+						TSD_trigger_masquerade_know_medium = yes
+					}
+				}
+			}
+			ai = no
+		}
+	}
+	
+	trigger = {
+		has_owner = yes
+	}
+	
+	display_on_map = {
+		tooltip = JOB_FINGERS_TT
+		trigger = {
+			has_province_modifier = TSD_turf_fingers
+		}
+		color = { 255 0 0 } #red
+	}
+	
+	display_on_map = {
+		tooltip = JOB_NOTHING_TT
+		trigger = {
+			NOT = { has_province_modifier = TSD_turf_fingers }
+		}
+		color = { 0 0 0 } #black
+	}
+	
+	events = { }
+}
+
+TSD_action_turf_masquerade = {
+	attribute = intrigue
+	
+	potential = {
+		FROM = {
+			OR = {
+				AND = {
+					society_member_of = TSD_masquerade_society
+					society_rank <= 2
+				}
+				AND = {
+					TSD_trigger_masquerade_know_medium = yes
+					NAND = {
+						TSD_trigger_fingers_know_medium = yes
+						TSD_trigger_fellowship_know_medium = yes
+					}
+				}
+			}
+			ai = no
+		}
+	}
+	
+	trigger = {
+		has_owner = yes
+	}
+	
+	display_on_map = {
+		tooltip = JOB_MASQUERADE_TT
+		trigger = {
+			has_province_modifier = TSD_turf_masquerade
+		}
+		color = { 0 0 255 } #blue
+	}
+	
+	display_on_map = {
+		tooltip = JOB_NOTHING_TT
+		trigger = {
+			NOT = { has_province_modifier = TSD_turf_masquerade }
+		}
+		color = { 0 0 0 } #black
+	}
+	
+	events = { }
+}
+
+TSD_action_turf_all = {
+	attribute = intrigue
+	
+	potential = {
+		FROM = {
+			OR = {
+				AND = {
+					TSD_trigger_is_member = yes
+					society_rank >= 3
+				}
+				AND = {
+					TSD_trigger_fellowship_know_medium = yes
+					TSD_trigger_fingers_know_medium = yes
+					TSD_trigger_masquerade_know_medium = yes
+				}
+			}
+			ai = no
+		}
+	}
+	
+	trigger = {
+		has_owner = yes
+	}
+
+	display_on_map = {
+		tooltip = JOB_FELLOWSHIP_TT
+		trigger = {
+			has_province_modifier = TSD_turf_fellowship
+		}
+		color = { 255 255 0 } #yellow
+	}
+	
+	display_on_map = {
+		tooltip = JOB_FINGERS_TT
+		trigger = {
+			has_province_modifier = TSD_turf_fingers
+		}
+		color = { 255 0 0 } #red
+	}
+	
+	display_on_map = {
+		tooltip = JOB_MASQUERADE_TT
+		trigger = {
+			has_province_modifier = TSD_turf_masquerade
+		}
+		color = { 0 0 255 } #blue
+	}
+	
+	display_on_map = {
+		tooltip = JOB_PURGED_TT
+		trigger = {
+			has_province_modifier = TSD_turf_purged
+		}
+		color = { 0 255 0 } #green
+	}
+	
+	display_on_map = {
+		tooltip = JOB_NOTHING_TT
+		trigger = {
+			NOR = {
+				has_province_modifier = TSD_turf_purged
+				has_province_modifier = TSD_turf_masquerade
+				has_province_modifier = TSD_turf_fingers
+				has_province_modifier = TSD_turf_fellowship
+			}
+		}
+		color = { 0 0 0 } #black
+	}
+	
+	events = { }
+}

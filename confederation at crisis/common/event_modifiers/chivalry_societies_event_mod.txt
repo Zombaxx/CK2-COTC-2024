@@ -1,0 +1,366 @@
+#Vote law
+chivalry_army_timer = {
+	icon = 1
+}
+
+chivalry_gym_timer = {
+	icon = 1
+}
+
+chivalry_law_feminist = {
+	icon = 39
+}
+
+chivalry_law_heretic = {
+	icon = 17
+}
+
+chivalry_law_animal = {
+	icon = 45
+}
+
+chivalry_law_diplomat = {
+	icon = 3
+}
+
+chivalry_law_steward = {
+	icon = 4
+}
+
+chivalry_law_spy = {
+	icon = 5
+}
+
+chivalry_law_scholar = {
+	icon = 2
+}
+
+#Pilgrimage
+chivalry_pilgrim_hunger = {
+	health = -1
+	combat_rating = -20
+	icon = 1
+}
+
+chivalry_pilgrim_rested = {
+	health = 1
+	combat_rating = 20
+	icon = 1
+}
+
+#Resting
+chivalry_justified_rest = {
+	martial = -5
+	combat_rating = -20
+	health = 0.5
+	icon = 69
+}
+
+chivalry_unjustified_rest = {
+	martial = -5
+	combat_rating = -20
+	health = 0.5
+	monthly_character_prestige = -0.5
+	icon = 70
+}
+
+chivalry_flesh_wound_timer = {
+	icon = 1
+}
+
+#Help in war
+chivalry_give_troops = {
+	levy_size = -0.25
+	levy_reinforce_rate = -0.25
+	garrison_size = -0.25
+	monthly_character_piety = 0.5
+	icon = 31
+}
+
+chivalry_take_troops = {
+	levy_size = 0.25
+	levy_reinforce_rate = 0.25
+	garrison_size = 0.25
+	icon = 13
+}
+
+chivalry_give_money = {
+	monthly_character_piety = 0.5
+	icon = 24
+}
+
+chivalry_take_money = {
+	icon = 6
+}
+
+chivalry_give_workers = {
+	local_build_time_modifier = 0.25
+	# local_tax_modifier = -0.25
+	monthly_character_piety = 0.5
+	icon = 29
+}
+
+chivalry_take_workers = {
+	local_build_time_modifier = -0.25
+	# local_tax_modifier = 0.25
+	icon = 11
+}
+
+chivalry_military_advices_poor = {
+	land_morale = 0.1
+	land_organisation = 0.1
+	siege_speed = 0.1
+	siege_defence = 0.1
+	icon = 1
+}
+
+chivalry_military_advices_average = {
+	land_morale = 0.2
+	land_organisation = 0.2
+	siege_speed = 0.2
+	siege_defence = 0.2
+	icon = 1
+}
+
+chivalry_military_advices_good = {
+	land_morale = 0.3
+	land_organisation = 0.3
+	siege_speed = 0.3
+	siege_defence = 0.3
+	icon = 1
+}
+
+chivalry_your_client = {
+	icon = 1
+}
+
+chivalry_your_client_new = {
+	icon = 1
+}
+
+#Arena upgrades
+chivalry_light_infantry_mod_1 = {
+	tax_income = -0.5
+	light_infantry_perc = 0.1
+	icon = 14
+}
+chivalry_light_infantry_mod_2 = {
+	tax_income = -0.5
+	light_infantry_perc = 0.5
+	archers_perc = -0.1
+	heavy_infantry_perc = -0.1
+	pikemen_perc = -0.1
+	light_cavalry_perc = -0.1
+	knights_perc = -0.1
+	icon = 13
+}
+chivalry_light_infantry_mod_3 = {
+	tax_income = -0.5
+	light_infantry_perc = 0.5
+	light_infantry_morale = 0.25
+	# light_infantry_offensive = 0.1
+ 	# light_infantry_defensive = 0.1
+	icon = 1
+}
+chivalry_archers_mod_1 = {
+	tax_income = -0.5
+	archers_perc = 0.1
+	icon = 14
+}
+chivalry_archers_mod_2 = {
+	tax_income = -0.5
+	archers_perc = 0.5
+	light_infantry_perc = -0.1
+	heavy_infantry_perc = -0.1
+	pikemen_perc = -0.1
+	light_cavalry_perc = -0.1
+	knights_perc = -0.1
+	icon = 13
+}
+chivalry_archers_mod_3 = {
+	tax_income = -0.5
+	archers_perc = 0.5
+	archers_morale = 0.25
+	# archers_offensive = 0.1
+ 	# archers_defensive = 0.1
+	icon = 1
+}
+chivalry_heavy_infantry_mod_1 = {
+	tax_income = -0.5
+	heavy_infantry_perc = 0.1
+	icon = 14
+}
+chivalry_heavy_infantry_mod_2 = {
+	tax_income = -0.5
+	heavy_infantry_perc = 0.5
+	archers_perc = -0.1
+	light_infantry_perc = -0.1
+	pikemen_perc = -0.1
+	light_cavalry_perc = -0.1
+	knights_perc = -0.1
+	icon = 13
+}
+chivalry_heavy_infantry_mod_3 = {
+	tax_income = -0.5
+	heavy_infantry_perc = 0.5
+	heavy_infantry_morale = 0.25
+	# heavy_infantry_offensive = 0.1
+ 	# heavy_infantry_defensive = 0.1
+	icon = 1
+}
+chivalry_pikemen_mod_1 = {
+	tax_income = -0.5
+	pikemen_perc = 0.1
+	icon = 14
+}
+chivalry_pikemen_mod_2 = {
+	tax_income = -0.5
+	pikemen_perc = 0.5
+	archers_perc = -0.1
+	heavy_infantry_perc = -0.1
+	light_infantry_perc = -0.1
+	light_cavalry_perc = -0.1
+	knights_perc = -0.1
+	icon = 13
+}
+chivalry_pikemen_mod_3 = {
+	tax_income = -0.5
+	pikemen_perc = 0.5
+	pikemen_morale = 0.25
+	# pikemen_offensive = 0.1
+ 	# pikemen_defensive = 0.1
+	icon = 1
+}
+chivalry_light_cavalry_mod_1 = {
+	tax_income = -0.5
+	light_cavalry_perc = 0.1
+	icon = 14
+}
+chivalry_light_cavalry_mod_2 = {
+	tax_income = -0.5
+	light_cavalry_perc = 0.5
+	archers_perc = -0.1
+	heavy_infantry_perc = -0.1
+	pikemen_perc = -0.1
+	light_infantry_perc = -0.1
+	knights_perc = -0.1
+	icon = 13
+}
+chivalry_light_cavalry_mod_3 = {
+	tax_income = -0.5
+	light_cavalry_perc = 0.5
+	light_cavalry_morale = 0.25
+	# light_cavalry_offensive = 0.1
+ 	# light_cavalry_defensive = 0.1
+	icon = 1
+}
+chivalry_knights_mod_1 = {
+	tax_income = -0.5
+	knights_perc = 0.1
+	icon = 14
+}
+chivalry_knights_mod_2 = {
+	tax_income = -0.5
+	knights_perc = 0.5
+	archers_perc = -0.1
+	heavy_infantry_perc = -0.1
+	pikemen_perc = -0.1
+	light_cavalry_perc = -0.1
+	light_infantry_perc = -0.1
+	icon = 13
+}
+chivalry_knights_mod_3 = {
+	tax_income = -0.5
+	knights_perc = 0.5
+	knights_morale = 0.25
+	# knights_offensive = 0.1
+ 	# knights_defensive = 0.1
+	icon = 1
+}
+
+chivalry_holy_castle = {
+	tax_income = 1
+	# add_piety_modifier = 0.20
+	fort_level = 1
+	garrison_size = 0.2
+	icon = 8
+}
+
+#duel wounds
+chivalry_head_hit_mod = {
+	health = -0.1
+	combat_rating = -1
+	sex_appeal_opinion = -2
+	icon = 120
+}
+chivalry_domhand_hit_mod = {
+	health = -0.05
+	combat_rating = -2
+	fertility = 0.05
+	icon = 120
+}
+chivalry_subhand_hit_mod = {
+	health = -0.05
+	combat_rating = -1
+	icon = 120
+}
+chivalry_torso_hit_mod = {
+	health = -0.1
+	combat_rating = -1
+	icon = 120
+}
+chivalry_legs_hit_mod = {
+	health = -0.1
+	combat_rating = -1
+	icon = 120
+}
+chivalry_kicked_nuts = {
+	health = -0.25
+	combat_rating = -6
+	fertility = -0.15
+	icon = 120
+}
+chivalry_broken_leg = {
+	health = -0.5
+	combat_rating = -10
+	icon = 120
+}
+chivalry_stabbed_foot = {
+	health = -0.25
+	combat_rating = -10
+	icon = 120
+}
+chivalry_swollen_wrist_sub = {
+	health = -0.25
+	combat_rating = -3
+	icon = 120
+}
+chivalry_broken_finger_dom = {
+	health = -0.25
+	combat_rating = -6
+	icon = 120
+}
+chivalry_broken_finger_sub = {
+	health = -0.25
+	combat_rating = -3
+	icon = 120
+}
+
+chivalry_dance_with_death = {
+	health = -1
+	icon = 42
+}
+
+chivalry_gym_burning = {
+	sex_appeal_opinion = -3
+	diplomacy = -1
+	combat_rating = -3
+	icon = 118
+}
+chivalry_gym_shape = {
+	sex_appeal_opinion = 6
+	fertility = 0.1
+	health = 0.5
+	combat_rating = 5
+	icon = 117
+}

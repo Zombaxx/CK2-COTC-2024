@@ -1,0 +1,556 @@
+ # Triggers are in Province scope. The From Scope contains the settlement holder (character)
+ # start trigger is in title scope.
+ 
+ #<tag> = {
+ #	desc = description used in the tooltip of the building
+ #	trigger = used for tech requirement of the building, set to 0 if no requirement so it can be build automatically on new games
+ #	gold_cost = cost to build the building
+ #	build_time = time to build, in days
+ #	
+ #	ai_creation_factor = weight that the AI uses to determine what building to build
+ #	extra_tech_building_start = when starting a new game this building will be pre-built if the province has higher tech than the requirement + this + random 0-1
+ #}
+tribal = {
+	guilds_warehouse_1_tribal = { #rented
+		desc = guilds_warehouse_1_tribal_desc
+		potential = { always = yes }
+		trigger = {
+			custom_tooltip = { 
+				text = warehouse_decisions_only_tt
+				always = no
+			}
+			# FROM = { 
+				# capital_holding = {
+					# title = FROMFROM
+				# }
+				# society_member_of = the_guilds
+			# }
+		}
+		gold_cost = 20
+		build_time = 0
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		
+		tax_income = -0.25
+		
+		ai_creation_factor = 0
+		extra_tech_building_start = 10
+		
+		# convert_to_tribal = guilds_warehouse_1_tribal
+		convert_to_city = guilds_warehouse_1_city
+		convert_to_temple = guilds_warehouse_1_temple
+		convert_to_castle = guilds_warehouse_1_castle
+	}
+	guilds_warehouse_2_tribal = { #normal
+		desc = guilds_warehouse_2_tribal_desc
+		potential = { always = yes }
+		trigger = {
+			# always = no
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		upgrades_from = guilds_warehouse_1_tribal
+		gold_cost = 300
+		build_time = 150
+		tax_income = 0.25
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		
+		ai_creation_factor = 70
+		extra_tech_building_start = 10
+		
+		# convert_to_tribal = guilds_warehouse_2_tribal
+		convert_to_city = guilds_warehouse_2_city
+		convert_to_temple = guilds_warehouse_2_temple
+		convert_to_castle = guilds_warehouse_2_castle
+	}
+	guilds_warehouse_3_tribal = { #guarded
+		desc = guilds_warehouse_3_tribal_desc
+		potential = { always = yes }
+		trigger = {
+			# always = no
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		upgrades_from = guilds_warehouse_2_tribal
+		gold_cost = 80
+		build_time = 30
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		
+		# stewardship = 1
+		tax_income = -0.5
+		garrison_size = 0.1
+		
+		ai_creation_factor = 35
+		extra_tech_building_start = 10
+		
+		# convert_to_tribal = guilds_warehouse_3_tribal
+		convert_to_city = guilds_warehouse_3_city
+		convert_to_temple = guilds_warehouse_3_temple
+		convert_to_castle = guilds_warehouse_3_castle
+	}
+}
+ 
+temple = {
+	guilds_warehouse_1_temple = { #rented
+		desc = guilds_warehouse_1_temple_desc
+		potential = { always = yes }
+		trigger = {
+			custom_tooltip = { 
+				text = warehouse_decisions_only_tt
+				always = no
+			}
+			# FROM = { 
+				# capital_holding = {
+					# title = FROMFROM
+				# }
+				# society_member_of = the_guilds
+			# }
+		}
+		gold_cost = 25
+		build_time = 0
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		
+		tax_income = -0.5
+		
+		ai_creation_factor = 0
+		extra_tech_building_start = 10
+		
+		# convert_to_temple = guilds_warehouse_1_temple
+		convert_to_city = guilds_warehouse_1_city
+		convert_to_castle = guilds_warehouse_1_castle
+		convert_to_tribal = guilds_warehouse_1_tribal
+	}
+	guilds_warehouse_2_temple = { #normal
+		desc = guilds_warehouse_2_temple_desc
+		potential = { always = yes }
+		trigger = {
+			# always = no
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		upgrades_from = guilds_warehouse_1_temple
+		gold_cost = 300
+		build_time = 150
+		tax_income = 0.5
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		
+		ai_creation_factor = 70
+		extra_tech_building_start = 10
+		
+		# convert_to_temple = guilds_warehouse_2_temple
+		convert_to_city = guilds_warehouse_2_city
+		convert_to_castle = guilds_warehouse_2_castle
+		convert_to_tribal = guilds_warehouse_2_tribal
+	}
+	guilds_warehouse_3_temple = { #guarded
+		desc = guilds_warehouse_3_temple_desc
+		potential = { always = yes }
+		trigger = {
+			# always = no
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		upgrades_from = guilds_warehouse_2_temple
+		gold_cost = 100
+		build_time = 30
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		
+		# stewardship = 1
+		tax_income = -1
+		garrison_size = 0.1
+		
+		ai_creation_factor = 35
+		extra_tech_building_start = 10
+		
+		# convert_to_temple = guilds_warehouse_3_temple
+		convert_to_city = guilds_warehouse_3_city
+		convert_to_castle = guilds_warehouse_3_castle
+		convert_to_tribal = guilds_warehouse_3_tribal
+	}
+}
+ 
+castle = {
+	guilds_warehouse_1_castle = { #rented
+		desc = guilds_warehouse_1_castle_desc
+		potential = { always = yes }
+		trigger = {
+			custom_tooltip = { 
+				text = warehouse_decisions_only_tt
+				always = no
+			}
+			# FROM = { 
+				# capital_holding = {
+					# title = FROMFROM
+				# }
+				# society_member_of = the_guilds
+			# }
+		}
+		gold_cost = 25
+		build_time = 0
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		
+		tax_income = -0.5
+		
+		ai_creation_factor = 0
+		extra_tech_building_start = 10
+		
+		# convert_to_castle = guilds_warehouse_1_castle
+		convert_to_city = guilds_warehouse_1_city
+		convert_to_temple = guilds_warehouse_1_temple
+		convert_to_tribal = guilds_warehouse_1_tribal
+	}
+	guilds_warehouse_2_castle = { #normal
+		desc = guilds_warehouse_2_castle_desc
+		potential = { always = yes }
+		trigger = {
+			# always = no
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		upgrades_from = guilds_warehouse_1_castle
+		gold_cost = 300
+		build_time = 150
+		tax_income = 0.5
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		
+		ai_creation_factor = 70
+		extra_tech_building_start = 10
+		
+		# convert_to_castle = guilds_warehouse_2_castle
+		convert_to_city = guilds_warehouse_2_city
+		convert_to_temple = guilds_warehouse_2_temple
+		convert_to_tribal = guilds_warehouse_2_tribal
+	}
+	guilds_warehouse_3_castle = { #guarded
+		desc = guilds_warehouse_3_castle_desc
+		potential = { always = yes }
+		trigger = {
+			# always = no
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		upgrades_from = guilds_warehouse_2_castle
+		gold_cost = 100
+		build_time = 30
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		
+		# stewardship = 1
+		tax_income = -1
+		garrison_size = 0.1
+		
+		ai_creation_factor = 35
+		extra_tech_building_start = 10
+		
+		# convert_to_castle = guilds_warehouse_3_castle
+		convert_to_city = guilds_warehouse_3_city
+		convert_to_temple = guilds_warehouse_3_temple
+		convert_to_tribal = guilds_warehouse_3_tribal
+	}
+}
+
+city = {
+	guilds_warehouse_1_city = { #rented
+		desc = guilds_warehouse_1_city_desc
+		potential = { always = yes }
+		trigger = {
+			custom_tooltip = { 
+				text = warehouse_decisions_only_tt
+				always = no
+			}
+			# FROM = { 
+				# capital_holding = {
+					# title = FROMFROM
+				# }
+				# society_member_of = the_guilds
+			# }
+		}
+		gold_cost = 25
+		build_time = 0
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		
+		tax_income = -1
+		
+		ai_creation_factor = 0
+		extra_tech_building_start = 10
+		
+		# convert_to_city = guilds_warehouse_1_city
+		convert_to_castle = guilds_warehouse_1_castle
+		convert_to_temple = guilds_warehouse_1_temple
+		convert_to_tribal = guilds_warehouse_1_tribal
+	}
+	guilds_warehouse_2_city = { #normal
+		desc = guilds_warehouse_2_city_desc
+		potential = { always = yes }
+		trigger = {
+			# always = no
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		upgrades_from = guilds_warehouse_1_city
+		gold_cost = 300
+		build_time = 150
+		tax_income = 1
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		
+		ai_creation_factor = 0
+		extra_tech_building_start = 10
+		
+		# convert_to_city = guilds_warehouse_2_city
+		convert_to_castle = guilds_warehouse_2_castle
+		convert_to_temple = guilds_warehouse_2_temple
+		convert_to_tribal = guilds_warehouse_2_tribal
+	}
+	guilds_warehouse_3_city = { #guarded
+		desc = guilds_warehouse_3_city_desc
+		potential = { always = yes }
+		trigger = {
+			# always = no
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		upgrades_from = guilds_warehouse_2_city
+		gold_cost = 100
+		build_time = 30
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		
+		# stewardship = 1
+		tax_income = -2
+		garrison_size = 0.1
+		
+		ai_creation_factor = 0
+		extra_tech_building_start = 10
+		
+		# convert_to_city = guilds_warehouse_3_city
+		convert_to_castle = guilds_warehouse_3_castle
+		convert_to_temple = guilds_warehouse_3_temple
+		convert_to_tribal = guilds_warehouse_3_tribal
+	}
+}
+
+nomad = {
+	guilds_warehouse_1_nomad = { #rented
+		desc = guilds_warehouse_1_nomad_desc
+		potential = { always = yes }
+		trigger = {
+			custom_tooltip = { 
+				text = warehouse_decisions_only_tt
+				always = no
+			}
+			# FROM = { 
+				# capital_holding = {
+					# title = FROMFROM
+				# }
+				# society_member_of = the_guilds
+			# }
+		}
+		gold_cost = 25
+		build_time = 0
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		
+		nomad_tax_modifier = -0.025
+		
+		ai_creation_factor = 0
+		extra_tech_building_start = 10
+		
+		convert_to_city = guilds_warehouse_1_city
+		convert_to_castle = guilds_warehouse_1_castle
+		convert_to_temple = guilds_warehouse_1_temple
+		convert_to_tribal = guilds_warehouse_1_tribal
+	}
+	guilds_warehouse_2_nomad = { #normal
+		desc = guilds_warehouse_2_nomad_desc
+		potential = { always = yes }
+		trigger = {
+			# always = no
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		upgrades_from = guilds_warehouse_1_nomad
+		gold_cost = 300
+		build_time = 150
+		nomad_tax_modifier = 0.025
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		
+		ai_creation_factor = 0
+		extra_tech_building_start = 10
+		
+		convert_to_city = guilds_warehouse_2_city
+		convert_to_castle = guilds_warehouse_2_castle
+		convert_to_temple = guilds_warehouse_2_temple
+		convert_to_tribal = guilds_warehouse_2_tribal
+	}
+	guilds_warehouse_3_nomad = { #guarded
+		desc = guilds_warehouse_3_nomad_desc
+		potential = { always = yes }
+		trigger = {
+			# always = no
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		upgrades_from = guilds_warehouse_2_nomad
+		gold_cost = 100
+		build_time = 30
+		add_number_to_name = no
+		is_active_trigger = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				# society_member_of = the_guilds
+			}
+		}
+		
+		# stewardship = 1
+		nomad_tax_modifier = -0.05
+		garrison_size = 0.1
+		
+		ai_creation_factor = 0
+		extra_tech_building_start = 10
+		
+		convert_to_city = guilds_warehouse_3_city
+		convert_to_castle = guilds_warehouse_3_castle
+		convert_to_temple = guilds_warehouse_3_temple
+		convert_to_tribal = guilds_warehouse_3_tribal
+	}
+}

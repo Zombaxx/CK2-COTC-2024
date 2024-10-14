@@ -1,0 +1,157 @@
+#Apprentice
+title_guilds_apprentice = {
+	is_high_prio = yes
+	attribute = stewardship
+    dignity = 1
+    realm_in_name = no
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.2
+	monthly_prestige = 0.1
+	
+	allowed_to_grant = {
+		# has_dlc = "Mystics"
+		society_member_of = the_guilds
+		ai = no
+	}
+	
+	allowed_to_hold = {
+		# OR = {
+			# trait = indulgent_wastrel
+			# trait = thrifty_clerk
+			# trait = fortune_builder
+			# trait = midas_touched
+			# trait = vaishya
+			# is_adult = no
+		# }
+		OR = {
+			is_adult = yes
+			AND = {
+				age = 12
+				is_child_of = FROM
+			}
+		}
+		is_in_society = no
+		is_ruler = no
+		is_inaccessible_or_incapable_guilds_trigger = yes
+		
+		hidden_trigger = {
+			FROM = { society_member_of = the_guilds }
+			NOT = { has_character_flag = completed_apprenticeship }
+		}
+	}
+
+	revoke_trigger = {
+	}
+	
+	gain_effect = {
+		if = {
+			limit = { NOT = { society_member_of = the_guilds } }
+			join_society = the_guilds
+		}
+		character_event = { id = SNW.316 days = 3500 random = 1000 }  #Some years later, the apprenticeship ends
+
+		FROM = {
+			if = {
+				limit = { has_quest = quest_guilds_find_apprentice }
+				character_event = { id = SNW.315 }
+			}
+		}
+	}
+	lose_effect = {
+	}
+	retire_effect = {
+	}
+
+	message = yes
+}
+
+# Master Trader
+title_guilds_master = {
+	is_high_prio = yes
+	attribute = stewardship
+    dignity = 0.1
+	# show_as_title = yes 
+    realm_in_name = yes
+	grant_limit = 1
+	# is_voter = yes #maybe one day
+	opinion_effect = 25
+	monthly_salary = 0.5
+	monthly_prestige = 0.25
+	
+	allowed_to_grant = {
+		# has_global_flag = guilds_enabled_trade_master
+		has_game_rule = {
+			name = guilds_rule_master
+			value = default
+		}
+		custom_tooltip = {
+			text = guilds_traitor_tooltip
+			NOT = { has_character_flag = guilds_traitor }
+		}
+		is_landed = yes
+		NOT = { society_member_of = the_guilds }
+		OR = {
+			ai = no
+			AND = {
+				ai = yes
+				primary_title = { higher_tier_than = DUKE } 
+				custom_tooltip = {
+					text = court_physician_tooltip_1
+					NOT = {
+						primary_title = { temporary = yes } 
+					}
+				}
+			}
+		}
+	}
+	
+	allowed_to_hold = {
+		FROM = { NOT = { has_character_flag = guilds_traitor } }
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = vaishya
+		}
+		is_adult = yes
+		OR = {
+			society_member_of = the_guilds
+			is_in_society = no
+		}
+		is_ruler = no
+		# NOT = { trait = in_hiding }
+		# NOT = { trait = incapable }
+		is_inaccessible_or_incapable_guilds_trigger = yes
+		NOT = { has_minor_title = title_guilds_apprentice }
+		prisoner = no
+		# has_job_title = no
+		hidden_tooltip = {
+			NOT = { has_character_flag = guilds_is_holo }
+		}
+	}
+
+	revoke_trigger = {
+	}
+	
+	gain_effect = {
+		if = {
+			limit = { NOT = { society_member_of = the_guilds } }
+			join_society = the_guilds
+		}
+		if = { #so they cannot spam give/remove the title to spam more quests
+			limit = { NOT = { has_character_flag = guilds_trade_master_flag } }
+			character_event = { id = SNW.260 days = 10 }  #Start AI chains
+			set_character_flag = guilds_trade_master_flag
+		}
+	}
+	lose_effect = {
+		leave_society = yes
+
+	}
+	retire_effect = {
+	}
+
+	message = yes
+}

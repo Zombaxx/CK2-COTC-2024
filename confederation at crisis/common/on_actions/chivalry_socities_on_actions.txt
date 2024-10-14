@@ -1,0 +1,191 @@
+on_startup = {
+	events = {
+		CHI.105 #Title Management
+		CHI.1059 #Title Management Assigned
+		CHI.108 #Set title religious overhaul
+		CHI.107 #Set title law
+		CHI.1079 #Set title law assigned
+	}
+}
+
+# A character is removed from society for failing the potential trigger.
+# Root = Character
+# From = Society
+on_character_kicked_from_society = {
+	events = {
+		CHI.10021 #copy of the vanilla event
+	}
+}
+
+on_character_ask_to_join_society = { #when pressing the button to join
+	events = {
+		CHI.100 #Join society
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		CHI.373 #merc find client
+		CHI.3733 #holy find client
+		# CHI.375 #merc client check
+	}
+}
+
+on_bi_yearly_pulse  = {
+	events = {
+		CHI.402 #remove holy castle
+	}
+}
+
+on_five_year_pulse = {
+	events = {
+		CHI.103 #force ai characters join the society
+		CHI.390 #downgrade arena
+		# CHI.402 #remove holy castle
+	}
+}
+
+# Fires every two years for characters who are members of any society
+on_society_bi_yearly_pulse = {
+	events = {
+		# CHI.105 #Title Management
+		# CHI.109 #HO invite members #maybe do later
+		CHI.120 #Quest tombola
+	}
+	random_events = { 
+	}
+}
+
+on_death = {
+	events = {
+		# CHI.1711 #trainer died
+		# CHI.1713 #trainee died
+		CHI.380 #culling artifact trophy
+		CHI.1701 #trainee death
+		CHI.1702 #trainer death
+	}
+}
+
+# Someone joins a society that has no members
+# Root = Character
+# From = Society
+on_society_created = {
+	events = {
+		CHI.106	#HO title management
+		CHI.1069 #HO title management assigned
+		CHI.107 #Set title law
+		CHI.1079 #Set title law assigned
+	}
+}
+
+# A character selects a focus
+# Root = Character
+on_focus_selected = {
+	events = {
+		CHI.133 #HO focus
+		CHI.143 #FG focus
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder = {
+	events = {
+		CHI.105 #Title Management
+		CHI.1059 #Title Management Assigned
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_inheritance = {
+	events = {
+		CHI.105 #Title Management
+		CHI.1059 #Title Management Assigned
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_usurpation = {
+	events = {
+		CHI.105 #Title Management
+		CHI.1059 #Title Management Assigned
+	}
+}
+
+#ROOT = winner FROM = Loser
+on_battle_won_owner = { #ruler
+	events = {
+		CHI.3742 #merc points
+		CHI.2120 #win battle quest holy
+	}
+}
+on_battle_won = { #any leader
+	events = {
+		CHI.3740 #merc points
+		CHI.212 #win battle quest
+	}
+}
+on_battle_won_leader = { #the leader
+	events = {
+		CHI.3740 #merc points
+		CHI.212 #win battle quest
+	}
+}
+on_major_battle_won = { #any leader
+	events = {
+		CHI.3741 #merc points
+	}
+}
+on_siege_won_leader = { #siege leader vs title
+	events = {
+		CHI.3743 #merc points
+	}
+}
+on_siege_over_winner = { #owner vs title
+	events = {
+		CHI.3744 #merc points
+	}
+}
+
+# From = Attacker, Root = Defender
+# on_war_ended_victory = {
+	# events = {
+		# CHI.3750 #hired end
+	# }
+# }
+
+# From = Attacker, Root = Defender
+# on_war_ended_whitepeace = {
+	# events = {
+		# CHI.3751 #hired end
+	# }
+# }
+
+# From = Attacker, Root = Defender
+# on_war_ended_defeat = {
+	# events = {
+		# CHI.3752 #hired end
+	# }
+# }
+
+# From = Attacker, Root = Defender
+# on_war_ended_invalid = {
+	# events = {
+		# CHI.3753 #hired end
+	# }
+# }
+
+# From = Attacker, Root = Defender
+# on_war_started = { #forget later
+	# events = {
+		# CHI.4301 #check northern spanish crusade, force custom HO and proper society into war
+	# }
+# }
+
+# Triggers when Crusade preparation starts
+# Root = the religious head
+# Warning - This fires for all Crusades / Jihads / Great Holy Wars upon creation regardless if they have a preparation phase - Use "uses_new_crusade = yes" trigger to limit effects
+on_crusade_preparation_starts = {
+	events = {
+		CHI.430 #Force my HO into wars
+	}
+}

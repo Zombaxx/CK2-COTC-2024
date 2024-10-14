@@ -1,0 +1,361 @@
+the_guilds = {
+	primary_attribute = stewardship
+	society_ranks_gfx = generic_ranks
+	opinion_to_other_members = +10
+	opinion_per_rank_above = +5
+	opinion_to_perceived_members = -5
+	society_rank_up_decision = request_to_rank_up_within_guilds
+	sound = city_western
+	non_interference = {
+		always = yes
+	}
+	
+	active = {
+		# has_dlc = "Mystics"
+	}
+	indestructible = yes
+	
+	can_join_society = {
+		hidden_trigger = {
+			NAND = {
+				ai = yes
+				is_society_rank_full = { 
+					society = the_guilds
+					rank = 1
+				}
+			}
+			# is_landed = yes
+		}
+
+		trigger_if = {
+			limit = { 
+				NOT = {
+					any_owned_bloodline = {
+						has_bloodline_flag = the_guilds
+					}
+				}
+			}
+			stewardship = 10
+			OR = {
+				has_focus = focus_business
+				trait = indulgent_wastrel
+				trait = thrifty_clerk
+				trait = fortune_builder
+				trait = midas_touched
+				trait = guilds_trait_apprentice
+				trait = guilds_trait_trader
+				trait = guilds_trait_master
+				trait = vaishya
+				is_republic = yes
+				is_patrician = yes
+				stewardship = 20
+			}
+		}
+		custom_tooltip = {
+			text = guilds_traitor_tooltip
+			NOT = { has_character_flag = guilds_traitor }
+		}
+		custom_tooltip = {
+			NOT = { has_global_flag = guilds_market_crash_start }
+			text = guilds_market_crash_start_tooltip
+		}
+		hidden_trigger = { mercenary = no }
+		OR = { 
+			age = 16
+			has_minor_title =  title_guilds_apprentice
+		}
+		trigger_if = {
+			limit = { is_incapable = yes }
+			is_incapable = no
+		}
+		trigger_if = {
+			limit = { prisoner = yes }
+			prisoner = no
+		}
+	}
+
+	show_society = {
+		OR = {
+			stewardship = 1
+			any_owned_bloodline = {
+				has_bloodline_flag = the_guilds
+			}
+		}
+	}
+	
+	potential = {
+		OR = { 
+			AND = {
+				NOT = { age = 16 }
+				has_minor_title = title_guilds_apprentice
+			}
+			has_minor_title = title_guilds_apprentice
+			has_minor_title = title_guilds_master
+			is_ruler = yes
+		}
+		#If something else is added here, it could break apprenticeship. Create an event if they can get kicked out. title_hermetics_apprentice
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 60
+		startup_limit = 40
+		modifier = {
+			church_opinion = -10
+			#economy_techpoints = 0.05
+		}
+		decisions = {
+			guilds_shopping
+			guilds_loaning_one
+			guilds_buy_goods
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 100
+		startup_limit = 80
+		modifier = { 
+			# stewardship = 1
+			church_opinion = -10
+			global_tradevalue_mult = 0.05
+		}
+		decisions = {
+			guilds_buffing_dummy
+			guilds_craft_button
+			# guilds_recruit # Enables you to recruit
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 70
+		startup_limit = 30
+		modifier = {
+			# stewardship = 2
+			church_opinion = -10
+			# max_tradeposts = 1
+			global_tradevalue_mult = 0.1
+		}
+		decisions = {
+			guilds_buy_shop # Enables you to buy stalls and caravans
+			guilds_sabotaging_dummy # Sabotage
+			guilds_clear_debt # remove all debt and loans
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 20
+		startup_limit = 5
+		modifier = { 
+			# stewardship = 3
+			church_opinion = -10
+			# max_tradeposts = 1
+			global_tradevalue_mult = 0.2
+			build_cost_city_modifier = -0.2
+		}
+		decisions = {
+			guilds_become_republic #become a patrician
+			guilds_create_center #set capital as center of trade
+			guilds_get_bloodline
+		}
+	}
+	
+	plots = {
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_the_guilds
+		
+		per_attribute = {
+    		name = stewardship
+    		value = 0.5
+    	}
+		
+		# has_artifact = {
+			# value = 2
+			# name = guilds_item_grain
+		# }
+		
+		has_trait = {
+			value = 3
+			trait = genius
+		}
+		has_trait = {
+			value = 2
+			trait = quick
+		}
+		has_trait = {
+			value = 2
+			trait = shrewd
+		}
+		has_trait = {
+			value = 2
+			trait = diligent
+		}
+		has_trait = {
+			value = 2
+			trait = greedy
+		}
+		has_trait = {
+			value = 2
+			trait = gregarious
+		}
+		has_trait = {
+			value = 2
+			trait = deceitful
+		}
+		has_trait = {
+			value = 1
+			trait = patient
+		}
+		has_trait = {
+			value = 1
+			trait = ambitious
+		}
+		has_trait = {
+			value = -1
+			trait = shy
+		}
+		has_trait = {
+			value = -1
+			trait = trusting
+		}
+		has_trait = {
+			value = -1
+			trait = content
+		}
+		has_trait = {
+			value = -1
+			trait = honest
+		}
+		has_trait = {
+			value = -1
+			trait = charitable
+		}
+		has_trait = {
+			value = -1
+			trait = kind
+		}
+		has_trait = {
+			value = -1
+			trait = wroth
+		}
+		has_trait = {
+			value = -2
+			trait = slow
+		}
+		has_trait = {
+			value = -2
+			trait = stutter
+		}
+		has_trait = {
+			value = -2
+			trait = lisp
+		}
+		has_trait = {
+			value = -3
+			trait = imbecile
+		}
+		society_rank = {
+			rank = 4
+			value = 5
+		}
+	}
+
+	member_score_per_attribute = 3
+	member_score_per_rank = 100
+
+	member_score = {
+		value = 10
+
+		modifier = {
+			factor = 2
+			trait = greedy
+		}
+		modifier = {
+			factor = 1.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 1.5
+			trait = diligent
+		}
+		modifier = {
+			factor = 1.5
+			trait = deceitful
+		}
+		modifier = {
+			factor = 1.5
+			trait = stubborn
+		}
+		modifier = {
+			factor = 1
+			trait = patient
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				trait = genius
+				trait = quick
+				trait = shrewd
+			}
+		}
+		modifier = {
+			factor = -1.5
+			OR = {
+				trait = imbecile
+				trait = slow
+				trait = dull
+			}
+		}
+	}
+	
+	startup_populate = {
+	    trigger = {
+			ai = yes
+	    	controls_religion = no
+			age = 16
+			is_in_society = no
+			is_dumb_trigger = no
+			is_landed = yes
+			lower_tier_than = king
+			OR = {
+				AND = { #feudal
+					NOT = { is_priest = yes }
+					OR = { 
+						stewardship = 14
+						trait = indulgent_wastrel
+						trait = thrifty_clerk
+						trait = fortune_builder
+						trait = midas_touched
+						trait = vaishya
+					}
+				}
+				AND = { #priest
+					is_priest = yes
+					OR = {
+						trait = greedy
+						has_impious_trait_trigger = yes
+					}
+					OR = { 
+						stewardship = 14
+						trait = indulgent_wastrel
+						trait = thrifty_clerk
+						trait = fortune_builder
+						trait = midas_touched
+						trait = vaishya
+					}
+				}
+				AND = { #mayors
+					stewardship = 10
+					OR = {
+						is_republic = yes
+						is_patrician = yes
+					}
+				}
+			}
+		}
+	}
+}

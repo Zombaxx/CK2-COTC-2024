@@ -1,0 +1,3299 @@
+join_from_chivalry_order_society = { #join the society of someone
+	FROM = {
+		trigger_switch = {
+			on_trigger = society_member_of
+			society_knights_templar			= { ROOT = { join_society = society_knights_templar } }
+			society_knights_hospitaller		= { ROOT = { join_society = society_knights_hospitaller } }
+			society_teutonic_order			= { ROOT = { join_society = society_teutonic_order } }
+			society_knights_calatrava		= { ROOT = { join_society = society_knights_calatrava } }
+			society_knights_santiago		= { ROOT = { join_society = society_knights_santiago } }
+			society_holy_sepulchre			= { ROOT = { join_society = society_holy_sepulchre } }
+			society_saint_anthony			= { ROOT = { join_society = society_saint_anthony } }
+			society_saint_addai				= { ROOT = { join_society = society_saint_addai } }
+			society_bektashi				= { ROOT = { join_society = society_bektashi } }
+			society_haruriyyah				= { ROOT = { join_society = society_haruriyyah } }
+			society_zealots					= { ROOT = { join_society = society_zealots } }
+			society_immortals				= { ROOT = { join_society = society_immortals } }
+			society_jomsvikings				= { ROOT = { join_society = society_jomsvikings } }
+			society_sky_lords				= { ROOT = { join_society = society_sky_lords } }
+			society_spirit_guardians		= { ROOT = { join_society = society_spirit_guardians } }
+			society_warriors_perun			= { ROOT = { join_society = society_warriors_perun } }
+			society_chosen_perkunas			= { ROOT = { join_society = society_chosen_perkunas } }
+			society_sons_kaleva				= { ROOT = { join_society = society_sons_kaleva } }
+			society_huitzilopochtli			= { ROOT = { join_society = society_huitzilopochtli } }
+			society_ashokas_chosen			= { ROOT = { join_society = society_ashokas_chosen } }
+			society_followers_arjuna		= { ROOT = { join_society = society_followers_arjuna } }
+			society_bulls_rishabha			= { ROOT = { join_society = society_bulls_rishabha } }
+			society_zun_warriors			= { ROOT = { join_society = society_zun_warriors } }
+			society_army_light				= { ROOT = { join_society = society_army_light } }
+			society_western_guild			= { ROOT = { join_society = society_western_guild } }
+			society_southern_guild			= { ROOT = { join_society = society_southern_guild } }
+			society_northern_guild			= { ROOT = { join_society = society_northern_guild } }
+			society_eastern_guild			= { ROOT = { join_society = society_eastern_guild } }
+			society_livonian_brothers_of_the_sword= { ROOT = { join_society = society_livonian_brothers_of_the_sword } }
+			society_saint_blaise			= { ROOT = { join_society = society_saint_blaise } }
+			society_knights_saint_mark		= { ROOT = { join_society = society_knights_saint_mark } }
+			society_army_lucifer			= { ROOT = { join_society = society_army_lucifer } }
+			society_arsiyah					= { ROOT = { join_society = society_arsiyah } }
+			society_saqaliba				= { ROOT = { join_society = society_saqaliba } }
+			society_devotees_of_the_true_prophet = { ROOT = { join_society = society_devotees_of_the_true_prophet } }
+			society_ansar					= { ROOT = { join_society = society_ansar } }
+			society_ghazi_sunni				= { ROOT = { join_society = society_ghazi_sunni } }
+			society_ghazi_shiite			= { ROOT = { join_society = society_ghazi_shiite } }
+			society_sons_of_judea			= { ROOT = { join_society = society_sons_of_judea } }
+			society_braedralag				= { ROOT = { join_society = society_braedralag } }
+			society_harii					= { ROOT = { join_society = society_harii } }
+			society_fianna					= { ROOT = { join_society = society_fianna } }
+			society_gwydion					= { ROOT = { join_society = society_gwydion } }
+			society_red_dragons				= { ROOT = { join_society = society_red_dragons } }
+			society_anubis					= { ROOT = { join_society = society_anubis } }
+			society_horus					= { ROOT = { join_society = society_horus } }
+			society_herculean				= { ROOT = { join_society = society_herculean } }
+			society_sacred_band				= { ROOT = { join_society = society_sacred_band } }
+			society_great_host				= { ROOT = { join_society = society_great_host } }
+			society_guardians_of_the_sacred_flame = { ROOT = { join_society = society_guardians_of_the_sacred_flame } }
+			society_disciples_of_the_old_gods = { ROOT = { join_society = society_disciples_of_the_old_gods } }
+			society_generic_fighter_guild	= { ROOT = { join_society = society_generic_fighter_guild } }
+			society_risk_fighter_guild		= { ROOT = { join_society = society_risk_fighter_guild } }
+			society_female_fighter_guild	= { ROOT = { join_society = society_female_fighter_guild } }
+			society_holy_one				= { ROOT = { join_society = society_holy_one } }
+			society_myrmidons				= { ROOT = { join_society = society_myrmidons } }
+			society_dralhas_children		= { ROOT = { join_society = society_dralhas_children } }
+		}
+	}
+}
+
+join_root_chivalry_order_society = { #SCOPE join the society of ROOT
+	ROOT = {
+		trigger_switch = {
+			on_trigger = society_member_of
+			society_knights_templar			= { PREV = { join_society = society_knights_templar } }
+			society_knights_hospitaller		= { PREV = { join_society = society_knights_hospitaller } }
+			society_teutonic_order			= { PREV = { join_society = society_teutonic_order } }
+			society_knights_calatrava		= { PREV = { join_society = society_knights_calatrava } }
+			society_knights_santiago		= { PREV = { join_society = society_knights_santiago } }
+			society_holy_sepulchre			= { PREV = { join_society = society_holy_sepulchre } }
+			society_saint_anthony			= { PREV = { join_society = society_saint_anthony } }
+			society_saint_addai				= { PREV = { join_society = society_saint_addai } }
+			society_bektashi				= { PREV = { join_society = society_bektashi } }
+			society_haruriyyah				= { PREV = { join_society = society_haruriyyah } }
+			society_zealots					= { PREV = { join_society = society_zealots } }
+			society_immortals				= { PREV = { join_society = society_immortals } }
+			society_jomsvikings				= { PREV = { join_society = society_jomsvikings } }
+			society_sky_lords				= { PREV = { join_society = society_sky_lords } }
+			society_spirit_guardians		= { PREV = { join_society = society_spirit_guardians } }
+			society_warriors_perun			= { PREV = { join_society = society_warriors_perun } }
+			society_chosen_perkunas			= { PREV = { join_society = society_chosen_perkunas } }
+			society_sons_kaleva				= { PREV = { join_society = society_sons_kaleva } }
+			society_huitzilopochtli			= { PREV = { join_society = society_huitzilopochtli } }
+			society_ashokas_chosen			= { PREV = { join_society = society_ashokas_chosen } }
+			society_followers_arjuna		= { PREV = { join_society = society_followers_arjuna } }
+			society_bulls_rishabha			= { PREV = { join_society = society_bulls_rishabha } }
+			society_zun_warriors			= { PREV = { join_society = society_zun_warriors } }
+			society_army_light				= { PREV = { join_society = society_army_light } }
+			society_western_guild			= { PREV = { join_society = society_western_guild } }
+			society_southern_guild			= { PREV = { join_society = society_southern_guild } }
+			society_northern_guild			= { PREV = { join_society = society_northern_guild } }
+			society_eastern_guild			= { PREV = { join_society = society_eastern_guild } }
+			society_livonian_brothers_of_the_sword= { PREV = { join_society = society_livonian_brothers_of_the_sword } }
+			society_saint_blaise			= { PREV = { join_society = society_saint_blaise } }
+			society_knights_saint_mark		= { PREV = { join_society = society_knights_saint_mark } }
+			society_army_lucifer			= { PREV = { join_society = society_army_lucifer } }
+			society_arsiyah					= { PREV = { join_society = society_arsiyah } }
+			society_saqaliba				= { PREV = { join_society = society_saqaliba } }
+			society_devotees_of_the_true_prophet = { PREV = { join_society = society_devotees_of_the_true_prophet } }
+			society_ansar					= { PREV = { join_society = society_ansar } }
+			society_ghazi_sunni				= { PREV = { join_society = society_ghazi_sunni } }
+			society_ghazi_shiite			= { PREV = { join_society = society_ghazi_shiite } }
+			society_sons_of_judea			= { PREV = { join_society = society_sons_of_judea } }
+			society_braedralag				= { PREV = { join_society = society_braedralag } }
+			society_harii					= { PREV = { join_society = society_harii } }
+			society_fianna					= { PREV = { join_society = society_fianna } }
+			society_gwydion					= { PREV = { join_society = society_gwydion } }
+			society_red_dragons				= { PREV = { join_society = society_red_dragons } }
+			society_anubis					= { PREV = { join_society = society_anubis } }
+			society_horus					= { PREV = { join_society = society_horus } }
+			society_herculean				= { PREV = { join_society = society_herculean } }
+			society_sacred_band				= { PREV = { join_society = society_sacred_band } }
+			society_great_host				= { PREV = { join_society = society_great_host } }
+			society_guardians_of_the_sacred_flame = { PREV = { join_society = society_guardians_of_the_sacred_flame } }
+			society_disciples_of_the_old_gods = { PREV = { join_society = society_disciples_of_the_old_gods } }
+			society_generic_fighter_guild	= { PREV = { join_society = society_generic_fighter_guild } }
+			society_risk_fighter_guild		= { PREV = { join_society = society_risk_fighter_guild } }
+			society_female_fighter_guild	= { PREV = { join_society = society_female_fighter_guild } }
+			society_holy_one				= { PREV = { join_society = society_holy_one } }
+			society_myrmidons				= { PREV = { join_society = society_myrmidons } }
+			society_dralhas_children		= { PREV = { join_society = society_dralhas_children } }
+		}
+	}
+}
+
+chivalry_duel_cleaning_attacks = { #the random attack list
+	clr_character_flag = chivalry_duel_1_1
+	clr_character_flag = chivalry_duel_1_2
+	clr_character_flag = chivalry_duel_1_3
+	clr_character_flag = chivalry_duel_1_4
+	clr_character_flag = chivalry_duel_2_1
+	clr_character_flag = chivalry_duel_2_2
+	clr_character_flag = chivalry_duel_2_2
+	clr_character_flag = chivalry_duel_2_3
+	clr_character_flag = chivalry_duel_2_4
+	clr_character_flag = chivalry_duel_2_5
+	clr_character_flag = chivalry_duel_2_6
+	clr_character_flag = chivalry_duel_2_7
+	clr_character_flag = chivalry_duel_2_8
+}
+
+chivalry_duel_cleaning = { #received attack
+	clr_character_flag = chivalry_duel_turtle
+	clr_character_flag = chivalry_duel_close
+	clr_character_flag = chivalry_duel_scream
+	clr_character_flag = chivalry_duel_blind
+	clr_character_flag = chivalry_duel_opportunity_dodge
+	# clr_character_flag = chivalry_duel_good_dodge
+	# clr_character_flag = chivalry_duel_bad_dodge
+	clr_character_flag = chivalry_duel_stun_dodge
+	clr_character_flag = chivalry_duel_opportunity_counter
+	# clr_character_flag = chivalry_duel_good_counter
+	# clr_character_flag = chivalry_duel_bad_counter
+	clr_character_flag = chivalry_duel_stun_counter
+	clr_character_flag = chivalry_duel_opportunity_parry
+	# clr_character_flag = chivalry_duel_good_counter
+	# clr_character_flag = chivalry_duel_bad_counter
+	clr_character_flag = chivalry_duel_stun_parry
+	clr_character_flag = chivalry_head_hit_flag #wounds type from FROM attack, flags are on ROOT
+	clr_character_flag = chivalry_arms_hit_flag
+	clr_character_flag = chivalry_torso_hit_flag
+	clr_character_flag = chivalry_legs_hit_flag
+	clr_character_flag = chivalry_domhand_hit_flag
+	clr_character_flag = chivalry_subhand_hit_flag
+	clr_character_flag = chivalry_critical_hit_flag
+}
+
+chivalry_duel_cleaning_final = { #all duel flags
+	clr_character_flag = chivalry_duel_ongoing
+	clr_character_flag = chivalry_duel_1_1
+	clr_character_flag = chivalry_duel_1_2
+	clr_character_flag = chivalry_duel_1_3
+	clr_character_flag = chivalry_duel_1_4
+	clr_character_flag = chivalry_duel_2_1
+	clr_character_flag = chivalry_duel_2_2
+	clr_character_flag = chivalry_duel_2_3
+	clr_character_flag = chivalry_duel_2_4
+	clr_character_flag = chivalry_duel_2_5
+	clr_character_flag = chivalry_duel_2_6
+	clr_character_flag = chivalry_duel_2_7
+	clr_character_flag = chivalry_duel_2_8
+	clr_character_flag = chivalry_duel_turtle
+	clr_character_flag = chivalry_duel_close
+	clr_character_flag = chivalry_duel_scream
+	clr_character_flag = chivalry_duel_blind
+	clr_character_flag = chivalry_duel_opportunity_dodge
+	# clr_character_flag = chivalry_duel_good_dodge
+	# clr_character_flag = chivalry_duel_bad_dodge
+	clr_character_flag = chivalry_duel_stun_dodge
+	clr_character_flag = chivalry_duel_opportunity_counter
+	# clr_character_flag = chivalry_duel_good_counter
+	# clr_character_flag = chivalry_duel_bad_counter
+	clr_character_flag = chivalry_duel_stun_counter
+	clr_character_flag = chivalry_duel_opportunity_parry
+	# clr_character_flag = chivalry_duel_good_counter
+	# clr_character_flag = chivalry_duel_bad_counter
+	clr_character_flag = chivalry_duel_stun_parry
+	clr_character_flag = has_sent_request_to_rank_up
+	clr_character_flag = chivalry_rank_up_foe
+	clr_character_flag = chivalry_rank_up_pretender
+	clr_character_flag = chivalry_duel_death
+	clr_character_flag = chivalry_duel_wounded
+	# clr_character_flag = mission_chivalry_hunt_flag
+	clr_character_flag = chivalry_head_hit_flag  #wounds type from FROM attack, flags are on ROOT
+	clr_character_flag = chivalry_arms_hit_flag
+	clr_character_flag = chivalry_torso_hit_flag
+	clr_character_flag = chivalry_legs_hit_flag
+	clr_character_flag = chivalry_domhand_hit_flag
+	clr_character_flag = chivalry_subhand_hit_flag
+	clr_character_flag = chivalry_critical_hit_flag
+	hidden_tooltip = {
+		set_variable = { which = chivalry_duel value = 0 }
+		set_variable = { which = chivalry_head_hit_var value = 0 }  #wounds type from FROM attack, clear wounds
+		set_variable = { which = chivalry_torso_hit_var value = 0 }
+		set_variable = { which = chivalry_legs_hit_var value = 0 }
+		set_variable = { which = chivalry_domhand_hit_var value = 0 }
+		set_variable = { which = chivalry_subhand_hit_var value = 0 }
+	}
+}
+
+chivalry_vote_cleaning = {
+    clr_character_flag = chivalry_law_feminist_on
+    clr_character_flag = chivalry_law_feminist_off
+    clr_character_flag = chivalry_law_heretic_on
+    clr_character_flag = chivalry_law_heretic_off
+    clr_character_flag = chivalry_law_animal_on
+    clr_character_flag = chivalry_law_animal_off
+    clr_character_flag = chivalry_law_diplomat
+    clr_character_flag = chivalry_law_steward
+    clr_character_flag = chivalry_law_spy
+    clr_character_flag = chivalry_law_scholar
+    clr_character_flag = chivalry_law_piety
+    clr_character_flag = chivalry_law_gold
+	hidden_tooltip = {
+		set_variable = { which = "chivalry_holy_vote" value = 0 }
+	}
+}
+
+chivalry_warrior_trait_upgrade = {
+	if = {
+		limit = {
+			NOT = { trait = poor_warrior }
+			NOT = { trait = trained_warrior }
+			NOT = { trait = skilled_warrior }
+			NOT = { trait = master_warrior }
+		}
+		add_trait = poor_warrior
+		clr_character_flag = chivalry_trained_warrior_flag_one
+		clr_character_flag = chivalry_skilled_warrior_flag_one
+		clr_character_flag = chivalry_skilled_warrior_flag_two
+		clr_character_flag = chivalry_master_warrior_flag_one
+		clr_character_flag = chivalry_master_warrior_flag_two
+		clr_character_flag = chivalry_master_warrior_flag_three
+	}
+	else_if = {
+		limit = {
+			trait = poor_warrior
+			NOT = { has_character_flag = chivalry_trained_warrior_flag_one }	
+		}
+		set_character_flag = chivalry_trained_warrior_flag_one
+		custom_tooltip = { text = chivalry_training_warrior_tooltip_one }
+		character_event = { id = CHI.1771 }
+	}
+	else_if = {
+		limit = {
+			trait = poor_warrior
+			has_character_flag = chivalry_trained_warrior_flag_one	
+		}
+		add_trait = trained_warrior
+		clr_character_flag = chivalry_trained_warrior_flag_one
+		clr_character_flag = chivalry_skilled_warrior_flag_one
+		clr_character_flag = chivalry_skilled_warrior_flag_two
+		clr_character_flag = chivalry_master_warrior_flag_one
+		clr_character_flag = chivalry_master_warrior_flag_two
+		clr_character_flag = chivalry_master_warrior_flag_three
+	}
+	else_if = {
+		limit = {
+			trait = trained_warrior
+			NOT = { has_character_flag = chivalry_skilled_warrior_flag_one }
+			NOT = { has_character_flag = chivalry_skilled_warrior_flag_two }	
+		}
+		set_character_flag = chivalry_skilled_warrior_flag_one
+		custom_tooltip = { text = chivalry_training_warrior_tooltip_one }
+		character_event = { id = CHI.1771 }
+	}
+	else_if = {
+		limit = {
+			trait = trained_warrior
+			has_character_flag = chivalry_skilled_warrior_flag_one
+			NOT = { has_character_flag = chivalry_skilled_warrior_flag_two }	
+		}
+		set_character_flag = chivalry_skilled_warrior_flag_two
+		custom_tooltip = { text = chivalry_training_warrior_tooltip_three }
+		character_event = { id = CHI.1771 }
+	}
+	else_if = {
+		limit = {
+			trait = trained_warrior
+			has_character_flag = chivalry_skilled_warrior_flag_one
+			has_character_flag = chivalry_skilled_warrior_flag_two	
+		}
+		add_trait = skilled_warrior
+		clr_character_flag = chivalry_trained_warrior_flag_one
+		clr_character_flag = chivalry_skilled_warrior_flag_one
+		clr_character_flag = chivalry_skilled_warrior_flag_two
+		clr_character_flag = chivalry_master_warrior_flag_one
+		clr_character_flag = chivalry_master_warrior_flag_two
+		clr_character_flag = chivalry_master_warrior_flag_three
+	}
+	else_if = {
+		limit = {
+			trait = skilled_warrior
+			NOT = { has_character_flag = chivalry_master_warrior_flag_one }
+			NOT = { has_character_flag = chivalry_master_warrior_flag_two }
+			NOT = { has_character_flag = chivalry_master_warrior_flag_three }	
+		}
+		set_character_flag = chivalry_master_warrior_flag_one
+		custom_tooltip = { text = chivalry_training_warrior_tooltip_one }
+		character_event = { id = CHI.1771 }
+	}
+	else_if = {
+		limit = {
+			trait = skilled_warrior
+			has_character_flag = chivalry_master_warrior_flag_one
+			NOT = { has_character_flag = chivalry_master_warrior_flag_two }
+			NOT = { has_character_flag = chivalry_master_warrior_flag_three }	
+		}
+		set_character_flag = chivalry_master_warrior_flag_two
+		custom_tooltip = { text = chivalry_training_warrior_tooltip_two }
+		character_event = { id = CHI.1771 }
+	}
+	else_if = {
+		limit = {
+			trait = skilled_warrior
+			has_character_flag = chivalry_master_warrior_flag_one
+			has_character_flag = chivalry_master_warrior_flag_two
+			NOT = { has_character_flag = chivalry_master_warrior_flag_three }	
+		}
+		set_character_flag = chivalry_master_warrior_flag_three
+		custom_tooltip = { text = chivalry_training_warrior_tooltip_three }
+		character_event = { id = CHI.1771 }
+	}
+	else_if = {
+		limit = {
+			trait = skilled_warrior
+			has_character_flag = chivalry_master_warrior_flag_one
+			has_character_flag = chivalry_master_warrior_flag_two
+			has_character_flag = chivalry_master_warrior_flag_three
+		}
+		add_trait = master_warrior
+		clr_character_flag = chivalry_trained_warrior_flag_one
+		clr_character_flag = chivalry_skilled_warrior_flag_one
+		clr_character_flag = chivalry_skilled_warrior_flag_two
+		clr_character_flag = chivalry_master_warrior_flag_one
+		clr_character_flag = chivalry_master_warrior_flag_two
+		clr_character_flag = chivalry_master_warrior_flag_three
+	}
+	else = {
+		add_one_duel_experience_modifier = yes
+	}
+}
+
+chivalry_bounty_amount = {
+	if = {
+		limit = {
+			event_target:chivalry_hunt_target = { tier = emperor }
+		}
+		wealth = 500
+	}
+	else_if = {
+		limit = {
+			event_target:chivalry_hunt_target = { tier = king }
+		}
+		wealth = 400
+	}
+	else_if = {
+		limit = {
+			event_target:chivalry_hunt_target = { tier = duke }
+		}
+		wealth = 300
+	}
+	else_if = {
+		limit = {
+			event_target:chivalry_hunt_target = { tier = count }
+		}
+		 wealth = 200
+	}
+	else_if = {
+		limit = {
+			event_target:chivalry_hunt_target = { tier = baron }
+		}
+		wealth = 100
+	}
+	else = {
+		wealth = 50
+	}
+}
+
+chivalry_bounty_amount_double = {
+	if = {
+		limit = {
+			FROM = { tier = emperor }
+		}
+		wealth = 1000
+	}
+	else_if = {
+		limit = {
+			FROM = { tier = king }
+		}
+		wealth = 800
+	}
+	else_if = {
+		limit = {
+			FROM = { tier = duke }
+		}
+		wealth = 600
+	}
+	else_if = {
+		limit = {
+			FROM = { tier = count }
+		}
+		 wealth = 400
+	}
+	else_if = {
+		limit = {
+			FROM = { tier = baron }
+		}
+		wealth = 200
+	}
+	else = {
+		wealth = 100
+	}
+}
+
+chivalry_give_trophy = {
+	if = {
+		limit = {
+			FROM = {
+				any_artifact = {
+					OR = {
+						has_artifact_flag = combat_weapon
+						has_artifact_flag = combat
+						artifact_type = loot_axe
+						artifact_type = jian_sword
+					}
+				}
+			}
+		}
+		FROM = {
+			any_artifact = {
+				limit = { 
+					OR = {
+						has_artifact_flag = combat_weapon
+						has_artifact_flag = combat
+						artifact_type = loot_axe
+						artifact_type = jian_sword
+					}
+				}
+				save_event_target_as = chivalry_combat_trophy
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { 
+				OR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+		}
+		FROM = { 
+			add_artifact = chivalry_item_skull
+			new_artifact = {
+				save_event_target_as = chivalry_combat_trophy
+			}
+		}
+	}
+	else = {
+		FROM = { 
+			add_artifact = chivalry_item_broke
+			new_artifact = {
+				save_event_target_as = chivalry_combat_trophy
+			}
+		}
+	}
+	event_target:chivalry_combat_trophy = {
+		clr_artifact_flag = chivalry_unsellable
+		transfer_artifact = {
+			from = FROM
+			to = ROOT
+		}
+	}
+}
+
+chivalry_flesh_wound = {
+	hidden_tooltip = {
+		add_character_modifier = {
+			name = chivalry_flesh_wound_timer
+			hidden = yes
+			months = 12
+		}
+	}
+}
+
+chivalry_create_knights = {
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		female = no
+		attributes = {
+			martial = 10
+		}
+	}
+	new_character = {
+		remove_trait = weak
+		remove_trait = slow
+		remove_trait = imbecile
+		remove_trait = dull
+		remove_trait = craven
+		remove_trait = cynical
+		
+		remove_trait = mystic
+		remove_trait = socializer
+		remove_trait = gamer
+		remove_trait = hedonist
+		remove_trait = duelist
+		remove_trait = hunter
+		remove_trait = strategist
+		remove_trait = administrator
+		remove_trait = architect
+		remove_trait = gardener
+		remove_trait = schemer
+		remove_trait = impaler
+		remove_trait = seducer
+		remove_trait = seductress
+		remove_trait = theologian
+		remove_trait = scholar
+		
+		remove_trait = light_foot_leader 
+		remove_trait = heavy_infantry_leader 
+		remove_trait = cavalry_leader
+		remove_trait = inspiring_leader 
+		remove_trait = trickster 
+		remove_trait = organizer 
+		remove_trait = defensive_leader 
+		remove_trait = experimenter
+		remove_trait = flanker
+		remove_trait = aggressive_leader 
+		remove_trait = siege_leader 
+		remove_trait = flat_terrain_leader 
+		remove_trait = rough_terrain_leader 
+		remove_trait = mountain_terrain_leader 
+		remove_trait = desert_terrain_leader 
+		remove_trait = holy_warrior 
+		remove_trait = unyielding_leader
+		remove_trait = narrow_flank_leader 
+		remove_trait = war_elephant_leader  
+		remove_trait = jungle_terrain_leader 
+		remove_trait = winter_soldier              
+		               
+		random_list = { #add holy leader trait
+			10 = {
+				add_trait = chivalry_holy_inspiring_leader
+			}
+			10 = {
+				add_trait = chivalry_holy_trickster
+			}
+			10 = {
+				add_trait = chivalry_holy_organizer
+			}
+			10 = {
+				add_trait = chivalry_holy_defensive_leader
+			}
+			10 = {
+				add_trait = chivalry_holy_experimenter
+			}
+			10 = {
+				add_trait = chivalry_holy_flanker
+			}
+			10 = {
+				add_trait = chivalry_holy_aggressive_leader
+			}
+			10 = {
+				add_trait = chivalry_holy_siege_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_holy_warrior
+			}
+			10 = {
+				add_trait = chivalry_holy_unyielding_leader
+			}
+			10 = {
+				add_trait = chivalry_holy_narrow_flank_leader
+			}
+			10 = {
+				trigger = {
+					religion_group = indian_group
+				}
+				add_trait = chivalry_holy_war_elephant_leader
+			}
+			10 = {
+				add_trait = chivalry_holy_light_foot_leader
+			}
+			10 = {
+				add_trait = chivalry_holy_heavy_infantry_leader
+			}
+			10 = {
+				add_trait = chivalry_holy_cavalry_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						OR = {
+							location = { terrain = forest }
+							location = { terrain = hills }
+						}
+					}
+				}
+				add_trait = chivalry_rough_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						OR = {
+							location = { terrain = plains }
+							location = { terrain = farmlands }
+							location = { terrain = steppe }
+						}
+					}
+				}
+				add_trait = chivalry_flat_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						location = { is_winter = yes }
+					}
+				}
+				add_trait = chivalry_winter_soldier
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						location = { terrain = mountain }
+					}
+				}
+				add_trait = chivalry_mountain_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						location = { terrain = desert }
+					}
+				}
+				add_trait = chivalry_desert_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						OR = {
+							location = { terrain = jungle }
+							location = { terrain = marsh }
+						}
+					}
+				}
+				add_trait = chivalry_jungle_terrain_leader
+			}
+		}           
+		
+		random_list = { # Flavor Randomization maybe more
+			10 = {
+				add_trait = robust
+			}
+			10 = {
+				add_trait = zealous
+			}
+			10 = {
+				add_trait = hunter
+			}
+			5 = {
+				add_trait = strategist
+			}
+			5 = {
+				trigger = {
+					has_dlc = "Reapers"
+				}
+				if = {
+					limit = {
+						has_dlc = "Reapers"
+					}
+					add_trait = one_eyed
+					change_martial = 1
+				}
+			}
+			5 = { 
+				add_trait = shrewd
+			}
+			5 = { 
+				add_trait = strong
+			}
+			10 = { 
+				add_trait = chivalry_squire_one
+			}
+			8 = { 
+				add_trait = chivalry_squire_two
+			}
+			5 = { 
+				add_trait = chivalry_squire_three
+			}
+			4 = { 
+				add_trait = chivalry_squire_four
+			}
+		}
+		random_list = {
+			30 = {
+				add_trait = poor_warrior
+			}
+			30 = {
+				add_trait = trained_warrior
+			}
+			15 = {
+				add_trait = skilled_warrior
+			}
+			5 = {
+				add_trait = master_warrior
+			}
+		}
+		add_trait = chivalry_commander
+		save_event_target_as = chivalry_event_commander
+	}
+}
+
+chivalry_create_fighter = {
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		female = no
+		attributes = {
+			martial = 10
+		}
+	}
+	new_character = {
+		remove_trait = weak
+		remove_trait = slow
+		remove_trait = imbecile
+		remove_trait = dull
+		remove_trait = craven
+		
+		remove_trait = mystic
+		remove_trait = socializer
+		remove_trait = gamer
+		remove_trait = hedonist
+		remove_trait = duelist
+		remove_trait = hunter
+		remove_trait = strategist
+		remove_trait = administrator
+		remove_trait = architect
+		remove_trait = gardener
+		remove_trait = schemer
+		remove_trait = impaler
+		remove_trait = seducer
+		remove_trait = seductress
+		remove_trait = theologian
+		remove_trait = scholar
+		
+		remove_trait = light_foot_leader 
+		remove_trait = heavy_infantry_leader 
+		remove_trait = cavalry_leader
+		remove_trait = inspiring_leader 
+		remove_trait = trickster 
+		remove_trait = organizer 
+		remove_trait = defensive_leader 
+		remove_trait = experimenter
+		remove_trait = flanker
+		remove_trait = aggressive_leader 
+		remove_trait = siege_leader 
+		remove_trait = flat_terrain_leader 
+		remove_trait = rough_terrain_leader 
+		remove_trait = mountain_terrain_leader 
+		remove_trait = desert_terrain_leader 
+		remove_trait = holy_warrior 
+		remove_trait = unyielding_leader
+		remove_trait = narrow_flank_leader 
+		remove_trait = war_elephant_leader  
+		remove_trait = jungle_terrain_leader 
+		remove_trait = winter_soldier              
+		               
+		random_list = { #add fighter leader trait
+			10 = {
+				add_trait = chivalry_fight_inspiring_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_trickster
+			}
+			10 = {
+				add_trait = chivalry_fight_organizer
+			}
+			10 = {
+				add_trait = chivalry_fight_defensive_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_experimenter
+			}
+			10 = {
+				add_trait = chivalry_fight_flanker
+			}
+			10 = {
+				add_trait = chivalry_fight_aggressive_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_siege_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_holy_warrior
+			}
+			10 = {
+				add_trait = chivalry_fight_unyielding_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_narrow_flank_leader
+			}
+			10 = {
+				trigger = {
+					religion_group = indian_group
+				}
+				add_trait = chivalry_fight_war_elephant_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_light_foot_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_heavy_infantry_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_cavalry_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						OR = {
+							location = { terrain = forest }
+							location = { terrain = hills }
+						}
+					}
+				}
+				add_trait = chivalry_rough_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						OR = {
+							location = { terrain = plains }
+							location = { terrain = farmlands }
+							location = { terrain = steppe }
+						}
+					}
+				}
+				add_trait = chivalry_flat_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						location = { is_winter = yes }
+					}
+				}
+				add_trait = chivalry_winter_soldier
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						location = { terrain = mountain }
+					}
+				}
+				add_trait = chivalry_mountain_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						location = { terrain = desert }
+					}
+				}
+				add_trait = chivalry_desert_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						OR = {
+							location = { terrain = jungle }
+							location = { terrain = marsh }
+						}
+					}
+				}
+				add_trait = chivalry_jungle_terrain_leader
+			}
+		}           
+		
+		random_list = { # Flavor Randomization maybe more
+			10 = {
+				add_trait = robust
+			}
+			10 = {
+				add_trait = duelist
+			}
+			10 = {
+				add_trait = hunter
+			}
+			5 = {
+				add_trait = strategist
+			}
+			5 = {
+				trigger = {
+					has_dlc = "Reapers"
+				}
+				if = {
+					limit = {
+						has_dlc = "Reapers"
+					}
+					add_trait = one_eyed
+					change_martial = 1
+				}
+			}
+			5 = { 
+				add_trait = shrewd
+			}
+			5 = { 
+				add_trait = strong
+			}
+			10 = { 
+				add_trait = chivalry_squire_one
+			}
+			8 = { 
+				add_trait = chivalry_squire_two
+			}
+			5 = { 
+				add_trait = chivalry_squire_three
+			}
+			4 = { 
+				add_trait = chivalry_squire_four
+			}
+		}
+		random_list = {
+			30 = {
+				add_trait = poor_warrior
+			}
+			30 = {
+				add_trait = trained_warrior
+			}
+			15 = {
+				add_trait = skilled_warrior
+			}
+			5 = {
+				add_trait = master_warrior
+			}
+		}
+		add_trait = chivalry_commander
+		save_event_target_as = chivalry_event_commander
+	}
+}
+
+chivalry_create_amazon = {
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		female = yes
+		attributes = {
+			martial = 10
+		}
+	}
+	new_character = {
+		set_character_flag = special_marshal
+		remove_trait = weak
+		remove_trait = slow
+		remove_trait = imbecile
+		remove_trait = dull
+		remove_trait = craven
+		
+		remove_trait = mystic
+		remove_trait = socializer
+		remove_trait = gamer
+		remove_trait = hedonist
+		remove_trait = duelist
+		remove_trait = hunter
+		remove_trait = strategist
+		remove_trait = administrator
+		remove_trait = architect
+		remove_trait = gardener
+		remove_trait = schemer
+		remove_trait = impaler
+		remove_trait = seducer
+		remove_trait = seductress
+		remove_trait = theologian
+		remove_trait = scholar
+		
+		remove_trait = light_foot_leader 
+		remove_trait = heavy_infantry_leader 
+		remove_trait = cavalry_leader
+		remove_trait = inspiring_leader 
+		remove_trait = trickster 
+		remove_trait = organizer 
+		remove_trait = defensive_leader 
+		remove_trait = experimenter
+		remove_trait = flanker
+		remove_trait = aggressive_leader 
+		remove_trait = siege_leader 
+		remove_trait = flat_terrain_leader 
+		remove_trait = rough_terrain_leader 
+		remove_trait = mountain_terrain_leader 
+		remove_trait = desert_terrain_leader 
+		remove_trait = holy_warrior 
+		remove_trait = unyielding_leader
+		remove_trait = narrow_flank_leader 
+		remove_trait = war_elephant_leader  
+		remove_trait = jungle_terrain_leader 
+		remove_trait = winter_soldier              
+		               
+		random_list = { #add fighter leader trait
+			10 = {
+				add_trait = chivalry_fight_inspiring_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_trickster
+			}
+			10 = {
+				add_trait = chivalry_fight_organizer
+			}
+			10 = {
+				add_trait = chivalry_fight_defensive_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_experimenter
+			}
+			10 = {
+				add_trait = chivalry_fight_flanker
+			}
+			10 = {
+				add_trait = chivalry_fight_aggressive_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_siege_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_holy_warrior
+			}
+			10 = {
+				add_trait = chivalry_fight_unyielding_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_narrow_flank_leader
+			}
+			10 = {
+				trigger = {
+					religion_group = indian_group
+				}
+				add_trait = chivalry_fight_war_elephant_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_light_foot_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_heavy_infantry_leader
+			}
+			10 = {
+				add_trait = chivalry_fight_cavalry_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						OR = {
+							location = { terrain = forest }
+							location = { terrain = hills }
+						}
+					}
+				}
+				add_trait = chivalry_rough_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						OR = {
+							location = { terrain = plains }
+							location = { terrain = farmlands }
+							location = { terrain = steppe }
+						}
+					}
+				}
+				add_trait = chivalry_flat_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						location = { is_winter = yes }
+					}
+				}
+				add_trait = chivalry_winter_soldier
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						location = { terrain = mountain }
+					}
+				}
+				add_trait = chivalry_mountain_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						location = { terrain = desert }
+					}
+				}
+				add_trait = chivalry_desert_terrain_leader
+			}
+			10 = {
+				trigger = {
+					ROOT = {
+						OR = {
+							location = { terrain = jungle }
+							location = { terrain = marsh }
+						}
+					}
+				}
+				add_trait = chivalry_jungle_terrain_leader
+			}
+		}           
+		
+		random_list = { # Flavor Randomization maybe more
+			10 = {
+				add_trait = robust
+			}
+			10 = {
+				add_trait = duelist
+			}
+			10 = {
+				add_trait = hunter
+			}
+			5 = {
+				add_trait = strategist
+			}
+			5 = {
+				trigger = {
+					has_dlc = "Reapers"
+				}
+				if = {
+					limit = {
+						has_dlc = "Reapers"
+					}
+					add_trait = one_eyed
+					change_martial = 1
+				}
+			}
+			5 = { 
+				add_trait = shrewd
+			}
+			5 = { 
+				add_trait = strong
+			}
+			10 = { 
+				add_trait = chivalry_squire_one
+			}
+			8 = { 
+				add_trait = chivalry_squire_two
+			}
+			5 = { 
+				add_trait = chivalry_squire_three
+			}
+			4 = { 
+				add_trait = chivalry_squire_four
+			}
+		}
+		random_list = {
+			30 = {
+				add_trait = poor_warrior
+			}
+			30 = {
+				add_trait = trained_warrior
+			}
+			15 = {
+				add_trait = skilled_warrior
+			}
+			5 = {
+				add_trait = master_warrior
+			}
+		}
+		add_trait = chivalry_commander
+		save_event_target_as = chivalry_event_commander
+	}
+}
+
+set_holy_order_government = {
+	if = {
+		limit = {
+			holy_order = yes
+		}
+		set_government_type = order_government
+	}
+	else = {
+		limit = {
+			NOT = { holy_order = yes }
+		}
+		set_government_type = holy_order_government
+	}
+}
+
+risk_society_extra_reward = {
+	if = {
+		limit = {
+			society_member_of = society_risk_fighter_guild
+		}
+		custom_tooltip = { text = risk_society_extra_reward_tooltip }
+		change_society_currency = 50
+		prestige = 25
+	}
+}
+
+chivalry_local_wounds_effect = {
+	hidden_tooltip = {
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			if = { #correct people who lost a hand outside my duels
+				limit = {
+					trait = one_handed
+					NOT = { trait = lefthanded }
+					NOT = { has_character_flag = chivalry_lost_subhand }
+					NOT = { has_character_flag = chivalry_lost_domhand }
+				}
+				set_character_flag = chivalry_lost_domhand
+			}
+			else_if = {
+				limit = {
+					trait = one_handed
+					trait = lefthanded
+					NOT = { has_character_flag = chivalry_lost_subhand }
+					NOT = { has_character_flag = chivalry_lost_domhand }
+				}
+				set_character_flag = chivalry_lost_subhand
+			}
+			chivalry_flesh_wound = yes
+			random_list = { #set bruises
+				10 = { #head
+					trigger = {
+						NAND = {
+							trait = blinded
+							trait = disfigured
+						}
+					}
+					modifier = {
+						factor = 10
+						has_character_flag = chivalry_head_hit_flag
+					}
+					if = {
+						limit = {
+							has_character_flag = chivalry_critical_hit_flag
+						}
+						add_character_modifier = {
+							name = chivalry_head_hit_mod
+							duration = 150
+							stacking = yes
+						}
+					}
+					else = {
+						add_character_modifier = {
+							name = chivalry_head_hit_mod
+							duration = 75
+							stacking = yes
+						}
+					}
+					change_variable = { which = chivalry_head_hit_var value = 1 }
+					set_character_flag = chivalry_head_hit_flag
+					clr_character_flag = chivalry_arms_hit_flag
+					clr_character_flag = chivalry_torso_hit_flag
+					clr_character_flag = chivalry_legs_hit_flag
+				}
+				10 = { #arms
+					trigger = {
+						NOR = {
+							AND = {
+								has_character_flag = chivalry_lost_domhand
+								has_character_modifier = chivalry_swollen_wrist_sub
+								has_character_modifier = chivalry_broken_finger_sub
+							}
+							AND = {
+								has_character_flag = chivalry_lost_subhand
+								has_character_modifier = swollen_wrist
+								has_character_modifier = chivalry_broken_finger_dom
+							}
+						}
+					}
+					modifier = {
+						factor = 10
+						has_character_flag = chivalry_arms_hit_flag
+					}
+					random_list = {
+						50 = {
+							trigger = {
+								NOT = { has_character_flag = chivalry_lost_domhand }
+							}
+							if = {
+								limit = {
+									has_character_flag = chivalry_critical_hit_flag
+								}
+								add_character_modifier = {
+									name = chivalry_domhand_hit_mod
+									duration = 150
+									stacking = yes
+								}
+							}
+							else = {
+								add_character_modifier = {
+									name = chivalry_domhand_hit_mod
+									duration = 75
+									stacking = yes
+								}
+							}
+							change_variable = { which = chivalry_domhand_hit_var value = 1 }
+							set_character_flag = chivalry_domhand_hit_flag
+							clr_character_flag = chivalry_head_hit_flag
+							clr_character_flag = chivalry_arms_hit_flag
+							clr_character_flag = chivalry_torso_hit_flag
+							clr_character_flag = chivalry_legs_hit_flag
+						}
+						50 = {
+							trigger = {
+								NOT = { has_character_flag = chivalry_lost_subhand }
+							}
+							if = {
+								limit = {
+									has_character_flag = chivalry_critical_hit_flag
+								}
+								add_character_modifier = {
+									name = chivalry_subhand_hit_mod
+									duration = 150
+									stacking = yes
+								}
+							}
+							else = {
+								add_character_modifier = {
+									name = chivalry_subhand_hit_mod
+									duration = 75
+									stacking = yes
+								}
+							}
+							change_variable = { which = chivalry_subhand_hit_var value = 1 }
+							set_character_flag = chivalry_subhand_hit_flag
+							clr_character_flag = chivalry_head_hit_flag
+							clr_character_flag = chivalry_arms_hit_flag
+							clr_character_flag = chivalry_torso_hit_flag
+							clr_character_flag = chivalry_legs_hit_flag
+						}
+					}
+				}
+				10 = { #torso
+					trigger = {
+						NAND = {
+							has_character_modifier = cracked_ribs
+							has_character_modifier = badly_bruised
+							trait = mangled
+							trait = eunuch
+							trait = troubled_pregnancy
+						}
+					}
+					modifier = {
+						factor = 10
+						has_character_flag = chivalry_torso_hit_flag
+					}
+					if = {
+						limit = {
+							has_character_flag = chivalry_critical_hit_flag
+						}
+						add_character_modifier = {
+							name = chivalry_torso_hit_mod
+							duration = 150
+							stacking = yes
+						}
+					}
+					else = {
+						add_character_modifier = {
+							name = chivalry_torso_hit_mod
+							duration = 75
+							stacking = yes
+						}
+					}
+					change_variable = { which = chivalry_torso_hit_var value = 1 }
+					set_character_flag = chivalry_torso_hit_flag
+					clr_character_flag = chivalry_head_hit_flag
+					clr_character_flag = chivalry_arms_hit_flag
+					clr_character_flag = chivalry_legs_hit_flag
+				}
+				10 = { #legs
+					trigger = {
+						NAND = {
+							has_character_modifier = swollen_ankle
+							has_character_modifier = chivalry_broken_leg
+							has_character_modifier = chivalry_stabbed_foot
+							trait = one_legged
+						}
+					}
+					modifier = {
+						factor = 10
+						has_character_flag = chivalry_legs_hit_flag
+					}
+					if = {
+						limit = {
+							has_character_flag = chivalry_critical_hit_flag
+						}
+						add_character_modifier = {
+							name = chivalry_legs_hit_mod
+							duration = 150
+							stacking = yes
+						}
+					}
+					else = {
+						add_character_modifier = {
+							name = chivalry_legs_hit_mod
+							duration = 75
+							stacking = yes
+						}
+					}
+					change_variable = { which = chivalry_legs_hit_var value = 1 }
+					set_character_flag = chivalry_legs_hit_flag
+					clr_character_flag = chivalry_head_hit_flag
+					clr_character_flag = chivalry_arms_hit_flag
+					clr_character_flag = chivalry_torso_hit_flag
+				}
+			}
+			if = { #set_wounds
+				limit = {
+					has_character_flag = chivalry_head_hit_flag
+					check_variable = { which = chivalry_head_hit_var value = 3 }
+				}
+				hidden_tooltip = { change_variable = { which = scarred_variable value = 1 } }
+				random_list = {
+					50 = {
+						trigger = {
+							NOR = { 
+								has_character_modifier = black_eye
+								trait = blinded
+							}
+						}
+						add_character_modifier = {
+							modifier = black_eye
+							months = 10
+						}
+						add_trait = wounded
+					}
+					50 = {
+						trigger = {
+							NOT = { has_character_modifier = concussion }
+						}
+						add_character_modifier = {
+							modifier = concussion
+							months = 10
+						}
+						add_trait = wounded
+					}
+					25 = {
+						trigger = {
+							has_character_modifier = black_eye
+							NOR = { 
+								trait = one_eyed
+								trait = blinded
+							}
+						}
+						add_trait = one_eyed
+						add_severely_injured_effect = yes
+						random = {
+							chance = 50
+							remove_character_modifier = black_eye
+						}
+					}
+					25 = {
+						trigger = {
+							has_character_modifier = black_eye
+							trait = one_eyed
+							NOT = { trait = blinded }
+						}
+						add_trait = blinded
+						add_severely_injured_effect = yes
+						remove_character_modifier = black_eye
+					}
+					25 = {
+						trigger = {
+							has_character_modifier = concussion
+						}
+						add_trait = disfigured
+						add_severely_injured_effect = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_character_flag = chivalry_domhand_hit_flag
+					check_variable = { which = chivalry_domhand_hit_var value = 2 }
+				}
+				hidden_tooltip = { change_variable = { which = scarred_variable value = 1 } }
+				random_list = {
+					50 = {
+						trigger = {
+							NOT = { has_character_modifier = swollen_wrist }
+						}
+						add_character_modifier = {
+							modifier = swollen_wrist
+							months = 10
+						}
+						add_trait = wounded
+					}
+					50 = {
+						trigger = {
+							NOT = { has_character_modifier = chivalry_broken_finger_dom }
+						}
+						add_character_modifier = {
+							modifier = chivalry_broken_finger_dom
+							months = 10
+						}
+						add_trait = wounded
+					}
+					25 = {
+						trigger = {
+							AND = {
+								has_character_modifier = swollen_wrist
+								has_character_modifier = chivalry_broken_finger_dom
+							}
+						}
+						add_trait = one_handed
+						add_severely_injured_effect = yes
+						remove_character_modifier = swollen_wrist
+						remove_character_modifier = chivalry_broken_finger_dom
+						remove_character_modifier = chivalry_domhand_hit_mod
+						set_character_flag = chivalry_lost_domhand
+						if = { 
+							limit = {
+								trait = lefthanded
+							}
+							remove_trait = lefthanded
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_character_flag = chivalry_subhand_hit_flag
+					check_variable = { which = chivalry_subhand_hit_var value = 2 }
+				}
+				hidden_tooltip = { change_variable = { which = scarred_variable value = 1 } }
+				random_list = {
+					50 = {
+						trigger = {
+							NOT = { has_character_modifier = chivalry_swollen_wrist_sub }
+						}
+						add_character_modifier = {
+							modifier = chivalry_swollen_wrist_sub
+							months = 10
+						}
+						add_trait = wounded
+					}
+					50 = {
+						trigger = {
+							NOT = { has_character_modifier = chivalry_broken_finger_sub }
+						}
+						add_character_modifier = {
+							modifier = chivalry_broken_finger_sub
+							months = 10
+						}
+						add_trait = wounded
+					}
+					25 = {
+						trigger = {
+							AND = {
+								has_character_modifier = chivalry_swollen_wrist_sub
+								has_character_modifier = chivalry_broken_finger_sub
+							}
+						}
+						add_trait = one_handed
+						add_severely_injured_effect = yes
+						remove_character_modifier = chivalry_swollen_wrist_sub
+						remove_character_modifier = chivalry_broken_finger_sub
+						remove_character_modifier = chivalry_subhand_hit_mod
+						set_character_flag = chivalry_lost_subhand
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_character_flag = chivalry_torso_hit_flag
+					check_variable = { which = chivalry_torso_hit_var value = 3 }
+				}
+				hidden_tooltip = { change_variable = { which = scarred_variable value = 1 } }
+				random_list = {
+					50 = {
+						trigger = {
+							NOT = { has_character_modifier = cracked_ribs }
+						}
+						add_character_modifier = {
+							modifier = cracked_ribs
+							months = 10
+						}
+						add_trait = wounded
+					}
+					50 = {
+						trigger = {
+							NOT = { has_character_modifier = badly_bruised }
+						}
+						add_character_modifier = {
+							modifier = badly_bruised
+							months = 10
+						}
+						add_trait = wounded
+					}
+					25 = { #lower chances due to severity
+						trigger = {
+							OR = {
+								has_character_modifier = cracked_ribs
+								has_character_modifier = badly_bruised
+							}
+							NOT = { trait = mangled }
+						}
+						modifier = {
+							factor = 2
+							AND = {
+								has_character_modifier = cracked_ribs
+								has_character_modifier = badly_bruised
+							}
+						}
+						add_trait = mangled
+						add_severely_injured_effect = yes
+						remove_character_modifier = cracked_ribs
+					}
+					50 = {
+						trigger = {
+							is_female = no
+							NOR = {
+								has_character_modifier = chivalry_kicked_nuts
+								trait = eunuch
+							}
+						}
+						add_character_modifier = {
+							modifier = chivalry_kicked_nuts
+							months = 10
+						}
+						add_trait = wounded
+					}
+					25 = {
+						trigger = {
+							has_character_modifier = chivalry_kicked_nuts
+							NOT = { trait = eunuch }
+						}
+						add_trait = eunuch
+						add_severely_injured_effect = yes
+						remove_character_modifier = chivalry_kicked_nuts
+					}
+					50 = {
+						trigger = {
+							trait = pregnant
+						}
+						remove_trait = pregnant
+						add_trait = hard_pregnancy
+					}
+					50 = {
+						trigger = {
+							trait = hard_pregnancy
+						}
+						remove_trait = hard_pregnancy
+						add_trait = troubled_pregnancy
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_character_flag = chivalry_legs_hit_flag
+					check_variable = { which = chivalry_legs_hit_var value = 3 }
+				}
+				hidden_tooltip = { change_variable = { which = scarred_variable value = 1 } }
+				random_list = {
+					50 = {
+						trigger = {
+							NOT = { has_character_modifier = swollen_ankle }
+						}
+						add_character_modifier = {
+							modifier = swollen_ankle
+							months = 10
+						}
+						add_trait = wounded
+					}
+					50 = {
+						trigger = {
+							NOT = { has_character_modifier = chivalry_broken_leg }
+						}
+						add_character_modifier = {
+							modifier = chivalry_broken_leg
+							months = 10
+						}
+						add_trait = wounded
+					}
+					50 = {
+						trigger = {
+							NOT = { has_character_modifier = chivalry_stabbed_foot }
+						}
+						add_character_modifier = {
+							modifier = chivalry_stabbed_foot
+							months = 10
+						}
+						add_trait = wounded
+					}
+					25 = {
+						trigger = {
+							OR = {
+								AND = {
+									has_character_modifier = swollen_ankle
+									has_character_modifier = chivalry_broken_leg
+								}
+								AND = {
+									has_character_modifier = chivalry_stabbed_foot
+									has_character_modifier = chivalry_broken_leg
+								}
+								AND = {
+									has_character_modifier = chivalry_stabbed_foot
+									has_character_modifier = swollen_ankle
+								}
+							}
+							NOT = { trait = one_legged }
+						}
+						add_trait = one_legged
+						add_severely_injured_effect = yes
+						random = {
+							chance = 50
+							remove_character_modifier = swollen_ankle
+						}
+						random = {
+							chance = 50
+							remove_character_modifier = chivalry_broken_leg
+						}
+						random = {
+							chance = 50
+							remove_character_modifier = chivalry_stabbed_foot
+						}
+					}
+				}
+			}
+			clr_character_flag = chivalry_head_hit_flag #wounds type from FROM attack, flags are on ROOT
+			clr_character_flag = chivalry_arms_hit_flag
+			clr_character_flag = chivalry_torso_hit_flag
+			clr_character_flag = chivalry_legs_hit_flag
+			clr_character_flag = chivalry_domhand_hit_flag
+			clr_character_flag = chivalry_subhand_hit_flag
+			clr_character_flag = chivalry_critical_hit_flag
+		}
+		else = {
+			random = {
+				chance = 30
+				hidden_tooltip = { change_variable = { which = scarred_variable value = 1 } }
+				if = {
+					limit = {
+						NOT = { trait = wounded }
+					}
+					add_trait_wounded_effect = yes
+					chivalry_flesh_wound = yes
+				}
+				else_if = {
+					limit = {
+						NOT = { trait = severely_injured } 
+					}
+					add_trait_severely_injured_effect = yes
+					chivalry_flesh_wound = yes
+				}
+				else = {
+					add_maimed_trait_effect = yes
+					chivalry_flesh_wound = yes
+				}
+			}
+		}
+	}
+}
+
+chivalry_local_wound_tooltip = {
+	custom_tooltip = { text = chivalry_local_wound_head_tooltip }
+	if = {
+		limit = {
+			trait = blinded
+			trait = disfigured
+		}
+		custom_tooltip = { text = chivalry_local_wound_limit_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_head_hit_var value = 2 } #1 lower than the check as it rise if hit
+			OR = {
+				has_character_modifier = black_eye
+				has_character_modifier = concussion	
+			}
+		}
+		custom_tooltip = { text = chivalry_local_wound_severly_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_head_hit_var value = 2 }
+			# NOR = {
+				# has_character_modifier = black_eye
+				# has_character_modifier = concussion	
+			# }
+		}
+		custom_tooltip = { text = chivalry_local_wound_mild_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_head_hit_var value == 0 }
+		}
+		custom_tooltip = { text = chivalry_local_wound_untouch_tooltip }
+	}
+	else = {
+		custom_tooltip = { text = chivalry_local_wound_bruise_tooltip }
+	}
+	custom_tooltip = { text = chivalry_local_wound_torso_tooltip }
+	if = {
+		limit = {
+			has_character_modifier = cracked_ribs
+			has_character_modifier = badly_bruised
+			trait = mangled
+			trait = eunuch
+		}
+		custom_tooltip = { text = chivalry_local_wound_limit_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_torso_hit_var value = 2 }
+			OR = {
+				has_character_modifier = cracked_ribs
+				has_character_modifier = badly_bruised	
+				has_character_modifier = chivalry_kicked_nuts
+			}
+		}
+		custom_tooltip = { text = chivalry_local_wound_severly_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_torso_hit_var value = 2 }
+			# NOR = {
+				# has_character_modifier = black_eye
+				# has_character_modifier = concussion	
+			# }
+		}
+		custom_tooltip = { text = chivalry_local_wound_mild_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_torso_hit_var value == 0 }
+		}
+		custom_tooltip = { text = chivalry_local_wound_untouch_tooltip }
+	}
+	else = {
+		custom_tooltip = { text = chivalry_local_wound_bruise_tooltip }
+	}
+	if = {
+		limit = {
+			check_variable = { which = chivalry_torso_hit_var value < 2 }
+			OR = {
+				trait = pregnant
+				trait = hard_pregnancy
+				trait = troubled_pregnancy
+			}
+		}
+		custom_tooltip = { text = chivalry_local_wound_preg_tooltip }
+	}
+	else = {
+		limit = {
+			check_variable = { which = chivalry_torso_hit_var value = 2 }
+			OR = {
+				trait = pregnant
+				trait = hard_pregnancy
+				trait = troubled_pregnancy
+			}
+		}
+		custom_tooltip = { text = chivalry_local_wound_hardpreg_tooltip }
+	}
+	custom_tooltip = { text = chivalry_local_wound_domhand_tooltip }
+	if = {
+		limit = {
+			has_character_flag = chivalry_lost_domhand
+		}
+		custom_tooltip = { text = chivalry_local_wound_missing_tooltip }
+	}
+	else_if = {
+		limit = {
+			has_character_flag = chivalry_lost_subhand
+			has_character_modifier = chivalry_swollen_wrist
+			has_character_modifier = chivalry_broken_finger_dom
+		}
+		custom_tooltip = { text = chivalry_local_wound_limit_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_domhand_hit_var value = 1 }
+			AND = {
+				has_character_modifier = swollen_wrist
+				has_character_modifier = chivalry_broken_finger_dom	
+			}
+		}
+		custom_tooltip = { text = chivalry_local_wound_severly_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_domhand_hit_var value = 1 }
+			# NOR = {
+				# has_character_modifier = swollen_wrist
+				# has_character_modifier = chivalry_broken_finger_dom	
+			# }
+		}
+		custom_tooltip = { text = chivalry_local_wound_mild_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_domhand_hit_var value == 0 }
+		}
+		custom_tooltip = { text = chivalry_local_wound_untouch_tooltip }
+	}
+	else = {
+		custom_tooltip = { text = chivalry_local_wound_bruise_tooltip }
+	}
+	custom_tooltip = { text = chivalry_local_wound_subhand_tooltip }
+	if = {
+		limit = {
+			has_character_flag = chivalry_lost_subhand
+		}
+		custom_tooltip = { text = chivalry_local_wound_missing_tooltip }
+	}
+	else_if = {
+		limit = {
+			has_character_flag = chivalry_lost_domhand
+			has_character_modifier = chivalry_swollen_wrist_sub
+			has_character_modifier = chivalry_broken_finger_sub	
+		}
+		custom_tooltip = { text = chivalry_local_wound_limit_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_subhand_hit_var value = 1 }
+			AND = {
+				has_character_modifier = chivalry_swollen_wrist_sub
+				has_character_modifier = chivalry_broken_finger_sub	
+			}
+		}
+		custom_tooltip = { text = chivalry_local_wound_severly_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_subhand_hit_var value = 1 }
+			# NOR = {
+				# has_character_modifier = chivalry_swollen_wrist_sub
+				# has_character_modifier = chivalry_broken_finger_sub	
+			# }
+		}
+		custom_tooltip = { text = chivalry_local_wound_mild_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_subhand_hit_var value == 0 }
+		}
+		custom_tooltip = { text = chivalry_local_wound_untouch_tooltip }
+	}
+	else = {
+		custom_tooltip = { text = chivalry_local_wound_bruise_tooltip }
+	}
+	custom_tooltip = { text = chivalry_local_wound_legs_tooltip }
+	if = {
+		limit = {
+			has_character_modifier = swollen_ankle
+			has_character_modifier = chivalry_broken_leg
+			has_character_modifier = chivalry_stabbed_foot
+			trait = one_legged
+		}
+		custom_tooltip = { text = chivalry_local_wound_limit_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_legs_hit_var value = 2 }
+			OR = {
+				AND = {
+					has_character_modifier = swollen_ankle
+					has_character_modifier = chivalry_broken_leg
+				}
+				AND = {
+					has_character_modifier = chivalry_stabbed_foot
+					has_character_modifier = chivalry_broken_leg
+				}
+				AND = {
+					has_character_modifier = chivalry_stabbed_foot
+					has_character_modifier = swollen_ankle
+				}
+			}
+		}
+		custom_tooltip = { text = chivalry_local_wound_severly_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_legs_hit_var value = 2 }
+			# NOR = {
+				# has_character_modifier = black_eye
+				# has_character_modifier = concussion	
+			# }
+		}
+		custom_tooltip = { text = chivalry_local_wound_mild_tooltip }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = chivalry_legs_hit_var value == 0 }
+		}
+		custom_tooltip = { text = chivalry_local_wound_untouch_tooltip }
+	}
+	else = {
+		custom_tooltip = { text = chivalry_local_wound_bruise_tooltip }
+	}
+}
+
+chivalry_skip_duel = {
+	custom_tooltip = { text = chivalry_duel_skip }
+	set_character_flag = chivalry_duel_ongoing
+	FROM = { set_character_flag = chivalry_duel_ongoing }
+	hidden_tooltip = {
+		random_list = {
+			10 = { #win normal duel
+				trigger = {
+					NOR = {
+						has_character_flag = chivalry_duel_wounded
+						has_character_flag = chivalry_duel_death
+					}
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 10 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 20 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 30 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 40 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 50 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 60 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					ROOT = { is_weak_trigger = yes }
+				}
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				FROM = {
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+				}
+				character_event = { id = CHI.327 } #Won
+				FROM = { character_event = { id = CHI.328 } } #Lost
+			}
+			10 = { #lose normal duel
+				trigger = {
+					NOR = {
+						has_character_flag = chivalry_duel_wounded
+						has_character_flag = chivalry_duel_death
+					}
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 10 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 20 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 30 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 40 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 50 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 60 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					FROM = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					FROM = { is_weak_trigger = yes }
+				}
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				FROM = {
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+				}
+				FROM = { character_event = { id = CHI.327 } } #Won
+				character_event = { id = CHI.328 } #Lost
+			}
+			1 = { #win normal duel death
+				trigger = {
+					NOR = {
+						has_character_flag = chivalry_duel_wounded
+						has_character_flag = chivalry_duel_death
+					}
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					ROOT = { is_weak_trigger = yes }
+				}
+				modifier = {
+					factor = 2
+					FROM = { society_member_of = society_risk_fighter_guild  }
+				}
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				FROM = { character_event = { id = CHI.3111 } }#death ping
+			}
+			1 = { #lose normal duel death
+				trigger = {
+					NOR = {
+						has_character_flag = chivalry_duel_wounded
+						has_character_flag = chivalry_duel_death
+					}
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					FROM = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					FROM = { is_weak_trigger = yes }
+				}
+				modifier = {
+					factor = 2
+					FROM = { society_member_of = society_risk_fighter_guild  }
+				}
+				FROM = {
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+				}
+				character_event = { id = CHI.3262 } #You die
+				FROM = { character_event = { id = CHI.3261 } } #See you die
+			}
+			5 = { #win wounded duel
+				trigger = {
+					has_character_flag = chivalry_duel_wounded
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					ROOT = { is_weak_trigger = yes }
+				}
+				character_event = { id = CHI.327 } #Won
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				FROM = { 
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					add_trait = wounded
+				}
+				FROM = { character_event = { id = CHI.328 } } #Lost
+			}
+			5 = { #lose wounded duel
+				trigger = {
+					has_character_flag = chivalry_duel_wounded
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					FROM = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					FROM = { is_weak_trigger = yes }
+				}
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				add_trait = wounded
+				FROM = {
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+				}
+				FROM = { character_event = { id = CHI.327 } } #Won
+				character_event = { id = CHI.328 } #Lost
+			}
+			5 = { #win death duel
+				trigger = {
+					has_character_flag = chivalry_duel_death
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					ROOT = { is_weak_trigger = yes }
+				}
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				wealth = 100
+				FROM = { character_event = { id = CHI.3111 } }#death ping
+			}
+			5 = { #lose death duel
+				trigger = {
+					has_character_flag = chivalry_duel_death
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROM = { combat_rating_diff = { who = ROOT value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROM value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					FROM = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					FROM = { is_weak_trigger = yes }
+				}
+				FROM = {
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+				}
+				wealth = -100
+				character_event = { id = CHI.3262 } #You die
+				FROM = { character_event = { id = CHI.3261 } } #See you die
+			}
+		}
+	}
+}
+
+chivalry_skip_duel_FROMFROM = {
+	custom_tooltip = { text = chivalry_duel_skip }
+	set_character_flag = chivalry_duel_ongoing
+	FROMFROM = { set_character_flag = chivalry_duel_ongoing }
+	hidden_tooltip = {
+		random_list = {
+			10 = { #win normal duel
+				trigger = {
+					NOR = {
+						has_character_flag = chivalry_duel_wounded
+						has_character_flag = chivalry_duel_death
+					}
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 10 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 20 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 30 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 40 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 50 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 60 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					ROOT = { is_weak_trigger = yes }
+				}
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				FROMFROM = {
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+				}
+				character_event = { id = CHI.327 } #Won
+				FROMFROM = { character_event = { id = CHI.328 } } #Lost
+			}
+			10 = { #lose normal duel
+				trigger = {
+					NOR = {
+						has_character_flag = chivalry_duel_wounded
+						has_character_flag = chivalry_duel_death
+					}
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 10 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 20 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 30 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 40 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 50 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 60 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					FROMFROM = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { is_weak_trigger = yes }
+				}
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				FROMFROM = {
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+				}
+				FROMFROM = { character_event = { id = CHI.327 } } #Won
+				character_event = { id = CHI.328 } #Lost
+			}
+			1 = { #win normal duel death
+				trigger = {
+					NOR = {
+						has_character_flag = chivalry_duel_wounded
+						has_character_flag = chivalry_duel_death
+					}
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					ROOT = { is_weak_trigger = yes }
+				}
+				modifier = {
+					factor = 2
+					FROMFROM = { society_member_of = society_risk_fighter_guild  }
+				}
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				FROMFROM = { character_event = { id = CHI.3111 } }#death ping
+			}
+			1 = { #lose normal duel death
+				trigger = {
+					NOR = {
+						has_character_flag = chivalry_duel_wounded
+						has_character_flag = chivalry_duel_death
+					}
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					FROMFROM = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { is_weak_trigger = yes }
+				}
+				modifier = {
+					factor = 2
+					FROMFROM = { society_member_of = society_risk_fighter_guild  }
+				}
+				FROMFROM = {
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+				}
+				character_event = { id = CHI.3262 } #You die
+				FROMFROM = { character_event = { id = CHI.3261 } } #See you die
+			}
+			5 = { #win wounded duel
+				trigger = {
+					has_character_flag = chivalry_duel_wounded
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					ROOT = { is_weak_trigger = yes }
+				}
+				character_event = { id = CHI.327 } #Won
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				FROMFROM = { 
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					add_trait = wounded
+				}
+				FROMFROM = { character_event = { id = CHI.328 } } #Lost
+			}
+			5 = { #lose wounded duel
+				trigger = {
+					has_character_flag = chivalry_duel_wounded
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					FROMFROM = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { is_weak_trigger = yes }
+				}
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				add_trait = wounded
+				FROMFROM = {
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+				}
+				FROMFROM = { character_event = { id = CHI.327 } } #Won
+				character_event = { id = CHI.328 } #Lost
+			}
+			5 = { #win death duel
+				trigger = {
+					has_character_flag = chivalry_duel_death
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					ROOT = { is_weak_trigger = yes }
+				}
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				chivalry_local_wounds_effect = yes
+				FROMFROM = { character_event = { id = CHI.3111 } }#death ping
+			}
+			5 = { #lose death duel
+				trigger = {
+					has_character_flag = chivalry_duel_death
+				}
+				modifier = { #Generic modifiers
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 10 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 20 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 30 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 40 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 50 } }				
+				}
+				modifier = {
+					factor = 1.50
+					FROMFROM = { combat_rating_diff = { who = ROOT value = 60 } }				
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 70 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 80 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 90 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 100 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 110 } }
+				}
+				modifier = {
+					factor = 1.50
+					ROOT = { combat_rating_diff = { who = FROMFROM value = 120 } }
+				}
+				modifier = {
+					factor = 2
+					FROMFROM = { is_strong_trigger = yes }
+				}
+				modifier = {
+					factor = 0.5
+					FROMFROM = { is_weak_trigger = yes }
+				}
+				FROMFROM = {
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+					chivalry_local_wounds_effect = yes
+				}
+				character_event = { id = CHI.3262 } #You die
+				FROMFROM = { character_event = { id = CHI.3261 } } #See you die
+			}
+		}
+	}
+}
+
+add_one_duel_experience_chiwinner_modifier = {
+	set_character_flag = is_victorious_attacker
+	# random = {
+		# chance = 60
+		# add_character_modifier = {
+			# name = duel_experience
+			# duration = -1
+			# stacking = yes
+		# }
+	# }
+	increase_duel_exp_chivalry_modifier_effect = yes
+	clr_character_flag = is_victorious_attacker
+}
+
+add_one_duel_experience_chiloser_modifier = {
+	set_character_flag = is_defeated_attacker
+	# random = {
+		# chance = 30
+		# add_character_modifier = {
+			# name = duel_experience
+			# duration = -1
+			# stacking = yes
+		# }
+	# }
+	increase_duel_exp_chivalry_modifier_effect = yes
+	clr_character_flag = is_defeated_attacker
+}
+
+increase_duel_exp_chivalry_modifier_effect = { #tweaked vanilla effect
+	custom_tooltip = { text = increase_duel_exp_tt }
+	hidden_effect = {
+		# add_one_duel_experience_modifier = yes
+		big_chance_for_one_duel_experience_modifier = yes
+		
+		if = {
+			limit = {
+				has_character_flag = is_victorious_attacker
+			}
+			big_chance_for_one_duel_experience_modifier = yes #was garantee
+			small_chance_for_one_duel_experience_modifier = yes # was 2 small
+		}
+		if = {
+			limit = {
+				has_character_flag = is_defeated_attacker
+			}
+			small_chance_for_one_duel_experience_modifier = yes
+			small_chance_for_one_duel_experience_modifier = yes # was 5 small
+		}
+		if = { # Victories give more experience levels
+			limit = {
+				has_character_flag = is_victorious_attacker
+			}
+			change_variable = { which = duel_experience_level value = 1 }
+		}
+		else = {
+			random = {
+				chance = 50
+				change_variable = { which = duel_experience_level value = 1 }
+			}
+		}
+	}
+	hidden_effect = {
+		set_variable = { which = duel_experience_level_check which = duel_experience_level }
+		divide_variable = { which = duel_experience_level_check value = 5 }
+		remove_character_modifiers = { modifier = duelist_renown amount = 999 }
+		while = { 
+			limit = {
+				check_variable = { #can add " count = X " to keep looping instead of a limit variable
+					which = duel_experience_level_check
+					value >= 1
+				}
+			}
+			add_character_modifier = {
+				name = duelist_renown
+				duration = -1
+				stacking = yes
+			}
+			change_variable = {    
+				which = duel_experience_level_check
+				value = -1
+			}
+		}
+	}
+	#removed all of the other renown modifier and the bloodline check.
+}
+
+chivalry_champion_bloodline_effect = {
+	hidden_effect = {
+		change_variable = { which = chivalry_champion_bloodline_var value = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { which = chivalry_champion_bloodline_var value = 10 }
+			NOT = {
+				any_owned_bloodline = {
+					has_bloodline_flag = champion
+				}
+			}
+		}
+		character_event = { id = CHI.420 }
+	}
+}

@@ -1,0 +1,18 @@
+government_flavor = {
+	name = gov_holy_order
+	graphics = GFX_evt_knight_kneeling
+	# graphics = GFX_evt_crusaders
+	priority = 2
+	trigger = {
+		has_holy_order_government = yes
+	}
+}
+
+government_flavor = {
+	name = gov_merc
+	graphics = GFX_evt_large_army
+	priority = 2
+	trigger = {
+		government = mercenary_government
+	}
+}

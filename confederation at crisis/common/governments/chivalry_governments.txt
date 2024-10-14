@@ -1,0 +1,474 @@
+feudal_governments = {
+
+	# holy_order_government = {
+		# preferred_holdings = { CASTLE TEMPLE }
+		# allowed_holdings = { 
+			# CASTLE 
+			# TEMPLE
+			# FORT
+			# HOSPITAL
+		# }
+		# allowed_holdings_religion = { # Will not get the wrong government type penalty for tribes of the same religion
+			# TRIBAL
+		# }
+		# accepts_liege_governments = { # Gets the wrong religion modifier instead
+			# feudal_government
+			# theocracy_government
+			# theocratic_feudal_government
+			# muslim_government
+			# chinese_imperial_government
+		# }
+		# allow_title_revokation = yes
+		# free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			# feudal_government
+			# theocracy_government
+			# theocratic_feudal_government
+			# muslim_government
+			# tribal_government
+			# republic_government
+		# }
+		# frame_suffix = "_holyordergov"
+		# potential = {
+			# NOT = { religion_group = muslim }
+			# NOT = { religion_group = pagan_group }
+			# NOT = { religion_group = indian_group }
+			# is_patrician = no
+			# is_tribal = no
+			# tier = duke
+			# NOT = { tier = king }
+			# OR = {
+				# primary_title = { holy_order = yes } 
+				# OR = {
+					# has_landed_title = d_chivalry_holy_hand
+					# has_landed_title = d_chivalry_holy_warden
+					# has_landed_title = d_chivalry_holy_scion
+					# has_landed_title = d_chivalry_holy_rose
+				# }
+				# any_demesne_title = { has_title_flag = chivalry_holy_title }
+			# }
+		# }
+		# character_modifier = {
+			# land_morale = 0.25
+			# religion_flex = 1
+			# same_religion_opinion = 20
+			# liege_opinion = 20
+		# }
+		# aggression = 2.0
+		# color = { 100 100 100 }
+		
+		# uses_piety_for_law_change = yes
+		# can_build_tribal = no
+		# barons_need_dynasty = yes
+		# can_create_kingdoms = no
+		# can_usurp_kingdoms_and_empires = no
+		# can_be_granted_kingdoms_and_empires_by_other_government = no
+		
+		# ignore_in_vassal_limit_calculation = {
+			# tribal_government
+		# }
+		# capital_move_delay = 12
+		# commander_limit = 10
+		# free_levies_in_offensive_war = yes
+	# }
+
+	# holy_order_government_muslim = {
+		# preferred_holdings = { CASTLE TEMPLE }
+		# allowed_holdings = { 
+			# CASTLE 
+			# TEMPLE
+			# FORT
+			# HOSPITAL
+		# }
+		# allowed_holdings_religion = { # Will not get the wrong government type penalty for tribes of the same religion
+			# TRIBAL
+		# }
+		# accepts_liege_governments = { # Gets the wrong religion modifier instead
+			# feudal_government
+			# theocracy_government
+			# theocratic_feudal_government
+			# muslim_government
+			# chinese_imperial_government
+		# }
+		# allow_title_revokation = yes
+		# free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			# feudal_government
+			# theocracy_government
+			# theocratic_feudal_government
+			# muslim_government
+			# tribal_government
+			# republic_government
+		# }
+		# frame_suffix = "_holyordergov"
+		# potential = {
+			# religion_group = muslim
+			# is_patrician = no
+			# is_tribal = no
+			# tier = duke
+			# NOT = { tier = king }
+			# OR = {
+				# primary_title = { holy_order = yes } 
+				# OR = {
+					# has_landed_title = d_chivalry_holy_hand
+					# has_landed_title = d_chivalry_holy_warden
+					# has_landed_title = d_chivalry_holy_scion
+					# has_landed_title = d_chivalry_holy_rose
+				# }
+				# any_demesne_title = { has_title_flag = chivalry_holy_title }
+			# }
+		# }
+		# character_modifier = {
+			# land_morale = 0.25
+			# religion_flex = 1
+			# same_religion_opinion = 20
+			# liege_opinion = 20
+		# }
+		# aggression = 2.0
+		# color = { 100 100 100 }
+		
+		# uses_piety_for_law_change = yes
+		# can_build_tribal = no
+		# barons_need_dynasty = yes
+		# can_create_kingdoms = no
+		# can_usurp_kingdoms_and_empires = no
+		# can_be_granted_kingdoms_and_empires_by_other_government = no
+		
+		# ignore_in_vassal_limit_calculation = {
+			# tribal_government
+		# }
+		# capital_move_delay = 12
+		# commander_limit = 10
+		# free_levies_in_offensive_war = yes
+	# }
+
+	# holy_order_government_pagan = {
+		# preferred_holdings = { CASTLE TEMPLE }
+		# allowed_holdings = { 
+			# CASTLE 
+			# TEMPLE
+			# FORT
+			# HOSPITAL
+		# }
+		# allowed_holdings_religion = { # Will not get the wrong government type penalty for tribes of the same religion
+			# TRIBAL
+		# }
+		# accepts_liege_governments = { # Gets the wrong religion modifier instead
+			# feudal_government
+			# theocracy_government
+			# theocratic_feudal_government
+			# muslim_government
+			# chinese_imperial_government
+		# }
+		# allow_title_revokation = yes
+		# free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			# feudal_government
+			# theocracy_government
+			# theocratic_feudal_government
+			# muslim_government
+			# tribal_government
+			# republic_government
+		# }
+		# frame_suffix = "_holyordergov"
+		# potential = {
+			# religion_group = pagan_group
+			# is_patrician = no
+			# is_tribal = no
+			# tier = duke
+			# NOT = { tier = king }
+			# OR = {
+				# primary_title = { holy_order = yes } 
+				# OR = {
+					# has_landed_title = d_chivalry_holy_hand
+					# has_landed_title = d_chivalry_holy_warden
+					# has_landed_title = d_chivalry_holy_scion
+					# has_landed_title = d_chivalry_holy_rose
+				# }
+				# any_demesne_title = { has_title_flag = chivalry_holy_title }
+			# }
+		# }
+		# character_modifier = {
+			# land_morale = 0.25
+			# religion_flex = 1
+			# same_religion_opinion = 20
+			# liege_opinion = 20
+		# }
+		# aggression = 2.0
+		# color = { 100 100 100 }
+		
+		# uses_piety_for_law_change = yes
+		# can_build_tribal = no
+		# barons_need_dynasty = yes
+		# can_create_kingdoms = no
+		# can_usurp_kingdoms_and_empires = no
+		# can_be_granted_kingdoms_and_empires_by_other_government = no
+		
+		# ignore_in_vassal_limit_calculation = {
+			# tribal_government
+		# }
+		# capital_move_delay = 12
+		# commander_limit = 10
+		# free_levies_in_offensive_war = yes
+	# }
+
+	# holy_order_government_indian = {
+		# preferred_holdings = { CASTLE TEMPLE }
+		# allowed_holdings = { 
+			# CASTLE 
+			# TEMPLE
+			# FORT
+			# HOSPITAL
+		# }
+		# allowed_holdings_religion = { # Will not get the wrong government type penalty for tribes of the same religion
+			# TRIBAL
+		# }
+		# accepts_liege_governments = { # Gets the wrong religion modifier instead
+			# feudal_government
+			# theocracy_government
+			# theocratic_feudal_government
+			# muslim_government
+			# chinese_imperial_government
+		# }
+		# allow_title_revokation = yes
+		# free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			# feudal_government
+			# theocracy_government
+			# theocratic_feudal_government
+			# muslim_government
+			# tribal_government
+			# republic_government
+		# }
+		# frame_suffix = "_holyordergov"
+		# potential = {
+			# religion_group = indian_group
+			# is_patrician = no
+			# is_tribal = no
+			# tier = duke
+			# NOT = { tier = king }
+			# OR = {
+				# primary_title = { holy_order = yes } 
+				# OR = {
+					# has_landed_title = d_chivalry_holy_hand
+					# has_landed_title = d_chivalry_holy_warden
+					# has_landed_title = d_chivalry_holy_scion
+					# has_landed_title = d_chivalry_holy_rose
+				# }
+				# any_demesne_title = { has_title_flag = chivalry_holy_title }
+			# }
+		# }
+		# character_modifier = {
+			# land_morale = 0.25
+			# religion_flex = 1
+			# same_religion_opinion = 20
+			# liege_opinion = 20
+		# }
+		# aggression = 2.0
+		# color = { 100 100 100 }
+		
+		# uses_piety_for_law_change = yes
+		# can_build_tribal = no
+		# barons_need_dynasty = yes
+		# can_create_kingdoms = no
+		# can_usurp_kingdoms_and_empires = no
+		# can_be_granted_kingdoms_and_empires_by_other_government = no
+		
+		# ignore_in_vassal_limit_calculation = {
+			# tribal_government
+		# }
+		# capital_move_delay = 12
+		# commander_limit = 10
+		# free_levies_in_offensive_war = yes
+	# }
+
+
+	holy_order_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = {
+			CASTLE
+			TRIBAL
+			FORT
+			HOSPITAL
+		}
+		accepts_liege_governments = {
+			feudal_government
+			muslim_government
+			theocracy_government
+			theocratic_feudal_government
+			chinese_imperial_government
+		}
+		free_revoke_on_governments = {
+			holy_order_government
+		}
+		free_revoke_on_tiers = {
+			BARON
+		}
+
+		forced_contract = {
+			holy_order_government
+		}
+
+		frame_suffix = "_order"
+		# title_prefix = "order_"
+
+		potential = {
+			OR = {
+				AND = {
+					# tier = duke #till i make a king version? test create kingdom
+					# NOT = { tier = king }
+					NOT = { any_demesne_title = { has_title_flag = chivalry_merc_title } }
+					NOT = { holy_order = yes } #use the normal holy order gov
+					OR = {
+						OR = {
+							has_landed_title = d_chivalry_holy_hand
+							has_landed_title = d_chivalry_holy_warden
+							has_landed_title = d_chivalry_holy_scion
+							has_landed_title = d_chivalry_holy_rose
+						}
+						any_demesne_title = { has_title_flag = chivalry_holy_title }
+					}
+				}
+				AND = {
+					any_liege = {
+						AND = {
+							# tier = duke #till i make a king version? test create kingdom
+							# NOT = { tier = king }
+							NOT = { any_demesne_title = { has_title_flag = chivalry_merc_title } }
+							NOT = { holy_order = yes } #use the normal holy order gov
+							OR = {
+								OR = {
+									has_landed_title = d_chivalry_holy_hand
+									has_landed_title = d_chivalry_holy_warden
+									has_landed_title = d_chivalry_holy_scion
+									has_landed_title = d_chivalry_holy_rose
+								}
+								any_demesne_title = { has_title_flag = chivalry_holy_title }
+							}
+						}
+						religion = ROOT
+					}
+					ai = yes
+					NAND = { 
+						is_government_potential = merchant_republic_government 
+						OR = {
+							tier = DUKE
+							is_patrician = yes
+						}
+						any_demesne_province = {
+							any_province_holding = {
+								OR = {
+									AND = {
+										tier = BARON
+										holding_type = family_palace
+									}
+									AND = {
+										NOT = {
+											tier = BARON
+										}
+										holding_type = city
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		character_modifier = {
+			land_morale = 0.25
+			religion_flex = 1
+			same_religion_opinion = 10
+		}
+		
+		color = { 169 169 169 }
+
+		have_gender_laws = no
+		can_create_kingdoms = no
+		can_create_empires = no
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		can_usurp_kingdoms_and_empires = no
+		can_grant_kingdoms_and_empires_to_other_government = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		can_inherit = no
+		free_retract_vassalage = yes
+		commander_limit = 6
+		free_levies_in_offensive_war = yes
+	}
+	
+	mercenary_government = {
+		preferred_holdings = { CASTLE CITY }
+		allowed_holdings = {
+			CASTLE 
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_religion = { # Will not get the wrong government type penalty for tribes of the same religion
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			feudal_government
+			theocracy_government
+			theocratic_feudal_government
+			muslim_government
+			chinese_imperial_government
+		}
+		free_revoke_on_tiers = {
+			BARON
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		frame_suffix = "_holyordergov"
+		potential = {
+			# is_patrician = no
+			# is_tribal = no
+			# tier = duke
+			# NOT = { tier = king }
+			NOT = { holy_order = yes }
+			NOT = { any_demesne_title = { has_title_flag = chivalry_holy_title } }
+			OR = {
+				primary_title = { mercenary = yes } 
+				OR = { 
+					has_landed_title = d_chivalry_merc_black
+					has_landed_title = d_chivalry_merc_cloak
+					has_landed_title = d_chivalry_merc_falcon
+					has_landed_title = d_chivalry_merc_hound
+				}
+				any_demesne_title = { has_title_flag = chivalry_merc_title }
+			}
+		}
+		character_modifier = {
+			global_levy_size = 0.3
+			global_tax_modifier = -0.3
+			global_revolt_risk = 0.01
+			# levy_reinforce_rate = 0.25
+			castle_vassal_tax_modifier = 0.1
+			city_vassal_tax_modifier = 0.1
+			temple_vassal_tax_modifier = 0.1
+			short_reign_length = 2
+		}
+		aggression = 2.0
+		color = { 100 100 100 }
+		
+		can_create_kingdoms = no
+		can_create_empires = no
+		# can_imprison_without_reason = no
+		# can_revoke_without_reason = no
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		can_usurp_kingdoms_and_empires = no
+		can_grant_kingdoms_and_empires_to_other_government = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		# free_retract_vassalage = yes
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 120
+		commander_limit = 6
+		free_levies_in_offensive_war = yes
+	}
+
+}

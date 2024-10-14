@@ -1,0 +1,1595 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+the_guilds;The Great Trade League;La Grande Alliance Marchande;;;;;;;;;;;;x
+the_guilds_desc;The Great Trade League is an alliance of several Guilds, putting their differences aside to protect their prosperity. Their quest for profit attracts a lot of attention from the clergy and the lords, who wouldn't hesitate to ask for a share they are not entitled to.;;;;;;;;;;;;;x
+the_guilds_leader_desc;Doyen of the Greate Trade League. Acts as a mediator between the other Guild Masters.;;;;;;;;;;;;;x
+the_guilds_rank_1_female;Peddler;;;;;;;;;;;;;x
+the_guilds_rank_2_female;Trader;;;;;;;;;;;;;x
+the_guilds_rank_3_female;Merchant;;;;;;;;;;;;;x
+the_guilds_rank_4_female;Guild Mistress;;;;;;;;;;;;;x
+the_guilds_rank_1_male;Peddler;;;;;;;;;;;;;x
+the_guilds_rank_2_male;Trader;;;;;;;;;;;;;x
+the_guilds_rank_3_male;Merchant;;;;;;;;;;;;;x
+the_guilds_rank_4_male;Guild Master;;;;;;;;;;;;;x
+currency_name_the_guilds;Assets;;;;;;;;;;;;;x
+request_to_rank_up_within_guilds;Request a Promotion.;;;;;;;;;;;;;x
+request_to_rank_up_within_guilds_currency_tt;Has §Y[Root.Society.GetCurrency]§! greater or equal to [Root.GetSocietyRankUpTooltip1], halved if you have the trait [Root.GetGuildsRankUpTooltip1] or have Golden Blood.;;;;;;;;;;;;;x
+GetGuildsRankUpTooltip1_Standard_Rank1;§YApprentice Trader§!;;;;;;;;;;;;;x
+GetGuildsRankUpTooltip1_Standard_Rank2;§YJourneyman Trader§!;;;;;;;;;;;;;x
+GetGuildsRankUpTooltip1_Standard_Rank3;§YMaster Trader§!;;;;;;;;;;;;;x
+#trigger/tooltip
+IS_GUILDS_TRIGGER;Is a member of the Great Trade League.;;;;;;;;;;;;;x
+guilds_traitor_tooltip;Didn't antagonize the Society;;;;;;;;;;;;;x
+is_inaccessible_tooltip;Is NOT in Hiding, in Seclusion, or out traveling\n;Ne se cache pas, ne vit pas en réclusion et n'est pas en voyage\n;Ist NICHT im Versteck oder auf Reisen\n;;NO está oculto, recluido o viajando\n;;;;;;;;;x
+is_incapable_tooltip;Is NOT in Incapable or Bedridden\n;N'est pas Incapable ou Alité.\n;Ist NICHT in Unfähig oder Bettlägerig\n;;NO está en Incapable o postrado en la cama.\n;;;;;;;;;x
+#rules
+GUILDS_RULE_GROUP;The Great Trade League;;;;;;;;;;;;;x
+GUILDS_RULE_MASTER_NAME;Trade Masters;;;;;;;;;;;;;x
+GUILDS_RULE_MASTER_DEFAULT;Enabled;;;;;;;;;;;;;x
+GUILDS_RULE_MASTER_DEFAULT_DESC;Trade Masters with the ability to manage trade goods for non-members are enabled.\n;;;;;;;;;;;;;x
+GUILDS_RULE_MASTER_NONE;Disabled;;;;;;;;;;;;;x
+GUILDS_RULE_MASTER_NONE_DESC;Trade Masters are disabled.\n;;;;;;;;;;;;;x
+GUILDS_RULE_WAR_NAME;Trade Wars;;;;;;;;;;;;;x
+GUILDS_RULE_WAR_DEFAULT;Enabled;;;;;;;;;;;;;x
+GUILDS_RULE_WAR_DEFAULT_DESC;Trade Wars, a spending race between members and non-members that can occur if the society becomes too influential, are enabled.\n;;;;;;;;;;;;;x
+GUILDS_RULE_WAR_NONE;Disabled;;;;;;;;;;;;;x
+GUILDS_RULE_WAR_NONE_DESC;Trade Wars are disabled.\n;;;;;;;;;;;;;x
+GUILDS_RULE_RESOURCE_NAME;Resource System;;;;;;;;;;;;;x
+GUILDS_RULE_RESOURCE_DEFAULT;Enabled;;;;;;;;;;;;;x
+GUILDS_RULE_RESOURCE_DEFAULT_DESC;The resource system is enabled. This system is redundant if enabled with other mods, such as The Three Towers.\n;;;;;;;;;;;;;x
+GUILDS_RULE_RESOURCE_NONE;Disabled;;;;;;;;;;;;;x
+GUILDS_RULE_RESOURCE_NONE_DESC;The resource system is disabled.\n;;;;;;;;;;;;;x
+#traits
+guilds_trait_apprentice;Apprentice Trader;;;;;;;;;;;;;x
+guilds_trait_apprentice_desc;This character has learned the basics of trading.;;;;;;;;;;;;;x
+guilds_trait_trader;Journeyman Trader;;;;;;;;;;;;;x
+guilds_trait_trader_desc;This character has spent quite some time trading.;;;;;;;;;;;;;x
+guilds_trait_master;Master Trader;;;;;;;;;;;;;x
+guilds_trait_master_desc;This character has considerable experience in trading.;;;;;;;;;;;;;x
+# guilds_nun;"Nun";"Nonne";"Nonne";;"monja";;;;;;;;;x
+# guilds_nun_desc;This woman is living out her days in a monastery, disqualified from normal inheritance.;Cette femme passe ses journées à prier. Elle a renoncé à tout héritage classique.;Diese Frau lebt in einem Kloster und ist von der normalen Erbfolge ausgeschlossen.;;Esta mujer agota sus últimos días en un monasterio, descalificado de la herencia normal.;;;;;;;;;x
+#minor titles
+title_guilds_apprentice;Apprentice Trader;;;;;;;;;;;;;x
+title_guilds_apprentice_desc;Members of the Trade League are encouraged to choose an apprentice. In exchange for tutoring, the apprentice will help his or her mentor.;;;;;;;;;;;;;x
+title_guilds_master;Trade Master;;;;;;;;;;;;;x
+title_guilds_master_desc;This courtier will join the Great Trade League and will trade goods for you. A Trade Master with a negative opinion of his liege may turn to criminal activities.\nAlso enables several §BCharacter Decisions§! that can be found by §Gright-clicking§! on your Trade Master. These decisions allow you to manage what your Trade Master will focus on.;;;;;;;;;;;;;x
+#nickname
+guilds_nick_the_wise_wolf;the Wise Wolf;;;;;;;;;;;;;x
+#buildings
+guilds_warehouse_1_city;Rented Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_1_castle;Rented Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_1_temple;Rented Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_1_tribal;Rented Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_1_nomad;Rented Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_2_city;Traders Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_2_castle;Traders Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_2_temple;Traders Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_2_tribal;Traders Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_2_nomad;Traders Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_3_city;Guarded Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_3_castle;Guarded Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_3_temple;Guarded Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_3_tribal;Guarded Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_3_nomad;Guarded Warehouse;;;;;;;;;;;;;x
+guilds_warehouse_1_city_desc;A Warehouse rented by the local ruler.\nProvides some protection against thieves for your trade goods and can be decorated.;;;;;;;;;;;;;x
+guilds_warehouse_1_castle_desc;A Warehouse rented by the local ruler.\nProvides some protection against thieves for your trade goods and can be decorated.;;;;;;;;;;;;;x
+guilds_warehouse_1_temple_desc;A Warehouse rented by the local ruler.\nProvides some protection against thieves for your trade goods and can be decorated.;;;;;;;;;;;;;x
+guilds_warehouse_1_tribal_desc;A Warehouse rented by the local ruler.\nProvides some protection against thieves for your trade goods and can be decorated.;;;;;;;;;;;;;x
+guilds_warehouse_1_nomad_desc;A Warehouse rented by the local ruler.\nProvides some protection against thieves for your trade goods and can be decorated.;;;;;;;;;;;;;x
+guilds_warehouse_2_city_desc;A Warehouse owned by the local ruler.\nProvides some protection against thieves for your trade goods and can be decorated.;;;;;;;;;;;;;x
+guilds_warehouse_2_castle_desc;A Warehouse owned by the local ruler.\nProvides some protection against thieves for your trade goods and can be decorated.;;;;;;;;;;;;;x
+guilds_warehouse_2_temple_desc;A Warehouse owned by the local ruler.\nProvides some protection against thieves for your trade goods and can be decorated.;;;;;;;;;;;;;x
+guilds_warehouse_2_tribal_desc;A Warehouse owned by the local ruler.\nProvides some protection against thieves for your trade goods and can be decorated.;;;;;;;;;;;;;x
+guilds_warehouse_2_nomad_desc;A Warehouse owned by the local ruler.\nProvides some protection against thieves for your trade goods and can be decorated.;;;;;;;;;;;;;x
+guilds_warehouse_3_city_desc;A Warehouse owned by the local ruler.\nProvides good protection against thieves for your trade goods and can be decorated.\nLess likely to be destroyed by a sieges.;;;;;;;;;;;;;x
+guilds_warehouse_3_castle_desc;A Warehouse owned by the local ruler.\nProvides good protection against thieves for your trade goods and can be decorated.\nLess likely to be destroyed by a sieges.;;;;;;;;;;;;;x
+guilds_warehouse_3_temple_desc;A Warehouse owned by the local ruler.\nProvides good protection against thieves for your trade goods and can be decorated.\nLess likely to be destroyed by a sieges.;;;;;;;;;;;;;x
+guilds_warehouse_3_tribal_desc;A Warehouse owned by the local ruler.\nProvides good protection against thieves for your trade goods and can be decorated.\nLess likely to be destroyed by a sieges.;;;;;;;;;;;;;x
+guilds_warehouse_3_nomad_desc;A Warehouse owned by the local ruler.\nProvides good protection against thieves for your trade goods and can be decorated.\nLess likely to be destroyed by a sieges.;;;;;;;;;;;;;x
+warehouse_decisions_only_tt;Can only be built with a decision from the Great Trade League;;;;;;;;;;;;;x
+has_any_warehouse_tootlip;Has any Warehouse;;;;;;;;;;;;;x
+has_safe_warehouse_tootlip;Has a Guarded Warehouse;;;;;;;;;;;;;x
+#councillor job
+job_cartographer;Cartographer;;;;;;;;;;;;;x
+desc_job_cartographer;Will provide you with various maps of the known world.;;;;;;;;;;;;;x
+TSD_action_standby;Standby;;;;;;;;;;;;;x
+TSD_action_standby_desc;The Cartographer will stay on standby until further orders.;;;;;;;;;;;;;x
+guilds_action_resource;Resource Map;;;;;;;;;;;;;x
+guilds_action_resource_desc;Your Cartographer will show you a map of the main resource collected in each province.;;;;;;;;;;;;;x
+JOB_STONE_TT;Stone Quarry;;;;;;;;;;;;;x
+JOB_STEEL_TT;Steel Furnace;;;;;;;;;;;;;x
+JOB_GEM_TT;Gemstone Mine;;;;;;;;;;;;;x
+JOB_SILVER_TT;Silver Mine;;;;;;;;;;;;;x
+JOB_GOLD_TT;Gold Mine;;;;;;;;;;;;;x
+JOB_GRAIN_TT;Wheat Field;;;;;;;;;;;;;x
+JOB_LUMBER_TT;Woodcutters Lodge;;;;;;;;;;;;;x
+JOB_LINEN_TT;Flax Field;;;;;;;;;;;;;x
+JOB_INCENSE_TT;Incense Workshop;;;;;;;;;;;;;x
+JOB_SPICES_TT;Spices Plantation;;;;;;;;;;;;;x
+JOB_MEAT_TT;Butchery / Fishery;;;;;;;;;;;;;x
+JOB_WOOL_TT;Shepherd Community;;;;;;;;;;;;;x
+JOB_HIDE_TT;Tannery;;;;;;;;;;;;;x
+JOB_IVORY_TT;Ivory Hunters Lodge;;;;;;;;;;;;;x
+JOB_SILK_TT;Silk Worm Farm;;;;;;;;;;;;;x
+JOB_NOTHING_TT;There is nothing here;;;;;;;;;;;;;x
+guilds_action_goods;Goods Map;;;;;;;;;;;;;x
+guilds_action_goods_desc;Your Cartographer will show you a map with the location of various goods and caravans of the Great Trade League.;;;;;;;;;;;;;x
+JOB_GOODS_TT;Trade Goods Present;;;;;;;;;;;;;x
+JOB_GOODS_BAND_TT;Trade Goods Compromised;;;;;;;;;;;;;x
+JOB_CARAVAN_TT;Caravan Present;;;;;;;;;;;;;x
+#artifacts
+guilds_item_stone;Crate of Stones;;;;;;;;;;;;;x
+guilds_item_iron;Crate of Iron Ingots;;;;;;;;;;;;;x
+guilds_item_steel;Crate of Steel Ingots;;;;;;;;;;;;;x
+guilds_item_gem;Box of Gems;;;;;;;;;;;;;x
+guilds_item_silver;Crate of Silver Ingots;;;;;;;;;;;;;x
+guilds_item_gold;Crate of Gold Ingots;;;;;;;;;;;;;x
+guilds_item_grain;Sack of Grain;;;;;;;;;;;;;x
+guilds_item_linen;Stack of Linen Cloths;;;;;;;;;;;;;x
+guilds_item_lumber;Pile of Lumber;;;;;;;;;;;;;x
+guilds_item_incense;Box of Incense;;;;;;;;;;;;;x
+guilds_item_spices;Pouch of Spices;;;;;;;;;;;;;x
+guilds_item_meat;Bag of Meats;;;;;;;;;;;;;x
+guilds_item_wool;Stack of Wool Cloths;;;;;;;;;;;;;x
+guilds_item_hide;Bundle of Hides;;;;;;;;;;;;;x
+guilds_item_ivory;Crate of Ivory;;;;;;;;;;;;;x
+guilds_item_silk;Stack of Silk Cloths;;;;;;;;;;;;;x
+guilds_item_pottery;Cart of Potteries;;;;;;;;;;;;;x
+guilds_item_alcohol;Barrel of Alcohol;;;;;;;;;;;;;x
+guilds_item_armor;Crate of Weapons and Armor;;;;;;;;;;;;;x
+guilds_item_jewelry;Box of jewelry;;;;;;;;;;;;;x
+guilds_item_book;Pile of Books;;;;;;;;;;;;;x
+guilds_item_statue;Stone Statue;;;;;;;;;;;;;x
+guilds_item_music;Crate of Musical Instruments;;;;;;;;;;;;;x
+guilds_item_glassware;Crate of Glassware;;;;;;;;;;;;;x
+guilds_item_dye;Pouch of Dye;;;;;;;;;;;;;x
+guilds_item_velvet;Stack of Velvet Cloths;;;;;;;;;;;;;x
+guilds_item_fur;Bundle of Furs;;;;;;;;;;;;;x
+guilds_item_armor_fake;Crate of Weapons and Armor;;;;;;;;;;;;;x
+guilds_item_stone_desc;Trade Good.\nCan be used to improve construction and defense.\nPrice influenced by Constructions and Terrains.;;;;;;;;;;;;;x
+guilds_item_iron_desc;Report me;;;;;;;;;;;;;x
+guilds_item_steel_desc;Trade Good.\nCan be used to improve the effectiveness of your soldiers.\nPrice influenced by Prosperity, Wars and Terrains.;;;;;;;;;;;;;x
+guilds_item_gem_desc;Trade Good.\nCan be used to improve taxation and prestige.\nPrice influenced by Prosperity, Epidemics and Terrains.;;;;;;;;;;;;;x
+guilds_item_silver_desc;Trade Good.\nCan be used to improve taxation and sanitation.\nPrice influenced by Prosperity, Epidemics and Terrains.;;;;;;;;;;;;;x
+guilds_item_gold_desc;Trade Good.\nCan be used to improve taxation, retinue maintenance and the economy.\nPrice influenced by Prosperity, Wars and Epidemics.;;;;;;;;;;;;;x
+guilds_item_grain_desc;Trade Good.\nCan be used to improve reinforcement rate and size, while lowering revolt risk.\nPrice influenced by Prosperity, Wars, Terrain and Festivities.;;;;;;;;;;;;;x
+guilds_item_linen_desc;Trade Good.\nCan be used to improve supply chains and taxation, while lowering revolt risk.\nPrice influenced by Prosperity, Terrain and Dyes Shipments.;;;;;;;;;;;;;x
+guilds_item_lumber_desc;Trade Good.\nCan be used to improve construction and the number of ships.\nPrice influenced by Constructions and Holding Type.;;;;;;;;;;;;;x
+guilds_item_incense_desc;Trade Good.\nCan be used to improve culture, taxation and piety.\nPrice influenced by Epidemics, Festivities and Temples.;;;;;;;;;;;;;x
+guilds_item_spices_desc;Trade Good.\nCan be used to improve taxation, prestige and the economy.\nPrice influenced by Prosperity, Terrain and Festivities.;;;;;;;;;;;;;x
+guilds_item_meat_desc;Trade Good.\nCan be used to improve morale and lower revolt risk.\nPrice influenced by Prosperity, Wars, Festivities and Spices Shipments.;;;;;;;;;;;;;x
+guilds_item_wool_desc;Trade Good.\nCan be used to improve winter supplies and taxation, while lowering revolt risk.\nPrice influenced by Prosperity, Terrains and Dyes Shipments.;;;;;;;;;;;;;x
+guilds_item_hide_desc;Trade Good.\nCan be used to improve your levy size and its defensiveness.\nPrice influenced by Terrains, Wars and Epidemics.;;;;;;;;;;;;;x
+guilds_item_ivory_desc;Trade Good.\nCan be used to improve taxation and prestige.\nPrice influenced by Terrain, Prosperity and Epidemics.;;;;;;;;;;;;;x
+guilds_item_silk_desc;Trade Good.\nCan be used to improve taxation, prestige and the economy.\nPrice influenced by Prosperity and Dyes Shipments.;;;;;;;;;;;;;x
+guilds_item_pottery_desc;Trade Good.\nCan be used to improve taxation.\nPrice influenced by Prosperity and Foods Shipments.;;;;;;;;;;;;;x
+guilds_item_alcohol_desc;Trade Good.\nCan be used to improve morale and winter supplies, while lowering revolt risk.\nPrice influenced by Prosperity, Wars and Terrains.;;;;;;;;;;;;;x
+guilds_item_armor_desc;Trade Good.\nCan be used to improve your levy size, retinue maintenance and military.\nPrice influenced by Wars and Festivities.;;;;;;;;;;;;;x
+guilds_item_jewelry_desc;Trade Good.\nCan be used to improve taxation and prestige.\nPrice influenced by Prosperity and Gems, Gold or Silver Shipments.;;;;;;;;;;;;;x
+guilds_item_book_desc;Trade Good.\nCan be used to improve technologies.\nPrice influenced by Prosperity and Holding Type.;;;;;;;;;;;;;x
+guilds_item_statue_desc;Trade Good.\nCan be used to improve culture, prestige and piety.\nPrice influenced by Prosperity and Constructions.;;;;;;;;;;;;;x
+guilds_item_music_desc;Trade Good.\nCan be used to improve culture, morale and morale recovery while lowering revolt risk.\nPrice influenced by Festivities, Prosperity and Epidemics.;;;;;;;;;;;;;x
+guilds_item_glassware_desc;Trade Good.\nCan be used to improve taxation, prestige and piety.\nPrice influenced by Prosperity and Constructions.;;;;;;;;;;;;;x
+guilds_item_dye_desc;Trade Good.\nCan be used to improve culture and taxation. Increase the value of clothes.\nPrice influenced by Festivities and Prosperity.;;;;;;;;;;;;;x
+guilds_item_velvet_desc;Trade Good.\nCan be used to improve taxation and prestige.\nPrice influenced by Prosperity and Dyes Shipments.;;;;;;;;;;;;;x
+guilds_item_fur_desc;Trade Good.\nCan be used to improve prestige, winter supplies and taxation.\nPrice influenced by Terrain, Festivities and Prosperity.;;;;;;;;;;;;;x
+guilds_item_stone_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Build Time Modifier: §G-15.0%§!\nLocal Build Cost Modifier: §G-10.0%§!\nFort Level: §G+1.0§!\n- - -;;;;;;;;;;;;;x
+guilds_item_steel_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nAll Units Attack: §G+10.0%§!\nAll Units Defence: §G+10.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_gem_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nPrestige Modifier: §G+20.0%§!\nLocal Tax Modifier: §G+30.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_silver_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Tax Modifier: §G+20.0%§!\nDisease Resistance: §G+20.0%§!\nTax Income: §G+5.0§!\n- - -;;;;;;;;;;;;;x
+guilds_item_gold_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Tax Modifier: §R-10.0%§!\nEconomy Technology Spread: §G+15.0%§!\nTax Income: §G+10.0§!\nRetinue Maintenence Cost: §G-20.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_grain_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nGarrison Size: §G+25.0%§!\nLocal Revolt Risk: §G-1.0%§!\nLevy Reinforce Rate: §G+20.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_linen_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Tax Modifier: §G+10.0%§!\nLocal Revolt Risk: §G-1.0%§!\nGlobal Supply Limit: §G+10.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_lumber_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Build Time Modifier: §G-10.0%§!\nLocal Build Cost Modifier: §G-15.0%§!\nGalleys: §G+30.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_incense_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nTemple Tax Modifier: §G+30.0%§!\nCulture Technology Spread: §G+15.0%§!\nPiety Modifier: §G+30.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_spices_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nMonthly Character Prestige: §G+0.5§!\nEconomy Technology Points: §G+0.25§!\nTax Income: §G+5.0§!\n- - -;;;;;;;;;;;;;x
+guilds_item_meat_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLand Morale: §G+20.0%§!\nLocal Revolt Risk: §G-1.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_wool_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Tax Modifier: §G+10.0%§!\nLocal Revolt Risk: §G-1.0%§!\nGlobal Winter Supply: §G+1.0§!\n- - -;;;;;;;;;;;;;x
+guilds_item_hide_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLevy Size: §G+15.0%§!\nAll Units Defence: §G+10.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_ivory_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Tax Modifier: §G+30.0%§!\nPrestige Modifier: §G+30.0%§!\nTax Income: §G+2.0§!\n- - -;;;;;;;;;;;;;x
+guilds_item_silk_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nPrestige Modifier: §G+50.0%§!\nEconomy Technology Points: §G+0.15§!\n\nEconomy Technology Spread: §G+10.0%§!Tax Income: §G+5.0§!\n- - -;;;;;;;;;;;;;x
+guilds_item_pottery_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Tax Modifier: §G+20.0%§!\nTax Income: §G+2.0§!\n- - -;;;;;;;;;;;;;x
+guilds_item_alcohol_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLand Morale: §G+30.0%§!\nLand Organisation: §R-10.0%§!\nGlobal Winter Supply: §G+0.5§!\nLocal Revolt Risk: §G-0.5%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_armor_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLevy Size: §G+20.0%§!\nMilitary Technology Points: §G+0.5§!\nRetinue Maintenence Cost: §G-10.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_jewelry_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Tax Modifier: §G+20.0%§!\nPrestige Modifier: §G+30.0%§!\nTax Income: §G+3.0§!\n- - -;;;;;;;;;;;;;x
+guilds_item_book_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nTechnology Modifier: §G+30.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_statue_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nMonthly Character Prestige: §G+1.0§!\nMonthly Character Piety: §G+1.0§!\nCulture Technology Spread: §G+15.0%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_music_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nCulture Technology Modifier: §G+15.0%§!\nLand Morale: §G+15.0%§!\nLand Organisation: §G15.0%§!\nLocal Revolt Risk: §G-1%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_glassware_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Tax Modifier: §G+30.0%§!\nTax Income: §G+4.0§!\nMonthly Character Prestige: §G+30%§!\nMonthly Character Piety: §G+30%§!\n- - -;;;;;;;;;;;;;x
+guilds_item_dye_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Tax Modifier: §G+40.0%§!\nCulture Technology Points: §G+0.5§!\nIncrease the value of Linen, Wool, Silk and Velvet\n- - -;;;;;;;;;;;;;x
+guilds_item_velvet_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nLocal Tax Modifier: §G+25.0%§!\nTax Income: §G+5.0§!\nMonthly Character Prestige: §G+30%§!\nMonthly Character Prestige: §G+1.0§!\n- - -;;;;;;;;;;;;;x
+guilds_item_fur_tooltip;§YTrade Good§!. Can be used on provinces to improve:\nGlobal Winter Supply: §G+2.0§!\nTax Income: §G+4.0§!\nMonthly Character Prestige: §G+20%§!\nMonthly Character Prestige: §G+1.0§!\n- - -;;;;;;;;;;;;;x
+guilds_item_armor_fake_desc;Of defective and poorly made Weapons and Armor...;;;;;;;;;;;;;x
+guilds_item_shop_stall;Trading Stall;;;;;;;;;;;;;x
+guilds_item_shop_stall_desc;It can be installed on any holding you own to receive extra profit when selling goods there.;;;;;;;;;;;;;x
+guilds_item_shop_caravan;Caravan;;;;;;;;;;;;;x
+guilds_item_shop_caravan_desc;Can be sent to counties you do not own to buy their goods for lower prices.;;;;;;;;;;;;;x
+guilds_warehouse_none;No dedicated Warehouse;;;;;;;;;;;;x
+guilds_warehouse_none_desc;Goods are spread everywhere.;;;;;;;;;;;;x
+guilds_warehouse_guard;Warehouse Guards;;;;;;;;;;;;x
+guilds_warehouse_guard_desc;These men will watch over your Warehouse and catch thieves for you.;;;;;;;;;;;;x
+guilds_warehouse_rented;Rented Warehouse;;;;;;;;;;;;x
+guilds_warehouse_rented_desc;Goods are properly stored but you do not own the Warehouse.;;;;;;;;;;;;x
+guilds_warehouse_custom;Warehouse;;;;;;;;;;;;x
+guilds_warehouse_custom_desc;Goods are properly stored here.;;;;;;;;;;;;x
+guilds_warehouse_gold;Warehouse decorated with Gold;;;;;;;;;;;;x
+guilds_warehouse_gold_desc;The Warehouse has an armor made of gold on a pedestal in the center.;;;;;;;;;;;;x
+guilds_warehouse_silk;Warehouse decorated with Silk;;;;;;;;;;;;x
+guilds_warehouse_silk_desc;The Warehouse's walls are covered with silk banners of various great houses.;;;;;;;;;;;;x
+guilds_warehouse_incense;Warehouse decorated with Incense;;;;;;;;;;;;x
+guilds_warehouse_incense_desc;The Warehouse is filled with a strong fragrance.;;;;;;;;;;;;x
+guilds_warehouse_book;Warehouse decorated with Books;;;;;;;;;;;;x
+guilds_warehouse_book_desc;The Warehouse office is filled with bookshelves.;;;;;;;;;;;;x
+guilds_holo_hair;Lock of hair;;;;;;;;;;;;;x
+guilds_holo_hair_desc;This strand of hair, or fur, belongs to the witch Holo. It was found during the hunt for the heretic.\nIt serves as a reminder to remain vigilant, even toward those you consider friends.;;;;;;;;;;;;;x
+guilds_holo_charm;Holo's Charm;;;;;;;;;;;;;x
+guilds_holo_charm_desc;This charm was worn by Holo and she left it behind when she disappeared.\nIt is a memento of her time with everyone.;;;;;;;;;;;;;x
+guilds_holo_charm_tooltip;This item only means something to her friends and family.;;;;;;;;;;;;;x
+#modifiers
+guilds_beggar;Beggar;;;;;;;;;;;;;x
+guilds_smugglers;Smugglers;;;;;;;;;;;;;x
+guilds_buff_stone;Stone Shipment;;;;;;;;;;;;;x
+guilds_buff_steel;Steel Shipment;;;;;;;;;;;;;x
+guilds_buff_steel_empty;Steel Shipment;;;;;;;;;;;;;x
+guilds_buff_gem;Gems Shipment;;;;;;;;;;;;;x
+guilds_buff_silver;Silver Shipment;;;;;;;;;;;;;x
+guilds_buff_gold;Gold Shipment;;;;;;;;;;;;;x
+guilds_buff_grain;Grain Shipment;;;;;;;;;;;;;x
+guilds_buff_lumber;Lumber Shipment;;;;;;;;;;;;;x
+guilds_buff_linen;Linen Shipment;;;;;;;;;;;;;x
+guilds_buff_incense;Incense Shipment;;;;;;;;;;;;;x
+guilds_buff_spices;Spices Shipment;;;;;;;;;;;;;x
+guilds_buff_meat;Meat Shipment;;;;;;;;;;;;;x
+guilds_buff_wool;Wool Shipment;;;;;;;;;;;;;x
+guilds_buff_hide;Hide Shipment;;;;;;;;;;;;;x
+guilds_buff_hide_empty;Hide Shipment;;;;;;;;;;;;;x
+guilds_buff_ivory;Ivory Shipment;;;;;;;;;;;;;x
+guilds_buff_silk;Silk Shipment;;;;;;;;;;;;;x
+guilds_buff_pottery;Pottery Shipment;;;;;;;;;;;;;x
+guilds_buff_alcohol;Alcohol Shipment;;;;;;;;;;;;;x
+guilds_buff_armor;Weapons and Armor Shipment;;;;;;;;;;;;;x
+guilds_buff_jewelry;Jewelry Shipment;;;;;;;;;;;;;x
+guilds_buff_book;Book Shipment;;;;;;;;;;;;;x
+guilds_buff_statue;Statue Shipment;;;;;;;;;;;;;x
+guilds_buff_music;Musical Instruments Shipment;;;;;;;;;;;;;x
+guilds_buff_glassware;Glassware Shipment;;;;;;;;;;;;;x
+guilds_buff_dye;Dye Shipment;;;;;;;;;;;;;x
+guilds_buff_dye_desc;Increase the value of Linen, Wool, Silk and Velvet.;;;;;;;;;;;;;x
+guilds_buff_velvet;Velvet Shipment;;;;;;;;;;;;;x
+guilds_buff_fur;Fur Shipment;;;;;;;;;;;;;x
+guilds_buff_feast;Delicious Feast;;;;;;;;;;;;;x
+guilds_buff_feast_desc;You have presented a most delicious feast to your vassals.;;;;;;;;;;;;;x
+guilds_loan_one;Loan Timer;;;;;;;;;;;;x
+guilds_loan_two;Loan Timer;;;;;;;;;;;;x
+guilds_loan_three;Loan Timer;;;;;;;;;;;;x
+guilds_loan_one_desc;You will have to pay back your loan to the Great Trade League when this timer ends.;;;;;;;;;;;;x
+guilds_loan_two_desc;You will have to pay back your loan to the Great Trade League when this timer ends.;;;;;;;;;;;;x
+guilds_loan_three_desc;You will have to pay back your loan to the Great Trade League when this timer ends.;;;;;;;;;;;;x
+guilds_shop_stall_metal;Mineral Stall;;;;;;;;;;;;x
+guilds_shop_stall_metal_desc;Increase the selling price of stone, steel, gems, silver and gold.;;;;;;;;;;;;x
+guilds_shop_stall_vegetal;Agricultural Stall;;;;;;;;;;;;x
+guilds_shop_stall_vegetal_desc;Increase the selling price of grain, lumber, linen, incense and spices.;;;;;;;;;;;;x
+guilds_shop_stall_animal;Hunting Stall;;;;;;;;;;;;x
+guilds_shop_stall_animal_desc;Increase the selling price of meat, wool, hide, ivory and silk.;;;;;;;;;;;;x
+guilds_shop_stall_goods;Finished Goods Stall;;;;;;;;;;;;x
+guilds_shop_stall_goods_desc;Increase the selling price of pottery, alcohol, weapons, armor, jewelry and books.;;;;;;;;;;;;x
+guilds_shop_stall_general;General Stall;;;;;;;;;;;;x
+guilds_shop_stall_general_desc;Slightly increase the selling price of everything.;;;;;;;;;;;;x
+guilds_shop_caravan;Visited by a Caravan;;;;;;;;;;;;x
+guilds_shop_caravan_desc;A member of the Trade League sent a Caravan here to buy and sell goods, improving the local economy.;;;;;;;;;;;;x
+guilds_caravan_escort;Levy preparing to escort a Caravan;;;;;;;;;;;;x
+guilds_caravan_escort_desc;Part of the levy of this holding is getting ready to escort a Caravan.;;;;;;;;;;;;x
+guilds_caravan_escort_timed;Levy escorting a Caravan;;;;;;;;;;;;x
+guilds_caravan_escort_timed_desc;Part of the levy of this holding is escorting a Caravan.;;;;;;;;;;;;x
+guilds_sabotage_supply;Disturbed Supply Lines;;;;;;;;;;;;x
+guilds_sabotage_supply_desc;The Trade League is influencing our reinforcements and our men and supplies are not getting to the front lines efficiently.;;;;;;;;;;;;x
+guilds_sabotage_economy;Embargoed Demesne;;;;;;;;;;;;x
+guilds_sabotage_economy_desc;The Trade League is not happy with us.;;;;;;;;;;;;x
+guilds_sabotage_propaganda;Negative Propaganda;;;;;;;;;;;;x
+guilds_sabotage_propaganda_desc;The Trade League is spreading lies to the people about us!;;;;;;;;;;;;x
+guilds_sabotage_scorched;Deserted Province;;;;;;;;;;;;x
+guilds_sabotage_scorched_desc;There is nothing left here...;;;;;;;;;;;;x
+guilds_sabotage_recovering;Recovering;;;;;;;;;;;;x
+guilds_sabotage_recovering_desc;The economy will slowly recover.;;;;;;;;;;;;x
+guilds_thieves_guild;The Thieves' Guild Strikes;;;;;;;;;;;;x
+guilds_thieves_guild_desc;25% chance of not getting any return from goods spent in provinces.;;;;;;;;;;;;x
+guilds_thieves_guild_military;Extra Guards on Duty;;;;;;;;;;;;x
+guilds_thieves_guild_military_desc;Your levy is keeping the Thieves' Guild in check.;;;;;;;;;;;;x
+guilds_highway_robber_band;Caravan Blockade ;;;;;;;;;;;;x
+guilds_highway_robber_band_desc;It is too dangerous to send Caravans.;;;;;;;;;;;;x
+guilds_highway_robber_band_military;Extra Caravan Guards;;;;;;;;;;;;x
+guilds_highway_robber_band_military_desc;Extra guards are hired to protect Caravans every time they are sent, resulting in additional costs.;;;;;;;;;;;;x
+guilds_highway_robber_band_dare;Caravan Ambushes;;;;;;;;;;;;x
+guilds_highway_robber_band_dare_desc;Send Caravans despite the risks, they will appreciate it and stay longer.;;;;;;;;;;;;x
+guilds_smugglers_ring_metal;Smuggled Gold;;;;;;;;;;;;x
+guilds_smugglers_ring_metal_desc;Come in red and green tints.;;;;;;;;;;;;x
+guilds_smugglers_ring_vegetal;Smuggled Grain;;;;;;;;;;;;x
+guilds_smugglers_ring_vegetal_desc;The green bits are spices, I swear.;;;;;;;;;;;;x
+guilds_smugglers_ring_animal;Smuggled Hides;;;;;;;;;;;;x
+guilds_smugglers_ring_animal_desc;Smell like wet dogs.;;;;;;;;;;;;x
+guilds_smugglers_ring_final;Smuggled Alcohol;;;;;;;;;;;;x
+guilds_smugglers_ring_final_desc;Has a vinegary taste.;;;;;;;;;;;;x
+guilds_smugglers_ring_military;Increased Patrols;;;;;;;;;;;;x
+guilds_smugglers_ring_military_desc;Prevent smugglers from flooding the markets.;;;;;;;;;;;;x
+guilds_trader_master_invest;¤Focus on Investing¤;;;;;;;;;;;;;x
+guilds_trader_master_invest_desc;Request your Trade Master to focus on investing goods in your capital.;;;;;;;;;;;;;x
+guilds_trader_master_profit;¤Focus on Profit¤;;;;;;;;;;;;;x
+guilds_trader_master_profit_desc;Request your Trade Master to focus on making a profit.;;;;;;;;;;;;;x
+guilds_trader_master_balance;¤Focus on Both¤;;;;;;;;;;;;;x
+guilds_trader_master_balance_desc;Request your Trade Master to make a balance between investing and profit.;;;;;;;;;;;;;x
+guilds_trader_master_cash;¤Demand Money¤;;;;;;;;;;;;;x
+guilds_trader_master_cash_desc;Demand your Trade Master to give you 100 ¤.;;;;;;;;;;;;;x
+guilds_trader_master_give;¤Give all Goods¤;;;;;;;;;;;;;x
+guilds_trader_master_give_desc;Give all of your goods to your Trade Master.;;;;;;;;;;;;;x
+guilds_trader_master_stop;¤Toggle Funds Requests¤;;;;;;;;;;;;;x
+guilds_trader_master_stop_desc;Allow or prevent your Trader Master from asking for funds.;;;;;;;;;;;;;x
+guilds_unhappy_trade_master;Your Trade Master is unhappy. If you take more funds from him, you will have to face the consequences.;;;;;;;;;;;;;x
+guilds_center_trade;Center of Trade;;;;;;;;;;;;;x
+guilds_center_trade_desc;This town has a prosperous trade market organized by the Trade League.\nIt provide the owner with free goods and shipments every year.;;;;;;;;;;;;;x
+guilds_center_trade_sieged;Pillaged Center of Trade;;;;;;;;;;;;;x
+guilds_center_trade_sieged_desc;This town was once a major Center of Trade, but it was attacked. A member of the Great Trade League could restore it before the traders move elsewhere.;;;;;;;;;;;;;x
+guilds_mapmode_yes;Shipment Present;;;;;;;;;;;;;x
+guilds_mapmode_no;No Shipment Here;;;;;;;;;;;;;x
+guilds_mapmode_caravan;Caravan Here;;;;;;;;;;;;;x
+guilds_bustling_new_city;Bustling New City;;;;;;;;;;;;;x
+guilds_bustling_new_city_desc;The Great Trade League is sending money and workers to this city.;;;;;;;;;;;;;x
+guilds_music_good;Peasants Impressed;;;;;;;;;;;;;x
+guilds_music_good_desc;Your musical skills impressed them.;;;;;;;;;;;;;x
+guilds_music_bad;Peasants Outraged;;;;;;;;;;;;;x
+guilds_music_bad_desc;Your musical skills outraged them.;;;;;;;;;;;;;x
+guilds_holo_sheep;Large Wolf Sighting;;;;;;;;;;;;;x
+guilds_holo_sheep_desc;Peasants talk of a large wolf roaming the fields, eating their sheeps.;;;;;;;;;;;;;x
+successful_guilds_mission;Successful Mission;Mission réussie;Erfolgreiche Mission;;Misión completada;;;;;;;;;x
+failed_guilds_mission;Failed Mission;Mission échouée;Gescheiterte Mission;;Misión fallida;;;;;;;;;x
+successful_guilds_mission_stacked;Successful Missions;Missions réussies;Erfolgreiche Missionen;;Misiones completadas;;;;;;;;;x
+failed_guilds_mission_stacked;Failed Missions;Missions échouées;Gescheiterte Missionen;;Misiones fallidas;;;;;;;;;x
+guilds_influence_good_deal;Good Trade;;;;;;;;;;;;;x
+guilds_influence_very_good_deal;Great Trade;;;;;;;;;;;;;x
+guilds_influence_bad_deal;Bad Trade;;;;;;;;;;;;;x
+guilds_influence_very_bad_deal;Horrible Trade;;;;;;;;;;;;;x
+guilds_influence_inflation;Inflation;;;;;;;;;;;;;x
+guilds_influence_debt;Cleared Debt;;;;;;;;;;;;;x
+guilds_influence_good_deal_stacked;Good Trades;;;;;;;;;;;;;x
+guilds_influence_very_good_deal_stacked;Great Trades;;;;;;;;;;;;;x
+guilds_influence_bad_deal_stacked;Bad Trades;;;;;;;;;;;;;x
+guilds_influence_very_bad_deal_stacked;Horrible Trades;;;;;;;;;;;;;x
+guilds_influence_inflation_stacked;Inflation;;;;;;;;;;;;;x
+guilds_influence_debt_stacked;Cleared Debts;;;;;;;;;;;;;x
+guilds_influence_boom;Market Boom;;;;;;;;;;;;;x
+guilds_influence_crash;Market Crash;;;;;;;;;;;;;x
+guilds_influence_boom_stacked;Market Boom;;;;;;;;;;;;;x
+guilds_influence_crash_stacked;Market Crash;;;;;;;;;;;;;x
+failed_guilds_mission_counter;Balancing Paradox's Oversight;;;;;;;;;;;;;x
+failed_guilds_mission_counter_stacked;Balancing Paradox's Oversights;;;;;;;;;;;;;x
+guilds_market_crash_king_bonus;Control the Market;;;;;;;;;;;;;x
+guilds_market_crash_king_bonus_desc;The Great Trade League grasp on the market is gone, which allowed the feudal lords to take over.;;;;;;;;;;;;;x
+guilds_market_crash_trader_bonus;Control the Market;;;;;;;;;;;;;x
+guilds_market_crash_trader_bonus_desc;The Great Trade League has total control of the market, allowing them to monopolize the profits.;;;;;;;;;;;;;x
+guilds_market_crash_king_malus;Lost Control of the Market;;;;;;;;;;;;;x
+guilds_market_crash_king_malus_desc;The Great Trade League has total control of the market, allowing them to monopolize the profits.;;;;;;;;;;;;;x
+guilds_market_crash_trader_malus;Lost Control of the Market;;;;;;;;;;;;;x
+guilds_market_crash_trader_malus_desc;The Great Trade League grasp on the market is gone, which allowed the feudal lords to take over.;;;;;;;;;;;;;x
+guilds_market_crash_tracker;Great Trade War;;;;;;;;;;;;;x
+guilds_market_crash_tracker_desc;The Great Trade League control [global_guilds_var_league.GetValue]% of the markets\nThe Feudal Lords Alliance control [global_guilds_var_outsider.GetValue]% of the markets;;;;;;;;;;;;x
+guilds_busy_spiritual;Extra Councillor Duties;;;;;;;;;;;;;x
+guilds_busy_spiritual_desc;This councillor is burdened by more work than usual.;;;;;;;;;;;;;x
+guilds_busy_marshal;Extra Councillor Duties;;;;;;;;;;;;;x
+guilds_busy_marshal_desc;This councillor is burdened by more work than usual.;;;;;;;;;;;;;x
+guilds_busy_treasurer;Extra Councillor Duties;;;;;;;;;;;;;x
+guilds_busy_treasurer_desc;This councillor is burdened by more work than usual.;;;;;;;;;;;;;x
+guilds_busy_chancellor;Extra Councillor Duties;;;;;;;;;;;;;x
+guilds_busy_chancellor_desc;This councillor is burdened by more work than usual.;;;;;;;;;;;;;x
+guilds_busy_spymaster;Extra Councillor Duties;;;;;;;;;;;;;x
+guilds_busy_spymaster_desc;This councillor is burdened by more work than usual.;;;;;;;;;;;;;x
+guilds_tax_break;Tax Break;;;;;;;;;;;;;x
+guilds_tax_break_desc;The peasants in the province enjoy a tax break.;;;;;;;;;;;;;x
+guilds_cursed;Jinxed;;;;;;;;;;;;;x
+guilds_cursed_desc;Has ignored the warnings of an old fool.;;;;;;;;;;;;;x
+#decisions
+guilds_show_decisions_on;- Show Trade League Decisions;;;;;;;;;;;;;x
+guilds_show_decisions_on_desc;Click to show the Society decisions.;;;;;;;;;;;;;x
+guilds_show_decisions_off;- Hide Trade League Decisions;;;;;;;;;;;;;x
+guilds_show_decisions_off_desc;Click to hide the Society decisions.;;;;;;;;;;;;;x
+guilds_shopping;Go to the market;;;;;;;;;;;;;x
+guilds_shopping_power_desc;§PIntrigue Decision§! Spend some of your §YAssets§! to venture into the market, triggering several trading opportunities.;;;;;;;;;;;;;x
+guilds_shopping_cooldown_tooltip;Has not gone to the market recently;;;;;;;;;;;;;x
+guilds_shopping_prepare_tooltip;Prepare yourself to go the market to buy or sell items.;;;;;;;;;;;;;x
+guilds_shopping_desc;Prepare yourself to go the market to buy or sell items.\nThe §YAssets§! required is affected by the Society's Influence.;;;;;;;;;;;;;x
+guilds_recruit;Invite to the Trading League;;;;;;;;;;;;;x
+guilds_recruit_desc;Attempt to invite [GetName] to the Great Trade League.;;;;;;;;;;;;;x
+guilds_recruit_power_desc;§BCharacter Decision§! Attempt to invite someone into the Great Trade League.;;;;;;;;;;;;;x
+guilds_recruit_block_tooltip;Has not already been asked to join.;;;;;;;;;;;;;x
+guilds_loaning_one;Ask for a loan;;;;;;;;;;;;;x
+guilds_loaning_one_desc;Receive 100 gold to be paid back in 2 years with 20% interest if not in debt.\nThe §YAssets§! required is affected by the Society's Influence.;;;;;;;;;;;;;x
+guilds_loaning_two;Ask for a second loan;;;;;;;;;;;;;x
+guilds_loaning_two_desc;Receive 100 gold to be paid back in 2 years with 20% interest if not in debt.\nThe §YAssets§! required is affected by the Society's Influence.;;;;;;;;;;;;;x
+guilds_loaning_three;Ask for a third loan;;;;;;;;;;;;;x
+guilds_loaning_three_desc;Receive 100 gold to be paid back in 2 years with 20% interest if not in debt.\nThe §YAssets§! required is affected by the Society's Influence.;;;;;;;;;;;;;x
+guilds_loaning_one_power_desc;§PIntrigue Decision§! Ask the Trade League to loan you 100¤. It must be paid back 2 years later with 20% interest if not in debt at the time it was taken.;;;;;;;;;;;;;x
+guilds_loan_cooldown_tooltip;Have less than three loans.;;;;;;;;;;;;;x
+guilds_buffing_dummy;Use goods in a province;;;;;;;;;;;;;x
+guilds_buffing_dummy_power_desc;§GHolding Decision§! Lets you right-click on one of your province's holdings to sell trade goods for various bonuses.;;;;;;;;;;;;;x
+guilds_buffing_goods_tooltip;Have the item;;;;;;;;;;;;;;x
+guilds_buffing_busy_tooltip;Is not currently in an event involving goods;;;;;;;;;;;;;;x
+guilds_buffing_stone;Send Stones;;;;;;;;;;;;;x
+guilds_buffing_stone_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_steel;Send Steel Ingots;;;;;;;;;;;;;x
+guilds_buffing_steel_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_gem;Send Gems;;;;;;;;;;;;;x
+guilds_buffing_gem_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_silver;Send Silver Ingots;;;;;;;;;;;;;x
+guilds_buffing_silver_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_gold;Send Gold Ingots;;;;;;;;;;;;;x
+guilds_buffing_gold_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_grain;Send Grains;;;;;;;;;;;;;x
+guilds_buffing_grain_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_lumber;Send Lumber;;;;;;;;;;;;;x
+guilds_buffing_lumber_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_linen;Send Linen Cloths;;;;;;;;;;;;;x
+guilds_buffing_linen_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_incense;Send Incense;;;;;;;;;;;;;x
+guilds_buffing_incense_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_spices;Send Spices;;;;;;;;;;;;;x
+guilds_buffing_spices_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_meat;Send Meats;;;;;;;;;;;;;x
+guilds_buffing_meat_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_wool;Send Wool Cloths;;;;;;;;;;;;;x
+guilds_buffing_wool_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_hide;Send Hides;;;;;;;;;;;;;x
+guilds_buffing_hide_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_ivory;Send Ivory;;;;;;;;;;;;;x
+guilds_buffing_ivory_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_silk;Send Silk Cloths;;;;;;;;;;;;;x
+guilds_buffing_silk_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_pottery;Send Potteries;;;;;;;;;;;;;x
+guilds_buffing_pottery_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_alcohol;Send Alcohol;;;;;;;;;;;;;x
+guilds_buffing_alcohol_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_armor;Send Weapons and Armor;;;;;;;;;;;;;x
+guilds_buffing_armor_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_jewelry;Send Jewelry;;;;;;;;;;;;;x
+guilds_buffing_jewelry_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_book;Send Books;;;;;;;;;;;;;x
+guilds_buffing_book_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_statue;Send Statue;;;;;;;;;;;;;x
+guilds_buffing_statue_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_music;Send Musical Instruments;;;;;;;;;;;;;x
+guilds_buffing_music_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_glassware;Send Glasswares;;;;;;;;;;;;;x
+guilds_buffing_glassware_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_dye;Send Dyes;;;;;;;;;;;;;x
+guilds_buffing_dye_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_velvet;Send Velvet Cloths;;;;;;;;;;;;;x
+guilds_buffing_velvet_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_buffing_fur;Send Furs;;;;;;;;;;;;;x
+guilds_buffing_fur_desc;Send a shipment to this province for bonuses.;;;;;;;;;;;;;x
+guilds_goods_bonus_war_tooltip;War influence:;;;;;;;;;;;;x
+guilds_goods_bonus_goods_tooltip;Goods influence:;;;;;;;;;;;;x
+guilds_goods_bonus_prosperity_tooltip;Prosperity influence:;;;;;;;;;;;;x
+guilds_goods_bonus_epidemic_tooltip;Epidemic influence:;;;;;;;;;;;;x
+guilds_goods_bonus_terrain_tooltip;Terrain influence:;;;;;;;;;;;;x
+guilds_goods_bonus_construction_tooltip;Construction influence:;;;;;;;;;;;;x
+guilds_goods_bonus_festivitie_tooltip;Festivities influence:;;;;;;;;;;;;x
+guilds_atk_bonus_tooltip;All Units Attack: §G+10.0%§!;;;;;;;;;;;;x
+guilds_def_bonus_tooltip;All Units Defence: §G+10.0%§!;;;;;;;;;;;;x
+guilds_levy_bonus_tooltip;Levy Size: §G+15.0%§!;;;;;;;;;;;;x
+guilds_smugglers_ring_metal_tooltip;Is not flooded with smuggled mineral goods;;;;;;;;;;;;;x
+guilds_smugglers_ring_vegetal_tooltip;Is not flooded with smuggled vegetal goods;;;;;;;;;;;;;x
+guilds_smugglers_ring_animal_tooltip;Is not flooded with smuggled animal goods;;;;;;;;;;;;;x
+guilds_smugglers_ring_final_tooltip;Is not flooded with smuggled finished goods;;;;;;;;;;;;;x
+guilds_buy_shop;Buy or Sell Stalls and Caravans;;;;;;;;;;;;;x
+guilds_buy_shop_desc;Stalls and Caravans are used to improve the rentability of your business endeavor.;;;;;;;;;;;;;x
+guilds_buy_shop_power_desc;§PIntrigue Decision§! Enables you to buy Stalls and Caravans.\nAlso let you improve the success rate of the next Caravan you send.\n§GHolding Decision§! Stalls can be used on your holdings and improve the profit from goods spent in that province.\n§RForeign Holding Decision§! Caravans can be used on foreign provinces' holdings that have trade goods modifiers by right-click them while owning a Caraven, prepared or not, and will return with cheap goods a year later.\nBoth Caravans and Stalls are returned to you after their job is done.;;;;;;;;;;;;;x
+guilds_shopping_stall_metal;Place a Mineral Stall;;;;;;;;;;;;x
+guilds_shopping_stall_metal_desc;Increase the selling price of stones, steel, gems, silver and gold.\nThe §YAssets§! required is affected by the Society's Influence.;;;;;;;;;;;;x
+guilds_shopping_stall_vegetal;Place an Agricultural Stall;;;;;;;;;;;;x
+guilds_shopping_stall_vegetal_desc;Increase the selling price of grain, lumber, linen, incense and spices.\nThe §YAssets§! required is affected by the Society's Influence.;;;;;;;;;;;;x
+guilds_shopping_stall_animal;Place a Hunting Stall;;;;;;;;;;;;x
+guilds_shopping_stall_animal_desc;Increase the selling price of meat, wool, hide, ivory and silk.\nThe §YAssets§! required is affected by the Society's Influence.;;;;;;;;;;;;x
+guilds_shopping_stall_goods;Place a Finished Goods Stall;;;;;;;;;;;;x
+guilds_shopping_stall_goods_desc;Increase the selling price of pottery, alcohol, weapons and armor, jewelry and books.\nThe §YAssets§! required is affected by the Society's Influence.;;;;;;;;;;;;x
+guilds_shopping_stall_general;Place a General Stall;;;;;;;;;;;;x
+guilds_shopping_stall_general_desc;Slightly increase the selling price of everything.\nThe §YAssets§! required is affected by the Society's Influence.;;;;;;;;;;;;x
+guilds_shopping_caravan;Send a Caravan;;;;;;;;;;;;x
+guilds_shopping_caravan_desc;Send a Caravan to this province to buy their goods at half price.\nThe §YAssets§! required is affected by the Society's Influence.;;;;;;;;;;;;x
+guilds_shopping_caravan_shipment_tooltip;Any Goods Shipment;;;;;;;;;;;;x
+guilds_caravan_option;Prepare your next Caravan;;;;;;;;;;;;x
+guilds_caravan_option_desc;Invest money to improve rentability and security of the next Caravan.\nThis does not send the Caravan itself.;;;;;;;;;;;;x
+guilds_prepared_caravan_tooltip;The Caravan is not ready;;;;;;;;;;;;x
+guilds_preparing_caravan_tooltip;Not preparing a Caravan;;;;;;;;;;;;x
+guilds_caravan_robber_tooltip;Is not dealing with a highway robber band;;;;;;;;;;;;x
+guilds_caravan_fail_tooltip;losing the Caravan.;;;;;;;;;;;;x
+guilds_caravan_win_tooltip;success.;;;;;;;;;;;;x
+guilds_caravan_nothing_tooltip;not buying each goods.;;;;;;;;;;;;x
+guilds_caravan_something_tooltip;buying each goods.;;;;;;;;;;;;x
+guilds_become_republic;Become a Merchant Republic;;;;;;;;;;;;x
+guilds_become_republic_desc;Recruit other members of the Trade League and reform your realm into a republic.;;;;;;;;;;;;x
+guilds_become_republic_power_desc;§PIntrigue Decision§! If you are at least a duke and your capital is coastal, you can become a Merchant Republic by spending §YAssets§! and ¤. You will invite vassals as both patricians and society members.;;;;;;;;;;;;x
+guilds_sabotaging_dummy;Sabotage Provinces;;;;;;;;;;;;;x
+guilds_sabotaging_dummy_power_desc;§RForeign Holding Decision§! Lets you right-click on a holding owned by a rival, heretic or someone at war with you and negatively impact their supply lines, economy or population.;;;;;;;;;;;;;x
+guilds_sabotaging_supply;Disrupt Supply Lines;;;;;;;;;;;;x
+guilds_sabotaging_supply_desc;Severely lower the target's ability to resupply and replenish their troops.;;;;;;;;;;;;x
+guilds_sabotaging_economy;Embargo Demesne;;;;;;;;;;;;x
+guilds_sabotaging_economy_desc;Badly damage the target's economy and industry.;;;;;;;;;;;;x
+guilds_sabotaging_propaganda;Spread Negative Propaganda;;;;;;;;;;;;x
+guilds_sabotaging_propaganda_desc;Enrage the people against their ruler, making them revolt and not want to fight for him.;;;;;;;;;;;;x
+guilds_sabotaging_scorched;Pull Supplies Out;;;;;;;;;;;;x
+guilds_sabotaging_scorched_desc;Remove goods and supplies from a province, salvaging some and making any siege more difficult.;;;;;;;;;;;;x
+guilds_show_warehouse_on;- Show Warehouse Decisions;;;;;;;;;;;;;x
+guilds_show_warehouse_on_desc;Click to show the Warehouse decisions.;;;;;;;;;;;;;x
+guilds_show_warehouse_off;- Hide Warehouse Decisions;;;;;;;;;;;;;x
+guilds_show_warehouse_off_desc;Click to hide the Warehouse decisions.;;;;;;;;;;;;;x
+guilds_guarding_warehouse_on;Hire Guards;;;;;;;;;;;;;x
+guilds_guarding_warehouse_on_desc;Hire Guards to protect your Warehouse and your Trade Goods.;;;;;;;;;;;;;x
+guilds_guarding_warehouse_off;Dismiss Guards;;;;;;;;;;;;;x
+guilds_guarding_warehouse_off_desc;Dismiss the Guards protecting your Warehouse and your Trade Goods.;;;;;;;;;;;;;x
+guilds_guarding_warehouse_out_on;Hire Guards;;;;;;;;;;;;;x
+guilds_guarding_warehouse_out_on_desc;Hire Guards to protect your Warehouse and your Trade Goods.;;;;;;;;;;;;;x
+guilds_guarding_warehouse_out_off;Dismiss Guards;;;;;;;;;;;;;x
+guilds_guarding_warehouse_out_off_desc;Dismiss the Guards protecting your Warehouse and your Trade Goods.;;;;;;;;;;;;;x
+guilds_discard_guards_province;Dismiss Guards;;;;;;;;;;;;;x
+guilds_discard_guards_province_desc;Dismiss the Guards protecting your Warehouse and your Trade Goods.;;;;;;;;;;;;;x
+guilds_build_warehouse_button;Start Building a Warehouse;;;;;;;;;;;;x
+guilds_build_warehouse_button_desc;Some goods can make it faster and cheaper.;;;;;;;;;;;;x
+guilds_building_warehouse_tooltip;Some goods can make it faster and cheaper.;;;;;;;;;;;;x
+guilds_decorated_warehouse_gold;Remove the Golden Armor;;;;;;;;;;;;x
+guilds_decorated_warehouse_gold_desc;Receive the goods back and install a new decoration in your Warehouse.;;;;;;;;;;;;x
+guilds_decorated_warehouse_incense;Ventilate the Incense;;;;;;;;;;;;x
+guilds_decorated_warehouse_incense_desc;Receive the goods back and install a new decoration in your Warehouse.;;;;;;;;;;;;x
+guilds_decorated_warehouse_silk;Rollup the Silk Banners;;;;;;;;;;;;x
+guilds_decorated_warehouse_silk_desc;Receive the goods back and install a new decoration in your Warehouse.;;;;;;;;;;;;x
+guilds_decorated_warehouse_book;Replace the Bookshelves;;;;;;;;;;;;x
+guilds_decorated_warehouse_book_desc;Receive the goods back and install a new decoration in your Warehouse.;;;;;;;;;;;;x
+guilds_decorated_warehouse_custom;Decorate your Warehouse;;;;;;;;;;;;x
+guilds_decorated_warehouse_custom_desc;Use goods to decorate your Warehouse.;;;;;;;;;;;;x
+guilds_discard_warehouse;Abandon the Rented Warehouse;;;;;;;;;;;;x
+guilds_discard_warehouse_desc;Save on some taxes by selling a useless building.;;;;;;;;;;;;x
+guilds_sell_warehouse;Sell Warehouse Decoration;;;;;;;;;;;;x
+guilds_sell_warehouse_desc;You will sell one of the decorations of your Warehouse.;;;;;;;;;;;;x
+guilds_sell_warehouse_outsider;Sell Warehouse Decoration.;;;;;;;;;;;;x
+guilds_sell_warehouse_outsider_desc;You will sell one of the decorations of your Warehouse.;;;;;;;;;;;;x
+guilds_discard_warehouse_outsider;Abandon the Rented Warehouse;;;;;;;;;;;;x
+guilds_discard_warehouse_outsider_desc;Save on some taxes by selling a useless building.;;;;;;;;;;;;x
+guilds_discard_warehouse_province;Abandon the Rented Warehouse;;;;;;;;;;;;x
+guilds_discard_warehouse_province_desc;Save on some taxes by selling a useless building.;;;;;;;;;;;;x
+guilds_delivery_button;Deliver Trade Goods.;;;;;;;;;;;;x
+guilds_delivery_button_desc;Contact the Trade League representative about your Trade Goods delivery.;;;;;;;;;;;;x
+guilds_craft_button;Contact Affiliated Artisans;;;;;;;;;;;;;x
+guilds_craft_button_desc;Meet with artisans from the Great Trade League to craft something for you.\n1 pottery + 1 grain = 2 alcohol barrels\n1 meat + 1 spice = feast modifier (+10 vassal opinion for 3 years)\n4 grains = 1 bag of meat + 1 stack of wool cloths + 1 bundle of hides\n3 stones = 1 box of gems\n5 stones = 1 crate of silver ingots\n6 stones = 1 crate of gold ingots\n2 stones = 1 statue\n1 hide + 1 lumber = 2 crates of musical instruments\n1 stone + 1 lumber + 1 silver = 2 crates of glassware\n1 gold + 1 gem = 2 jewelry boxes + money\n1 gold + 1 silver = 1  wearable crown (M&M or Jade dlc)\n1 gold + 1 jewelry = 1  wearable jewelry (M&M or Jade dlc)\n1 lumber + 1 grain + 1 meat = 1 pouch of dye\n1 linen + 1 wool + 1 silk = 3 stacks of velvets cloths\n1 hide + 1 lumber = 2 bundles of furs\n1 steel + 1 hide = 1 wearable armor + 1 weapons and armor crates (M&M or Jade dlc)\n1 steel + 1 lumber = 1 combat weapon + 1 W&A (M&M or Jade dlc)\n1 steel + 1 gem = 1 ceremonial weapon + 1 W&A (M&M or Jade dlc)\n1 stone + money = 1 cart of potteries\n2 hides = 1 pile of books;;;;;;;;;;;;;x
+guilds_craft_button_power_desc;§PIntrigue Decision§! Allows you to hire craftsmen with your §YAssets§! to transform trade goods you own into more profitable items.;;;;;;;;;;;;;x
+guilds_can_craft_tooltip;Have the goods required for at least one recipe.;;;;;;;;;;;;;x
+guilds_create_center;Create a Center of Trade;;;;;;;;;;;;x
+guilds_create_center_desc;Make your capital a major Center of Trade. It will generate free goods and shipments.;;;;;;;;;;;;x
+guilds_create_center_power_desc;§PIntrigue Decision§! Guild Masters can make their capital a major Center of Trade once in their lifetime using §YAssets§! and ¤. It will provide you with free goods and shipments, but the owner needs to support it in the long term.;;;;;;;;;;;;x
+guilds_repair_center;Repair the Center of Trade;;;;;;;;;;;;x
+guilds_repair_center_desc;Repair the Center of Trade before it is abandoned.;;;;;;;;;;;;x
+guilds_society_mapmode_buy;Request a Trade Routes Map;;;;;;;;;;;;;x
+guilds_society_mapmode_buy_desc;Temporarily transform the Revolt Risk map mode to show if a province is a potential target to send a Caravan to.\nThe map is free to use for 2 years after being bought.;;;;;;;;;;;;;x
+guilds_society_mapmode_look;Look at the Trade Routes Map;;;;;;;;;;;;;x
+guilds_society_mapmode_look_desc;Temporarily transform the Revolt Risk map mode to show if a province is a potential target to send a Caravan to.;;;;;;;;;;;;;x
+guilds_wed_holo;Marry Holo;;;;;;;;;;;;;x
+guilds_wed_holo_desc;Seal your fate to be together until the end.;;;;;;;;;;;;;x
+guilds_influence_influence_cost;The §YAssets§! required is affected by the society's influence.;;;;;;;;;;;;;x
+guilds_influence_influence_cost_shopping;Has §YAssets§! greater or equal to §Y[Root.GetGuildsInfluenceCostShopping]§!;;;;;;;;;;;;;x
+guilds_influence_influence_cost_caravan;Has §YAssets§! greater or equal to §Y[From.GetGuildsInfluenceCostCaravan]§!;;;;;;;;;;;;;x
+guilds_influence_influence_cost_buying;Has §YAssets§! greater or equal to §Y[This.GetGuildsInfluenceCostBuying]§! or isn't on cooldown;;;;;;;;;;;;;x
+guilds_clear_debt;Clear your Debt;;;;;;;;;;;;;x
+guilds_clear_debt_desc;The Trade League is willing to waive your debts and all loans from the society.\nThis is a once per lifetime opportunity.;;;;;;;;;;;;;x
+guilds_clear_debt_power_desc;§PIntrigue Decision§! Once per lifetime, members of this rank can use the Great Trade League coffers, if their influence is above 50%, to clear all of their debt and loans from the society.\nIt will leave them at 0¤.;;;;;;;;;;;;;x
+guilds_market_crash_start_tooltip;The market isn't crashing;;;;;;;;;;;;;x
+guilds_warehouse_guilds;Important Documents;;;;;;;;;;;;x
+guilds_warehouse_guilds_desc;The Warehouse contains important documents related to the Great Trade League.;;;;;;;;;;;;x
+guilds_decorated_warehouse_guilds;Store your Great Trade League documents;;;;;;;;;;;;x
+guilds_decorated_warehouse_guilds_desc;You will properly store the various paperwork of the Great Trade League in your Warehouse.;;;;;;;;;;;;x
+guilds_start_resource;Search your demesne for resources;;;;;;;;;;;;x
+guilds_start_resource_desc;Will send an expedition in your demesne to find resources to exploit. This is a long and expensive process that will provide long-term profits. The following resources can be found or processed:\nStone, steel, gem, silver and gold.\nGrain, lumber, linen, incense and spices.\nMeat, wool, hide, ivory and silk.\nThe terrain and access to water are the key factors that determine which resource is found.\n\nMembers of the Great Trade League will receive trade good artifacts, while non-members will receive ducats. Most of the time these will be given directly, without events.\n\nNomads can only find and receive the resource in their nomadic capital. If they change its location, they can use a decision on the old capital's coat of arms to transfer meat, wool, hide and ivory resources to their new capital. They also have a bias toward these resources.;;;;;;;;;;;;;x
+guilds_demesne_province_no_resources_tt;At least one demesne province, or the nomadic capital, lacks resources;;;;;;;;;;;;x
+guilds_cooldown_resources_tt;Must wait 5 years after ending the previous expedition;;;;;;;;;;;;x
+guilds_buy_goods;Offer to buy trade goods;;;;;;;;;;;;x
+guilds_buy_goods_desc;Will request to buy the specified trade good. You will be asked to offer a price. Your offer, society rank difference, trade experience and opinion affect the odds of acceptance.\nYou will pay an extra §R[From.GetGuildsInfluenceCostBuyingDesc]§! §Yassets§!, determined by the society's influence, if the offer is accepted.;;;;;;;;;;;;x
+guilds_buy_goods_power_desc;§BCharacter Decision§! Request to buy a specific trade good from someone for §Y[From.GetGuildsInfluenceCostBuyingDesc] assets§!, in addition to an extra §Y[From.GetGuildsInfluenceCostBuyingDesc]§! if the trade is accepted.;;;;;;;;;;;;;x
+guilds_buy_timer_tooltip;No recent attempts;;;;;;;;;;;;;x
+guilds_move_resource;Move the Resource;;;;;;;;;;;;;x
+guilds_move_resource_desc;This will move the herd to your nomadic capital.\nWork with Meat, Wool, Hide and Ivory.;;;;;;;;;;;;;x
+guilds_has_nomad_resource;Is either Meat, Wool, Hide or Ivory;;;;;;;;;;;;;x
+guilds_has_no_resource;The nomadic capital lack a resource;;;;;;;;;;;;;x
+guilds_move_resource_no_search_tt;Not searching for a new resource;;;;;;;;;;;;x
+guilds_bribe_leaders;Unantagonize the Great Trade League;;;;;;;;;;;;x
+guilds_bribe_leaders_desc;Bribing the guilds masters will let you join it or hire a trade master again.;;;;;;;;;;;;;x
+#events
+EVTDESC_SNW_102;I have received a letter about your interest in joining our Great Trade League. You must know that we don't care about what you believe in or what you are entitled to, we care about what we can achieve for ourselves by ourselves. Do you agree to be seen as our equal, even if it means being shunned by people that will believe you are breaking the class barrier? If you are, let's trade symbolically.;;;;;;;;;;;;;x
+EVTOPTA_SNW_102;Let's trade.;;;;;;;;;;;;;x
+EVTOPTB_SNW_102;I'm not so sure anymore.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_122;Greetings [Root.GetSocietyRank] [Root.GetFirstName],\nI recognize your contribution to the Trade League and acknowledge your abilities to improve the affluence and wealth of our Alliance. I promote you to the the next rank within [Root.Society.GetName].\n\nSigned,\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_122;For the Alliance.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_130;The sky is clear and your purse is full. A manservant has prepared a cart for you with a strong horse to transport any goods you might buy or sell.;;;;;;;;;;;;;x
+EVTOPTA_SNW_130;Let's head for the market.;;;;;;;;;;;;;x
+EVTDESC_SNW_1300;The market is lively and ready for business. Are you buying or selling?;;;;;;;;;;;;;x
+EVTOPTA_SNW_1300;Buying.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1300;Selling.;;;;;;;;;;;;;x
+EVTDESC_SNW_131;There is a lot of shops but not enough time to browse them all. Are you more interested in buying the treasures from the depths of the earth, the riches harvested in the soil, the gifts from the hunt and livestock or the results of the work of artisans?;;;;;;;;;;;;;x
+EVTOPTA_SNW_131;Treasures like: Stones, Steel, Gems, Silver and Gold.;;;;;;;;;;;;;x
+EVTOPTB_SNW_131;Riches like: Grain, Lumber, Linen, Incense and Spices.;;;;;;;;;;;;;x
+EVTOPTC_SNW_131;Gifts like: Meat, Wool, Hides, Ivory and Silk.;;;;;;;;;;;;;x
+EVTOPTD_SNW_131;Results like: Potteries, Alcohol, Weapons and Armor, Jewelry and Books.;;;;;;;;;;;;;x
+EVTDESC_SNW_1310;A dusty and smoky part of the market. Stonecutters, miners, gems cutters... these men transform simple stones in the foundation of our wars and economy. A lot of money can be found here.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1310;Stone.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1310;Steel.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1310;Gems.;;;;;;;;;;;;;x
+EVTOPTD_SNW_1310;Silver.;;;;;;;;;;;;;x
+EVTOPTE_SNW_1310;Gold.;;;;;;;;;;;;;x
+EVTOPTZ_SNW_1310;Nothing of interest.;;;;;;;;;;;;;x
+EVTDESC_SNW_1311;A simple but important district. Grains, vegetables, firewood, cloths... without the peasants producing these goods, the realm would be in dire straits.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1311;Grain.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1311;Lumber.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1311;Linen.;;;;;;;;;;;;;x
+EVTOPTD_SNW_1311;Incense.;;;;;;;;;;;;;x
+EVTOPTE_SNW_1311;Spices.;;;;;;;;;;;;;x
+EVTOPTZ_SNW_1311;Nothing of interest.;;;;;;;;;;;;;x
+EVTDESC_SNW_1312;This area is not for those with weak stomachs, butchers and smelly beasts are in every corner. The rare silk importers walking amongst the hunters and shepherds are a welcome sight from all the bloody wares.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1312;Meat.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1312;Wool.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1312;Hides.;;;;;;;;;;;;;x
+EVTOPTD_SNW_1312;Ivory.;;;;;;;;;;;;;x
+EVTOPTE_SNW_1312;Silk.;;;;;;;;;;;;;x
+EVTOPTZ_SNW_1312;Nothing of interest.;;;;;;;;;;;;;x
+EVTDESC_SNW_1313;The main street is lined with shops and people looking at goods crafted by the local artisans. All the trading in the city ends up converging here and is transformed into great works like armor, jewelry and pots.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1313;Pottery.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1313;Alcohol.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1313;Weapons and Armor.;;;;;;;;;;;;;x
+EVTOPTD_SNW_1313;Jewelry.;;;;;;;;;;;;;x
+EVTOPTE_SNW_1313;Books.;;;;;;;;;;;;;x
+EVTOPTZ_SNW_1313;Nothing of interest.;;;;;;;;;;;;;x
+EVTDESC_SNW_1315;There are a lot of potential buyers but not enough time to deal with them all. Are you more interested in selling the treasures from the depthd of the earth, the riches harvested in the soil, the gifts from the hunt and livestock or the results of the work of artisans?;;;;;;;;;;;;;x
+EVTOPTA_SNW_1315;Treasures like: Stones, Steel, Gems, Silver and Gold.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1315;Riches like: Grain, Lumber, Linen, Incense and Spices.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1315;Gifts like: Meat, Wool, Hides, Ivory and Silk.;;;;;;;;;;;;;x
+EVTOPTD_SNW_1315;Results like: Potteries, Alcohol, Weapons and Armor, Jewelry and Books.;;;;;;;;;;;;;x
+EVTDESC_SNW_1316;A dusty and smoky part of the market. Stonecutters, miners, gems cutters... these men transform simple stones in the foundation of our wars and economy. A lot of money can be found here;;;;;;;;;;;;;x
+EVTOPTA_SNW_1316;Stone.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1316;Steel.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1316;Gems.;;;;;;;;;;;;;x
+EVTOPTD_SNW_1316;Silver.;;;;;;;;;;;;;x
+EVTOPTE_SNW_1316;Gold.;;;;;;;;;;;;;x
+EVTOPTZ_SNW_1316;Nothing of interest.;;;;;;;;;;;;;x
+EVTDESC_SNW_1317;A simple but important district. Grains, vegetables, firewood, cloths... without the peasants producing these goods, the realm would be in dire straits.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1317;Grain.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1317;Lumber.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1317;Linen.;;;;;;;;;;;;;x
+EVTOPTD_SNW_1317;Incense.;;;;;;;;;;;;;x
+EVTOPTE_SNW_1317;Spices.;;;;;;;;;;;;;x
+EVTOPTZ_SNW_1317;Nothing of interest.;;;;;;;;;;;;;x
+EVTDESC_SNW_1318;This area is not for those with weak stomachs, butchers and smelly beasts are in every corner. The rare silk importers walking amongst the hunters and shepherds are a welcome sight from all the bloody wares.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1318;Meat.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1318;Wool.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1318;Hide.;;;;;;;;;;;;;x
+EVTOPTD_SNW_1318;Ivory.;;;;;;;;;;;;;x
+EVTOPTE_SNW_1318;Silk.;;;;;;;;;;;;;x
+EVTOPTZ_SNW_1318;Nothing of interest.;;;;;;;;;;;;;x
+EVTDESC_SNW_1319;The main street is lined with shops and people looking at goods crafted by the local artisans. All the trading in the city ends up converging here and is transformed into great works like armor, jewelry and pots.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1319;Pottery.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1319;Alcohol.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1319;Weapons and Armor.;;;;;;;;;;;;;x
+EVTOPTD_SNW_1319;Jewelry.;;;;;;;;;;;;;x
+EVTOPTE_SNW_1319;Books.;;;;;;;;;;;;;x
+EVTOPTZ_SNW_1319;Nothing of interest.;;;;;;;;;;;;;x
+guilds_go_market_tt;You will continue your way to the market.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_140_A;Quarry workers ask for money for a project, they'll pay you back later in Stones.;;;;;;;;;;;;;x
+EVTDESC_SNW_140_B;Smelters ask for money for a project, they'll pay you back later in Steel Ingots.;;;;;;;;;;;;;x
+EVTDESC_SNW_140_C;Gem seekers ask for money for a project, they'll pay you back later in Gems.;;;;;;;;;;;;;x
+EVTDESC_SNW_140_D;Miners ask for money for a project, they'll pay you back later in Silver Ingots.;;;;;;;;;;;;;x
+EVTDESC_SNW_140_E;Diggers ask for money for a project, they'll pay you back later in Gold Ingots.;;;;;;;;;;;;;x
+EVTDESC_SNW_141_A;Farmers ask for money for a project, they'll pay you back later in Grain.;;;;;;;;;;;;;x
+EVTDESC_SNW_141_B;Lumberjacks ask for money for a project, they'll pay you back later in Lumber.;;;;;;;;;;;;;x
+EVTDESC_SNW_141_C;Weavers ask for money for a project, they'll pay you back later in Linen Cloths.;;;;;;;;;;;;;x
+EVTDESC_SNW_141_D;Incense traders ask for money for a project, they'll pay you back later in Incense.;;;;;;;;;;;;;x
+EVTDESC_SNW_141_E;Spices importers ask for money for a project, they'll pay you back later in Spices.;;;;;;;;;;;;;x
+EVTDESC_SNW_142_A;Butchers ask for money for a project, they'll pay you back later in Meat.;;;;;;;;;;;;;x
+EVTDESC_SNW_142_B;Shepherds ask for money for a project, they'll pay you back later in Wool Cloths.;;;;;;;;;;;;;x
+EVTDESC_SNW_142_C;Tanners ask for money for a project, they'll pay you back later in Hides.;;;;;;;;;;;;;x
+EVTDESC_SNW_142_D;Big game hunters ask for money for a project, they'll pay you back later in Ivory.;;;;;;;;;;;;;x
+EVTDESC_SNW_142_E;Silk merchants ask for money for a project, they'll pay you back later in Silk Cloths.;;;;;;;;;;;;;x
+EVTDESC_SNW_143_A;Potters ask for money for a project, they'll pay you back later in Potteries.;;;;;;;;;;;;;x
+EVTDESC_SNW_143_B;Brewers ask for money for a project, they'll pay you back later in Alcohol Barrels.;;;;;;;;;;;;;x
+EVTDESC_SNW_143_C;Blacksmiths ask for money for a project, they'll pay you back later in Weapons and Armor.;;;;;;;;;;;;;x
+EVTDESC_SNW_143_D;Jewelers ask for money for a project, they'll pay you back later in Jewelry.;;;;;;;;;;;;;x
+EVTDESC_SNW_143_E;Monks ask for money for a project, they'll pay you back later in Books.;;;;;;;;;;;;;x
+EVTOPTA_SNW_140;Make a minor investment.;;;;;;;;;;;;;x
+EVTOPTB_SNW_140;Make a medium investment.;;;;;;;;;;;;;x
+EVTOPTC_SNW_140;Make a major investment.;;;;;;;;;;;;;x
+EVTOPTA_SNW_141;Make a minor investment.;;;;;;;;;;;;;x
+EVTOPTB_SNW_141;Make a medium investment.;;;;;;;;;;;;;x
+EVTOPTC_SNW_141;Make a major investment.;;;;;;;;;;;;;x
+EVTOPTA_SNW_142;Make a minor investment.;;;;;;;;;;;;;x
+EVTOPTB_SNW_142;Make a medium investment.;;;;;;;;;;;;;x
+EVTOPTC_SNW_142;Make a major investment.;;;;;;;;;;;;;x
+EVTOPTA_SNW_143;Make a minor investment.;;;;;;;;;;;;;x
+EVTOPTB_SNW_143;Make a medium investment.;;;;;;;;;;;;;x
+EVTOPTC_SNW_143;Make a major investment.;;;;;;;;;;;;;x
+EVTOPTA_SNW_140_TT;failure.;;;;;;;;;;;;;x
+EVTOPTB_SNW_140_TT;receiving one item.;;;;;;;;;;;;;x
+EVTOPTC_SNW_140_TT;receiving two items.;;;;;;;;;;;;;x
+EVTOPTD_SNW_140_TT;receiving three items.;;;;;;;;;;;;;x
+EVTDESC_SNW_1401;A messenger from the business you invested in last year is here, he brings you your fair share of their labor.;;;;;;;;;;;;;x
+EVTDESC_SNW_1411;A messenger from the business you invested in last year is here, he brings you your fair share of their labor.;;;;;;;;;;;;;x
+EVTDESC_SNW_1421;A messenger from the business you invested in last year is here, he brings you your fair share of their labor.;;;;;;;;;;;;;x
+EVTDESC_SNW_1431;A messenger from the business you invested in last year is here, he brings you your fair share of their labor.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1401;Receive your small returns.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1401;Receive your average returns.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1401;Receive your large returns.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1411;Receive your small returns.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1411;Receive your average returns.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1411;Receive your large returns.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1421;Receive your small returns.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1421;Receive your average returns.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1421;Receive your large returns.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1431;Receive your small returns.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1431;Receive your average returns.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1431;Receive your large returns.;;;;;;;;;;;;;x
+EVTDESC_SNW_145;A messenger from the business you invested in last year is here, and he looks quite distressed. It appears that the business venture failed.;;;;;;;;;;;;;x
+EVTOPTA_SNW_145;Useless swines.;;;;;;;;;;;;;x
+EVTOPTZ_SNW_140;On a second thought...;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_150;A member of the Great Trade League appears before you with two well built men behind him. He tells you that it is time for you to pay your debt to the Guilds.;;;;;;;;;;;;;x
+EVTOPTA_SNW_150;I have it right here.;;;;;;;;;;;;;x
+EVTOPTB_SNW_150;... back into debt.;;;;;;;;;;;;;x
+EVTOPTC_SNW_150;I shall pay in goods.;;;;;;;;;;;;;x
+EVTOPTD_SNW_150;You won't take anything from me.;;;;;;;;;;;;;x
+EVTOPTE_SNW_150;No it isn't.;;;;;;;;;;;;;x
+EVTDESC_SNW_151;A member of the Great Trade League appear before you with two well built men behind him. He tells you that it is time for you to pay your debt to the Guilds.;;;;;;;;;;;;;x
+EVTOPTA_SNW_151;I have it right here.;;;;;;;;;;;;;x
+EVTOPTB_SNW_151;... back into debt.;;;;;;;;;;;;;x
+EVTOPTC_SNW_151;I shall pay in goods.;;;;;;;;;;;;;x
+EVTOPTD_SNW_151;You won't take anything from me.;;;;;;;;;;;;;x
+EVTOPTE_SNW_151;No it isn't.;;;;;;;;;;;;;x
+EVTDESC_SNW_155;A member of the Great Trade League appear before you with two well built men behind him. He tells you of the debt your predecessor had and that you inherited it alongside the titles. If there were any, the League will ignore the interests, as you weren't the loan taker.;;;;;;;;;;;;;x
+EVTOPTA_SNW_155;If I must.;;;;;;;;;;;;;x
+EVTOPTB_SNW_155;... Curse.;;;;;;;;;;;;;x
+EVTOPTC_SNW_155;I shall pay in goods.;;;;;;;;;;;;;x
+EVTOPTD_SNW_155;You won't take anything from me.;;;;;;;;;;;;;x
+EVTOPTE_SNW_155;I'd rather just abandon this League.;;;;;;;;;;;;;x
+EVTOPTF_SNW_155;You'll have to fight for your money!;;;;;;;;;;;;;x
+guilds_antagonize_trade_league;Antagonizing the Great Trade League will prevent you from joining it or hiring a trade master.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_160_A;A man suddently comes up to you. He claims to have the greatest offer of your life and that you only need to pay in advance.;;;;;;;;;;;;;x
+EVTDESC_SNW_160_B;A man rushes to you, talking excitedly and insisting that you have to sell him this. You don't really understand what he want amidst his rambling.;;;;;;;;;;;;;x
+EVTOPTA_SNW_160;It is a deal!;;;;;;;;;;;;;x
+EVTOPTB_SNW_160;... deal?;;;;;;;;;;;;;x
+EVTOPTC_SNW_160;What? No!;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_170_A;While looking at what the various shops have to offer a man calls out to you. He claims to have the greatest offer for you: two crates of Gold Ingots for the price of one!;;;;;;;;;;;;;x
+EVTDESC_SNW_170_B;While looking at what the various shops have to offer a man calls out to you. He claims to have the greatest offer for you: two pouchs of Spices for the price of one!;;;;;;;;;;;;;x
+EVTDESC_SNW_170_C;While looking at what the various shops have to offer a man calls out to you. He claims to have the greatest offer for you: two stacks of Silk Cloths for the price of one!;;;;;;;;;;;;;x
+EVTDESC_SNW_170_D;While looking at what the various shops have to offer a man calls out to you. He claims to have the greatest offer for you: two bundles of Books for the price of one!;;;;;;;;;;;;;x
+EVTOPTA_SNW_170;What a bargain!;;;;;;;;;;;;;x
+EVTOPTA_SNW_170_TTA;Receive your Gold.;;;;;;;;;;;;;x
+EVTOPTA_SNW_170_TTB;Receive your Spices.;;;;;;;;;;;;;x
+EVTOPTA_SNW_170_TTC;Receive your Silk.;;;;;;;;;;;;;x
+EVTOPTA_SNW_170_TTD;Receive your Books.;;;;;;;;;;;;;x
+EVTOPTB_SNW_170;Call him out of his scam.;;;;;;;;;;;;;x
+EVTOPTC_SNW_170;What a bargain!;;;;;;;;;;;;;x
+EVTOPTC_SNW_170_TT;Receive your goods.;;;;;;;;;;;;;x
+EVTOPTD_SNW_170;Call him out of his scam.;;;;;;;;;;;;;x
+EVTOPTE_SNW_170;I'm not falling for that.;;;;;;;;;;;;;x
+EVTDESC_SNW_1700;You have insulted a respectable merchant.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1700;I shouldn't be so paranoid.;;;;;;;;;;;;;x
+EVTDESC_SNW_1701;You caught the fraud!;;;;;;;;;;;;;x
+EVTOPTA_SNW_1701;Ask for what you paid for.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1701;Threaten to report him.;;;;;;;;;;;;;x
+EVTDESC_SNW_1702;He offers you four heavily discounted sets of military equipment in exchange of your pardon, you don't even have to pay the 1000 coins right away, as he offers them to you on credit.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1702;Ask for the goods you paid for.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1702;These will do.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1702;Report him.;;;;;;;;;;;;;x
+EVTDESC_SNW_1703;The equipment looked fine at first but... they are clearly not up to standard. The worst thing is that everyone in town seems to look away when you look at them, as if everyone knew about these. Unfortunately you did sign a credit contract and now have a Sword of Damocles worth 1000 coins above your head. You will need a plan to make up for you losses. First...;;;;;;;;;;;;;x
+EVTOPTA_SNW_1703;Sell them to the Trading League.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1703;Pass the burden to someone else.;;;;;;;;;;;;;x
+EVTDESC_SNW_1704;There is still more of the debt to cover, you will...;;;;;;;;;;;;;x
+EVTOPTA_SNW_1704;Attempt to smuggle gold.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1704;Beg people for loans.;;;;;;;;;;;;;x
+EVTOPTC_SNW_1704;Ask the Trade League for a loan.;;;;;;;;;;;;;x
+EVTDESC_SNW_1705;You happen to meet a merchant and he makes you an offer: you smuggle gold for him and he will pay you a premium. Due to the tariffs, carrying such a sum is like asking the guards to levy half of it.\nHowever, you happen to find a shepherd and make a deal. He gets to keep some of the gold and his herd will eat the gold nuggets, hiding it from the guard's eyes.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1705;Carry on with the plan.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1705;Carry on with the plan.;;;;;;;;;;;;;x
+EVTDESC_SNW_1706;Time to pay your debt.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1706;Could have been worst.;;;;;;;;;;;;;x
+EVTDESC_SNW_1707;It appears that your trick did not go unnoticed.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1707;Curse.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_180;The lease for the spot you had your Stall installed is over and your Stall is returned to you.;;;;;;;;;;;;;x
+EVTOPTA_SNW_180;Where to place it now.;;;;;;;;;;;;;x
+EVTDESC_SNW_181;You are presented a selection of Stalls and Caravans. The merchant reminds you that you will need to use your Assets with the Trade League to hire people to man these.;;;;;;;;;;;;;x
+EVTOPTA_SNW_181;Buy a Stall.;;;;;;;;;;;;;x
+EVTOPTB_SNW_181;Buy a Caravan.;;;;;;;;;;;;;x
+EVTOPTC_SNW_181;Buy nothing.;;;;;;;;;;;;;x
+EVTOPTD_SNW_181;Sell something.;;;;;;;;;;;;;x
+EVTDESC_SNW_182;The merchant is willing to buy the old Stalls and Caravans you no longer need.;;;;;;;;;;;;;x
+EVTOPTA_SNW_182;Sell a Stall.;;;;;;;;;;;;;x
+EVTOPTB_SNW_182;Sell a Caravan.;;;;;;;;;;;;;x
+EVTOPTC_SNW_182;Sell nothing.;;;;;;;;;;;;;x
+EVTOPTD_SNW_182;Buy something.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_190;A Caravan has returned. The traders are unloading their wares and will come to you to sell the goods they bought with a large discount.;;;;;;;;;;;;;x
+EVTOPTA_SNW_190;Good!;;;;;;;;;;;;;x
+EVTDESC_SNW_191;By giving more funds to your Caravan you give the traders the opportunity to strike more deals when you give them their next mission.;;;;;;;;;;;;;x
+EVTOPTA_SNW_191;Do not fund them.;;;;;;;;;;;;;x
+EVTOPTB_SNW_191;Give them some funds.;;;;;;;;;;;;;x
+EVTOPTC_SNW_191;Give them a lot of funds.;;;;;;;;;;;;;x
+EVTDESC_SNW_192;The roads can be treacherous and several factors can hinder the trader's safety, such as distance, war in the targeted territory or how the ruler of the territory feels about you. Hiring guards will greatly increase the Caravan security.;;;;;;;;;;;;;x
+EVTOPTA_SNW_192;They won't need protection.;;;;;;;;;;;;;x
+EVTOPTB_SNW_192;Pay some mercenaries.;;;;;;;;;;;;;x
+EVTOPTC_SNW_192;Send some of my levy.;;;;;;;;;;;;;x
+EVTDESC_SNW_193;It has been quite some time since you last heard about the Caravan you sent about a year ago, it should have returned by now. You can only guess that it was either attacked or pillaged.;;;;;;;;;;;;;x
+EVTOPTA_SNW_193;Maybe hiring an escort wouldn't have been bad idea.;;;;;;;;;;;;;x
+EVTDESC_SNW_1901;One of the traders from the Caravan offers you a Crate of Stones.;;;;;;;;;;;;;x
+EVTDESC_SNW_1902;One of the traders from the Caravan offers you a Crate of Steel Ingots.;;;;;;;;;;;;;x
+EVTDESC_SNW_1903;One of the traders from the Caravan offers you a Bag of Gems.;;;;;;;;;;;;;x
+EVTDESC_SNW_1904;One of the traders from the Caravan offers you a Crate of Silver Ingots.;;;;;;;;;;;;;x
+EVTDESC_SNW_1905;One of the traders from the Caravan offers you a Crate of Gold Ingots.;;;;;;;;;;;;;x
+EVTDESC_SNW_1906;One of the traders from the Caravan offers you a Sack of Grain.;;;;;;;;;;;;;x
+EVTDESC_SNW_1907;One of the traders from the Caravan offers you a Stack of Lumber.;;;;;;;;;;;;;x
+EVTDESC_SNW_1908;One of the traders from the Caravan offers you a Bundle of Linen Cloths.;;;;;;;;;;;;;x
+EVTDESC_SNW_1909;One of the traders from the Caravan offers you a Box of Incense.;;;;;;;;;;;;;x
+EVTDESC_SNW_1910;One of the traders from the Caravan offers you a Pouch of Spices.;;;;;;;;;;;;;x
+EVTDESC_SNW_1911;One of the traders from the Caravan offers you a Bag of Meats.;;;;;;;;;;;;;x
+EVTDESC_SNW_1912;One of the traders from the Caravan offers you a Bundle of Wool Cloths.;;;;;;;;;;;;;x
+EVTDESC_SNW_1913;One of the traders from the Caravan offers you a Bundle of Hides.;;;;;;;;;;;;;x
+EVTDESC_SNW_1914;One of the traders from the Caravan offers you a Crate of Ivory.;;;;;;;;;;;;;x
+EVTDESC_SNW_1915;One of the traders from the Caravan offers you a Bundle of Silk Cloths.;;;;;;;;;;;;;x
+EVTDESC_SNW_1916;One of the traders from the Caravan offers you a Cart full of Pottery.;;;;;;;;;;;;;x
+EVTDESC_SNW_1917;One of the traders from the Caravan offers you a Barrel of Alcohol.;;;;;;;;;;;;;x
+EVTDESC_SNW_1918;One of the traders from the Caravan offers you a Crate of Weapons and Armor.;;;;;;;;;;;;;x
+EVTDESC_SNW_1919;One of the traders from the Caravan offers you a Box of Jewelry.;;;;;;;;;;;;;x
+EVTDESC_SNW_1920;One of the traders from the Caravan offers you a Pile of Books.;;;;;;;;;;;;;x
+EVTDESC_SNW_1921;One of the traders from the Caravan offers you a Statue.;;;;;;;;;;;;;x
+EVTDESC_SNW_1922;One of the traders from the Caravan offers you a Crate of Musical Instruments.;;;;;;;;;;;;;x
+EVTDESC_SNW_1923;One of the traders from the Caravan offers you a Crate of Glassware.;;;;;;;;;;;;;x
+EVTDESC_SNW_1924;One of the traders from the Caravan offers you a Pouch of Dye.;;;;;;;;;;;;;x
+EVTDESC_SNW_1925;One of the traders from the Caravan offers you a Stack of Velvet Cloths.;;;;;;;;;;;;;x
+EVTDESC_SNW_1926;One of the traders from the Caravan offers you a Bundle of Furs.;;;;;;;;;;;;;x
+EVTOPTA_SNW_1900;Buy it.;;;;;;;;;;;;;x
+EVTOPTB_SNW_1900;Let them keep it.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_200;A member of the Great Trade League approaches and tells you that he is ready to buy a specific merchandise you have in your possession.;;;;;;;;;;;;;x
+EVTOPTA_SNW_200;Gladly!;;;;;;;;;;;;;x
+EVTOPTB_SNW_200;Not interested.;;;;;;;;;;;;;x
+EVTOPTC_SNW_200;I'll never sell anything to your kind.;;;;;;;;;;;;;x
+EVTDESC_SNW_201;A strange man approaches and tells you that he is ready to buy an ingredient you have in your possession.;;;;;;;;;;;;;x
+EVTOPTA_SNW_201;Gladly!;;;;;;;;;;;;;x
+EVTOPTB_SNW_201;Not interested.;;;;;;;;;;;;;x
+EVTOPTC_SNW_201;I'll never sell anything to your kind.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_212;The Warehouse in §Y[FromFrom.GetName]§! was §Rdestroyed§! !;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_220;This Thieves' Guild is really doing some work in your demesne, they are beginning to intercept the goods you are trying to sell in the territory.;;;;;;;;;;;;;x
+EVTOPTA_SNW_220;Let them do their petty thievery.;;;;;;;;;;;;;x
+EVTOPTB_SNW_220;Send the men.;;;;;;;;;;;;;x
+EVTOPTC_SNW_220;Hire bounty hunters from the League.;;;;;;;;;;;;;x
+EVTDESC_SNW_2200;While looking at a local Stall, you hear two merchants talk about a Thieves' Guild doing working in your demesne. The bandits are beginning to intercept their goods and will most likely target yours too.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2200;Let them do their petty thievery.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2200;Send the men.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2200;Hire bounty hunters from the League.;;;;;;;;;;;;;x
+EVTDESC_SNW_221;The reports about a Highway Robbers Band are getting more frequent, sending Caravans will be more complicated.;;;;;;;;;;;;;x
+EVTOPTA_SNW_221;We won't be sending any Caravans for now.;;;;;;;;;;;;;x
+EVTOPTB_SNW_221;We will hire additional guards.;;;;;;;;;;;;;x
+EVTOPTB_SNW_221_TT;All Caravans will cost money to send.;;;;;;;;;;;;;x
+EVTOPTC_SNW_221;We will send them anyways!;;;;;;;;;;;;;x
+EVTDESC_SNW_2210;You receive reports that the roads are becoming dangerous and the reports of bandit attacks are pilling up. Sending Caravans is getting more complicated.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2210;We won't be sending any Caravans for now.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2210;We will hire additional guards.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2210_TT;All Caravans will cost money to send.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2210;We will send them anyways!;;;;;;;;;;;;;x
+EVTDESC_SNW_222;The Smugglers' Ring is getting bolder. Now they are actively trying to get poor quality goods in your demesne.;;;;;;;;;;;;;x
+EVTOPTA_SNW_222;Free goods are good goods.;;;;;;;;;;;;;x
+EVTOPTB_SNW_222;Increase the guard!;;;;;;;;;;;;;x
+EVTDESC_SNW_2220;A smuggler was caught trying to enter the town carrying poor quality goods. Our interrogation reveals that his group is planning more attemps.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2220;Free goods are good goods.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2220;Increase the guard!;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_230_A;A servant comes to you in panic, he says that there is an intruder in your home. The thief is most likely after your goods.;;;;;;;;;;;;;x
+EVTDESC_SNW_230_B;A servant comes to you in panic and exhausted, he says that there is an intruder in your warehouse. The thief is most likely after your goods.;;;;;;;;;;;;;x
+EVTOPTA_SNW_230;I'll intercept this trespasser.;;;;;;;;;;;;;x
+EVTOPTB_SNW_230;I must go!;;;;;;;;;;;;;x
+EVTOPTC_SNW_230;GUARDS! What am I paying you for?;;;;;;;;;;;;;x
+EVTOPTC_SNW_230_TT;Your guards take care of the problem.;;;;;;;;;;;;;x
+EVTOPTD_SNW_230;I have nothing of worth to lose.;;;;;;;;;;;;;x
+EVTOPTE_SNW_230;I have nothing to steal.;;;;;;;;;;;;;x
+EVTOPTF_SNW_230;It's already empty, the fools!;;;;;;;;;;;;;x
+EVTDESC_SNW_231_A;The thief in your home seems to be only a child. You will...;;;;;;;;;;;;;x
+EVTDESC_SNW_231_B;The intruder in your home is a lone man. You will...;;;;;;;;;;;;;x
+EVTDESC_SNW_231_C;You hear several men talking, they seem determined to take several goods from you. You will...;;;;;;;;;;;;;x
+EVTOPTA_SNW_231;Try to catch the child.;;;;;;;;;;;;;x
+EVTOPTA_SNW_231_TT;to catch him;;;;;;;;;;;;;x
+EVTOPTA_SNW_231_TTT;that he escape;;;;;;;;;;;;;x
+EVTOPTB_SNW_231;What can a child do? Just scare him out.;;;;;;;;;;;;;x
+EVTOPTC_SNW_231;Face the man.;;;;;;;;;;;;;x
+EVTOPTC_SNW_231_TT;the man is unarmed;;;;;;;;;;;;;x
+EVTOPTC_SNW_231_TTT;the man is armed;;;;;;;;;;;;;x
+EVTOPTD_SNW_231;Try to catch him by surprise.;;;;;;;;;;;;;x
+EVTOPTD_SNW_231_TT;you sneak up to him;;;;;;;;;;;;;x
+EVTOPTD_SNW_231_TTT;you are spotted;;;;;;;;;;;;;x
+EVTOPTE_SNW_231;Do nothing, it is too dangerous.;;;;;;;;;;;;;x
+EVTOPT_SNW_lose_two_goods;You lose two goods.;;;;;;;;;;;;;x
+EVTOPTF_SNW_231;Go face the men.;;;;;;;;;;;;;x
+EVTOPTG_SNW_231;Do nothing, it is too dangerous.;;;;;;;;;;;;;x
+EVTOPT_SNW_lose_three_goods;You lose three goods.;;;;;;;;;;;;;x
+EVTDESC_SNW_232_A;The thief in your warehouse seems to be only a child. You will...;;;;;;;;;;;;;x
+EVTDESC_SNW_232_B;The intruder in your warehouse is a lone man. You will...;;;;;;;;;;;;;x
+EVTDESC_SNW_232_C;You hear several men talking, they seem determined to take several goods from you. You will...;;;;;;;;;;;;;x
+EVTOPTA_SNW_232;Try to catch the child.;;;;;;;;;;;;;x
+EVTOPTA_SNW_232_TT;to catch him;;;;;;;;;;;;;x
+EVTOPTA_SNW_232_TTT;that he escape;;;;;;;;;;;;;x
+EVTOPTB_SNW_232;What can a child do? Just scare him out.;;;;;;;;;;;;;x
+EVTOPTC_SNW_232;Face the man.;;;;;;;;;;;;;x
+EVTOPTC_SNW_232_TT;the man is unarmed;;;;;;;;;;;;;x
+EVTOPTC_SNW_232_TTT;the man is armed;;;;;;;;;;;;;x
+EVTOPTD_SNW_232;Try to catch him by surprise.;;;;;;;;;;;;;x
+EVTOPTD_SNW_232_TT;you sneak up to him;;;;;;;;;;;;;x
+EVTOPTD_SNW_232_TTT;you are spotted;;;;;;;;;;;;;x
+EVTOPTE_SNW_232;do nothing, it is too dangerous.;;;;;;;;;;;;;x
+EVTOPTF_SNW_232;Go face the men.;;;;;;;;;;;;;x
+EVTOPTG_SNW_232;do nothing, it is too dangerous.;;;;;;;;;;;;;x
+EVTDESC_SNW_235;A few days have passed since the thief incident. You decide to check your warehouse to see if there was anything of note and...\n\nit feels different. It takes you a minute to recall that your warehouse was not exactly empty. The thief stole your decoration!;;;;;;;;;;;;;x
+EVTOPTA_SNW_235;... Curse.;;;;;;;;;;;;;x
+EVTDESC_SNW_2301_A;The imp may be young, but you know the layout of your property.\n\nYou caught the child.;;;;;;;;;;;;;x
+EVTDESC_SNW_2301_B;Curse that brat, how is he not tired yet? All that running is making you look like an out of shape slob.\n\nThe child escaped.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2301;I sentence him to death.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2301;Release the child.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2301;Cut the child's right hand.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2301;Little bastard.;;;;;;;;;;;;;x
+EVTDESC_SNW_2302_A;You face an unarmed man.\n\nIt appears that he didn't expect anyone to find him. With you between him and the exit, his options are limited.;;;;;;;;;;;;;x
+EVTDESC_SNW_2302_B;You face an armed man.\n\nHe seem eager and ready for you. With you between him and the exit, his options are limited.;;;;;;;;;;;;;x
+EVTDESC_SNW_2302_C;You silently approach the man from behind. He doesn't notice you and you have a clear advantage in the coming battle.;;;;;;;;;;;;;x
+EVTDESC_SNW_2302_D;You silently approach the man from behind. You take a peak over a crate... only to see him staring right back at you. Your attempt at sneaking has failed.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2302;Fight him.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2302;Stab him from behind.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2302;It's not worth it.;;;;;;;;;;;;;x
+EVTDESC_SNW_2303_A;The men took notice of you as you approached them. They turn to face you, brandishing clubs and knives, while daring you to stop them.;;;;;;;;;;;;;x
+EVTDESC_SNW_2303_B;The men didn't notice you following them. This could be an advantage, but it is still dangerous to face so many men, commoners or not.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2303;Fight them.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2303;I'm out of here.;;;;;;;;;;;;;x
+EVTDESC_SNW_236;The intruders have stolen some goods!;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_242;Ai sabotages, you aren't supposed to see this.;;;;;;;;;;;;;x
+EVTOPTA_SNW_242;Supply.;;;;;;;;;;;;;x
+EVTOPTB_SNW_242;Economy.;;;;;;;;;;;;;x
+EVTOPTC_SNW_242;Propaganda.;;;;;;;;;;;;;x
+EVTOPTD_SNW_242;Nothing.;;;;;;;;;;;;;x
+EVTDESC_SNW_243;Your enemies are using the Great Trade League to disrupt our supply lines.;;;;;;;;;;;;;x
+EVTOPTA_SNW_243;They cannot block all the roads!;;;;;;;;;;;;;x
+EVTDESC_SNW_244;Your enemies are using the Great Trade League to maim our economy.;;;;;;;;;;;;;x
+EVTOPTA_SNW_244;Peasants do not need gold anyway!;;;;;;;;;;;;;x
+EVTDESC_SNW_245;Your enemies are using the Great Trade League to sow distrust amongst the people.;;;;;;;;;;;;;x
+EVTOPTA_SNW_245;Silence them!;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_250;Some time has passed since you've started this whole trading business and you are confident that you have mastered everything that there is to know.;;;;;;;;;;;;;x
+EVTOPTA_SNW_250;This is my calling.;;;;;;;;;;;;;x
+EVTOPTB_SNW_250;Trading does not interest me that much.;;;;;;;;;;;;;x
+EVTDESC_SNW_251;It appears that the world of trade is much bigger than you anticipated, you discover new ways of making a profit that you wouldn't have imagined before. Your journey to become a renowned trader still has a long way to go.;;;;;;;;;;;;;x
+EVTOPTA_SNW_251;The road awaits.;;;;;;;;;;;;;x
+EVTOPTB_SNW_251;I know enough.;;;;;;;;;;;;;x
+EVTDESC_SNW_252;You have traveled far and wide, spending a lot of time dealing and negotiating. You know most of the tricks in the ledgers and could easily sell books to the illiterate peasantry.;;;;;;;;;;;;;x
+EVTOPTA_SNW_252;It was all worth it.;;;;;;;;;;;;;x
+EVTOPTB_SNW_252;The journey never ends.;;;;;;;;;;;;;x
+EVTOPTB_SNW_250_TT;You won't progress further down the trading path.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_265;It appear that my services are no longe required, my liege. I shall hereby give you the trade goods I have in my possession and let you manage the trading.\n\nIt was an honor.;;;;;;;;;;;;;x
+EVTOPTA_SNW_265;Very well.;;;;;;;;;;;;;x
+EVTDESC_SNW_2610;My liege, the economy of the realm may be poor, but I must humbly request some funds for trading.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2610;Give [From.GetHerHim] funds.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2610;I have nothing for you today.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2610;Stop bothering me!;;;;;;;;;;;;;x
+guilds_trade_master_stop_tt;Your current trade master won't ask for funds anymore.\nUse the character decision toggle to enable it again.;;;;;;;;;;;;;x
+EVTDESC_SNW_2611;My liege, the ever improving economy of the realm makes goods more expensive. I must humbly request some more funds for trading.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2611;Give [From.GetHerHim] funds.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2611;I have nothing for you today.;;;;;;;;;;;;;x
+EVTDESC_SNW_2612;My liege, the highly prosperous economy of the realm greatly increases the demand for goods. I humbly must request more funds for trading.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2612;Give [From.GetHerHim] funds.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2612;I have nothing for you today.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_270;You make contact with artisans affiliated with the Trade League in order to ask them to use their skill to transform the goods in your possession into more profitable ones. Here we have brewers, cooks and shepherds.;;;;;;;;;;;;;x
+EVTOPTA_SNW_270;Ask the brewers to turn Grain and Pots into Alcohol.;;;;;;;;;;;;;x
+EVTOPTB_SNW_270;Request that the cooks make a Feast out of Spices and Meat.;;;;;;;;;;;;;x
+EVTOPTC_SNW_270;Offer Grain to the shepherds in exchange for some sheep products.;;;;;;;;;;;;;x
+guilds_grain_sheep_tooltip;You will receive one unit of meat, wool and hide.;;;;;;;;;;;;;x
+EVTOPTD_SNW_270;I have nothing for them.;;;;;;;;;;;;;x
+EVTDESC_SNW_271;Several skilled miners and prospectors are here. They could examine stones in your possession to see if anything precious is hidden within them, but it would require a large amount of Stone.;;;;;;;;;;;;;x
+EVTOPTA_SNW_271;Ask them to give you the Gems, they can keep the rest.;;;;;;;;;;;;;x
+EVTOPTB_SNW_271;Ask them to give you the Silver, they can keep the rest.;;;;;;;;;;;;;x
+EVTOPTC_SNW_271;Ask them to give you the Gold, they can keep the rest.;;;;;;;;;;;;;x
+EVTOPTD_SNW_271;I have nothing for them.;;;;;;;;;;;;;x
+EVTDESC_SNW_272;Artists are ready to take your requests. They have the skills to make Musical Instruments, Statues and various goods made of glass.;;;;;;;;;;;;;x
+EVTOPTA_SNW_272;Ask the masons to make a Statue of you with Stones.;;;;;;;;;;;;;x
+EVTOPTB_SNW_272;Request some Musical Instruments made of wood and leather.;;;;;;;;;;;;;x
+EVTOPTC_SNW_272;Offer Stone, Wood and Silver to the glassmakers for tinted glass goods.;;;;;;;;;;;;;x
+EVTOPTD_SNW_272;I have nothing for them.;;;;;;;;;;;;;x
+EVTDESC_SNW_273;Meticulous jewelers are ready to take your orders. They can turn precious metals and Gems into Jewelries or make you a custom item for you to wear.;;;;;;;;;;;;;x
+EVTOPTA_SNW_273;Give them Gems and Gold so they can make you a Box of Jewelry.;;;;;;;;;;;;;x
+EVTOPTB_SNW_273;Have them make you a Crown with Gold and Silver.;;;;;;;;;;;;;x
+EVTOPTC_SNW_273;Request a piece of personal jewelry using Gold and a Box of Jewelry.;;;;;;;;;;;;;x
+EVTOPTD_SNW_273;I have nothing for them.;;;;;;;;;;;;;x
+EVTDESC_SNW_274;You can order something from the textile workers here. All the chemicals they use to process the hides and make dyes make the air foul.;;;;;;;;;;;;;x
+EVTOPTA_SNW_274;Have them make Dyes from Wood, Grain and Meat.;;;;;;;;;;;;;x
+EVTOPTB_SNW_274;Request Velvet made of Linen, Wool and Silk.;;;;;;;;;;;;;x
+EVTOPTC_SNW_274;Ask for a Hide to be treated with Wood into Furs.;;;;;;;;;;;;;x
+EVTOPTD_SNW_274;I have nothing for them.;;;;;;;;;;;;;x
+EVTDESC_SNW_275;Blacksmiths are ready to heat the forges at your demand. They can make a large amount of weapons and armors for selling alongside one for your personal use.;;;;;;;;;;;;;x
+EVTOPTA_SNW_275;Ask the blacksmiths for an armor, made with Steel and Leather.;;;;;;;;;;;;;x
+EVTOPTB_SNW_275;Request the weaponsmiths to make you a usable weapon of Steel and Wood.;;;;;;;;;;;;;x
+EVTOPTC_SNW_275;Have the men make you a weapon fit for a ruler, with Steel and Gems.;;;;;;;;;;;;;x
+EVTOPTD_SNW_275;I have nothing for them.;;;;;;;;;;;;;x
+EVTDESC_SNW_276;The outskirts of the artisans plaza are much more tranquil than the rest of the court. You can find humble workers making pots and some bookbinders.;;;;;;;;;;;;;x
+EVTOPTA_SNW_276;Ask a potter to craft some pots, using Stone.;;;;;;;;;;;;;x
+EVTOPTB_SNW_276;Find someone to bind some books, using Hides.;;;;;;;;;;;;;x
+EVTOPTC_SNW_276;I have nothing for them.;;;;;;;;;;;;;x
+guilds_return_artisans_tt;Return to the start.;;;;;;;;;;;;;x
+EVTOPTD_SNW_276;I won't request anything.;;;;;;;;;;;;;x
+guilds_end_artisans_tt;Leave the artisans plaza.;;;;;;;;;;;;;x
+EVTDESC_SNW_2700;In order to not make you wait years for your liquor to mature, they give you two barrels of Alcohol that are already ready.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2700;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2701;The cooks made quick work of your Meat and Spices.\n\nYou order a feast and invite your vassals right away, while it is still fresh.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2701;Great work! Time to eat.;;;;;;;;;;;;;x
+EVTDESC_SNW_2702;The shepherds you gave Grain to tell you that some of their sheep are being sent to the butcher and you'll get your share in a moment.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2702;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2703;The men you hired to search your Stones for Gems have finished and they bring you the result of their work.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2703;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2704;The men you hired to search your Stones for Silver have finished and they bring you the result of their work.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2704;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2705;The men you hired to search your Stones for Gold have finished and they bring you the result of their work.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2705;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2706;The Statue you ordered looks great and imposing, just like yourself. Everyone will know of your greatness and piousness.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2706;Great work! Time to set it up.;;;;;;;;;;;;;x
+EVTDESC_SNW_2707;The men making your Musical Instruments are done. They bring you lutes, drums, harps and the like.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2707;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2708;Some men carefully bring you stained glasses and crates of Glassware. Their works of art are impressive;;;;;;;;;;;;;x
+EVTOPTA_SNW_2708;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2709;The jewelers bring you a box full of rings, bracelets, necklaces and other jewelry made of Gold and Gems.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2709;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2710;The craftsmen have finished the crown you had ordered. It fits nicely on your head, where it belongs.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2710;Great work! Time to look the part.;;;;;;;;;;;;;x
+EVTDESC_SNW_2711;The artisans have finished the piece of Jewelry you requested. Its craftsmanship is more impressive than the ordinary jewelry sold in the market.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2711;Great work! Time to look the part.;;;;;;;;;;;;;x
+EVTDESC_SNW_2712;The dyers are back with a small pouch for you. It contains a colored powder used to make Dye.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2712;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2713;A group of weavers comes to you with a Stacks of Velvet Cloths. They look soft and the patterns are exquisite.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2713;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2714;The fur workers you hired bring you the result of their labors. They offer you fine Furs with a lustrous shine.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2714;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2715;The armorers are done. The armor they offer you seem sturdy enough to prevent a lethal blow.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2715;Great work! Time to plan for war.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2715;Great work, it is perfect.;;;;;;;;;;;;;x
+EVTDESC_SNW_2716;The weapon you ordered is ready. You weren't quite sure what they would make, but the result seems lethal enough.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2716;Great work! Time to plan a war.;;;;;;;;;;;;;x
+EVTDESC_SNW_2717;The ceremonial tool you requested is here. While it cannot be used for combat, its splendor should be enough to quell any issue.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2717;Great work! Time to look the part.;;;;;;;;;;;;;x
+EVTDESC_SNW_2718;The potter you hired brings you the result of his work. He presents you a cart full of the finest pottery. You can keep everything but the cart.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2718;Great work! Time to make a profit.;;;;;;;;;;;;;x
+EVTDESC_SNW_2719;The bookbinders present you a large stack of books. These were not made with the hides you provided, since the full process can take months, but they are fine books nonetheless.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2719;Great work! Time to make a profit.;;;;;;;;;;;;;x
+guilds_item_feast_tooltip;Will organize a feast to increase your vassals' opinion.;;;;;;;;;;;;;x
+guilds_item_crown_tooltip;Will create a random crown.;;;;;;;;;;;;;x
+guilds_item_neck_tooltip;Will create a random piece of jewelry.;;;;;;;;;;;;;x
+guilds_item_actualarmor_tooltip;Will create a random suit of armor.;;;;;;;;;;;;;x
+guilds_item_weapon_tooltip;Will create a random weapon.;;;;;;;;;;;;;x
+guilds_item_weapon_tooltip;Will create a random weapon.;;;;;;;;;;;;;x
+guilds_item_ceremonial_tooltip;Will create a random ceremonial tool.;;;;;;;;;;;;;x
+guilds_only_province_tooltip;Can only be used on provinces.;;;;;;;;;;;;;x
+#
+EVTITLE_SNW_280;The Great Trade League;;;;;;;;;;;;;x
+EVTDESC_SNW_280;Welcome to the mini tutorial.\n\n1. The society can be seen by anyone with more than 0 stewardship.\n2. If you activated the mod in an ongoing game, it won't exist until the AI creates it in a few months.\n3. Everybody have access to the resource system, you can see the resources with the new cartographer councilor.\n4. Characters that are not part of the society can make one of their courtiers their Trade Master, generating some gold and trade goods modifiers.\n5. Holdings are the cities/baronies/churches inside each province.\n6. The prices of goods can be influenced by your location and where you buy or sell them.;;;;;;;;;;;;;x
+EVTOPTA_SNW_280;Understood.;;;;;;;;;;;;;x
+EVTOPTB_SNW_280;Disable the Trade Master minor title.;;;;;;;;;;;;;x
+#
+quest_guilds_find_apprentice;Find an Apprentice;;;;;;;;;;;;;x
+quest_guilds_find_apprentice_fallback;Find an Apprentice;;;;;;;;;;;;;x
+quest_guilds_find_apprentice_desc;Grant a courtier the Apprentice Trader title. The apprentice will help you in various quests and offer new events.;;;;;;;;;;;;;x
+quest_guilds_find_apprentice_tooltip;Find someone to give the Apprentice Trader title.;;;;;;;;;;;;;x
+#
+EVTNAME_SNW_2903;Holo the nun.;;;;;;;;;;;;;x
+EVTDESC_SNW_2903;While on your way back to your home from the town market, you spot something unusual in a distant field, in the cover of darkness. At first glance it appears to be a woman dancing naked under the moonlight amidst the wheat stalks.\n\nAs your cart approaches her, the woman takes notice of you and covers herself. Her apparel is what you would expect from a religious devotee. There is no glint of shame in her eyes and she has a distinguished aura that would not be found in a common whore.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2903;Greet her.;;;;;;;;;;;;;x
+guilds_holo_met_tooltip;Start interacting with the strange nun.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2903;Ignore her and move on.;;;;;;;;;;;;;x
+guilds_holo_ignored_tooltip;She will vanish into the night.;;;;;;;;;;;;;x
+EVTDESC_SNW_2905;The woman greets you with a cheerful voice and presents herself as Holo, a traveler from a distant land. She is apparently done with her duties in the area and tells you that she would like to follow you around the next time you go to the market.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2905;Greet her normally.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2905;Give her a gift.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2905;This was not the most pious thing I have seen.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2905;How improper!;;;;;;;;;;;;;x
+EVTOPTE_SNW_2905;Peasants should know their place.;;;;;;;;;;;;;x
+EVTOPTF_SNW_2905;Suit yourself.;;;;;;;;;;;;;x
+EVTOPTG_SNW_2905;You could accompany me to my room.;;;;;;;;;;;;;x
+EVTOPTH_SNW_2905;You are welcome to join me next time.;;;;;;;;;;;;;x
+EVTDESC_SNW_2910;As you are browsing some goods, you feel something tugging at your sleeve. Apparently Holo is getting hungry and she expects you to buy her something.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2910;An apple.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2910;Some chicken.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2910;A loaf of rye bread.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2910;Nothing.;;;;;;;;;;;;;x
+EVTDESC_SNW_2911;While walking around the market, Holo interrupts your thoughts. She says that, after all this negotiating, we must to be thirsty and that you should send one of your retainers to fetch something to drink.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2911;Ask for clean water.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2911;Ask for milk.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2911;Ask for alcohol.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2911;Refuse.;;;;;;;;;;;;;x
+EVTDESC_SNW_2912;You are talking to a pelt merchant about a specific fur he has for sale. You are not an expert on furs and are about to ask the merchant for his opinion when Holo barges into the discussion. She assures you that a specific fur is probably worth your money.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2912;Follow Holo's recommendation.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2912;Follow the merchant's recommendation.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2912;I wasn't planning on buying anything.;;;;;;;;;;;;;x
+EVTDESC_SNW_29122_A;You have the fur that Holo encouraged you to buy checked by a third party to ensure its quality. It appears that the fur is indeed of very good quality, with very few, if any, imperfections.\nShe does not wait a second to brag about her nose for these things;;;;;;;;;;;;;x
+EVTDESC_SNW_29122_B;You have the fur that Holo encouraged you to buy checked by a third party to ensure its quality. It appears that the fur is not exactly in the best conditions and it has some concealed holes and bald spots.\nHolo seems both confused and ashamed.;;;;;;;;;;;;;x
+EVTOPTA_SNW_29122;It will fetch a good profit.;;;;;;;;;;;;;x
+EVTOPTB_SNW_29122;It was a bad investment.;;;;;;;;;;;;;x
+EVTDESC_SNW_2913;While you are making some small purchases, Holo barges into the discussion and asks if she can try to haggle over the price of some of the items.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2913;Let her try.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2913;Mind your own business.;;;;;;;;;;;;;x
+EVTDESC_SNW_2914;While you walking around the market, you see some religious men preaching to a group of people. One of them waves his hand to bid you to join them.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2914;Say a small prayer.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2914;Go and spend some time with the group.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2914;Roll your eyes;;;;;;;;;;;;;x
+EVTOPTD_SNW_2914;Ignore them.;;;;;;;;;;;;;x
+EVTDESC_SNW_2915;You were browsing in a unfamiliar market and have strayed from the main road with Holo. Feeling rather lost, you noticed some shepherds and decided to go and to talk to them, alone, to ask for directions.\nAs you are walking back to where you left Holo, you can see that she looks fairly irritated.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2915;... What?;;;;;;;;;;;;;x
+EVTOPTB_SNW_2915;I will buy her some mutton.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2915;Admit that you got lost.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2915;Ignore her.;;;;;;;;;;;;;x
+EVTDESC_SNW_2916;It seems that humility is not one of Holo's virtues. She rarely misses an opportunity to show her intelligence and wits. She also tends to compare her hair to the most delicate silk.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2916;Brag about yourself.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2916;Say that her hair smells like a wet dog.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2916;Theatrically bow to her greatness.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2916;Ignore her bragging.;;;;;;;;;;;;;x
+EVTDESC_SNW_2917;Crowded markets mean that small thieves pass unnoticed easily. Which just happened to us right now. Luckily, your guards spotted the child before he stole something from your cart and pursued him down to an alley.\nSomehow, Holo found him first. He looks scared and malnourished.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2917;Bring the kid to the city guards.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2917;Give the child some coins.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2917;Give Holo some coins and tell her to take care of the kid.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2917;Ignore the kid.;;;;;;;;;;;;;x
+EVTDESC_SNW_2918;You were walking around the market with Holo when you overheard merchants talking about how the wolves in the surrounding area have become more daring lately, attacking their men on the roads and killing animals in many farms.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2918;Hire some hunters to take care of the problem.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2918;Have some people put warning signs about the wolves.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2918;These dogs are no threat.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2918;Ignore the merchant's complaints.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_2919;You see some musical instruments being sold at a stall nearby.\nHolo wastes no time teasing you, saying that she is sure that you cannot play any of them.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2919;Buy some musical instruments.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2919;Buy and play some musical instruments.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2919;Buy and sell the instruments immediately.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2919;Don't buy anything.;;;;;;;;;;;;;x
+EVTDESC_SNW_2920;Holo often talks about her hair, complimenting its luster and softness. You assure her that you can find fabrics that can rival it.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2920;Compare it to this piece of velvet.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2920;Compare it to this piece of linen.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2920;Compare it to this piece of wool.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2920;Ignore her.;;;;;;;;;;;;;x
+EVTDESC_SNW_2921;While you are browsing through some trinkets, the merchant in front of you has spent some time starring at Holo. Just as you were going to leave, he tells you that such a charming companion deserves the best goods he have and offers you a discount.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2921;Buy the baubles.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2921;Buy the baubles and donate them to a temple.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2921;Pass the opportunity.;;;;;;;;;;;;;x
+guilds_charming_discount;Charming influence:;;;;;;;;;;;;;x
+EVTDESC_SNW_2922;You both arrive in front of a fairly colored stand and its owner starts talking about his wares. You explain to Holo that, despite the vibrant colors, these dyes are not meant for eating.\n\nShe looks a bit insulted.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2922;Buy some dye.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2922;Buy her something to eat.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2922;Move on.;;;;;;;;;;;;;x
+EVTDESC_SNW_2923;You arrive at a sculptor's workshop with Holo. The craftsman can make most kinds of statues and Holo jokingly requests one as large as possible, big enough to dwarf her.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2923;Mock her with a small one.;;;;;;;;;;;;;x
+EVTOPTB_SNW_2923;Request a religious sculpture.;;;;;;;;;;;;;x
+EVTOPTC_SNW_2923;Order a large statue.;;;;;;;;;;;;;x
+EVTOPTD_SNW_2923;Perhaps another day.;;;;;;;;;;;;;x
+EVTDESC_SNW_29104;Holo is §Ghappy§! with the outcome.;;;;;;;;;;;;;x
+EVTDESC_SNW_29105;Holo is §Zpleased§!.;;;;;;;;;;;;;x
+EVTDESC_SNW_29106;Your §Kaction irritated§! Holo.;;;;;;;;;;;;;x
+EVTDESC_SNW_29107;Holo is §Runhappy§! about this.;;;;;;;;;;;;;x
+EVTNAME_SNW_293;Holo the Wise Wolf;;;;;;;;;;;;;x
+EVTDESC_SNW_293;You have known Holo for quite some time now. Her weird antics, mixed with her prideful attitude, brought some fresh air to your usual business trips.\n\nToday was no different, as she accompanied you on your travels, but after that she requested that you meet her in private in the field you first met. She is not usually shy about interacting with your retainers, but you agreed to her request nonetheless. The night is not unlike that of your first encounter and she is waiting for you in the middle of the wheat crops.\n\n"It is time I show thy who I really am...", she said while pulling her hood down, revealing wolf ears and what seem to be a tail waving under her robe.;;;;;;;;;;;;;x
+EVTOPTA_SNW_293;This explains a few things...;;;;;;;;;;;;;x
+EVTOPTB_SNW_293;Burn the witch!;;;;;;;;;;;;;x
+EVTDESC_SNW_2932;Holo appears relieved that your reaction was not hostile, flashing you a bright smile and presenting her pronounced fangs. Her loneliness was weighing heavily on her and finding a friend and confident in you is something she is really grateful.\n\n"'Tis is a good moon, have you no wine?" she asks, still smiling.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2932;I must have some in the cart.;;;;;;;;;;;;;x
+guilds_holo_councillor;She can now be appointed to some councilor positions.;;;;;;;;;;;;;x
+EVTDESC_SNW_2934;You hail to your retainers to bring torches and weapons. This demon has been planning something for a long time and you will not let it get its way.\nYou organize a massive hunt to track it down, to no avail. It has vanished without as much as a trace, proving her culpability and wickedness.\n\nA few days later, a man brings you a lock of hair found on a tree branch, claiming it was hers.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2934;This will serve as a reminder.;;;;;;;;;;;;;x
+EVTNAME_SNW_294;Holo's longing;;;;;;;;;;;;;x
+EVTDESC_SNW_294_A;As time passes, your once spirited companion seems more melancholic and conflicted. She is not playing around as much as she used to, nor is she giving as many clever speeches. Your friendship seems to have reached its peak and could turn into staleness.\n\nShe often speaks of her distant hometown and her wish to return before your friendship loses any more of its luster, preferring to keep the good memories she made with you rather than replacing them with ones of monotony.\n\nWhile it is not sure when it will be, she will leave eventually. You have known her for a long time now, perhaps you could rekindle the fire between the two of you and get her to stay?;;;;;;;;;;;;;x
+EVTDESC_SNW_294_B;As time passes, your once spirited companion seems more melancholic and conflicted. She is not playing around as much as she used to, nor is she giving as many clever speeches. Your friendships seems to have reached its peak and could turn into staleness.\n\nShe often speaks of her distant hometown and her wish to return before your friendship loses any more of its luster, preferring to keep the good memories she made with you rather than replacing them with ones of monotony.\n\nWhile it is not sure when it will be, she will leave eventually.;;;;;;;;;;;;;x
+EVTOPTA_SNW_294;Ask her to stay with you.;;;;;;;;;;;;;x
+guilds_holo_leave_unless_married;Holo will leave your court in a few years unless you wed her (with the character decision).\nShe will accompany you in only half of your visits to the market.;;;;;;;;;;;;;x
+EVTOPTB_SNW_294;I hope we can stay friends until then.;;;;;;;;;;;;;x
+guilds_holo_will_leave;Holo will stay a few more years.\nShe will accompany you in only half of your visits to the market.;;;;;;;;;;;;;x
+EVTNAME_SNW_2942;The wandering wolf;;;;;;;;;;;;;x
+EVTDESC_SNW_2942_A;You have not heard from Holo for a while now. Even if you were not going to the market, she would be around to greet you nonetheless. She has looked rather preoccupied lately.\n\n On your way to check your cart you notice something particular on your seat. It is the charm that Holo used to carry all the time. She finally answered the call of her home.;;;;;;;;;;;;;x
+EVTDESC_SNW_2942_B;When you woke up this morning you had the impression that something was missing and the feeling kept getting bigger as the day went on. It was only after noticing something on your bedchamber's cupboard that you understood. On it, there was the charm that your mother used to carry all the time.\n\nSince your father's death, she looked more despondent every day. Her anchor gone, she finally answered the call of her home.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2942;She will be missed.;;;;;;;;;;;;;x
+EVTDESC_SNW_2952;It has been a few days since Holo's disappearance and things have calmed now. You receive from time to time reports about a massive wolf running in the fields or eating sheeps.;;;;;;;;;;;;;x
+EVTOPTA_SNW_2952;Can't this monster leave me alone already!;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_311;Let me give you a piece of advice, [Root.GetSocietyRank] [Root.GetFirstName], free of charge.\nI see that you have yet to find an Apprentice. While they are clumsy and will probably cause their fair share of mistakes, one will probably help you to find more trade opportunities and strengthen the Trade League in the long term.\n\nI wish you luck, [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_314;Is there anyone that can count in this court? I have been looking for an Apprentice to lessen my workload but I'm surrounded by oafs! There was this [From.GetManWoman], [From.GetFirstName], that approched me the other day about work. Perhaps it'll do...?;;;;;;;;;;;;;x
+EVTOPTA_SNW_314;Make the peasant your Apprentice.;;;;;;;;;;;;;x
+EVTOPTB_SNW_314;No, not this one.;;;;;;;;;;;;;x
+EVTOPTB_SNW_314_TT;You decide to keep looking for an Apprentice.;;;;;;;;;;;;;x
+EVTDESC_SNW_315;You nominated one of the members of your court as your apprentice. You help [From.GetFirstName] fill the required paperworks and make [From.GetHerHim] join the Trade League.;;;;;;;;;;;;;x
+EVTOPTA_SNW_315;Let's get to work.;;;;;;;;;;;;;x
+EVTDESC_SNW_317;[From.GetFirstName] has finished [From.GetHerHis] apprenticeship under you and gone [From.GetHerHis] own way to do business.;;;;;;;;;;;;;x
+EVTOPTA_SNW_317;Should I find a new one?;;;;;;;;;;;;;x
+EVTDESC_SNW_319_A;I have received reports that my Apprentice, [From.GetFirstName], has meet [From.GetHerHis] end. This death weights on me, as [From.GetSheHe] was a competent [From.GetManWoman], but time is ducats. I shall move on and perhaps hire a new one.;;;;;;;;;;;;;x
+EVTDESC_SNW_319_B;I have received words that my Apprentice, [From.GetFirstName], has meet [From.GetHerHis] end. This death lifts a weight from me, as [From.GetSheHe] was getting in the way of business more often than not. I shall move on and perhaps hire a new one.;;;;;;;;;;;;;x
+EVTOPTA_SNW_319;What to do now.;;;;;;;;;;;;;x
+#
+quest_guilds_build_warehouse;Have a Warehouse;;;;;;;;;;;;;x
+quest_guilds_build_warehouse_fallback;Have a Warehouse;;;;;;;;;;;;;x
+quest_guilds_build_warehouse_desc;Build a Warehouse using the decision in the intrigue menu, renting won't complete the mission. It will protect your goods and give various bonuses.;;;;;;;;;;;;;x
+quest_guilds_build_warehouse_tooltip;Build or rent a Warehouse using the decision in the intrigue menu.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_321;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\n\nI can't help but notice that you have no proper storage for your trade goods. I would recommend renting or building one, for we all know how full of thieves and brigands the streets are.\nI know an architect that can find or build one, you only need to ask.;;;;;;;;;;;;;x 
+EVTDESC_SNW_321_apprentice;Master [Root.GetFirstName],\n\nWe have no proper storage for our trade goods. It would be advantageous and safer to have one, as your wealth will undoubtedly attract people of ill intent. Should I contact the Trade League to find a warehouse?\n\nYour apprentice, [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_322;We have several options to start with. We can rent a building to store our goods, which would be simple and cheap. But we wouldn't own or know the building. On the other hand, we can build it from the ground. If we have the proper goods it could even be fairly cheap.;;;;;;;;;;;;;x
+EVTOPTA_SNW_322;Build my own Warehouse.;;;;;;;;;;;;;x
+EVTOPTB_SNW_322;Rent a used building.;;;;;;;;;;;;;x
+EVTOPTC_SNW_322;Just keep the goods laying around in my home.;;;;;;;;;;;;;x
+guilds_warehouse_noquest;This won't complete the mission.;;;;;;;;;;;;;x
+EVTDESC_SNW_323;The architect laid down a basic blueprint with a list of materials needed to build the Warehouse. If you are missing materials, he will have some delivered by his partners.;;;;;;;;;;;;;x
+EVTOPTA_SNW_323;I have everything ready.;;;;;;;;;;;;;x
+EVTOPTB_SNW_323;We will need Lumber.;;;;;;;;;;;;;x
+EVTOPTC_SNW_323;We will need Stone.;;;;;;;;;;;;;x
+EVTOPTD_SNW_323;Unfortunately I have nothing.;;;;;;;;;;;;;x
+EVTOPTE_SNW_323;Forget it, you are dismissed.;;;;;;;;;;;;;x
+EVTDESC_SNW_324;Your Warehouse is completed and your goods will now be stored in it. There is a possiblity to improve it with luxury goods.;;;;;;;;;;;;;x
+EVTOPTA_SNW_324;Improve it now.;;;;;;;;;;;;;x
+EVTOPTB_SNW_324;Improve it later.;;;;;;;;;;;;;x
+EVTDESC_SNW_325;There are many options to improve it. We can use Gold to make an impressive golden armor, Incense to give it a mysterious feeling, Silk to make banners representing various great houses or line up the office walls with Bookshelves.;;;;;;;;;;;;;x
+EVTOPTA_SNW_325;Make a golden armor.;;;;;;;;;;;;;x
+EVTOPTB_SNW_325;Use incenses;;;;;;;;;;;;;x
+EVTOPTC_SNW_325;Make silk banners.;;;;;;;;;;;;;x
+EVTOPTD_SNW_325;Install bookshelves;;;;;;;;;;;;;x
+EVTOPTE_SNW_325;Don't upgrade it.;;;;;;;;;;;;;x
+EVTDESC_SNW_326;The Warehouse is full of various decorations that have accumulated over the years. Should the need arise, we can sell some of them.;;;;;;;;;;;;;x
+EVTOPTA_SNW_326;Sell the golden armor.;;;;;;;;;;;;;x
+EVTOPTB_SNW_326;Sell the incenses;;;;;;;;;;;;;x
+EVTOPTC_SNW_326;Sell the silk banners.;;;;;;;;;;;;;x
+EVTOPTD_SNW_326;Sell the bookshelves;;;;;;;;;;;;;x
+EVTOPTE_SNW_326;Sell the documents;;;;;;;;;;;;;x
+EVTOPTF_SNW_326;Do not sell anything.;;;;;;;;;;;;;x
+#
+quest_guilds_delivery;Deliver a Trade Good;;;;;;;;;;;;;x
+quest_guilds_delivery_fallback;Deliver a Trade Good;;;;;;;;;;;;;x
+quest_guilds_delivery_desc;Deliver the requested Trade Good. Use the §Ydecision in the intrigue menu§! to deliver the good or if you forgot the order.;;;;;;;;;;;;;x
+quest_guilds_delivery_tooltip;Deliver the requested Trade Good. Use the §Ydecision in the intrigue menu§! to deliver the good or if you forgot the order.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_331_stone;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Stones and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you will contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_steel;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Steel and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_gem;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Gems and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_silver;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Silver and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_gold;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Gold and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_grain;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Grain and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_lumber;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Lumber and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_linen;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Linen and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_incense;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Incense and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_spices;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Spices and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_meat;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Meat and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_wool;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Wool and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_hide;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Hides and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_ivory;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Ivory and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_silk;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Silk and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_pottery;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Pottery and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_alcohol;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Alcohol and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_armor;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Weapons and Armor and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_jewelry;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Jewelry and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_331_book;Greetings, [Root.GetSocietyRank] [Root.GetFirstName]\nThere is a high demand for Books and the Trade League is buying all the shipments they can find. They will offer your maximum market value for it.\n\nI hope you contact me if you hear of any opportunities.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_332_stone;This man from the League is ready to deliver the Stones shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_steel;This man from the League is ready to deliver the Steel shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_gem;This man from the League is ready to deliver the Gems shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_silver;This man from the League is ready to deliver the Silver shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_gold;This man from the League is ready to deliver the Gold shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_grain;This man from the League is ready to deliver the Grain shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_lumber;This man from the League is ready to deliver the Lumber shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_linen;This man from the League is ready to deliver the Linen shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_incense;This man from the League is ready to deliver the Incense shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_spices;This man from the League is ready to deliver the Spices shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_meat;This man from the League is ready to deliver the Meat shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_wool;This man from the League is ready to deliver the Wool shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_hide;This man from the League is ready to deliver the Hides shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_ivory;This man from the League is ready to deliver the Ivory shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_silk;This man from the League is ready to deliver the Silk shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_pottery;This man from the League is ready to deliver the Pottery shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_alcohol;This man from the League is ready to deliver the Alcohol shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_armor;This man from the League is ready to deliver the Weapons and Armor shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_jewelry;This man from the League is ready to deliver the Jewelry shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTDESC_SNW_332_book;This man from the League is ready to deliver the Book shipment for you, he also has your payment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_stone;Send the Stone shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_steel;Send the Steel shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_gem;Send the Gem shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_silver;Send the Silver shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_gold;Send the Gold shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_grain;Send the Grain shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_lumber;Send the Lumber shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_linen;Send the Linen shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_incense;Send the Incense shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_spices;Send the Spices shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_meat;Send the Meat shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_wool;Send the Wool shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_hide;Send the Linen shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_ivory;Send the Ivory shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_silk;Send the Silk shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_pottery;Send the Pottery shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_alcohol;Send the Alcohol shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_armor;Send the Weapons and Armor shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_jewelry;Send the Jewelry shipment.;;;;;;;;;;;;;x
+EVTOPT_SNW_332_book;Send the Book shipment.;;;;;;;;;;;;;x
+EVTOPTA_SNW_332;Sorry, I will be back.;;;;;;;;;;;;;x
+EVTOPTB_SNW_332;AI win, you aren't supposed to see this.;;;;;;;;;;;;;x
+EVTOPTC_SNW_332;AI lose, you aren't supposed to see this.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_340;As a Guild Master, you have a lot of connections and influence in the Trade League. With preferential taxes and tariffs, you manage to attract traders away from their favored markets and into your territory.\nTo retain them, you will need to support the market personally with occasional gifts.;;;;;;;;;;;;x
+EVTOPTA_SNW_340;Profit awaits!;;;;;;;;;;;;x
+EVTDESC_SNW_342_A;Due to bandits, wars or epidemics, your Center of Trade is facing harsh times. The voices of several merchants reached your ears and a donation of your assets seems to be the best investment.;;;;;;;;;;;;x
+EVTDESC_SNW_342_B;Due to bandits, wars or epidemics, your Center of Trade is facing harsh times. The voices of several merchants reached your ears and a donation of gold coins seems to be the best investment.;;;;;;;;;;;;x
+EVTDESC_SNW_342_C;Due to bandits, wars or epidemics, your Center of Trade is facing harsh times. The voices of several merchants reached your ears and a donation of high quality goods seems to be the best investment.;;;;;;;;;;;;x
+EVTOPTA_SNW_342;I shall give them some of my assets.;;;;;;;;;;;;x
+EVTOPTB_SNW_342;I shall give them a lot of my assets.;;;;;;;;;;;;x
+EVTOPTC_SNW_342;I shall give them gold coins.;;;;;;;;;;;;x
+EVTOPTD_SNW_342;I shall give them one shipment of high quality goods.;;;;;;;;;;;;x
+EVTOPTE_SNW_342;I shall give them two shipments of high quality goods.;;;;;;;;;;;;x
+EVTOPTG_SNW_342;I do not have enough high quality goods.;;;;;;;;;;;;x
+guilds_center_trade_goods;High Quality goods are those of rarity 3 or better.;;;;;;;;;;;;x
+EVTOPTF_SNW_342;I have nothing to give them.;;;;;;;;;;;;x
+EVTDESC_SNW_343;The merchants in your market are starting to pack their things and harness their horses to their carts. If nothing is done now, the market will be abandoned and no merchant would trust you enough to participate if you tried to make a new Center of Trade.;;;;;;;;;;;;x
+EVTOPTA_SNW_343;I will revitalize the market with my assets.;;;;;;;;;;;;x
+EVTOPTB_SNW_343;I will fund the market with gold from my coffers.;;;;;;;;;;;;x
+EVTOPTC_SNW_343;I will give them high quality goods.;;;;;;;;;;;;x
+EVTOPTD_SNW_343;I cannot support the market anymore.;;;;;;;;;;;;x
+EVTDESC_SNW_344;Your market was raided and pillaged by your foes. It is now only a shell of its former self.\nHowever, most of the structures have not burned down and the traders are still in town. With a little help, making it a thriving market again is not impossible if you act with haste.;;;;;;;;;;;;x
+EVTOPTA_SNW_344;It is merely a setback.;;;;;;;;;;;;x
+#
+EVTDESC_SNW_351;Greetings, [Root.GetSocietyRank] [Root.GetFirstName],\nI am contacting you to offer you a deal. I am in dire need of assets and have a lot of coins at my disposal. I believe this trade is more than fair and hope you will accept it.\nSigned,\n[From.GetFirstName];;;;;;;;;;;;x
+EVTOPTA_SNW_351;A favorable trade.;;;;;;;;;;;;x
+EVTOPTB_SNW_351;I am not interested.;;;;;;;;;;;;x
+EVTOPTC_SNW_351;Unfortunately, I cannot accept.;;;;;;;;;;;;x
+EVTDESC_SNW_352;Greetings, [Root.GetSocietyRank] [Root.GetFirstName],\nI am contacting you to offer you a deal. I am in dire need of coins and have a lot of assets at my disposal. I believe this trade is more than fair and hope you will accept it.\nSigned,\n[From.GetFirstName];;;;;;;;;;;;x
+EVTOPTA_SNW_352;A favorable trade.;;;;;;;;;;;;x
+EVTOPTB_SNW_352;I am not interested.;;;;;;;;;;;;x
+#
+quest_guilds_build_city;Build a City;;;;;;;;;;;;;x
+quest_guilds_build_city_fallback;Build a City;;;;;;;;;;;;;x
+quest_guilds_build_city_desc;The Great Trade League believes that part of your territory has a good strategic position for a settlement and has requested you to build one.;;;;;;;;;;;;;x
+quest_guilds_build_city_tooltip;Construct a City within your Demesne.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_361;To the attention of [Root.GetSocietyRank] [Root.GetFirstName],\n\nOur survey of the land points to several locations where a new settlement could be founded, one of which happens to be within your demesne.\n\nThe Great Trade League is ready to support the new city, should you choose to participate in its construction.\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_363;[Root.GetSocietyRank] [Root.GetFirstName], the Trade League has requested that I check on your progress. I cannot help but notice that the construction of the settlement is not progressing at the expected pace. I can offer you some construction materials to assist you in exchange for some of your assets, if you so desire.;;;;;;;;;;;;;x
+EVTOPTA_SNW_363;I will gladly take them.;;;;;;;;;;;;;x
+EVTOPTB_SNW_363;it won't be necessary.;;;;;;;;;;;;;x
+EVTOPTC_SNW_363;I have few assets, unfortunately.;;;;;;;;;;;;;x
+EVTDESC_SNW_366;We have received word that the settlement construction is about to finish. As per our agreement, we will send money and people to the newly built city in order to help its growth.\n\nI hope we can count on you to protect its citizens in the future.;;;;;;;;;;;;;x
+EVTOPTA_SNW_366;I will watch over the taxpayers.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_370;A steward of the Great Trade League approaches you with the map you ordered. He estimates that it will require an update in about two years, but meanwhile you can consult it without expecting extra fees.\n\n(While this event window is active, you can open the Revolt Risk map mode to see which provinces have shipments and cavarans.);;;;;;;;;;;;;x
+#
+EVTITLE_SNW_382;The Great Trade War;;;;;;;;;;;;;x
+EVTDESC_SNW_382_MEMBER;Our grasp on the markets is ever increasing, and soon all coins will fall into our purses. However, the various feudal lords and other outsiders won't surrender their wealth that easily.\n\nThey have set aside their differences to ally against us in a war for the control of the markets. We will need to use every possible resource, be it assets, funds and even our names, to protect ourselves from their aggression.\n\nTrading is our specialty! We will fight back and take over the entire economy of the known world!;;;;;;;;;;;;;x
+EVTDESC_SNW_382_OUTSIDER;The blatant tax evasion of these brigands knowns no bounds. Ever since these peasants banded together to rob us of our rightful earnings, they have grown bolder every day.\n\nAll feudal lords have agreed to an alliance, in order to take control of our economy once again. However, using our armies will not be sufficient to root out every rat on this ship. We shall use what is left of our economy, alongside our connections and organizations.\n\nThey shall know why we are the rightful rulers the world.;;;;;;;;;;;;;x
+EVTOPTA_SNW_382;Every coin belongs to us!;;;;;;;;;;;;;x
+EVTOPTB_SNW_382;We will take back what is ours!;;;;;;;;;;;;;x
+EVTOPTC_SNW_382;I will have no part in this.;;;;;;;;;;;;;x
+EVTDESC_SNW_383_MEMBER;According to the League's specialists, we own the trading rights to [global_guilds_var_league.GetValue]% major markets against [global_guilds_var_outsider.GetValue]% for the outsiders.\nIf we are to win, we need to control as many as possible before the whole system collapses.;;;;;;;;;;;;;x
+EVTDESC_SNW_383_OUTSIDER;The Alliance's stewards are tracking the League's efforts at controlling the markets. They estimate that [global_guilds_var_league.GetValue]% of the markets are under their control, while we secured [global_guilds_var_outsider.GetValue]%. We must keep the pressure and not let them take over the majority of them. Time is on our side.;;;;;;;;;;;;;x
+EVTOPTA_SNW_383;Use gold.;;;;;;;;;;;;;x
+EVTOPTB_SNW_383;Use [Root.Society.GetCurrency].;;;;;;;;;;;;;x
+EVTOPTC_SNW_383;Use prestige.;;;;;;;;;;;;;x
+EVTOPTD_SNW_383;I cannot afford to participate this year.;;;;;;;;;;;;;x
+EVTDESC_SNW_3831;How much gold should we use?;;;;;;;;;;;;;x
+EVTOPTA_SNW_3831;Small Contribution.;;;;;;;;;;;;;x
+EVTOPTB_SNW_3831;Medium Contribution.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3831;Large Contribution.;;;;;;;;;;;;;x
+EVTOPTD_SNW_3831;I'll send something else.;;;;;;;;;;;;;x
+EVTDESC_SNW_3832;How much [Root.Society.GetCurrency] should we use?;;;;;;;;;;;;;x
+EVTOPTA_SNW_3832;Small Contribution.;;;;;;;;;;;;;x
+EVTOPTB_SNW_3832;Medium Contribution.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3832;Large Contribution.;;;;;;;;;;;;;x
+EVTOPTD_SNW_3832;I'll send something else.;;;;;;;;;;;;;x
+EVTDESC_SNW_3833;How much prestige should we use?;;;;;;;;;;;;;x
+EVTOPTA_SNW_3833;Small Contribution.;;;;;;;;;;;;;x
+EVTOPTB_SNW_3833;Medium Contribution.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3833;Large Contribution.;;;;;;;;;;;;;x
+EVTOPTD_SNW_3833;I'll send something else.;;;;;;;;;;;;;x
+EVTITLE_SNW_385;Status Quo;;;;;;;;;;;;;x
+EVTDESC_SNW_385_MEMBER;Despite our best efforts to take over the markets, the Feudal Lords Alliance was somehow able to match us in our own field.\n\nThe massive inflation caused by the trade war has strained our resources, to the point that we have no choice but to withdraw and call for a cessation of hostilities.\n\nIt will take the League a few years to recover from this crisis, but the opportunity shall present itself once again. They have won this war, but not the next.;;;;;;;;;;;;;x
+EVTDESC_SNW_385_OUTSIDER;While we were unable to crush the peasants into the mud where they belong, we succeeded in our efforts to stop their attempt at monopolizing all the markets.\n\nThe limited resources that they gathered in the past few years are now gone and they will have no choice but to lay low while we take control of the economy back.\n\nHowever, there is no doubt that this was not their last attempt to topple us. We should be on the lookout for when their coffers and influence recover.;;;;;;;;;;;;;x
+EVTOPTA_SNW_385;It could have been worst.;;;;;;;;;;;;;x
+EVTOPTB_SNW_385;It was a fool's errant.;;;;;;;;;;;;;x
+EVTOPTC_SNW_385;We have avoided the worst.;;;;;;;;;;;;;x
+EVTOPTD_SNW_385;I knew it wasn't worth contributing.;;;;;;;;;;;;;x
+EVTITLE_SNW_386;Market Crash;;;;;;;;;;;;;x
+EVTDESC_SNW_386_MEMBER;How could it come down to this?\nWe were prepared, we had the funds and our influence was incontestable, but it was somehow not enough. Did some members just stay idle, trying to take advantage of the situation for their own benefit instead of that of the League? An inquisition shall be held on the subject.\n\nWith our grasp of the market in shambles, our organization will have a much harder time doing any form of trading and deal making. It could take decades for us to recover.;;;;;;;;;;;;;x
+EVTDESC_SNW_386_OUTSIDER;[Root.Religion.GetHighGodName] saw it fit to put these mongrels back in their holes!\n\nNow that their Pathetic Meddling League is but a former shadow of what it once was, they will no longer be able to manipulate the markets of our realms. We will once again receive everything we are entitled to!\n\nOur stewards believe that it will take decades for them to recover. They will no longer be able pose a threat to our income and if they ever come back, we will be ready.;;;;;;;;;;;;;x
+EVTOPTA_SNW_386;Impossible!;;;;;;;;;;;;;x
+EVTOPTB_SNW_386;It was a foolish dream.;;;;;;;;;;;;;x
+EVTOPTC_SNW_386;Time to collect our dues with interests!;;;;;;;;;;;;;x
+EVTOPTD_SNW_386;I knew it wasn't worth worrying about.;;;;;;;;;;;;;x
+EVTITLE_SNW_387;Market Boom;;;;;;;;;;;;;x
+EVTDESC_SNW_387_MEMBER;We did it! The markets are ours!\n\nA lot of ducats and assets went into this venture and it paid off magnificently. The Great Trade League control of the market is without contest and we are free to trade and profit to our hearts' content with minimal investment and risks.\n\nOur influence is such that no lord or noble will be able to stand against us economically and, undoubtedly, some of our more militarized members will take advantage of this to secure our position as the new world leaders.;;;;;;;;;;;;;x
+EVTDESC_SNW_387_OUTSIDER;Why! Oh [Root.Religion.GetHighGodName], why!\n\nHow could a bunch of peasants with deep pockets accomplish such a thing? WE are the kings of this world, WE should be ruling it! So how could this Great Trade League take control of the vast majority of the known world markets?\n\nWe have to rebuild, to reassert our control of our lands. It will take years, decades even, but we will recover. We are the true rulers of this land, and it will be ours once again before they know it!;;;;;;;;;;;;;x
+EVTOPTA_SNW_387;The spice will flow!;;;;;;;;;;;;;x
+EVTOPTB_SNW_387;I knew they could win without my ducats.;;;;;;;;;;;;;x
+EVTOPTC_SNW_387;NO! How could this happen?;;;;;;;;;;;;;x
+EVTOPTD_SNW_387;It was a lost cause.;;;;;;;;;;;;;x
+EVTOPTA_SNW_370;Dismiss the steward.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_3922;This year was not the most productive for the [From.GetGuildsResource] in [From.GetName]. They will need some extra help to reach the annual quota.;;;;;;;;;;;;;x
+EVTOPTA_SNW_3922;I'll get personally involved.;;;;;;;;;;;;;x
+EVTOPTB_SNW_3922;I'll enlist some help from the League.;;;;;;;;;;;;;x
+guilds_resource_tax;The Great Trade League will take its share.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3922;I'll let them work at their own pace.;;;;;;;;;;;;;x
+EVTDESC_SNW_3923;It has been an exceptional year at the [From.GetGuildsResource] in [From.GetName]. Your workers were able to produce twice as many goods as usual!;;;;;;;;;;;;;x
+EVTOPTA_SNW_3923;I wish every year was like this.;;;;;;;;;;;;;x
+EVTDESC_SNW_3924;A disaster has happened at the [From.GetGuildsResource] in [From.GetName]. Some of the workers died and the infrastructure is falling apart. Without immediate intervention, the [From.GetGuildsResource] will have to be terminated.;;;;;;;;;;;;;x
+EVTOPTA_SNW_3924;I'll pay what it takes to correct this.;;;;;;;;;;;;;x
+EVTOPTB_SNW_3924;I'll enlist some help from the League.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3924;I'll enlist some help from the League.;;;;;;;;;;;;;x
+EVTOPTD_SNW_3924;I'll enlist some help from the League.;;;;;;;;;;;;;x
+EVTOPTE_SNW_3924;I'll enlist some help from the League.;;;;;;;;;;;;;x
+EVTOPTF_SNW_3924;I'll enlist some help from the League.;;;;;;;;;;;;;x
+EVTOPTG_SNW_3924;We will abandon the operation.;;;;;;;;;;;;;x
+EVTDESC_SNW_3925;The [From.GetGuildsResource] in [From.GetName] can no longer sustain itself, as the local natural resources are getting too scarce. The venture has run its course.;;;;;;;;;;;;;x
+EVTOPTA_SNW_3925;It was profitable while it lasted.;;;;;;;;;;;;;x
+EVTDESC_SNW_393;Searching for resources in your demesne will involve a long and expensive expedition, but it has the potential to bring a lot of ducats or goods for the years to come. You will receive reports from the survey teams every few months.;;;;;;;;;;;;;x
+EVTOPTA_SNW_393;Let's send the first survey team.;;;;;;;;;;;;;x
+EVTOPTB_SNW_393;I am not ready to start such a long venture right now.;;;;;;;;;;;;;x
+abort_resource_early_tooltip;This won't trigger the cooldown for the search decision.;;;;;;;;;;;;;x
+EVTDESC_SNW_3940;You receive a report about the next sector to be surveyed.\n\nThis patch of land technically belongs to the local [Root.GetHouseOfWorship]. There is little chance that they'll see your activities in their land in a positive light.;;;;;;;;;;;;;x
+EVTOPTA_SNW_3940;Their lands are still mine by right!;;;;;;;;;;;;;x
+EVTOPTB_SNW_3940;Send my [Root.GetLordSpiritualName] to deal with it.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3940;Nothing that the Great Trade League cannot handle.;;;;;;;;;;;;;x
+EVTOPTD_SNW_3940;Let's just move on to the next site.;;;;;;;;;;;;;x
+EVTOPTE_SNW_3940;We will never find anything of worth.;;;;;;;;;;;;;x
+abort_resource_tooltip;This ends the search and will trigger the cooldown for the search decision.;;;;;;;;;;;;;x
+EVTDESC_SNW_3941;You receive a report about the next sector to be surveyed.\n\nIt appears that there is a non-negligible number of ruffians and bandits in the area. It would be too dangerous to send your men without protection.;;;;;;;;;;;;;x
+EVTOPTA_SNW_3941;I'll send more guards.;;;;;;;;;;;;;x
+EVTOPTB_SNW_3941;Send my [Root.GetMarshalName] to deal with it.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3941;Nothing that the Great Trade League cannot handle.;;;;;;;;;;;;;x
+EVTOPTD_SNW_3941;Let's just move on to the next site.;;;;;;;;;;;;;x
+EVTOPTE_SNW_3941;We will never find anything of worth.;;;;;;;;;;;;;x
+EVTDESC_SNW_3942;You receive a report about the next sector to be surveyed.\n\nThe large farmlands of your demesne could hold many riches, but interrupting the work of your peasants could cause some issues, like famine.;;;;;;;;;;;;;x
+EVTOPTA_SNW_3942;A small tax break should help them.;;;;;;;;;;;;;x
+EVTOPTB_SNW_3942;Send my [Root.GetTreasurerName] to deal with it.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3942;Nothing that the Great Trade League cannot handle.;;;;;;;;;;;;;x
+EVTOPTD_SNW_3942;Let's just move on to the next site.;;;;;;;;;;;;;x
+EVTOPTE_SNW_3942;We will never find anything of worth.;;;;;;;;;;;;;x
+EVTDESC_SNW_3943;You receive a report about the next sector to be surveyed.\n\nThis time, the location of the land is right next to the border with another realm. Their nobles will most likely see this as an insult.;;;;;;;;;;;;;x
+EVTOPTA_SNW_3943;My men are merely passing through the area.;;;;;;;;;;;;;x
+EVTOPTB_SNW_3943;Send my [Root.GetChancellorName] to deal with it.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3943;Nothing that the Great Trade League cannot handle.;;;;;;;;;;;;;x
+EVTOPTD_SNW_3943;Let's just move on to the next site.;;;;;;;;;;;;;x
+EVTOPTE_SNW_3943;We will never find anything of worth.;;;;;;;;;;;;;x
+EVTDESC_SNW_3944;You receive a report about the next sector to be surveyed.\n\nThere are large storms threatening this area at this time of the year. They will most likely slow down the research teams.;;;;;;;;;;;;;x
+EVTOPTA_SNW_3944;They'll be fine.;;;;;;;;;;;;;x
+resourse_temperature;It will take much longer to survey the area.;;;;;;;;;;;;;x
+EVTOPTB_SNW_3944;I'll buy them proper attires.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3944;Nothing that the Great Trade League cannot handle.;;;;;;;;;;;;;x
+EVTOPTD_SNW_3944;Let's just move on to the next site.;;;;;;;;;;;;;x
+EVTOPTE_SNW_3944;We will never find anything of worth.;;;;;;;;;;;;;x
+EVTDESC_SNW_3945;You receive a report about the next sector to be surveyed.\n\nThere is apparently an old folktale about this area, something about a magic bush or a similar thing that must not be disturbed. The elder of one of the local villages is hysterically telling your workers to leave.;;;;;;;;;;;;;x
+EVTOPTA_SNW_3945;This is all just heretical gibberish.;;;;;;;;;;;;;x
+EVTOPTB_SNW_3945;Send my [Root.GetSpymasterName] to... deal with him.;;;;;;;;;;;;;x
+EVTOPTC_SNW_3945;Nothing that the Great Trade League cannot handle.;;;;;;;;;;;;;x
+EVTOPTD_SNW_3945;Let's just move on to the next site.;;;;;;;;;;;;;x
+EVTOPTE_SNW_3945;We will never find anything of worth.;;;;;;;;;;;;;x
+EVTDESC_SNW_395;Your workers found something in the province of [resourcefull_province.GetName]. It appears that the local terrain and resources could properly support a [Root.GetGuildsResourceFlag]!\nIt would require a large payment upfront, but after a few years it will pay itself back several times over.\nAlternatively, you can ask your men to keep searching.;;;;;;;;;;;;;x
+EVTOPTA_SNW_395;Enough with the searching, get to work!;;;;;;;;;;;;;x
+EVTOPTB_SNW_395;I could ask the Great Trade League for assistance.;;;;;;;;;;;;;x
+resource_help_tooltip;Since you are an outsider, the Great Trade League will take a cut of the profits for a decade.;;;;;;;;;;;;;x
+EVTOPTC_SNW_395;Enough with the searching, get to work!;;;;;;;;;;;;;x
+EVTOPTD_SNW_395;I could ask the Great Trade League for assistance.;;;;;;;;;;;;;x
+EVTOPTE_SNW_395;This is not what I was hoping for. Keep searching.;;;;;;;;;;;;;x
+resource_back_tooltip;This will set the research a few steps back.;;;;;;;;;;;;;x
+EVTOPTF_SNW_395;We will never find anything of worth.;;;;;;;;;;;;;x
+EVTDESC_SNW_396;The [Root.GetGuildsResourceFlag] in [resourcefull_province.GetName] is finally done.\nYou will periodically receive ducats or trade goods for as long as you are its lord.;;;;;;;;;;;;;x
+EVTOPTA_SNW_396;Great! My coffers cannot wait.;;;;;;;;;;;;;x
+EVTOPTB_SNW_396;The league won't see a single of my ducats!;;;;;;;;;;;;;x
+guilds_resource_income_tt;Estimated income:;;;;;;;;;;;;;x
+guilds_resource_guildtax_tt;Great Trade League's share:;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_402;Greetings, Master [Root.GetFirstName].\nI've been negotiating some smaller deals and contracts with fellow members of the Trade League. I believe that it went rather well. They should be sending some more assets our way before long!\n\nSigned,\nYour successful apprentice, [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_402;You did a marvelous job!;;;;;;;;;;;;;x
+EVTOPTB_SNW_402;Good, but do not become reckless after one good deal.;;;;;;;;;;;;;x
+EVTDESC_SNW_403;Greetings, Master [Root.GetFirstName].\nI am not really sure what happened, the good-looking [From.GetManWomanOpp] promised that [From.GetSheHeOpp] would bring back more assets than I had given [From.GetHerHisOpp]. [From.GetSheHeCapOpp] couldn't have possibly swindled me, right? It is probably just taking more time than we anticipated, right?\n\nSigned,\nYour conflicted apprentice [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_403;You stupid oaf!;;;;;;;;;;;;;x
+EVTOPTB_SNW_403;You will need to learn to put your trust in a contract, not in a pretty face.;;;;;;;;;;;;;x
+EVTDESC_SNW_404;Greetings, Master [Root.GetFirstName].\nI am happy to announce that the latest trade deal went really well! I was able to make more profits that I expected and it was all thanks to your teachings.\n\nSigned,\nYour fortunate apprentice [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_404;You did well. Do not forget about my... teaching tax.;;;;;;;;;;;;;x
+EVTOPTB_SNW_404;Keep the money. I will show you how you can invest it better.;;;;;;;;;;;;;x
+EVTDESC_SNW_405;Greetings, Master [Root.GetFirstName].\nI am very sorry, but I have misplaced the funds for one of our incoming trades. Because of this, we cannot pay the transaction with the arranged ducats and we will need to offer some of your personal wealth instead.\n\nSigned,\nYour ashamed apprentice [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_405;You did WHAT!;;;;;;;;;;;;;x
+EVTOPTB_SNW_405;I will need to teach you proper accounting...;;;;;;;;;;;;;x
+EVTDESC_SNW_406;Greetings, Master [Root.GetFirstName].\nI am in an ecstatic mood as I write this letter! I was able to score what will probably be one of the greatest deals of my life. A foolish merchant was willing to sell me gold powder for less than half of its true worth!\nSigned,\nYour amazing apprentice [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_406;...;;;;;;;;;;;;;x
+EVTOPTB_SNW_406;Truly astonishing! You must sell it to me!;;;;;;;;;;;;;x
+EVTDESC_SNW_407;Greetings, Master [Root.GetFirstName].\nFirst, I want to say that the rumors of me fabricating expenses in your ledger to fill my pockets with your coins have been grossly exaggerated. I would never do such a thing, and If I were to do it, I certainly would not use that money to buy the delicious wine I drank the other day.\nSigned,\nYour grateful apprentice [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_407;I'll teach you about stealing from your master!;;;;;;;;;;;;;x
+EVTOPTB_SNW_407;You are no longer worthy of being my apprentice.;;;;;;;;;;;;;x
+EVTDESC_SNW_408;Greetings, Master [Root.GetFirstName].\nWhen I walk around town doing my tasks, I often encounter vagrants and I simply must give them a few coins out of pity. However, lately their numbers have increased and I think I made a mistake helping them. Could you offer me any advice?\nSigned,\nYour worried apprentice [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_408;You are being too nice with the common folk.;;;;;;;;;;;;;x
+EVTOPTB_SNW_408;You are not cherishing your money enough.;;;;;;;;;;;;;x
+EVTDESC_SNW_409;Greetings, Master [Root.GetFirstName].\nI have met a few artisans looking for a sponsor for their next projects. They have all the materials they need and they simply request some funds get started. I thought that you could be interested. They are willing to give you some of their works in exchange.\nSigned,\nYour productive apprentice [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_409;Glasswares always sell well.;;;;;;;;;;;;;x
+EVTOPTB_SNW_409;Some musical instruments could be interesting..;;;;;;;;;;;;;x
+EVTOPTC_SNW_409;I heard that velvet is fashionable these days.;;;;;;;;;;;;;x
+EVTOPTD_SNW_409;Good initiative, but I am not buying right now.;;;;;;;;;;;;;x
+#
+quest_guilds_focus;Focus on Business;;;;;;;;;;;;;x
+quest_guilds_focus_fallback;Focus on Business;;;;;;;;;;;;;x
+quest_guilds_focus_desc;While there are many things that keep someone such as you busy, like warring or attending religious ceremonies, members of the Great Trade League are expected to spend a fair amount of their time focusing on business.;;;;;;;;;;;;;x
+quest_guilds_focus_tooltip;To complete this mission, pick the §Y'Business'§! focus in the Character screen.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_411;Greetings, [Root.GetSocietyRank] [Root.GetFirstName].\nOur mission is a simple but important one - to amass all of the world's wealth.\nWhile I know that you are a busy [Root.GetManWoman], conquering lovers and land alike, we still expect you to do your share of businesses for our Great Trade League while focusing on your realm.\n\nSigned,\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_411_apprentice;Master [Root.GetFirstName],\n\nI know that the realm is important and that you are a great ruler, but I believe that we move our priorities for a few years to focus more on our trading businesses. Our coffers are never satiated, and the Great Trade League has great expectations from us.\n\nYour apprentice, [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_414;Good day to you, [Root.GetSocietyRank] [Root.GetFirstName]\nThis is also a good day for us, as your continued focus on trading will only strengthen our organization. We wish you luck on any future trade routes and businesses you may endeavor.\n\nSigned,\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_414;Time to find some business contacts.;;;;;;;;;;;;;x
+#
+quest_guilds_caravan;Send a Caravan;;;;;;;;;;;;;x
+quest_guilds_caravan_fallback;Send a Caravan;;;;;;;;;;;;;x
+quest_guilds_caravan_desc;There are many ways to make a profit. The easiest, of course, is to buy low and sell high.\nCaravans are the simplest way to import goods at half price in exchange for some travel time delay.;;;;;;;;;;;;;x
+quest_guilds_caravan_tooltip;Send a caravan to a province with trade good shipments. The mission will be completed upon its return.\nYou need a caravan artifact, which can be bought with yhe decision §YBuy or Sell Stalls and Caravans§!.\nThe target province needs to be outside your realm, possess trade good shipments modifiers and have no caravans present to be a valid target.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_421;Greetings, [Root.GetSocietyRank] [Root.GetFirstName].\nWe have noticed a slowdown in the international trade. Such a decline could be problematic for the future of the Great Trade League, as we rely on trading on a very large area to gain the most favorable prices. Thus, we are asking members such as you to send caravans to stimulate the economy of various nations.\nSigned,\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_421_apprentice;Master [Root.GetFirstName],\n\nWe have received news that the Great Trade League is concerned that our nation may be turning towards more isolationist policies. We could easily soothe their fears by simply sending a caravan to a foreign realm. Also, the extra profits would be welcome.\n\nYour apprentice, [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SNW_424;Salutation [Root.GetSocietyRank] [Root.GetFirstName],\nWe are pleased to see that you participated in some extra realm trading. Sending caravans over long distances may be hazardous, as bandits and wars are ever present, but the potential economic stimulus should not be underestimated.\n\nI hope to see one of your caravans at my gates in the near future,\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_424;Then I'll be expecting one from you as well.;;;;;;;;;;;;;x
+EVTDESC_SNW_427;To [Root.GetSocietyRank] [Root.GetFirstName],\nIt is unfortunate what happened to these good men and women you sent with the caravan, but these are the risks of the trade. The Great Trade League will compensate you for the losses. But do not let such a small failure to scare you from doing further businesses.\n\nI wish you better luck for your next caravan,\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_427;It wouldn't be profitable if it was too easy.;;;;;;;;;;;;;x
+#
+guilds_liegewillbeangry_tooltip;Since your liege is not a patrician nor a member of the Great Trade League, he may strongly disapprove.;;;;;;;;;;;;x
+EVTDESC_SNW_430;A messenger came to your court with a strange message.\nIt appears that your vassal, [From.GetFirstName], has renounced to feudalism and embraced republicanism. How absurd!\nWhat would be the best answer to this traitor who bastardized your realm?;;;;;;;;;;;;;x
+EVTOPTA_SNW_430;This traitor will get what's coming to him.;;;;;;;;;;;;;x
+guilds_call_traitor;This will give you a righteous cause to imprison him.;;;;;;;;;;;;x
+EVTOPTB_SNW_430;Some of my other vassals will restore order.;;;;;;;;;;;;;x
+guilds_give_claims;This will distribute claims on the new republic to some of your vassals.;;;;;;;;;;;;x
+EVTOPTC_SNW_430;He could try to make a compelling argument.;;;;;;;;;;;;;x
+guilds_ask_bribe;A argument worth its weight in §YDucats§!.;;;;;;;;;;;;x
+EVTOPTD_SNW_430;He can manage his land in whichever way he wishes.;;;;;;;;;;;;;x
+EVTDESC_SNW_431;To the traitorous [Root.GetFirstName],\n\nYour attachment to the ways of this Great Trade League has gone too far! I hereby declare you a traitor to the realm. Justice will come for you, and I am justice here.\n\nYour liege,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_431;[From.GetSheHeCap] won't dare arrest me!;;;;;;;;;;;;;x
+EVTDESC_SNW_432;To the fool [Root.GetFirstName],\n\nWhile I believe that you hold the Great Trade League creed in too high regard, I would never think of interfering with your decision. However, this cannot be said of all of my vassals, if you know what I mean.\n\nYour liege,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_432;[From.GetSheHeCap] think [From.GetSheHe] is so clever.;;;;;;;;;;;;;x
+EVTDESC_SNW_433;Greetings [Root.GetTitledFirstName],\n\nI cannot help but notice that you seem to have transformed your territory into a republic. I fail to see how this would benefit me and the realm as a whole. Perhaps you and your patricians could convince me?\n\nYour liege,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_433;[From.GetSheHeCap] will get [From.GetHerHis] ducats.;;;;;;;;;;;;;x
+EVTOPTB_SNW_433;Never! Our coins belong to us and us only!;;;;;;;;;;;;;x
+guilds_refuse_to_bribe;[From.GetSheHe] will strongly disapprove.;;;;;;;;;;;;;x
+EVTDESC_SNW_434;Greetings [Root.GetTitledFirstName],\n\nI cannot in good conscience do something as underhanded as a bribe! The advantages of a republic over your obsolete system are as clear as diamonds. The only argument I have for you is the wind out of my behind.\n\nSigned,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_434;Then this traitor will get what's coming to him.;;;;;;;;;;;;;x
+EVTOPTB_SNW_434;Then some of my vassals will restore order.;;;;;;;;;;;;;x
+EVTDESC_SNW_435;Greetings [Root.GetTitledFirstName],\n\nI understand your concerns and know the perfect way to soothe them. Me and my fellow patricians have gathered these coins as sign of our goodwill and our desire for a profitable partnership between vassal and liege.\n\nSigned,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_435;I knew we would understand each other.;;;;;;;;;;;;;x
+#
+EVTDESC_SNW_440;You will ask [From.GetFirstName] to purchase his [guilds_the_goods_target.GetName].\n\nWhat price are you going to offer [From.GetHerHim] for it?;;;;;;;;;;;;;x
+EVTOPTA_SNW_440;Above market value.;;;;;;;;;;;;;x
+EVTOPTB_SNW_440;Market value.;;;;;;;;;;;;;x
+EVTOPTC_SNW_440;Below market value.;;;;;;;;;;;;;x
+EVTOPTD_SNW_440;Nevermind, I do not want it anymore.;;;;;;;;;;;;;x
+EVTDESC_SNW_441;Greetings [Root.GetFirstName],\n\nYou have in your possession a [guilds_the_goods_target.GetName] that I would like to purchase. Would you be interested in selling it to me?\n\nHoping for a positive response,\n[From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_441;It is a deal.;;;;;;;;;;;;;x
+EVTOPTB_SNW_441;Not at that price.;;;;;;;;;;;;;x
+EVTDESC_SNW_442;Greetings [Root.GetFirstName],\n\nI have received your offer for my [guilds_the_goods_target.GetName] and find it acceptable. I am happy to accept your ducats in exchange for my goods.\n\nSigned,\n[From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_442;Pleasure doing business with you.;;;;;;;;;;;;;x
+EVTDESC_SNW_443;Greetings [Root.GetFirstName],\n\nI have received your offer for my [guilds_the_goods_target.GetName] and find it wanting. I am sorry, but I have to refuse this trade.\n\nSigned,\n[From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_SNW_443;You'll regret refusing such a great offer!;;;;;;;;;;;;;x
+guilds_your_offer;You will offer:;;;;;;;;;;;;;x
+EVTDESC_SNW_450;To return into the good books of the Great Trade League, there is only one thing that will soothe its greedy guilds masters. More coins!;;;;;;;;;;;;;x
+EVTOPTA_SNW_450;I hope they choke on it.;;;;;;;;;;;;;x
+EVTOPTB_SNW_450;I am not paying this much.;;;;;;;;;;;;;x
+guilds_unantagonize_trade_league;Bribing the guilds masters will let you join it or hire a trade master again.;;;;;;;;;;;;;x
+# opinion_distance_six;Distance;;;;;;;;;;;;x
+# opinion_distance_five;Distance;;;;;;;;;;;;x
+# opinion_distance_four;Distance;;;;;;;;;;;;x
+# opinion_distance_three;Distance;;;;;;;;;;;;x
+# opinion_distance_two;Distance;;;;;;;;;;;;x
+# opinion_distance_one;Distance;;;;;;;;;;;;x
+guilds_get_bloodline;Forge a Golden Bloodline;;;;;;;;;;;;;x
+guilds_get_bloodline_desc;Become recognized as one of the greatest and wealthiest merchant to have ever lived.;;;;;;;;;;;;;x
+guilds_get_bloodline_power_desc;§PIntrigue Decision§! Characters that have accomplished everything the Great Trade League has to offer and who have a lot of §YTrading Experience§!, §YAssets§! and ¤ will be recognized as one of the greatest merchant to have ever lived.;;;;;;;;;;;;;x
+guilds_bloodline;Golden Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+guilds_bloodline_desc;[This.GetTitledFirstName], a merchant without peer, able to sell sand to desert dwellers. Lady Luck will certainly continue to watch over [This.GetHerHis] descendants.;;;;;;;;;;;;;x
+bloodline_effect_guilds;Ignore most of the Society's requirements and rank up at half cost. Unlock "Offer to buy goods" for non-members.;;;;;;;;;;;;;x
+guilds_warehouse_3_decorated;Own a guarded and decorated warehouse housing your documents;;;;;;;;;;;;;x
+guilds_got_resources_flag_tooltip;Found a resource in your demesne;;;;;;;;;;;;;x
+guilds_created_center_tooltip;Has created a center of trade in the capital;;;;;;;;;;;;;x
+guilds_created_republic_tooltip;Transformed your realm into a republic;;;;;;;;;;;;;x
+guilds_market_crash_won_tooltip;Won a Trade War for the Great Trade League;;;;;;;;;;;;;x
+guilds_blood_xp_tooltip;[Root.guildsxp.GetValue] / 100 Trades;;;;;;;;;;;;;x
+guilds_buy_timer_golden_T;Has not traded in the last 6 months.;;;;;;;;;;;;;x
+guilds_buy_timer_golden_TT;As a non-member, you will not be able to trade for another 6 months.;;;;;;;;;;;;;x

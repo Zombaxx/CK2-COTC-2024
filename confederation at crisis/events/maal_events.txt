@@ -1,0 +1,237 @@
+namespace = carto
+
+#Force AI to pick a council
+character_event = {
+    id = carto.500
+	hide_window = yes
+    is_triggered_only = yes
+	
+	only_playable = yes
+	ai = yes
+	
+    trigger = {
+    	NAND = {
+			job_chancellor = { is_alive = yes }
+			job_marshal = { is_alive = yes }
+			job_treasurer = { is_alive = yes }
+			job_spymaster = { is_alive = yes }
+			job_spiritual = { is_alive = yes }
+		}
+    }
+    immediate = {
+    	if = {
+			limit = {
+				NOT = { job_chancellor = { is_alive = yes } }
+			}
+			random_courtier_or_vassal = {
+				limit = {
+					ai = yes
+					is_councillor = no
+					can_hold_title = job_chancellor
+				}
+				preferred_limit = {
+					diplomacy >= 20
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					diplomacy >= 20
+				}
+				preferred_limit = {
+					diplomacy >= 15
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					diplomacy >= 15
+				}
+				preferred_limit = {
+					diplomacy >= 10
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					diplomacy >= 10
+				}
+				preferred_limit = {
+					diplomacy >= 5
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					diplomacy >= 5
+				}
+				give_job_title = job_chancellor
+			}
+		}
+    }
+    immediate = {
+    	if = {
+			limit = {
+				NOT = { job_marshal = { is_alive = yes } }
+			}
+			random_courtier_or_vassal = {
+				limit = {
+					ai = yes
+					is_councillor = no
+					can_hold_title = job_marshal
+				}
+				preferred_limit = {
+					martial >= 20
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					martial >= 20
+				}
+				preferred_limit = {
+					martial >= 15
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					martial >= 15
+				}
+				preferred_limit = {
+					martial >= 10
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					martial >= 10
+				}
+				preferred_limit = {
+					martial >= 5
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					martial >= 5
+				}
+				give_job_title = job_marshal
+			}
+		}
+    }
+    immediate = {
+    	if = {
+			limit = {
+				NOT = { job_treasurer = { is_alive = yes } }
+			}
+			random_courtier_or_vassal = {
+				limit = {
+					ai = yes
+					is_councillor = no
+					can_hold_title = job_treasurer
+				}
+				preferred_limit = {
+					stewardship >= 20
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					stewardship >= 20
+				}
+				preferred_limit = {
+					stewardship >= 15
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					stewardship >= 15
+				}
+				preferred_limit = {
+					stewardship >= 10
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					stewardship >= 10
+				}
+				preferred_limit = {
+					stewardship >= 5
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					stewardship >= 5
+				}
+				give_job_title = job_treasurer
+			}
+		}
+    }
+    immediate = {
+    	if = {
+			limit = {
+				NOT = { job_spymaster = { is_alive = yes } }
+			}
+			random_courtier_or_vassal = {
+				limit = {
+					ai = yes
+					is_councillor = no
+					can_hold_title = job_spymaster
+					 opinion = { who = ROOT value = 0 } 
+				}
+				preferred_limit = {
+					intrigue >= 20
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					intrigue >= 20
+				}
+				preferred_limit = {
+					intrigue >= 15
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					intrigue >= 15
+				}
+				preferred_limit = {
+					intrigue >= 10
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					intrigue >= 10
+				}
+				preferred_limit = {
+					intrigue >= 5
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					intrigue >= 5
+				}
+				give_job_title = job_spymaster
+			}
+		}
+    }
+    immediate = {
+    	if = {
+			limit = {
+				NOT = { job_spiritual = { is_alive = yes } }
+			}
+			random_courtier_or_vassal = {
+				limit = {
+					ai = yes
+					is_councillor = no
+					can_hold_title = job_spiritual
+				}
+				preferred_limit = {
+					learning >= 20
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					learning >= 20
+				}
+				preferred_limit = {
+					learning >= 15
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					learning >= 15
+				}
+				preferred_limit = {
+					learning >= 10
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					learning >= 10
+				}
+				preferred_limit = {
+					learning >= 5
+					is_powerful_vassal = yes
+				}
+				preferred_limit = {
+					learning >= 5
+				}
+				give_job_title = job_spiritual
+			}
+		}
+    }
+}

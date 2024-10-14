@@ -1,0 +1,577 @@
+society_decisions = {
+	society_knights_templar_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_knights_templar_created }
+			has_landed_title = d_knights_templar
+		}
+		
+		allow = {
+			has_landed_title = d_knights_templar
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_knights_templar_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_knights_hospitaller_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_knights_hospitaller_created }
+			has_landed_title = d_knights_hospitaler
+		}
+		
+		allow = {
+			has_landed_title = d_knights_hospitaler
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_knights_hospitaller_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_teutonic_order_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_teutonic_order_created }
+			has_landed_title = d_teutonic_order
+		}
+		
+		allow = {
+			has_landed_title = d_teutonic_order
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_teutonic_order_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_knights_calatrava_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_knights_calatrava_created }
+			has_landed_title = d_knights_calatrava
+		}
+		
+		allow = {
+			has_landed_title = d_knights_calatrava
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_knights_calatrava_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_knights_santiago_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_knights_santiago_created }
+			has_landed_title = d_knights_santiago
+		}
+		
+		allow = {
+			has_landed_title = d_knights_santiago
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_knights_santiago_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_holy_sepulchre_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_holy_sepulchre_created }
+			has_landed_title = d_holy_sepulchre
+		}
+		
+		allow = {
+			has_landed_title = d_holy_sepulchre
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_holy_sepulchre_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_saint_anthony_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_saint_anthony_created }
+			has_landed_title = d_saint_anthony
+		}
+		
+		allow = {
+			has_landed_title = d_saint_anthony
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_saint_anthony_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_saint_addai_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_saint_addai_created }
+			has_landed_title = d_saint_addai
+		}
+		
+		allow = {
+			has_landed_title = d_saint_addai
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_saint_addai_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_bektashi_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_bektashi_created }
+			has_landed_title = d_bektashi
+		}
+		
+		allow = {
+			has_landed_title = d_bektashi
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_bektashi_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_haruriyyah_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_haruriyyah_created }
+			has_landed_title = d_haruriyyah
+		}
+		
+		allow = {
+			has_landed_title = d_haruriyyah
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_haruriyyah_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_zealots_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_zealots_created }
+			has_landed_title = d_zealots
+		}
+		
+		allow = {
+			has_landed_title = d_zealots
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_zealots_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_immortals_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_immortals_created }
+			has_landed_title = d_immortals
+		}
+		
+		allow = {
+			has_landed_title = d_immortals
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_immortals_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_jomsvikings_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_jomsvikings_created }
+			has_landed_title = d_jomsvikings
+		}
+		
+		allow = {
+			has_landed_title = d_jomsvikings
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_jomsvikings_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_sky_lords_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_sky_lords_created }
+			has_landed_title = d_sky_lords
+		}
+		
+		allow = {
+			has_landed_title = d_sky_lords
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_sky_lords_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_spirit_guardians_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_spirit_guardians_created }
+			has_landed_title = d_spirit_guardians
+		}
+		
+		allow = {
+			has_landed_title = d_spirit_guardians
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_spirit_guardians_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_warriors_perun_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_warriors_perun_created }
+			has_landed_title = d_warriors_perun
+		}
+		
+		allow = {
+			has_landed_title = d_warriors_perun
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_warriors_perun_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_chosen_perkunas_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_chosen_perkunas_created }
+			has_landed_title = d_chosen_perkunas
+		}
+		
+		allow = {
+			has_landed_title = d_chosen_perkunas
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_chosen_perkunas_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_sons_kaleva_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_sons_kaleva_created }
+			has_landed_title = d_sons_kaleva
+		}
+		
+		allow = {
+			has_landed_title = d_sons_kaleva
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_sons_kaleva_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_huitzilopochtli_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_huitzilopochtli_created }
+			has_landed_title = d_huitzilopochtli
+		}
+		
+		allow = {
+			has_landed_title = d_huitzilopochtli
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_huitzilopochtli_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_ashokas_chosen_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_ashokas_chosen_created }
+			has_landed_title = d_ashokas_chosen
+		}
+		
+		allow = {
+			has_landed_title = d_ashokas_chosen
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_ashokas_chosen_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_followers_arjuna_creation = {
+		only_rulers = yes
+		#forget add AI
+		potential = {
+			NOT = { has_global_flag = society_followers_arjuna_created }
+			has_landed_title = d_followers_arjuna
+		}
+		
+		allow = {
+			has_landed_title = d_followers_arjuna
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_followers_arjuna_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_bulls_rishabha_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_bulls_rishabha_created }
+			has_landed_title = d_bulls_rishabha
+		}
+		
+		allow = {
+			has_landed_title = d_bulls_rishabha
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_bulls_rishabha_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	society_zun_warriors_creation = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { has_global_flag = society_zun_warriors_created }
+			has_landed_title = d_zun_warriors
+		}
+		
+		allow = {
+			has_landed_title = d_zun_warriors
+		}
+		
+		effect = {
+			character_event = { id = CHI.105 days = 30 }
+			set_global_flag = society_zun_warriors_created
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,212 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+#myrmidons
+society_myrmidons;The Myrmidons;;;;;;;;;;;;;x
+society_myrmidons_desc;The reborn protectors of the [From.Religion.GetName] religion, the Myrmidons. A company of faithful warriors dedicated to the protection of the sacred altars of the old gods and the fight against the barbarous infidels besieging them.\nThey swear loyalty to all [From.Religion.GetName] rulers against those who would do them harm. The Megastrategos has pledged to match Achilles' prowesses to preserve their way of life.;;;;;;;;;;;;;x
+society_myrmidons_leader_desc;The Grand Master of the Myrmidons.;;;;;;;;;;;;;x
+society_myrmidons_rank_1_female;Myrmex;;;;;;;;;;;;;x
+society_myrmidons_rank_2_female;Hoplite;;;;;;;;;;;;;x
+society_myrmidons_rank_3_female;Lochagos;;;;;;;;;;;;;x
+society_myrmidons_rank_4_female;Megastrategissa;;;;;;;;;;;;;x
+society_myrmidons_rank_1_male;Myrmex;;;;;;;;;;;;;x
+society_myrmidons_rank_2_male;Hoplite;;;;;;;;;;;;;x
+society_myrmidons_rank_3_male;Lochagos;;;;;;;;;;;;;x
+society_myrmidons_rank_4_male;Megastrategos;;;;;;;;;;;;;x
+#dralhas_children
+society_dralhas_children;The Children of Drahla;;;;;;;;;;;;;x
+society_dralhas_children_desc;Followers of the [From.Religion.GetName] faith have always followed the central tenet of showing respect to all living creatures and to refrain from violence. But even the most peaceful of men must occasionally go to war.\nAs such, a new order had to be formed. They named themselves the Dralha's Chidren, after the great life gods of the mountains, no longer shall they be subjugated.;;;;;;;;;;;;;x
+society_dralhas_children_leader_desc;The Grand Master of the Children of Drahla.;;;;;;;;;;;;;x
+society_dralhas_children_rank_1_female;Ritualist;;;;;;;;;;;;;x
+society_dralhas_children_rank_2_female;Shaman;;;;;;;;;;;;;x
+society_dralhas_children_rank_3_female;Exorcist;;;;;;;;;;;;;x
+society_dralhas_children_rank_4_female;Mother Superior;;;;;;;;;;;;;x
+society_dralhas_children_rank_1_male;Ritualist;;;;;;;;;;;;;x
+society_dralhas_children_rank_2_male;Shaman;;;;;;;;;;;;;x
+society_dralhas_children_rank_3_male;Exorcist;;;;;;;;;;;;;x
+society_dralhas_children_rank_4_male;Grand Master;;;;;;;;;;;;;x
+#
+chivalry_champion_bloodline_tooltip;You have defeated §Y[Root.chivalry_champion_bloodline_var.GetValue]§! pretenders out of the required §Y10§!.\n- - - - - - -;;;;;;;;;;;;;x
+western_champion_bloodline;Champion Blood;;;;;;;;;;;;;x
+western_champion_bloodline_desc;Everyone know the exploits of [This.GetTitledFirstNameWithNick]. The undefeated Grand Champion of the Round Table!;;;;;;;;;;;;;x
+southern_champion_bloodline;Champion Blood;;;;;;;;;;;;;x
+southern_champion_bloodline_desc;Everyone know the exploits of [This.GetTitledFirstNameWithNick]. The undefeated Grand Champion of the Sandpit!;;;;;;;;;;;;;x
+northern_champion_bloodline;Champion Blood;;;;;;;;;;;;;x
+northern_champion_bloodline_desc;Everyone know the exploits of [This.GetTitledFirstNameWithNick]. The undefeated Grand Champion of the Ring of Honor!;;;;;;;;;;;;;x
+eastern_champion_bloodline;Champion Blood;;;;;;;;;;;;;x
+eastern_champion_bloodline_desc;Everyone know the exploits of [This.GetTitledFirstNameWithNick]. The undefeated Grand Champion of the Wheel of Life and Death!;;;;;;;;;;;;;x
+generic_champion_bloodline;Champion Blood;;;;;;;;;;;;;x
+generic_champion_bloodline_desc;Everyone know the exploits of [This.GetTitledFirstNameWithNick]. The undefeated Grand Champion of the Warriors Guild!;;;;;;;;;;;;;x
+female_champion_bloodline;Champion Blood;;;;;;;;;;;;;x
+female_champion_bloodline_desc;Everyone know the exploits of [This.GetTitledFirstNameWithNick]. The undefeated Grand Champion of the Amazons!;;;;;;;;;;;;;x
+risk_champion_bloodline;Champion Blood;;;;;;;;;;;;;x
+risk_champion_bloodline_desc;Everyone know the exploits of [This.GetTitledFirstNameWithNick]. The undefeated Grand Champion of the Berserkers!;;;;;;;;;;;;;x
+bloodline_effect_chivalry_champion;Can ignore most of the §YFighters' Guilds'§! joining requirements;;;;;;;;;;;;;x
+#
+chivalry_gym_shape_tt;Perfect Shape: §G+1.0§!;;;;;;;;;;;;;x
+bloodthirsty_gods_1_tt;Haemophiliac: §G+1.0§!;Aime le sang: §G+1.0§!;Hämophiler: §G+1.0§!;;Hemofílico: §G+1.0§!;;;;;;;;x;
+bloodthirsty_gods_2_tt;Haemophant: §G+2.0§!;Adore le sang: §G+2.0§!;Hämophant: §G+2.0§!;;Hemofante: §G+2.0§!;;;;;;;;x;
+bloodthirsty_gods_3_tt;Haemoarch: §G+3.0§!;Ne vit que pour le sang: §G+3.0§!;Hämonarch: §G+3.0§!;;Hemoarca: §G+3.0§!;;;;;;;;x;
+chivalry_focus_war_tt;War Focus: §G+2.0§!;;;;;;;;;;;;;x
+chivalry_focus_theology_tt;Theology Focus: §G+2.0§!;;;;;;;;;;;;;x
+justified_resting_tt;Recovering: §R-5.0§!;;;;;;;;;;;;;x
+justified_resting_champ_tt;Recovering Champion: §R-25.0§!;;;;;;;;;;;;;x
+unjustified_resting_tt;Resting: §R-10.0§!;;;;;;;;;;;;;x
+unjustified_resting_champ_tt;Resting Champion: §R-50.0§!;;;;;;;;;;;;;x
+#
+chivalry_gym_burning;Burning Fat;;;;;;;;;;;;;x
+chivalry_gym_burning_desc;This character is a sweaty mess.;;;;;;;;;;;;;x
+chivalry_gym_shape;Perfect Shape;;;;;;;;;;;;;x
+chivalry_gym_shape_desc;[From.GetSheHeCap] is training a lot and has a body that prove it.;;;;;;;;;;;;;x
+chivalry_head_hit_mod;Bruised Head;;;;;;;;;;;;;x
+chivalry_head_hit_mod_desc;This character's head is bruised.;;;;;;;;;;;;;x
+chivalry_domhand_hit_mod;Bruised Dominant Hand;;;;;;;;;;;;;x
+chivalry_domhand_hit_mod_desc;This character's hand is bruised.;;;;;;;;;;;;;x
+chivalry_subhand_hit_mod;Bruised Non-Dominant Hand;;;;;;;;;;;;;x
+chivalry_subhand_hit_mod_desc;This character's hand is bruised.;;;;;;;;;;;;;x
+chivalry_torso_hit_mod;Bruised Torso;;;;;;;;;;;;;x
+chivalry_torso_hit_mod_desc;This character's torso is bruised.;;;;;;;;;;;;;x
+chivalry_legs_hit_mod;Bruised Legs;;;;;;;;;;;;;x
+chivalry_legs_hit_mod_desc;This character's legs are bruised.;;;;;;;;;;;;;x
+chivalry_kicked_nuts;Smashed Nuts;;;;;;;;;;;;;x
+chivalry_kicked_nuts_desc;This character received a low blow.;;;;;;;;;;;;;x
+chivalry_broken_leg;Broken Leg;;;;;;;;;;;;;x
+chivalry_broken_leg_desc;One of this character's legs is broken.;;;;;;;;;;;;;x
+chivalry_stabbed_foot;Pierced Foot.;;;;;;;;;;;;;x
+chivalry_stabbed_foot_desc;One of this character's foot was pierced.;;;;;;;;;;;;;x
+chivalry_swollen_wrist_sub;Swollen Non-Dominant Wrist;Poignet enflé;Geschwollenes Handgelenk;;Muñeca inflamada;;;;;;;;;x
+chivalry_swollen_wrist_sub_desc;This character has had their non-dominant wrist injured.;Ce personnage a un poignet blessé.;Dieser Charakter hat eine Verletzung am Handgelenk.;;Este personaje se hizo daño en la muñeca.;;;;;;;;;x
+chivalry_broken_finger_dom;Broken Finger;;;;;;;;;;;;;x
+chivalry_broken_finger_dom_desc;This character has a broken finger on their dominant hand.;;;;;;;;;;;;;x
+chivalry_broken_finger_sub;Broken Finger;;;;;;;;;;;;;x
+chivalry_broken_finger_sub_desc;This character has a broken finger on their non-dominant hand.;;;;;;;;;;;;;x
+chivalry_local_wound_head_tooltip;\nPhysical Condition\n*Head*;;;;;;;;;;;;;x
+chivalry_local_wound_torso_tooltip;*Torso*;;;;;;;;;;;;;x
+chivalry_local_wound_domhand_tooltip;*Dominant Hand*;;;;;;;;;;;;;x
+chivalry_local_wound_subhand_tooltip;*Non-Dominant Hand*;;;;;;;;;;;;;x
+chivalry_local_wound_legs_tooltip;*Legs*;;;;;;;;;;;;;x
+chivalry_local_wound_untouch_tooltip;§GUntouched§!;;;;;;;;;;;;;x
+chivalry_local_wound_bruise_tooltip;§MLightly Bruised§!;;;;;;;;;;;;;x
+chivalry_local_wound_mild_tooltip;§YHeavily Bruised, risk of being wounded§!;;;;;;;;;;;;;x
+chivalry_local_wound_severly_tooltip;§RBadly Wounded, risk of being maimed§!;;;;;;;;;;;;;x
+chivalry_local_wound_missing_tooltip;§FIs Missing§!;;;;;;;;;;;;;x
+chivalry_local_wound_limit_tooltip;§KMangled Beyond Recognition§!;;;;;;;;;;;;;x
+chivalry_local_wound_preg_tooltip;Pregnant;;;;;;;;;;;;;x
+chivalry_local_wound_hardpreg_tooltip;§YVulnerable Pregnancy, risking complications§!;;;;;;;;;;;;;x
+chivalry_duel_dodge_tooltip;Dodging §Gincrease§! the normal miss chances while §Rdecreasing§! the critical miss chances.;;;;;;;;;;;;;x
+chivalry_duel_counter_tooltip;Countering §Gincrease§! the critical miss chances while §Rdecreasing§! the normal miss chances.;;;;;;;;;;;;;x
+chivalry_duel_parry_tooltip;Parrying doesn't change the hit chances of the attack.;;;;;;;;;;;;;x
+chivalry_dance_with_death;Dancing with Death;;;;;;;;;;;;;x
+chivalry_dance_with_death_desc;This perfectly normal [From.GetMenWomen] is dancing with death on a daily basis.;;;;;;;;;;;;;x
+#
+EVTDESC_CHI_209_NONE;There is no nobody to hunt in the realm at the time.\nThey are either in hiding or recently avoided a duel.;;;;;;;;;;;;;x
+EVTDESC_CHI_209_OK;Bounty Hunting is challenging work. I guarantee you'll not go hungry.\nBecause at the end of the day, long as there's two people left on the planet, someone is gonna want someone dead.;;;;;;;;;;;;;x
+EVTOPTA_CHI_209;Hunt [chivalry_hunt_target_one.GetTitledFirstName].;;;;;;;;;;;;;x
+EVTOPTB_CHI_209;Hunt [chivalry_hunt_target_two.GetTitledFirstName].;;;;;;;;;;;;;x
+EVTOPTC_CHI_209;Hunt [chivalry_hunt_target_three.GetTitledFirstName].;;;;;;;;;;;;;x
+EVTOPTD_CHI_209;No interesting target.;;;;;;;;;;;;;x
+#
+EVTDESC_CHI_401;You contact the [From.GetSocietyRank] to tell him of your plan to offer some of your lands to the order.\nHe agree to offer more men to support you against infidels and to give you a portion of the income they receive from tithe and banking in the province.;;;;;;;;;;;;;x
+EVTOPTA_CHI_401;This site should be appropriate.;;;;;;;;;;;;;x
+EVTOPTB_CHI_401;It will be expensive to renovate, but these ruins should do.;;;;;;;;;;;;;x
+EVTOPTC_CHI_401;That old castle will make for a suitable holy stronghold.;;;;;;;;;;;;;x
+EVTOPTD_CHI_401;I've changed my mind.;;;;;;;;;;;;;x
+EVTDESC_CHI_402;The Holy Order have finished moving the chapter elsewhere as they are no longer in control of the castle they once built here.;;;;;;;;;;;;;x
+EVTOPTA_CHI_402;It was only a matter of time.;;;;;;;;;;;;;x
+#
+EVTDESC_CHI_410_FAT;Your companions train every day to stay in shape and to be ready for battle at a moment's notice. So you decided that it is time for a small training session in order to burn some of the extra fat you are carrying around.;;;;;;;;;;;;;x
+EVTDESC_CHI_410_THIN;Your companions train every day to stay in shape and to be ready for battle at a moment's notice. You've been stingy with the food and exercise lately, you are only skin and bones. It is time to make some gains.;;;;;;;;;;;;;x
+EVTOPTA_CHI_410;Shall I start with running or lifting heavy rocks...;;;;;;;;;;;;;x
+EVTOPTB_CHI_410;Let's increase the next feast's budget.;;;;;;;;;;;;;x
+#
+EVTDESC_CHI_420;Many foes have attempted to reach your rightful place, but times and times again you have repelled all pretenders.\nNo one now can doubt your might and skills. The title of Grand Champion is yours and yours only, all shall remember your glorious exploits for the ages to come.;;;;;;;;;;;;;x
+EVTOPTA_CHI_420;I am the Grand Champion!;;;;;;;;;;;;;x
+EVTOPTB_CHI_420;The title is forever mine!;;;;;;;;;;;;;x
+EVTOPTC_CHI_420;No one can rival me!;;;;;;;;;;;;;x
+EVTOPTD_CHI_420;All are but worms before me!;;;;;;;;;;;;;x
+chivalry_champion_nick;the Champion;;;;;;;;;;;;;x
+#
+EVTDESC_CHI_4322;[From.GetSocietyRank] [From.GetFirstName] of the [From. [From.Society.GetName] presents [From.GetHerselfHimself] before you followed, by some members of the order.\n"[Root.GetSocietyRank] [Root.GetFirstName]", [From.GetSheHe] says with a booming voice, "Surely you have heard the call. All members must answer and join the coming war. No doubt the courier must have lost your pledge, I have written another one in your stead... it only needs your seal.";;;;;;;;;;;;;x
+EVTOPTA_CHI_4322;Lost... of course. I thanks you [From.GetSocietyRank].;;;;;;;;;;;;;x
+EVTOPTB_CHI_4322;It wasn't lost and you know it!;;;;;;;;;;;;;x
+EVTDESC_CHI_433;You have received a letter from [From.GetTitledFirstName] [From.GetHerselfHimself].\n[From.GetSheHeCap] expresses indignation at your lack of reply to [From.GetHerHis] call to arm. Answering to such call, specially from the [From.RelHead.GetTitle], is the reason our order exist. Ignoring it could nearly be considered an admission to apostatising.;;;;;;;;;;;;;x
+EVTOPTA_CHI_433;There is no slipping out of this one.;;;;;;;;;;;;;x
+EVTOPTB_CHI_433;I was never much of a zealot anyways.;;;;;;;;;;;;;x
+EVTDESC_CHI_4342;[From.GetSocietyRank] [From.GetFirstName] of the [From. [From.Society.GetName] presents [From.GetHerselfHimself] before you followed, by some members of the order.\n"[Root.GetSocietyRank] [Root.GetFirstName]", [From.GetSheHe] says with a booming voice, "Surely you have heard the call. All members must answer and join the coming war. No doubt the courier must have lost your pledge, I have written another one in your stead... it only needs your seal.";;;;;;;;;;;;;x
+EVTOPTA_CHI_4342;Lost... of course. I thanks you [From.GetSocietyRank].;;;;;;;;;;;;;x
+EVTOPTB_CHI_4342;It wasn't lost and you know it!;;;;;;;;;;;;;x
+EVTDESC_CHI_435;You have received a letter from [From.GetTitledFirstName] [From.GetHerselfHimself].\n[From.GetSheHeCap] expresses indignation at your lack of reply to [From.GetHerHis] call to arm. Answering to such call, specially from the [From.RelHead.GetTitle], is the reason our order exist. Ignoring it could nearly be considered an admission to apostatising.;;;;;;;;;;;;;x
+EVTOPTA_CHI_435;There is no slipping out of this one.;;;;;;;;;;;;;x
+EVTOPTB_CHI_435;I was never much of a zealot anyways.;;;;;;;;;;;;;x
+EVTDESC_CHI_4362;[From.GetSocietyRank] [From.GetFirstName] of the [From. [From.Society.GetName] presents [From.GetHerselfHimself] before you followed, by some members of the order.\n"[Root.GetSocietyRank] [Root.GetFirstName]", [From.GetSheHe] says with a booming voice, "Surely you have heard the call. All members must answer and defend the [From.Religion.GetName] faith. No doubt the courier must have lost your pledge, I have written another one in your stead... it only needs your seal.";;;;;;;;;;;;;x
+EVTOPTA_CHI_4362;Lost... of course. I thanks you [From.GetSocietyRank].;;;;;;;;;;;;;x
+EVTOPTB_CHI_4362;It wasn't lost and you know it!;;;;;;;;;;;;;x
+EVTDESC_CHI_4372;You have received a letter from [From.GetTitledFirstName].\n[From.GetSheHeCap] expresses indignation at your lack of reply to [From.GetHerHis] call to arm to protect the [From.Religion.GetName] faith. Answering to such call, specially when the faithfuls are being attacked, is the reason our order exist. Ignoring it could nearly be considered an admission to apostatising.;;;;;;;;;;;;;x
+EVTOPTA_CHI_4372;There is no slipping out of this one.;;;;;;;;;;;;;x
+EVTOPTB_CHI_4372;I was never much of a zealot anyways.;;;;;;;;;;;;;x
+EVTDESC_CHI_4382;[From.GetSocietyRank] [From.GetFirstName] of the [From. [From.Society.GetName] presents [From.GetHerselfHimself] before you followed, by some members of the order.\n"[Root.GetSocietyRank] [Root.GetFirstName]", [From.GetSheHe] says with a booming voice, "Surely you have heard the call. All members must answer and defend the [From.Religion.GetName] faith. No doubt the courier must have lost your pledge, I have written another one in your stead... it only needs your seal.";;;;;;;;;;;;;x
+EVTOPTA_CHI_4382;Lost... of course. I thanks you [From.GetSocietyRank].;;;;;;;;;;;;;x
+EVTOPTB_CHI_4382;It wasn't lost and you know it!;;;;;;;;;;;;;x
+EVTDESC_CHI_4392;You have received a letter from [From.GetTitledFirstName].\n[From.GetSheHeCap] expresses indignation at your lack of reply to [From.GetHerHis] call to arm to protect the [From.Religion.GetName] faith. Answering to such call, specially when the faithfuls are being attacked, is the reason our order exist. Ignoring it could nearly be considered an admission to apostatising.;;;;;;;;;;;;;x
+EVTOPTA_CHI_4392;There is no slipping out of this one.;;;;;;;;;;;;;x
+EVTOPTB_CHI_4392;I was never much of a zealot anyways.;;;;;;;;;;;;;x
+chivalry_revoked_ho;The religious authorities will revoke our status as a Holy Order for ignoring a Crusade/Jihad, making us no better than a simple mercenary band.;;;;;;;;;;;;;x
+forced_to_defend_crusade_TT;Cannot unpledge from the Crusade if your religious head or grand master forced you to be part of it.;Ne peut pas rompre la promesse d'engagement dans la croisade si le chef religieux vous y a forcé.;Ihr könnt nicht Euer Versprechen am Kreuzzug zurücknehmen, wenn Euch der religiöser Kopf dazu gezwungen hat ein Teil davon zu sein.;;No puedes desdecirte de la cruzada si el jefe religioso te obliga a participar.;;;;;x
+chivalry_join_pope_war_tt;[Root.GetTitledFirstName] will join the attacking side of the Great Holy War.;;;;;;;;;;;;;x
+chivalry_join_defender_war_tt;[Root.GetTitledFirstName] will join the defending side of the Great Holy War.;;;;;;;;;;;;;x
+#
+chivalry_power_training_stop;Cancel Military Training;;;;;;;;;;;;;x
+chivalry_power_training_stop_desc;This will cancel your request for military training.;;;;;;;;;;;;;x
+chivalry_power_gym;Get into Shape;;;;;;;;;;;;;x
+chivalry_power_gym_desc;Will train your body so it is more in shape, removing superfluous fat and building muscles.;;;;;;;;;;;;;x
+chivalry_power_gym_power_desc;§PIntrigue Decision§! Can train toward removing the Fat and Malnourished traits using some §Y[From.GetMaalSocietyCurrency]§!. If you keep training you will perfect your body.;;;;;;;;;;;;;x
+chivalry_power_holy_castle;Offer land to [From.Society.GetName];;;;;;;;;;;;;x
+chivalry_gym_cooldown_tt;Has NOT trained [From.GetHerHis] body recently;;;;;;;;;;;;;x
+chivalry_power_take_bounty;The Bounty Board;;;;;;;;;;;;;x
+chivalry_power_take_bounty_desc;Attempt to find a target in the realm to hunt for money.;;;;;;;;;;;;;x
+chivalry_power_take_bounty_power_desc;§PIntrigue Decision§! Look at some of the bounties available in the realm, if there is any. Hunting them will earn you Ducats¤, Prestige and §Y[From.GetMaalSocietyCurrency]§!.;;;;;;;;;;;;;x
+chivalry_power_holy_castle;Offer land to [From.Society.GetName];;;;;;;;;;;;;x
+chivalry_power_holy_castle_desc;You will contact the Grand Master of the [From.Society.GetName] to give them land upon which they may build a castle. It won't be under your own jurisdiction but they will offer you support when you request men from the order or if you are being besieged.\nTo give one of your own castle, use the decision available from the province where it is located.;;;;;;;;;;;;;x
+chivalry_power_holy_castle_power_desc;§PIntrigue Decision§! Allow you to spend §Y[From.GetMaalSocietyCurrency]§! and perhaps Ducats¤ to give some land to [From.Society.GetName]. It will bolster the province and allow them to send more men when you request it.;;;;;;;;;;;;;x
+chivalry_allow_holy_castle_tooltip;No empty holding but have room to create more.;;;;;;;;;;;;;x
+chivalry_no_holy_castle_tooltip;Any province have no holy order castle.;;;;;;;;;;;;;x
+chivalry_start_holy_castle_tooltip;Contact the Grand Master.;;;;;;;;;;;;;x
+chivalry_power_holy_castle_province;Offer land to [From.Society.GetName];;;;;;;;;;;;;x
+chivalry_power_holy_castle_province_desc;You will contact the Grand Master of the [From.Society.GetName] to give them land upon which they may build a castle or offer them one of yours in this province. It won't be under your own jurisdiction but they will offer you support when you request men from the order or if you are being besieged.;;;;;;;;;;;;;x
+chivalry_power_army_fighter;Raise an Army;;;;;;;;;;;;;x
+chivalry_power_army_fighter_desc;Use your glorious deeds to rouse up the peasantry in your demesne to follow your banner, alongside anybody fighting in tournaments.\nThese armies will disband if you are not war.;;;;;;;;;;;;;x
+chivalry_power_army_fighter_power_desc;§PIntrigue Decision§! Spend §Y[From.GetMaalSocietyCurrency]§! to create an army in your capital, every tournaments you have created in your demesne will spawn additional troops.;;;;;;;;;;;;;x
+chivalry_power_army_holy;Request Military Support;;;;;;;;;;;;;x
+chivalry_power_army_holy_desc;If you are at war with infidels, you may request that a branch of [Root.Society.GetName] help you in your battles. The marshalls from the various holy order's castles in your demesne will send men as well.\nThese armies will disband if you are not war.;;;;;;;;;;;;;x
+chivalry_power_army_holy_power_desc;§PIntrigue Decision§! Spend §Y[From.GetMaalSocietyCurrency]§! to create an army in your capital, only usable if you are at war with infidels.;;;;;;;;;;;;;x
+chivalry_army_timer_tt;Need to wait 2 years for the troops to replenish;;;;;;;;;;;;;x
+chivalry_show_decisions_on;- Show [From.Society.GetName]'s Decisions;;;;;;;;;;;;;x
+chivalry_show_decisions_on_desc;Click to show the Society decisions.;;;;;;;;;;;;;x
+chivalry_show_decisions_off;- Hide [From.Society.GetName]'s Decisions;;;;;;;;;;;;;x
+chivalry_show_decisions_off_desc;Click to hide the Society decisions.;;;;;;;;;;;;;x
+#
+chivalry_holy_castle;Holy Order Chapter;;;;;;;;;;;;;x
+chivalry_holy_castle_desc;This province contain a Holy Order enclave which will assist the ruler as long as they control their castle.;;;;;;;;;;;;;x
+#
+society_holy_order_gm_tt;Power: §YAI Only§!\nThe society is not designed to support a non-ai as leader, it will cause bugs and awkward situations.\nUsurp the Grand Master's title at your own peril.;;;;;;;;;;;;;x
+society_risk_fighter_guild_tt;Power: §YHigh-Risk, High-Reward§!\nThe chances of death in the Berserkers is higher than usual, but they receive extra rewards after missions and better passive bonuses.;;;;;;;;;;;;;x
+society_champion_blood_tt;Power: §YGrand Champion§!\nA Champion who can repels his pretenders 10 times without defeats will be recognized as a Grand Champion, which will create a bloodline.;;;;;;;;;;;;;x
+#
+chivalry_society_animal_kingdoms_tooltip;Has selected the animal kingdoms random world;;;;;;;;;;;;;x
+chivalry_animal_culture_tt;Is NOT an animal;;;;;;;;;;;;;x
+#
+chivalry_available_because_good_tt;Your guts tell you that [From.GetSheHe] knows what [From.GetSheHe] is talking about;;;;;;;;;;;;;x
+chivalry_available_because_bad_tt;Your guts tell you that [From.GetSheHe] doesn't know what [From.GetSheHe] is talking about;;;;;;;;;;;;;x
+# V replace correcty
+EVTOPTC_CHI_3101;*Skip the Duel Engine*;;;;;;;;;;;;;x
+EVTOPTB_CHI_3102;*Skip the Duel Engine*;;;;;;;;;;;;;x
+chivalry_duel_skip;You will ignore the duel system and the result will be random based on your combat skill and traits.;;;;;;;;;;;;;x
+#
+EVTOPTD_CHI_3732;Trade half of the ducats for boats.;;;;;;;;;;;;;x
+EVTOPTD_CHI_3735;Trade half of the ducats for boats.;;;;;;;;;;;;;x
+#
+chivalry_hired_pay_tooltip;You will receive payments based on how many battles and sieges you have won with your army as the leading army and/or with you as a flank leader.\nUnsieging your employer's provinces and attacking the armies of your target's vassals do count. Empty nomad provinces don't.\nYou can see your payments values on the description of your moblization law.\nFailure to participate will hurt your reputation.;;;;;;;;;;;;;x
+#
+CHIVALRY_RULE_DEATH_NAME;Duel Lethality;;;;;;;;;;;;;x
+CHIVALRY_RULE_DEATH_DEFAULT;Default;;;;;;;;;;;;;x
+CHIVALRY_RULE_DEATH_DEFAULT_DESC;You can die form duels.\n;;;;;;;;;;;;;x
+CHIVALRY_RULE_DEATH_NONE;None;;;;;;;;;;;;;x
+CHIVALRY_RULE_DEATH_NONE_DESC;You will receive a negative health modifier instead of dying in duels.\n;;;;;;;;;;;;;x

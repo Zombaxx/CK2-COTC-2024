@@ -1,0 +1,56 @@
+# hair, mouth, chin, nose, eyes, cheek, ear, neck
+spriteTypes = {
+	
+	#Guild Master Male
+	portraitType = {
+		name = "PORTRAIT_society_the_guilds_male"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				portrait_society = the_guilds
+				portrait_society_rank = 4
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_merchant_male_clothes_behind:c0"
+			"GFX_merchant_male_clothes:c2"
+			"GFX_merchant_male_headgear_behind:c1"
+			"GFX_merchant_male_headgear:c5"
+		}
+
+	}
+	
+	#Guild Master female
+	portraitType = {
+		name = "PORTRAIT_society_the_guilds_female"
+		effectFile = "gfx/FX/portrait.lua"
+
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				portrait_society = the_guilds
+				portrait_society_rank = 4
+				NOT = { portrait_has_trait = blgcaoff }
+			}
+		}
+
+		layer = {
+			"GFX_merchant_female_clothes_behind:c0"
+			"GFX_merchant_female_clothes:c2"
+			"GFX_merchant_female_headgear_behind:c1"
+			"GFX_merchant_female_headgear:c5"
+		}
+
+	}
+}
+

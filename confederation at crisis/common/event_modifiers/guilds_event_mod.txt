@@ -1,0 +1,635 @@
+#never forget CK2plus file too
+guilds_shopping_timer = { icon = 6 }
+
+guilds_caravan_timer = { icon = 6 }
+
+guilds_artisans_timer = { icon = 6 }
+
+guilds_warehouse_thief_timer = { icon = 6 }
+
+guilds_resources_timer = { icon = 6 }
+
+guilds_buy_timer = { icon = 6 }
+
+guilds_buy_timer_golden = { icon = 6 }
+
+guilds_loan_one = {
+	icon = 24 
+}
+
+guilds_loan_two = {
+	icon = 24 
+}
+
+guilds_loan_three = {
+	icon = 24 
+}
+
+guilds_beggar = {
+	general_opinion = -15
+	monthly_character_prestige = -1
+	icon = 36
+}
+
+guilds_smugglers = {
+	disease_defence = -0.1
+	local_build_time_modifier = 0.5
+	local_build_cost_modifier = 0.25
+	local_tax_modifier = -0.25
+	icon = 30
+}
+
+guilds_buff_stone = {
+	local_build_time_modifier = -0.15
+	local_build_cost_modifier = -0.10
+	fort_level = 1
+	icon = 11
+}
+
+guilds_buff_steel = {
+ 	pikemen_offensive = 0.1
+ 	pikemen_defensive = 0.1
+ 	light_cavalry_offensive = 0.1
+ 	light_cavalry_defensive = 0.1
+ 	knights_offensive = 0.1
+ 	knights_defensive = 0.1
+ 	heavy_infantry_offensive = 0.1
+ 	heavy_infantry_defensive = 0.1
+ 	light_infantry_offensive = 0.1
+ 	light_infantry_defensive = 0.1
+ 	archers_offensive = 0.1
+ 	archers_defensive = 0.1
+	icon = 1
+}
+
+guilds_buff_steel_empty = { #fake for decision tooltip
+	icon = 1
+}
+
+guilds_buff_gem = {
+	add_prestige_modifier = 0.2
+	local_tax_modifier = 0.3
+	icon = 7
+}
+
+guilds_buff_silver = {
+	tax_income = 5
+	local_tax_modifier = 0.2
+	disease_defence = 0.2
+	icon = 50
+}
+
+guilds_buff_gold = {
+	tax_income = 10
+	local_tax_modifier = -0.1
+	tech_growth_modifier_economy = 0.15
+	retinue_maintenence_cost = -0.2
+	icon = 6
+}
+
+guilds_buff_grain = {
+	local_revolt_risk = -0.01
+	garrison_size = 0.25
+	levy_reinforce_rate = 0.2
+	icon = 87
+}
+
+guilds_buff_lumber = {
+	local_build_time_modifier = -0.10
+	local_build_cost_modifier = -0.15
+	galleys_perc = 0.3
+	icon = 61
+}
+
+guilds_buff_linen = {
+	local_revolt_risk = -0.01
+	local_tax_modifier = 0.1
+	# regiment_reinforcement_speed 0.2
+	global_supply_limit = 0.1
+	icon = 16
+}
+
+guilds_buff_incense = {
+	tech_growth_modifier_culture = 0.15
+	temple_tax_modifier = 0.3
+	add_piety_modifier = 0.3
+	icon = 17
+}
+
+guilds_buff_spices = {
+	tax_income = 5
+	economy_techpoints = 0.25
+	monthly_character_prestige = 0.5
+	icon = 79
+}
+
+guilds_buff_meat = {
+	local_revolt_risk = -0.01
+	land_morale = 0.2
+	icon = 59
+}
+
+guilds_buff_wool = {
+	local_revolt_risk = -0.01
+	global_winter_supply = 1
+	local_tax_modifier = 0.1
+	icon = 69
+}
+
+guilds_buff_hide = {
+ 	pikemen_defensive = 0.1
+ 	light_cavalry_defensive = 0.1
+ 	knights_defensive = 0.1
+ 	heavy_infantry_defensive = 0.1
+ 	light_infantry_defensive = 0.1
+ 	archers_defensive = 0.1
+	levy_size = 0.15
+	icon = 71
+}
+
+guilds_buff_hide_empty = { #fake for decision tooltip
+	icon = 1
+}
+
+guilds_buff_ivory = {
+	tax_income = 2
+	local_tax_modifier = 0.3
+	add_prestige_modifier = 0.3
+	icon = 54
+}
+
+guilds_buff_silk = {
+	tax_income = 5
+	economy_techpoints = 0.15
+	tech_growth_modifier_economy = 0.10
+	add_prestige_modifier = 0.5
+	icon = 15
+}
+
+guilds_buff_pottery = {
+	local_tax_modifier = 0.2
+	tax_income = 2
+	icon = 52
+}
+
+guilds_buff_alcohol = {
+	land_morale = 0.3
+	land_organisation = -0.1
+	global_winter_supply = 0.5
+	local_revolt_risk = -0.005
+	icon = 41
+}
+
+guilds_buff_armor = {
+	levy_size = 0.2
+	military_techpoints = 0.5
+	retinue_maintenence_cost = -0.1
+	icon = 13
+}
+
+guilds_buff_jewelry = {
+	tax_income = 3
+	local_tax_modifier = 0.2
+	add_prestige_modifier = 0.3
+	icon = 10
+}
+
+guilds_buff_book = {
+	tech_growth_modifier = 0.3
+	icon = 2
+}
+
+guilds_buff_statue = {
+	culture_techpoints = 0.15
+	monthly_character_prestige = 1
+	monthly_character_piety = 1
+	icon = 81
+}
+
+guilds_buff_music = {
+	tech_growth_modifier_culture = 0.3
+	land_morale = 0.15
+	land_organisation = 0.15
+	local_revolt_risk = -0.01
+	icon = 18
+}
+
+guilds_buff_glassware = {
+	tax_income = 4
+	local_tax_modifier = 0.3
+	add_piety_modifier = 0.3
+	add_prestige_modifier = 0.3
+	icon = 83
+}
+
+guilds_buff_dye = {
+	culture_techpoints = 0.5
+	local_tax_modifier = 0.4
+	icon = 85
+}
+
+guilds_buff_velvet = {
+	tax_income = 5
+	local_tax_modifier = 0.25
+	add_prestige_modifier = 0.3
+	monthly_character_prestige = 1
+	icon = 43
+}
+
+guilds_buff_fur = {
+	tax_income = 4
+	global_winter_supply = 2
+	add_prestige_modifier = 0.2
+	monthly_character_prestige = 1
+	icon = 91
+}
+
+guilds_buff_feast = {
+	vassal_opinion = 10
+	icon = 59
+}
+
+#Shops and Caravans
+guilds_shop_stall_metal = {
+	# local_tax_modifier = -0.1
+	icon = 16
+}
+
+guilds_shop_stall_vegetal = {
+	# local_tax_modifier = -0.1
+	icon = 16
+}
+
+guilds_shop_stall_animal = {
+	# local_tax_modifier = -0.1
+	icon = 16
+}
+
+guilds_shop_stall_goods = {
+	# local_tax_modifier = -0.1
+	icon = 16
+}
+
+guilds_shop_stall_general = {
+	# local_tax_modifier = -0.2
+	icon = 16
+}
+
+guilds_shop_caravan = {
+	local_tax_modifier = 0.15
+	icon = 56
+}
+
+guilds_caravan_escort = {
+	levy_size = -0.5
+	icon = 31
+}
+
+guilds_caravan_escort_timed = {
+	levy_size = -0.5
+	icon = 31
+}
+
+#Sabotages
+guilds_sabotage_supply = {
+	global_supply_limit = -1
+	global_winter_supply = -2
+	levy_reinforce_rate = -0.5
+	land_organisation = -0.5
+	icon = 57
+}
+
+guilds_sabotage_economy = {
+	local_tax_modifier = -0.5
+	local_build_time_modifier = 0.5
+	local_build_cost_modifier = 0.5
+	icon = 22
+}
+
+guilds_sabotage_propaganda = {
+	levy_size = -0.2
+	land_morale = -0.2
+	local_revolt_risk = 0.05
+	icon = 36
+}
+
+guilds_sabotage_scorched = {
+	supply_limit = -5
+	max_attrition = 0.10
+	garrison_size = -0.3
+	icon = 42
+}
+
+guilds_sabotage_recovering = {
+	local_build_time_modifier = 0.3
+	local_tax_modifier = -0.3
+	icon = 90
+}
+
+guilds_bustling_new_city = {
+	tax_income = 5
+	local_tax_modifier = 0.25
+	levy_size = 0.25
+	icon = 12
+}
+
+#Evil events
+guilds_thieves_guild = {
+	icon = 22
+}
+
+guilds_thieves_guild_military = {
+	levy_size = -0.2
+	icon = 19
+}
+
+guilds_thieves_guild_cooldown = { icon = 6 }
+
+guilds_highway_robber_band = {
+	icon = 57
+}
+
+guilds_highway_robber_band_military = {
+	icon = 31
+}
+
+guilds_highway_robber_band_dare = {
+	icon = 57
+}
+
+guilds_highway_robber_band_cooldown = { icon = 6 }
+
+guilds_smugglers_ring_metal = {
+	local_tax_modifier = 0.01
+	icon = 24
+}
+
+guilds_smugglers_ring_vegetal = {
+	local_revolt_risk = -0.001
+	icon = 88
+}
+
+guilds_smugglers_ring_animal = {
+	land_morale = 0.01
+	icon = 65
+}
+
+guilds_smugglers_ring_final = {
+	add_prestige_modifier = 0.01
+	icon = 86
+}
+
+guilds_smugglers_ring_military = {
+	garrison_size = 0.2
+	local_tax_modifier = -0.2
+	icon = 27
+}
+
+guilds_smugglers_ring_cooldown = { icon = 6 }
+
+guilds_center_trade = { 
+	local_tax_modifier = 0.1
+	tradevalue = 25 #only this nod for city/trade taxes
+	# global_trade_route_wealth = 1000 #everything on the line
+	# global_trade_route_value = 1000 #add cash to this trade
+	icon = 6	
+} 
+
+guilds_center_trade_sieged = { icon = 24 } 
+
+#warehouse / replaced by artifacts.
+# guilds_defended_warehouse = { icon = 6 } #not done
+
+guilds_no_warehouse = {
+	monthly_character_prestige = -0.2
+	icon = 37
+}
+
+guilds_rented_warehouse = {
+	global_tax_modifier = -0.05
+	icon = 37
+}
+
+guilds_custom_warehouse = {
+	stewardship = 1
+	icon = 37
+}
+
+guilds_decorated_gold_warehouse = {
+	stewardship = 1
+	martial = 1
+	icon = 37
+}
+
+guilds_decorated_silk_warehouse = {
+	stewardship = 1
+	diplomacy = 1
+	icon = 37
+}
+guilds_decorated_incense_warehouse = {
+	stewardship = 1
+	intrigue = 1
+	icon = 37
+}
+
+guilds_decorated_book_warehouse = {
+	stewardship = 1
+	learning = 1
+	icon = 37
+}
+
+#mapmode
+guilds_bought_mapmode = { icon = 1 }
+
+
+guilds_mapmode_yes = {
+	local_revolt_risk = -20
+	icon = 1
+}
+
+guilds_mapmode_no = {
+	local_revolt_risk = 10
+	icon = 1
+}
+
+guilds_mapmode_caravan = {
+	local_revolt_risk = 20.10
+	icon = 1
+}
+
+#holostuff
+
+guilds_music_good = {
+	local_revolt_risk = -0.05
+	icon = 18
+}
+
+guilds_music_bad = {
+	local_revolt_risk = 0.05
+	icon = 36
+}
+
+guilds_holo_sheep = {
+	local_revolt_risk = 0.1
+	local_tax_modifier = -0.3
+	icon = 72
+}
+
+#Influence stuff
+successful_guilds_mission = {
+	society_influence = 1
+}
+failed_guilds_mission = {
+	society_influence = -1
+}
+failed_guilds_mission_counter = {
+	society_influence = -1
+}
+guilds_influence_good_deal = {
+	society_influence = 1
+}
+guilds_influence_bad_deal = {
+	society_influence = -1
+}
+guilds_influence_very_good_deal = {
+	society_influence = 2
+}
+guilds_influence_very_bad_deal = {
+	society_influence = -2
+}
+guilds_influence_inflation = {
+	society_influence = -1
+}
+guilds_influence_debt = {
+	society_influence = -5
+}
+guilds_influence_boom = {
+	society_influence = 10
+}
+guilds_influence_crash = {
+	society_influence = -10
+}
+guilds_market_crash_king_bonus = {
+	city_vassal_tax_modifier = 0.2
+	global_tax_modifier = 0.2
+	icon = 4
+}
+guilds_market_crash_trader_bonus = {
+	city_vassal_tax_modifier = 0.2
+	global_tax_modifier = 0.2
+	icon = 4
+}
+guilds_market_crash_king_malus = {
+	city_vassal_tax_modifier = -0.2
+	global_tax_modifier = -0.2
+	icon = 22
+}
+guilds_market_crash_trader_malus = {
+	city_vassal_tax_modifier = -0.2
+	global_tax_modifier = -0.2
+	icon = 22
+}
+guilds_market_crash_tracker = {
+	icon = 22
+}
+
+#Resources system
+guilds_res_stone = {
+	icon = 1
+}
+
+guilds_res_steel = {
+	icon = 1
+}
+
+guilds_res_gem = {
+	icon = 1
+}
+
+guilds_res_silver = {
+	icon = 1
+}
+
+guilds_res_gold = {
+	icon = 1
+}
+
+guilds_res_grain = {
+	icon = 1
+}
+
+guilds_res_lumber = {
+	icon = 1
+}
+
+guilds_res_linen = {
+	icon = 1
+}
+
+guilds_res_incense = {
+	icon = 1
+}
+
+guilds_res_spices = {
+	icon = 1
+}
+
+guilds_res_meat = {
+	icon = 1
+}
+
+guilds_res_wool = {
+	icon = 1
+}
+
+guilds_res_hide = {
+	icon = 1
+}
+
+guilds_res_ivory = {
+	icon = 1
+}
+
+guilds_res_silk = {
+	icon = 1
+}
+
+guilds_res_help = {
+	icon = 1
+}
+
+#busy councillor
+guilds_busy_spiritual = {
+	learning = -5
+	icon = 20
+}
+
+guilds_busy_marshal = {
+	martial = -5
+	icon = 19
+}
+
+guilds_busy_treasurer = {
+	stewardship = -5
+	icon = 22
+}
+
+guilds_busy_chancellor = {
+	diplomacy = -5
+	icon = 21
+}
+
+guilds_busy_spymaster = {
+	intrigue = -5
+	icon = 23
+}
+
+guilds_tax_break = {
+	tax_income = -2
+	icon = 24
+}
+
+guilds_cursed = {
+	health = -0.5
+	icon = 42
+}
