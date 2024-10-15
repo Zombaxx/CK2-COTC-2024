@@ -1,5 +1,5 @@
 2998.1.1 = {
-	liege = "d_nai_dunya"
+	liege = "k_loyalist"
 	law = succ_open_elective_crisis
 	effect = {
 		add_law = true_cognatic_succession
@@ -14,6 +14,12 @@
 	law = local_term_length_2
 	holder = 1107820 # Priyanka Tatatabei
 }
+
 2998.1.1 = {
 	effect = { set_title_flag = flag_election_cycle }
+}
+
+3008.1.1 = {
+	liege = "k_mukta_duniya"
+	holder = 1216139 # Hari Trivedi
 }

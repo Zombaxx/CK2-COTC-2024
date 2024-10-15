@@ -1,0 +1,9 @@
+
+opinion_bestowed_grace_duuryaatri = {
+	opinion = 15
+	months = 36
+}
+opinion_bestowed_grace = {
+	opinion = 10
+	months = 36
+}

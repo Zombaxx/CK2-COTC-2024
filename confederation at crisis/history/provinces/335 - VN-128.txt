@@ -10,8 +10,8 @@ b_vn_128_outpost = castle
 b_vn_128_observatory = temple
 
 # Misc
-culture = indo_mukta # Initial culture
-religion = colonial_separatist
+culture = indo_duuryaatri # Initial culture
+religion = eternal_way
 
 1.1.1 = { }
 

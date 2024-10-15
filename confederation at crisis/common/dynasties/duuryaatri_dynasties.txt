@@ -1,0 +1,267 @@
+
+# Existing
+
+20030 = {
+	name = "Chandrasekhar"
+	culture = indo_duuryaatri # anglo_avalonian
+}
+20031 = {
+	name = "Narasimha"
+	culture = indo_duuryaatri # indo_tarkan
+}
+20032 = {
+	name = "Krishna"
+	culture = indo_duuryaatri # iranian_samawati
+}
+20033 = {
+	name = "Ramanathan"
+	culture = indo_duuryaatri # indo_mukta
+}
+20034 = {
+	name = "Siddharth"
+	culture = indo_duuryaatri # hispanic_celestean
+}
+20035 = {
+	name = "Arumugam"
+	culture = indo_duuryaatri # anglo_avalonian
+}
+20036 = {
+	name = "Prakash"
+	culture = indo_duuryaatri # indo_mukta
+}
+20037 = {
+	name = "Azhagan"
+	culture = indo_duuryaatri # arab_samawati
+}
+20038 = {
+	name = "Vasu"
+	culture = indo_duuryaatri # iranian_samawati
+}
+20039 = {
+	name = "Salman"
+	culture = indo_duuryaatri # indo_tarkan
+}
+
+# Random
+
+999900 = {
+	name = "Samrat"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999901 = {
+	name = "Aditya"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999902 = {
+	name = "Arumugam"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999903 = {
+	name = "Arunachalam"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999904 = {
+	name = "Balasubramaniam"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999905 = {
+	name = "Chandrasekhar"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999906 = {
+	name = "Ganesh"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999907 = {
+	name = "Gopalakrishnan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999908 = {
+	name = "Durai"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999909 = {
+	name = "Jayarajan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+9999910 = {
+	name = "Karthikeyan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999911 = {
+	name = "Krishnamoorthi"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999912 = {
+	name = "Krishna"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999913 = {
+	name = "Krishnakumar"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999914 = {
+	name = "Murugan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999915 = {
+	name = "Narayan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999916 = {
+	name = "Nagendran"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999917 = {
+	name = "Narasimman"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999918 = {
+	name = "Narendra"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999919 = {
+	name = "Prabhakaran"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999920 = {
+	name = "Palanivel"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999921 = {
+	name = "Pandian"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999922 = {
+	name = "Rajesh"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999923 = {
+	name = "Rajendiran"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999924 = {
+	name = "Rajasekaran"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999925 = {
+	name = "Rajaselvan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999926 = {
+	name = "Ramanan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999927 = {
+	name = "Ranganathan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999928 = {
+	name = "Subramaniam"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999929 = {
+	name = "Saravanan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999930 = {
+	name = "Perumal"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999931 = {
+	name = "Sudarshan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999932 = {
+	name = "Vairamuthu"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999933 = {
+	name = "Veerasami"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+}
+999934 = {
+	name = "Venkatesan"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999935 = {
+	name = "Venkataraman"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}
+999936 = {
+	name = "Vadivel"
+	culture = "indo_duuryaatri"
+	religion = "eternal_way"
+	used_for_random = yes
+}

@@ -1,0 +1,12 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+crisis_indian_group;Bhaaratiya;Bhaaratiya;Bhaaratiya;;Bhaaratiya;;;;;;;;;x
+indo_duuryaatri;Duuryaatri;Duuryaatri;Duuryaatri;;Duuryaatri;;;;;;;;;x
+
+vassal_blinding_decision_duuryaatri;Blind [Root.GetTitledFirstName];Aveugler [Root.GetTitledFirstName];[Root.GetTitledFirstName] blenden;;Ciego [Root.GetTitledFirstName];;;;;;;;;x
+vassal_blinding_decision_duuryaatri_desc;As [Root.GetSheHe] is your prisoner, you may give the order to permanently blind §Y[Root.GetTitledFirstName]§! and then setting [Root.GetHerHim] free. This is a common Duuryaatri way of dealing with political rivals without outright killing them, as a blind [Root.GetManWoman] is of little threat to the throne.;Comme [Root.GetIlElle] est sous votre emprise, vous pouvez donner l'ordre d'aveugler définitivement §Y[Root.GetTitledFirstName]§! avant de [Root.GetLeLa] libérer. Cette tradition duuryaatri est commode pour se débarrasser des rivaux politiques sans les tuer purement et simplement. Car quelqu'un d'aveugle n'offre plus aucun danger pour le trône.;Da [Root.GetSheHe] Euer Gefangener ist, habt Ihr das Recht, §Y[Root.GetTitledFirstName]§! das Augenlicht zu nehmen und [Root.GetHerHim] in die Freiheit zu entlassen. Dies ist die traditionelle duuryaatrische Art, mit politischen Rivalen umzugehen, ohne sie zu ;;Cuando [Root.GetSheHe] es preso tuyo, puedes ordenar hacer quedar permanente ciego a §Y[Root.GetTitledFirstName]§! y luego poner en libertad a [Root.GetHerHim]. Esto es un modo duuryaatri común de tratar rivales políticos sin matarles abiertamente, ya que un [Root.GetManWoman] ciego es de poca amenaza para el trono.;;;;;;;;;x
+
+vassal_bestow_grace_decision;Bestow Grace;;;;;;;;;;;;;x
+vassal_bestow_grace_decision_desc;Bestow your grace upon your vassal [Root.GetTitledFirstName] at the cost of your own prestige. This will improve [Root.GetHerHis] opinion of you.;;;;;;;;;;;;;x
+
+form_bhaarat;Found Bhaaratiya Empire;;;;;;;;;;;;;x
+form_bhaarat_desc;Unify the lands of the Bhaaratiya folk;;;;;;;;;;;;;x

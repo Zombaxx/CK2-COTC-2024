@@ -12,7 +12,7 @@ b_ramanujan_v = temple
 
 # Misc
 culture = indo_mukta # Initial culture
-religion = cyberneticist
+religion = eternal_way
 
 # History
 1.1.1 = {

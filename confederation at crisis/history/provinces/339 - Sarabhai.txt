@@ -12,7 +12,7 @@ b_sarabhai_vi_d = temple
 
 # Misc
 culture = indo_mukta # Initial culture
-religion = cyberneticist
+religion = eternal_way
 
 # History
 1.1.1 = {

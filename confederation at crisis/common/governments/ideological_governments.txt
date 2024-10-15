@@ -86,15 +86,22 @@ feudal_governments = {
         }
 		potential = {
 			OR = {
+				religion = eternal_way
 				religion = neo_feudal
 				any_liege = {
-					religion = neo_feudal
+					OR = {
+						religion = eternal_way
+						religion = neo_feudal
+					}
 				}
 			}
             OR = {
 				independent = yes
 				any_liege = {
-					religion = neo_feudal
+					OR = {
+						religion = eternal_way
+						religion = neo_feudal
+					}
 				}
 				has_game_started = no
             }
@@ -114,7 +121,6 @@ feudal_governments = {
 		vassal_call_to_arms = {
             neofeudal_government
 		}
-
 
 		barons_need_dynasty = no
 		can_build_tribal = no

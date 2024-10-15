@@ -9,3 +9,25 @@ k_yamaguchi_gumi = {
 	title_female = "Kumicho"
 	capital = 428
 }
+
+e_bhaarat = {
+	allow = { always = no }
+	color = { 0 140 0 }
+	color2 = { 255 255 255 }
+
+	title = "Samraat"
+	title_female = "Samraat"
+	capital = 348 # Nai Dunya
+}
+
+k_loyalist = {
+	allow = { always = no }
+	color = { 55 255 255 }
+	color2 = { 255 255 255 }
+
+	short_name = yes
+
+	title = "Leader"
+	title_female = "Leader"
+	capital = 340 # Chandrasekhar
+}

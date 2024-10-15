@@ -1,6 +1,6 @@
 2998.1.1 = {
-	liege = "k_mukta_duniya"
-	law = succ_open_elective_crisis
+	liege = "k_loyalist"
+	law = succ_primogeniture
 	effect = {
 		add_law = true_cognatic_succession
 		holder_scope = {
@@ -11,9 +11,10 @@
 			}
 		}
 	}
-	law = local_term_length_2
 	holder = 1107116 # Kavitha Karimi
 }
-2998.1.1 = {
-	effect = { set_title_flag = flag_election_cycle }
+
+3008.1.1 = {
+	liege = "k_mukta_duniya"
+	holder = 1216139 # Hari Trivedi
 }

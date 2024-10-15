@@ -6,13 +6,13 @@ title = c_vn_381
 # Settlements
 max_settlements = 5
 
+b_vn_381_outpost = castle
 b_vn_381 = city
 b_vn_381_observatory = temple
-b_vn_381_outpost = castle
 
 
 # Misc
-culture = indo_tarkan # Initial culture
+culture = indo_tarkan  # Initial culture
 religion = machine_cultist
 
 1.1.1 = {

@@ -742,7 +742,7 @@ orion_group = {
 		mother_name_chance = 0	
 	}
 }
-indo_aryan_group = {
+crisis_indian_group = {
 	graphical_cultures = { muktanigfx }	
 	indo_mukta = {
 		graphical_cultures = { muktanigfx }
@@ -805,6 +805,96 @@ indo_aryan_group = {
 		pat_grm_name_chance = 40	
 		mat_grm_name_chance = 40	
 		mother_name_chance = 0	
+	}
+	indo_duuryaatri = {
+		graphical_cultures = { muktanigfx }
+		color = { 1 0.71 0.75 }
+		male_names = {
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind Abhinav
+			Arnav Atharv Anoop Aaryan Arjun Akhil Ayush Andhi Arunachalam
+		    Abhishek Ajith Ananth Anbu Anil Azhagan Arumugam
+			Arun Aruna Ashish Ashok Ashwin Arasan 
+			Bhushan Bala Bhaarath Balaji Balasubramaniam
+			Chandra Chandrasekhar
+			Deepak Devansh Dhruv Dileep Dinesh Durai
+			Gaurav Gokul Ganesh_Ganesh Gopal Ganesan_Ganesh Gautham
+			Gopalakrishna_Gopalakrishna Gopalakrishnan_Gopalakrishna 
+			Hari Harish Hemant
+			Inder Ishan
+			Jeevan Jatin Jaya Jothi Jagadishwara Jayaraj
+			Kartik Kapil Kumar_Kumar Krishna_Krishna Kamal Kannan
+			Karthikeyan Kiran Kishor Kumaran_Kumar Kathiravan
+			Krishnamoorthi Krishnan_Krishna Krishnakumar
+			Lakshman
+			Mohit Manish Manoj Madhu Mahesh Mani Mohan Murali Murugan
+			Manickam Mohanbabu
+			Naveen Nikhil Nitin
+			Nanda Narayan_Narayan Naaraayann_Narayan Naveen Nikhil Nirmal
+			Nagendran Nagesh Nakkeeran Nandini Narendra Nagaraj
+			Narasimha_Narasimha Narasimman_Narasimha
+			Padma Prabhakar Prabhu Pradeep Prakash Prasad Prasanna Prashanth
+			Praveen Prem Palanivel Pandian Puspa
+			Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit
+			Rahul Raj_Raj Rajeev Raju Ram_Rama Rama_Rama
+			Rashmi Rathna Rajan_Raj Rajarajan Rajendra Rajshekhar_Rajasekaran
+			Rajasekaran_Rajasekaran Rajaselvan Ramanan Ramanathan Ranganathan
+			Rudresh
+			Omkar
+			Sagnik Salman Sahil Shashank Sai Saini Shiv_Shiva Shaurya
+			Sandeep Sanjay Sekar Shankar Shyam Shiva_Shiva Sivan_Shiva Sree
+			Sudarshan Sundar Sunil Suresh Suraj Surya Santosh Subramaniam
+			Saravanan Sathish Sathishkumar Selvam Senthil Senthilkumar
+			Sethupathi Sudharshan Surendiran Siddharth
+			Palash Pranav Pradeep Prashant
+			Tejas Tufani
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay
+			Vasu Venkata Vijay Vikram Vimal Vinay
+			Vairamuthu Vaishnav Veerasami Venkatesh Venkatraman
+			Venugopal Vignesh Vigneshwaran Vinothan
+			Yash
+			Zeal	
+		}
+		female_names = {
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva
+			Aishwarya Anuradha Arasi Azhagi
+			Aarthi Aishwarya Amala Anjali Aparna Archana Aruna Anitha
+			Bala Bhagwati Bhagirathy
+			Chandra Chandrika Chandini Chithra 
+			Deepa Deepika Devi Divya Durga Devasena Diya
+			Gayatri Gauri Geeta
+			Hema Harini 
+			Indira Indumati
+			Jaya Jayanti Jyoti Jayasree
+			Kala Kali Kalpana Kamala Kamatchi Kanchana Karthika Kasi
+			Kavita Kiran Kalaivani Kalaiarasi Kavya Korravai Khushi Kirti
+			Lakshmi Lalitha Lavanya Leela Leelavati
+			Madhu Meena Meera Manimegalai Meenakshi Miti
+			Nalini Neela Nikitha Nirmala Nisha Nithya Nandini Navya Nishi
+			Nilana
+			Padma Padmini Pallavi Pooja Poornima Praveena Preeti Prema
+			Priya Priyanka Puja Purnima Parvati Priyadarshini Puspa
+			Pari Pihu Priyanka Prachi
+			Rajeshwari Ramani Ramya Revati Radha Radhika Rashmi Rathna
+			Riya Rhea Ridhi Rishika
+			Sandhya Sarala Sita Seethai Shanti Sharmila Sheela Shyamala Sree
+			Sreedevi Sreenivas Sunita Swathi Sangeeta Saraswati Selvi
+			Shruti Sivalogini Suchitra Sumitra Shreya Sana Saanvi Sneha
+			Samaya
+			Thamarai Thamizhselvi Thulasi
+			Uma Usha
+			Vaishnavi Varsha Vidya Vijaya Vimala Veena Vijayalakshmi Vennila
+			Yamuna Yazhini
+		}
+		#dukes_called_kings = yes	
+		from_dynasty_prefix = "na "	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0
+		
+		disinherit_from_blinding = yes
 	}
 }
 avalonian_group = {

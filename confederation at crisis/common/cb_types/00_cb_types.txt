@@ -62,28 +62,25 @@ claim = {
 					holder_scope = { has_regent = yes }
 					AND = {
 						ROOT = {
-							is_female = no
-						}
-						holder_scope = {
-							is_female = yes
-							NOR = {
-								has_law = true_cognatic_succession
-								has_law = enatic_cognatic_succession
-								has_law = enatic_succession
-								has_game_rule = { name = gender value = all }
+							OR = {
+								is_female = no
+								has_law = gender_status_2
+								has_law = gender_status_3
+								has_law = gender_status_4
+								#has_religion_feature = religion_matriarchal
+								#has_religion_feature = religion_equal
+								#has_religion_feature = religion_feature_bon
 							}
 						}
-					}
-					AND = {
-						ROOT = {
-							is_female = yes
-						}
 						holder_scope = {
-							is_female = no
+							is_female = yes
 							NOR = {
-								has_law = true_cognatic_succession
-								has_law = cognatic_succession
-								has_law = agnatic_succession
+								#has_religion_feature = religion_matriarchal
+								#has_religion_feature = religion_equal
+								#has_religion_feature = religion_feature_bon
+								has_law = gender_status_2
+								has_law = gender_status_3
+								has_law = gender_status_4
 								has_game_rule = { name = gender value = all }
 							}
 						}
@@ -303,29 +300,23 @@ other_claim = {
 					holder_scope = { has_regent = yes }
 					AND = {
 						ROOT = {
-							is_female = no
-						}
-						holder_scope = {
-							is_female = yes
-							NOR = {
-								has_law = true_cognatic_succession
-								has_law = enatic_cognatic_succession
-								has_law = enatic_succession
-								has_game_rule = { name = gender value = all }
+							OR = {
+								is_female = no
+								has_law = gender_status_2
+								has_law = gender_status_3
+								has_law = gender_status_4
 							}
 						}
-					}
-					AND = {
-						ROOT = {
-							is_female = yes
-						}
 						holder_scope = {
-							is_female = no
+							is_female = yes
 							NOR = {
-								has_law = true_cognatic_succession
-								has_law = cognatic_succession
-								has_law = agnatic_succession
-								has_game_rule = { name = gender value = all }
+								has_law = gender_status_2
+								has_law = gender_status_3
+								has_law = gender_status_4
+								has_game_rule = {
+									name = gender
+									value = all
+								}
 							}
 						}
 					}
@@ -663,29 +654,23 @@ claim_on_liege = {
 					holder_scope = { has_regent = yes }
 					AND = {
 						ROOT = {
-							is_female = no
-						}
-						holder_scope = {
-							is_female = yes
-							NOR = {
-								has_law = true_cognatic_succession
-								has_law = enatic_cognatic_succession
-								has_law = enatic_succession
-								has_game_rule = { name = gender value = all }
+							OR = {
+								is_female = no
+								has_law = gender_status_2
+								has_law = gender_status_3
+								has_law = gender_status_4
 							}
 						}
-					}
-					AND = {
-						ROOT = {
-							is_female = yes
-						}
 						holder_scope = {
-							is_female = no
+							is_female = yes
 							NOR = {
-								has_law = true_cognatic_succession
-								has_law = cognatic_succession
-								has_law = agnatic_succession
-								has_game_rule = { name = gender value = all }
+								has_law = gender_status_2
+								has_law = gender_status_3
+								has_law = gender_status_4
+								has_game_rule = {
+									name = gender
+									value = all
+								}
 							}
 						}
 					}
@@ -1315,29 +1300,23 @@ other_claim_on_liege = {
 					holder_scope = { has_regent = yes }
 					AND = {
 						ROOT = {
-							is_female = no
-						}
-						holder_scope = {
-							is_female = yes
-							NOR = {
-								has_law = true_cognatic_succession
-								has_law = enatic_cognatic_succession
-								has_law = enatic_succession
-								has_game_rule = { name = gender value = all }
+							OR = {
+								is_female = no
+								has_law = gender_status_2
+								has_law = gender_status_3
+								has_law = gender_status_4
 							}
 						}
-					}
-					AND = {
-						ROOT = {
-							is_female = yes
-						}
 						holder_scope = {
-							is_female = no
+							is_female = yes
 							NOR = {
-								has_law = true_cognatic_succession
-								has_law = cognatic_succession
-								has_law = agnatic_succession
-								has_game_rule = { name = gender value = all }
+								has_law = gender_status_2
+								has_law = gender_status_3
+								has_law = gender_status_4
+								has_game_rule = {
+									name = gender
+									value = all
+								}
 							}
 						}
 					}
@@ -5992,6 +5971,7 @@ muslim_invasion = { #COTC Ideological Invasion
 				religion = bio_directionist
 				religion = machine_cultist
 			}
+			NOT = { religion = eternal_way }
 			# These use 'tribal_invasion' instead:
 			NOR = {
 				is_nomadic = yes
@@ -6060,7 +6040,8 @@ muslim_invasion = { #COTC Ideological Invasion
 				religion = astrist
 				religion = bio_directionist
 				religion = machine_cultist
-				}
+			}
+			NOT = { religion = eternal_way }
 		}
 		FROM = { NOT = { religion = ROOT } }
 	}

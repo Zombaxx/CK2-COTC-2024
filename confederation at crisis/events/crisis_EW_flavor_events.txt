@@ -1,0 +1,1536 @@
+
+namespace = EW_flavor
+
+narrative_event = {
+	id = EW_flavor.100
+	title = TITLE_EW_visit_shrine_start
+	desc = EVTDESC_EW_visit_shrine_start
+	picture = GFX_evt_city
+	is_triggered_only = yes
+
+	religion = eternal_way
+
+	immediate = {
+		add_trait = EW_on_pilgrimage
+	}
+
+	option = {
+	    name = OPT_A_visit_vn_381
+		trigger = {
+			completely_controls = c_vn_381
+			#NOT = { has_character_flag = visited_vn_381 }
+		}
+		narrative_event = { id = EW_flavor.110 days = 10 }
+	}
+	option = {
+	    name = OPT_B_visit_vn_732
+		trigger = {
+			completely_controls = c_vn_732
+			#NOT = { has_character_flag = visited_vn_732 }
+		}
+		narrative_event = { id = EW_flavor.120 days = 10 }
+	}
+	option = {
+	    name = OPT_C_visit_vn_1780
+		trigger = {
+			completely_controls = c_vn_1780
+			#NOT = { has_character_flag = visited_vn_1780 }
+		}
+		narrative_event = { id = EW_flavor.130 days = 10 }
+	}
+	option = {
+	    name = OPT_D_visit_cancel
+		piety = -10
+		clr_character_flag = flag_EW_visiting_shrine
+		clr_character_flag = recent_minor_decision
+		clr_character_flag = do_not_disturb
+		remove_trait = EW_on_pilgrimage
+	}
+}
+
+narrative_event = {
+	id = EW_flavor.110
+	
+	title = TITLE_visit_vn_381_journey
+	desc = EVTDESC_visit_vn_381_journey
+	picture = GFX_evt_india_temple
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+	    name = OPT_A_visit_vn_381_journey
+		wealth = -20
+		piety = 20
+		narrative_event = { id = EW_flavor.111 days = 10 }
+	}
+	option = {
+	    name = OPT_B_visit_vn_381_journey
+		narrative_event = { id = EW_flavor.111 days = 10 }
+	}
+}
+
+narrative_event = {
+	id = EW_flavor.111
+	
+	title = TITLE_visit_vn_381_reached
+	desc = EVTDESC_visit_vn_381_reached
+	picture = GFX_evt_hindu_temple_interior
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+	    name = OPT_A_visit_vn_381_reached
+		random_list = {
+			20 = { add_trait = humble }
+			80 = { }
+		}
+		narrative_event = { id = EW_flavor.112 days = 10 }
+	}
+}
+
+narrative_event = {
+	id = EW_flavor.112
+	
+	title = TITLE_visit_vn_381_end
+	desc = EVTDESC_visit_vn_381_end
+	picture = GFX_evt_hindu_temple_interior
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+	    name = OPT_A_visit_vn_381_end
+		piety = 200
+		random_list = {
+			20 = { add_trait = spiritual }
+			10 = { add_trait = radical }
+			70 = { }
+		}
+		#set_character_flag = visited_vn_381
+		character_event = { id = EW_flavor.140 }
+	}
+}
+
+narrative_event = {
+	id = EW_flavor.120
+	
+	title = TITLE_visit_vn_732_journey
+	desc = EVTDESC_visit_vn_732_journey
+	picture = GFX_evt_pilgrims_epic_journey
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+	    name = OPT_A_visit_vn_732_journey
+		narrative_event = { id = EW_flavor.121 days = 10 }
+	}
+	option = {
+	    name = OPT_B_visit_vn_732_journey
+		random_list = {
+			30 = { add_trait = diligent }
+			15 = { add_trait = wounded }
+			55 = { }
+		}
+		narrative_event = { id = EW_flavor.121 days = 10 }
+	}
+}
+
+narrative_event = {
+	id = EW_flavor.121
+	
+	title = TITLE_visit_vn_732_reached
+	desc = EVTDESC_visit_vn_732_reached
+	picture = GFX_evt_meditating_in_temple
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+	    name = OPT_A_visit_vn_732_reached
+		random_list = {
+			20 = { add_trait = spiritual }
+			10 = { add_trait = radical }
+			70 = { }
+		}
+		narrative_event = { id = EW_flavor.122 days = 10 }
+	}
+}
+
+narrative_event = {
+	id = EW_flavor.122
+	
+	title = TITLE_visit_vn_732_end
+	desc = EVTDESC_visit_vn_732_end
+	picture = GFX_evt_meditating_in_temple
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+	    name = OPT_A_visit_vn_732_end
+		piety = 200
+		random_list = {
+			20 = { add_trait = spiritual }
+			10 = { add_trait = radical }
+			70 = { }
+		}
+		#set_character_flag = visited_vn_732
+		character_event = { id = EW_flavor.140 }
+	}
+}
+
+narrative_event = {
+	id = EW_flavor.130
+	
+	title = TITLE_visit_vn_1780_journey
+	desc = EVTDESC_visit_vn_1780_journey
+	picture = GFX_evt_pilgrims_epic_journey
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+	    name = OPT_A_visit_vn_1780_journey
+		narrative_event = { id = EW_flavor.131 days = 10 }
+	}
+	option = {
+	    name = OPT_B_visit_vn_1780_journey
+		narrative_event = { id = EW_flavor.132 days = 10 }
+	}
+}
+
+narrative_event = {
+	id = EW_flavor.131
+	
+	title = TITLE_visit_vn_1780_reached_1
+	desc = EVTDESC_visit_vn_1780_reached_1
+	picture = GFX_evt_pilgrims_epic_journey
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+	    name = OPT_A_visit_vn_1780_reached_1
+		random_list = {
+			20 = { add_trait = spiritual }
+			10 = { add_trait = radical }
+			70 = { }
+		}
+		narrative_event = { id = EW_flavor.133 days = 10 }
+	}
+}
+
+narrative_event = {
+	id = EW_flavor.132
+	
+	title = TITLE_visit_vn_1780_reached_2
+	desc = EVTDESC_visit_vn_1780_reached_2
+	picture = GFX_evt_pilgrims_epic_journey
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+	    name = OPT_A_visit_vn_1780_reached_2
+			random_list = {
+				30 = { add_trait = gregarious }
+				70 = { }
+			}
+		narrative_event = { id = EW_flavor.133 days = 10 }
+	}
+	option = {
+	    name = OPT_B_visit_vn_1780_reached_2
+			random_list = {
+				30 = { add_trait = shy }
+				70 = { }
+			}
+		narrative_event = { id = EW_flavor.133 days = 10 }
+	}
+	option = {
+	    name = OPT_C_visit_vn_1780_reached_2
+			random_list = {
+				30 = { add_trait = gamer }
+				70 = {
+				}
+			}
+		narrative_event = { id = EW_flavor.133 days = 10 }
+	}
+}
+
+narrative_event = {
+	id = EW_flavor.133
+	
+	title = TITLE_visit_vn_1780_end
+	desc = EVTDESC_visit_vn_1780_end
+	picture = GFX_evt_hellenic_temple
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+	    name = OPT_A_visit_vn_1780_end
+		piety = 200
+		random_list = {
+			20 = { add_trait = spiritual }
+			10 = { add_trait = radical }
+			70 = { }
+		}
+		#set_character_flag = visited_vn_1780
+		character_event = { id = EW_flavor.140 }
+	}
+}
+
+#Default cleanup event
+character_event = {
+	id = EW_flavor.140
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+
+	option = {
+		ROOT = {
+			set_character_flag = flag_EW_visit_shrine_cooldown
+			clr_character_flag = flag_EW_visiting_shrine
+			clr_character_flag = recent_minor_decision
+			clr_character_flag = do_not_disturb
+			remove_trait = EW_on_pilgrimage
+			if = {
+				limit = {
+					NOT = { trait = EW_pilgrim }
+					has_character_flag = flag_EW_visited_shrine
+				}
+				character_event = { id = EW_flavor.141 days = 3 }
+			}
+			if = {
+				limit = {
+					NOT = { trait = EW_pilgrim }
+					NOT = { has_character_flag = flag_EW_visited_shrine }
+				}
+				set_character_flag = flag_EW_visited_shrine	
+			}
+		}
+	}
+}
+
+character_event = {
+	id = EW_flavor.141
+	
+	desc = EVTDESC_EW_visit_shrine_pilgrim
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	religion = eternal_way
+	has_character_flag = flag_EW_visited_shrine
+
+	option = {
+	    name = OPT_A_EW_visit_shrine_pilgrim
+		add_trait = EW_pilgrim
+	}
+}
+
+#Cleanup event due to war or imprisonment
+character_event = {
+	id = EW_flavor.150
+
+	desc = EVTDESC_EW_visit_shrine_interrupted
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	religion = eternal_way
+	has_character_flag = flag_EW_visiting_shrine
+	trait = EW_on_pilgrimage
+	
+	option = {
+		name = OPT_A_EW_visit_shrine_interrupted
+		clr_character_flag = flag_EW_visiting_shrine
+		clr_character_flag = recent_minor_decision
+		clr_character_flag = do_not_disturb
+		remove_trait = EW_on_pilgrimage
+		clear_delayed_event = { id = EW_flavor.110 }
+		clear_delayed_event = { id = EW_flavor.111 }
+		clear_delayed_event = { id = EW_flavor.112 }
+		clear_delayed_event = { id = EW_flavor.120 }
+		clear_delayed_event = { id = EW_flavor.121 }
+		clear_delayed_event = { id = EW_flavor.122 }
+		clear_delayed_event = { id = EW_flavor.130 }
+		clear_delayed_event = { id = EW_flavor.131 }
+		clear_delayed_event = { id = EW_flavor.132 }
+	}
+}
+
+province_event = {
+	id = EW_flavor.200
+	desc = "EVTDESC_EW_increased_pilgrimage"
+	picture = GFX_evt_nomads
+	border = GFX_event_normal_frame_economy
+	trigger = {
+		has_province_modifier = EW_pilgrimage_site
+		NOT = { has_province_modifier = EW_increased_pilgrimage }
+	}
+
+	mean_time_to_happen = {
+		months = 320
+		modifier = {
+			factor = 0.8
+			any_neighbor_province = { religion = eternal_way }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { religion = eternal_way }
+		}
+	}
+
+	option = {
+		name = "OPT_A_EW_increased_pilgrimage"
+		add_province_modifier = { name = EW_increased_pilgrimage duration = 1095 }
+		owner = {
+			wealth = -50
+			if = {
+				limit = { religion = eternal_way }
+				piety = 50
+			}
+			if = {
+				limit = { NOT = { religion = eternal_way } }
+				prestige = 50
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				owner = { 
+					religion = eternal_way
+				}
+			}
+			modifier = {
+				factor = 1.5
+				owner = { 
+					religion = eternal_way
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 1.5
+				owner = { 
+					religion = eternal_way
+					trait = spiritual
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = { 
+					religion = eternal_way
+					trait = EW_pilgrim
+				}
+			}
+			modifier = {
+				factor = 0.5
+				owner = {
+					NOT = { religion = eternal_way }
+				}
+			}
+			modifier = {
+				factor = 1.5
+				owner = { 
+					NOT = { religion = eternal_way }
+					trait = open_minded
+				}
+			}
+			modifier = {
+				factor = 0.5
+				owner = { 
+					NOT = { religion = eternal_way }
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 0.5
+				owner = { 
+					NOT = { religion = eternal_way }
+					trait = close_minded
+				}
+			}
+		}
+	}
+	option = {
+		name = "OPT_B_EW_increased_pilgrimage"
+		owner = {
+			if = {
+				limit = { religion = eternal_way }
+				piety = -50
+			}
+			if = {
+				limit = { NOT = { religion = eternal_way } }
+				prestige = -50
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+
+province_event = {
+	id = EW_flavor.210
+	desc = "EVTDESC_EW_impious_ruler"
+	picture = GFX_evt_protest
+	border = GFX_event_normal_frame_economy
+	trigger = {
+		religion = eternal_way
+		owner = { religion = eternal_way }
+		NOT = { owner = { piety = 300 } }
+		NOT = { has_province_modifier = EW_arrested_dissenter }
+	}
+
+	mean_time_to_happen = {
+		months = 960
+		modifier = {
+			factor = 0.6
+			NOT = { owner = { piety = 100 } }
+		}
+		modifier = {
+			factor = 0.3
+			NOT = { owner = { piety = 1 } }
+		}
+	}
+
+	option = {
+		name = "OPT_A_EW_impious_ruler"
+		owner = {
+			prestige = -50
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				owner = {
+					trait = arbitrary
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					trait = radical
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			trait = arbitrary
+		}
+		name = "OPT_B_EW_impious_ruler"
+		add_province_modifier = { name = EW_arrested_dissenter duration = 1095 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				owner = {
+					trait = radical
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			trait = radical
+		}
+		name = "OPT_C_EW_impious_ruler"
+		owner = {
+			prestige = -25
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				owner = {
+					trait = arbitrary
+				}
+			}
+		}
+	}
+}
+
+province_event = {
+	id = EW_flavor.220
+	desc = "EVTDESC_EW_province_conversion"
+	picture = GFX_evt_nomads
+	border = GFX_event_normal_frame_economy
+	trigger = {
+		NOT = { religion = eternal_way }
+		NOT = {
+			owner = { has_character_modifier = EW_restricted_missionaries }
+		}
+		any_neighbor_province = { religion = eternal_way }
+	}
+
+	mean_time_to_happen = {
+		months = 1600
+		modifier = {
+			factor = 0.5
+			owner = { religion = eternal_way }
+		}
+	}
+
+	option = {
+		name = "OPT_A_EW_province_conversion"
+		religion = eternal_way
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				owner = { 
+					religion = eternal_way
+				}
+			}
+			modifier = {
+				factor = 0.5
+				owner = { 
+					NOT = { religion = eternal_way }
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					NOT = { religion = eternal_way }
+					trait = radical
+				}
+			}
+		}
+	}
+	option = {
+		name = "OPT_B_EW_province_conversion"
+		trigger = {
+			owner = { NOT = { religion = eternal_way } }
+		}
+		owner = {
+			add_character_modifier = {
+				name = EW_restricted_missionaries duration = 3650
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = "OPT_C_EW_province_conversion"
+		trigger = {
+			owner = {
+				NOR = {
+					religion = eternal_way
+					trait = radical
+				}
+				trait = open_minded
+			}
+		}
+		religion = eternal_way
+		owner = { religion = eternal_way }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				owner = {
+					NOT = { religion = eternal_way }
+					trait = radical
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = EW_flavor.300
+	desc = EVTDESC_EW_uncrowned
+	picture = GFX_evt_throne_room_indo_aryan_group
+
+	trigger = {
+		has_dlc = "Holy Fury"
+		is_landed = yes
+		OR = {
+			AND = {
+				independent = yes
+				higher_real_tier_than = BARON
+			}
+			any_demesne_title = { higher_tier_than = COUNT }
+		}
+		government = neofeudal_government
+		religion = eternal_way
+		NOR = {
+			trait = EW_crowned
+			trait = EW_uncrowned
+			has_character_flag = flag_EW_coronation
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+	    name = OPT_A_EW_uncrowned
+		add_trait = EW_uncrowned
+		prestige = -10
+	}
+}
+
+character_event = {
+	id = EW_flavor.310
+	desc = {
+		trigger = {
+			war = no
+		}
+		text = EVTDESC_coronation_A_310
+	}
+	desc = {
+		trigger = {
+			war = yes
+		}
+		text = EVTDESC_coronation_B_310
+	}
+
+	picture = GFX_evt_throne_room_indo_aryan_group
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		government = neofeudal_government
+		religion = eternal_way
+	}
+	is_triggered_only = yes
+	
+	immediate = {
+		save_event_target_as = coronation_ruler
+		add_character_modifier = {
+			name = out_traveling
+			duration = 66
+			hidden = yes #Make the character inaccessible, the ruler himself is not actually out, he's still at court.
+		}
+	}
+
+	option = {
+		name = OPT_A_coronation_310
+		trigger = { war = no }
+		set_character_flag = flag_extravagant_coronation
+		if = { 
+			limit = { ai = no } #Cheaty AI...
+			scaled_wealth = { value = -1 min = -250 max = -1000 }
+		}
+		hidden_tooltip = {
+			character_event = { id = EW_flavor.311 days = 11 } #Ceremony actually starts
+		}
+		ai_chance = { 
+			factor = 30 
+			modifier = { 
+				factor = 0.5
+				NOT = { scaled_wealth = 1 } 
+			} 
+			modifier = { 
+				factor = 0.5
+				NOT = { scaled_wealth = 0.5 } 
+			} 
+			modifier = { 
+				factor = 0.25
+				NOT = { wealth = 0 } 
+			} 
+			modifier = { 
+				factor = 0
+				NOT = { wealth = -100 } 
+			} 
+			modifier = { 
+				factor = 3
+				tier = EMPEROR
+			} 
+			modifier = { 
+				factor = 0.75
+				trait = greedy
+			} 
+		}
+	}
+	option = {
+		name = OPT_B_coronation_310
+		trigger = { war = no }
+		set_character_flag = flag_regular_coronation
+		hidden_tooltip = {
+			character_event = { id = EW_flavor.311 days = 11 } #Ceremony actually starts
+		}
+		if = { 
+			limit = { ai = no } #Cheaty AI...
+			scaled_wealth = { value = -0.5 min = -100 max = -500 }
+		}
+		ai_chance = { 
+			factor = 40 
+			modifier = { 
+				factor = 0.5
+				NOT = { scaled_wealth = 0.5 } 
+			} 
+			modifier = { 
+				factor = 0.5
+				NOT = { scaled_wealth = 0.25 } 
+			} 
+			modifier = { 
+				factor = 0.25
+				NOT = { wealth = 0 } 
+			} 
+			modifier = { 
+				factor = 0
+				NOT = { wealth = -100 } 
+			} 
+			modifier = { 
+				factor = 0.5
+				tier = EMPEROR
+			} 
+			modifier = { 
+				factor = 0.75
+				trait = greedy
+			} 
+		}
+	}
+	option = {
+		name = {
+			text = OPT_C_coronation_310
+			trigger = {
+				war = no
+			}
+		}
+		name = {
+			text = OPT_D_coronation_310
+			trigger = {
+				war = yes
+			}
+		}
+		set_character_flag = flag_secluded_coronation
+		if = { 
+			limit = { ai = no } #Cheaty AI...
+			scaled_wealth = { value = -0.05 min = -10 max = -150 }
+		}
+		hidden_tooltip = {
+			character_event = { id = EW_flavor.311 days = 11 } #Ceremony actually starts
+		}
+		ai_chance = {
+			factor = 30 
+			modifier = { 
+				factor = 0.25
+				NOT = { wealth = 0 } 
+			} 
+			modifier = { 
+				factor = 3
+				NOT = { wealth = -100 } 
+			} 
+			modifier = { 
+				factor = 0.1
+				tier = EMPEROR
+			} 
+			modifier = { 
+				factor = 1.5
+				trait = greedy
+			}
+		}
+	}
+}
+
+character_event = {
+	id = EW_flavor.311
+	desc = {
+		trigger = {
+			has_character_flag = flag_extravagant_coronation 
+			war = no
+		}
+		text = EVTDESC_coronation_A_311
+	}
+	desc = {
+		trigger = {
+			has_character_flag = flag_regular_coronation
+			war = no
+		}
+		text = EVTDESC_coronation_B_311
+	}
+	desc = {
+		trigger = {
+			has_character_flag = flag_secluded_coronation
+			war = no
+		}
+		text = EVTDESC_coronation_C_311
+	}
+
+	desc = {
+		trigger = {
+			war = yes
+		}
+		text = EVTDESC_coronation_D_311
+	}
+
+	picture = GFX_evt_magnificent_castle
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		government = neofeudal_government
+		religion = eternal_way
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = OPT_A_coronation_311
+		hidden_tooltip = { character_event = { id = EW_flavor.312 days = 32 } } #THE CORONATION ITSELF
+	}
+}
+
+character_event = {
+	id = EW_flavor.312
+	title = TITLE_coronation_312
+	desc = {
+		trigger = {
+			ROOT = { 
+				war = no
+				NOT = { has_character_flag = flag_secluded_coronation }
+				age = 18
+			}
+		}
+		text = EVTDESC_coronation_A_312		# Localization for any adult ruler crowned by a Bishop or Priest (not in a barn).
+		picture = GFX_evt_a_crowning_ceremony
+	}
+	desc = {
+		trigger = {
+			ROOT = { 
+				war = no
+				NOT = { has_character_flag = flag_secluded_coronation }
+				NOT = { age = 18 }
+			}
+		}
+		text = EVTDESC_coronation_B_312		# Localization for any child ruler crowned by a Bishop or Priest (not in a barn).
+		picture = GFX_evt_a_crowning_ceremony
+	}
+	desc = {
+		trigger = {
+			ROOT = { 
+				war = no
+				has_character_flag = flag_secluded_coronation
+			}
+		}
+		text = EVTDESC_coronation_C_312		# Localization for any ruler crowned by a Bishop or Priest in a barn.
+		picture = GFX_evt_a_crowning_ceremony
+	}
+	desc = {
+		trigger = {
+			ROOT = { 
+				war = yes
+			}
+		}
+		text = EVTDESC_coronation_D_312		# War Coronation description.
+		picture = GFX_evt_mounted_combat_day_hf
+	}
+
+	picture = GFX_evt_found_hre
+	border = GFX_event_normal_frame_religion
+	hide_new = yes
+
+	trigger = {
+		event_target:coronation_ruler = { 
+			religion = eternal_way
+			NOT = { trait = EW_crowned }
+		}
+		# event_target:coronation_priest = { is_alive = yes } #Check if the priest supposed to be crowning you is still alive.
+		event_target:coronation_ruler = { is_alive = yes } #Check if the ruler supposed to be crowned is still alive. (check for guests)
+		event_target:coronation_ruler = { character = ROOT }
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_character_flag = flag_secluded_coronation
+				war = no
+			}
+			sound_effect = coronation_barn
+		}
+		else_if = {
+			limit = {
+				has_character_flag = flag_extravagant_coronation
+			}
+			sound_effect = coronation_extravagant
+		}
+		else = {
+			sound_effect = coronation_normal
+		}
+	}
+	option = {
+		name = OPT_A_coronation_312
+		#Assign proper trait.
+		hidden_tooltip = {
+			remove_trait = EW_uncrowned
+		}
+		add_trait = EW_crowned
+		random_list = {
+			10 = {
+				add_trait = just
+			}
+			90 = {
+			}
+		}
+		#Assign possible modifier.
+		if = { 
+			limit = { 
+				war = no
+				has_character_flag = flag_secluded_coronation
+			} 
+			add_character_modifier = {
+				name = crowned_in_barn
+				days = -1
+			}
+		}
+		if = { 
+			limit = { 
+				war = yes
+				has_character_flag = flag_secluded_coronation 
+			} 
+			add_character_modifier = {
+				name = crowned_in_war
+				days = -1
+			}
+		}
+		if = { 
+			limit = { 
+				has_character_flag = flag_extravagant_coronation 
+			} 
+			add_character_modifier = {
+				name = extravagant_coronation
+				days = 7300
+			}
+		}
+		ai_chance = { 	
+			factor = 95		
+		}
+	}
+	after = {
+		clr_character_flag = flag_EW_coronation
+		clr_character_flag = flag_extravagant_coronation
+		clr_character_flag = flag_regular_coronation
+		clr_character_flag = flag_secluded_coronation
+		clr_character_flag = do_not_disturb
+	}
+}
+
+narrative_event = {
+    id = EW_flavor.400
+    desc = EVTDESC_EW_flavor_400
+    title = TITLE_EW_flavor_400
+    picture = GFX_evt_large_army
+    border = GFX_event_narrative_frame_religion
+    is_triggered_only = yes
+    has_dlc = "Holy Fury"
+    trigger = {
+    	religion = eternal_way
+    }
+
+    option = {
+        name = OPT_A_EW_flavor_400
+        trigger = {
+        	religion_group = FROM
+        }
+    }
+
+    option = {
+    	name = OPT_B_EW_flavor_400
+    	trigger = {
+    		NOT = {
+    			religion_group = FROM
+    		}
+    	}
+    }
+}
+
+## Monthly / Bi-monthly Dharmayuddh Preparations Events
+character_event = {
+    id = EW_flavor.410
+    hide_window = yes
+	is_triggered_only = yes
+    has_dlc = "Holy Fury"
+	
+    trigger = {
+		religion = eternal_way
+    	has_character_flag = flag_EW_dharmayuddh_active
+    	NOR = {
+			has_character_flag = flag_EW_dharmayuddh_declared
+			has_character_flag = flag_EW_dharmayuddh_prepared
+		}
+    }
+	
+    immediate = {
+    	random_list = {
+    		# Gain troops
+    		55 = { character_event = { id = EW_flavor.411 } }
+			
+    		# Come across a great Commander to lead your troops
+    		35 = { character_event = { id = EW_flavor.412 } }
+			
+    		# Boats
+    		10 = { character_event = { id = EW_flavor.413 } }
+    	}
+    }
+
+    after = {
+    	character_event = { id = EW_flavor.410 days = 30 random = 15 }
+    }
+}
+
+# Dharmayuddh Preparation Event - Gain troops
+character_event = {
+    id = EW_flavor.411
+    desc = EVTDESC_EW_flavor_411
+    picture = GFX_evt_large_army
+    border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+    has_dlc = "Holy Fury"
+
+    # Invest some gold 
+    option = {
+        name = OPT_A_EW_flavor_411
+		
+        scaled_wealth = { value = -0.25 min = -25 max = -250 }
+        custom_tooltip = {
+        	text = trained_troops_TT
+	        spawn_unit = {
+	            province = capital_scope
+	            home = capital_scope
+	            owner = ROOT
+	            troops = {
+	                light_infantry = { 300 300 }
+                    archers = { 300 300 }
+                }
+                earmark = dharmayuddh_event_troops
+                attrition = 1
+                maintenance_multiplier = 0
+                reinforces = no
+            }
+		}
+	}
+    # Invest a crazy amount of gold
+    option = {
+    	name = OPT_B_EW_flavor_411
+    	scaled_wealth = { value = -1 min = -100 max = -1000 }
+    	custom_tooltip = {
+        	text = trained_troops_TT
+	        spawn_unit = {
+	            province = capital_scope
+	            home = capital_scope
+	            owner = ROOT
+	            troops = {
+                    heavy_infantry = { 350 350 }
+                    archers = { 350 350 }
+                }
+                earmark = dharmayuddh_event_troops_elite
+                attrition = 1
+                maintenance_multiplier = 0
+                reinforces = no
+            }
+		}
+	}
+    # Invest no gold and hope things work out
+    option = {
+    	name = OPT_C_EW_flavor_411
+    	prestige = -25
+    	custom_tooltip = {
+        	text = trained_troops_TT
+	        spawn_unit = {
+	            province = capital_scope
+	            home = capital_scope
+	            owner = ROOT
+	            troops = {
+	                light_infantry = { 450 450 }
+                }
+                earmark = dharmayuddh_event_troops_rabble
+                attrition = 1
+                maintenance_multiplier = 0
+                reinforces = no
+            }
+		}
+    }
+}
+
+# Dharmayuddh Preparation Event - Great Commander ahoy!
+character_event = {
+    id = EW_flavor.412
+    desc = EVTDESC_EW_flavor_412
+    picture = GFX_evt_dueling_knights_hf
+    border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+    has_dlc = "Holy Fury"
+    trigger = {
+    
+    }
+
+    immediate = {
+    	hidden_tooltip = {
+    		create_character = {
+    			dynasty = random
+    			culture = ROOT
+    			religion = ROOT
+    			health = 5
+    			attributes = {
+    				martial = 4
+    				diplomacy = 0
+    				stewardship = 2
+    				intrigue = 0
+    				learning = 0
+    			}
+    		}
+
+    		new_character = {
+    			save_event_target_as = new_commander
+    			opinion = {
+    				modifier = opinion_loyal_servant
+    				who = ROOT
+    			}
+
+    			add_trait = brilliant_strategist
+    			# Some sort of huge
+    			random_list = {
+    				1 = {
+    					add_trait = strong
+    				}
+    				1 = {
+    					add_trait = robust
+    				}
+    			}
+    			# Some sort of lifestyle
+    			random_list = {
+    				1 = {
+    					add_trait = strategist
+    				}
+    				1 = {
+    					add_trait = duelist
+    				}
+    				1 = {
+    					add_trait = hunter
+    				}
+    			}
+    			# Some sort of good trait
+    			random_list = {
+    				1 = {
+    					add_trait = patient
+    				}
+    				1 = {
+    					add_trait = diligent 
+    				}
+    			}
+    			# Some sort of bad trait 
+    			random_list = {
+    				1 = {
+    					add_trait = proud
+    				}
+    				1 = {
+    					add_trait = envious
+    				}
+    			}
+    			# Some potential traits
+    			random = {
+    				chance = 40
+    				add_trait = ambitious
+    			}
+    			random = {
+    				chance = 40
+    				add_trait = brave
+    			}
+    			random = {
+    				chance = 40 
+    				add_trait = radical
+    			}
+    			# One Commander trait 
+    			add_random_commander_trait_effect = yes
+    		}
+    	}
+    }
+
+    option = {      
+        name = OPT_A_EW_flavor_412
+    }
+    option = {      
+        name = OPT_B_EW_flavor_412
+
+        trigger = {
+			NOT = { #There are no valid vassal candidates that can be commanders.
+				any_vassal = {
+					higher_real_tier_than = BARON
+					NOT = { 
+						primary_title = { temporary = yes } 
+					}
+					OR = {
+						AND = {
+							OR = {
+								male_can_hold_minor_title_trigger = yes
+								female_can_hold_minor_commander_title_trigger = yes
+							}
+							is_adult = yes
+						}
+						has_character_flag = special_marshal
+					}
+			
+					prisoner = no
+					NOT = { trait = incapable }
+					NOT = { is_inaccessible_trigger = yes }
+					NOT = { has_character_flag = guru }
+					NOT = { has_character_modifier = refusing_to_lead }
+					NOR = {
+						has_job_title = job_chancellor
+						has_job_title = job_marshal
+						has_job_title = job_treasurer
+						has_job_title = job_spymaster
+						has_job_title = job_spiritual
+						has_minor_title = title_commander
+					}
+				} 
+			}
+        	OR = {
+				AND = {
+					tier = COUNT
+					NOT = {
+						any_realm_character = {
+							count = 2
+							liege = { character = ROOT }
+							has_minor_title = title_commander
+						}
+					}
+				}
+				AND = {
+					tier = DUKE
+					NOT = {
+						any_realm_character = {
+							count = 4
+							liege = { character = ROOT }
+							has_minor_title = title_commander
+						}
+					}
+				}
+				AND = {
+					tier = KING
+					is_nomadic = no
+					NOT = {
+						any_realm_character = {
+							count = 6
+							liege = { character = ROOT }
+							has_minor_title = title_commander
+						}
+					}
+				}
+				AND = {
+					tier = EMPEROR
+					is_nomadic = no
+					NOT = {
+						any_realm_character = {
+							count = 8
+							liege = { character = ROOT }
+							has_minor_title = title_commander
+						}
+					}
+				}
+				AND = {
+					tier = KING
+					is_nomadic = yes
+					NOT = {
+						any_realm_character = {
+							count = 2
+							liege = { character = ROOT }
+							has_minor_title = title_commander
+						}
+					}
+				}
+				AND = {
+					tier = EMPEROR
+					is_nomadic = yes
+					NOT = {
+						any_realm_character = {
+							count = 4
+							liege = { character = ROOT }
+							has_minor_title = title_commander
+						}
+					}
+				}
+			}
+        }
+
+        event_target:new_commander = {
+        	give_minor_title = title_commander
+        }
+    }
+    option = {
+    	name = OPT_C_EW_flavor_412 
+    	hidden_tooltip = {
+			event_target:new_commander = { 
+				death = {
+					death_reason = death_missing
+				}
+			}
+		}
+    }
+}
+
+# Dharmayuddh Preparation Event - Tunnelers!?
+character_event = {
+    id = EW_flavor.413
+    desc = EVTDESC_EW_flavor_413
+    picture = GFX_evt_large_army
+    border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+    has_dlc = "Holy Fury"
+
+    option = {
+        name = OPT_A_EW_flavor_413
+        scaled_wealth = { value = -0.3 min = -30 max = -300 }
+        spawn_fleet = {
+	       	province = closest
+	        owner = ROOT
+	       	earmark = dharmayuddh_event_ships
+	        troops = { galleys = { 20 20 } }
+	    }
+    }
+    option = {
+    	name = OPT_C_EW_flavor_413
+    }
+}
+
+# Dharmayuddh preparation finished
+character_event = {
+    id = EW_flavor.420
+    desc = EVTDESC_EW_flavor_420
+    picture = GFX_evt_large_army
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+    has_dlc = "Holy Fury"
+	
+    trigger = {
+		religion = eternal_way
+		has_character_flag = flag_EW_dharmayuddh_active
+		NOR = {
+			has_character_flag = flag_EW_dharmayuddh_declared
+			has_character_flag = flag_EW_dharmayuddh_prepared
+		}
+    }
+
+    immediate = {
+    	set_character_flag = flag_EW_dharmayuddh_prepared
+    }
+
+    option = {      
+        name = OPT_A_EW_flavor_420
+    }
+}
+
+#Dharmayuddh won
+narrative_event = {
+    id = EW_flavor.430
+    desc = EVTDESC_EW_flavor_430
+    title = TITLE_EW_flavor_430
+    picture = GFX_evt_large_army
+    border = GFX_event_narrative_frame_religion
+    is_triggered_only = yes
+    has_dlc = "Holy Fury"
+    trigger = {
+    	religion = eternal_way
+    }
+
+    immediate = {
+    	character_event = { id = EW_flavor.441 }
+    }
+
+    option = {
+        name = OPT_A_EW_flavor_430
+		add_trait = EW_dharmayoddhaa
+		prestige = 100
+    }
+}
+
+#Dharmayuddh lost
+narrative_event = {
+    id = EW_flavor.431
+    desc = EVTDESC_EW_flavor_431
+    title = TITLE_EW_flavor_431
+    picture = GFX_evt_large_army
+    border = GFX_event_narrative_frame_religion
+    is_triggered_only = yes
+    has_dlc = "Holy Fury"
+    trigger = {
+    	religion = eternal_way
+    }
+
+    immediate = {
+    	character_event = { id = EW_flavor.441 }
+    }
+
+    option = {
+        name = OPT_A_EW_flavor_431
+		prestige = -100
+    }
+}
+
+# Dharmayuddh expires
+character_event = {
+    id = EW_flavor.440
+    desc = EVTDESC_EW_flavor_440
+    picture = GFX_evt_large_army
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+    has_dlc = "Holy Fury"
+	
+    trigger = {
+		religion = eternal_way
+		has_character_flag = flag_EW_dharmayuddh_active
+		NOT = { has_character_flag = flag_EW_dharmayuddh_declared }
+    }
+
+    immediate = {
+    	character_event = { id = EW_flavor.441 }
+    }
+
+    option = {      
+        name = OPT_A_EW_flavor_440
+    }
+}
+
+# Clean up event post-Dharmayuddh
+character_event = {
+    id = EW_flavor.441
+   	hide_window = yes
+    is_triggered_only = yes
+    has_dlc = "Holy Fury"
+    trigger = {
+		OR = {
+			has_character_flag = flag_EW_dharmayuddh_active
+			has_character_flag = flag_EW_dharmayuddh_declared
+		}
+    }
+
+    immediate = {
+    	clr_character_flag = flag_EW_dharmayuddh_active
+		clr_character_flag = flag_EW_dharmayuddh_declared
+		clr_character_flag = flag_EW_dharmayuddh_prepared
+    	disband_event_forces = dharmayuddh_event_ships
+		disband_event_forces = dharmayuddh_event_troops
+		disband_event_forces = dharmayuddh_event_troops_elite
+    	disband_event_forces = dharmayuddh_event_troops_rabble
+    }
+}

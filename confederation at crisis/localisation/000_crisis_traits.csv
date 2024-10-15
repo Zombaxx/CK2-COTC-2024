@@ -1,0 +1,15 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EW_on_pilgrimage;On Pilgrimage;;;;;;;;;;;;;x
+EW_on_pilgrimage_desc;This [GetGirlWomanBoyMan] is currently away on a pilgrimage.;;;;;;;;;;;;;x
+
+EW_pilgrim;Pilgrim;;;;;;;;;;;;;x
+EW_pilgrim_desc;This [GetGirlWomanBoyMan] has completed several pilgrimages.;;;;;;;;;;;;;x
+
+EW_uncrowned;Uncrowned;;;;;;;;;;;;;x
+EW_uncrowned_desc;This [GetGirlWomanBoyMan] has not been officialy coronated, hurting their legitimacy.;;;;;;;;;;;;;x
+
+EW_crowned;Crowned;;;;;;;;;;;;;x
+EW_crowned_desc;This [GetGirlWomanBoyMan] has been coronated, as befits a ruler belonging to the Eternal Way.;;;;;;;;;;;;;x
+
+EW_dharmayoddhaa;Dharmayoddhaa;;;;;;;;;;;;;x
+EW_dharmayoddhaa_desc;This character is a veteran holy warrior who obtained victory in a Dharmayuddh.;;;;;;;;;;;;;x

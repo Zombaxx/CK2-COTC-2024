@@ -11,8 +11,8 @@ b_vn_32 = city
 
 
 # Misc
-culture = indo_tarkan # Initial culture
-religion = cyberneticist
+culture = indo_duuryaatri # Initial culture
+religion = eternal_way
 
 1.1.1 = {
 }

@@ -6,12 +6,12 @@ title = c_vn_732
 # Settlements
 max_settlements = 5
 
-b_vn_732 = city
 b_vn_732_outpost = castle
+b_vn_732 = city
 
 # Misc
-culture = indo_mukta # Initial culture
-religion = colonial_separatist
+culture = indo_duuryaatri # Initial culture
+religion = eternal_way
 
 1.1.1 = {
 }

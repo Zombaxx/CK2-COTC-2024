@@ -2,12 +2,12 @@
 # Tarkan Loyalists
 12000000 = {
 	# Military Commander of VN-32
-	name = "Jane"
+	name = "Jayanti"
 	dynasty = 20030 # Shepard
 	female = yes
 	
-	culture = anglo_avalonian
-	religion = cyberneticist
+	culture = indo_duuryaatri # anglo_avalonian
+	religion = eternal_way # cyberneticist
 	
 	trait = brilliant_strategist
 	trait = disciplined
@@ -39,12 +39,12 @@
 # Non-pirate Muktas
 12000002 = {
 	# Civilian Governor of VN-732
-	name = "Fakhri"
+	name = "Revati"
 	dynasty = 20032 # Darvish
 	female = yes
 	
-	culture = iranian_samawati
-	religion = colonial_separatist
+	culture = indo_duuryaatri # iranian_samawati
+	religion = eternal_way # colonial_separatist
 	
 	add_trait = intricate_webweaver
 	add_trait = open_minded
@@ -57,12 +57,12 @@
 
 12000003 = {
 	# Military Commander of VN-128
-	name = "Inderpal"
+	name = "Deepak"
 	dynasty = 20033 # Bhari
 	female = no
 	
-	culture = indo_mukta
-	religion = colonial_separatist
+	culture = indo_duuryaatri # indo_mukta
+	religion = eternal_way # colonial_separatist
 	
 	add_trait = misguided_warrior
 	add_trait = proud
@@ -75,12 +75,12 @@
 
 12000004 = {
 	# Administrator of VN-697
-	name = "Antonio"
+	name = "Vairamuthu"
 	dynasty = 20034 # Castellano
 	female = no
 	
-	culture = hispanic_celestean
-	religion = colonial_separatist
+	culture = indo_duuryaatri # hispanic_celestean
+	religion = eternal_way # colonial_separatist
 	
 	add_trait = scholarly_theologian
 	add_trait = introverted
@@ -100,7 +100,7 @@
 	female = yes
 	dna = "dvpynfskstu"
 	
-	culture = anglo_avalonian
+	culture = anglo_avalonian 
 	religion = bio_directionist
 	add_trait = skilled_tactician
 	add_trait = disciplined
@@ -125,7 +125,7 @@
 	2997.4.12 = { birth = "2997.4.12" }
 }
 120000050 = {
-	name = "Sarah"
+	name = "Anna"
 	dynasty = 20035 # Bird
 	female = yes
 	dna = "dvpynfskstu"	
@@ -143,12 +143,12 @@
 # Mukta Pirates
 12000006 = {
 	# Commander of VN-362
-	name = "Gurjot"
+	name = "Krishna"
 	dynasty = 20036 # Pansota
 	female = no
 	
-	culture = indo_mukta
-	religion = space_pirate
+	culture = indo_duuryaatri # indo_mukta
+	religion = eternal_way # space_pirate
 	
 	add_trait = tough_soldier
 	add_trait = carefree
@@ -162,12 +162,12 @@
 # Tarkan Pirates
 12000007 = {
 	# Commander of VN-1241 + Petty Pirate King of Outer Veil
-	name = "Bilal"
+	name = "Anbu"
 	dynasty = 20037 # Hawsawi
 	female = no
 	
-	culture = arab_samawati
-	religion = space_pirate
+	culture = indo_duuryaatri # arab_samawati
+	religion = eternal_way # space_pirate
 	
 	add_trait = skilled_tactician
 	add_trait = open_minded
@@ -180,12 +180,12 @@
 
 12000008 = {
 	# Commander of VN-3110
-	name = "Laleh"
+	name = "Inder"
 	dynasty = 20038 # Tehrani
-	female = yes
+	female = no
 	
-	culture = iranian_samawati
-	religion = space_pirate
+	culture = indo_duuryaatri # iranian_samawati
+	religion = space_pirate # space_pirate
 	
 	add_trait = tough_soldier
 	add_trait = introverted
@@ -197,12 +197,12 @@
 
 12000009 = {
 	# Commander of VN-1571
-	name = "Benazir"
+	name = "Durga"
 	dynasty = 20039 # Dibla
 	female = yes
 	
-	culture = indo_tarkan
-	religion = space_pirate
+	culture = indo_duuryaatri # indo_tarkan
+	religion = eternal_way # space_pirate
 	
 	add_trait = tough_soldier
 	add_trait = confident

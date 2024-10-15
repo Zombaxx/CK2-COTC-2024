@@ -11,8 +11,8 @@ b_vn_362_observatory = temple
 
 
 # Misc
-culture = indo_mukta # Initial culture
-religion = space_pirate
+culture = indo_duuryaatri # Initial culture
+religion = eternal_way
 
 1.1.1 = {
 }

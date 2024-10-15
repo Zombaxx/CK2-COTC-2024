@@ -33,7 +33,7 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 19;20;sea;941;-1;-1;-1;-1;Kaksa ki Vismata'em - New Lusaka
 19;21;sea;;-1;-1;-1;-1;Kaksa ki Vismata'em-343
 21;22;sea;942;-1;-1;-1;-1;343-Dharmvir
-22;331;sea;;-1;-1;-1;-1;Dharmvir - VN-381
+#22;331;sea;;-1;-1;-1;-1;Dharmvir - VN-381 Removed this to make the Veil Nebula more isolated
 23;24;sea;943;-1;-1;-1;-1;Alfred - Etherland
 23;38;sea;;-1;-1;-1;-1;Alfred - Robinson
 24;31;sea;;-1;-1;-1;-1;Etherland - Mary's Star

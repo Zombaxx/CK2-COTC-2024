@@ -1,7 +1,7 @@
 2998.1.1 = {
-	liege = "k_mukta_duniya"
+	liege = "k_loyalist"
+	law = succ_open_elective_crisis
 	effect = {
-		add_law = succ_seniority
 		add_law = true_cognatic_succession
 		holder_scope = {
 			any_realm_character = {
@@ -12,4 +12,9 @@
 		}
 	}
 	holder = 1105820 # Sandeep Rizvi
+}
+
+3008.1.1 = {
+	liege = "k_mukta_duniya"
+	holder = 1216139 # Hari Trivedi
 }

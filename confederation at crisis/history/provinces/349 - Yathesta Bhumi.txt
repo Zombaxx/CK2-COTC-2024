@@ -12,7 +12,7 @@ b_yathesta_bhumi_iv_b = castle
 
 # Misc
 culture = indo_mukta # Initial culture
-religion = colonial_separatist
+religion = terran_republican
 
 # History
 1.1.1 = {

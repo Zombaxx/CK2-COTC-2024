@@ -23,8 +23,13 @@ casus_belli={
 	add_attacker = 11011872 # Dmitriy Solomonov
 }
 
+2998.1.1 = {
+	add_defender = 1105820 # Sandeep Rizvi
+}
+
 3003.10.11 = {
 	rem_defender = 11013974 # Morgan Afolayan
+	rem_defender = 1105820 # Sandeep Rizvi
 	rem_attacker = 11010155 # Juan Lebedev
 	rem_attacker = 11012570 # Zhen Zhou
 	rem_attacker = 11020020 # "Arthur Pendragon"

@@ -1,0 +1,12 @@
+EW_pilgrimage_site = {
+	icon = 4
+}
+EW_increased_pilgrimage = {
+	icon = 4
+	local_tax_modifier = 0.1
+	disease_defence = -0.05
+}
+EW_arrested_dissenter = {
+	icon = 4
+	local_revolt_risk = 0.2
+}

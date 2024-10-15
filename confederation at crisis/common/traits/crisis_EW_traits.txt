@@ -1,0 +1,105 @@
+################
+# Pilgrimage
+################
+
+EW_on_pilgrimage = { # Eternal Way pilgrim while doing pilgrimage
+	potential = {
+		religion = eternal_way
+	}
+
+	cached = yes    # Keep a cache of all trait holders, to use with the corresponding event trigger
+
+	monthly_character_piety = 0.2
+	same_religion_opinion = 5
+
+	pilgrimage = yes    # Will need a regent, but can still be guardian to children
+	customizer = no
+}
+
+EW_pilgrim = { # Eternal Way character who has completed a pilgrimage
+	potential = {
+		religion = eternal_way
+	}
+
+	same_religion_opinion = 5
+	monthly_character_piety = 0.1
+
+	male_compliment = COMPL_PILGRIM
+	female_compliment = COMPL_PILGRIM
+}
+
+EW_uncrowned = {
+	potential = {
+		religion = eternal_way
+		government = neofeudal_government
+	}
+	opposites =  {
+		EW_crowned
+	}
+	
+	monthly_character_prestige = -0.05
+	vassal_opinion = -15
+	
+	customizer = no
+	random = no
+}
+
+EW_crowned = {
+	potential = {
+		religion = eternal_way
+		government = neofeudal_government
+	}
+	opposites =  {
+		EW_uncrowned
+	}
+	
+	monthly_character_prestige = 0.05
+	monthly_character_piety = 0.1
+	vassal_opinion = 5
+	
+	customizer = no
+	random = no
+}
+
+EW_dharmayoddhaa = {
+	potential = {
+		religion = eternal_way
+	}
+	opposites = {
+		crusader
+		crusader_king
+		crusader_queen
+		mujahid
+		valhalla_bound
+		eagle_warrior
+		sun_warrior
+		ukkos_shield
+		nyames_shield
+		peruns_chosen
+		romuvas_own
+		ares_own
+		tengri_warrior
+		shaddai
+		gondi_shahansha
+		kailash_guardian
+	}
+	
+	random = no
+	religious = yes
+	
+	martial = 3
+    command_modifier = { religious_enemy = 0.2 }
+	church_opinion = 10
+	same_religion_opinion = 5
+
+	ai_zeal = 10
+	
+	male_insult = INSULT_FANATIC
+	female_insult = INSULT_FANATIC
+	male_insult_adj = INSULT_NARROWMINDED
+	female_insult_adj = INSULT_NARROWMINDED
+	male_compliment = COMPL_CRUSADER
+	female_compliment = COMPL_CRUSADER
+	male_compliment_adj = COMPL_RIGHTEOUS
+	female_compliment_adj = COMPL_RIGHTEOUS
+}

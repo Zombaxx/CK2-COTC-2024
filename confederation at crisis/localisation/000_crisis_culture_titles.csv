@@ -1,0 +1,208 @@
+
+### Neo-Feudal
+
+monarchy_emperor_indo_duuryaatri;Raajadhiraaja;Raajadhiraaja;Raajadhiraaja;;Raajadhiraaja;;;;;;;;;x
+monarchy_emperor_female_indo_duuryaatri;Raajadhiraajani;Raajadhiraajani;Raajadhiraajani;;Raajadhiraajani;;;;;;;;;x
+monarchy_emperor_title_ruler_consort_indo_duuryaatri;Raajapurushan;Raajapurushan;Raajapurushan;;Raajapurushan;;;;;;;;;x
+monarchy_emperor_title_ruler_consort_female_indo_duuryaatri;Raajapatni;Raajapatni;Raajapatni;;Raajapatni;;;;;;;;;x
+monarchy_emperor_foa_indo_duuryaatri;O King of Kings;Votre Majesté Impériale;Eure Kaiserliche Majestät;;Su Majestad Imperial;;;;;;;;;x
+monarchy_emperor_foa_female_indo_duuryaatri;O Queen of Queens;Votre Majesté Impériale;Eure Kaiserliche Majestät;;Su Majestad Imperial;;;;;;;;;x
+monarchy_empire_of_indo_duuryaatri;Antariksh Saamraajya;Antariksh Saamraajya;Antariksh Saamraajya;;Antariksh Saamraajya;;;;;;;;;x
+monarchy_empire_indo_duuryaatri;Antariksh Saamraajya;Antariksh Saamraajya;Antariksh Saamraajya;;Antariksh Saamraajya;;;;;;;;;x
+monarchy_empires_indo_duuryaatri;Antariksh Saamraajyas;Antariksh Saamraajyas;Antariksh Saamraajyas;;Antariksh Saamraajyas;;;;;;;;;x
+
+monarchy_king_indo_duuryaatri;Mahaaraaja;Mahaaraaja;Mahaaraaja;;Mahaaraaja;;;;;;;;;x
+monarchy_king_female_indo_duuryaatri;Mahaaraani;Mahaaraani;Mahaaraani;;Mahaaraani;;;;;;;;;x
+monarchy_king_title_ruler_consort_indo_duuryaatri;Raajapurushan;Raajapurushan;Raajapurushan;;Raajapurushan;;;;;;;;;x
+monarchy_king_title_ruler_consort_female_indo_duuryaatri;Raajapatni;Raajapatni;Raajapatni;;Raajapatni;;;;;;;;;x
+monarchy_king_foa_indo_duuryaatri;O Great King;Votre Majesté;Eure Majestät;;Su Majestad;;;;;;;;;x
+monarchy_king_foa_female_indo_duuryaatri;O Great Queen;Votre Majesté;Eure Majestät;;Su Majestad;;;;;;;;;x
+monarchy_kingdom_of_indo_duuryaatri;Antariksh Raajya;Antariksh Raajya;Antariksh Raajya;;Antariksh Raajya;;;;;;;;;x
+monarchy_kingdom_indo_duuryaatri;Antariksh Raajya;Antariksh Raajya;Antariksh Raajya;;Antariksh Raajya;;;;;;;;;x
+monarchy_kingdoms_indo_duuryaatri;Antariksh Raajyas;Antariksh Raajyas;Antariksh Raajyas;;Antariksh Raajyas;;;;;;;;;x
+
+monarchy_duke_indo_duuryaatri;Raaja;Raaja;Raaja;;Raaja;;;;;;;;;x
+monarchy_duke_female_indo_duuryaatri;Raani;Raani;Raani;;Raani;;;;;;;;;x
+monarchy_duke_title_ruler_consort_indo_duuryaatri;Raajapurushan;Raajapurushan;Raajapurushan;;Raajapurushan;;;;;;;;;x
+monarchy_duke_title_ruler_consort_female_indo_duuryaatri;Raajapatni;Raajapatni;Raajapatni;;Raajapatni;;;;;;;;;x
+monarchy_duke_foa_indo_duuryaatri;O King;Votre Grâce;Euer Gnaden;;Su Gracia;;;;;;;;;x
+monarchy_duke_foa_female_indo_duuryaatri;O Queen;Votre Grâce;Euer Gnaden;;Su Gracia;;;;;;;;;x
+monarchy_duchy_of_indo_duuryaatri;Mandal;Mandal;Mandal;;Mandal;;;;;;;;;x
+monarchy_duchy_indo_duuryaatri;Mandal;Mandal;Mandal;;Mandal;;;;;;;;;x
+monarchy_duchies_indo_duuryaatri;Mandals;Mandals;Mandals;;Mandals;;;;;;;;;x
+
+monarchy_count_indo_duuryaatri;Nakshatrapati;Nakshatrapati;Nakshatrapati;;Nakshatrapati;;;;;;;;;x
+monarchy_count_female_indo_duuryaatri;Nakshatreshwari;Nakshatreshwari;Nakshatreshwari;;Nakshatreshwari;;;;;;;;;x
+monarchy_count_title_ruler_consort_indo_duuryaatri;Purushan;Purushan;Purushan;;Purushan;;;;;;;;;x
+monarchy_count_title_ruler_consort_female_indo_duuryaatri;Patni;Patni;Patni;;Patni;;;;;;;;;x
+monarchy_count_foa_indo_duuryaatri;O Lord;Monseigneur;Mein Fürst;;Mi Señor;;;;;;;;;x
+monarchy_count_foa_female_indo_duuryaatri;O Lady;Madame;Meine Fürstin;;Mi Señora;;;;;;;;;x
+monarchy_county_of_indo_duuryaatri;Nakshatra;Nakshatra;Nakshatra;;Nakshatra;;;;;;;;;x
+monarchy_county_indo_duuryaatri;Nakshatra;Nakshatra;Nakshatra;;Nakshatra;;;;;;;;;x
+monarchy_counties_indo_duuryaatri;Nakshatras;Nakshatras;Nakshatras;;Nakshatras;;;;;;;;;x
+
+monarchy_baron_indo_duuryaatri;Grahapati;Grahapati;Grahapati;;Grahapati;;;;;;;;;x
+monarchy_baron_female_indo_duuryaatri;Graheshwari;Graheshwari;Graheshwari;;Graheshwari;;;;;;;;;x
+monarchy_baron_title_ruler_consort_indo_duuryaatri;Purushan;Purushan;Purushan;;Purushan;;;;;;;;;x
+monarchy_baron_title_ruler_consort_female_indo_duuryaatri;Patni;Patni;Patni;;Patni;;;;;;;;;x
+monarchy_baron_foa_indo_duuryaatri;O Lord;Monseigneur;Mein Fürst;;Mi Señor;;;;;;;;;x
+monarchy_baron_foa_female_indo_duuryaatri;O Lady;Madame;Meine Fürstin;;Mi Señora;;;;;;;;;x
+monarchy_barony_of_indo_duuryaatri;Graha;Graha;Graha;;Graha;;;;;;;;;x
+monarchy_barony_indo_duuryaatri;Graha;Graha;Graha;;Graha;;;;;;;;;x
+monarchy_baronies_indo_duuryaatri;Grahas;Grahas;Grahas;;Grahas;;;;;;;;;x
+
+### Civil
+
+civil_emperor_indo_duuryaatri;Pradhaan Mantri;Pradhaan Mantri;Pradhaan Mantri;;Pradhaan Mantri;;;;;;;;;x
+civil_emperor_female_indo_duuryaatri;Pradhaan Mantri;Pradhaan Mantri;Pradhaan Mantri;;Pradhaan Mantri;;;;;;;;;x
+civil_emperor_title_ruler_consort_indo_duuryaatri;Mantriyin Purushan;Mantriyin Purushan;Mantriyin Purushan;;Mantriyin Purushan;;;;;;;;;x
+civil_emperor_title_ruler_consort_female_indo_duuryaatri;Mantriyin Patni;Mantriyin Patni;Mantriyin Patni;;Mantriyin Patni;;;;;;;;;x
+civil_emperor_foa_indo_duuryaatri;Esteemed Mantri;Votre Majesté Impériale;Eure Kaiserliche Majestät;;Su Majestad Imperial;;;;;;;;;x
+civil_emperor_foa_female_indo_duuryaatri;Esteemed Mantri;Votre Majesté Impériale;Eure Kaiserliche Majestät;;Su Majestad Imperial;;;;;;;;;x
+civil_empire_of_indo_duuryaatri;Antariksh Desh;Antariksh Desh;Antariksh Desh;;Antariksh Desh;;;;;;;;;x
+civil_empire_indo_duuryaatri;Antariksh Desh;Antariksh Desh;Antariksh Desh;;Antariksh Desh;;;;;;;;;x
+civil_empires_indo_duuryaatri;Antariksh Deshs;Antariksh Deshs;Antariksh Deshs;;Antariksh Deshs;;;;;;;;;x
+
+civil_king_indo_duuryaatri;Mukhyamantri;Mukhyamantri;Mukhyamantri;;Mukhyamantri;;;;;;;;;x
+civil_king_female_indo_duuryaatri;Mukhyamantri;Mukhyamantri;Mukhyamantri;;Mukhyamantri;;;;;;;;;x
+civil_king_title_ruler_consort_indo_duuryaatri;Mantriyin Purushan;Mantriyin Purushan;Mantriyin Purushan;;Mantriyin Purushan;;;;;;;;;x
+civil_king_title_ruler_consort_female_indo_duuryaatri;Mantriyin Patni;Mantriyin Patni;Mantriyin Patni;;Mantriyin Patni;;;;;;;;;x
+civil_king_foa_indo_duuryaatri;Esteemed Mantri;Votre Majesté;Eure Majestät;;Su Majestad;;;;;;;;;x
+civil_king_foa_female_indo_duuryaatri;Esteemed Mantri;Votre Majesté;Eure Majestät;;Su Majestad;;;;;;;;;x
+civil_kingdom_of_indo_duuryaatri;Antariksh Raashtra;Antariksh Raashtra;Antariksh Raashtra;;Antariksh Raashtra;;;;;;;;;x
+civil_kingdom_indo_duuryaatri;Antariksh Raashtra;Antariksh Raashtra;Antariksh Raashtra;;Antariksh Raashtra;;;;;;;;;x
+civil_kingdoms_indo_duuryaatri;Antariksh Raashtras;Antariksh Raashtras;Antariksh Raashtras;;Antariksh Raashtras;;;;;;;;;x
+
+civil_duke_indo_duuryaatri;Mantri;Mantri;Mantri;;Mantri;;;;;;;;;x
+civil_duke_female_indo_duuryaatri;Mantri;Mantri;Mantri;;Mantri;;;;;;;;;x
+civil_duke_title_ruler_consort_indo_duuryaatri;Mantriyin Purushan;Mantriyin Purushan;Mantriyin Purushan;;Mantriyin Purushan;;;;;;;;;x
+civil_duke_title_ruler_consort_female_indo_duuryaatri;Mantriyin Patni;Mantriyin Patni;Mantriyin Patni;;Mantriyin Patni;;;;;;;;;x
+civil_duke_foa_indo_duuryaatri;Esteemed Mantri;Votre Grâce;Euer Gnaden;;Su Gracia;;;;;;;;;x
+civil_duke_foa_female_indo_duuryaatri;Esteemed Mantri;Votre Grâce;Euer Gnaden;;Su Gracia;;;;;;;;;x
+civil_duchy_of_indo_duuryaatri;Mandal;Mandal;Mandal;;Mandal;;;;;;;;;x
+civil_duchy_indo_duuryaatri;Mandal;Mandal;Mandal;;Mandal;;;;;;;;;x
+civil_duchies_indo_duuryaatri;Mandals;Mandals;Mandals;;Mandals;;;;;;;;;x
+
+civil_count_indo_duuryaatri;Shaasak;Shaasak;Shaasak;;Shaasak;;;;;;;;;x
+civil_count_female_indo_duuryaatri;Shaasaki;Shaasaki;Shaasaki;;Shaasaki;;;;;;;;;x
+civil_count_title_ruler_consort_indo_duuryaatri;Shaasakiyin Purushan;Shaasakiyin Purushan;Shaasakiyin Purushan;;Shaasakiyin Purushan;;;;;;;;;x
+civil_count_title_ruler_consort_female_indo_duuryaatri;Shaasakanin Patni;Shaasakanin Patni;Shaasakanin Patni;;Shaasakanin Patni;;;;;;;;;x
+civil_count_foa_indo_duuryaatri;O Lord;Monseigneur;Mein Fürst;;Mi Señor;;;;;;;;;x
+civil_count_foa_female_indo_duuryaatri;O Lady;Madame;Meine Fürstin;;Mi Señora;;;;;;;;;x
+civil_county_of_indo_duuryaatri;Nakshatra;Nakshatra;Nakshatra;;Nakshatra;;;;;;;;;x
+civil_county_indo_duuryaatri;Nakshatra;Nakshatra;Nakshatra;;Nakshatra;;;;;;;;;x
+civil_counties_indo_duuryaatri;Nakshatras;Nakshatras;Nakshatras;;Nakshatras;;;;;;;;;x
+
+civil_baron_indo_duuryaatri;Nagarpati;Nagarpati;Nagarpati;;Nagarpati;;;;;;;;;x
+civil_baron_female_indo_duuryaatri;Nagareshwari;Nagareshwari;Nagareshwari;;Nagareshwari;;;;;;;;;x
+civil_baron_title_ruler_consort_indo_duuryaatri;Purushan;Purushan;Purushan;;Purushan;;;;;;;;;x
+civil_baron_title_ruler_consort_female_indo_duuryaatri;Patni;Patni;Patni;;Patni;;;;;;;;;x
+civil_baron_foa_indo_duuryaatri;O Lord;Monseigneur;Mein Fürst;;Mi Señor;;;;;;;;;x
+civil_baron_foa_female_indo_duuryaatri;O Lady;Madame;Meine Fürstin;;Mi Señora;;;;;;;;;x
+civil_barony_of_indo_duuryaatri;Mahaanagar;Mahaanagar;Mahaanagar;;Mahaanagar;;;;;;;;;x
+civil_barony_indo_duuryaatri;Mahaanagar;Mahaanagar;Mahaanagar;;Mahaanagar;;;;;;;;;x
+civil_baronies_indo_duuryaatri;Mahaanagars;Mahaanagars;Mahaanagars;;Mahaanagars;;;;;;;;;x
+
+### Military
+
+military_emperor_indo_duuryaatri;Adhinaayak;Adhinaayak;Adhinaayak;;Adhinaayak;;;;;;;;;x
+military_emperor_female_indo_duuryaatri;Adhinaayak;Adhinaayaki;Adhinaayaki;;Adhinaayaki;;;;;;;;;x
+military_emperor_title_ruler_consort_indo_duuryaatri;Adhinaayakiyin Purushan;Adhinaayakiyin Purushan;Adhinaayakiyin Purushan;;Adhinaayakiyin Purushan;;;;;;;;;x
+military_emperor_title_ruler_consort_female_indo_duuryaatri;Adhinaayakanin Patni;Adhinaayakanin Patni;Adhinaayakanin Patni;;Adhinaayakanin Patni;;;;;;;;;x
+military_emperor_foa_indo_duuryaatri;Esteemed Adhinaayak;Votre Majesté Impériale;Eure Kaiserliche Majestät;;Su Majestad Imperial;;;;;;;;;x
+military_emperor_foa_female_indo_duuryaatri;Esteemed Adhinaayak;Votre Majesté Impériale;Eure Kaiserliche Majestät;;Su Majestad Imperial;;;;;;;;;x
+military_empire_of_indo_duuryaatri;Antariksh Desh;Antariksh Desh;Antariksh Desh;;Antariksh Desh;;;;;;;;;x
+military_empire_indo_duuryaatri;Antariksh Desh;Antariksh Desh;Antariksh Desh;;Antariksh Desh;;;;;;;;;x
+military_empires_indo_duuryaatri;Antariksh Deshs;Antariksh Deshs;Antariksh Deshs;;Antariksh Deshs;;;;;;;;;x
+
+military_king_indo_duuryaatri;Mahaasenaapati;Mahaasenaapati;Mahaasenaapati;;Mahaasenaapati;;;;;;;;;x
+military_king_female_indo_duuryaatri;Mahaasenaapati;Mahaasenaapati;Mahaasenaapati;;Mahaasenaapati;;;;;;;;;x
+military_king_title_ruler_consort_indo_duuryaatri;Mahaasenaapatiyin Purushan;Mahaasenaapatiyin Purushan;Mahaasenaapatiyin Purushan;;Mahaasenaapatiyin Purushan;;;;;;;;;x
+military_king_title_ruler_consort_female_indo_duuryaatri;Mahaasenaapatiyin Patni;Mahaasenaapatiyin Patni;Mahaasenaapatiyin Patni;;Mahaasenaapatiyin Patni;;;;;;;;;x
+military_king_foa_indo_duuryaatri;Esteemed Senaapati;Votre Majesté;Eure Majestät;;Su Majestad;;;;;;;;;x
+military_king_foa_female_indo_duuryaatri;Esteemed Senaapati;Votre Majesté;Eure Majestät;;Su Majestad;;;;;;;;;x
+military_kingdom_of_indo_duuryaatri;Antariksh Raashtra;Antariksh Raashtra;Antariksh Raashtra;;Antariksh Raashtra;;;;;;;;;x
+military_kingdom_indo_duuryaatri;Antariksh Raashtra;Antariksh Raashtra;Antariksh Raashtra;;Antariksh Raashtra;;;;;;;;;x
+military_kingdoms_indo_duuryaatri;Antariksh Raashtras;Antariksh Raashtras;Antariksh Raashtras;;Antariksh Raashtras;;;;;;;;;x
+
+military_duke_indo_duuryaatri;Senaapati;Senaapati;Senaapati;;Senaapati;;;;;;;;;x
+military_duke_female_indo_duuryaatri;Senaapati;Senaapati;Senaapati;;Senaapati;;;;;;;;;x
+military_duke_title_ruler_consort_indo_duuryaatri;Senaapatiyin Purushan;Senaapatiyin Purushan;Senaapatiyin Purushan;;Senaapatiyin Purushan;;;;;;;;;x
+military_duke_title_ruler_consort_female_indo_duuryaatri;Senaapatiyin Patni;Senaapatiyin Patni;Senaapatiyin Patni;;Senaapatiyin Patni;;;;;;;;;x
+military_duke_foa_indo_duuryaatri;Esteemed Senaapati;Votre Grâce;Euer Gnaden;;Su Gracia;;;;;;;;;x
+military_duke_foa_female_indo_duuryaatri;Esteemed Senaapati;Votre Grâce;Euer Gnaden;;Su Gracia;;;;;;;;;x
+military_duchy_of_indo_duuryaatri;Mandal;Mandal;Mandal;;Mandal;;;;;;;;;x
+military_duchy_indo_duuryaatri;Mandal;Mandal;Mandal;;Mandal;;;;;;;;;x
+military_duchies_indo_duuryaatri;Mandals;Mandals;Mandals;;Mandals;;;;;;;;;x
+
+military_count_indo_duuryaatri;Shaasak;Shaasak;Shaasak;;Shaasak;;;;;;;;;x
+military_count_female_indo_duuryaatri;Shaasaki;Shaasaki;Shaasaki;;Shaasaki;;;;;;;;;x
+military_count_title_ruler_consort_indo_duuryaatri;Shaasakiyin Purushan;Shaasakiyin Purushan;Shaasakiyin Purushan;;Shaasakiyin Purushan;;;;;;;;;x
+military_count_title_ruler_consort_female_indo_duuryaatri;Shaasakanin Patni;Shaasakanin Patni;Shaasakanin Patni;;Shaasakanin Patni;;;;;;;;;x
+military_count_foa_indo_duuryaatri;O Lord;Monseigneur;Mein Fürst;;Mi Señor;;;;;;;;;x
+military_count_foa_female_indo_duuryaatri;O Lady;Madame;Meine Fürstin;;Mi Señora;;;;;;;;;x
+military_county_of_indo_duuryaatri;Nakshatra;Nakshatra;Nakshatra;;Nakshatra;;;;;;;;;x
+military_county_indo_duuryaatri;Nakshatra;Nakshatra;Nakshatra;;Nakshatra;;;;;;;;;x
+military_counties_indo_duuryaatri;Nakshatras;Nakshatras;Nakshatras;;Nakshatras;;;;;;;;;x
+
+military_baron_indo_duuryaatri;Grahapati;Grahapati;Grahapati;;Grahapati;;;;;;;;;x
+military_baron_female_indo_duuryaatri;Graheshwari;Graheshwari;Graheshwari;;Graheshwari;;;;;;;;;x
+military_baron_title_ruler_consort_indo_duuryaatri;Purushan;Purushan;Purushan;;Purushan;;;;;;;;;x
+military_baron_title_ruler_consort_female_indo_duuryaatri;Patni;Patni;Patni;;Patni;;;;;;;;;x
+military_baron_foa_indo_duuryaatri;O Lord;Monseigneur;Mein Fürst;;Mi Señor;;;;;;;;;x
+military_baron_foa_female_indo_duuryaatri;O Lady;Madame;Meine Fürstin;;Mi Señora;;;;;;;;;x
+military_barony_of_indo_duuryaatri;Graha;Graha;Graha;;Graha;;;;;;;;;x
+military_barony_indo_duuryaatri;Graha;Graha;Graha;;Graha;;;;;;;;;x
+military_baronies_indo_duuryaatri;Grahas;Grahas;Grahas;;Grahas;;;;;;;;;x
+
+### Generic (Republic?)
+
+emperor_indo_duuryaatri;Deshpati;Deshpati;Deshpati;;Deshpati;;;;;;;;;x
+emperor_female_indo_duuryaatri;Deshpati;Deshpati;Deshpati;;Deshpati;;;;;;;;;x
+emperor_title_ruler_consort_indo_duuryaatri;Raashtrapatiyin Purushan;Raashtrapatiyin Purushan;Raashtrapatiyin Purushan;;Raashtrapatiyin Purushan;;;;;;;;;x
+emperor_title_ruler_consort_female_indo_duuryaatri;Raashtrapatiyin Patni;Raashtrapatiyin Patni;Raashtrapatiyin Patni;;Raashtrapatiyin Patni;;;;;;;;;x
+emperor_foa_indo_duuryaatri;Esteemed Leader;Votre Majesté Impériale;Eure Kaiserliche Majestät;;Su Majestad Imperial;;;;;;;;;x
+emperor_foa_female_indo_duuryaatri;Esteemed Leader;Votre Majesté Impériale;Eure Kaiserliche Majestät;;Su Majestad Imperial;;;;;;;;;x
+empire_of_indo_duuryaatri;Antariksh Desh;Antariksh Desh;Antariksh Desh;;Antariksh Desh;;;;;;;;;x
+empire_indo_duuryaatri;Antariksh Desh;Antariksh Desh;Antariksh Desh;;Antariksh Desh;;;;;;;;;x
+empires_indo_duuryaatri;Antariksh Deshs;Antariksh Deshs;Antariksh Deshs;;Antariksh Deshs;;;;;;;;;x
+
+king_indo_duuryaatri;Raashtrapati;Raashtrapati;Raashtrapati;;Raashtrapati;;;;;;;;;x
+king_female_indo_duuryaatri;Raashtrapati;Raashtrapati;Raashtrapati;;Raashtrapati;;;;;;;;;x
+king_title_ruler_consort_indo_duuryaatri;Raashtrapatiyin Purushan;Raashtrapatiyin Purushan;Raashtrapatiyin Purushan;;Raashtrapatiyin Purushan;;;;;;;;;x
+king_title_ruler_consort_female_indo_duuryaatri;Raashtrapatiyin Patni;Raashtrapatiyin Patni;Raashtrapatiyin Patni;;Raashtrapatiyin Patni;;;;;;;;;x
+king_foa_indo_duuryaatri;Esteemed Leader;Votre Majesté;Eure Majestät;;Su Majestad;;;;;;;;;x
+king_foa_female_indo_duuryaatri;Esteemed Leader;Votre Majesté;Eure Majestät;;Su Majestad;;;;;;;;;x
+kingdom_of_indo_duuryaatri;Raashtramandal;Raashtramandal;Raashtramandal;;Raashtramandal;;;;;;;;;x
+kingdom_indo_duuryaatri;Raashtramandal;Raashtramandal;Raashtramandal;;Raashtramandal;;;;;;;;;x
+kingdoms_indo_duuryaatri;Raashtramandals;Raashtramandals;Raashtramandals;;Raashtramandals;;;;;;;;;x
+
+duke_indo_duuryaatri;Mandalpati;Mandalpati;Mandalpati;;Mandalpati;;;;;;;;;x
+duke_female_indo_duuryaatri;Mandalpati;Mandalpati;Mandalpati;;Mandalpati;;;;;;;;;x
+duke_title_ruler_consort_indo_duuryaatri;Mandalpatiyin Purushan;Mandalpatiyin Purushan;Mandalpatiyin Purushan;;Mandalpatiyin Purushan;;;;;;;;;x
+duke_title_ruler_consort_female_indo_duuryaatri;Mandalpatiyin Patni;Mandalpatiyin Patni;Mandalpatiyin Patni;;Mandalpatiyin Patni;;;;;;;;;x
+duke_foa_indo_duuryaatri;Esteemed Leader;Votre Grâce;Euer Gnaden;;Su Gracia;;;;;;;;;x
+duke_foa_female_indo_duuryaatri;Esteemed Leader;Votre Grâce;Euer Gnaden;;Su Gracia;;;;;;;;;x
+duchy_of_indo_duuryaatri;Mandal;Mandal;Mandal;;Mandal;;;;;;;;;x
+duchy_indo_duuryaatri;Mandal;Mandal;Mandal;;Mandal;;;;;;;;;x
+duchies_indo_duuryaatri;Mandals;Mandals;Mandals;;Mandals;;;;;;;;;x
+
+count_indo_duuryaatri;Neta;Neta;Neta;;Neta;;;;;;;;;x
+count_female_indo_duuryaatri;Neta;Neta;Neta;;Neta;;;;;;;;;x
+count_title_ruler_consort_indo_duuryaatri;Netavin Purushan;Netavin Purushan;Netavin Purushan;;Netavin Purushan;;;;;;;;;x
+count_title_ruler_consort_female_indo_duuryaatri;Netavin Patni;Netavin Patni;Netavin Patni;;Netavin Patni;;;;;;;;;x
+count_foa_indo_duuryaatri;O Lord;Monseigneur;Mein Fürst;;Mi Señor;;;;;;;;;x
+count_foa_female_indo_duuryaatri;O Lady;Madame;Meine Fürstin;;Mi Señora;;;;;;;;;x
+county_of_indo_duuryaatri;Nakshatra;Nakshatra;Nakshatra;;Nakshatra;;;;;;;;;x
+county_indo_duuryaatri;Nakshatra;Nakshatra;Nakshatra;;Nakshatra;;;;;;;;;x
+counties_indo_duuryaatri;Nakshatras;Nakshatras;Nakshatras;;Nakshatras;;;;;;;;;x
+
+baron_indo_duuryaatri;Nagarpati;Nagarpati;Nagarpati;;Nagarpati;;;;;;;;;x
+baron_female_indo_duuryaatri;Nagareshwari;Nagareshwari;Nagareshwari;;Nagareshwari;;;;;;;;;x
+baron_title_ruler_consort_indo_duuryaatri;Purushan;Purushan;Purushan;;Purushan;;;;;;;;;x
+baron_title_ruler_consort_female_indo_duuryaatri;Patni;Patni;Patni;;Patni;;;;;;;;;x
+baron_foa_indo_duuryaatri;O Lord;Monseigneur;Mein Fürst;;Mi Señor;;;;;;;;;x
+baron_foa_female_indo_duuryaatri;O Lady;Madame;Meine Fürstin;;Mi Señora;;;;;;;;;x
+barony_of_indo_duuryaatri;Mahaanagar;Mahaanagar;Mahaanagar;;Mahaanagar;;;;;;;;;x
+barony_indo_duuryaatri;Mahaanagar;Mahaanagar;Mahaanagar;;Mahaanagar;;;;;;;;;x
+baronies_indo_duuryaatri;Mahaanagars;Mahaanagars;Mahaanagars;;Mahaanagars;;;;;;;;;x

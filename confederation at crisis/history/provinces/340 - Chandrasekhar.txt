@@ -6,13 +6,13 @@ title = c_chandrasekhar
 # Settlements
 max_settlements = 5
 
+b_chandrasekhar_iv = castle
 b_chandrasekhar_iv_b = city
 b_chandrasekhar_iii = temple
-b_chandrasekhar_iv = castle
 
 # Misc
 culture = indo_mukta # Initial culture
-religion = colonial_separatist
+religion = terran_republican
 
 # History
 1.1.1 = {

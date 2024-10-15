@@ -1,0 +1,23 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_EW_visit_shrine"
+		texturefile = "gfx\\interface\\decisions\\EW_visit_shrine.dds"
+	}
+	spriteType = {
+		name = "GFX_form_bhaarat"
+		texturefile = "gfx\\interface\\decisions\\form_bhaarat.dds"
+	}
+	spriteType = {
+		name = "GFX_EW_coronation"
+		texturefile = "gfx\\interface\\decisions\\EW_coronation.dds"
+	}
+	spriteType = {
+		name = "GFX_EW_prepare_dharmayuddh"
+		texturefile = "gfx\\interface\\decisions\\EW_prepare_dharmayuddh.dds"
+	}
+	spriteType = {
+		name = "GFX_EW_cancel_dharmayuddh"
+		texturefile = "gfx\\interface\\decisions\\EW_cancel_dharmayuddh.dds"
+	}
+}

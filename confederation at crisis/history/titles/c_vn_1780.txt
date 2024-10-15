@@ -1,5 +1,5 @@
 2998.1.1 = {
-	law = succ_feudal_elective
+	law = succ_primogeniture
 	effect = {
 		add_law = true_cognatic_succession
 		holder_scope = {
@@ -11,4 +11,11 @@
 		}
 	}
 	holder = 12000005
+	effect = {
+		location = {
+			add_province_modifier = {
+				name = EW_pilgrimage_site duration = -1
+			}
+		}
+	}
 }

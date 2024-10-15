@@ -564,7 +564,99 @@ religious_group = {
             machine_cultist_opinion = 10
         }
     }
+	eternal_way = {
+        graphical_culture = muslimgfx
+        icon = 9
+        #crusade_name = CRUSADE_DHARMAYUDDHA
 
+        color = { 0.87 0.7 0.17 }
+        high_god_name = GOD_THE_LORD
+        god_names = {
+			GOD_THE_LORD
+			GOD_IISHVAR
+			GOD_BRAHMAN
+			GOD_ANDAVAN
+			GOD_NAARAAYAN
+			GOD_MAHADEVA
+			GOD_EKADANTA
+		}
+        evil_god_names = {
+			EVIL_GOD_ADHARMA
+			EVIL_GOD_THE_ASURAS
+		}
+
+        # Ai Behaviour
+        ai_convert_same_group = 2
+        ai_convert_other_group = 2
+        pacifist = no #Affects wars, plots, etc...
+        aggression = 2 #Affects how much it wants wars.
+        #rel_head_defense = yes
+        #join_crusade_if_bordering_hostile = yes
+
+        # Gender Rules
+        matrilineal_marriages = yes
+        female_temple_holders = yes
+        male_temple_holders = yes
+        feminist = yes # affects opinion modifier toward female rulers
+
+        # Religious Head Powers (assuming it has a religious head)
+        autocephaly = no
+        can_have_antipopes = no
+        #can_grant_invasion_cb = invasion
+        can_call_crusade = no
+        can_grant_divorce = no
+
+        # Secular Rulers Powers
+        investiture = no
+        can_demand_religious_conversion = yes
+        can_retire_to_monastery = no # Name should be: Can SEND people to monastery
+        has_heir_designation = no #Need Rajas of India DLC
+        raised_vassal_opinion_loss = yes
+        landed_kin_prestige_bonus = yes
+
+        # Actual Religion Rules
+        priests_can_marry = yes
+        priests_can_inherit = yes
+        attacking_same_religion_piety_loss = yes
+        uses_decadence = no #used to be yes but disabled, we intend to replace it with variable instead.
+        
+        # Marriage Rules:
+            # Incest rules
+            divine_blood = no
+            bs_marriage = no
+            pc_marriage = no
+            psc_marriage = no
+            cousin_marriage = yes
+			
+            # Forms of Marriage
+            max_wives = 1
+            men_can_take_consorts = no
+            women_can_take_consorts = no
+			
+            #Intermarriage Rules
+            intermarry = political_group
+            intermarry = political_terran_group
+            intermarry = religious_group
+            intermarry = religious_terran_group
+            intermarry = transhumanist_group
+            intermarry = outlaw_group
+
+
+        # Outlaw Features
+        seafarer = no #makes boats cheap and make AI prefer coastal, but ALL provinces in CotC are coastal...
+        allow_rivermovement = yes #This allows crossing normally impassable nebulas.
+
+        # Mod Disabled Features
+        defensive_attrition = no
+        ignores_defensive_attrition = yes
+        castes = no
+        caste_opinions = no
+		
+		character_modifier = {
+            monthly_character_piety = -1
+        }
+    }
+	
     # This one shouldn´t spawn normaly
     old_world_religion = {
         graphical_culture = westerngfx

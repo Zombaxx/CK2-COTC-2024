@@ -10,8 +10,8 @@ b_vn_1241_outpost = castle
 
 
 # Misc
-culture = arab_samawati # Initial culture
-religion = cyberneticist
+culture = indo_duuryaatri # Initial culture
+religion = eternal_way
 
 1.1.1 = {
 }

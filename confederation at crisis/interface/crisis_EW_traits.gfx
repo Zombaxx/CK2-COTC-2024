@@ -1,0 +1,41 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_EW_on_pilgrimage"
+		textureFile = "gfx/traits/EW_on_pilgrimage.tga"
+		noOfFrames = 1
+		noRefCount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+
+	spriteType = {
+		name = "GFX_trait_EW_pilgrim"
+		textureFile = "gfx/traits/EW_pilgrim.tga"
+		noOfFrames = 1
+		noRefCount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_EW_uncrowned"
+		textureFile = "gfx/traits/EW_uncrowned.tga"
+		noOfFrames = 1
+		noRefCount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+
+	spriteType = {
+		name = "GFX_trait_EW_crowned"
+		textureFile = "gfx/traits/EW_crowned.tga"
+		noOfFrames = 1
+		noRefCount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_EW_dharmayoddhaa"
+		textureFile = "gfx/traits/EW_dharmayoddhaa.tga"
+		noOfFrames = 1
+		noRefCount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+}
