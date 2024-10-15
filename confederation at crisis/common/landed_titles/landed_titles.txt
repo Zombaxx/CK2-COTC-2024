@@ -235,6 +235,7 @@ e_terran_confederation = {
 					holy_site = orthodox
 					holy_site = solar_cultist
 					holy_site = solarian
+					
 					}
 				b_moon = {
 					short_name = yes
@@ -4194,6 +4195,7 @@ k_novyy_edem = {
 					holy_site = cyberneticist
 					holy_site = hiver
 					holy_site = machine_cultist
+					holy_site = eternal_way
 
 					b_tarka_iii = { used_for_dynasty_names = no }
 					b_tarka_iii_b = { used_for_dynasty_names = no }
@@ -4424,6 +4426,8 @@ k_novyy_edem = {
 
 					used_for_dynasty_names = no
 
+					holy_site = eternal_way
+					
 					b_mohamud_iv = { used_for_dynasty_names = no }
 					b_mohamud_iv_b = { used_for_dynasty_names = no }
 					b_mohamud_iv_c = { used_for_dynasty_names = no }
@@ -4798,6 +4802,8 @@ k_novyy_edem = {
 				color2 = { 208 108 235 }
 				used_for_dynasty_names = no
 
+				holy_site = eternal_way
+				
 				b_vn_32_outpost = { used_for_dynasty_names = no }
 				b_vn_32 = { used_for_dynasty_names = no }
 				b_vn_32_ii = { used_for_dynasty_names = no }
@@ -4848,7 +4854,9 @@ k_novyy_edem = {
 				color = { 217 114 255 }
 				color2 = { 187 110 215 }
 				used_for_dynasty_names = no
-
+				
+				holy_site = eternal_way
+				
 				b_vn_697_observatory = { used_for_dynasty_names = no }
 				b_vn_697 = { used_for_dynasty_names = no }
 				b_vn_697_ii = { used_for_dynasty_names = no }
@@ -6175,6 +6183,8 @@ k_novyy_edem = {
 				color2 = { 20 150 10 }
 
 				used_for_dynasty_names = no
+				
+				holy_site = eternal_way
 
 				b_chandrasekhar_iii = { used_for_dynasty_names = no }
 				b_chandrasekhar_iv = { used_for_dynasty_names = no }
