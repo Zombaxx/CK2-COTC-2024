@@ -1,0 +1,97 @@
+decisions = {
+	trex_heretic_thoughts = {
+		is_high_prio = no
+		ai_check_interval = 12
+		potential = {
+			NOT = { 
+				OR = {
+					religion = trex_the_new_heresy 
+					religion = trex_the_heretics 
+				}
+			}
+			NOT = { has_global_flag = trex_reformed_the_heresy }
+			ai = no
+			NOT = { secret_religion = trex_the_heretics }
+		}
+		allow = {
+			learning = 8
+			piety = 250
+			is_adult = yes
+			is_playable = yes
+			NOT = { 
+				has_trait = zealous
+			}
+		}
+		effect = {
+			character_event = {
+				id = trexheresy.6
+			}
+			piety = -250 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	trex_write_down_teachings = {
+		is_high_prio = yes
+		ai_check_interval = 12
+		potential = {
+			religion = trex_the_new_heresy
+			NOT = { has_global_flag = trex_reformed_heresy_book }
+		}
+		allow = {
+			learning = 20
+			piety = 1000
+			is_adult = yes
+			is_playable = yes
+			NOT = { has_trait = cynical }
+		}
+		effect = {
+			set_global_flag = trex_reformed_heresy_book
+			character_event = {
+				id = trexheresy.2
+				days = 180
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#	trex_declare_holy_site = {
+#		is_high_prio = yes
+#		ai_check_interval = 12
+#		potential = {
+#			religion = trex_the_heretics
+#			NOT = { 
+#				has_global_flag = trex_reformed_heresy_book 
+#				has_global_flag = trex_declared_holy_site 
+#			}
+#		}
+#		allow = {
+#			learning = 10
+#			piety = 1000
+#			is_adult = yes
+#			is_playable = yes
+#			NOT = {
+#				any_realm_title = {
+#					is_holy_site = ROOT
+#				}
+#			}
+#			capital_scope = {
+#				religion = trex_the_heretics
+#			}
+#		}
+#		effect = {
+#			set_global_flag = trex_declared_holy_site
+#			character_event = {
+#				id = trexheresy.4
+#			}
+#			piety = -1000
+#		}
+#		ai_will_do = {
+#			factor = 0
+#		}
+#	}
+#}

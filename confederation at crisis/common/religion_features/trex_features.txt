@@ -1,0 +1,40 @@
+religion_leadership = {	
+	religion_trex_papal_head = {
+		picture = GFX_religion_feature_monastic
+		potential = {
+			has_game_started = yes
+			religion = trex_the_new_heresy
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_trex_papal_head }
+			hidden_tooltip = { 
+				set_can_excommunicate = yes
+				set_can_grant_divorce = yes
+				set_can_grant_invasion_cb = yes
+				set_can_grant_claim = yes
+			}
+			set_global_flag = trex_set_papal_succession
+			d_trex_the_new_heresy = {
+				add_law = { 
+					law = succ_trex_heretic_papal_succession
+					cooldown = no
+					opinion_effect = no
+				}
+				succession = papal_succession
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = { 	
+				factor = 0.1
+				FROM = { 
+					character = yes 
+					NOR = { 
+						religion = tengri_pagan
+						religion = zun_pagan
+					}
+				}
+			}
+		}
+	}
+}

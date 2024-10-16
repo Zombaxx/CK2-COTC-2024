@@ -1,0 +1,249 @@
+defined_text = {
+	name = TrexNewHeresy
+
+	use_first_valid = yes # Defaults to no
+
+	text = {
+		trigger = {
+			NOT = { has_global_flag = trex_reformed_the_heresy }
+		}
+		localisation_key = TREX_UNREFORMED_HERESY
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_reformed_the_heresy
+			has_global_flag = trex_reformed_name_followers
+		}
+		localisation_key = TREX_REFORMED_HERESY_FOLLOWERS
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_reformed_the_heresy
+			has_global_flag = trex_reformed_name_teachings
+		}
+		localisation_key = TREX_REFORMED_HERESY_TEACHINGS
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_reformed_the_heresy
+			has_global_flag = trex_reformed_name_dynasty
+		}
+		localisation_key = TREX_REFORMED_HERESY_DYNASTY
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_reformed_the_heresy
+			has_global_flag = trex_reformed_name_adjective
+		}
+		localisation_key = TREX_REFORMED_HERESY_ADJECTIVE
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_reformed_the_heresy
+		}
+		localisation_key = TREX_REFORMED_HERESY
+	}	
+}
+
+defined_text = {
+	name = Heretic_Religious_Head
+
+	use_first_valid = yes # Defaults to no
+
+	text = {
+		trigger = {
+			NOT = { has_global_flag = trex_chosen_a_name }
+		}
+		localisation_key = TREX_UNREFORMED_HERESY_PRIEST
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_high
+		}
+		localisation_key = TREX_UNREFORMED_HERESY_PRIEST
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_archbishop
+		}
+		localisation_key = TREX_REFORMED_HERESY_ARCHBISHOP
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_pope
+		}
+		localisation_key = TREX_REFORMED_HERESY_POPE
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_inquisitor
+		}
+		localisation_key = TREX_REFORMED_HERESY_INQUISITOR
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_holy_king
+		}
+		localisation_key = TREX_REFORMED_HERESY_HOLY_KING
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_lord
+		}
+		localisation_key = TREX_REFORMED_HERESY_LORD
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_father
+		}
+		localisation_key = TREX_REFORMED_HERESY_FATHER
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_blessed
+		}
+		localisation_key = TREX_REFORMED_HERESY_BLESSED
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_master
+		}
+		localisation_key = TREX_REFORMED_HERESY_MASTER
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+		}
+		localisation_key = TREX_UNREFORMED_HERESY_PRIEST
+	}	
+}
+defined_text = {
+	name = Heretic_Religious_HeadF
+
+	use_first_valid = yes # Defaults to no
+
+	text = {
+		trigger = {
+			NOT = { has_global_flag = trex_chosen_a_name }
+		}
+		localisation_key = TREX_UNREFORMED_HERESY_PRIESTESS
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_high
+		}
+		localisation_key = TREX_UNREFORMED_HERESY_PRIESTESS
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_archbishop
+		}
+		localisation_key = TREX_REFORMED_HERESY_ARCHBISHOP
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_pope
+		}
+		localisation_key = TREX_REFORMED_HERESY_POPE
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_inquisitor
+		}
+		localisation_key = TREX_REFORMED_HERESY_INQUISITOR
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_holy_king
+		}
+		localisation_key = TREX_REFORMED_HERESY_HOLY_QUEEN
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_lord
+		}
+		localisation_key = TREX_REFORMED_HERESY_LADY
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_father
+		}
+		localisation_key = TREX_REFORMED_HERESY_MOTHER
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_blessed
+		}
+		localisation_key = TREX_REFORMED_HERESY_BLESSED
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+			has_global_flag = trex_reformed_priest_master
+		}
+		localisation_key = TREX_REFORMED_HERESY_MASTER
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_chosen_a_name
+		}
+		localisation_key = TREX_UNREFORMED_HERESY_PRIESTESS
+	}	
+}
+
+defined_text = {
+	name = TrexNewHeresyTitle
+
+	use_first_valid = yes # Defaults to no
+
+	text = {
+		trigger = {
+			NOT = { has_global_flag = trex_reformed_the_heresy }
+		}
+		localisation_key = TREX_UNREFORMED_HERESY_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_reformed_the_heresy
+			has_global_flag = trex_reformed_name_followers
+		}
+		localisation_key = TREX_REFORMED_HERESY_FOLLOWERS_TITLE
+	}
+	text = {
+		trigger = {
+			has_global_flag = trex_reformed_the_heresy
+			has_global_flag = trex_reformed_name_dynasty
+		}
+		localisation_key = TREX_REFORMED_HERESY_DYNASTY_TITLE
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_reformed_the_heresy
+			has_global_flag = trex_reformed_name_adjective
+		}
+		localisation_key = TREX_REFORMED_HERESY_ADJECTIVE_TITLE
+	}	
+	text = {
+		trigger = {
+			has_global_flag = trex_reformed_the_heresy
+		}
+		localisation_key = TREX_REFORMED_HERESY_TITLE
+	}		
+}

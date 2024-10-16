@@ -235,6 +235,8 @@ e_terran_confederation = {
 					holy_site = orthodox
 					holy_site = solar_cultist
 					holy_site = solarian
+					holy_site = trex_the_heretics
+					holy_site = trex_the_new_heresy
 					
 					}
 				b_moon = {
@@ -439,6 +441,8 @@ e_terran_confederation = {
 				used_for_dynasty_names = no
 				holy_site = terran_federalist # Traditional regional capital
 				holy_site = terran_imperial
+				holy_site = trex_the_heretics
+				holy_site = trex_the_new_heresy
 
 				b_huangjing_iii = { used_for_dynasty_names = no }
 				b_huangjing_iii_b = { used_for_dynasty_names = no }
@@ -678,6 +682,8 @@ e_terran_confederation = {
 				holy_site = terran_federalist # Traditional regional capital
 				holy_site = terran_republican
 				holy_site = terran_imperial
+				holy_site = trex_the_heretics
+				holy_site = trex_the_new_heresy
 
 				b_encrucijada_iv = { used_for_dynasty_names = no }
 				b_encrucijada_iv_b = { used_for_dynasty_names = no }
@@ -982,6 +988,8 @@ e_terran_confederation = {
 				holy_site = adoptionist
 				holy_site = adoptionist_cultist
 				holy_site = imperial_cult
+				holy_site = trex_the_heretics
+				holy_site = trex_the_new_heresy
 
 				# Another early cybernetics leader
 				holy_site = cyberneticist
@@ -3629,6 +3637,8 @@ k_novyy_edem = {
 					holy_site = colonial_separatist
 					holy_site = terran_imperial
 					holy_site = space_pirate
+					holy_site = trex_the_heretics
+					holy_site = trex_the_new_heresy
 					b_meissa_ii = { used_for_dynasty_names = no }
 					b_meissa_ii_b = { used_for_dynasty_names = no }
 					b_meissa_ii_c = { used_for_dynasty_names = no }

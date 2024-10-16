@@ -566,7 +566,7 @@ religious_group = {
     }
 	eternal_way = {
         graphical_culture = muslimgfx
-        icon = 9
+        icon = 26
         #crusade_name = CRUSADE_DHARMAYUDDHA
 
         color = { 0.87 0.7 0.17 }

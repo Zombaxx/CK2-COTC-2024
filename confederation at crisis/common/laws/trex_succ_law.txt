@@ -1,0 +1,13 @@
+succ_trex_heretic_papal_succession = {
+	potential = {
+		title = d_trex_the_new_heresy
+		has_global_flag = trex_set_papal_succession
+	}
+	
+	effect = {
+		succession = papal_succession
+	}
+	revoke_allowed = {
+		always = no
+	}		
+}

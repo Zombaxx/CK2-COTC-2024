@@ -1,0 +1,304 @@
+namespace = trexheresy
+
+## Religion Name and Bloodline
+character_event = {
+    id = trexheresy.1
+    desc = trexheresy.1.de
+	picture = GFX_evt_beatification
+	is_triggered_only = yes
+	
+	religion_group = political_group
+	
+	after = { 
+		set_global_flag = trex_reformed_the_heresy
+	    save_global_event_target_as = trex_target_reformer
+	    give_nickname = nick_trex_reformer
+	    create_bloodline = {
+			type = trex_reformer_bloodline
+			religion = ROOT
+		}
+		character_event = {
+			id = trexheresy.3
+			tooltip = trexheresy.3.tt
+		}
+	}
+	
+    option = {
+	    name = trexheresy.1.a
+		set_global_flag = trex_reformed_name_followers
+    }
+	
+	option = {
+        name = trexheresy.1.b
+		set_global_flag = trex_reformed_name_teachings
+    }
+	
+	option = {
+        name = trexheresy.1.c
+		set_global_flag = trex_reformed_name_dynasty
+    }
+	
+	option = {
+        name = trexheresy.1.d
+		set_global_flag = trex_reformed_name_adjective
+		primary_title = {
+			save_global_event_target_as = trex_target_reformer_adj
+		}
+    }
+}
+
+## Famous Writer Bloodline
+narrative_event = {
+    id = trexheresy.2
+	title = trexheresy.2.t
+    desc = trexheresy.2.d
+	picture = GFX_evt_book_carolingian_script
+	
+	only_playable = yes
+	
+	is_triggered_only = yes
+	
+    option = {
+		name = trexheresy.2.a
+		ROOT = {
+			give_nickname = nick_trex_holy_book
+			create_bloodline = {
+				type = trex_writer_bloodline
+				religion = ROOT
+			}
+		}
+    }
+}
+
+## Head Title - 1
+character_event = {
+    id = trexheresy.3
+    desc = trexheresy.3.de
+	picture = GFX_evt_beatification
+	is_triggered_only = yes
+	
+	religion_group = political_group
+
+	trigger = {
+		NOT = {
+			has_religion_feature = religion_no_leader
+		}
+	}
+	
+    option = {
+	    name = trexheresy.3.a
+		set_global_flag = trex_reformed_priest_high
+		set_global_flag = trex_chosen_a_name
+    }
+	
+	option = {
+        name = trexheresy.3.b
+		set_global_flag = trex_reformed_priest_archbishop
+		set_global_flag = trex_chosen_a_name
+    }
+	
+	option = {
+        name = trexheresy.3.c
+		set_global_flag = trex_reformed_priest_pope
+		set_global_flag = trex_chosen_a_name
+    }
+	
+	option = {
+		name = trexheresy.3.d
+		character_event = {
+			id = trexheresy.301
+		}
+		
+    }
+}
+
+## Head Title - 2
+character_event = {
+    id = trexheresy.301
+    desc = trexheresy.301.de
+	picture = GFX_evt_beatification
+	is_triggered_only = yes
+	
+	religion_group = political_group
+
+	trigger = {
+		NOT = {
+			has_religion_feature = religion_no_leader
+		}
+	}
+	
+    option = {
+	    name = trexheresy.301.a
+		set_global_flag = trex_reformed_priest_inquisitor
+		set_global_flag = trex_chosen_a_name
+    }
+	
+	option = {
+        name = trexheresy.301.b
+		set_global_flag = trex_reformed_priest_holy_king
+		set_global_flag = trex_chosen_a_name
+    }
+	
+	option = {
+        name = trexheresy.301.c
+		set_global_flag = trex_reformed_priest_lord
+		set_global_flag = trex_chosen_a_name
+    }
+	
+	option = {
+		name = trexheresy.3.d
+		character_event = {
+			id = trexheresy.302
+		}
+    }
+}
+## Head Title - 3
+character_event = {
+    id = trexheresy.302
+    desc = trexheresy.302.de
+	picture = GFX_evt_beatification
+	is_triggered_only = yes
+	
+	religion_group = political_group
+
+	trigger = {
+		NOT = {
+			has_religion_feature = religion_no_leader
+		}
+	}
+	
+    option = {
+	    name = trexheresy.302.a
+		set_global_flag = trex_reformed_priest_father
+		set_global_flag = trex_chosen_a_name
+    }
+	
+	option = {
+        name = trexheresy.302.b
+		set_global_flag = trex_reformed_priest_blessed
+		set_global_flag = trex_chosen_a_name
+    }
+	
+	option = {
+        name = trexheresy.302.c
+		set_global_flag = trex_reformed_priest_master
+		set_global_flag = trex_chosen_a_name
+    }
+	
+	option = {
+		name = trexheresy.3.d
+		character_event = {
+			id = trexheresy.3
+		}
+    }
+}
+
+### New Holy Site
+#character_event = {
+#    id = trexheresy.4
+#    desc = trexheresy.4.de
+#	picture = GFX_evt_beatification
+#	is_triggered_only = yes
+#	
+#	religion_group = political_group
+#	
+#	after = { 
+#		character_event = {
+#			id = trexheresy.5
+#		}
+#		capital_holding = {
+#			set_holy_site = trex_the_heretics
+#			set_holy_site = trex_the_new_heresy
+#		}
+#	}
+#	
+#    option = {
+#		name = trexheresy.4.a
+#		# Rome
+#		c_roma = { 
+#			remove_holy_site = trex_the_heretics 
+#			remove_holy_site = trex_the_new_heresy 
+#		}
+#    }
+#	
+#	option = {
+#		name = trexheresy.4.b
+#		# Santiago
+#		c_santiago = { 
+#			remove_holy_site = trex_the_heretics 
+#			remove_holy_site = trex_the_new_heresy 
+#		}
+#    }
+#	
+#	option = {
+#		name = trexheresy.4.c
+#		# Köln
+#		c_koln = { 
+#			remove_holy_site = trex_the_heretics 
+#			remove_holy_site = trex_the_new_heresy 
+#		}
+#    }
+#	
+#	option = {
+#		name = trexheresy.4.d
+#		# Kent
+#		c_kent = { 
+#			remove_holy_site = trex_the_heretics 
+#			remove_holy_site = trex_the_new_heresy 
+#		}
+#    }
+#}
+#
+### Holy Site - News
+#narrative_event = {
+#    id = trexheresy.5
+#	title = trexheresy.5.t
+#    desc = trexheresy.5.d
+#	picture = GFX_evt_book_carolingian_script
+#	major = yes
+#	
+#	only_playable = yes
+#	
+#	is_triggered_only = yes
+#	
+#    option = {
+#        name = {
+#			text = trexheresy.5.aa
+#			trigger = {
+#				religion = terran_imperial
+#			}
+#		}
+#		name = {
+#			text = trexheresy.5.ab
+#			trigger = {
+#				NOT = {
+#					religion = terran_imperial
+#				}
+#			}
+#		}
+#
+#    }
+#}
+
+## Secret or Public Heretic
+character_event = {
+	id = trexheresy.6
+	title = trexheresy.6.t
+    desc = trexheresy.6.de
+	picture = GFX_evt_beatification
+	is_triggered_only = yes
+	
+	#religion_group = political_group
+	
+    option = {
+	    name = trexheresy.6.a
+		religion = trex_the_heretics
+    }
+	
+	option = {
+        name = trexheresy.6.b
+		set_secret_religion = trex_the_heretics
+    }
+}
+
+}

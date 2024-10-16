@@ -1,0 +1,10 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_trex_write_down_teachings"
+		texturefile = "gfx\\interface\\decision_icon_convert_to_liege_religion.dds"
+	}
+	spriteType = {
+		name = "GFX_trex_heretic_thoughts"
+		texturefile = "gfx\\interface\\decision_icon_convert_to_liege_religion.dds"
+	}
+}

@@ -1,0 +1,26 @@
+namespace = trexheresy_papal
+
+character_event = {
+    id = trexheresy_papal.1
+	desc = trexheresy_papal.1.de ## hidden
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		religion = trex_the_new_heresy
+		controls_religion = yes
+		has_religion_feature = religion_trex_papal_head
+	}
+
+    option = {
+		name = trexheresy_papal.1.a
+		any_demesne_title = {
+			add_law = { 
+				law = succ_trex_heretic_papal_succession
+				cooldown = no
+				opinion_effect = no
+			}
+			succession = papal_succession
+		}
+    }
+}

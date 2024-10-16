@@ -1,0 +1,11 @@
+on_reform_religion = {
+	events = {
+		trexheresy.1
+	}
+}
+
+on_death= {
+	events = {
+		trexheresy_papal.1
+	}
+}

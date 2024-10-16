@@ -1,0 +1,11 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_trait_trex_branch_1"
+		texturefile = "gfx/traits/trex_branch_1.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	## Ezt megcsinálni és az eventeket hozzá aztán teszt
+}

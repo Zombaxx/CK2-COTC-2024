@@ -1,0 +1,111 @@
+#CODE;ENGLISH;;;;;;;;;;;;;x
+### CUSTOM LOCALISATION ###
+TREX_UNREFORMED_HERESY_TITLE;Revolutionary Leader;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_TITLE;Idealist Leader;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_FOLLOWERS_TITLE;Church of [trex_target_reformer.GetDynName];;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_DYNASTY_TITLE;[trex_target_reformer.Culture.GetName] Church;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_ADJECTIVE_TITLE;[trex_target_reformer_adj.GetAdjective] Center;;;;;;;;;;;;;x
+TREX_UNREFORMED_HERESY;Idealism;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY;Idealism;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_FOLLOWERS;[trex_target_reformer.GetFirstName]ist;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_TEACHINGS;[trex_target_reformer.GetOnlyDynastyName]ist;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_DYNASTY;[trex_target_reformer.Culture.GetName] Christian;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_ADJECTIVE;[trex_target_reformer_adj.GetAdjective] Christian;;;;;;;;;;;;;x
+TREX_UNREFORMED_HERESY_PRIEST;High Priest;;;;;;;;;;;;;x
+TREX_UNREFORMED_HERESY_PRIESTESS;High Priestess;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_ARCHBISHOP;Archbishop;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_POPE;Pope;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_INQUISITOR;Grand Inquisitor;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_HOLY_KING;Holy King;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_HOLY_QUEEN;Holy Queen;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_LORD;Lord;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_LADY;Lady;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_FATHER;Father;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_MOTHER;Mother;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_BLESSED;Blessed;;;;;;;;;;;;;x
+TREX_REFORMED_HERESY_MASTER;Master;;;;;;;;;;;;;x
+TREX_COLLEGE_OF_CARDINALS;College of Cardinals;;;;;;;;;;;;;x
+TREX_POPE;Current Ideology Leader;;;;;;;;;;;;;x
+TREX_PREFERATI;Expected Ideology Leader;;;;;;;;;;;;;x
+### BASIC INFO ###
+trex_the_heretics;Revolutionary;;;;;;;;;;;;;x
+trex_the_heretics_full;Revolutionaries;;;;;;;;;;;;;x
+trex_the_heretics_DESC;These Revolutionaries are disorganized and uncertain. An ambitious person can try to reform them into a new type of ideology.;;;;;;;;;;;;;x
+trex_the_new_heresy;[TrexNewHeresy];;;;;;;;;;;;;x
+trex_the_new_heresy_full;[TrexNewHeresy];;;;;;;;;;;;;x
+trex_the_new_heresy_DESC;The [TrexNewHeresy] ideology is a new political party.;;;;;;;;;;;;;x
+TREX_H_P;[Heretic_Religious_Head];;;;;;;;;;;;;x
+TREX_H_P_F;[Heretic_Religious_HeadF];;;;;;;;;;;;;x
+d_trex_the_new_heresy;Center;;;;;;;;;;;;;x
+d_trex_the_new_heresy_adj;[TrexNewHeresy];;;;;;;;;;;;;x
+title_trex_heresy_cardinal;Representative;;;;;;;;;;;;;x
+### NICKNAMES ###
+nick_trex_reformer;the Reformer;;;;;;;;;;;;;x
+nick_trex_holy_book;the Articles;;;;;;;;;;;;;x
+### RELIGION FEATURES ###
+religion_trex_papal_head;House of Representatives;;;;;;;;;;;;;x
+religion_trex_papal_head_desc;We should be careful about who becomes the leader of our ideology.;;;;;;;;;;;;;x
+tooltip_trex_papal_head;�GYour ideoligy will use Papal Succession with a Duke level Pope.�!;;;;;;;;;;;;;x
+### BLOODLINES ###
+trex_reformer_bloodline;Blood of [Root.GetFirstName] the Reformer;;;;;;;;;;;;;x
+trex_reformer_bloodline_desc;[Root.GetDynName] lead the disorganized Revolutionaries and created a new ideology.;;;;;;;;;;;;;x
+trex_writer_bloodline;Blood of [Root.GetFirstName] the Revolutionary;;;;;;;;;;;;;x
+trex_writer_bloodline_desc;[Root.GetDynName] was a great Revolutionary who created a new political party for [TrexNewHeresy].;;;;;;;;;;;;;x
+### TRAITS ###
+trex_branch_1;Tolerant;;;;;;;;;;;;;x
+trex_branch_1_desc;This character strives to be tolerant of other ideologies.;;;;;;;;;;;;;x
+trex_branch_2;Pious;;;;;;;;;;;;;x
+trex_branch_2_desc;This character strives to be the holiest person in the world.;;;;;;;;;;;;;x
+trex_branch_3;Political Warrior;;;;;;;;;;;;;x
+trex_branch_3_desc;This character believes that other people should be converted by force.;;;;;;;;;;;;;x
+trex_branch_4;Peaceful;;;;;;;;;;;;;x
+trex_branch_4_desc;This character thinks that violence should only be used when absolutely necessary.;;;;;;;;;;;;;x
+### DECISIONS ###
+trex_write_down_teachings;Write a Political Book;;;;;;;;;;;;;x
+trex_write_down_teachings_desc;Write down the teachings of [trex_target_reformer.GetDynName]. It would make you one of the greatest supporters of the [TrexNewHeresy].;;;;;;;;;;;;;x
+trex_heretic_thoughts;Revolutionary Thoughts;;;;;;;;;;;;;x
+trex_heretic_thoughts_desc;I had enough of our ideology! I don't want to be this anymore. I have a better idea...;;;;;;;;;;;;;x
+trex_declare_holy_site;Delare Historical Site;;;;;;;;;;;;;x
+trex_declare_holy_site_desc;[Root.Capital.GetName] has lots people who are helping us spread our faith. We should declare [Root.Capital.GetName] a Historical Site. This would surely make them more zealous.;;;;;;;;;;;;;x
+### EVENTS ###
+# Select Religion Name
+trexheresy.1.de;What will you call your new ideology?;;;;;;;;;;;;;x
+trexheresy.1.a;[Root.GetFirstName]ist;;;;;;;;;;;;;x
+trexheresy.1.b;[Root.GetOnlyDynastyName]ist;;;;;;;;;;;;;x
+trexheresy.1.c;[Root.Culture.GetName] Political;;;;;;;;;;;;;x
+trexheresy.1.d;[Root.PrimaryTitle.GetAdjective] Political;;;;;;;;;;;;;x
+# Book Written
+trexheresy.2.t;The Ideological Book of the [TrexNewHeresy];;;;;;;;;;;;;x
+trexheresy.2.d;The Articles was used as an ideoligcal book for the [TrexNewHeresy], but now [Root.GetTitledName] expanded the Articles to include the teachings of [trex_target_reformer.GetDynName]. The [TrexNewHeresyTitle] accepted the book and now it is considered the key ideoligcal book of the Revolution.;;;;;;;;;;;;;x
+trexheresy.2.a;Amazing;;;;;;;;;;;;;x
+# Select Head Title
+trexheresy.3.tt;You will be able to choose the title of your ideology head if you have one.;;;;;;;;;;;;;x
+trexheresy.3.de;What will you call your ideology head?\n\n\nPage 1 of 3;;;;;;;;;;;;;x
+trexheresy.3.a;High Priest and High Priestess;;;;;;;;;;;;;x
+trexheresy.3.b;Archbishop;;;;;;;;;;;;;x
+trexheresy.3.c;Pope;;;;;;;;;;;;;x
+trexheresy.3.d;More...;;;;;;;;;;;;;x
+trexheresy.301.de;What will you call your ideology head?\n\n\nPage 2 of 3;;;;;;;;;;;;;x
+trexheresy.301.a;Grand Inquisitor;;;;;;;;;;;;;x
+trexheresy.301.b;Enlightened King and Enlightened Queen;;;;;;;;;;;;;x
+trexheresy.301.c;Lord and Lady;;;;;;;;;;;;;x
+trexheresy.302.de;What will you call your ideology head?\n\n\nPage 3 of 3;;;;;;;;;;;;;x
+trexheresy.302.a;Father and Mother;;;;;;;;;;;;;x
+trexheresy.302.b;Blessed;;;;;;;;;;;;;x
+trexheresy.302.c;Master;;;;;;;;;;;;;x
+# Replace Historical Site
+trexheresy.4.de;Our capital is considered historical by many of our followers! \nWhich Historical Site you want to replace with [Root.Capital.GetName]?;;;;;;;;;;;;;x
+trexheresy.4.a;Earth;;;;;;;;;;;;;x
+trexheresy.4.b;Tau Ceti;;;;;;;;;;;;;x
+trexheresy.4.c;God's Eye;;;;;;;;;;;;;x
+trexheresy.4.d;Outer Periphery;;;;;;;;;;;;;x
+# Historical Site - News
+trexheresy.5.t;The Revolutionary Historical Site;;;;;;;;;;;;;x
+trexheresy.5.d;[Root.Capital.GetName] was declared a Historical Site by [Root.GetTitledName]. The Pope is furious. He says that this is a prime example of blasphemy and [Root.GetFirstNameWithNick] will suffer in hell for all the blasphemous things [Root.GetSheHe] did. \n\nThis blasphemous deed will surely hurt the whole ideology...;;;;;;;;;;;;;x
+trexheresy.5.aa;Someone shall burn that damn revolutionary already!;;;;;;;;;;;;;x
+trexheresy.5.ab;It seems that the Pope is getting weaker...;;;;;;;;;;;;;x
+# Heretic Thoughts
+trexheresy.6.t;Revolutionary Thoughts;;;;;;;;;;;;;x
+trexheresy.6.de;I have decided that I want to help those revolutionaries. Should I announce this? It could cause problems if I become a revolutionary publicly...;;;;;;;;;;;;;x
+trexheresy.6.a;Doesn't matter! I want everyone to know it!;;;;;;;;;;;;;x
+trexheresy.6.b;It would be a good idea to keep this a secret.;;;;;;;;;;;;;x
