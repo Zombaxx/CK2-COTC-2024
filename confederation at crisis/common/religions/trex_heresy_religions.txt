@@ -38,6 +38,9 @@ political_group = {
 		intermarry = religious_terran_group
 		intermarry = outlaw_group
 		
+		allow_rivermovement = yes
+		
+		
 		allow_in_ruler_designer = no
 	}
 	trex_the_heretics = {
@@ -73,6 +76,9 @@ political_group = {
 		intermarry = political_group
 		intermarry = religious_group
 		intermarry = transhumanist_group
+		
+		allow_looting = yes
+		aggression = 5
 		
 		reformed = trex_the_new_heresy
 	}

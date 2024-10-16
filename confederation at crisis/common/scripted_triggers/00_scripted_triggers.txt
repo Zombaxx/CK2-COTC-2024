@@ -1506,18 +1506,19 @@ has_society_currency_major_trigger = {
 }
 
 is_devil_worshiper_trigger = {
-	custom_tooltip = {
-		text = IS_DEVIL_WORSHIPPER_TRIGGER
-		OR = {
-			society_member_of = the_satanists
-			society_member_of = the_cold_ones
-			society_member_of = the_plaguebringers
-			society_member_of = the_cult_of_kali
-			society_member_of = the_cult_of_balor
-			society_member_of = cult_of_angra_mainyu
-			society_member_of = the_trollcrafters
-		}
-	}
+	always = no
+	# custom_tooltip = {
+		# text = IS_DEVIL_WORSHIPPER_TRIGGER
+		# OR = {
+			# society_member_of = the_satanists
+			# society_member_of = the_cold_ones
+			# society_member_of = the_plaguebringers
+			# society_member_of = the_cult_of_kali
+			# society_member_of = the_cult_of_balor
+			# society_member_of = cult_of_angra_mainyu
+			# society_member_of = the_trollcrafters
+		# }
+	# }
 }
 
 has_negative_congenital_trigger = {
@@ -1536,35 +1537,35 @@ has_negative_congenital_trigger = {
 	}
 }
 
-is_christian_monastic_member_trigger = {
-	OR = {
-		society_member_of = monastic_order_orthodox
-		society_member_of = monastic_order_benedictine
-		society_member_of = monastic_order_dominican
-		society_member_of = monastic_order_nestorian
-		society_member_of = monastic_order_monophysite
-		society_member_of = monastic_order_apostolic
-		society_member_of = political_parties
-		society_member_of = political_senate_representatives
-		society_member_of = united_nations
-	}
-}
-is_dharmic_monastic_member_trigger = {
-	OR = {
-		society_member_of = monastic_order_hindu
-		society_member_of = monastic_order_buddhist
-		society_member_of = monastic_order_jain
-	}
-}
+# is_christian_monastic_member_trigger = {
+	# OR = {
+		# society_member_of = monastic_order_orthodox
+		# society_member_of = monastic_order_benedictine
+		# society_member_of = monastic_order_dominican
+		# society_member_of = monastic_order_nestorian
+		# society_member_of = monastic_order_monophysite
+		# society_member_of = monastic_order_apostolic
+		# society_member_of = political_parties
+		# society_member_of = political_senate_representatives
+		# society_member_of = united_nations
+	# }
+# }
+#is_dharmic_monastic_member_trigger = {
+#	OR = {
+#		society_member_of = monastic_order_hindu
+#		society_member_of = monastic_order_buddhist
+#		society_member_of = monastic_order_jain
+#	}
+#}
 is_monastic_member_trigger = {
-	OR = {
-		is_dharmic_monastic_member_trigger = yes
-		is_christian_monastic_member_trigger = yes
-		society_member_of = order_right_wing_party
-		society_member_of = monastic_order_jewish
-		society_member_of = monastic_order_cetic
+	#OR = {
+		#is_dharmic_monastic_member_trigger = yes
+		#is_christian_monastic_member_trigger = yes
+		#society_member_of = order_right_wing_party
+		#society_member_of = monastic_order_jewish
+		#society_member_of = monastic_order_cetic
 		society_member_of = monastic_order_stoics # Galactic Council
-	}
+	#}
 }
 
 is_ascetic_trigger = {
@@ -2470,3 +2471,2649 @@ same_true_religion_as_root_trigger = {
 	true_religion = ROOT
 }
 
+###IF VANILLA RELIGIONS ARE IMPORTED THEIR SCRIPTED TRIGGERS SHOULD GO HERE
+
+###CHINA TRIGGERS###
+
+#Grace triggers
+has_grace_trivial_trigger = {
+	has_offmap_currency = { offmap = offmap_china value = 10 }
+}
+has_grace_minor_trigger = {
+	has_offmap_currency = { offmap = offmap_china value = 50 }
+}
+has_grace_medium_trigger = {
+	has_offmap_currency = { offmap = offmap_china value = 150 }
+}
+has_grace_major_trigger = {
+	has_offmap_currency = { offmap = offmap_china value = 500 }
+}
+has_grace_massive_trigger = { 
+	has_offmap_currency = { offmap = offmap_china value = 1000 }
+}
+
+
+#Always put this at the end of your triggers!
+china_diplo_interaction_trigger = { 
+	offmap_china = {
+		governor = { 
+			NOT = { war_with = PREVPREV } 
+			is_within_diplo_range = PREVPREV
+		}
+		NOT = { has_policy = china_isolationist }
+	}
+	conditional_tooltip = { 
+		trigger = { government = chinese_imperial_government }
+		custom_tooltip = { 
+			text = china_offmap_decisions_pretender_emperor_tt
+			always = no
+		}
+	}
+}
+
+china_is_suffering_trigger = {
+	offmap_china = {
+		OR = {
+			has_status = china_unrest
+			has_status = china_civil_war
+			has_status = china_famine
+			has_status = china_plague
+			has_status = china_mongol_invasion
+			has_status = china_jurchen_invasion
+		}
+	}
+}
+
+china_is_fine_trigger = { #"fine", read like "fiii-iine", i.e. China is currently treating the world as their oyster
+	offmap_china = {
+		OR = {
+			has_status = china_golden_age
+			has_status = china_stable
+		}
+		OR = {
+			has_policy = china_open
+			has_policy = china_expansionist
+		}
+	}
+}
+
+china_is_stable_open_trigger = {
+	offmap_china = {
+		has_status = china_stable
+		has_policy = china_open
+	}
+}
+china_is_stable_expansionist_trigger = {
+	offmap_china = {
+		has_status = china_stable
+		has_policy = china_expansionist
+	}
+}
+china_is_golden_age_open_trigger = {
+	offmap_china = {
+		has_status = china_golden_age
+		has_policy = china_open
+	}
+}
+china_is_golden_age_expansionist_trigger = {
+	offmap_china = {
+		has_status = china_golden_age
+		has_policy = china_expansionist
+	}
+}
+
+
+#Found in the 00_offmap_powers file... and the conditions for the decisions
+china_offmap_boon_decisions_enabled_trigger = {
+	china_offmap_decisions_enabled_trigger = yes
+	custom_tooltip = {
+		text = china_offmap_boon_decisions_enabled_trigger_cd_tt #From is player character
+		FROM = { NOT = { has_character_modifier = jd_china_boon_cd } } #boon cooldown, which is set in each decision (one year!)...
+	}
+}
+
+#Found in the 00_offmap_powers file... and the conditions for the decisions, use custom tooltip for that decisions cooldown modifier
+china_offmap_tribute_decisions_enabled_trigger = {
+	china_offmap_decisions_enabled_trigger = yes
+}
+
+#What goes into the two triggers above...
+china_offmap_decisions_enabled_trigger = { 
+	offmap_china = {
+		NOT = { has_policy = china_isolationist }
+		custom_tooltip = {
+			text = china_offmap_decisions_enabled_trigger_war_tt #"Is at peace with §Y[From.GetTitledFirstName]§!"
+			NOT = { governor = { war_with = FROM } }
+		}
+		governor = {
+			show_scope_change = no
+			is_within_diplo_range = FROM
+			hidden_trigger  = { NOT = { character = FROM } } #Governor cannot use boon/tributes decisions
+		}
+	}
+	custom_tooltip = {
+		text = china_offmap_boon_decisions_enabled_trigger_raiding_tt
+		FROM = {
+			NOR = {
+				has_character_modifier = china_raid_active
+				has_character_modifier = china_raid_grace_cd
+			}
+		}
+	}
+	hidden_trigger = { has_dlc = "Jade Dragon" }
+	conditional_tooltip = { 
+		trigger = { FROM = { primary_title = { has_title_flag = rebel_general_title } } }
+		custom_tooltip = { 
+			text = china_offmap_decisions_pretender_emperor_tt
+			always = no
+		}
+	}
+	conditional_tooltip = { 
+		trigger = { FROM = { has_character_modifier = failed_invasion_of_china } }
+		custom_tooltip = { 
+			text = china_offmap_decisions_failed_invasion_tt
+			always = no
+		}
+	}
+}
+
+#Found in the 00_offmap_powers file... and the conditions for the force open china decision
+china_offmap_hostile_decisions_enabled_trigger = {
+	offmap_china = {
+		custom_tooltip = {
+			text = china_offmap_decisions_enabled_trigger_war_tt #"Is at peace with §Y[From.GetTitledFirstName]§!"
+			NOT = { governor = { war_with = FROM } }
+		}
+		governor = {
+			show_scope_change = no
+			is_within_diplo_range = FROM
+			hidden_trigger  = { NOT = { character = FROM } } #Governor cannot use boon/tributes decisions
+		}
+		offmap_ruler = {
+			NOT = { dynasty = FROM }
+		}
+	}
+	hidden_trigger = { has_dlc = "Jade Dragon" }
+}
+
+#Used with Sending Tribute characters to China...
+local_third_party_score_low_trigger = {
+	NOT = { check_variable = { which = local_third_party_score value = 91 } }
+}
+local_third_party_score_medium_trigger = {
+	check_variable = { which = local_third_party_score value = 91 }
+	NOT = { check_variable = { which = local_third_party_score value = 141 } }
+}
+local_third_party_score_great_trigger = {
+	check_variable = { which = local_third_party_score value = 141 }
+}
+
+# For checking the Chinese Emperor's likes & dislikes
+is_liked_by_China_trigger = {
+	liked_by_offmap = {
+        type = offmap_china
+    }
+    NOT = {
+        disliked_by_offmap = {
+            type = offmap_china
+        }
+    }
+    offmap_china = {
+        show_scope_change = no
+        custom_tooltip = { text = emperor_likes_THIS_tt }
+    }
+}
+
+is_disliked_by_China_trigger = {
+	disliked_by_offmap = {
+        type = offmap_china
+    }
+    NOT = {
+		liked_by_offmap = {
+            type = offmap_china
+        }
+    }
+    offmap_china = {
+        show_scope_change = no
+        custom_tooltip = { text = emperor_dislikes_THIS_tt }
+    }
+}
+
+is_liked_and_disliked_by_China = {
+    disliked_by_offmap = {
+        type = offmap_china
+    }
+    liked_by_offmap = {
+        type = offmap_china
+    }
+    offmap_china = {
+        show_scope_change = no
+        custom_tooltip = { text = emperor_has_ambiguous_feelings_of_THIS_tt }
+    }
+}
+
+#Used in the invasion script...
+valid_offmap_china_target = {
+	NOT = { character = ROOT }
+	NOT = { has_character_modifier = peace_deal_with_china }
+	NOT = { has_character_flag = defeated_china }
+	NOT = {	is_tributary = { suzerain = ROOT } }
+	in_revolt = no
+	is_within_diplo_range = ROOT
+	is_landed = yes
+	higher_tier_than = BARON
+	NOT = { primary_title = { has_title_flag = rebel_general_title } } #uses special cb to target
+	NOT = { offmap_china = { offmap_ruler = { dynasty = PREVPREV } } }
+}
+
+valid_offmap_china_target_location = {
+	OR = {
+		any_realm_province = { region = custom_chinese_invasion_target_region }
+		any_neighbor_independent_ruler = {
+			has_landed_title = e_china_west_governor
+		}
+	}
+}
+
+valid_offmap_china_target_location_tributary_chain = {
+	OR = {
+		#any_realm_province = { region = custom_chinese_invasion_target_region }
+		any_neighbor_independent_ruler = {
+			has_landed_title = e_china_west_governor
+		}
+		any_neighbor_independent_ruler = {
+			is_tributary = yes
+			suzerain = {
+				has_landed_title = e_china_west_governor
+			}
+		}
+	}
+}
+
+# JADE DRAGON
+# EMPEROR LIKES & DISLIKES
+likes_concubines = {
+	context = concubine # Not a trigger, but used by the 'liked_by_offmap' & 'disliked_by_offmap' triggers
+}
+likes_eunuchs = {
+	context = eunuch # Not a trigger, but used by the 'liked_by_offmap' & 'disliked_by_offmap' triggers
+	trait = eunuch
+}
+likes_wealth = {
+	context = wealth # Not a trigger, but used by the 'liked_by_offmap' & 'disliked_by_offmap' triggers
+}
+likes_tributaries = {
+	context = tributary # Not a trigger, but used by the 'liked_by_offmap' & 'disliked_by_offmap' triggers
+}
+likes_indians = {
+	culture_group = indo_aryan_group
+}
+likes_dravidians = {
+	culture_group = dravidian_group
+}
+likes_tibetans = {
+	culture_group = tibetan_group
+}
+likes_germanics = {
+	OR = {
+		culture_group = north_germanic
+		culture_group = central_germanic
+		culture_group = west_germanic
+	}
+}
+likes_latino_iberians = {
+	OR = {
+		culture_group = latin
+		culture_group = iberian
+	}
+}
+likes_byzantines = {
+	culture_group = byzantine
+}
+likes_celts = {
+	culture_group = celtic
+}
+likes_finno_ugrics = {
+	OR = {
+		culture_group = finno_ugric
+		culture_group = magyar
+	}
+}
+likes_altaics = {
+	culture_group = altaic
+}
+likes_balto_slavics = {
+	OR = {
+		culture_group = baltic
+		culture_group = east_slavic
+		culture_group = west_slavic
+		culture_group = south_slavic
+	}
+}
+likes_arabs = {
+	culture_group = arabic
+}
+likes_iranians = {
+	culture_group = iranian
+}
+likes_africans = {
+	OR = {
+		culture_group = west_african
+		culture_group = east_african
+	}
+}
+likes_mesoamericans = {
+	culture_group = mesoamerican
+}
+likes_muslims = {
+	religion_group = muslim
+}
+likes_christians = {
+	religion_group = christian
+}
+likes_jews = {
+	religion_group = jewish_group
+}
+likes_mazdans = {
+	religion_group = zoroastrian_group
+}
+likes_zoroastrians = {
+	religion = zoroastrian
+}
+likes_mazdakis = {
+	religion = mazdaki
+}
+likes_manicheans = {
+	religion = manichean
+}
+likes_khurmaztans = {
+	religion = khurmazta
+}
+likes_buddhists = {
+	religion = buddhist
+}
+likes_hindus = {
+	religion = hindu
+}
+likes_jains = {
+	religion = jain
+}
+likes_tengris = {
+	OR = {
+		religion = tengri_pagan
+		religion = tengri_pagan_reformed
+	}
+}
+likes_zunists = {
+	OR = {
+		religion = zun_pagan
+		religion = zun_pagan_reformed
+	}
+}
+likes_bon = {
+	OR = {
+		religion = bon
+		religion = bon_reformed
+	}
+}
+
+is_blood_relative_of_root_trigger = {
+	OR = {
+		is_ancestor_of = ROOT
+		is_descendant_of = ROOT
+		sibling = ROOT
+		is_cousin_of = ROOT
+		is_aunt_uncle_of = ROOT
+		is_nibling_of = ROOT
+		dynasty = ROOT
+	}
+}
+
+is_any_kinslayer_trigger = {
+	OR = {
+		trait = kinslayer
+		trait = familial_kinslayer
+		trait = dynastic_kinslayer
+		trait = tribal_kinslayer
+	}
+}
+
+courtier_from_china_trigger = {
+	custom_tooltip = {
+		text = courtier_from_china_trigger_tt
+		has_character_flag = originated_from_chinese_court
+	}
+}
+
+using_unimportant_cb = {
+	OR = {
+		using_cb = peasant_revolt
+		using_cb = heretic_revolt
+		using_cb = religious_revolt
+		using_cb = liberation_revolt
+	}
+}
+
+death_in_china_trigger = {
+	OR = {
+		death_reason = death_went_to_china
+		death_reason = death_offmap
+		death_reason = death_went_back_to_china
+		death_reason = death_in_china_historic
+	}
+}
+
+death_no_trace_trigger = {
+	OR = {
+		death_reason = death_missing
+		death_reason = death_vanished
+	}
+}
+
+proselytize_convert_independent_trigger = {
+	owner = {
+		OR = { 
+			FROM = { NOT = { religion_group = pagan_group } } 
+			FROM = { has_religion_feature = religion_proselytizing }
+		}
+		independent = yes
+		NOT = { religion = FROM }
+		religion_group = pagan_group
+		OR = {
+			NOT = { religion = aztec }
+			year = 1350
+		}
+		is_reformed_religion = no
+		capital_scope = {
+			province = ROOT
+		}
+		controls_religion = no
+		FROM = {
+			higher_tier_than = COUNT
+			OR = {
+				independent = yes
+				higher_tier_than = DUKE
+			}
+		}
+		NOT = {
+			has_opinion_modifier = { who = FROM modifier = opinion_sent_preacher }
+		}
+		is_within_diplo_range = FROM
+	}
+}
+
+is_toddler_age_trigger = {
+	age = 0
+ 	NOT = { age = 4 }
+}
+
+is_young_child_age_trigger = {
+	age = 4
+ 	NOT = { age = 9 }
+}
+
+is_child_age_trigger = {
+	age = 9
+ 	NOT = { age = 12 }
+}
+
+is_adolescent_age_trigger = {
+	age = 12
+ 	NOT = { age = 17 }
+}
+
+is_teenager_age_trigger = {
+	age = 13
+ 	NOT = { age = 20 }
+}
+
+is_grown_up_age_trigger = {
+	age = 20
+}
+
+is_middle_aged_trigger = {
+	age = 40
+	NOT = { age = 65 }
+}
+
+is_senior_age_trigger = {
+	age = 50
+}
+
+is_elder_age_trigger = {
+	age = 70
+}
+
+# Hardcoded trigger for the Execute Imprisoned interaction. Used for the description warning you of kinslaying
+# Root - The executioner
+# event_target:kinslayer_target - The person being executed
+will_add_kinslayer = {
+	NOT = { religion_group = xenoterran }
+	OR = {
+		AND = {
+			NOT = { trait = kinslayer }
+			OR = {
+				is_ancestor_of = event_target:kinslayer_target
+				is_descendant_of = event_target:kinslayer_target
+				sibling = event_target:kinslayer_target
+			}
+		}
+		AND = {
+			NOR = { 
+				trait = kinslayer
+				trait = familial_kinslayer
+			}
+			OR = {
+				is_cousin_of = event_target:kinslayer_target
+				is_aunt_uncle_of = event_target:kinslayer_target
+				is_nibling_of = event_target:kinslayer_target
+			}
+		}
+		AND = {
+			NOR = { 
+				trait = kinslayer
+				trait = familial_kinslayer
+				trait = dynastic_kinslayer
+			}
+			is_lowborn = no
+			dynasty = event_target:kinslayer_target
+		}
+	}
+}
+
+# Hardcoded trigger for the Assassinate interaction. Used for triggering whether it can be used at all
+# Root - The person being assassinated
+# From - The person doing the assassination
+assassination_interaction_trigger = {
+	trigger_if = {
+		limit = { multiplayer = yes }
+
+		custom_tooltip = {
+			text = MP_GAME_RULE_ALLOWED
+
+			trigger_if = {
+				limit = {
+					has_game_rule = {
+						name = multiplayer_assassinations
+						value = no_players
+					}
+				}
+				ai = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_game_rule = {
+						name = multiplayer_assassinations
+						value = no_players_or_relatives
+					}
+				}
+
+				ai = yes
+
+				NOR = {
+					any_close_relative = {
+						ai = no
+						NOT = { character = FROM } # Own family is fair game
+					}
+
+					any_spouse = {
+						ai = no
+						NOT = { character = FROM } # Own family is fair game
+					}
+
+					AND = {
+						is_heir = yes
+
+						liege = {
+							ai = no
+							dynasty = ROOT
+							NOT = { character = FROM } # Own family is fair game
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#checks whether ROOT has one of the following opinion modifiers against the currently scoped character
+root_has_terrible_opinion_modifier_of_this_trigger = {
+	OR = {
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_hate }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_tortured_me }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_me }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_imprisoned }
+	}
+}
+
+#checks whether the current scope has one of the following opinion modifiers against ROOT
+this_has_terrible_opinion_modifier_of_root_trigger = {
+	OR = {
+		has_opinion_modifier = { who = ROOT modifier = opinion_hate }
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_imprisoned }
+	}
+}
+
+#for MNM.9000 chain
+the_hunt_for_an_artifact_has_made_enough_progress_trigger = {
+	OR = {
+		AND = {
+			event_target:relic_ruler = { check_variable = { which = relic_score value = 8 } } #15 } } old value
+			event_target:relic_ruler = { has_character_modifier = relic_rumor_minor } 
+		}
+		AND = {
+			event_target:relic_ruler = { check_variable = { which = relic_score value = 14 } } #25 } } old value
+			event_target:relic_ruler = { has_character_modifier = relic_rumor_medium } 
+		}
+		AND = {
+			event_target:relic_ruler = { check_variable = { which = relic_score value = 20 } } #40 } } old value
+			event_target:relic_ruler = { has_character_modifier = relic_rumor_major } 
+		}
+	}
+}
+
+has_tribal_or_nomadic_government_trigger = {
+	custom_tooltip = {
+		text = tribal_or_nomadic_government_tt
+		hidden_trigger = {
+			OR = {
+				government = tribal_government
+				government = nomadic_government
+			}
+		}
+	}
+}
+
+
+has_minor_title_relating_to_martial_trigger = { #WIP - feel free to add to this
+	OR = {
+		has_minor_title = title_master_of_the_horse
+		has_minor_title = title_cupbearer
+		has_minor_title = title_commander
+	}
+}
+
+
+#returns true if scoped character already dislikes ROOT (while not being caught up in a friendship or love, and such)
+potentially_interested_in_rivaling_root_trigger = { #must be a character
+	NOT = { is_rival = ROOT }
+	NOT = { is_lover = ROOT }
+	NOT = { is_friend = ROOT }
+	NOT = { opinion = { who = ROOT value = 5 } }
+	OR = {
+		ROOT = { is_foe = PREV } #checks if the current scope has committed a crime against ROOT (I hope)
+		is_foe = ROOT  #checks if root has committed a crime against the current scope
+		NOT = { opinion = { who = ROOT value = -25 } }
+		this_has_terrible_opinion_modifier_of_root_trigger = yes
+		#Fill up with fun opinion modifiers, whenever you think of them...! Ideas: opinion_spurned, opinion_revoked_my_title, etc
+	}
+}
+#returns true if scoped character is already disliked by ROOT (while not being caught up in a friendship or love, and such)
+root_potentially_interested_in_rivaling_this_trigger = { #must be a character
+	NOT = { is_rival = ROOT }
+	NOT = { is_lover = ROOT }
+	NOT = { is_friend = ROOT }
+	NOT = { reverse_opinion = { who = ROOT value = 5 } }
+	OR = {
+		ROOT = { is_foe = PREV } #checks if the current scope has committed a crime against ROOT (I hope)
+		is_foe = ROOT  #checks if root has committed a crime against the current scope
+		NOT = { reverse_opinion = { who = ROOT value = -25 } }
+		root_has_terrible_opinion_modifier_of_this_trigger = yes
+		#Fill up with fun opinion modifiers, whenever you think of them...! Ideas: opinion_spurned, opinion_revoked_my_title, etc
+	}
+}
+
+#returns true if scoped character and ROOT are both sort of interested in a rivalry
+#(they both dislike one another and are not friends, lovers, or rivals already)
+current_scope_and_root_make_sense_as_rivals_trigger = {
+	potentially_interested_in_rivaling_root_trigger = yes
+	root_potentially_interested_in_rivaling_this_trigger = yes
+}
+
+#checks whether the current scope has one of the following opinion modifiers against PREV
+this_has_friendly_opinion_modifier_of_prev_trigger = {
+	OR = {
+		has_opinion_modifier = { who = PREV modifier = opinion_budding_friendship }
+		has_opinion_modifier = { who = PREV modifier = opinion_was_praised }
+		has_opinion_modifier = { who = PREV modifier = opinion_charmed }
+		has_opinion_modifier = { who = PREV modifier = opinion_honorable }
+		has_opinion_modifier = { who = PREV modifier = opinion_was_rewarded }
+		has_opinion_modifier = { who = PREV modifier = nice_adventure }
+		has_opinion_modifier = { who = PREV modifier = great_adventure }
+		has_opinion_modifier = { who = PREV modifier = epic_adventure }
+		has_opinion_modifier = { who = PREV modifier = opinion_accomplice }
+		has_opinion_modifier = { who = PREV modifier = opinion_mediator }
+		has_opinion_modifier = { who = PREV modifier = opinion_poet_pen_pal }
+		has_opinion_modifier = { who = PREV modifier = opinion_calmed }
+		has_opinion_modifier = { who = PREV modifier = opinion_cheered_up }
+		has_opinion_modifier = { who = PREV modifier = opinion_teach_virtue }
+		has_opinion_modifier = { who = PREV modifier = opinion_no_cat }
+		has_opinion_modifier = { who = PREV modifier = opinion_feels_appreciated }
+		has_opinion_modifier = { who = PREV modifier = opinion_amused }
+		has_opinion_modifier = { who = PREV modifier = opinion_swayed_3 }
+	}
+}
+
+#checks whether PREV has one of the following opinion modifiers against the currently scoped character
+prev_has_friendly_opinion_modifier_of_this_trigger = {
+	OR = {
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_budding_friendship }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_was_praised }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_charmed }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_honorable }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_was_rewarded }
+		reverse_has_opinion_modifier = { who = PREV modifier = nice_adventure }
+		reverse_has_opinion_modifier = { who = PREV modifier = great_adventure }
+		reverse_has_opinion_modifier = { who = PREV modifier = epic_adventure }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_accomplice }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_mediator }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_poet_pen_pal }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_calmed }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_cheered_up }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_teach_virtue }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_no_cat }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_feels_appreciated }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_amused }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_swayed_3 }
+	}
+}
+
+#checks whether the current scope has one of the following opinion modifiers against ROOT
+this_has_friendly_opinion_modifier_of_root_trigger = {
+	OR = {
+		has_opinion_modifier = { who = ROOT modifier = opinion_budding_friendship }
+		has_opinion_modifier = { who = ROOT modifier = opinion_was_praised }
+		has_opinion_modifier = { who = ROOT modifier = opinion_charmed }
+		has_opinion_modifier = { who = ROOT modifier = opinion_honorable }
+		has_opinion_modifier = { who = ROOT modifier = opinion_was_rewarded }
+		has_opinion_modifier = { who = ROOT modifier = nice_adventure }
+		has_opinion_modifier = { who = ROOT modifier = great_adventure }
+		has_opinion_modifier = { who = ROOT modifier = epic_adventure }
+		has_opinion_modifier = { who = ROOT modifier = opinion_accomplice }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mediator }
+		has_opinion_modifier = { who = ROOT modifier = opinion_poet_pen_pal }
+		has_opinion_modifier = { who = ROOT modifier = opinion_calmed }
+		has_opinion_modifier = { who = ROOT modifier = opinion_cheered_up }
+		has_opinion_modifier = { who = ROOT modifier = opinion_teach_virtue }
+		has_opinion_modifier = { who = ROOT modifier = opinion_no_cat }
+		has_opinion_modifier = { who = ROOT modifier = opinion_feels_appreciated }
+		has_opinion_modifier = { who = ROOT modifier = opinion_amused }
+		has_opinion_modifier = { who = ROOT modifier = opinion_swayed_3 }
+	}
+}
+
+#checks whether ROOT has one of the following opinion modifiers against the currently scoped character
+root_has_friendly_opinion_modifier_of_this_trigger = {
+	OR = {
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_budding_friendship }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_was_praised }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_charmed }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_honorable }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_was_rewarded }
+		reverse_has_opinion_modifier = { who = ROOT modifier = nice_adventure }
+		reverse_has_opinion_modifier = { who = ROOT modifier = great_adventure }
+		reverse_has_opinion_modifier = { who = ROOT modifier = epic_adventure }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_accomplice }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_mediator }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_poet_pen_pal }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_calmed }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_cheered_up }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_teach_virtue }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_no_cat }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_feels_appreciated }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_amused }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_swayed_3 }
+	}
+}
+#returns true if scoped character already likes ROOT
+potentially_platonically_interested_in_root_trigger = {
+	NOT = { is_rival = ROOT }
+	NOT = { is_friend = ROOT }
+	opinion = { who = ROOT value = 10 }
+	this_has_terrible_opinion_modifier_of_root_trigger = no
+
+	OR = {
+		opinion = { who = ROOT value = 45 }
+		this_has_friendly_opinion_modifier_of_root_trigger = yes
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_budding_friendship } #Or if ROOT has this opinion of current scope
+	}
+}
+
+#returns true if scoped character is already liked by ROOT
+root_potentially_platonically_interested_in_this_trigger = {
+	NOT = { is_rival = ROOT }
+	NOT = { is_friend = ROOT }
+	root_has_terrible_opinion_modifier_of_this_trigger = no
+
+	OR = { 
+		reverse_opinion = { who = ROOT value = 45 }
+		root_has_friendly_opinion_modifier_of_this_trigger = yes
+		has_opinion_modifier = { who = ROOT modifier = opinion_budding_friendship } #Or if current scope has this opinion of current ROOT
+	}
+}
+
+#returns true if scoped character and ROOT are both sort of interested in a rivalry
+#(they both dislike one another and are not friends, lovers, or rivals already)
+current_scope_and_root_make_sense_as_friendlies_trigger = {
+	potentially_platonically_interested_in_root_trigger = yes
+	root_potentially_platonically_interested_in_this_trigger = yes
+}
+
+# Hardcoded trigger for Pagan baptism. Only used (except where referenced in script) for the Pagan baptism tooltip in the religion window
+pagan_baptism_trigger = {
+	custom_tooltip = {
+		text = TT_UNREFORMED_PAGAN
+
+		religion_group = pagan_group
+		is_reformed_religion = no
+		# NOT = { religion = bon }
+	}
+
+	primary_title = {
+		OR = {
+			has_law = tribal_organization_2
+			has_law = tribal_organization_3
+			has_law = tribal_organization_4
+		}
+	}
+
+	prestige >= 500
+
+	is_incapable = no
+	has_regent = no
+	war = no
+	prisoner = no
+
+	trigger_if = {
+		limit = { has_character_flag = ai_flag_refuse_conversion }
+
+		custom_tooltip = {
+			text = NOT_TRUE_BELIEVER
+
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
+		}
+	}
+	trigger_if = {
+		limit = { has_character_modifier = baptism_request_cooldown }
+
+		custom_tooltip = {
+			text = NOT_ASKED_BAPTISM_RECENTLY
+
+			NOT = { has_character_modifier = baptism_request_cooldown }
+		}
+	}
+}
+
+has_fat_for_flag_trigger = { 
+	OR = {
+		has_character_flag = flag_fat_for_gluttony 
+		has_character_flag = flag_fat_for_stress
+		has_character_flag = flag_fat_for_depression
+		has_character_flag = flag_fat_for_sloth
+		has_character_flag = flag_fat_for_hedonism
+		has_character_flag = flag_fat_for_carousing
+		has_character_flag = flag_fat_for_family 
+		has_character_flag = flag_fat_for_content 
+		has_character_flag = flag_fat_for_lust
+		has_character_flag = flag_fat_for_wroth
+		has_character_flag = flag_fat_for_drunkard
+		has_character_flag = flag_fat_for_boredom #fallback reason
+	}
+}
+
+has_malnourished_for_flag_trigger = { 
+	OR = {
+		has_character_flag = flag_malnourished_for_temperance 
+		has_character_flag = flag_malnourished_for_stress
+		has_character_flag = flag_malnourished_for_depression
+		has_character_flag = flag_malnourished_for_sloth
+		has_character_flag = flag_malnourished_for_study
+		has_character_flag = flag_malnourished_for_faith
+		has_character_flag = flag_malnourished_for_paranoia 
+		has_character_flag = flag_malnourished_for_diligence
+		has_character_flag = flag_malnourished_for_cannibal
+		has_character_flag = flag_malnourished_for_craven
+		has_character_flag = flag_malnourished_for_boredom #fallback reason
+	}
+}
+
+is_child_or_sibling_of_from_trigger = {
+	custom_tooltip = {
+		text = is_child_or_sibling_of_yours_tt
+		OR = {
+			is_child_of = FROM
+			sibling = FROM
+		}
+	}
+}
+
+should_evolve_cultures_trigger = {
+	hidden_tooltip = {
+		OR = {
+			is_alternate_start = no
+			has_alternate_start_parameter = {
+				key = culture_names
+				value = historical
+			}
+		}
+	}
+}
+
+non_historical_culture_names_in_alt_start_trigger = {
+	hidden_tooltip = {
+		AND = {
+			is_alternate_start = yes
+			NOT = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+		}
+	}
+}
+
+religions_are_standard_trigger = {
+	hidden_tooltip = {
+		OR = {
+			is_alternate_start = no
+			has_alternate_start_parameter = {
+				key = religion_names
+				value = historical
+			}
+		}
+	}
+}
+
+this_has_terrible_opinion_modifier_of_root_extended_trigger = {
+	OR = {
+		#Personal grievances.
+
+		has_opinion_modifier = { who = ROOT modifier = opinion_hate }
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_imprisoned }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder }
+
+		#Family grievances
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_family }
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_family }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_executed_child }
+
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_spouse }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_child }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_parent }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_sibling }
+	}
+}
+root_has_terrible_opinion_modifier_of_this_extended_trigger = {
+	OR = {
+		#Personal grievances.
+
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_hate }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_tortured_me }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_me }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_imprisoned }
+		reverse_has_opinion_modifier = { who = ROOT modifier = attempted_murder }
+
+		#Family grievances
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_tortured_family }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_tortured_close_kin }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_family }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_close_kin }
+		reverse_has_opinion_modifier = { who = ROOT modifier = opinion_executed_child }
+
+		reverse_has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_spouse }
+		reverse_has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_child }
+		reverse_has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_parent }
+		reverse_has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_sibling }
+	}
+}
+
+this_has_terrible_opinion_modifier_of_prev_extended_trigger = {
+	OR = {
+		#Personal grievances.
+
+		has_opinion_modifier = { who = PREV modifier = opinion_hate }
+		has_opinion_modifier = { who = PREV modifier = opinion_tortured_me }
+		has_opinion_modifier = { who = PREV modifier = opinion_mutilated_me }
+		has_opinion_modifier = { who = PREV modifier = opinion_imprisoned }
+		has_opinion_modifier = { who = PREV modifier = attempted_murder }
+
+		#Family grievances
+		has_opinion_modifier = { who = PREV modifier = opinion_tortured_family }
+		has_opinion_modifier = { who = PREV modifier = opinion_tortured_close_kin }
+		has_opinion_modifier = { who = PREV modifier = opinion_mutilated_family }
+		has_opinion_modifier = { who = PREV modifier = opinion_mutilated_close_kin }
+		has_opinion_modifier = { who = PREV modifier = opinion_executed_child }
+
+		has_opinion_modifier = { who = PREV modifier = attempted_murder_of_spouse }
+		has_opinion_modifier = { who = PREV modifier = attempted_murder_of_child }
+		has_opinion_modifier = { who = PREV modifier = attempted_murder_of_parent }
+		has_opinion_modifier = { who = PREV modifier = attempted_murder_of_sibling }
+	}
+}
+prev_has_terrible_opinion_modifier_of_this_extended_trigger = {
+	OR = {
+		#Personal grievances.
+
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_hate }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_tortured_me }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_mutilated_me }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_imprisoned }
+		reverse_has_opinion_modifier = { who = PREV modifier = attempted_murder }
+
+		#Family grievances
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_tortured_family }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_tortured_close_kin }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_mutilated_family }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_mutilated_close_kin }
+		reverse_has_opinion_modifier = { who = PREV modifier = opinion_executed_child }
+
+		reverse_has_opinion_modifier = { who = PREV modifier = attempted_murder_of_spouse }
+		reverse_has_opinion_modifier = { who = PREV modifier = attempted_murder_of_child }
+		reverse_has_opinion_modifier = { who = PREV modifier = attempted_murder_of_parent }
+		reverse_has_opinion_modifier = { who = PREV modifier = attempted_murder_of_sibling }
+	}
+}
+
+
+
+# Hardcoded trigger for Coronation alert. Only used (except where referenced in script) for that alert, on top of the "potential" for the coronation decision. If it does not exist, only the decision potential is used
+needs_coronation_trigger = {
+	is_adult = yes
+}
+
+ruler_has_dedicated_temple_trigger = {
+	OR = {
+		has_character_modifier = dedicated_to_zeus
+		has_character_modifier = dedicated_to_poseidon
+		has_character_modifier = dedicated_to_hades
+		has_character_modifier = dedicated_to_hermes
+		has_character_modifier = dedicated_to_demeter
+		has_character_modifier = dedicated_to_athena
+		has_character_modifier = dedicated_to_apollo
+		has_character_modifier = dedicated_to_arthemis
+		has_character_modifier = dedicated_to_ares
+		has_character_modifier = dedicated_to_aphrodite
+		has_character_modifier = dedicated_to_ephaestus
+		has_character_modifier = dedicated_to_hestia
+	}
+}
+
+martyrs_death_trigger = {
+	OR = {
+		death_reason = death_sacrificed
+  		death_reason = death_sacrificed_norse
+  		death_reason = death_sacrificed_ancestors
+  		death_reason = death_execution_aztec_sacrifice
+  		
+	}
+}
+can_build_hillfort_trigger = {
+						OR = { 
+							AND = { 
+										NOR = { 
+											is_building = tb_hillfort_1 
+											has_building = tb_hillfort_1 
+										}
+										location = { TECH_CASTLE_CONSTRUCTION = 0 }
+							}
+							AND = { 
+										has_building = tb_hillfort_1
+										NOR = { 
+											is_building = tb_hillfort_2 
+											has_building = tb_hillfort_2 
+										}
+										location = { TECH_CASTLE_CONSTRUCTION = 0 }
+							}
+							AND = { 
+										has_building = tb_hillfort_2
+										NOR = { 
+											is_building = tb_hillfort_3 
+											has_building = tb_hillfort_3 
+										}
+										location = { TECH_CASTLE_CONSTRUCTION = 1 }
+							}
+							AND = { 
+										has_building = tb_hillfort_3
+										NOR = { 
+												is_building = tb_hillfort_4 
+												has_building = tb_hillfort_4 
+											}
+										location = { TECH_CASTLE_CONSTRUCTION = 1 }
+							}
+						}
+}
+
+personal_grievance_trigger = {
+	OR = {
+		has_opinion_modifier = { who = ROOT modifier = opinion_hate }
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_imprisoned }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder }
+	}
+}
+
+family_grievance_trigger = {
+	OR = {
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_family }
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_family }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_executed_child }
+
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_spouse }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_child }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_parent }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_sibling }
+	}
+}
+
+no_grievance_trigger = {
+	NOR = {
+		personal_grievance_trigger = yes
+		family_grievance_trigger = yes
+	}
+}
+
+is_inaccessible_or_incapable_trigger = {
+	OR = {  
+		is_inaccessible_trigger = yes
+		trait = incapable
+		prisoner = yes
+	}
+}
+
+lower_educational_trait_trigger = {
+	OR = {
+		AND = {
+			trait = naive_appeaser
+			ROOT = {
+				OR = {
+					trait = underhanded_rogue
+					trait = charismatic_negotiator
+					trait = grey_eminence
+				}
+			}
+		}
+		AND = {
+			trait = underhanded_rogue 
+			ROOT = {
+				OR = {
+					trait = charismatic_negotiator
+					trait = grey_eminence
+				}
+			}
+		}
+		AND = {
+			trait = charismatic_negotiator
+			ROOT = {
+				trait = grey_eminence
+			}
+		}
+		AND = {
+			trait = misguided_warrior
+			ROOT = {
+				OR = {
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = brilliant_strategist
+				}
+			}
+		}
+		AND = {
+			trait = tough_soldier
+			ROOT = {
+				OR = {
+					trait = skilled_tactician
+					trait = brilliant_strategist
+				}
+			}
+		}
+		AND = {
+			trait = skilled_tactician
+			ROOT = {
+				trait = brilliant_strategist
+			}
+		}
+		AND = {
+			trait = indulgent_wastrel
+			ROOT = {
+				OR = {
+					trait = thrifty_clerk
+					trait = fortune_builder
+					trait = midas_touched
+				}
+			}
+		}
+		AND = {
+			trait = thrifty_clerk
+			ROOT = {
+				OR = {
+					trait = fortune_builder
+					trait = midas_touched
+				}
+			}
+		}
+		AND = {
+			trait = fortune_builder
+			ROOT = {
+				trait = midas_touched
+			}
+		}
+		AND = {
+			trait = amateurish_plotter
+			ROOT = {
+				OR = {
+					trait = flamboyant_schemer
+					trait = intricate_webweaver
+					trait = elusive_shadow
+				}
+			}
+		}
+		AND = {
+			trait = flamboyant_schemer
+			ROOT = {
+				OR = {
+					trait = intricate_webweaver
+					trait = elusive_shadow
+				}
+			}
+		}
+		AND = {
+			trait = intricate_webweaver
+			ROOT = {
+				trait = elusive_shadow
+			}
+		}
+		AND = {
+			trait = detached_priest
+			ROOT = {
+				OR = {
+					trait = martial_cleric
+					trait = scholarly_theologian
+					trait = mastermind_theologian
+				}
+			}
+		}
+		AND = {
+			trait = martial_cleric
+			ROOT = {
+				OR = {
+					trait = scholarly_theologian
+					trait = mastermind_theologian
+				}
+			}
+		}
+		AND = {
+			trait = scholarly_theologian
+			ROOT = {
+				trait = mastermind_theologian
+			}
+		}
+	}
+}
+
+has_scarred_trait_trigger = {
+	OR = {  
+		trait = scarred
+		trait = scarred_mid
+		trait = scarred_high
+	}
+}
+
+this_is_warrior_culture_trigger = { #Not really about culture - Used in AI voting logic.
+	NOT = { pacifist = yes }
+	OR = { 
+		religion_group = outlaw_group
+		religion = religious_group
+		religion = religious_terran_group
+		has_religion_feature = religion_warlike
+		is_tribal = yes
+		is_nomadic = yes
+	}
+}
+
+this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI voting logic.
+	OR = {
+		is_feudal = yes
+		is_patrician = yes
+		is_merchant_republic = yes
+	} 
+	OR = { 
+		religion_group = political_group
+		religion_group = political_terran_group
+		has_religion_feature = religion_cosmopolitan
+	}
+}
+this_is_sea_raider_trigger = {
+	OR = { 
+		trait = pirate
+		trait = viking
+		trait = ravager
+		trait = seaking
+		trait = sea_queen
+	}
+}
+
+can_apply_lame_nickname_trigger = {
+	has_nickname = no
+}
+
+can_apply_average_nickname_trigger = {
+	OR = {
+		has_nickname = no
+		this_has_lame_nickname_trigger = yes
+	}	
+}
+
+can_apply_cool_nickname_trigger = {
+	OR = {
+		has_nickname = no
+		this_has_lame_nickname_trigger = yes
+		this_has_average_nickname_trigger = yes
+	}
+}
+
+can_apply_super_cool_nickname_trigger = {
+	OR = {
+		has_nickname = no
+		this_has_lame_nickname_trigger = yes
+		this_has_average_nickname_trigger = yes
+		this_has_cool_nickname_trigger = yes
+	}
+}
+
+this_has_lame_nickname_trigger = {
+	OR = { 
+		has_nickname = nick_the_avenger
+		has_nickname = nick_the_brave
+		has_nickname = nick_the_fearless
+		has_nickname = nick_the_unlucky
+		has_nickname = nick_the_lucky
+		has_nickname = nick_the_restorer
+		has_nickname = nick_the_effeminate
+		has_nickname = nick_the_clueless
+		has_nickname = nick_the_ill_tempered
+		has_nickname = nick_the_affable
+		has_nickname = nick_the_liberator
+		has_nickname = nick_the_glorious
+		has_nickname = nick_the_german
+		has_nickname = nick_the_younger
+		has_nickname = nick_the_youthful
+		has_nickname = nick_the_unfaithful
+		has_nickname = nick_the_beguiling
+		has_nickname = nick_the_temptress
+		has_nickname = nick_the_seducer
+		has_nickname = nick_the_lewd
+		has_nickname = nick_the_lecher
+		has_nickname = nick_the_unchaste
+		has_nickname = nick_the_culture			
+		has_nickname = nick_the_rel_group		
+		has_nickname = nick_the_pilgrim
+		has_nickname = nick_the_viking
+		has_nickname = nick_the_decadent
+		has_nickname = nick_the_shrewd
+		has_nickname = nick_the_wily
+		has_nickname = nick_the_jovial
+		has_nickname = nick_the_jolly
+		has_nickname = nick_the_gracious
+		has_nickname = nick_the_rash
+		has_nickname = nick_the_ruthless
+		has_nickname = nick_the_strange
+		has_nickname = nick_the_shieldmaiden
+		has_nickname = nick_the_clumsy
+		has_nickname = nick_the_evil
+		has_nickname = nick_the_culture_marauder
+		has_nickname = nick_the_kingslayer
+		has_nickname = nick_iron_hand
+		has_nickname = nick_peg_leg
+		has_nickname = nick_the_goldsmith
+		has_nickname = nick_the_weaponsmith
+		has_nickname = nick_the_armorsmith
+		has_nickname = nick_the_trader
+		has_nickname = nick_the_lisp_and_lame
+		has_nickname = nick_the_able
+		has_nickname = nick_the_kind
+		has_nickname = nick_the_good
+		has_nickname = nick_the_strong
+		has_nickname = nick_the_magnanimous
+		has_nickname = nick_the_simple
+		has_nickname = nick_the_merry
+		has_nickname = nick_the_noble
+		has_nickname = nick_the_blind
+		has_nickname = nick_the_leper
+		has_nickname = nick_the_gentle
+		has_nickname = nick_the_proud
+		has_nickname = nick_the_silent
+		has_nickname = nick_the_bastard
+		has_nickname = nick_the_gouty
+		has_nickname = nick_half_hand
+		has_nickname = nick_the_chaste
+		has_nickname = nick_the_hunter
+		has_nickname = nick_the_fowler
+		has_nickname = nick_the_just
+		has_nickname = nick_the_lame
+		has_nickname = nick_the_handsome
+		has_nickname = nick_the_fair
+		has_nickname = nick_the_hideous
+		has_nickname = nick_the_frog
+		has_nickname = nick_the_tenacious
+		has_nickname = nick_the_repulsive
+		has_nickname = nick_the_mad
+		has_nickname = nick_the_fat
+		has_nickname = nick_the_hollow
+		has_nickname = nick_the_drunkard
+		has_nickname = nick_the_cruel
+		has_nickname = nick_the_wise
+		has_nickname = nick_the_resilient
+		has_nickname = nick_one_eye
+		has_nickname = nick_one_hand
+		has_nickname = nick_one_leg
+		has_nickname = nick_the_wicked 
+		has_nickname = nick_the_bewitched 
+		has_nickname = nick_priest_hater 
+		has_nickname = nick_the_pious 
+		has_nickname = nick_the_blessed 
+		has_nickname = nick_the_monk 
+		has_nickname = nick_the_nun 
+		has_nickname = nick_the_ill_ruler 
+		has_nickname = nick_the_terrible 
+		has_nickname = nick_the_oppressor 
+		has_nickname = nick_the_witch 
+		has_nickname = nick_the_magnificent 
+		has_nickname = nick_the_careless 
+		has_nickname = nick_the_young 
+		has_nickname = nick_the_old 
+		has_nickname = nick_the_hunchback 
+		has_nickname = nick_the_scholar 
+		has_nickname = nick_the_black 
+		has_nickname = nick_the_healer 
+		has_nickname = nick_the_unmercenary_healer 
+		has_nickname = nick_the_understanding 
+		has_nickname = nick_the_merciful 
+		has_nickname = nick_the_flat_chested 
+		has_nickname = nick_the_oakskin
+		has_nickname = nick_the_green_faced 
+		has_nickname = nick_the_word_thief 
+		has_nickname = nick_the_pups_gut 
+		has_nickname = nick_the_jittery
+		has_nickname = nick_the_broken_lute
+		has_nickname = nick_the_dust_biter
+		has_nickname = nick_the_sleepy
+		has_nickname = nick_the_squealer
+		has_nickname = nick_the_toothless
+		has_nickname = nick_butter_teeth
+		has_nickname = nick_the_cowardly
+		has_nickname = nick_the_squirmy
+		has_nickname = nick_the_frantic 
+		has_nickname = nick_the_spare 
+		has_nickname = nick_the_dry_throat 
+		has_nickname = nick_the_floor_kisser 
+		has_nickname = nick_the_toothless_wolf 
+		has_nickname = nick_the_rough_hair
+		has_nickname = nick_the_singing_crow
+		has_nickname = nick_the_broken_nail
+		has_nickname = nick_the_forgetful
+		has_nickname = nick_the_thin_minded
+		has_nickname = nick_the_messy 
+		has_nickname = nick_the_feeble
+		has_nickname = nick_the_milkdrinker
+		has_nickname = nick_the_girls_arm
+		has_nickname = nick_the_flower
+		has_nickname = nick_the_hermit
+		has_nickname = nick_the_recluse
+		has_nickname = nick_the_absolved
+		has_nickname = nick_the_short_tempered
+		has_nickname = nick_the_red_cheeks
+		has_nickname = nick_the_blushing
+		has_nickname = nick_the_shrinking_violet
+		has_nickname = nick_the_whiner
+		has_nickname = nick_the_moaner
+		has_nickname = nick_the_liar
+		has_nickname = nick_the_cheater
+		has_nickname = nick_the_vain
+		has_nickname = nick_the_twitchy
+	}
+}
+this_has_average_nickname_trigger = {
+	OR = {
+		has_nickname = nick_the_troubadour
+		has_nickname = nick_the_holy
+		has_nickname = nick_the_usurper
+		has_nickname = nick_the_conqueror
+		has_nickname = nick_the_victorious
+		has_nickname = nick_the_crusader
+		has_nickname = nick_the_martyr
+		has_nickname = nick_the_heathen
+		has_nickname = nick_the_jackal
+		has_nickname = nick_the_saint
+		has_nickname = nick_the_maid
+		has_nickname = nick_darc
+		has_nickname = nick_ring
+		has_nickname = nick_of_the_wilds
+		has_nickname = nick_the_impaler
+		has_nickname = nick_bloodaxe
+		has_nickname = nick_the_fox
+		has_nickname = nick_the_headless
+		has_nickname = nick_the_beheader
+		has_nickname = nick_the_red
+		has_nickname = nick_the_defender
+		has_nickname = nick_the_legendary
+		has_nickname = nick_the_slayer_of_culture
+		has_nickname = nick_the_butcher
+		has_nickname = nick_the_vengeful
+		has_nickname = nick_the_betrayer
+		has_nickname = nick_the_flayer
+		has_nickname = nick_the_tormentor
+		has_nickname = nick_the_mutilator
+		has_nickname = nick_the_depraved
+		has_nickname = nick_the_monster
+		has_nickname = nick_the_abomination
+		has_nickname = nick_the_inquisitor
+		has_nickname = nick_the_purifier
+		has_nickname = nick_the_tiger
+		has_nickname = nick_the_explorer
+		has_nickname = nick_the_astrologer	
+		has_nickname = nick_the_terrain_commander
+		has_nickname = nick_the_ground_warrior
+		has_nickname = nick_lord_lady_of_the_terrain
+		has_nickname = nick_lord_lady_ground
+		has_nickname = nick_warrior_lodge_spirit
+		has_nickname = nick_the_cannibal
+		has_nickname = nick_the_frail
+		has_nickname = nick_the_weak
+		has_nickname = nick_the_brute
+		has_nickname = nick_the_mule
+		has_nickname = nick_the_wealthy
+		has_nickname = nick_the_loyal
+		has_nickname = nick_the_lord_of_realm
+		has_nickname = nick_the_beanstalk 
+		has_nickname = nick_the_accursed 
+		has_nickname = nick_the_apostle 
+		has_nickname = nick_the_confessor 
+		has_nickname = nick_the_ironside 
+		has_nickname = nick_the_lion 
+		has_nickname = nick_the_bold 
+		has_nickname = nick_the_unready 
+		has_nickname = nick_the_tyrant 
+		has_nickname = nick_the_quarreller 
+		has_nickname = nick_the_devil 
+		has_nickname = nick_the_great 
+		has_nickname = nick_the_giant 
+		has_nickname = nick_tiny 
+		has_nickname = nick_the_shield_of_capital 
+		has_nickname = nick_the_myrrh_streaming 
+		has_nickname = nick_the_god_bearing 
+		has_nickname = nick_the_righteous 
+		has_nickname = nick_the_venerable 
+		has_nickname = nick_the_spark_of_god 
+		has_nickname = nick_the_right_believing 
+		has_nickname = nick_the_miracle_worker 
+		has_nickname = nick_the_pest
+		has_nickname = nick_the_little_crow
+		has_nickname = nick_the_piglet
+		has_nickname = nick_the_splinter
+		has_nickname = nick_the_word_master
+		has_nickname = nick_the_mead_master
+		has_nickname = nick_the_horse_gelder
+		has_nickname = nick_the_undefeated
+		has_nickname = nick_the_thigh_biter
+		has_nickname = nick_the_hundred_flagons
+		has_nickname = nick_the_bottomless
+		has_nickname = nick_the_silver_tongue
+		has_nickname = nick_the_bard
+		has_nickname = nick_the_fairest_of_location
+		has_nickname = nick_the_tamer
+		has_nickname = nick_the_strongest_of_location
+		has_nickname = nick_the_beef_thrasher
+		has_nickname = nick_the_dove
+		has_nickname = nick_the_stallion
+		has_nickname = nick_the_harth_of_location
+		has_nickname = nick_the_star_weaver
+		has_nickname = nick_the_quick_fingers
+		has_nickname = nick_the_strongarm
+		has_nickname = nick_the_iron_grip
+		has_nickname = nick_the_knuckle_slammer
+		has_nickname = nick_the_gods_arm
+		has_nickname = nick_the_bone_squeezer
+		has_nickname = nick_the_bull
+		has_nickname = nick_the_butch
+		has_nickname = nick_the_protector
+		has_nickname = nick_the_guardian
+		has_nickname = nick_the_sharp_tongue
+		has_nickname = nick_the_trickster
+		has_nickname = nick_the_merciless
+		has_nickname = nick_the_word_slayer
+		has_nickname = nick_the_grinner
+		has_nickname = nick_the_poison_tooth
+		has_nickname = nick_the_vixen
+		has_nickname = nick_the_hyena
+		has_nickname = nick_the_guide
+		has_nickname = nick_the_elder
+		has_nickname = nick_the_knight_of_turnips
+		has_nickname = nick_the_festive
+		has_nickname = nick_the_burden
+		has_nickname = nick_the_snake
+	}
+}
+this_has_cool_nickname_trigger = {
+	OR = { 
+		has_nickname = nick_the_lawgiver
+		has_nickname = nick_the_hammer
+		has_nickname = nick_the_stranger
+		has_nickname = nick_the_bald
+		has_nickname = nick_the_stammerer
+		has_nickname = nick_the_master_of_hungary
+		has_nickname = nick_hildetand
+		has_nickname = nick_the_shadow
+		has_nickname = nick_the_whisperer
+		has_nickname = nick_the_spider
+		has_nickname = nick_the_sword_of_god
+		has_nickname = nick_the_sea_devil
+		has_nickname = nick_the_lioness
+		has_nickname = nick_the_flail_of
+		has_nickname = nick_the_scourge_of
+		has_nickname = nick_the_scourge
+		has_nickname = nick_the_alchemist
+		has_nickname = nick_the_survivor
+		has_nickname = nick_the_valkyrie
+		has_nickname = nick_the_destroyer
+		has_nickname = nick_the_scourge_of_god
+		has_nickname = nick_the_terror_of_provincename
+		has_nickname = nick_son_of_evilgod
+		has_nickname = nick_the_cleansing_flame
+		has_nickname = nick_the_witch_hunter
+		has_nickname = nick_the_eastern_wind
+		has_nickname = nick_the_despoiler
+		has_nickname = nick_the_bane_of_realmname
+		has_nickname = nick_the_heavenly
+		has_nickname = nick_the_great_beast
+		has_nickname = nick_the_great_eagle
+		has_nickname = nick_the_artist_ruler
+		has_nickname = nick_the_ambitious
+		has_nickname = nick_the_bloody
+		has_nickname = nick_the_diplomat
+		has_nickname = nick_the_kind_hearted
+		has_nickname = nick_the_generous
+		has_nickname = nick_the_executioner
+		has_nickname = nick_iron_fist
+		has_nickname = nick_stone_fist
+		has_nickname = nick_the_bulwark
+		has_nickname = nick_the_tower
+		has_nickname = nick_the_wall_of_title
+		has_nickname = nick_the_underdog
+		has_nickname = nick_of_a_thousand_faces
+		has_nickname = nick_the_plaguebearer
+		has_nickname = nick_the_persevering
+		has_nickname = nick_twistedbeard 
+		has_nickname = nick_the_bear 
+		has_nickname = nick_the_boar 
+		has_nickname = nick_the_faceless 
+		has_nickname = nick_the_cyclops 
+		has_nickname = nick_the_lionheart 
+		has_nickname = nick_the_dragon 
+		has_nickname = nick_the_dragoness 
+		has_nickname = nick_the_undying 
+		has_nickname = nick_the_wolf 
+		has_nickname = the_timely_rain 
+		has_nickname = the_jade_unicorn 
+		has_nickname = the_wizard 
+		has_nickname = the_big_halberd 
+		has_nickname = beautiful_beard 
+		has_nickname = the_tattooed_monk 
+		has_nickname = the_unrestrained 
+		has_nickname = nick_the_roaring_flame 
+		has_nickname = nick_the_goliath 
+		has_nickname = nick_the_mythological_creature 
+		has_nickname = nick_the_fool_for_christ 
+		has_nickname = nick_the_skull_crusher
+		has_nickname = nick_the_quick_foot
+		has_nickname = nick_the_bleeder
+		has_nickname = nick_the_sharp_teeth
+		has_nickname = nick_the_crimson_flurry
+		has_nickname = nick_the_champion_of_province
+		has_nickname = nick_the_bone_gnasher
+		has_nickname = nick_the_gods_champion
+		has_nickname = nick_the_red_gladiator
+		has_nickname = nick_the_red_gladiatrix
+		has_nickname = nick_the_crimson_gorgon
+		has_nickname = nick_the_scarlet_eagle
+		has_nickname = nick_the_exalted_chosen_of_province
+		has_nickname = nick_the_scarlet_painter
+		has_nickname = nick_the_ladder_legs
+		has_nickname = nick_the_peacock
+		has_nickname = nick_the_bellower
+	}
+}
+this_has_super_cool_nickname_trigger = {
+	OR = { 
+		has_nickname = nick_haardraade
+		has_nickname = nick_lodbrok
+		has_nickname = nick_the_boneless
+		has_nickname = nick_bluetooth
+		has_nickname = nick_snake_in_the_eye
+		has_nickname = nick_fairhair
+		has_nickname = nick_whiteshirt
+		has_nickname = nick_the_saoshyant
+		has_nickname = nick_hardeknud
+		has_nickname = nick_the_world_burner
+		has_nickname = nick_the_vatican_prince
+		has_nickname = nick_the_vatican_princess
+		has_nickname = nick_the_pale_prince
+		has_nickname = nick_the_leechlord
+		has_nickname = nick_the_black_boar
+		has_nickname = nick_the_apostate
+		has_nickname = nick_the_hawk_of_quarysh
+		has_nickname = nick_the_submissive 			
+		has_nickname = nick_the_deliverer			
+		has_nickname = nick_the_purified			
+		has_nickname = nick_the_illuminated		
+		has_nickname = nick_the_exalted			
+		has_nickname = nick_the_awoken 			
+		has_nickname = nick_the_bleeding_eyes		
+		has_nickname = nick_the_sky_rider			
+		has_nickname = nick_the_civilized 
+		has_nickname = nick_the_missionary 		
+		has_nickname = nick_the_proselytizer 		
+		has_nickname = nick_the_adjudicator	 	
+		has_nickname = nick_the_enlightened				
+		has_nickname = nick_the_waking_teacher 	
+		has_nickname = nick_the_whirling_spell	
+		has_nickname = nick_the_horse_shepherd	
+		has_nickname = nick_the_educator 	
+		has_nickname = nick_the_white_raven
+		has_nickname = nick_the_salt_snake
+		has_nickname = nick_the_salt_viper
+		has_nickname = nick_the_siren
+		has_nickname = nick_the_wyrm
+		has_nickname = nick_the_fury
+		has_nickname = nick_the_stormforged
+		has_nickname = nick_the_tempest_of_capital
+		has_nickname = the_panther_head 
+		has_nickname = the_thunderbolt 
+		has_nickname = the_whirlwind 
+		has_nickname = the_black_whirlwind 
+		has_nickname = the_winged_tiger 
+		has_nickname = the_turbulent_river_dragon 
+		has_nickname = the_ferocious_giant 
+		has_nickname = the_prodigy 
+		has_nickname = nick_of_the_nine_hostages 
+		has_nickname = nick_gods_torturer 
+		has_nickname = nick_gods_hedonist 
+		has_nickname = nick_gods_cannibal 
+		has_nickname = nick_gods_drunkard
+		has_nickname = nick_papal_lover  
+		has_nickname = nick_gods_seducer 
+		has_nickname = nick_the_red_storm
+		has_nickname = nick_the_scarlet_hands
+		has_nickname = nick_the_blood_monger
+		has_nickname = nick_the_black_skull
+		has_nickname = nick_the_heart_eater
+		has_nickname = nick_the_slaughterer
+		has_nickname = nick_the_spirit_stalker
+		has_nickname = nick_the_soul_flayer
+		has_nickname = nick_the_crimson_reaper
+		has_nickname = nick_the_dreaded
+		has_nickname = nick_the_chest_buster
+		has_nickname = nick_the_angel_of_location
+		has_nickname = nick_the_chosen_of_gabriel
+		has_nickname = nick_the_page_of_lord
+		has_nickname = nick_the_maid_of_virgin
+		has_nickname = nick_the_messenger_of_christ
+		has_nickname = nick_the_deaths_child
+		has_nickname = nick_the_snakeling
+		has_nickname = nick_the_little_spider
+		has_nickname = nick_the_eerie
+		has_nickname = nick_the_little_nightmare
+		has_nickname = nick_the_ripper
+		has_nickname = nick_the_black_widow
+		has_nickname = nick_the_ferrante
+		has_nickname = nick_the_iron_heart
+		has_nickname = nick_the_pale_spider
+		has_nickname = nick_the_grim_mistress
+		has_nickname = nick_the_young_eagle
+		has_nickname = nick_the_green_warrior
+		has_nickname = nick_the_warrior_child
+		has_nickname = nick_the_young_conqueror
+		has_nickname = nick_the_white_knight 
+		has_nickname = nick_the_virago
+		has_nickname = nick_the_bloodhound
+		has_nickname = nick_the_warrior_philosopher
+		has_nickname = nick_the_angel
+		has_nickname = nick_the_pure
+		has_nickname = nick_the_celestial
+		has_nickname = nick_the_radiant
+		has_nickname = nick_the_innocent
+		has_nickname = nick_the_peace_maker
+		has_nickname = nick_the_munificent
+		has_nickname = nick_the_architect
+		has_nickname = nick_the_castellan
+		has_nickname = nick_the_carpenter
+		has_nickname = nick_the_grandiose
+		has_nickname = nick_the_griffin
+		has_nickname = nick_the_compassionate
+		has_nickname = nick_the_founder
+		has_nickname = nick_the_bloodlime
+		has_nickname = nick_the_patron_of_arts
+		has_nickname = nick_the_bastion_of_capital
+		has_nickname = nick_the_holy_mason
+		has_nickname = nick_the_grand_patriarch
+		has_nickname = nick_the_grand_matriarch
+		has_nickname = nick_the_philosopher
+		has_nickname = nick_the_theologian
+		has_nickname = nick_the_zealot
+		has_nickname = nick_the_benevolent
+	}
+}
+
+#Sex restrictions on Great Tribal Festival activities.
+can_enter_festival_physical_competitions_trigger = { 
+	is_adult = yes
+	OR = {
+		AND = {
+			is_female = no
+			OR = { 
+				NOT = { has_religion_feature = religion_matriarchal }
+				is_member_of_any_warrior_lodge_trigger = yes
+				has_character_flag = special_marshal
+			}
+		}
+		AND = {
+			is_female = yes
+			OR = { 
+				trait = shieldmaiden
+				has_religion_feature = religion_matriarchal 
+				has_character_flag = special_marshal
+				is_member_of_any_warrior_lodge_trigger = yes
+			}
+		}
+	}
+}
+
+has_at_least_3_traits_in_common_with_prev_trigger = {
+	calc_true_if = { 
+		amount = 3
+		#Virtues...
+		AND = {
+			trait = chaste
+			PREV = { trait = chaste }
+		}
+		AND = {
+			trait = temperate
+			PREV = { trait = temperate }
+		}
+		AND = {
+			trait = charitable
+			PREV = { trait = charitable }
+		}
+		AND = {
+			trait = diligent
+			PREV = { trait = diligent }
+		}
+		AND = {
+			trait = patient
+			PREV = { trait = patient }
+		}
+		AND = {
+			trait = kind
+			PREV = { trait = kind }
+		}
+		AND = {
+			trait = humble
+			PREV = { trait = humble }
+		}
+
+		#sins...
+		AND = {
+			trait = lustful
+			PREV = { trait = lustful }
+		}
+		AND = {
+			trait = gluttonous
+			PREV = { trait = gluttonous }
+		}
+		AND = {
+			trait = greedy
+			PREV = { trait = greedy }
+		}
+		AND = {
+			trait = slothful
+			PREV = { trait = slothful }
+		}
+		AND = {
+			trait = envious
+			PREV = { trait = envious }
+		}
+		AND = {
+			trait = wroth
+			PREV = { trait = wroth }
+		}
+		AND = {
+			trait = proud
+			PREV = { trait = proud }
+		}
+
+		#Others traits!
+		AND = {
+			trait = ambitious
+			PREV = { trait = ambitious }
+		}
+		AND = {
+			trait = arbitrary
+			PREV = { trait = arbitrary }
+		}
+		AND = {
+			trait = brave
+			PREV = { trait = brave }
+		}
+		AND = {
+			trait = content
+			PREV = { trait = content }
+		}
+		AND = {
+			trait = craven
+			PREV = { trait = craven }
+		}
+		AND = {
+			trait = cruel
+			PREV = { trait = cruel }
+		}
+		AND = {
+			trait = cynical
+			PREV = { trait = cynical }
+		}
+		AND = {
+			trait = deceitful
+			PREV = { trait = deceitful }
+		}
+		AND = {
+			trait = erudite
+			PREV = { trait = erudite }
+		}
+		AND = {
+			trait = gregarious
+			PREV = { trait = gregarious }
+		}
+		AND = {
+			trait = honest
+			PREV = { trait = honest }
+		}
+		AND = {
+			trait = just
+			PREV = { trait = just }
+		}
+		AND = {
+			trait = paranoid
+			PREV = { trait = paranoid }
+		}
+		AND = {
+			trait = shy
+			PREV = { trait = shy }
+		}
+		AND = {
+			trait = stubborn
+			PREV = { trait = stubborn }
+		}
+		AND = {
+			trait = trusting
+			PREV = { trait = trusting }
+		}
+		AND = {
+			trait = zealous
+			PREV = { trait = zealous }
+		}
+	}
+}
+
+has_at_least_3_traits_opposite_prev_trigger = {
+	calc_true_if = { 
+		amount = 3
+		#Virtues...
+		AND = {
+			trait = chaste
+			PREV = { trait = lustful }
+		}
+		AND = {
+			trait = temperate
+			PREV = { trait = gluttonous }
+		}
+		AND = {
+			trait = charitable
+			PREV = { trait = greedy }
+		}
+		AND = {
+			trait = diligent
+			PREV = { trait = slothful }
+		}
+		AND = {
+			trait = patient
+			PREV = { trait = wroth }
+		}
+		AND = {
+			trait = kind
+			PREV = {
+				OR = {
+					trait = envious
+					trait = cruel
+				}
+			}
+		}
+		AND = {
+			trait = humble
+			PREV = { trait = proud }
+		}
+
+		#sins...
+		AND = {
+			trait = lustful
+			PREV = { trait = chaste }
+		}
+		AND = {
+			trait = gluttonous
+			PREV = { trait = temperate }
+		}
+		AND = {
+			trait = greedy
+			PREV = { trait = charitable }
+		}
+		AND = {
+			trait = slothful
+			PREV = { trait = diligent }
+		}
+		AND = {
+			OR = {
+				trait = envious
+				trait = cruel
+			}
+			PREV = { trait = kind }
+		}
+		AND = {
+			trait = wroth
+			PREV = { trait = patient }
+		}
+		AND = {
+			trait = proud
+			PREV = { trait = humble }
+		}
+
+		#Others traits!
+		AND = {
+			trait = ambitious
+			PREV = { trait = content }
+		}
+		AND = {
+			trait = arbitrary
+			PREV = { trait = just }
+		}
+		AND = {
+			trait = brave
+			PREV = { trait = craven }
+		}
+		AND = {
+			trait = content
+			PREV = { trait = ambitious }
+		}
+		AND = {
+			trait = craven
+			PREV = { trait = brave }
+		}
+		AND = {
+			trait = cynical
+			PREV = { trait = zealous }
+		}
+		AND = {
+			trait = deceitful
+			PREV = { trait = honest }
+		}
+		AND = {
+			trait = gregarious
+			PREV = { trait = shy }
+		}
+		AND = {
+			trait = honest
+			PREV = { trait = deceitful }
+		}
+		AND = {
+			trait = just
+			PREV = { trait = arbitrary }
+		}
+		AND = {
+			trait = paranoid
+			PREV = { trait = trusting }
+		}
+		AND = {
+			trait = shy
+			PREV = { trait = gregarious }
+		}
+		AND = {
+			trait = trusting
+			PREV = { trait = paranoid }
+		}
+		AND = {
+			trait = zealous
+			PREV = { trait = cynical }
+		}
+	}
+}
+
+has_any_sympathy_trait_trigger = { 
+	OR = {
+		trait = sympathy_christendom
+		trait = sympathy_islam
+		trait = sympathy_pagans
+		trait = sympathy_zoroastrianism
+		trait = sympathy_judaism
+		trait = sympathy_indian
+	}
+}
+
+preferred_gender_based_on_laws_trigger = {
+	OR = {
+		AND = {
+			is_female = no
+			PREV = {
+				OR = {
+					has_law = cognatic_succession
+					has_law = agnatic_succession
+				}
+			}
+		}
+		PREV = { has_law = true_cognatic_succession }
+		AND = {
+			is_female = yes
+			PREV = {
+				OR = {
+					has_law = enatic_succession
+					has_law = enatic_cognatic_succession
+				}
+			}
+		}
+	}
+}
+
+has_bad_priest_trait_trigger = {
+	OR = {
+		trait = bad_priest_christian
+		trait = bad_priest_muslim
+		trait = bad_priest_norse
+		trait = bad_priest_tengri
+		trait = bad_priest_zoroastrian
+		trait = bad_priest_aztec
+	}
+}
+
+# Referenced by the "button_rename" button in the character view 
+can_rename_character_trigger = {
+	is_liege_or_above = FROM
+	dynasty = FROM
+	age < 10
+}
+
+is_sick_or_injured_trigger = {
+	OR = {
+		trait = pneumonic
+		trait = syphilitic
+		trait = leper
+		trait = maimed
+		trait = infirm
+		trait = incapable
+		trait = has_tuberculosis
+		trait = has_typhoid_fever
+		trait = has_typhus
+		trait = has_bubonic_plague
+		trait = has_measles
+		trait = has_small_pox
+		trait = mangled
+		trait = severely_injured
+		trait = flu
+		trait = dysentery
+		trait = gout
+		trait = food_poisoning
+		trait = rabies
+		trait = cancer
+		trait = scurvy
+	}
+}
+
+has_fair_trait_trigger = {
+	OR = {
+		trait = fair
+		trait = groomed
+	}
+}
+
+has_ugly_trait_trigger = {
+	OR = {
+		trait = ugly
+		trait = uncouth
+	}
+}
+
+parent_for_elective_succession_trigger = {
+	NOT = { character = ROOT } #Not the current ruler.
+	OR = {
+		any_claim = { title = ROOT_FROMFROM }
+		AND = { 
+			is_close_relative = ROOT
+			OR = { 
+				dynasty = ROOT
+				AND = { is_landed = yes higher_real_tier_than = BARON }
+			}
+		}
+		AND = { 
+			higher_real_tier_than = COUNT
+			OR = { #Either defacto direct vassal, or independent ruler who is dejure vassal.
+				vassal_of = ROOT 
+				AND = { 
+			 		any_dejure_liege = { title = ROOT } 
+					independent = yes
+				}
+			}
+		}
+	}
+	AND = {
+		OR = { #Candidate should not be a landless Courtier that is about to inherit a Theocracy or Republic
+			AND = {
+				is_ruler = yes
+				is_landed = yes
+				is_republic = no
+				is_merchant_republic = no
+				is_theocracy = no
+			}
+			NOR = {
+				any_heir_title = {
+					is_republic = yes
+				}
+				any_heir_title = {
+					is_merchant_republic = yes
+				}
+				any_heir_title = {
+					is_theocracy = yes
+				}
+			}
+		}
+		OR = { #If the title controls the religion, candidates must be of the same religion.
+			ROOT = { 
+				NOT = { 
+					controls_religion = yes
+				}
+			}
+			ROOT = { 
+				religion = PREV
+			}
+		}
+		NOR = {
+			trait = cat
+			trait = disinherited
+			trait = horse
+			trait = eunuch
+			trait = bastard
+			is_ascetic_trigger = yes
+			is_theocracy = yes
+			is_republic = yes
+			is_merchant_republic = yes
+		}
+	}
+}
+
+has_any_leadership_trait_trigger = {
+	OR = {
+		trait = aggressive_leader
+		trait = narrow_flank_leader
+		trait = cavalry_leader
+		trait = defensive_leader
+		trait = desert_terrain_leader
+		trait = experimenter
+		trait = flanker
+		trait = flat_terrain_leader
+		trait = heavy_infantry_leader
+		trait = holy_warrior
+		trait = inspiring_leader
+		trait = jungle_terrain_leader
+		trait = light_foot_leader
+		trait = mountain_terrain_leader
+		trait = organizer
+		trait = rough_terrain_leader
+		trait = siege_leader
+		trait = trickster
+		trait = unyielding_leader
+		trait = logistics_expert
+		trait = master_of_flame
+		trait = sapper
+		trait = levy_coordinator
+		trait = war_elephant_leader
+		trait = winter_soldier
+	}
+}
+
+has_any_astrology_trait_trigger = {
+	OR = {
+		trait = zodiac_aquarius
+		trait = zodiac_aries
+		trait = zodiac_cancer
+		trait = zodiac_capricorn
+		trait = zodiac_gemini
+		trait = zodiac_leo
+		trait = zodiac_libra
+		trait = zodiac_pisces
+		trait = zodiac_sagittarius
+		trait = zodiac_scorpio
+		trait = zodiac_taurus
+		trait = zodiac_virgo
+	}
+}
+
+this_has_execution_reason_opinion_trigger = {
+	OR = { 
+		has_opinion_modifier = { who = THIS modifier = opinion_rebel_traitor }
+		has_opinion_modifier = { who = THIS modifier = opinion_regicide_traitor }
+		has_opinion_modifier = { who = THIS modifier = attempted_murder_of_spouse }
+		has_opinion_modifier = { who = THIS modifier = attempted_murder_of_child }
+		has_opinion_modifier = { who = THIS modifier = attempted_murder_of_parent }
+		has_opinion_modifier = { who = THIS modifier = attempted_murder_of_sibling }
+		has_opinion_modifier = { who = THIS modifier = attempted_murder_of_vassal }
+		has_opinion_modifier = { who = THIS modifier = attempted_murder }
+		has_opinion_modifier = { who = THIS modifier = opinion_spouse_slayer }
+		has_opinion_modifier = { who = THIS modifier = opinion_murder_attempt }
+		has_opinion_modifier = { who = THIS modifier = opinion_killed_close_kin }
+		has_opinion_modifier = { who = THIS modifier = opinion_killed_father }
+		has_opinion_modifier = { who = THIS modifier = opinion_hajj_attempt_murder }
+		has_opinion_modifier = { who = THIS modifier = opinion_castrated_me }
+		has_opinion_modifier = { who = THIS modifier = opinion_blinded_me }
+		has_opinion_modifier = { who = THIS modifier = opinion_witch }
+		has_opinion_modifier = { who = THIS modifier = opinion_takfir }
+		has_opinion_modifier = { who = THIS modifier = opinion_attempted_abduction }
+		has_opinion_modifier = { who = THIS modifier = opinion_unfaithful_wife }
+		has_opinion_modifier = { who = THIS modifier = opinion_unfaithful_husband_crime }
+		has_opinion_modifier = { who = THIS modifier = opinion_cuckolded }
+		has_opinion_modifier = { who = THIS modifier = opinion_charge_dw }
+		has_opinion_modifier = { who = THIS modifier = opinion_tortured_me }
+		has_opinion_modifier = { who = THIS modifier = opinion_mutilated_me }
+		has_opinion_modifier = { who = THIS modifier = opinion_mutilated_family }
+		has_opinion_modifier = { who = THIS modifier = opinion_mutilated_close_kin }
+		has_opinion_modifier = { who = THIS modifier = opinion_outlawed_society }
+		has_opinion_modifier = { who = THIS modifier = opinion_accused_apostate }
+	}
+}
+
+root_has_execution_reason_opinion_trigger = {
+	OR = { 
+		has_opinion_modifier = { who = ROOT modifier = opinion_rebel_traitor }
+		has_opinion_modifier = { who = ROOT modifier = opinion_regicide_traitor }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_spouse }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_child }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_parent }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_sibling }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_vassal }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder }
+		has_opinion_modifier = { who = ROOT modifier = opinion_spouse_slayer }
+		has_opinion_modifier = { who = ROOT modifier = opinion_murder_attempt }
+		has_opinion_modifier = { who = ROOT modifier = opinion_killed_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_killed_father }
+		has_opinion_modifier = { who = ROOT modifier = opinion_hajj_attempt_murder }
+		has_opinion_modifier = { who = ROOT modifier = opinion_castrated_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_blinded_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_witch }
+		has_opinion_modifier = { who = ROOT modifier = opinion_takfir }
+		has_opinion_modifier = { who = ROOT modifier = opinion_attempted_abduction }
+		has_opinion_modifier = { who = ROOT modifier = opinion_unfaithful_wife }
+		has_opinion_modifier = { who = ROOT modifier = opinion_unfaithful_husband_crime }
+		has_opinion_modifier = { who = ROOT modifier = opinion_cuckolded }
+		has_opinion_modifier = { who = ROOT modifier = opinion_charge_dw }
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_family }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_outlawed_society }
+		has_opinion_modifier = { who = ROOT modifier = opinion_accused_apostate }
+	}
+}
+
+root_has_imprisonment_reason_opinion_trigger = {
+	OR = { 
+		has_opinion_modifier = { who = ROOT modifier = opinion_dishonorable }
+		has_opinion_modifier = { who = ROOT modifier = opinion_traitor }
+		has_opinion_modifier = { who = ROOT modifier = opinion_rebel_traitor }
+		has_opinion_modifier = { who = ROOT modifier = opinion_regicide_traitor }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_spouse }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_child }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_parent }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_sibling }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder_of_vassal }
+		has_opinion_modifier = { who = ROOT modifier = attempted_murder }
+		has_opinion_modifier = { who = ROOT modifier = opinion_spouse_slayer }
+		has_opinion_modifier = { who = ROOT modifier = opinion_murder_attempt }
+		has_opinion_modifier = { who = ROOT modifier = opinion_killed_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_killed_father }
+		has_opinion_modifier = { who = ROOT modifier = opinion_hajj_attempt_murder }
+		has_opinion_modifier = { who = ROOT modifier = opinion_fatwa_target }
+		has_opinion_modifier = { who = ROOT modifier = opinion_refused_order }
+		has_opinion_modifier = { who = ROOT modifier = opinion_castrated_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_blinded_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_castrated_family }
+		has_opinion_modifier = { who = ROOT modifier = opinion_castrated_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_blinded_family }
+		has_opinion_modifier = { who = ROOT modifier = opinion_blinded_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_witch }
+		has_opinion_modifier = { who = ROOT modifier = opinion_takfir }
+		has_opinion_modifier = { who = ROOT modifier = opinion_attempted_abduction }
+		has_opinion_modifier = { who = ROOT modifier = opinion_killed_lover }
+		has_opinion_modifier = { who = ROOT modifier = opinion_unfaithful_wife }
+		has_opinion_modifier = { who = ROOT modifier = opinion_unfaithful_husband_crime }
+		has_opinion_modifier = { who = ROOT modifier = opinion_charge_heresiarch }
+		has_opinion_modifier = { who = ROOT modifier = opinion_charge_infidel }
+		has_opinion_modifier = { who = ROOT modifier = opinion_charge_deviant }
+		has_opinion_modifier = { who = ROOT modifier = opinion_charge_illegitimate }
+		has_opinion_modifier = { who = ROOT modifier = opinion_charge_cultist }
+		has_opinion_modifier = { who = ROOT modifier = opinion_cuckolded }
+		has_opinion_modifier = { who = ROOT modifier = opinion_charge_dw }
+		has_opinion_modifier = { who = ROOT modifier = opinion_charge_traitor }
+		has_opinion_modifier = { who = ROOT modifier = opinion_charge_slanderer }
+		has_opinion_modifier = { who = ROOT modifier = abuse_of_office }
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_family }
+		has_opinion_modifier = { who = ROOT modifier = opinion_tortured_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_me }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_family }
+		has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_close_kin }
+		has_opinion_modifier = { who = ROOT modifier = opinion_thief }
+		has_opinion_modifier = { who = ROOT modifier = opinion_outlawed_society }
+		has_opinion_modifier = { who = ROOT modifier = opinion_accused_apostate }
+	}
+}
+
+ere_elective_politician_titles_trigger = { #Used in Imperial Elective to determine AI behavior.
+	OR = {
+		has_job_title = job_marshal
+		has_job_title = job_spymaster
+		has_job_title = job_treasurer
+		has_job_title = job_chancellor
+		has_minor_title = title_despot
+		has_minor_title = title_sebastokrator
+		has_minor_title = title_caesar
+		has_minor_title = title_kouropalates
+		has_minor_title = title_anthypatos
+	} 
+}
+
+can_still_be_commander_byzantine_trigger = { 
+	NOT = { 
+		primary_title = { temporary = yes } 
+	}
+	liege = { 
+		character = FROMFROM 
+		has_law = succ_byzantine_elective
+	}
+	OR = {
+		AND = {
+			OR = {
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_commander_title_trigger = yes
+			}
+			is_adult = yes
+		}
+		has_character_flag = special_marshal
+	}
+	
+	prisoner = no
+	NOT = { trait = incapable }
+ 	NOT = { trait = sick_incapable }
+	NOT = { is_inaccessible_trigger = yes }
+	NOT = { has_character_flag = guru }
+	NOT = { has_character_modifier = refusing_to_lead }
+	NOR = { 
+		war_with = FROMFROM
+		any_liege = {  
+			war_with = FROMFROM
+		}
+	}
+	OR = { 
+		higher_real_tier_than = BARON #Either potential commander is vassal...
+		NOT = { #...Or there are no valid vassal candidates that can be commanders.
+			custom_tooltip = { 
+				text = tooltip_byzantine_empire_can_appoint_commanders
+				liege = { 
+					any_vassal = { 
+						higher_real_tier_than = BARON
+						NOT = { 
+							primary_title = { temporary = yes } 
+						}
+						OR = {
+							AND = {
+								OR = {
+									male_can_hold_minor_title_trigger = yes
+									female_can_hold_minor_commander_title_trigger = yes
+								}
+								is_adult = yes
+							}
+							has_character_flag = special_marshal
+						}
+						
+						prisoner = no
+						NOT = { trait = incapable }
+						NOT = { is_inaccessible_trigger = yes }
+						NOT = { has_character_flag = guru }
+						NOT = { has_character_modifier = refusing_to_lead }
+						NOR = {
+							has_job_title = job_chancellor
+							has_job_title = job_marshal
+							has_job_title = job_treasurer
+							has_job_title = job_spymaster
+							has_job_title = job_spiritual
+							has_minor_title = title_commander
+						}
+					} 
+				} 
+			} 
+		}
+	}
+}
+
+can_still_be_marshal_byzantine_trigger = {
+	liege = { 
+		character = FROMFROM
+		has_law = succ_byzantine_elective
+	}
+	NOR = { 
+		war_with = FROMFROM
+		any_liege = {  
+			war_with = FROMFROM
+		}
+	}
+	OR = {
+		AND = {
+			OR = {
+				AND = { #Patriarchal religions can only hire males. Matriarchal religions can only hire females.
+					is_female = no 
+					NOT = { liege = { has_religion_feature = religion_matriarchal } } 
+				}
+				AND = {
+					is_female = yes 
+					OR = { 
+						liege = { has_religion_feature = religion_matriarchal } 
+						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_bon } 
+					} 
+				}
+				trait = horse # So we can have female glitterhoofs! :D
+				OR = {
+					AND = {
+						religion = space_pirate
+						liege = { religion = space_pirate }
+					}
+					AND = {
+						religion = mobster
+						liege = { religion = mobster }
+					}
+				}
+				AND = {
+					liege = {
+						primary_title = {
+							OR = {
+								has_law = status_of_women_3
+							}
+						}
+					}
+					OR = {
+						liege = {
+							OR = {
+								dynasty = ROOT
+								is_close_relative = ROOT
+								any_spouse = { character = ROOT }
+								any_consort = { character = ROOT }
+							}
+						}
+						is_landed = yes
+						
+					}
+				}
+				OR = {
+					AND = { 
+						is_female = yes
+						liege = { primary_title = { has_law = status_of_women_4 } } 
+					}
+					has_game_rule = {
+						name = gender
+						value = all
+					}
+				}
+			}
+			OR = {
+				NOT = { religion = hindu }
+				trait = kshatriya
+			}
+			is_adult = yes
+		}
+		has_character_flag = special_marshal
+	}
+	
+	independent = no
+	prisoner = no
+	NOT = { trait = incapable }
+ 	NOT = { trait = sick_incapable }
+	NOT = { trait = in_hiding }
+	NOT = { has_character_flag = guru }
+	NOT = { has_character_modifier = resigned_in_anger }
+	NOT = { 
+		liege = { 
+			has_opinion_modifier = {
+				who = ROOT	
+				modifier = opinion_resigned_from_council 
+			} 
+		} 
+	}
+}
+
+is_single_player_observer_mode = {
+	AND = {
+		multiplayer = no
+		is_local_human_observer = yes
+	}
+}

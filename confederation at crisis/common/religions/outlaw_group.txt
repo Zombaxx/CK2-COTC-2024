@@ -101,7 +101,7 @@ outlaw_group = {
         max_consorts = 4
         women_can_take_consorts = yes
 
-        aggression = 5
+        aggression = 7
 
         #unit_modifier = {
         #   archers_offensive = 0.05

@@ -1,0 +1,19 @@
+217284 = {
+   name="Toghon Temür" # Toghon Temür Khan
+   dynasty=11100
+   religion="astrist"
+   culture="organic_wifi_ge"
+   2953.5.25 = {
+     birth=yes
+   }
+}
+244015 = { # fictitious mongol
+  dynasty = 1051120 # Buryat
+  name = "Jamugha"
+  religion = astrist
+  culture = organic_wifi_ge
+
+  2959.1.1 = {
+    birth = yes
+  }
+}
