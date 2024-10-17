@@ -1,0 +1,528 @@
+society_decisions = { #only available to members of a society
+	request_to_rank_up_within_marxist_society = { #this is the new rank up decision if you want one, you do not need this if you use de default one
+
+		hide_in_decisions_list = yes # This is shown in the Society View
+		
+		potential = {
+			hidden_tooltip = {
+				OR = {
+					AND = {
+						society_rank <= 3 #is not max rank
+						is_landed = yes
+					}
+					AND = {
+						society_rank <= 2
+						is_landed = no
+					}
+				}
+				days_in_society > 365 #days requirement
+				is_in_society = yes #obviously
+				OR = { #Players can always rank up (if they have the power), AI won't if there is no room
+					ai = no
+					AND = {
+						ai = yes
+						society_can_rank_up = yes
+					}
+				}
+			}
+		}
+
+		allow = {
+			#Rank requirements. IMPORTANT!!! If you change the requirements, the customizable loc keys "GetSocietyRankUpTooltip" 1, 2, 3, and 4 must be updated, as it displays these requirements.
+			custom_tooltip = { # Sufficient currency
+				text = request_to_rank_up_within_marxist_society_tt
+				OR = {
+					AND = {
+						society_rank == 1
+						society_currency >= 750
+					}
+					AND = {
+						society_rank == 2
+						society_currency >= 1000
+					}
+					AND = {
+						society_rank == 3
+						society_currency >= 2000
+					}
+				}
+			}
+
+			custom_tooltip = {
+				text = must_not_have_sent_request_already_tooltip 
+				NOT = { has_character_flag = has_sent_request_to_rank_up }
+			}
+
+			custom_tooltip = {
+				text = must_be_allowed_to_rank_up_tooltip 
+				days_at_current_society_rank >= 1095 #IMPORTANT! Update tooltip.
+			}
+
+			custom_tooltip = {
+				text = must_have_grandmaster_tooltip #You must have a grand master
+				any_society_member = {
+					is_society_grandmaster = yes
+					same_society_as = ROOT
+				}
+			}
+		}
+
+		effect = {
+			#Rank up cost
+			if = {
+				limit = { society_rank == 1 }
+				change_society_currency = -750
+			}
+			if = {
+				limit = { society_rank == 2 }
+				change_society_currency = -1000
+			}
+			if = {
+				limit = { society_rank == 3 }
+				change_society_currency = -2000
+			}
+
+			#Perform rank up
+			hidden_tooltip = {
+				save_event_target_as = rank_up_target #mark the character as the one ranking up
+				set_character_flag = has_sent_request_to_rank_up
+				character_event = { id = MARXISTSOCI.120 days = 20 random = 10 } # sends hidden delayed event to self, which then sends request to Leader of the society
+				
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				is_landed = no
+			}
+		}
+	}
+	
+	#Decision "power" for rank 1
+	marxist_society_power_1 = {
+
+		potential = { #who can see it
+			society_member_of = marxist_society #which society
+		}
+
+		allow = { #requirement to press it
+			society_currency >= 100 #need 100 society currency, can be anything
+		}
+
+		effect = { #what it does, here is trade 100 society currency for 100 gold
+			change_society_currency = -100
+			wealth = 10
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	#Adopt Atheism
+	marxist_society_adopt_atheism = {
+		potential = { #who can see it
+			society_member_of = marxist_society #which society
+			society_rank >= 3
+			NOT = {
+				OR = {
+					religion = atheism
+					religion = atheism_reformed
+					religion = atheism_revised
+				}
+			}
+		}
+
+		allow = { #requirement to press it
+			society_currency >= 20
+			custom_tooltip = {
+	           	text = no_abandon_atheism_tooltip
+	            hidden_tooltip = {
+					NOT = { has_character_flag = abandon_atheism }
+	            }
+	        }
+		}
+
+		effect = { 
+			change_society_currency = -20
+			religion = atheism
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Leaning
+	marxist_society_learning = {
+		
+		potential = { #who can see it
+			society_member_of = marxist_society #which society
+			society_rank >= 2
+		}
+
+		allow = { #requirement to press it
+			society_currency >= 250 #need 100 society currency, can be anything
+		}
+
+		effect = { 
+			change_society_currency = -250
+			hidden_tooltip = {
+				character_event = { id = MARXISTSOCI.1000 }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+		}
+	}
+
+	#Donation
+	marxist_society_donate = {
+		ai_check_interval = 24
+		potential = { #who can see it
+			society_member_of = marxist_society #which society
+			society_rank >= 1
+		}
+
+		allow = { #requirement to press it
+			wealth >= 100 
+		}
+
+		effect = { 
+			hidden_tooltip = {
+				character_event = { id = MARXISTSOCI.160 }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.001
+			}
+			modifier = {
+				factor = 2
+				wealth >= 200
+			}
+			modifier = {
+				factor = 2
+				wealth >= 500
+			}
+			modifier = {
+				factor = 2
+				wealth >= 1000
+			}
+		}
+	}
+}
+
+targetted_decisions = {
+	marxist_society_preach = {
+		ai_check_interval = 24
+		potential = {
+			NOT = { trait = incapable }
+			is_within_diplo_range = FROM
+			NOT = {	OR = {
+					religion = atheism
+					religion = atheism_reformed
+					religion = atheism_revised
+				}
+			}
+		}
+		
+		from_potential = {
+			has_DLC = "Mystics"
+			society_rank >= 4
+			is_marxist_society_trigger = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			OR = {
+				religion = atheism
+				religion = atheism_reformed
+				religion = atheism_revised
+			}
+		}
+		
+		allow = {
+			FROM = {
+				#has_marxist_society_currency_preach_trigger = yes	###requires SocCur
+				is_inaccessible_trigger = no
+				prisoner = no
+				in_command = no
+			}
+			OR = {
+				AND = {
+					FROM = {
+						society_currency >= 500
+					}
+					is_landed = no
+				}
+				AND = {
+					FROM = {
+						society_currency >= 700
+					}
+					tier = baron
+				}
+				AND = {
+					FROM = {
+						society_currency >= 1000
+					}
+					tier = count
+				}
+				AND = {
+					FROM = {
+						society_currency >= 1500
+					}
+					tier = duke
+				}
+				AND = {
+					FROM = {
+						society_currency >= 2000
+					}
+					tier = king
+				}
+				AND = {
+					FROM = {
+						society_currency >= 3000
+					}
+					tier = emperor
+				}
+			}
+			is_inaccessible_trigger = no
+			prisoner = no
+			custom_tooltip = {
+				text = marxist_society_preach_tooltip
+				AND = {
+					OR = {
+						FROM = { religion = atheism }
+						FROM = { religion = atheism_reformed }
+						FROM = { religion = atheism_revised }
+					}
+					NOT = {	
+						OR = {
+							religion = atheism
+							religion = atheism_reformed
+							religion = atheism_revised
+						}
+					}
+
+				}
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					is_landed = no
+				}
+				FROM = {
+					change_society_currency = -500
+				}
+			}
+			if = {
+				limit = {
+					tier = baron
+				}
+				FROM = {
+					change_society_currency = -700
+				}
+			}
+			if = {
+				limit = {
+					tier = count
+				}
+				FROM = {
+					change_society_currency = -1000
+				}
+			}
+			if = {
+				limit = {
+					tier = duke
+				}
+				FROM = {
+					change_society_currency = -1500
+				}
+			}
+			if = {
+				limit = {
+					tier = king
+				}
+				FROM = {
+					change_society_currency = -2000
+				}
+			}
+			if = {
+				limit = {
+					tier = emperor
+				}
+				FROM = {
+					change_society_currency = -3000
+				}
+			}
+			if = {
+				limit = {
+					FROM = {religion = atheism}
+				}
+				religion = atheism
+			}
+			if = {
+				limit = {
+					FROM = {religion = atheism_reformed}
+				}
+				religion = atheism_reformed
+			}
+			if = {
+				limit = {
+					FROM = {religion = atheism_revised}
+				}
+				religion = atheism_revised
+			}
+			if = {
+				limit = {
+					FROM = {has_secret_religion = yes}
+				}
+				FROM = {secret_religion_scope = { save_event_target_as = actual_religion }}
+				set_secret_religion = event_target:actual_religion
+			}
+			opinion = {										###opinion mostly serves as a 10 years cooldown ; +10 Opinion
+				who = FROM
+				modifier = opinion_marxist_society_convert
+				months = 120
+			}
+			FROM = { character_event = { id = MARXISTSOCI.1010 } }
+			character_event = { id = MARXISTSOCI.1011 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					AND = {
+						OR = {
+							is_landed = yes
+							is_patrician = yes
+							tier = duke
+							tier = king
+							tier = emperor
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				tier = king
+			}
+			modifier = {
+				factor = 10
+				tier = emperor
+			}
+		}
+	}
+
+
+	marxist_society_prisoner_education = {
+		only_playable = yes
+		filter = court
+		ai_target_filter = court
+		ai_check_interval = 6
+
+		from_potential = {
+			is_playable = yes
+			has_DLC = "Mystics"
+			society_rank >= 3
+			is_marxist_society_trigger = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			OR = {
+				religion = atheism
+				religion = atheism_reformed
+			}
+		}
+	
+		potential = {
+			host = { character = FROM }
+			prisoner = yes
+		}
+		allow = {
+			prisoner = yes
+			NOT = {
+				OR = {
+					religion = atheism
+					religion = atheism_reformed
+				}
+			}
+		}
+		effect = {
+			random_list = {				
+				10 = {
+					modifier = {
+						factor = 0
+						FROM = {religion = atheism}
+					}
+					religion = atheism_reformed
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						FROM = {religion = atheism_reformed}
+					}
+					religion = atheism
+				}
+			}
+			if = {
+				limit = { 
+					has_game_rule = {
+						name = punishment_release_prisoner
+						value = on
+					}
+				}
+				prisoner = no
+			}
+			prisoner = no
+
+
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3
+			}
+		}
+	}
+
+}

@@ -1,0 +1,1007 @@
+namespace = RAGC
+
+#Written by Joachim
+#RAGC.41000-RAGC.41999
+
+# OK
+## Official Crusade Recipient
+# Set Official Recipient
+character_event = {
+    id = RAGC.41000
+    hide_window = yes
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_religion
+    trigger = {
+		uses_new_crusade = yes
+    	religion = atheism_reformed
+        OR = {
+            is_preparing_crusade = yes
+            any_war = {
+                using_cb = atheism_great_crusade
+            }
+        }
+        OR = {
+            NOT = {
+                official_crusade_recipient = {
+                    has_character_flag = fourth_crusade_recipient
+                    is_dying = no
+                }
+            }
+            NOT = {
+                has_global_flag = 4th_crusade_official
+            }
+            official_crusade_recipient = {
+                OR = {
+                    has_landed_title = e_terran_confederation
+                    has_landed_title = k_terran_commonwealth
+                }
+            }
+            NOT = {
+                crusade_target_title = {
+                    title = k_terran_commonwealth
+                }
+            }
+        }
+    }
+
+    immediate = {
+        crusade_target_title = {
+            save_event_target_as = current_crusade_target_title
+        }
+        official_crusade_recipient = {
+            save_event_target_as = old_crusade_recipient 
+        }
+
+    	#There is a King fitting of the title
+    	if = {
+    		limit = {
+    			crusade_target_title = {
+    				owner = {
+    					religion = ROOT
+    					NOR = {
+    						trait = excommunicated
+    						trait = incapable
+                            			is_dying = yes
+    					}
+    				}
+    			}
+    		}
+    		crusade_target_title = {
+    			owner = {
+                    		save_event_target_as = new_crusade_recipient
+    				set_official_crusade_recipient = THIS
+    			}
+    		}
+    	}
+        #There is an heir to the King fitting the title
+        else_if = {
+            limit = {
+                crusade_target_title = {
+                    owner = {
+                        religion = ROOT
+                        NOR = {
+                            trait = excommunicated
+                            trait = incapable 
+                        }
+                        is_dying = yes
+                        current_heir = {
+                            any_heir_title = {
+                                title = PREVPREVPREV
+                            }
+                        }
+                    }
+                }
+            }
+            crusade_target_title = {
+                owner = {
+                    current_heir = {
+                        save_event_target_as = new_crusade_recipient 
+                        set_official_crusade_recipient = THIS
+                    }
+                }
+            }
+        }
+    	#There is a Catholic/Fraticelli Claimant the Pope approves of
+    	else_if = {
+    		limit = {
+    			crusade_target_title = {
+    				any_claimant = {
+                        religion = ROOT
+    					NOR = {
+    						trait = excommunicated
+    						trait = incapable
+    					}
+    					ROOT = {
+    						opinion = {
+    							who = PREV
+    							value = 0
+    						}
+    					}
+                        NOT = {
+                            is_dying = yes
+                        }
+    				}
+    			}
+    		}
+			random_character = {
+				limit = {
+                    is_alive = yes
+					religion = ROOT
+					crusade_target_title = {
+						claimed_by = PREV
+					}
+					NOT = {
+						trait = excommunicated
+					}
+					ROOT = {
+						opinion = {
+							who = PREV
+							value = 1
+						}
+					}
+                    NOT = {
+                        is_dying = yes
+                    }
+				}
+				preferred_limit = {
+					ROOT = {
+						opinion = {
+							who = PREV
+							value = 90
+						}
+					}
+					is_female = no
+				}
+				preferred_limit = {
+					ROOT = {
+						opinion = {
+							who = PREV
+							value = 75
+						}
+					}
+					is_female = no
+				}
+				preferred_limit = {
+					ROOT = {
+						opinion = {
+							who = PREV
+							value = 50
+						}
+					}
+					is_female = no
+				}
+				preferred_limit = {
+					ROOT = {
+						opinion = {
+							who = PREV
+							value = 25
+						}
+					}
+					is_female = no
+				}
+				preferred_limit = {
+					is_female = no
+				}
+				preferred_limit = {
+					ROOT = {
+						opinion = {
+							who = PREV
+							value = 90
+						}
+					}
+					is_female = yes
+				}
+				preferred_limit = {
+					ROOT = {
+						opinion = {
+							who = PREV
+							value = 75
+						}
+					}
+					is_female = yes
+				}
+				preferred_limit = {
+					ROOT = {
+						opinion = {
+							who = PREV
+							value = 50
+						}
+					}
+					is_female = yes
+				}
+				preferred_limit = {
+					ROOT = {
+						opinion = {
+							who = PREV
+							value = 25
+						}
+					}
+					is_female = yes
+				}
+                save_event_target_as = new_crusade_recipient
+				set_official_crusade_recipient = THIS
+    		}
+    	}
+
+    	if = {
+            limit = {
+                NOT = {
+                    event_target:new_crusade_recipient = {
+                        always = yes
+                    }
+                }
+            }
+    		set_official_crusade_recipient = NONE
+            any_crusade_participant = {
+                limit = {
+                    NOT = {
+                        has_character_flag = crusade_selfish_stance
+                    }
+                    holy_order = no
+                }
+                clr_character_flag = crusade_papal_stance
+                set_character_flag = crusade_beneficiary_stance
+                if = {
+                    limit = {
+                        any_owned_bloodline = {
+                            has_bloodline_flag = grand_crusader_bloodline
+                            bloodline_is_active_for = PREV
+                        } 
+                    }
+                    set_crusade_pot_multiplier = 1.2
+                }
+                else = {
+                    set_crusade_pot_multiplier = 1
+                }
+            }
+    	}
+        #Sending out letters to the Crusaders
+        if = {
+            limit = {
+                event_target:old_crusade_recipient = {
+                    always = yes
+                }
+                event_target:new_crusade_recipient = {
+                    always = yes
+                }
+                event_target:old_crusade_recipient = {
+                    NOT = {
+                        character = event_target:new_crusade_recipient
+                    }
+                }
+            }
+            any_crusade_participant = {
+                letter_event = { id = RAGC.41120 }
+            }
+        }
+        else_if = {
+            limit = {
+                event_target:old_crusade_recipient = {
+                    always = yes
+                }
+                NOT = {
+                    event_target:new_crusade_recipient = {
+                        always = yes
+                    }
+                }
+            }
+            any_crusade_participant = {
+                letter_event = { id = RAGC.41121 }
+            }
+        }
+    }
+}
+
+# OK
+# Checks if Crusade Recipient is viable religion
+character_event = {
+    id = RAGC.41001
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+    	OR = {
+			atheism_reformed = {
+	    			official_crusade_recipient = {
+                    			character = ROOT
+                    			NOT = {
+                        			religion = atheism_reformed
+                    			}
+	    			}
+			}
+
+		}
+        NOT = {
+            has_character_flag = fourth_crusade_recipient
+        }
+    }
+
+    immediate = {
+    	trigger_switch = {
+    		on_trigger = religion
+    		atheism_reformed = { d_atheism_reformed = { owner = { character_event = { id = RAGC.41000 days = 1 } } } }
+    	}
+    }
+}
+
+# OK
+# Change Official Crusade Recipient if the current recipient die
+character_event = {
+    id = RAGC.41002
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+    	OR = {
+		atheism_reformed = {
+	    		official_crusade_recipient = {
+                  		character = ROOT
+	    		}
+		}
+            	has_character_flag = fourth_crusade_recipient
+	}
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                has_character_flag = fourth_crusade_recipient
+            }
+            atheism_reformed = {
+                set_official_crusade_recipient = NONE
+            }
+        }
+
+    	trigger_switch = {
+    		on_trigger = religion
+    		atheism_reformed = { d_atheism_reformed = { owner = { character_event = { id = RAGC.41000 } } } }
+    	}
+    }
+}
+
+# OK
+## Crusade Prep Announcement Events
+# Crusade preparation pre-Announcement event
+character_event = {
+    id = RAGC.41003
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+		uses_new_crusade = yes
+    		religion = atheism_reformed
+    }
+
+    immediate = {
+    	crusade_target_title = {
+    		save_event_target_as = crusade_title
+    	}
+    	crusade_target_char = {
+    		save_event_target_as = crusade_character
+    	}
+    	any_playable_ruler = {
+    		limit = {
+    			religion = ROOT
+    		}
+    		narrative_event = { id = RAGC.41004 }
+    	}
+    }
+}
+
+# OK
+# Crusade preparation Announcement event
+narrative_event = {
+    id = RAGC.41004
+    desc = EVTDESC_RAGC_41004
+    title = EVTTITLE_RAGC_41004
+    border = GFX_event_narrative_frame_religion
+    picture = GFX_evt_knight_kneeling
+    ai = no
+    is_triggered_only = yes
+	
+	immediate = {
+		sound_effect = crusade_view_ambience
+	}
+
+    option = {
+        name = EVTOPTB_RAGC_41004
+        pledge_crusade_participation = yes
+
+        if = {
+            limit = {
+                trait = excommunicated
+            }
+            rightful_religious_head_scope = {
+                character_event = { id = HFP.41056 }
+            }
+        }
+
+        trigger = {
+            NOT = { trait = incapable }
+            rightful_religious_head_scope = {
+                character = FROM
+                NOT = {
+                    war_with = ROOT
+                }
+            }
+            check_if_alternate_crusades_trigger = yes
+        }
+
+        piety = 100
+
+        hidden_tooltip = {
+            add_character_modifier = {
+                name = recently_pledged_to_crusade_cooldown
+                hidden = yes
+                duration = 45
+            }
+
+            trigger_switch = {
+                on_trigger = tier
+                EMPEROR = { add_to_crusade_prestige_pot = 4000 add_to_crusade_piety_pot = 1000 }
+                KING = { add_to_crusade_prestige_pot = 2000 add_to_crusade_piety_pot = 600 }
+                DUKE = { add_to_crusade_prestige_pot = 1000 add_to_crusade_piety_pot = 400 }
+                COUNT = { add_to_crusade_prestige_pot = 500 add_to_crusade_piety_pot = 200 }
+                BARON = { add_to_crusade_prestige_pot = 250 add_to_crusade_piety_pot = 200 }
+            }
+
+            random = {
+                chance = 50
+                add_to_crusade_artifact_pot = 1
+            }
+        }
+    }
+
+    option = {      
+        name = EVTOPTA_RAGC_41004
+        trigger = {
+            check_if_alternate_crusades_trigger = yes
+        }
+        custom_tooltip = { text = EVTOPTA_RAGC_41004_TT }
+    }
+
+    option = {
+        name = EVTOPTC_RAGC_41004
+        trigger = {
+            NOT = {
+                check_if_alternate_crusades_trigger = yes
+            }
+        }
+    }
+}
+
+
+
+
+
+
+# OK
+## Launch Related Announcements
+# Crusade Launch pre-announcement event
+character_event = {
+    id = RAGC.41008
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        NAND = {
+            crusade_target_title = {
+                title = k_terran_commonwealth
+            }
+            crusade_target_char = {
+                e_byzantium = {
+                    owner = {
+                        character = PREVPREV
+                    }
+                }
+            }
+            has_global_flag = 4th_crusade_official
+        }
+    }
+
+    immediate = {
+    	any_playable_ruler = {
+    		narrative_event = { id = RAGC.41009 }
+    	}
+
+        any_war = {
+            limit = {
+                using_cb = atheism_great_crusade
+            }
+            any_attacker = {
+                limit = {
+                    holy_order = yes
+                }
+                set_crusade_pot_multiplier = 0
+            }
+        }
+    }
+}
+
+# OK
+# Crusade Launch announcement event
+narrative_event = {
+    id = RAGC.41009
+    desc = EVTDESC_RAGC_41009
+    title = EVTTITLE_RAGC_41009
+    border = GFX_event_narrative_frame_religion
+    picture = GFX_evt_mass_crusade
+    is_triggered_only = yes
+
+    trigger = {
+    	FROM = {
+    		is_preparing_crusade = yes
+    	}
+    }
+
+    immediate = {
+		
+		random_list = {
+			10 = {
+				sound_effect = crusade_start_01
+			}
+			10 = {
+				sound_effect = crusade_start_02
+			}
+		}
+		
+    	FROM = {
+	    	crusade_target_title = {
+	    		save_event_target_as = crusade_title
+	    	}
+	    	crusade_target_char = {
+	    		save_event_target_as = crusade_character
+	    	}
+    	}
+
+    	if = {
+    		limit = {
+    			event_target:crusade_title = {
+    				region = world_core
+    				}
+    		}
+    		event_target:crusade_title = {
+    			set_title_flag = crusade_inherently_christian
+    		}
+    	}
+    	if = {
+    		limit = {
+    			event_target:crusade_title = {
+    				region = world_periphery
+    			}
+    		}
+            event_target:crusade_title = {
+                set_title_flag = crusade_fringe_christian
+            }
+    	}
+
+    	if = { 
+    		limit = {
+    			NOT = {
+    				event_target:crusade_title = {
+    					has_title_flag = crusade_inherently_christian
+    				}
+    				event_target:crusade_title = {
+    					has_title_flag = crusade_fringe_christian
+    				}
+    			}
+    		}
+    		event_target:crusade_title = {
+    			set_title_flag = crusade_outside_christian
+    		}
+    	}
+    }
+
+    option = {      
+        name = EVTOPTA_RAGC_41009
+        custom_tooltip = { text = EVTOPTA_RAGC_41009_TT }
+
+        trigger = {
+        	religion = atheism_reformed
+        }
+        if = {
+        	limit = {
+				religion = FROM
+        		has_pledged_crusade_participation = yes
+        	}
+        	piety = 100
+        }
+    }
+
+    option = {
+    	name = EVTOPTB_RAGC_41009
+    	custom_tooltip = { text = EVTOPTA_RAGC_41009_TT }
+    	
+    	trigger = {
+    		NOT = {
+    			religion = atheism_reformed
+    		}
+    	}
+    }
+
+    after = {
+        crusade_target_title = {
+        	set_title_flag = crusaded_against_before
+        }
+        clr_character_flag = asked_to_pledge
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Monthly Pulse check
+character_event = {
+    id = RAGC.41055
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            is_preparing_crusade = yes
+            any_war = {
+                using_cb = atheism_great_crusade
+            }
+        }
+    }
+
+    immediate = {
+        any_crusade_participant = {
+            limit = {
+                OR = {
+                    NOT = {
+                        rightful_religious_head_scope = {
+                            character = ROOT
+                        }
+                    }
+                    rightful_religious_head_scope = {
+                        war_with = PREV
+                    }
+                    AND = {
+                        is_patrician = no
+                        is_landed = no
+                        holy_order = no
+                    }
+                }
+                NOT = {
+                    any_war = {
+                        using_cb = atheism_great_crusade
+                    }
+                }
+            }
+            pledge_crusade_participation = no
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+# OK
+# Add to pot at the end of every won siege
+character_event = {
+    id = RAGC.41084
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            any_war = {
+                using_cb = atheism_great_crusade
+            }
+            is_preparing_crusade = yes
+        }
+		
+        FROM = {
+            owner = {
+                OR = {
+                    any_war = {
+                        using_cb = atheism_great_crusade
+                    }
+                    any_liege = {
+                        any_war = {
+                            using_cb = atheism_great_crusade
+                        }
+                    }
+                }
+            }
+        }
+        religion = atheism_reformed
+    }
+
+    immediate = {
+        add_to_crusade_piety_pot = 350
+        add_to_crusade_prestige_pot = 350
+        add_to_crusade_gold_pot = 350
+        random = {
+            chance = 5
+            add_to_crusade_artifact_pot = 1
+        }
+    }
+}
+
+# OK
+# Add to pot at the end of every won battle
+character_event = {
+    id = RAGC.41085
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        any_war = {
+            using_cb = atheism_great_crusade
+        }
+        FROM = {
+            OR = {
+                any_war = {
+                    using_cb = atheism_great_crusade
+                }
+                any_liege = {
+                    any_war = {
+                        using_cb = atheism_great_crusade
+                    }
+                }
+            }
+        }
+    }
+	
+	fail_trigger_effect = {
+		
+	}
+
+    immediate = {
+        add_to_crusade_piety_pot = 350
+        add_to_crusade_prestige_pot = 350
+        add_to_crusade_gold_pot = 350
+        random = {
+            chance = 5
+            add_to_crusade_artifact_pot = 1
+        }
+    }
+}
+
+# OK
+# No Pot rewards for Holy Orders - AI only
+character_event = {
+    id = RAGC.41086
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        any_war = {
+            limit = {
+                using_cb = atheism_great_crusade
+            }
+            any_attacker = {
+                limit = {
+                    holy_order = yes
+                }
+                set_crusade_pot_multiplier = 0
+            }
+        }
+    }
+}
+
+# OK
+# No Pot rewards for Holy Orders when they get a new Grandmaster either - AI only
+character_event = {
+    id = RAGC.41087
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            holy_order = yes
+            FROMFROM = {
+                holy_order = yes
+            }
+        }
+    }
+
+    immediate = {
+        religion_head = {
+            character_event = { id = RAGC.41086 days = 1 }
+        }
+    }
+}
+
+
+
+
+# OK
+## New Official Crusade Recipient notification
+# Recipient remove and replaced message
+letter_event = {
+    id = RAGC.41120
+    desc = {
+        trigger = {
+            event_target:old_crusade_recipient = {
+                is_dying = no
+                is_alive = yes
+            }
+            event_target:new_crusade_recipient = {
+                NOT = {
+                    character = ROOT
+                }
+            }
+        }
+        text = EVTDESC_RAGC_41120_1
+    }
+    desc = {
+        trigger = {
+            event_target:old_crusade_recipient = {
+                OR = {
+                    is_alive = no
+                    is_dying = yes
+                }
+                NOT = {
+                    current_heir = {
+                        event_target:new_crusade_recipient = {
+                            character = PREV
+                        }
+                    }
+                }
+            }
+            event_target:new_crusade_recipient = {
+                NOT = {
+                    character = ROOT
+                }
+            }
+        }
+        text = EVTDESC_RAGC_41120_2
+    }
+    desc = {
+        trigger = {
+            event_target:old_crusade_recipient = {
+                or = {
+                    is_alive = no
+                    is_dying = yes
+                }
+                current_heir = {
+                    event_target:new_crusade_recipient = {
+                        character = PREV
+                    }
+                }
+            }
+            event_target:new_crusade_recipient = {
+                NOT = {
+                    character = ROOT
+                }
+            }
+        }
+        text = EVTDESC_RAGC_41120_3
+    }
+    desc = {
+        trigger = {
+            event_target:old_crusade_recipient = {
+                OR = {
+                    is_alive = no
+                    is_dying = yes
+                }
+            }
+            event_target:new_crusade_recipient = {
+                character = ROOT
+            }
+        }
+        text = EVTDESC_RAGC_41120_4
+    }
+    desc = {
+        trigger = {
+            event_target:old_crusade_recipient = {
+                is_alive = yes
+                is_dying = no
+            }
+            event_target:new_crusade_recipient = {
+                character = ROOT
+            }
+        }
+        text = EVTDESC_RAGC_41120_5
+    }
+    picture = GFX_evt_throne_room
+    is_triggered_only = yes
+
+    option = {      
+        name = EVTOPTA_RAGC_41120
+        trigger = {
+            event_target:new_crusade_recipient = {
+                NOT = {
+                    character = ROOT
+                }
+            }
+        }
+    }
+
+    option = {
+        name = EVTOPTB_RAGC_41120
+        trigger = {
+            event_target:new_crusade_recipient = {
+                character = ROOT
+            }
+        }
+    }
+}
+
+# OK
+# Recipient removed and no replacement message
+letter_event = {
+    id = RAGC.41121
+    desc = {
+        trigger = {
+            event_target:old_crusade_recipient = {
+                is_alive = yes
+                is_dying = no
+            }
+        }
+        text = EVTDESC_RAGC_41121_1
+    }
+    desc = {
+        trigger = {
+            event_target:old_crusade_recipient = {
+                OR = {
+                    is_alive = no
+                    is_dying = yes
+                }
+            }
+        }
+        text = EVTDESC_RAGC_41121_2
+    }
+    picture = GFX_evt_throne_room
+    is_triggered_only = yes
+
+    option = {      
+        name = EVTOPTA_RAGC_41121
+        custom_tooltip = { text = EVTOPTA_RAGC_41121_TT }
+    }
+}
+
+
+
+
+
+
+
+
+
+## Winning Crusade Victories
+# Winning Crusade
+narrative_event = {
+    id = RAGC.41160
+    title = EVTTITLE_RAGC_41160
+    desc = EVTDESC_RAGC_41160
+    picture = GFX_evt_mass_crusade
+    border = GFX_event_narrative_frame_religion
+    portrait = event_target:crusade_king_recipient
+    is_triggered_only = yes
+    trigger = {
+    
+    }
+
+    immediate = {
+        sound_effect = crusade_outcome_positive
+    }
+
+    option = {      
+        name = EVTOPTA_RAGC_41160
+        trigger = {
+            religion_group = FROM
+        }
+    }
+    option = {      
+        name = EVTOPTB_RAGC_41160
+        trigger = {
+            NOT = {
+                religion_group = FROM
+            }
+        }
+    }
+}
+
+

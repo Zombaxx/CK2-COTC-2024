@@ -1,0 +1,52 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_atheist_rat"
+		texturefile = "gfx/traits/atheist-white.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_atheist_zeal"
+		texturefile = "gfx/traits/atheist-red.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_atheist_toleration"
+		texturefile = "gfx/traits/atheist-green.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+
+	spriteType = {
+		name = "GFX_atheism_decision_purge"
+		texturefile = "gfx/interface/atheist_decision_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_atheism_decision_PDD"
+		texturefile = "gfx/interface/government_icon_PDD.dds"
+	}
+	spriteType = {
+		name = "GFX_atheism_decision_regularfeudal"
+		texturefile = "gfx/interface/atheist_decision_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_atheism_decision_fixself"
+		texturefile = "gfx/interface/atheist_decision_icon.tga"
+	}
+
+
+	spriteType = {
+		name = "GFX_form_the_usr"
+		texturefile = "gfx/interface/union_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_convert_to_revised_atheism"
+		texturefile = "gfx/interface/atheist_decision_icon.tga"
+	}
+}

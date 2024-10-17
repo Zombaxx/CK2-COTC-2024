@@ -1,0 +1,321 @@
+marxist_society = { #society code name
+	primary_attribute = learning #Its main attribute
+	society_ranks_gfx = marxist_society_ranks #which rank icon it will use
+	opinion_to_other_members = +20 #opinion from/of other member, see wiki for all the options
+	opinion_per_rank_above = +10
+	society_rank_up_decision = request_to_rank_up_within_society #this is the default decision, triggered by the rank-up button
+	#society_rank_up_decision = request_to_rank_up_within_tutorial_society #make a new decision like this if you want your own requirements
+	sound = hermetic_society_interface #sound effect, see the sound.sfx in the game folder if you want to change the sound
+	is_secret = no #can be joined openly or not, hide clothing from other members
+	criminal = no #is it considered a "bad" society
+	is_religious = no #affect opinion values
+	devil_worshipper = no #if it will trigger devil society stuff
+	non_interference = { #AI will avoid messing with each others
+		always = no 
+	}
+	
+	active = { #if its on by default or not
+		#default to always active, will start empty unless "indestructible = yes" and "startup_populate" are filled.
+	}
+	
+	indestructible = yes #if it can be destroyed and if not will add members up to the start-up limit
+	
+	can_join_society = { #add restriction for joining
+		hidden_trigger = {
+			NAND = { #AI cannot join if the society first rank is full
+				ai = yes
+				is_society_rank_full = { 
+					society = marxist_society
+					rank = 1
+				}
+			}
+		}
+		NOT = { trait = incapable }
+		age = 16
+		OR = {
+			learning = 20
+			AND = {
+				OR = {
+					religion = atheism
+					religion = atheism_reformed
+					religion = atheism_revised
+				}
+				OR = {
+					learning = 10
+					diplomacy = 15
+					martial = 15
+					stewardship = 15
+					intrigue = 15
+				}
+			}
+		}
+	}
+
+	show_society = { #society will appear in the list if these are met
+		age = 16
+	}
+	
+	potential = { #will kick from society if these are no longer met
+		NOT = { trait = incapable }
+	}
+	
+	society_rank = { #society ranks
+		level = 1 #lowest rank
+		limit = 1000 #max member of that rank
+		startup_limit = 10 #amount of member at the start if enabled
+		modifier = { #modifiers of that rank, like opinion or cheaper holding construction
+			church_opinion = -5
+		}
+		decisions = { #rank based decisions power
+			marxist_society_power_1
+			marxist_society_donate
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 200
+		startup_limit = 5
+		modifier = { 
+			church_opinion = -10
+			learning = 1
+		}
+		decisions = {
+			marxist_society_learning
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 40
+		startup_limit = 2
+		modifier = {
+			church_opinion = -15
+			learning = 2
+			build_cost_city_modifier = -0.1
+		}
+		decisions = {
+			marxist_society_adopt_atheism
+			marxist_society_prisoner_education
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 7 #there can be more than max rank member
+		startup_limit = 1
+		modifier = { 
+			church_opinion = -20
+			learning = 3
+			build_cost_city_modifier = -0.2
+		}
+		decisions = {
+			marxist_society_preach
+		}
+	}
+	
+	plots = {
+	}
+	
+	monthly_currency_gain = { #how much society currency they gain
+		name = marxist_society_currency #localization name of the society currency, also see custom_localization
+		
+		per_attribute = { #based on attribute
+    			name = learning
+    			value = 0.4
+    		}
+		per_attribute = { #based on attribute
+    			name = diplomacy
+    			value = 0.2
+    		}
+		per_attribute = { #based on attribute
+    			name = martial
+    			value = 0.2
+    		}
+		per_attribute = { #based on attribute
+    			name = stewardship
+    			value = 0.2
+    		}
+		per_attribute = { #based on attribute
+    			name = intrigue
+    			value = 0.2
+    		}
+
+		
+		has_trait = { #based on traits
+			value = 2
+			trait = scholar
+		}
+		has_trait = {
+			value = 2
+			trait = diligent
+		}
+		has_trait = {
+			value = 4
+			trait = genius
+		}
+		has_trait = {
+			value = 2
+			trait = quick
+		}
+		triggered_gain = {
+			desc = "marxist_society_atheism_gain"
+			trigger = {
+				OR = {
+					religion = atheism
+					religion = atheism_reformed
+				}
+			}
+			value = 5
+		}
+		triggered_gain = {
+			desc = "marxist_society_count_gain"
+			trigger = {
+				tier = count
+			}
+			value = 1
+		}
+		triggered_gain = {
+			desc = "marxist_society_duke_gain"
+			trigger = {
+				tier = duke
+			}
+			value = 2
+		}
+		triggered_gain = {
+			desc = "marxist_society_king_gain"
+			trigger = {
+				tier = king
+			}
+			value = 3
+		}
+		triggered_gain = {
+			desc = "marxist_society_emperor_gain"
+			trigger = {
+				tier = emperor
+			}
+			value = 4
+		}
+		society_rank = {
+			desc = "marxist_society_leader_gain"
+			rank = 4
+			value = 5
+		}
+		triggered_gain = {
+			trigger = {
+				is_landed = no
+			}
+			value = -5
+		}
+	}
+
+	member_score_per_attribute = 5 #scores, mostly about who will be the bext leader
+	member_score_per_rank = 100
+
+	member_score = {
+		value = 10
+		modifier = {
+			factor = 0.5
+			is_landed = no
+		}
+		modifier = {
+			factor = 4
+			tier = count
+		}
+		modifier = {
+			factor = 6
+			tier = duke
+		}
+		modifier = {
+			factor = 8
+			tier = king
+		}
+		modifier = {
+			factor = 10
+			tier = emperor
+		}
+		modifier = {
+			factor = 2
+			marxist_society_score_small_prestige_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			marxist_society_score_medium_prestige_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			marxist_society_score_big_prestige_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			marxist_society_score_huge_prestige_trigger = yes
+		}
+		modifier = {
+			factor = 1.5
+			trait = strong
+		}
+		modifier = {
+			factor = -2
+			trait = weak
+		}
+		modifier = {
+			religion = atheism
+			factor = 3
+		}
+		modifier = {
+			religion = atheism_reformed
+			factor = 5
+		}
+		modifier = {
+			religion = atheism_revised
+			factor = 3
+		}
+		modifier = {
+			trait = scholar
+			factor = 1.3
+		}
+		modifier = {
+			trait = diligent
+			factor = 1.2
+		}
+		modifier = {
+			trait = temperate
+			factor = 1.1
+		}
+		modifier = {
+			trait = charitable
+			factor = 1.1
+		}
+		modifier = {
+			trait = kind
+			factor = 1.1
+		}
+		modifier = {
+			trait = patient
+			factor = 1.1
+		}
+		modifier = {
+			trait = humble
+			factor = 1.1
+		}
+		modifier = {
+			trait = genius
+			factor = 2
+		}
+	}
+	
+	startup_populate = { #trigger for who can be  the start-up population
+	    trigger = {
+			ai = yes
+	    		controls_religion = no
+			age = 16
+			is_in_society = no
+			NOT = { higher_tier_than = DUKE }
+			NOR = {
+				mercenary = yes
+				holy_order = yes
+			}
+			learning = 20
+		}
+	}
+}

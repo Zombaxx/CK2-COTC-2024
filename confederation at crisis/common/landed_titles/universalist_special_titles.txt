@@ -1,0 +1,32 @@
+# Union of Socialist Republics
+e_usr = {
+	color={ 255 0 0 }
+	color2={ 255 255 255 }
+
+	capital = 774
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				NOR = {
+					religion = atheism
+					religion = atheism_reformed
+				}
+			}
+			OR = {
+				religion = atheism
+				religion = atheism_reformed
+			}
+		}
+		conditional_tooltip = {
+			trigger = {
+				e_usr = {
+					is_titular = yes
+				}
+			}
+			e_usr = {
+				is_titular = no
+			}
+		}
+	}
+}

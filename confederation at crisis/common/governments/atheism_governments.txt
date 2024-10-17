@@ -1,0 +1,59 @@
+feudal_governments = {
+
+	
+	PDD_government = {
+		preferred_holdings = { CASTLE CITY }
+		allowed_holdings = { 
+			CASTLE
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			PDD_government
+			republic_government
+			merchant_republic_government
+		}
+		free_revoke_on_tiers = {
+			duke
+		}
+		
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+			republic_government
+			merchant_republic_government
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+			chinese_imperial_government
+			order_government
+			roman_imperial_government
+		}
+
+		frame_suffix = "_PDD"
+		title_prefix = "PDD_"
+		potential = {
+			atheism_canusepdd_trigger = yes
+		}
+		
+		color = { 133 133 133 }
+		
+		dukes_called_kings = no
+		barons_need_dynasty = yes
+
+		can_build_tribal = no
+		can_build_temple = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 600
+	}
+	
+}

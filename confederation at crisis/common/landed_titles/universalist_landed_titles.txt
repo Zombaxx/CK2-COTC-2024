@@ -1,0 +1,237 @@
+k_rus = {
+	atheism_reformed = 1000
+	c_bezhetsky_verh = {
+		holy_site = atheism
+		holy_site = atheism_reformed
+		atheism_reformed = 1000
+	}
+}
+k_vladimir = {
+	atheism_reformed = 1000
+	c_moskva = {
+		holy_site = atheism
+		holy_site = atheism_reformed
+		atheism_reformed = 1000
+	}
+}
+k_france = {
+	atheism_reformed = 1000
+	c_ile_de_france = {
+		holy_site = atheism
+		holy_site = atheism_reformed
+		atheism_reformed = 1000
+	}
+}
+k_lotharingia = {
+	atheism_reformed = 1000
+	c_trier = {
+		holy_site = atheism
+		holy_site = atheism_reformed
+		atheism_reformed = 1000
+	}
+}
+k_england = {
+	atheism_reformed = 1000
+	c_middlesex = {
+		holy_site = atheism
+		holy_site = atheism_reformed
+		atheism_reformed = 1000
+	}
+}
+k_papacy = {
+	atheism_reformed = 1000
+}
+k_thrace = {
+	atheism_reformed = 1000
+}
+k_jerusalem = {
+	atheism_reformed = 1000
+}
+k_iraq = {
+	atheism_reformed = 1000
+}
+k_egypt = {
+	atheism_reformed = 1000
+}
+
+# Mercenaries
+d_legion_freethinkers = {
+	color={ 23 235 235 }
+	color2={ 0 0 0 }
+	
+	capital = 693 # Baghdad
+
+	religion = atheism
+	allow = {
+		OR = {
+			Religion = atheism
+			Religion = atheism_reformed
+		}
+		is_landed = true
+	}
+	title = "CAPTAIN"
+	title_female = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	landless = yes
+	mercenary = yes
+	independent = yes
+
+	monthly_income = 5
+	primary = no
+	mercenary_type = legion_freethinkers_composition
+	strength_growth_per_century = 1.0	
+	dynasty_title_names = no
+}
+
+# Holy Orders
+d_militant_atheists = {
+	color={ 255 23 23 }
+	color2={ 255 255 255 }
+	
+	capital = 356 #Venice
+
+	religion = atheism
+	allow = {
+		OR = {
+			Religion = atheism
+			Religion = atheism_reformed
+		}
+		is_landed = true
+	}
+	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	landless = yes
+	holy_order = yes
+	independent = yes
+
+	monthly_income = 5
+	primary = no
+	mercenary_type = militant_atheists_composition
+	strength_growth_per_century = 1.0	
+	dynasty_title_names = no
+}
+
+d_knights_reason = {
+	color={ 255 23 255 }
+	color2={ 33 33 33 }
+	
+	capital = 356 #Venice
+
+	religion = atheism
+	allow = {
+		OR = {
+			Religion = atheism
+			Religion = atheism_reformed
+		}
+		is_landed = true
+	}
+	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	landless = yes
+	holy_order = yes
+	independent = yes
+
+	monthly_income = 1
+	primary = no
+	mercenary_type = knights_reason_composition
+	strength_growth_per_century = 1.0	
+	dynasty_title_names = no
+}
+
+# Mercenaries
+d_reformed_legion_freethinkers = {
+	color={ 23 235 235 }
+	color2={ 0 0 0 }
+	
+	capital = 693 # Baghdad
+
+	religion = atheism_reformed
+	allow = {
+		OR = {
+			Religion = atheism
+			Religion = atheism_reformed
+		}
+		is_landed = true
+	}
+	title = "CAPTAIN"
+	title_female = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	landless = yes
+	mercenary = yes
+	independent = yes
+
+	monthly_income = 5
+	primary = no
+	mercenary_type = legion_freethinkers_composition
+	strength_growth_per_century = 1.0	
+	dynasty_title_names = no
+}
+
+# Holy Orders
+d_red_army = {
+	color={ 255 23 23 }
+	color2={ 255 255 255 }
+	
+	capital = 356 #Venice
+
+	religion = atheism_reformed
+	allow = {
+		OR = {
+			Religion = atheism
+			Religion = atheism_reformed
+		}
+		is_landed = true
+	}
+	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	landless = yes
+	holy_order = yes
+	independent = yes
+
+	monthly_income = 10
+	primary = no
+	mercenary_type = militant_atheists_composition
+	strength_growth_per_century = 1.5	
+	dynasty_title_names = no
+}
+
+d_vanguard_knights = {
+	color={ 255 23 255 }
+	color2={ 33 33 33 }
+	
+	capital = 356 #Venice
+
+	religion = atheism_reformed
+	allow = {
+		OR = {
+			Religion = atheism
+			Religion = atheism_reformed
+		}
+		is_landed = true
+	}
+	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	landless = yes
+	holy_order = yes
+	independent = yes
+
+	monthly_income = 5
+	primary = no
+	mercenary_type = knights_reason_composition
+	strength_growth_per_century = 1.5	
+	dynasty_title_names = no
+}
+
+
+
+

@@ -1,0 +1,32 @@
+﻿#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+
+###############################################
+# v1.03
+###############################################
+#Name for a quest
+marxist_society_quest_city;Construct a city;;;;;;;;;;;;;x
+marxist_society_quest_liberate;Liberate a county;;;;;;;;;;;;;x
+
+#Name for a quest if there is no quest target
+marxist_society_quest_city_fallback;Construct a city;;;;;;;;;;;;;x
+marxist_society_quest_city_desc;Construct a new city.;;;;;;;;;;;;;x
+marxist_society_quest_city_tooltip;Construct a new city in your territory.;;;;;;;;;;;;;x
+marxist_society_quest_liberate_fallback;Liberate a county;;;;;;;;;;;;;x
+marxist_society_quest_liberate_desc;Liberate the targetted county through war.;;;;;;;;;;;;;x
+"marxist_society_quest_liberate_tooltip;Declare war, and liberate targetted county.;;;;;;;;;;;;;x"
+
+#Start Quest event
+EVTDESC_MARXISTSOCI_1411;A new city is needed to spread our ideas. Would you like to construct a new city?;;;;;;;;;;;;;x
+EVTDESC_MARXISTSOCI_1421;Innocent people are waiting our help. Would you like to liberate this county?;;;;;;;;;;;;;x
+
+#End Quest event
+EVTDESC_MARXISTSOCI_1412;This new city will be a new fortress to fight superstition! Thank you for your help.;;;;;;;;;;;;;x
+EVTOPTA_MARXISTSOCI_1412;You are welcome.;;;;;;;;;;;;;x
+EVTDESC_MARXISTSOCI_1422;This county is liberated! Thank you for your help.;;;;;;;;;;;;;x
+EVTOPTA_MARXISTSOCI_1422;You are welcome.;;;;;;;;;;;;;x
+EVTDESC_MARXISTSOCI_1423;The liberation war ends with a white peace. The central committee is disappointed.;;;;;;;;;;;;;x
+EVTOPTA_MARXISTSOCI_1423;I will do better next time!;;;;;;;;;;;;;x
+EVTDESC_MARXISTSOCI_1424;We are defeated by our enemies! What a shame day!;;;;;;;;;;;;;x
+EVTOPTA_MARXISTSOCI_1424;Forgive me...;;;;;;;;;;;;;x
+EVTDESC_MARXISTSOCI_1425;The liberation war ends with invalid casus belli. Your mission fails.;;;;;;;;;;;;;x

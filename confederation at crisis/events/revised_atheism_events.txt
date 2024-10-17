@@ -1,0 +1,21 @@
+namespace = REVISEDATHEISM
+
+
+#Change government type
+#letter_event = {
+#	id = REVISEDATHEISM.100
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		religion = atheism_reformed
+#		government = PDD_government
+#	}
+#	
+#	immediate = {
+#		set_government_type = feudal_government
+#	}
+#}
+
+
+

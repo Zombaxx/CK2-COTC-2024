@@ -1,0 +1,30 @@
+join_prev_marxist_society_society = { #join the society that own the button you pressed to join...
+	if = { #if your mod have several societies, you can copy this "if" and make use it for the second society, this way this scripted effect will work for both society.
+		limit = { PREV = { society_member_of = marxist_society } }
+		join_society = marxist_society
+	}
+	# if = { #example of using this scripted effect for 2 society
+		# limit = { PREV = { society_member_of = tutorial_society_example } }
+		# join_society = tutorial_society_example
+	# }
+}
+
+join_from_marxist_society_society = { #join the society of someone
+	FROM = {
+		if = {
+			limit = {
+				society_member_of = marxist_society
+			}
+			ROOT = {
+				join_society = marxist_society
+			}
+		}
+	}
+}
+
+detract_marxist_society_currency_preach_effect = {
+	if = {
+		limit = { is_in_society = yes }
+		change_society_currency = -500
+	}
+}

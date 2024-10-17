@@ -1,0 +1,156 @@
+atheism_converttoatheism_effect = {
+	if = {
+		limit = { NOT = { 
+				OR = {
+					religion = atheism
+					religion = atheism_reformed 
+				}
+			}
+		 }
+		clr_religion_char_flag_effect = yes
+		add_religion_char_flag_effect = yes
+		if = {
+			limit = {
+				OR = {
+					trait = kind
+					trait = trusting
+					trait = gregarious
+				}
+			}
+			atheism_addsympathy = yes
+		}
+	}
+	religion = atheism
+	add_trait = atheist_rat
+	if = {
+		limit = { trait = cynical }
+		remove_trait = cynical
+	}
+	if = {
+		limit = { trait = zealous }
+		remove_trait = zealous
+	}
+	#option to keep old religion secretly: character_event = { id = MNM.3949 days = 3 random = 99 }
+
+}
+
+
+atheism_addsympathy = {
+	if = {
+		limit = {
+			religion_group = christian
+		}
+		add_trait = sympathy_christendom
+	}
+	if = {
+		limit = {
+			religion_group = muslim
+		}
+		add_trait = sympathy_islam
+	}
+	if = {
+		limit = {
+			religion_group = pagan_group
+		}
+		add_trait = sympathy_pagans
+	}
+	if = {
+		limit = {
+			religion_group = zoroastrian_group
+		}
+		add_trait = sympathy_zoroastrianism
+	}
+	if = {
+		limit = {
+			religion_group = jewish_group
+		}
+		add_trait = sympathy_judaism
+	}
+	if = {
+		limit = {
+			religion_group = indian_group
+		}
+		add_trait = sympathy_indian
+	}
+}
+
+atheism_removesympathy = {
+	if = {
+		limit = {
+			trait = sympathy_christendom
+		}
+		remove_trait = sympathy_christendom
+	}
+	if = {
+		limit = {
+			trait = sympathy_islam
+		}
+		remove_trait = sympathy_islam
+	}
+	if = {
+		limit = {
+			trait = sympathy_pagans
+		}
+		remove_trait = sympathy_pagans
+	}
+	if = {
+		limit = {
+			trait = sympathy_zoroastrianism
+		}
+		remove_trait = sympathy_zoroastrianism
+	}
+	if = {
+		limit = {
+			trait = sympathy_judaism
+		}
+		remove_trait = sympathy_judaism
+	}
+	if = {
+		limit = {
+			trait = sympathy_indian
+		}
+		remove_trait = sympathy_indian
+	}
+}
+atheism_fixtraits = {
+	# Corrects all incorrect/incompatible trait combinations for this character. 
+	if = {
+		limit = {
+			OR = {
+				religion = atheism
+				religion = atheism_reformed 
+			}
+		}
+		if = {
+			limit = {
+				trait = cynical
+			}
+			remove_trait = cynical
+		}
+       		if = {
+       			limit = { NOT = { trait = atheist_rat } }
+      	 		add_trait = atheist_rat
+     	  	}
+		if = {
+			limit = {
+				trait = zealous
+			}
+			remove_trait = zealous
+		}
+       		if = {
+        		limit = { NOT = { trait = atheist_zeal } }
+        		add_trait = atheist_zeal
+        	}
+	}
+}
+
+atheism_fixtraits_realm = {
+	# Silently applies atheism_fixtraits to all characters in the current character's realm. Called before major decisions to avoid issues with characters that have incorrect traits.
+	hidden_tooltip = {
+		atheism_fixtraits = yes
+		any_realm_character = {
+			atheism_fixtraits = yes
+		}
+	}
+}
+	

@@ -1,0 +1,108 @@
+# Winning army leader is ROOT - opponent army leader is FROM
+on_battle_won_leader = {
+	events = {
+		RAGC.41085
+	}
+}
+
+# Winning army leader is ROOT - opponent army leader is FROM
+on_major_battle_won_leader = {
+	events = {
+		RAGC.41085
+	}
+}
+
+# Fires for the owner of the winning unit (ROOT). The taken Holding title is in FROM.
+on_siege_over_winner = {
+	events = {
+		RAGC.41084 # Piety and Prestige on siege wins
+	}
+}
+
+on_death = {
+	events = {
+		RAGC.41002 # Change the Official Crusade Recipient if the current one dies
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder = {
+	events = {
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_inheritance = {
+	events = {
+		RAGC.41087 # Makes sure the Holy Orders doesn't get any part of the pot
+	}
+}
+
+# Character converts religion, for whatever reason. ROOT is the character after conversion and the FROM scope has the old religion.
+on_character_convert_religion = {
+	events = {
+		RAGC.41001	# Checks if Official Crusade Recipient is still a valid target
+	}
+}
+
+# Triggers when Crusade preparation starts
+# Root = the religious head
+# Warning - This fires for all Crusades / Jihads / Great Holy Wars upon creation regardless if they have a preparation phase - Use "uses_new_crusade = yes" trigger to limit effects
+on_crusade_preparation_starts = {
+	events = {
+		RAGC.41000
+		RAGC.41003
+	}
+}
+
+# Triggers when Crusade preparation ends
+# Root = the religious head
+on_crusade_launches = {
+	events = {
+		RAGC.41008
+	}
+}
+
+
+# Triggers when a Crusade is canceled
+# Root = the religious head
+on_crusade_canceled = {
+	events = {
+	}
+}
+
+# Triggers once a month while a Crusade is preparing or active
+# Root = the religious head
+on_crusade_monthly = {
+	events = {
+		RAGC.41055
+		RAGC.41086
+	}
+}
+
+# Triggers when the target of a crusade changes (either through script or invalidation, or the target's heir inheriting). Happens immediately after the crusade_target_char and crusade_target_title scopes are updated
+# Root = the religious head
+# From = the previous target character
+# FromFrom = the previous target title
+# FromFromFrom = the character who made the change, if via diplomatic action. Otherwise not defined
+on_crusade_target_changes = {
+	events = {
+		RAGC.41000
+	}
+}
+
+# Triggers when a character pledges their participation. Triggers even if the war has started. Does *not* trigger when the character is auto-pledged due to joining the war
+# Root = the character pledging
+on_pledge_crusade_participation = {
+	events = {
+
+	}
+}
+
+# Triggers when a character unpledges their participation, including the automatic unpledging on death and conversion
+# Root = the character unpledging
+on_unpledge_crusade_participation = {
+	events = {
+
+	}
+}

@@ -1,0 +1,53 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+###### Religion Head
+ATHEISM_HEAD;Comintern Chairman;;;;;;;;;;;;;x
+ATHEISM_REFORMED_HEAD;Comintern Chairman;;;;;;;;;;;;;x
+ATHEISM_REFORMED_HEAD_FOA;Dear Chairman;;;;;;;;;;;;;x
+d_atheism_reformed;Comintern Chairman;;;;;;;;;;;;;x
+d_atheism_reformed_adj;Communism;;;;;;;;;;;;;x
+
+###### Atheism titles definitions;;;;;;;;;;;;;;x
+emperor_atheism;General Secretary;;;;;;;;;;;;;x
+king_atheism;Republic Secretary;;;;;;;;;;;;;x
+duke_atheism;Region Secretary;;;;;;;;;;;;;x
+count_atheism;City Secretary;;;;;;;;;;;;;x
+baron_atheism;District Secretary;;;;;;;;;;;;;x
+emperor_atheism_reformed;General Secretary;;;;;;;;;;;;;x
+king_atheism_reformed;Republic Secretary;;;;;;;;;;;;;x
+duke_atheism_reformed;Region Secretary;;;;;;;;;;;;;x
+count_atheism_reformed;City Secretary;;;;;;;;;;;;;x
+baron_atheism_reformed;District Secretary;;;;;;;;;;;;;x
+emperor_atheism_foa;Dear General Secretary;;;;;;;;;;;;;x
+king_atheism_foa;Dear Republic Secretary;;;;;;;;;;;;;x
+duke_atheism_foa;Dear Region Secretary;;;;;;;;;;;;;x
+count_atheism_foa;Dear City Secretary;;;;;;;;;;;;;x
+baron_atheism_foa;Dear District Secretary;;;;;;;;;;;;;x
+emperor_atheism_reformed_foa;Dear General Secretary;;;;;;;;;;;;;x
+king_atheism_reformed_foa;Dear Republic Secretary;;;;;;;;;;;;;x
+duke_atheism_reformed_foa;Dear Region Secretary;;;;;;;;;;;;;x
+count_atheism_reformed_foa;Dear City Secretary;;;;;;;;;;;;;x
+baron_atheism_reformed_foa;Dear District Secretary;;;;;;;;;;;;;x
+empire_of_atheism;Socialist Union of;;;;;;;;;;;;;x
+kingdom_of_atheism;Socialist Republic of;;;;;;;;;;;;;x
+duchy_of_atheism;Region of;;;;;;;;;;;;;x
+county_of_atheism;Municipality of;;;;;;;;;;;;;x
+barony_of_atheism;Agricultural District of;;;;;;;;;;;;;x
+empire_of_atheism_reformed;Socialist Union of;;;;;;;;;;;;;x
+kingdom_of_atheism_reformed;Socialist Republic of;;;;;;;;;;;;;x
+duchy_of_atheism_reformed;Region of;;;;;;;;;;;;;x
+county_of_atheism_reformed;Municipality of;;;;;;;;;;;;;x
+barony_of_atheism_reformed;Agricultural District of;;;;;;;;;;;;;x
+temple_baron_atheism;Religious Committee Secretary;;;;;;;;;;;;;x
+city_baron_atheism;Civil Committee Secretary;;;;;;;;;;;;;x
+temple_baron_atheism_reformed;Religious Committee Secretary;;;;;;;;;;;;;x
+city_baron_atheism_reformed;Civil Committee Secretary;;;;;;;;;;;;;x
+temple_baron_atheism_foa;Dear Religious Committee Secretary;;;;;;;;;;;;;x
+city_baron_atheism_foa;Dear Civil Committee Secretary;;;;;;;;;;;;;x
+temple_baron_atheism_reformed_foa;Dear Religious Committee Secretary;;;;;;;;;;;;;x
+city_baron_atheism_reformed_foa;Dear Civil Committee Secretary;;;;;;;;;;;;;x
+temple_barony_of_atheism;Cultural District of;;;;;;;;;;;;;x
+city_barony_of_atheism;Commercial District of;;;;;;;;;;;;;x
+temple_barony_of_atheism_reformed;Cultural District of;;;;;;;;;;;;;x
+city_barony_of_atheism_reformed;Commercial District of;;;;;;;;;;;;;x
+
+temple_baron_atheism_revised;Priest;;;;;;;;;;;;;x

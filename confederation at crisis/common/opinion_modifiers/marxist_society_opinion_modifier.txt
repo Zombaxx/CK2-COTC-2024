@@ -1,0 +1,3 @@
+opinion_marxist_society_convert = {
+	opinion = 20
+}

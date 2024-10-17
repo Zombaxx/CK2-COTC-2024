@@ -1,0 +1,42 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+###### Atheism titles definitions;;;;;;;;;;;;;;x
+emperor_female_atheism;General Secretary;;;;;;;;;;;;;x
+king_female_atheism;Republic Secretary;;;;;;;;;;;;;x
+duke_female_atheism;Region Secretary;;;;;;;;;;;;;x
+count_female_atheism;City Secretary;;;;;;;;;;;;;x
+baron_female_atheism;District Secretary;;;;;;;;;;;;;x
+emperor_female_atheism_reformed;General Secretary;;;;;;;;;;;;;x
+king_female_atheism_reformed;Republic Secretary;;;;;;;;;;;;;x
+duke_female_atheism_reformed;Region Secretary;;;;;;;;;;;;;x
+count_female_atheism_reformed;City Secretary;;;;;;;;;;;;;x
+baron_female_atheism_reformed;District Secretary;;;;;;;;;;;;;x
+temple_baron_female_atheism;Religious Committee Secretary;;;;;;;;;;;;;x
+city_baron_female_atheism;Civil Committee Secretary;;;;;;;;;;;;;x
+temple_baron_female_atheism_reformed;Religious Committee Secretary;;;;;;;;;;;;;x
+city_baron_female_atheism_reformed;Civil Committee Secretary;;;;;;;;;;;;;x
+
+temple_empire_of_atheism;Socialist Union of;;;;;;;;;;;;;x
+temple_kingdom_of_atheism;Socialist Republic of;;;;;;;;;;;;;x
+temple_duchy_of_atheism;Region of;;;;;;;;;;;;;x
+temple_county_of_atheism;Municipality of;;;;;;;;;;;;;x
+temple_empire_of_atheism_reformed;Socialist Union of;;;;;;;;;;;;;x
+temple_kingdom_of_atheism_reformed;Socialist Republic of;;;;;;;;;;;;;x
+temple_duchy_of_atheism_reformed;Region of;;;;;;;;;;;;;x
+temple_county_of_atheism_reformed;Municipality of;;;;;;;;;;;;;x
+
+temple_count_atheism;Municipal Religious Secretary;;;;;;;;;;;;;x
+temple_count_female_atheism;Municipal Religious Secretary;;;;;;;;;;;;;x
+temple_count_atheism_reformed;Municipal Religious Secretary;;;;;;;;;;;;;x
+temple_count_female_atheism_reformed;Municipal Religious Secretary;;;;;;;;;;;;;x
+temple_duke_atheism;Regional Religious Secretary;;;;;;;;;;;;;x
+temple_duke_female_atheism;Regional Religious Secretary;;;;;;;;;;;;;x
+temple_duke_atheism_reformed;Regional Religious Secretary;;;;;;;;;;;;;x
+temple_duke_female_atheism_reformed;Regional Religious Secretary;;;;;;;;;;;;;x
+temple_king_atheism;State Religious Secretary;;;;;;;;;;;;;x
+temple_king_female_atheism;State Religious Secretary;;;;;;;;;;;;;x
+temple_king_atheism_reformed;State Religious Secretary;;;;;;;;;;;;;x
+temple_king_female_atheism_reformed;State Religious Secretary;;;;;;;;;;;;;x
+temple_emperor_atheism;Federal Religious Secretary;;;;;;;;;;;;;x
+temple_emperor_female_atheism;Federal Religious Secretary;;;;;;;;;;;;;x
+temple_emperor_atheism_reformed;Federal Religious Secretary;;;;;;;;;;;;;x
+temple_emperor_female_atheism_reformed;Federal Religious Secretary;;;;;;;;;;;;;x

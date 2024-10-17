@@ -1,0 +1,243 @@
+political_terran_group = {
+	
+	
+	atheism_reformed = {
+		graphical_culture = westerngfx
+		has_coa_on_barony_only = yes
+
+		alternate_start = { always = no }
+		
+
+		ai_convert_same_group = 2 # always try to convert
+		ai_convert_other_group = 2 # always try to convert
+
+		#secret_cult = the_atheists #disabled in live version
+
+		icon = 27
+		heresy_icon = 28
+		color = { 0.6 0.6 0.6 }
+
+		
+		crusade_name = CRUSADE
+		use_new_crusade = yes
+		crusade_cb = atheism_great_crusade
+		scripture_name = GK_SCRIPTURE
+		priest_title = GK_PRIEST_TITLE
+		
+		high_god_name = GK_GOD
+		god_names = {
+			GK_REASON GK_HUMANITY
+		}
+		evil_god_names = {
+			GK_REASON GK_HUMANITY
+		}
+		piety_name = GK_REASON
+			
+		autocephaly = no
+		can_excommunicate = no
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		can_retire_to_monastery = no
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
+		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		bs_marriage = yes
+		pc_marriage = yes
+		max_wives = 1
+		max_consorts = 5
+		women_can_take_consorts = yes
+		short_reign_opinion_year_mult = 1
+		peace_prestige_loss = no
+		raised_vassal_opinion_loss = yes
+		has_heir_designation = yes
+
+
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+		
+		aggression = 2.0 # AI aggression factor
+		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
+
+		intermarry = atheism
+		intermarry = atheism_revised
+		intermarry = political_group
+		intermarry = political_terran_group
+		#intermarry = religious_group
+		#intermarry = religious_terran_group
+		#intermarry = transhumanist_group
+		intermarry = outlaw_group
+		
+		character_modifier = { 
+			learning = 1
+			stewardship = -1
+			same_religion_opinion = 5
+		}
+		
+		dislike_tribal_organization = no
+
+		allow_in_ruler_designer = no
+	}
+
+	
+	atheism = {
+		graphical_culture = westerngfx
+		has_coa_on_barony_only = yes
+
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		ai_convert_same_group = 2 # always try to convert
+		ai_convert_other_group = 2 # always try to convert
+
+		#secret_cult = the_atheists #disabled in live version
+
+		icon = 27
+		heresy_icon = 28
+		color = { 0.6 0.6 0.6 }
+
+
+		crusade_name = CRUSADE
+		use_new_crusade = yes
+		crusade_cb = atheism_great_crusade
+		scripture_name = GK_SCRIPTURE
+		priest_title = GK_PRIEST_TITLE
+		
+		high_god_name = GK_GOD
+		god_names = {
+			GK_REASON GK_HUMANITY
+		}
+		evil_god_names = {
+			GK_REASON GK_HUMANITY
+		}
+		piety_name = GK_REASON
+			
+		autocephaly = no
+		can_excommunicate = no
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = no
+		can_retire_to_monastery = no
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
+		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		bs_marriage = yes
+		pc_marriage = yes
+		max_wives = 1
+		max_consorts = 5
+		women_can_take_consorts = yes
+		short_reign_opinion_year_mult = 1
+		peace_prestige_loss = no
+		raised_vassal_opinion_loss = yes
+		has_heir_designation = yes
+
+
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+
+		reformed = atheism_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
+
+		intermarry = atheism_reformed
+		intermarry = atheism_revised
+		
+		character_modifier = { 
+			learning = 1
+			stewardship = -1
+			same_religion_opinion = 5
+		}
+		
+		dislike_tribal_organization = no
+	}
+
+	
+
+	atheism_revised = {
+		graphical_culture = westerngfx
+		has_coa_on_barony_only = yes
+
+		alternate_start = { always = no }
+		
+
+		ai_convert_same_group = 2 # always try to convert
+		ai_convert_other_group = 2 # always try to convert
+
+		#secret_cult = the_atheists #disabled in live version
+
+		icon = 27
+		heresy_icon = 28
+		color = { 0.6 0.6 0.6 }
+		parent = atheism_reformed
+
+		
+		#crusade_name = CRUSADE
+		#use_new_crusade = yes
+		#crusade_cb = atheism_great_crusade
+		scripture_name = GK_SCRIPTURE
+		priest_title = GK_PRIEST_TITLE
+		
+		high_god_name = GK_GOD
+		god_names = {
+			GK_REASON GK_HUMANITY
+		}
+		evil_god_names = {
+			GK_REASON GK_HUMANITY
+		}
+		piety_name = GK_REASON
+			
+		autocephaly = no
+		can_excommunicate = no
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		#can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		can_retire_to_monastery = no
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
+		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		bs_marriage = yes
+		pc_marriage = yes
+		max_wives = 1
+		max_consorts = 5
+		women_can_take_consorts = yes
+		short_reign_opinion_year_mult = 1
+		peace_prestige_loss = no
+		raised_vassal_opinion_loss = yes
+		has_heir_designation = yes
+
+
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
+		
+		aggression = 1.0 # AI aggression factor
+		peace_piety_gain = 2.0 # Gains 1 piety each month while at peace
+
+		intermarry = atheism
+		intermarry = atheism_reformed
+		
+		character_modifier = { 
+			stewardship = 1
+			intrigue = -1
+			same_religion_opinion = 10
+			infidel_opinion = -10
+		}
+		
+		dislike_tribal_organization = no
+
+		allow_in_ruler_designer = no
+	}
+
+}

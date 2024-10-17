@@ -1,0 +1,40 @@
+
+atheism_isconvertablebyliege_trigger = {
+	# SCOPE: character
+	NOT = {
+		OR = {
+			religion = atheism
+			religion = atheism_reformed
+			controls_religion = yes
+			trait = zealous
+			mercenary = yes
+		}
+	}
+	OR = {
+		trait = cynical
+		opinion = { who = liege value = 26 }
+		NOT = { is_landed = yes }
+	}
+}
+
+
+atheism_istopthreethreat_trigger = {
+	# SCOPE: character
+	among_most_powerful_vassals = 3
+	trait = zealous
+}
+
+atheism_canusepdd_trigger = {
+	#controls_religion = no
+	OR = {
+		religion = atheism
+		religion = atheism_reformed
+	}	
+	custom_tooltip = {
+		text = atheism_tooltip_notpretender
+		hidden_tooltip = {
+			NOT = { primary_title = { has_title_flag = pretender_chinese_empire } }
+		}
+	}
+	#is_patrician = no
+}

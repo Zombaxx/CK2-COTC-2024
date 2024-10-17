@@ -1,0 +1,34 @@
+# Pagan heads of religion
+
+
+d_atheism_reformed = {
+	color={ 122 165 70 }
+	color2={ 220 220 0 }
+	
+	capital = 693 # Baghdad
+	
+	title = "ATHEISM_REFORMED_HEAD"
+	title_female = "ATHEISM_REFORMED_HEAD"
+	foa = "ATHEISM_REFORMED_HEAD_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	allow = {
+		religion = atheism_reformed
+		num_of_holy_sites = 1
+		piety = 1000
+	}
+	
+	# Controls a religion
+	controls_religion = atheism_reformed
+	
+	religion = atheism_reformed
+	dignity = 100
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+

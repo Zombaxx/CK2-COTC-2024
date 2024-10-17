@@ -1,0 +1,32 @@
+is_marxist_society_trigger = { #trigger for members, useful if you have several similar society who all share events so you do not have to make trigger for all of them.
+	custom_tooltip = {
+		text = IS_marxist_society_TRIGGER
+		OR = {
+			society_member_of = marxist_society
+		}
+	}
+} 
+
+#call it using this:
+#	is_tutorial_society_trigger = yes 
+
+
+has_marxist_society_currency_preach_trigger = {
+	custom_tooltip = {
+		text = Preach_marxist_society_currency_TRIGGER
+		society_currency >= 1000
+	}
+}
+
+marxist_society_score_small_prestige_trigger = {
+	prestige = 500
+}
+marxist_society_score_medium_prestige_trigger = {
+	prestige = 1000
+}
+marxist_society_score_big_prestige_trigger = {
+	prestige = 2000
+}
+marxist_society_score_huge_prestige_trigger = {
+	prestige = 5000
+}
