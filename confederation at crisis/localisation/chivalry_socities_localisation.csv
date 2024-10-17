@@ -314,8 +314,7 @@ society_western_guild_rank_3_male;Pretender;;;;;;;;;;;;;x
 society_western_guild_rank_4_male;Champion;;;;;;;;;;;;;x
 #society_southern_guild
 society_southern_guild;The Sandpit;;;;;;;;;;;;;x
-society_southern_guild_desc;Travelers can sometime see massive circles dug into the dunes. One may think they are but dried oasis, but they'll only find blood soaked sand. These sandpits are the arenas in which the members of this Fighter Pilot Academies bet their lives for Glory. They will not hesitate to cut down heads for money and will provide their martial services to anyone to improve their prestige. Few can stand unfazed in front of these children of the sands.;;;;;;;;;;;;;x
-society_southern_guild_leader_desc;The Champion of the Sandpit.;;;;;;;;;;;;;x
+society_southern_guild_desc;Travelers can sometime see massive circles dug into the dunes. One may think they are but dried oasis, but they'll only find blood soaked sand. These sandpits are the arenas in which the members of this Fighter Pilot Academies bet their lives for Glory. They will not hesitate to cut down cockpits for money and will provide their martial services to anyone to improve their prestige. Few can stand unfazed in front of these children of the sands.;;;;;;;;;;;;;xsociety_southern_guild_leader_desc;The Champion of the Sandpit.;;;;;;;;;;;;;x
 society_southern_guild_rank_1_female;Novice;;;;;;;;;;;;;x
 society_southern_guild_rank_2_female;Veteran;;;;;;;;;;;;;x
 society_southern_guild_rank_3_female;Pretender;;;;;;;;;;;;;x
@@ -326,7 +325,7 @@ society_southern_guild_rank_3_male;Pretender;;;;;;;;;;;;;x
 society_southern_guild_rank_4_male;Champion;;;;;;;;;;;;;x
 #society_northern_guild
 society_northern_guild;The Ring of Honor;;;;;;;;;;;;;x
-society_northern_guild_desc;Be it for tradition or the favors of their gods, warriors have always solved their conflicts by spilling the blood of unworthy parties. Only the mightiest can ever hope to stand in the ring of honor without meeting a swift death. These brave heroes will do everything they can to improve themselves even further and make their legends the greatest by felling the strongest of foes.;;;;;;;;;;;;;x
+society_northern_guild_desc;Be it for tradition or the favors of their gods, warriors have always solved their conflicts by spilling the blood of unworthy parties. Only the mightiest can ever hope to stand in the ring of honor without meeting a swift death. These brave heroes will do everything they can to improve themselves even further and make their legends the greatest by felling the strongest of opponents.;;;;;;;;;;;;;x
 society_northern_guild_leader_desc;The Champion of the Ring of Honor.;;;;;;;;;;;;;x
 society_northern_guild_rank_1_female;Novice;;;;;;;;;;;;;x
 society_northern_guild_rank_2_female;Veteran;;;;;;;;;;;;;x
@@ -387,7 +386,7 @@ society_knights_saint_mark_rank_3_male;Prior;;;;;;;;;;;;;x
 society_knights_saint_mark_rank_4_male;Grand Master;;;;;;;;;;;;;x
 #army_lucifer
 society_army_lucifer;The Army of Lucifer;;;;;;;;;;;;;x
-society_army_lucifer_desc;An army made out of a group of fanatics, peasants, and madmen banded together. An order that has, much to the shock of Christians elsewhere in the world, taken as its patron saint none other than Lucifer the Lighbringer, greatest of the Archangels and the King of Hell. Lucifer, they believe, is no more than an agent of chaos and change, and in His name they intend to bring about a change in the world. They will drive the demons of sin from the ranks of humanity with the force of their arms.;;;;;;;;;;;;;x
+society_army_lucifer_desc;An army made out of a group of fanatics, peasants, and madmen banded together. An order that has, much to the shock of Christians elsewhere in the world, taken as its patron saint none other than Lucifer the Lighbringer, greatest of the Archangels and the King of Hell. Lucifer, they believe, is no more than an agent of chaos and change, and in His name they intend to bring about a change in the world. They will drive the demons of sin from the ranks of humanity with the force of their weapons.;;;;;;;;;;;;;x
 society_army_lucifer_leader_desc;The Grand Master of the Army of Lucifer.;;;;;;;;;;;;;x
 society_army_lucifer_rank_1_female;Adjutante;;;;;;;;;;;;;x
 society_army_lucifer_rank_2_female;Dame;;;;;;;;;;;;;x
@@ -824,7 +823,7 @@ IS_HOLYORDER_SOCIETIES_TRIGGER;Is a member of a Holy Order Society;;;;;;;;;;;;;x
 IS_FEMINIST_HOLYORDER_SOCIETIES_TRIGGER;Is a member of a Holy Order Society that allow women;;;;;;;;;;;;;x
 IS_HERETIC_HOLYORDER_SOCIETIES_TRIGGER;Is a member of a Holy Order Society that allow heretics;;;;;;;;;;;;;x
 IS_FIGHTER_SOCIETIES_TRIGGER;Is a member of a Fighter Pilot Academy Society;;;;;;;;;;;;;x
-IS_CHIVALRY_EDUCATION;Has a Martial Education or is an Accomplished Squire;;;;;;;;;;;;;x
+IS_CHIVALRY_EDUCATION;Has a Martial Education or is an Accomplished Co-Pilot;;;;;;;;;;;;;x
 is_inaccessible_tooltip;Is NOT in Hiding, in Seclusion, or out traveling\n;Ne se cache pas, ne vit pas en réclusion et n'est pas en voyage\n;Ist NICHT im Versteck oder auf Reisen\n;;NO está oculto, recluido o viajando\n;;;;;;;;;x
 is_incapable_tooltip;Is NOT in Incapable or Bedridden\n;N'est pas Incapable ou Alité.\n;Ist NICHT in Unfähig oder bettlägerig\n;;NO está en Incapable o postrado en la cama.\n;;;;;;;;;x
 #rule
@@ -887,9 +886,9 @@ chivalry_power_vote_law;Organize a Vote;;;;;;;;;;;;;x
 chivalry_power_vote_law_desc;Propose a change of Law for [Root.Society.GetName] or request a boon, success isn't guarantee.;;;;;;;;;;;;;x
 chivalry_power_vote_law_power_desc;§PIntrigue Decision§! Start a vote by spending your §Y[From.GetMaalSocietyCurrency]§!. All rank 3 members of [From.Society.GetName] will vote on your proposed change of law or boon request..;;;;;;;;;;;;;x
 chivalry_power_law_timer_tooltip;Need to wait five years between each attempts;;;;;;;;;;;;;x
-chivalry_power_squire_dummy;Name a Squire;;;;;;;;;;;;;x
-chivalry_power_squire_dummy_desc;Squire Dummy Desc;;;;;;;;;;;;;x
-chivalry_power_squire_dummy_power_desc;§BMinor Title§! Allow you to name a boy or girl, if allowed, between 6 and 16 in your court as a Squire or Lady-in-waiting. The longer they spend with the title, the more the special trait will improve, up to four times.;;;;;;;;;;;;;x
+chivalry_power_squire_dummy;Name a Co-Pilot;;;;;;;;;;;;;x
+chivalry_power_squire_dummy_desc;Co-Pilot Dummy Desc;;;;;;;;;;;;;x
+chivalry_power_squire_dummy_power_desc;§BMinor Title§! Allow you to name a boy or girl, if allowed, between 6 and 16 in your court as a Co-Pilot or Co-Pilot . The longer they spend with the title, the more the special trait will improve, up to four times.;;;;;;;;;;;;;x
 chivalry_power_arena_dummy;Set up Tournaments;;;;;;;;;;;;;x
 chivalry_power_arena_dummy_desc;Arena Dummy;;;;;;;;;;;;;x
 chivalry_power_arena_dummy_power_desc;§GHolding Decision§! Lets you right-click on your own province's holdings to set up and upgrade various Tournaments.;;;;;;;;;;;;;x
@@ -897,13 +896,13 @@ chivalry_power_arena_champ_dummy;Set up Championship;;;;;;;;;;;;;x
 chivalry_power_arena_champ_dummy_desc;Championship Dummy;;;;;;;;;;;;;x
 chivalry_power_arena_champ_dummy_power_desc;§GHolding Decision§! Lets you right-click on your own province's holdings to upgrade a rank II Tournament to a rank III Championship. There can be only one Championship per holding.;;;;;;;;;;;;;x
 chivalry_decision_pay_bounty;Pay off your Bounty;;;;;;;;;;;;;x
-chivalry_decision_pay_bounty_desc;Either spend double the amount of the bounty on your head to clear it or join a Fighter Pilot Academies to temporarily stop hunters.;;;;;;;;;;;;;x
+chivalry_decision_pay_bounty_desc;Either spend double the amount of the bounty on your cockpit to clear it or join a Fighter Pilot Academies to temporarily stop hunters.;;;;;;;;;;;;;x
 decision_mission_chivalry_helpwar;Help in the War (Mission);;;;;;;;;;;;;x
 decision_mission_chivalry_helpwar_desc;Offer to help [Root.GetFirstName] in [Root.GetHerHis] war.;;;;;;;;;;;;;x
 decision_mission_chivalry_training;Start Training (Mission);;;;;;;;;;;;;x
 decision_mission_chivalry_training_desc;Offer to start [Root.GetHerHis] training sessions.;;;;;;;;;;;;;x
 decision_mission_chivalry_hunt;Hunt your Target (Mission);;;;;;;;;;;;;x
-decision_mission_chivalry_hunt_desc;Challenge your marked foe to a death match.;;;;;;;;;;;;;x
+decision_mission_chivalry_hunt_desc;Challenge your marked opponent to a death match.;;;;;;;;;;;;;x
 decision_chivalry_set_bounty;Place a Bounty;;;;;;;;;;;;;x
 decision_chivalry_set_bounty_desc;Mark this character as a target for bounty hunters. [Root.GetSheHe] will be targeted by members of local Fighter Pilot Academies, if there is any, who will hunt [Root.GetHerHim] until death.;;;;;;;;;;;;;x
 decision_chivalry_remove_bounty;Clear Bounty;;;;;;;;;;;;;x
@@ -966,7 +965,7 @@ chivalry_merc_bribe_liege_desc;Mercenaries don't have the protection of the feud
 opinion_chivalry_merc_bribe;Bribed;;;;;;;;;;;;;x
 opinion_chivalry_merc_loyal;Sworn;;;;;;;;;;;;;x
 chivalry_decision_merge_trophy;Combine your Trophies;;;;;;;;;;;;;x
-chivalry_decision_merge_trophy_desc;Allows you to transform 10 trophies, broken weapons or heads, into a single one that is much less likely to vanish on inheritance.;;;;;;;;;;;;;x
+chivalry_decision_merge_trophy_desc;Allows you to transform 10 trophies, broken weapons or cockpits, into a single one that is much less likely to vanish on inheritance.;;;;;;;;;;;;;x
 chivalry_decision_merge_trophy_tooltip;Has 10 trophies of the same kind;;;;;;;;;;;;;x
 chivalry_power_holy_governement_break;Dismantle your Holy Order or Mercenary band;;;;;;;;;;;;;x
 chivalry_power_holy_governement_break_desc;Destroy the Holy Order/Mercenary title and abandon the Holy Order/Mercenary government type.\nYou have a chance to change your mind.;;;;;;;;;;;;;x
@@ -989,13 +988,13 @@ decision_chivalry_holy_society_one_desc;Give this Holy Order a society.\nChoose 
 decision_chivalry_holy_society_one_feminist;*Create a Society - Women Allowed*;;;;;;;;;;;;;x
 decision_chivalry_holy_society_one_feminist_desc;Give this Holy Order a society that will allow women to join from the start.\nChoose well, only one society can be created.;;;;;;;;;;;;;x
 #minor title
-title_chivalry_squire;Squire;;;;;;;;;;;;;x
-title_chivalry_squire_clocal;Squire;;;;;;;;;;;;;x
-# title_chivalry_squire_desc;Make a child your Squire, he'll learn the basics of combat and warfare at the cost of his general education in preparation for his future in martial society\nYou cannot have both a Squire and a Lady-in-waiting if both are allowed.;;;;;;;;;;;;;x
-title_chivalry_squire_desc;Make a child your Squire. He or she, if women are allowed, will learn the basics of combat and warfare at the cost of the general education in preparation for a future in a martial society.;;;;;;;;;;;;;x
-title_chivalry_ladywaiting;Lady-in-waiting;;;;;;;;;;;;;x
-title_chivalry_ladywaiting_clocal;Lady-in-waiting;;;;;;;;;;;;;x
-title_chivalry_ladywaiting_desc;Make a child your Lady-in-waiting, she'll learn the basics of combat and warfare at the cost of her general education in preparation for her future in martial society\nYou cannot have both a Squire and a Lady-in-waiting if both are allowed.;;;;;;;;;;;;;x
+title_chivalry_squire;Co-Pilot;;;;;;;;;;;;;x
+title_chivalry_squire_clocal;Co-Pilot;;;;;;;;;;;;;x
+# title_chivalry_squire_desc;Make a child your Co-Pilot, he'll learn the basics of combat and warfare at the cost of his general education in preparation for his future in martial society\nYou cannot have both a Co-Pilot and a Co-Pilot  if both are allowed.;;;;;;;;;;;;;x
+title_chivalry_squire_desc;Make a child your Co-Pilot. He or she, if women are allowed, will learn the basics of combat and warfare at the cost of the general education in preparation for a future in a martial society.;;;;;;;;;;;;;x
+title_chivalry_ladywaiting;Co-Pilot ;;;;;;;;;;;;;x
+title_chivalry_ladywaiting_clocal;Co-Pilot ;;;;;;;;;;;;;x
+title_chivalry_ladywaiting_desc;Make a child your Co-Pilot , she'll learn the basics of combat and warfare at the cost of her general education in preparation for her future in martial society\nYou cannot have both a Co-Pilot and a Co-Pilot  if both are allowed.;;;;;;;;;;;;;x
 chivalry_was_squire_tooltip;Haven't lost the title recently;;;;;;;;;;;;;x
 #opinion
 opinion_chivalry_helped_war;Helped in my War;;;;;;;;;;;;;x
@@ -1096,8 +1095,8 @@ chivalry_squire_three;Shield Bearer;;;;;;;;;;;;;x
 chivalry_squire_three_desc;Has spent most of its youth in the service of a lord and has a better knowledge of warfare and combat. This negatively impacted the regular curriculum.;;;;;;;;;;;;;x
 chivalry_squire_four;Accomplished [From.GetSquire];;;;;;;;;;;;;x
 chivalry_squire_four_desc;Has spent all of [From.GetHerHis] childhood spare time learning about warfare, making [From.GetHerHim] very proficient in the subject at the cost of [From.GetHerHis] general education.\n§YAllow [From.GetHerHim] to bypass some requirements to join a Holy Order or Fighter Pilot Academy.§!;;;;;;;;;;;;;x
-# chivalry_lady_four;Accomplished Lady-in-waiting;;;;;;;;;;;;;x
-# chivalry_lady_four_desc;The Lady-in-waiting has spent all of her spare time learning about warfare, making her very proficient in the subject at the cost of her general education.\n§YAllow her to bypass some requirements to join a Holy Order or Fighter Pilot Academy.§!;;;;;;;;;;;;;x
+# chivalry_lady_four;Accomplished Co-Pilot ;;;;;;;;;;;;;x
+# chivalry_lady_four_desc;The Co-Pilot  has spent all of her spare time learning about warfare, making her very proficient in the subject at the cost of her general education.\n§YAllow her to bypass some requirements to join a Holy Order or Fighter Pilot Academy.§!;;;;;;;;;;;;;x
 chivalry_fight_aggressive_leader;Enraged Leader;;;;;;;;;;;;;x
 chivalry_fight_aggressive_leader_desc;This character will recklessly charge the enemy army, motivating [From.GetHerHis] army behind to do the same.;;;;;;;;;;;;;x
 chivalry_holy_aggressive_leader;Fanatical Leader;;;;;;;;;;;;;x
@@ -1173,15 +1172,15 @@ chivalry_warrior_pilgrim_desc;This character is on a dangerous journey to improv
 chivalry_commander;Live for battle;;;;;;;;;;;;;x
 chivalry_commander_desc;This character has no interest in politic or love, [From.GetSheHe] lives only to fight and improve [From.GetHerHis] skills.;;;;;;;;;;;;;x
 #artifact
-chivalry_item_skull;[From.OriginalOwner.GetFirstName]'s Head;;;;;;;;;;;;;x
-chivalry_item_skull_desc;This is the head of [From.OriginalOwner.GetTitledName], slain and beheaded in battle. This skull is now but a trophy that only the most barbaric warriors would carry.;;;;;;;;;;;;;x
+chivalry_item_skull;[From.OriginalOwner.GetFirstName]'s cockpit;;;;;;;;;;;;;x
+chivalry_item_skull_desc;This is the cockpit of [From.OriginalOwner.GetTitledName], slain and beheaded in battle. This skull is now but a trophy that only the most barbaric warriors would carry.;;;;;;;;;;;;;x
 chivalry_tribal_nomad_tooltip;Is nomadic or tribal;;;;;;;;;;;;;x
 chivalry_item_broke;[From.OriginalOwner.GetFirstName]'s Broken Weapon;;;;;;;;;;;;;x
 chivalry_item_broke_desc;This is what remains of [From.OriginalOwner.GetTitledName]'s weapon which was broken in [From.OriginalOwner.GetHerHis] last fight. Useless on its own, but people of culture know that it holds some significance as a trophy.;;;;;;;;;;;;;x
 chivalry_item_skull_stack;Mountain of Skulls;;;;;;;;;;;;;x
 chivalry_item_skull_stack_desc;This grim display is the achievement of [From.OriginalOwner.GetTitledName]'s long and bloody life. Such abomination can only have value in the room of a brutal warrior.;;;;;;;;;;;;;x
 chivalry_item_broke_stack;Coffer of Broken Weapons;;;;;;;;;;;;;x
-chivalry_item_broke_stack_desc;This chest contains the weapons from the defeated foes of [From.OriginalOwner.GetTitledName]. While not interesting for the common folk, in the right circles it is a source of pride.;;;;;;;;;;;;;x
+chivalry_item_broke_stack_desc;This chest contains the weapons from the defeated opponents of [From.OriginalOwner.GetTitledName]. While not interesting for the common folk, in the right circles it is a source of pride.;;;;;;;;;;;;;x
 #events
 EVTDESC_CHI_102_holy;Greetings [Root.GetTitledFirstName],\n\nI am the [From.GetSocietyRank] of [From.Society.GetName]. I have received your application to join our order and have decided to accept you as a non-ordained member. Due to your situation, you will not be bound by an eternal oath to [From.Religion.GetHighGodName]. For all intend and purpose you will have similar rights and powers compared to a member of the clergy.;;;;;;;;;;;;;x
 EVTDESC_CHI_102_holy_custom;Greetings [Root.GetTitledFirstName],\n\nI am the [From.GetSocietyRank] of the [chivalry_holy_society_one_name.GetName]. I have received your application to join our order and have decided to accept you as a non-ordained member. Due to your situation, you will not be bound by an oath to [From.Religion.GetHighGodName]. For all intend and purpose you will have similar rights and powers compared to a member of the clergy.;;;;;;;;;;;;;x
@@ -1190,7 +1189,7 @@ EVTOPTA_CHI_102;For [From.Religion.GetHighGodName]!;;;;;;;;;;;;;x
 EVTOPTB_CHI_102;For Glory!;;;;;;;;;;;;;x
 EVTOPTC_CHI_102;I am not so sure anymore.;;;;;;;;;;;;;x
 EVTOPTD_CHI_102;I shall still make the oath!;;;;;;;;;;;;;x
-chivalry_nazirite_tooltip;I shall separate myself from wine and similar drink.\nNo razor shall come upon my head.\nI shall not go near a dead body.;;;;;;;;;;;;;x
+chivalry_nazirite_tooltip;I shall separate myself from wine and similar drink.\nNo razor shall come upon my cockpit.\nI shall not go near a dead body.;;;;;;;;;;;;;x
 EVTDESC_CHI_10023_HOLYORDER;To [Root.GetTitledFirstName],\n\nIt has come to our attention that you no longer adhere to the true faith. While we hope you will realize your grave error and return to [From.Religion.GetHighGodName], we cannot be lenient in our battles against the infidels.\n\nSigned, [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
 EVTDESC_CHI_10023_FIGHTERSGUILD;To [Root.GetFirstName],\n\nIt has come to our attention that you do have the same definition of honor as the rest of your now former peers. We have faith that you will be able find dogs with values close to yours just fine.\n\nSigned, [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
 EVTOPTA_CHI_10023;Seems like I made some enemies today.;;;;;;;;;;;;;x
@@ -1429,11 +1428,11 @@ EVTOPTC_CHI_1951;*Skip the Duel Engine*;;;;;;;;;;;;;x
 #
 mission_chivalry_hunt_bounty;Bounty Hunter;;;;;;;;;;;;;x 
 mission_chivalry_hunt_bounty_fallback;Bounty Hunter;;;;;;;;;;;;;x
-mission_chivalry_hunt_bounty_desc;There will always be lords too afraid to get their hands dirty, craven snakes with a lot of ducats and no honor. This is where we come in.\nOne of such coward paid a good sum of money for this head and we shall deliver it.;;;;;;;;;;;;;x
+mission_chivalry_hunt_bounty_desc;There will always be lords too afraid to get their hands dirty, craven snakes with a lot of ducats and no honor. This is where we come in.\nOne of such coward paid a good sum of money for this cockpit and we shall deliver it.;;;;;;;;;;;;;x
 mission_chivalry_hunt_bounty_tooltip;Start the §YHunt Target§! event chain in the target's decision list.;;;;;;;;;;;;;x
 #
 EVTDESC_CHI_201;To [Root.GetFirstName].\nI have the perfect opportunity for someone like you! I am such a busy person, my skills are so requested from all corners of the worlds that I have no time for minors tasks. This is why I'll let you hunt this [chivalry_hunt_target.GetManWoman], this isn't because I am scared, mind you.\nDo not let the reaper get [chivalry_hunt_target.GetTitledFirstName] before you,\n[From.GetFirstName];;;;;;;;;;;;;x 
-EVTDESC_CHI_202;A lord's life is not always easy. Despite all of your hard works there is always some people that are dissatisfied or that feel like they would make a better ruler than you. One of such person got impatient and untied his purse, because a bounty hunter is here for your head!;;;;;;;;;;;;;x
+EVTDESC_CHI_202;A lord's life is not always easy. Despite all of your hard works there is always some people that are dissatisfied or that feel like they would make a better ruler than you. One of such person got impatient and untied his purse, because a bounty hunter is here for your cockpit!;;;;;;;;;;;;;x
 EVTOPTA_CHI_202;Nothing a little ducat won't soothe.;;;;;;;;;;;;;x 
 # chivalry_tooltip_hunt_bribe;Try to bribe the bounty hunter.;;;;;;;;;;;;;x 
 EVTOPTB_CHI_202;I must flee!;;;;;;;;;;;;;x 
@@ -1444,7 +1443,7 @@ EVTDESC_CHI_203;The bounty is trying to avoid [From.GetHerHis] fate by offering 
 EVTOPTA_CHI_203;Yes, yes it could!;;;;;;;;;;;;;x 
 EVTOPTB_CHI_203;I will only accept payment in blood!;;;;;;;;;;;;;x
 EVTOPTC_CHI_203;*Skip the Duel Engine*;;;;;;;;;;;;;x 
-EVTDESC_CHI_2031;The dog has accepted your noble present and left without making you anymore trouble. [From.GetSheHeCap] will most likely try to spin a grand story of epic struggle to explain why you are still alive. You should be left alone for a time but your head still has a price on it.;;;;;;;;;;;;;x 
+EVTDESC_CHI_2031;The dog has accepted your noble present and left without making you anymore trouble. [From.GetSheHeCap] will most likely try to spin a grand story of epic struggle to explain why you are still alive. You should be left alone for a time but your cockpit still has a price on it.;;;;;;;;;;;;;x 
 EVTOPTA_CHI_2031;Throwing ducats at problems do solve them.;;;;;;;;;;;;;x 
 EVTDESC_CHI_204;There was an incident in your court today. A bounty hunter from [FromFrom.Society.GetName] came for [From.GetFirstName]. The courtier's life is apparently a problem for someone and they wasted a lot of ducats to end it as [From.GetSheHe] was able to flee successfully.;;;;;;;;;;;;;x 
 EVTOPTA_CHI_204;It can't be helped.;;;;;;;;;;;;;x 
@@ -1458,7 +1457,7 @@ EVTOPTB_CHI_205;*Skip the Duel Engine*;;;;;;;;;;;;;x
 EVTDESC_CHI_2051;This beast do not know what is good for [From.GetHerHim]. Instead of the easy way out with pockets full of ducats, [From.GetSheHe] stands [From.GetHerHis] ground and choose the path of pain.\n\nA duel is inevitable.;;;;;;;;;;;;;x 
 EVTOPTA_CHI_2051;[From.GetSheHeCap] will die like the dog [From.GetSheHe] is!;;;;;;;;;;;;;x 
 EVTOPTB_CHI_2051;*Skip the Duel Engine*;;;;;;;;;;;;;x
-EVTDESC_CHI_2072;It appears that the target of your bounty, [From.GetTitledFirstName], has cleared the bounty on [From.GetHerHis] head with a large sum of money.;;;;;;;;;;;;;x 
+EVTDESC_CHI_2072;It appears that the target of your bounty, [From.GetTitledFirstName], has cleared the bounty on [From.GetHerHis] cockpit with a large sum of money.;;;;;;;;;;;;;x 
 EVTOPTC_CHI_2072;This game can be played both ways.;;;;;;;;;;;;;x 
 EVTDESC_CHI_208;The target of your bounty, [From.GetTitledFirstName], has drawn [From.GetHerHis] last breath as the bounty hunter announce his victory and pocket the ducats you had set aside previously.;;;;;;;;;;;;;x
 EVTOPTA_CHI_208;Excellent.;;;;;;;;;;;;;x
@@ -1487,19 +1486,19 @@ EVTOPTE_CHI_300;OK;;;;;;;;;;;;;x
 EVTDESC_CHI_301;§Y[From.GetFirstName]§! has improved as a §Y[From.GetSquire]§!!;;;;;;;;;;;;;x
 #
 EVTDESC_CHI_310;You arrange a meeting with some of the events organizers in order to challenge a member and increase your standing in [Root.Society.GetName].\nThese duels do not, usually, lead to death but they are nonetheless dangerous. A fighter with enough Prestige and [Root.GetMaalSocietyCurrency] to [Root.GetHerHis] name could try to leverage it to avoid the duel.;;;;;;;;;;;;;x
-EVTOPTA_CHI_310;Ask for a duel.;;;;;;;;;;;;;x
+EVTOPTA_CHI_310;Ask for a dogfight.;;;;;;;;;;;;;x
 EVTOPTB_CHI_310;Use your influence to pass to the next rank.;;;;;;;;;;;;;x
 EVTOPTC_CHI_310;Abort the meeting.;;;;;;;;;;;;;x
 EVTDESC_CHI_3101;A Challenger has appeared!\n\nThe [From.GetSocietyRank] [From.GetFirstName] has issued an official duel request approved by the tournaments organizers. Losing or refusing the duel would both end in losing your rank within the [Root.Society.GetName].;;;;;;;;;;;;;x
-EVTOPTA_CHI_3101;Bring me my gun!;;;;;;;;;;;;;x
+EVTOPTA_CHI_3101;Takeoff!;;;;;;;;;;;;;x
 EVTOPTB_CHI_3101;I suddenly do not feel so well...;;;;;;;;;;;;;x
 chivalry_rank_down_tooltip;You will rank down to [From.GetSocietyRank].;;;;;;;;;;;;;x
 EVTDESC_CHI_3102_1_2;[From.GetFirstName] has accepted the duel, it is not like [From.GetSheHe] has any choices to begin with. Should you be victorious you will take his rank in [Root.Society.GetName].\nBut if you find defeat you will taste shame and humiliation.;;;;;;;;;;;;;x
 EVTDESC_CHI_3102_3;Greatness is at hand and so is the title of Champion. This fight will not be easy as a Champion superior experience make them stronger than they appear. Defeats at the hand of a champion is harsher than usual as all eyes are on you;;;;;;;;;;;;;x
 EVTOPTA_CHI_3102;It is time!;;;;;;;;;;;;;x
 chivalry_duel_tutorial;Duels are won when a side reach 5 points or by killing your opponent.\nHitting or avoiding being hit give you §Yone point§!.\nCritically hitting or being critically missed give §Ytwo points§!.\nAfter a Critical, you can do an opportunity attack that §Ymay give one point§! to §Yeither opponent§!.;;;;;;;;;;;;;x
-chivalry_duel_type_score_from;Your score: [Root.chivalry_duel.GetValue] vs [From.chivalry_duel.GetValue] for your foe;;;;;;;;;;;;;x
-chivalry_duel_type_score_fromfrom;Your score: [Root.chivalry_duel.GetValue] vs [FromFrom.chivalry_duel.GetValue] for your foe;;;;;;;;;;;;;x
+chivalry_duel_type_score_from;Your score: [Root.chivalry_duel.GetValue] vs [From.chivalry_duel.GetValue] for your opponent;;;;;;;;;;;;;x
+chivalry_duel_type_score_fromfrom;Your score: [Root.chivalry_duel.GetValue] vs [FromFrom.chivalry_duel.GetValue] for your opponent;;;;;;;;;;;;;x
 chivalry_duel_type_wound;To First Blood;;;;;;;;;;;;;x
 chivalry_duel_type_death;To the Death;;;;;;;;;;;;;x
 EVTDESC_CHI_311_BASE;[Root.DuelTypeFrom]\n\nYour enemy is in front of you, looking directly at you and getting ready to receive your attack.;;;;;;;;;;;;;x
@@ -1516,49 +1515,49 @@ EVTOPTH_CHI_311;Let out a Battle Cry.;;;;;;;;;;;;;x
 chivalry_duel_scream_tooltip;Let your enemy attack. Raise all the odds of critical and lower the odds of normal results.;;;;;;;;;;;;;x
 EVTOPTK_CHI_311;Close your eyes.;;;;;;;;;;;;;x
 chivalry_duel_blind_tooltip;Let your enemy attack. Randomly affect all odds.;;;;;;;;;;;;;x
-EVTOPTC_CHI_311;Swing your weapon.;;;;;;;;;;;;;x
-chivalry_duel_swing_tooltip;Normal Hit: §G+++§!\nNormal Miss: §R---§!\nCritical Hit: §G++§!\nCritical Miss: §R--§!\nThis attack is more likely to hit the arms and legs.;;;;;;;;;;;;x
-EVTOPTD_CHI_311;Do a lunge attack.;;;;;;;;;;;;;x
-chivalry_duel_lunge_tooltip;Normal Hit: §G++§!\nNormal Miss: §R--§!\nCritical Hit: §G++§!\nCritical Miss: §R--§!\nThis attack is more likely to hit the arms and torso.;;;;;;;;;;;;;x
-EVTOPTE_CHI_311;Flail wildly.;;;;;;;;;;;;;x
-chivalry_duel_flail_tooltip;Normal Hit: §G+++§!\nNormal Miss: §R---§!\nCritical Hit: §G+§!\nCritical Miss: §R-§!\nThis attack is more likely to hit the arms and legs.;;;;;;;;;;;;;x
+EVTOPTC_CHI_311;Fire your missiles.;;;;;;;;;;;;;x
+chivalry_duel_swing_tooltip;Normal Hit: §G+++§!\nNormal Miss: §R---§!\nCritical Hit: §G++§!\nCritical Miss: §R--§!\nThis attack is more likely to hit the weapons and engine.;;;;;;;;;;;;x
+EVTOPTD_CHI_311;Do an offensive maneuver.;;;;;;;;;;;;;x
+chivalry_duel_lunge_tooltip;Normal Hit: §G++§!\nNormal Miss: §R--§!\nCritical Hit: §G++§!\nCritical Miss: §R--§!\nThis attack is more likely to hit the weapons and fuselage.;;;;;;;;;;;;;x
+EVTOPTE_CHI_311;Spin wildly.;;;;;;;;;;;;;x
+chivalry_duel_flail_tooltip;Normal Hit: §G+++§!\nNormal Miss: §R---§!\nCritical Hit: §G+§!\nCritical Miss: §R-§!\nThis attack is more likely to hit the weapons and engine.;;;;;;;;;;;;;x
 EVTOPTF_CHI_311;Target the center.;;;;;;;;;;;;;x
-chivalry_duel_aim_tooltip;Normal Hit: §G+++§!\nNormal Miss: §R-§!\nCritical Hit: §G+§!\nCritical Miss: §R--§!\nThis attack is more likely to hit the head and torso.;;;;;;;;;;;;;x
-EVTOPTG_CHI_311;Do a jump attack.;;;;;;;;;;;;;x
-chivalry_duel_jump_tooltip;Normal Hit: §G+§!\nNormal Miss: §R--§!\nCritical Hit: §G+++§!\nCritical Miss: §R--§!\nThis attack is more likely to hit the head and torso.;;;;;;;;;;;;;x
-EVTOPTI_CHI_311;Attempt a feint.;;;;;;;;;;;;;x
-chivalry_duel_back_tooltip;Normal Hit: §G+++§!\nNormal Miss: §R--§!\nCritical Hit: §G+§!\nCritical Miss: §R--§!\nThis attack is more likely to hit the torso and legs.;;;;;;;;;;;;;x
-EVTOPTJ_CHI_311;Aim for the head.;;;;;;;;;;;;;x
-chivalry_duel_head_tooltip;Normal Hit: §G+§!\nNormal Miss: §R-§!\nCritical Hit: §G+++§!\nCritical Miss: §R---§!\nThis attack is more likely to hit the head.;;;;;;;;;;;;;x
-EVTOPTL_CHI_311;Timidly strike.;;;;;;;;;;;;;x
-chivalry_duel_timid_tooltip;Normal Hit: §G++§!\nNormal Miss: §R---§!\nCritical Hit: §G++§!\nCritical Miss: §R-§!\nThis attack is more likely to hit the arms.;;;;;;;;;;;;;x
+chivalry_duel_aim_tooltip;Normal Hit: §G+++§!\nNormal Miss: §R-§!\nCritical Hit: §G+§!\nCritical Miss: §R--§!\nThis attack is more likely to hit the cockpit and fuselage.;;;;;;;;;;;;;x
+EVTOPTG_CHI_311;Do a barrel-roll.;;;;;;;;;;;;;x
+chivalry_duel_jump_tooltip;Normal Hit: §G+§!\nNormal Miss: §R--§!\nCritical Hit: §G+++§!\nCritical Miss: §R--§!\nThis attack is more likely to hit the cockpit and fuselage.;;;;;;;;;;;;;x
+EVTOPTI_CHI_311;Attempt to get behind.;;;;;;;;;;;;;x
+chivalry_duel_back_tooltip;Normal Hit: §G+++§!\nNormal Miss: §R--§!\nCritical Hit: §G+§!\nCritical Miss: §R--§!\nThis attack is more likely to hit the fuselage and engine.;;;;;;;;;;;;;x
+EVTOPTJ_CHI_311;Aim for the cockpit.;;;;;;;;;;;;;x
+chivalry_duel_head_tooltip;Normal Hit: §G+§!\nNormal Miss: §R-§!\nCritical Hit: §G+++§!\nCritical Miss: §R---§!\nThis attack is more likely to hit the cockpit.;;;;;;;;;;;;;x
+EVTOPTL_CHI_311;Fire your lasers.;;;;;;;;;;;;;x
+chivalry_duel_timid_tooltip;Normal Hit: §G++§!\nNormal Miss: §R---§!\nCritical Hit: §G++§!\nCritical Miss: §R-§!\nThis attack is more likely to hit the weapons.;;;;;;;;;;;;;x
 EVTOPTM_CHI_311;This is going to be a long journey...;;;;;;;;;;;;;x
-EVTDESC_CHI_312;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] swings [From.GetHerHis] weapon at you!\n\nThis attack is more likely to hit the arms and legs.;;;;;;;;;;;;;x
-EVTDESC_CHI_313;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] swiftly do a lunge attack to you!\n\nThis attack is more likely to hit the arms and torso.;;;;;;;;;;;;;x
-EVTDESC_CHI_314;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] wildly flail [From.GetHerHis] weapon around while running in your direction!\n\nThis attack is more likely to hit the arms and legs.;;;;;;;;;;;;;x
-EVTDESC_CHI_315;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] does not take any chances and aim to land an easy attack!\n\nThis attack is more likely to hit the head and torso.;;;;;;;;;;;;;x
-EVTDESC_CHI_316;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] tooks one step back and then ran into a jump, aiming to slam [From.GetHerHis] weapon down on your head!\n\nThis attack is more likely to hit the head and torso.;;;;;;;;;;;;;x
-EVTDESC_CHI_317;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] was slowly taking swinging [From.GetHerHis] weapon at you before suddenly changing its trajectory!\n\nThis attack is more likely to hit the torso and legs.;;;;;;;;;;;;;x
-EVTDESC_CHI_318;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] aims to end it swiftly by targeting your head!\n\nThis attack is more likely to hit the head.;;;;;;;;;;;;;x
-EVTDESC_CHI_319;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] does a safe and timid attack in your direction!\n\nThis attack is more likely to hit the arms.;;;;;;;;;;;;;x
+EVTDESC_CHI_312;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] Fires [From.GetHerHis] weapon at you!\n\nThis attack is more likely to hit your weapons or engine.;;;;;;;;;;;;;x
+EVTDESC_CHI_313;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] swiftly dooes a offensive maneuver at you!\n\nThis attack is more likely to hit the weapons and fuselage.;;;;;;;;;;;;;x
+EVTDESC_CHI_314;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] wildly fires [From.GetHerHis] weapon while turning!\n\nThis attack is more likely to hit the weapons and engine.;;;;;;;;;;;;;x
+EVTDESC_CHI_315;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] does not take any chances and aim to land an easy attack!\n\nThis attack is more likely to hit the cockpit and fuselage.;;;;;;;;;;;;;x
+EVTDESC_CHI_316;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] performed a barrel-roll, aiming to shoot [From.GetHerHis] missiles at your cockpit!\n\nThis attack is more likely to hit the cockpit and fuselage.;;;;;;;;;;;;;x
+EVTDESC_CHI_317;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] was slowly firing [From.GetHerHis] weapons at you before suddenly changing its trajectory!\n\nThis attack is more likely to hit the fuselage and engine.;;;;;;;;;;;;;x
+EVTDESC_CHI_318;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] aims to end it swiftly by targeting your cockpit!\n\nThis attack is more likely to hit the cockpit.;;;;;;;;;;;;;x
+EVTDESC_CHI_319;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] does a safe and timid attack in your direction!\n\nThis attack is more likely to hit the weapons.;;;;;;;;;;;;;x
 EVTOPTA_CHI_31X_DODGE;Try to dodge.;;;;;;;;;;;;;x
 # chivalry_duel_dodge_tooltip;;;;;;;;;;;;;;x
 EVTOPTB_CHI_31X_COUNTER;Try to counter.;;;;;;;;;;;;;x
 # chivalry_duel_counter_tooltip;;;;;;;;;;;;;;x
-EVTOPTC_CHI_31X_PARRY;Try to parry.;;;;;;;;;;;;;x
+EVTOPTC_CHI_31X_PARRY;Try to get behind.;;;;;;;;;;;;;x
 # chivalry_duel_parry_tooltip;;;;;;;;;;;;;;x
 EVTOPTD_CHI_31X_YIELD;Admit defeat.;;;;;;;;;;;;;x
 chivalry_duel_yield_tooltip;Duels become more dangerous as they goes on, surrender before it is too late.;;;;;;;;;;;;;x
-chivalry_duel_yield_hunt;Your foe may still kill you.;;;;;;;;;;;;;x
-EVTOPTE_CHI_31X_YIELD;I... I must flee!;;;;;;;;;;;;;x
+chivalry_duel_yield_hunt;Your opponent may still kill you.;;;;;;;;;;;;;x
+EVTOPTE_CHI_31X_YIELD;I... I must surrender!;;;;;;;;;;;;;x
 EVTOPTF_CHI_31X_YIELD;Please, spare me!;;;;;;;;;;;;;x
 EVTOPTG_CHI_31X_YIELD;I underestimated [From.GetHerHim], time for a strategic retreat.;;;;;;;;;;;;;x
-EVTDESC_CHI_320_DODGE;[Root.DuelTypeFromFrom]\n\nYou timed your dodge at the last second perfectly and your foe put too much weight behind [FromFrom.GetHerHis] attack! [FromFrom.GetSheHeCap] stumbles and fall flat on [FromFrom.GetHerHis] face.;;;;;;;;;;;;;;x
-EVTDESC_CHI_320_COUNTER;[Root.DuelTypeFromFrom]\n\nLeaving yourself open until right before [FromFrom.GetHerHis] attack hit you is daring, but you succeeded in stopping the attack and chain in your own before [FromFrom.GetSheHe] has time to react!;;;;;;;;;;;;;;x
-EVTDESC_CHI_320_PARRY;[Root.DuelTypeFromFrom]\n\nYou were expecting that attack and waited for it. Your parry was so on time that your enemy's weapon is reverberating, you immediately push your foe back while [FromFrom.GetSheHe] is still trying to stop [FromFrom.GetHerHis] hand from shaking.;;;;;;;;;;;;;;x
-EVTDESC_CHI_323_DODGE;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] tried to dodge your attack but failed miserably! Your attack stunned [From.GetHerHim] and give you time to attack once more.;;;;;;;;;;;;;;x
-EVTDESC_CHI_323_COUNTER;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] tried to counter your attack but failed miserably! Your attack stunned [From.GetHerHim] and give you time to attack once more.;;;;;;;;;;;;;;x
-EVTDESC_CHI_323_PARRY;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] tried to parry your attack but failed miserably! Your attack stunned [From.GetHerHim] and give you time to attack once more.;;;;;;;;;;;;;;x
+EVTDESC_CHI_320_DODGE;[Root.DuelTypeFromFrom]\n\nYou timed your dodge at the last second perfectly and your opponent put too much force behind [FromFrom.GetHerHis] counter-maneuver! [FromFrom.GetSheHeCap] stumbles and you have [FromFrom.GetHerHis] in your sights.;;;;;;;;;;;;;;x
+EVTDESC_CHI_320_COUNTER;[Root.DuelTypeFromFrom]\n\nLeaving yourself open until right before [FromFrom.GetHerHis] attack hit you is daring, but you succeeded in your counter-maneuver before [FromFrom.GetSheHe] has time to react!;;;;;;;;;;;;;;x
+EVTDESC_CHI_320_PARRY;[Root.DuelTypeFromFrom]\n\nYou were expecting that attack and waited for it. Your barrel-roll was so on time that you now have [From.GetHerHim] in your sights, you immediately open fire while [FromFrom.GetSheHe] is still trying to stop [FromFrom.GetHerHis] hand from shaking.;;;;;;;;;;;;;;x
+EVTDESC_CHI_323_DODGE;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] tried to dodge your attack but failed miserably! Your attack disabled [From.GetHerHis] shields and gives you time to attack once more.;;;;;;;;;;;;;;x
+EVTDESC_CHI_323_COUNTER;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] tried to counter your attack but failed miserably! Your attack disabled [From.GetHerHis] shields and gives you time to attack once more.;;;;;;;;;;;;;;x
+EVTDESC_CHI_323_PARRY;[Root.DuelTypeFrom]\n\n[From.GetSheHeCap] tried to barrel-roll your attack but failed miserably! Your attack disabled [From.GetHerHis] shields and gives you time to attack once more.;;;;;;;;;;;;;;x
 EVTOPTA_CHI_32X;Do a quick and simple attack.;;;;;;;;;;;;;;x
 chivalry_duel_lowrisk_tooltip;Hit chances: §G+++§!\nAvoidance chances: §R-§!\nYour score chance: §G+§!\nFoe's score chance: §R---§!;;;;;;;;;;;;;;x
 EVTOPTB_CHI_32X;Do a normal attack.;;;;;;;;;;;;;;x
@@ -1566,21 +1565,21 @@ chivalry_duel_midrisk_tooltip;Hit chances: §G++§!\nAvoidance chances: §R--§!\nYo
 EVTOPTC_CHI_32X;Do a extravagant attack.;;;;;;;;;;;;;;x
 chivalry_duel_hirisk_tooltip;Hit chances: §G+§!\nAvoidance chances: §R---§!\nYour score chance: §G+++§!\nFoe's score chance: §R-§!;;;;;;;;;;;;;;x
 EVTDESC_CHI_3201;You §Gavoided the attack§! and §Gstroke back§!!;;;;;;;;;;;;;;x
-EVTDESC_CHI_3202;Your foe §Ravoided the attack§! and §Rstroke back§!!;;;;;;;;;;;;;;x
+EVTDESC_CHI_3202;Your opponent §Ravoided the attack§! and §Rstroke back§!!;;;;;;;;;;;;;;x
 EVTDESC_CHI_3203;You §Gavoided the attack§! and §Rmissed the follow-up§!!;;;;;;;;;;;;;;x
-EVTDESC_CHI_3204;Your foe §Ravoided the attack§! and §Gmissed the follow-up§!!;;;;;;;;;;;;;;x
+EVTDESC_CHI_3204;Your opponent §Ravoided the attack§! and §Gmissed the follow-up§!!;;;;;;;;;;;;;;x
 EVTDESC_CHI_3211;You were §Gmissed§!!;;;;;;;;;;;;;;x
 EVTDESC_CHI_3212;You have §Rmissed§!!;;;;;;;;;;;;;;x
 EVTDESC_CHI_3221;You were §Rhit§!!;;;;;;;;;;;;;;x
 EVTDESC_CHI_3222;You have §Ghit§!!;;;;;;;;;;;;;;x
 EVTDESC_CHI_3231;You have §Gstunned§! and §Gstroke again§!!;;;;;;;;;;;;;;x
-EVTDESC_CHI_3232;Your foe §Rstunned you§! and §Rstroke you again§!!;;;;;;;;;;;;;;x
+EVTDESC_CHI_3232;Your opponent §Rstunned you§! and §Rstroke you again§!!;;;;;;;;;;;;;;x
 EVTDESC_CHI_3233;You have §Gstunned§! and §Rmissed the follow-up§!!;;;;;;;;;;;;;;x
-EVTDESC_CHI_3234;Your foe §Rstunned you§! and §Gmissed the follow-up§!!;;;;;;;;;;;;;;x
-EVTDESC_CHI_3261_PRET;The duel has come to an abrupt end. Your foe [From.GetFirstName] died in the course of the battle.\nVictory and [From.GetHerHis] rank are yours but killing a fellow member is not something that will bring you glory.;;;;;;;;;;;;;;x
+EVTDESC_CHI_3234;Your opponent §Rstunned you§! and §Gmissed the follow-up§!!;;;;;;;;;;;;;;x
+EVTDESC_CHI_3261_PRET;The duel has come to an abrupt end. Your opponent [From.GetFirstName] died in the course of the battle.\nVictory and [From.GetHerHis] rank are yours but killing a fellow member is not something that will bring you glory.;;;;;;;;;;;;;;x
 EVTDESC_CHI_3261_FOE;The duel has come to an abrupt end. The challenger [From.GetFirstName] died in the course of the battle, most likely a result of [From.GetHerHis] inexperience.\nVictory is yours but killing a fellow member is not something that will bring you glory.;;;;;;;;;;;;;;x
 EVTDESC_CHI_3261_FOE_CHAMP;The duel has come to an abrupt end. The challenger [From.GetFirstName] died in the course of trying to steal the title of champion from you. Trying to reach the sun is not for weaklings, [From.GetSheHe] got what [From.GetSheHe] deserved.\nVictory is yours but killing a fellow member is not something that will bring you glory.;;;;;;;;;;;;;;x
-EVTDESC_CHI_3261_DEATH;This duel to the death has come to an abrupt end. Your foe [From.GetFirstName] died at the end of your blade. You resume your journey after a short rest.;;;;;;;;;;;;;;x 
+EVTDESC_CHI_3261_DEATH;This duel to the death has come to an abrupt end. Your opponent [From.GetFirstName] died at the end of your blade. You resume your journey after a short rest.;;;;;;;;;;;;;;x 
 EVTDESC_CHI_3261_HUNTED;This duel to the death has come to an abrupt end. Your target [From.GetFirstName] died at the end of your blade. Justice is served and you will be rewarded.;;;;;;;;;;;;;;x
 EVTDESC_CHI_3261_HUNTER;This duel to the death has come to an abrupt end. You survived the assault and [From.GetFirstName] died at the end of your blade.\n\nYou are safe, for now.;;;;;;;;;;;;;;x
 EVTOPTA_CHI_3261;A bitter victory.;;;;;;;;;;;;;;x
@@ -1589,17 +1588,17 @@ EVTOPTC_CHI_3261;[From.GetSheHeCap] should have known better than to challenge m
 EVTOPTD_CHI_3261;The deed is done.;;;;;;;;;;;;;;x
 EVTOPTE_CHI_3261;Wealth and Glory are mine!;;;;;;;;;;;;;;x
 #forget maybe not make all of these so similar
-EVTDESC_CHI_3262_PRET;The duel was not going in your favor, your foe had the upper hand for a while but now is your chance as you can spot a weakness in the defense. You strike for the win... only to see a glimpse of light reflection from the blade going for your neck. Your adversary fooled you and now is the time to pay the price of your inexperience.;;;;;;;;;;;;;;x
-EVTDESC_CHI_3262_FOE;The duel was not going in your favor, your foe had the upper hand for a while but now is your chance as you can spot a weakness in the defense. You strike for the win... only to see a glimpse of light reflection from the blade going for your neck. Your adversary fooled you and now is the time to pay the price of underestimating the challenger.;;;;;;;;;;;;;;x
-EVTDESC_CHI_3262_DEATH;The duel was not going in your favor, your foe had the upper hand for a while but now is your chance as you can spot a weakness in the defense. You aim to strike the lethal blow... only to see a glimpse of light reflection from the blade going for your neck. Your adversary fooled you and now is the time to pay the price of underestimating your challenger.;;;;;;;;;;;;;;x
-EVTDESC_CHI_3262_HUNTED;The duel was not going in your favor, your foe had the upper hand for a while but now is your chance as you can spot a weakness in the defense. You aim to strike the lethal blow... only to see a glimpse of light reflection from the blade going for your neck. Your adversary fooled you and now is the time to pay the price of underestimating your target.;;;;;;;;;;;;;;x
-EVTDESC_CHI_3262_HUNTER;The duel was not going in your favor, your foe had the upper hand for a while but now is your chance as you can spot a weakness in the defense. You aim to strike the lethal blow... only to see a glimpse of light reflection from the blade going for your neck. Your adversary fooled you and now is the time to pay the price of underestimating the [FromFrom.GetSocietyRank].;;;;;;;;;;;;;;x
+EVTDESC_CHI_3262_PRET;The duel was not going in your favor, your opponent had the upper hand for a while but now is your chance as you can spot a weakness in the defense. You strike for the win... only to see a glimpse of light reflection from the blade going for your neck. Your adversary fooled you and now is the time to pay the price of your inexperience.;;;;;;;;;;;;;;x
+EVTDESC_CHI_3262_FOE;The duel was not going in your favor, your opponent had the upper hand for a while but now is your chance as you can spot a weakness in the defense. You strike for the win... only to see a glimpse of light reflection from the blade going for your neck. Your adversary fooled you and now is the time to pay the price of underestimating the challenger.;;;;;;;;;;;;;;x
+EVTDESC_CHI_3262_DEATH;The duel was not going in your favor, your opponent had the upper hand for a while but now is your chance as you can spot a weakness in the defense. You aim to strike the lethal blow... only to see a glimpse of light reflection from the blade going for your neck. Your adversary fooled you and now is the time to pay the price of underestimating your challenger.;;;;;;;;;;;;;;x
+EVTDESC_CHI_3262_HUNTED;The duel was not going in your favor, your opponent had the upper hand for a while but now is your chance as you can spot a weakness in the defense. You aim to strike the lethal blow... only to see a glimpse of light reflection from the blade going for your neck. Your adversary fooled you and now is the time to pay the price of underestimating your target.;;;;;;;;;;;;;;x
+EVTDESC_CHI_3262_HUNTER;The duel was not going in your favor, your opponent had the upper hand for a while but now is your chance as you can spot a weakness in the defense. You aim to strike the lethal blow... only to see a glimpse of light reflection from the blade going for your neck. Your adversary fooled you and now is the time to pay the price of underestimating the [FromFrom.GetSocietyRank].;;;;;;;;;;;;;;x
 EVTOPTA_CHI_3262;No! I can still achieve so much more!;;;;;;;;;;;;;;x
 EVTOPTB_CHI_3262;Me? At the hand of this whelp?!;;;;;;;;;;;;;;x
 EVTOPTC_CHI_3262;No! This can't...!;;;;;;;;;;;;;;x
-EVTDESC_CHI_327_1_PRET;Victory is yours!\nThe referees has stopped the fight and declared you as the victor. You can now be considered a Veteran while your defeated foe will be shamed and will be considered to be of lowly Novice rank.;;;;;;;;;;;;;;x
-EVTDESC_CHI_327_2_PRET;Victory is yours!\nThe referees has stopped the fight and declared you as the victor. You can now be considered a Pretender to the title of Champion while your defeated foe will be shamed and will be considered unworthy of being a Pretender.;;;;;;;;;;;;;;x
-EVTDESC_CHI_327_3_PRET;Victory is yours!!!\nThe referees has stopped the fight and declared you as the victor. You are now the Champion while your defeated foe will be shamed and will be return to be a simple Pretender seeking to reach your height. The title is very contested and you will need to stay in perfect shape to survive the horde of challengers.;;;;;;;;;;;;;;x
+EVTDESC_CHI_327_1_PRET;Victory is yours!\nThe referees has stopped the fight and declared you as the victor. You can now be considered a Veteran while your defeated opponent will be shamed and will be considered to be of lowly Novice rank.;;;;;;;;;;;;;;x
+EVTDESC_CHI_327_2_PRET;Victory is yours!\nThe referees has stopped the fight and declared you as the victor. You can now be considered a Pretender to the title of Champion while your defeated opponent will be shamed and will be considered unworthy of being a Pretender.;;;;;;;;;;;;;;x
+EVTDESC_CHI_327_3_PRET;Victory is yours!!!\nThe referees has stopped the fight and declared you as the victor. You are now the Champion while your defeated opponent will be shamed and will be return to be a simple Pretender seeking to reach your height. The title is very contested and you will need to stay in perfect shape to survive the horde of challengers.;;;;;;;;;;;;;;x
 EVTDESC_CHI_327_2_FOE;Victory is yours!\nThe referees has stopped the fight and declared you as the victor. The Novice had no chance against a Veteran like you and will need to train again to wash the shame of defeat in order to challenge someone once more.;;;;;;;;;;;;;;x
 EVTDESC_CHI_327_3_FOE;Victory is yours!\nThe referees has stopped the fight and declared you as the victor. The Veteran had no chance against a someone who is to be the next champion and will need to train again to wash the shame of defeat in order to challenge someone once more.;;;;;;;;;;;;;;x
 EVTDESC_CHI_327_4_FOE;Victory is yours!\nThe referees has stopped the fight and declared you as the victor. The Pretender had no chance against you, the Grand Champion, and will need to train again to wash the shame of defeat in order to challenge you once more.;;;;;;;;;;;;;;x
@@ -1612,23 +1611,23 @@ EVTDESC_CHI_328_2_PRET;You were defeated.\nThe referees has stopped the fight an
 EVTDESC_CHI_328_3_PRET;You were defeated.\nThe referees has stopped the fight and declared your opponent as the victor. As the challenger you will not go down in ranks but losing in a duel you initiated is still shameful. The title of Champion is still out of your grasp but it is only a matter of time.;;;;;;;;;;;;;;x
 EVTDESC_CHI_328_2_FOE;You were defeated.\nThe referees has stopped the fight and declared your opponent as the victor. This mean that you are no longer considered a Veteran, being defeated by a simple Novice, you are back at sqaure one and will need to rise again.;;;;;;;;;;;;;;x
 EVTDESC_CHI_328_3_FOE;You were defeated.\nThe referees has stopped the fight and declared your opponent as the victor. This mean that you are no longer a Pretender to the title of Champion, you are still considered skilled nonetheless and will be seen as a Veteran from now on.;;;;;;;;;;;;;;x
-EVTDESC_CHI_328_4_FOE;You were defeated...\nThe referees has stopped the fight and declared your opponent as the victor. This mean that you are no longer the Grand Champion of the [From.Society.GetName]. As the previous champion you will still be considered a worthy foe for the new one and stay as a Pretender;;;;;;;;;;;;;;x
+EVTDESC_CHI_328_4_FOE;You were defeated...\nThe referees has stopped the fight and declared your opponent as the victor. This mean that you are no longer the Grand Champion of the [From.Society.GetName]. As the previous champion you will still be considered a worthy opponent for the new one and stay as a Pretender;;;;;;;;;;;;;;x
 EVTOPTA_CHI_328;I will do better next time.;;;;;;;;;;;;;;x
 EVTOPTB_CHI_328;You won't be the same next time!;;;;;;;;;;;;;;x
 EVTOPTC_CHI_328;I'll come back stronger.;;;;;;;;;;;;;;x
 EVTOPTD_CHI_328;No! I am the champion!.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_1_PRET;Victory is yours!\nYour foe has yielded and declared you as the victor. You will rank up to Veteran while your milk drinking foe will be shamed into being a Novice for yielding before the fight ended.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_2_PRET;Victory is yours!\nYour foe has yielded and declared you as the victor. You will rank up to Pretender while your milk drinking foe will be shamed out of being a Pretender for yielding before the fight ended.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_3_PRET;Victory is yours!!!\nYour foe has yielded and declared you as the victor. You will become the new Champion by default while the previous milk drinking Champion will be shamed back into being a simple for yielding before the fight ended.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_2_FOE;Victory is yours!\nYour foe has yielded and declared you as the victor. You will stay a Veteran while your milk drinking foe will be shamed into staying a Novice for yielding before the fight ended.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_3_FOE;Victory is yours!\nYour foe has yielded and declared you as the victor. You will still be a pretender to the title of Champion while your milk drinking foe will be shamed as a Veteran for yielding before the fight ended.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_4_FOE;Victory is yours!\nYour foe has yielded and declared you as the victor. You will keep your title of Champion while the previous milk drinking Pretender will be shamed to stay a simple Pretender for yielding before the fight ended.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_PILGRIM_YIELD;Victory is yours!\nYour foe has yielded and declared you as the victor. You resume your journey while your foe try to stanch the flow of his own blood.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_HUNT_UNLAND_HOLY;Victory is yours!\nYour foe has yielded and try to flee for [From.GetHerHis] dear life like the coward [From.GetSheHe] is. [From.GetHerHisCap] assets are confiscated and [From.GetHerHis] reputation is left in disarray, [From.GetSheHe] is unlikely to be able work from the shadow of a secret society for a while.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_HUNT_LAND_HOLY;Victory is yours!\nYour foe has yielded and beg you to spare [From.GetHerHis] dear life like the coward [From.GetSheHe] is. [From.GetHerHisCap] assets are confiscated and [From.GetHerHis] reputation is left in disarray, [From.GetSheHe] is unlikely to be able work from the shadow of a secret society for a while.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_HUNT_UNLAND_BOUNTY;Victory is yours!\nYour foe has yielded and beg you to spare [From.GetHerHis] dear life like the coward [From.GetSheHe] is. Unfortunately, this would mean that your bounty still live and it is not glorious. But it is still more money than what [From.GetHerHis] head would have paid.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_HUNT_LAND_BOUNTY;Victory is yours!\nYour foe has yielded and beg you to spare [From.GetHerHis] dear life like the coward [From.GetSheHe] is. Unfortunately, this would mean that your bounty still live and it is not glorious. But it is still more money than what [From.GetHerHis] head would have paid.;;;;;;;;;;;;;;x
-EVTDESC_CHI_329_HUNTER;Victory is yours!\nYour foe has yielded and ran for [From.GetHerHis] dear life like the coward [From.GetSheHe] is. With this threat gone you are now safe, for the moment.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_1_PRET;Victory is yours!\nYour opponent has yielded and declared you as the victor. You will rank up to Veteran while your milk drinking opponent will be shamed into being a Novice for yielding before the fight ended.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_2_PRET;Victory is yours!\nYour opponent has yielded and declared you as the victor. You will rank up to Pretender while your milk drinking opponent will be shamed out of being a Pretender for yielding before the fight ended.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_3_PRET;Victory is yours!!!\nYour opponent has yielded and declared you as the victor. You will become the new Champion by default while the previous milk drinking Champion will be shamed back into being a simple for yielding before the fight ended.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_2_FOE;Victory is yours!\nYour opponent has yielded and declared you as the victor. You will stay a Veteran while your milk drinking opponent will be shamed into staying a Novice for yielding before the fight ended.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_3_FOE;Victory is yours!\nYour opponent has yielded and declared you as the victor. You will still be a pretender to the title of Champion while your milk drinking opponent will be shamed as a Veteran for yielding before the fight ended.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_4_FOE;Victory is yours!\nYour opponent has yielded and declared you as the victor. You will keep your title of Champion while the previous milk drinking Pretender will be shamed to stay a simple Pretender for yielding before the fight ended.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_PILGRIM_YIELD;Victory is yours!\nYour opponent has yielded and declared you as the victor. You resume your journey while your opponent try to stanch the flow of his own blood.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_HUNT_UNLAND_HOLY;Victory is yours!\nYour opponent has yielded and try to flee for [From.GetHerHis] dear life like the coward [From.GetSheHe] is. [From.GetHerHisCap] assets are confiscated and [From.GetHerHis] reputation is left in disarray, [From.GetSheHe] is unlikely to be able work from the shadow of a secret society for a while.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_HUNT_LAND_HOLY;Victory is yours!\nYour opponent has yielded and beg you to spare [From.GetHerHis] dear life like the coward [From.GetSheHe] is. [From.GetHerHisCap] assets are confiscated and [From.GetHerHis] reputation is left in disarray, [From.GetSheHe] is unlikely to be able work from the shadow of a secret society for a while.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_HUNT_UNLAND_BOUNTY;Victory is yours!\nYour opponent has yielded and beg you to spare [From.GetHerHis] dear life like the coward [From.GetSheHe] is. Unfortunately, this would mean that your bounty still live and it is not glorious. But it is still more money than what [From.GetHerHis] cockpit would have paid.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_HUNT_LAND_BOUNTY;Victory is yours!\nYour opponent has yielded and beg you to spare [From.GetHerHis] dear life like the coward [From.GetSheHe] is. Unfortunately, this would mean that your bounty still live and it is not glorious. But it is still more money than what [From.GetHerHis] cockpit would have paid.;;;;;;;;;;;;;;x
+EVTDESC_CHI_329_HUNTER;Victory is yours!\nYour opponent has yielded and ran for [From.GetHerHis] dear life like the coward [From.GetSheHe] is. With this threat gone you are now safe, for the moment.;;;;;;;;;;;;;;x
 EVTOPTA_CHI_329;A victory is a victory.;;;;;;;;;;;;;;x
 EVTOPTB_CHI_329;A bit anticlimactic.;;;;;;;;;;;;;;x
 EVTOPTC_CHI_329;The only reasonable decision [From.GetSheHe] made today.;;;;;;;;;;;;;;x
@@ -1808,7 +1807,7 @@ EVTDESC_CHI_3434;[Root.GetSocietyRank] [Root.GetFirstName]\n\nI have considered 
 EVTOPTA_CHI_3434;...Curses.;;;;;;;;;;;;;;x
 #
 EVTDESC_CHI_350_WEAPON;[From.GetFirstName] lie lifeless on the ground. Next to the body you see [From.GetHerHis] [chivalry_combat_trophy.GetName], still in good condition. You waste no time picking it up, a spare weapon or two is always useful and one of your fellow fighter may be interested in buying it.;;;;;;;;;;;;;;x
-EVTDESC_CHI_350_SKULL;[From.GetFirstName] lie lifeless on the ground. You waste no time to claim your due with one last swing, [From.GetHerHis] head. It will serve as a trophy from the foe you just killed.\n\n[From.GetSheHeCap] won't be needing it anymore anyways.;;;;;;;;;;;;;;x
+EVTDESC_CHI_350_SKULL;[From.GetFirstName] lie lifeless on the ground. You waste no time to claim your due with one last Fire, [From.GetHerHis] cockpit. It will serve as a trophy from the opponent you just killed.\n\n[From.GetSheHeCap] won't be needing it anymore anyways.;;;;;;;;;;;;;;x
 EVTDESC_CHI_350_BROKE;[From.GetFirstName] lie lifeless on the ground. Next to [From.GetHerHis] still warm body there is [From.GetHerHis] shattered weapon from the fight. You pick it up and keep it as a trophy.\n\n[From.GetSheHeCap] won't be needing it anymore.;;;;;;;;;;;;;;x
 EVTOPTA_CHI_350;One more to the pile!;;;;;;;;;;;;;;x
 EVTDESC_CHI_3511;You have asked a few members of [From.Society.GetName] if they knew of anyone with a spare weapon and [From.GetFirstName] appear to own more than one.\nYou can request that [From.GetSheHe] sells you [From.GetHerHis] [chivalry_combat_weapon.GetName] at a discount but [From.GetSheHe] would be more likely to refuse.;;;;;;;;;;;;;;x
