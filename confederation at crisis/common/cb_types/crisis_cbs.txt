@@ -122,7 +122,7 @@ civil_war = {
 				limit = { 
 					ROOT = {
 						AND = {
-							religion_ = outlaw_group
+							religion_group = outlaw_group
 							capital_holding = { holding_type = castle }
 						}
 					}
@@ -133,7 +133,7 @@ civil_war = {
 				limit = { 
 					ROOT = {
 						AND = {
-							religion_ = outlaw_group
+							religion_group = outlaw_group
 							capital_holding = { holding_type = city }
 						}
 					}
@@ -144,7 +144,7 @@ civil_war = {
 				limit = {
 					ROOT = {
 						AND = {
-							religion_ = transhumanist_group
+							religion_group = transhumanist_group
 							NOT = { religion = bio_directionist }
 							OR = {
 								capital_holding = { holding_type = city }
