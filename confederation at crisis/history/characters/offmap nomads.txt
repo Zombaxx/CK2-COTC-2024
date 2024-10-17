@@ -1,5 +1,5 @@
 217284 = {
-   name="Toghon Temür" # Toghon Temür Khan
+   name="Kaelis" # Toghon Temür Khan
    dynasty=11100
    religion="astrist"
    culture="organic_wifi_ge"
@@ -9,7 +9,7 @@
 }
 244015 = { # fictitious mongol
   dynasty = 1051120 # Buryat
-  name = "Jamugha"
+  name = "Valkar"
   religion = astrist
   culture = organic_wifi_ge
 
