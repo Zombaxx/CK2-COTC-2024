@@ -869,7 +869,7 @@ chivalry_power_training;Request Military Training;;;;;;;;;;;;;x
 chivalry_power_training_desc;Make yourself available to receive training from a fellow member of [Root.Society.GetName].;;;;;;;;;;;;;x
 chivalry_power_training_power_desc;§PIntrigue Decision§! Spend some of your §Y[From.GetMaalSocietyCurrency]§! to receive military training. A free member of [From.Society.GetName] will contact you once one is available.;;;;;;;;;;;;;x
 chivalry_timer_training_tooltip;Cannot request training more than once per two years;;;;;;;;;;;;;x
-chivalry_power_commander_fighter;Hire a Warrior Commander;;;;;;;;;;;;;x
+chivalry_power_commander_fighter;Hire an Ace-Pilot;;;;;;;;;;;;;x
 chivalry_power_commander_fighter_desc;Hire a member of [Root.Society.GetName] to command your armies.;;;;;;;;;;;;;x
 chivalry_power_commander_fighter_power_desc;§PIntrigue Decision§! Spend §Y[From.GetMaalSocietyCurrency]§! to hire a commander from [From.Society.GetName] with an improved leadership trait.;;;;;;;;;;;;;x
 chivalry_power_commander_holy;Hire a Holy Commander;;;;;;;;;;;;;x
@@ -888,7 +888,7 @@ chivalry_power_vote_law_power_desc;§PIntrigue Decision§! Start a vote by spendin
 chivalry_power_law_timer_tooltip;Need to wait five years between each attempts;;;;;;;;;;;;;x
 chivalry_power_squire_dummy;Name a Co-Pilot;;;;;;;;;;;;;x
 chivalry_power_squire_dummy_desc;Co-Pilot Dummy Desc;;;;;;;;;;;;;x
-chivalry_power_squire_dummy_power_desc;§BMinor Title§! Allow you to name a boy or girl, if allowed, between 6 and 16 in your court as a Co-Pilot or Co-Pilot . The longer they spend with the title, the more the special trait will improve, up to four times.;;;;;;;;;;;;;x
+chivalry_power_squire_dummy_power_desc;§BMinor Title§! Allow you to name a child, if allowed, between 6 and 16 in your court as a Co-Pilot. The longer they spend with the title, the more the special trait will improve, up to four times.;;;;;;;;;;;;;x
 chivalry_power_arena_dummy;Set up Tournaments;;;;;;;;;;;;;x
 chivalry_power_arena_dummy_desc;Arena Dummy;;;;;;;;;;;;;x
 chivalry_power_arena_dummy_power_desc;§GHolding Decision§! Lets you right-click on your own province's holdings to set up and upgrade various Tournaments.;;;;;;;;;;;;;x
@@ -1184,7 +1184,7 @@ chivalry_item_broke_stack_desc;This chest contains the weapons from the defeated
 #events
 EVTDESC_CHI_102_holy;Greetings [Root.GetTitledFirstName],\n\nI am the [From.GetSocietyRank] of [From.Society.GetName]. I have received your application to join our order and have decided to accept you as a non-ordained member. Due to your situation, you will not be bound by an eternal oath to [From.Religion.GetHighGodName]. For all intend and purpose you will have similar rights and powers compared to a member of the clergy.;;;;;;;;;;;;;x
 EVTDESC_CHI_102_holy_custom;Greetings [Root.GetTitledFirstName],\n\nI am the [From.GetSocietyRank] of the [chivalry_holy_society_one_name.GetName]. I have received your application to join our order and have decided to accept you as a non-ordained member. Due to your situation, you will not be bound by an oath to [From.Religion.GetHighGodName]. For all intend and purpose you will have similar rights and powers compared to a member of the clergy.;;;;;;;;;;;;;x
-EVTDESC_CHI_102_fighter;Well met [Root.GetFirstName], you have the highest honor to receive a letter from me: [From.GetFirstName], [From.GetSocietyRank] of [From.Society.GetName], greatest warrior this world has ever known. I have no doubt that you wish to bask in my glory in person, so I hereby allow you to join us as we clash steel and bleed together.\n\nGood luck and may your blade never dull.;;;;;;;;;;;;;x
+EVTDESC_CHI_102_fighter;Well met [Root.GetFirstName], you have the highest honor to receive a message from me: [From.GetFirstName], [From.GetSocietyRank] of [From.Society.GetName], greatest warrior this world has ever known. I have no doubt that you wish to bask in my glory in person, so I hereby allow you to join us as we clash steel and bleed together.\n\nGood luck and may your blade never dull.;;;;;;;;;;;;;x
 EVTOPTA_CHI_102;For [From.Religion.GetHighGodName]!;;;;;;;;;;;;;x
 EVTOPTB_CHI_102;For Glory!;;;;;;;;;;;;;x
 EVTOPTC_CHI_102;I am not so sure anymore.;;;;;;;;;;;;;x
@@ -1252,10 +1252,10 @@ EVTDESC_CHI_158_TROOPS_custom;To the attention of [Root.GetTitledFirstName],\nI 
 EVTDESC_CHI_158_WORKERS_custom;To the attention of [Root.GetTitledFirstName],\nI am [From.GetSocietyRank] [From.GetFirstName] of the [chivalry_holy_society_one_name.GetName]. Our order have noticed your situation and tasked me with assisting you.\nUnfortunately I couldn't come to your aid in time, thus I am sending workers assist you the reconstruction.\n\nMay [From.Religion.GetRandomGodName] be with you.;;;;;;;;;;;;;x
 EVTDESC_CHI_158_WAR_custom;To the attention of [Root.GetTitledFirstName],\nI am [From.GetSocietyRank] [From.GetFirstName] of the [chivalry_holy_society_one_name.GetName]. Our order have noticed your situation and tasked me with assisting you.\nYour struggle inspired me so much that I will assist you directly in your war.\n\nMay the infidels tremble!;;;;;;;;;;;;;x
 EVTOPTA_CHI_158;I'll gladly accept assistance.;;;;;;;;;;;;;x
-EVTDESC_CHI_1581_ADVICES;Thanks [From.Religion.GetRandomGodName] for you, [Root.GetSocietyRank] [Root.GetFirstName]!\n\nKnow that your help is appreciated and welcome. Your coins will pay the wages due to my men and mercenaries. I will make sure to send a letter to your superior and tell [From.GetHerHim] of your generosity.\n\n[From.Religion.GetRandomGodName] blessings upon you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
-EVTDESC_CHI_1581_TROOPS;Thanks [From.Religion.GetRandomGodName] for you, [Root.GetSocietyRank] [Root.GetFirstName]!\n\nKnow that your help is appreciated and welcome. Your men will ease the burden that my men have to face. I will make sure to send a letter to your superior and tell [From.GetHerHim] of your generosity.\n\n[From.Religion.GetRandomGodName] blessings upon you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
-EVTDESC_CHI_1581_WORKERS;I thank you, [Root.GetSocietyRank] [Root.GetFirstName]!\n\nKnow that your help is appreciated. Your workforce will make rebuilding what was lost easier. I will make sure to send a letter to your superior and tell [From.GetHerHim] about it.\n\nMay you fare well,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
-EVTDESC_CHI_1581_WAR;Thanks [From.Religion.GetRandomGodName] for you, [Root.GetSocietyRank] [Root.GetFirstName]!\n\nKnow that your help is appreciated and welcome. Your assistance in this holy war will help tide the outcome in the proper direction. I will make sure to send a letter to your superior and tell [From.GetHerHim] of your generosity.\n\n[From.Religion.GetRandomGodName] blessings upon you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESC_CHI_1581_ADVICES;Thanks [From.Religion.GetRandomGodName] for you, [Root.GetSocietyRank] [Root.GetFirstName]!\n\nKnow that your help is appreciated and welcome. Your coins will pay the wages due to my men and mercenaries. I will make sure to send a message to your superior and tell [From.GetHerHim] of your generosity.\n\n[From.Religion.GetRandomGodName] blessings upon you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESC_CHI_1581_TROOPS;Thanks [From.Religion.GetRandomGodName] for you, [Root.GetSocietyRank] [Root.GetFirstName]!\n\nKnow that your help is appreciated and welcome. Your men will ease the burden that my men have to face. I will make sure to send a message to your superior and tell [From.GetHerHim] of your generosity.\n\n[From.Religion.GetRandomGodName] blessings upon you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESC_CHI_1581_WORKERS;I thank you, [Root.GetSocietyRank] [Root.GetFirstName]!\n\nKnow that your help is appreciated. Your workforce will make rebuilding what was lost easier. I will make sure to send a message to your superior and tell [From.GetHerHim] about it.\n\nMay you fare well,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESC_CHI_1581_WAR;Thanks [From.Religion.GetRandomGodName] for you, [Root.GetSocietyRank] [Root.GetFirstName]!\n\nKnow that your help is appreciated and welcome. Your assistance in this holy war will help tide the outcome in the proper direction. I will make sure to send a message to your superior and tell [From.GetHerHim] of your generosity.\n\n[From.Religion.GetRandomGodName] blessings upon you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
 EVTOPTA_CHI_1581;[From.GetSheHeCap] is welcome.;;;;;;;;;;;;;x
 EVTDESC_CHI_1594;[Root.GetSocietyRank] [Root.GetFirstName],\n\nIt appears that our trust in you may have been misplaced. You had chosen with your own will to be directly involved in that war, yet you haven't done much to help at all in the past few years. We hope that such thing won't happen again.\n\nMay [From.Religion.GetRandomEvilGodName] not influence you any further,\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
 EVTOPTA_CHI_1594;I should have known.;;;;;;;;;;;;;x
@@ -1292,16 +1292,16 @@ mission_chivalry_training_fallback;Train a fellow member;;;;;;;;;;;;;x
 mission_chivalry_training_desc;Someone has requested help to become a better knight or fighter and you have accepted to help. There is several ways to train someone but a proper instructor will choose the method he know best or else the student may be misguided.;;;;;;;;;;;;;x
 mission_chivalry_training_tooltip;Start the §YTraining§! event chain in the target's character decision list.;;;;;;;;;;;;;x
 #
-EVTDESC_CHI_171;Greetings to you [Root.GetSocietyRank] [Root.GetFirstName],\n\nI am currently in the search for an instructor to assist me in learning about knighthood and matters of warfare. Could you spare some of your previous time to help a fellow member of [From.Society.GetName]? I would be grateful if you could help me become a better man to serve [From.Religion.GetHighGodName].\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
-EVTDESC_CHI_171_custom;Greetings to you [Root.GetSocietyRank] [Root.GetFirstName],\n\nI am currently in the search for an instructor to assist me in learning about knighthood and matters of warfare. Could you spare some of your previous time to help a fellow member of the [chivalry_holy_society_one_name.GetName]? I would be grateful if you could help me become a better man to serve [From.Religion.GetHighGodName].\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_CHI_171;Greetings to you [Root.GetSocietyRank] [Root.GetFirstName],\n\nI am currently in the search for an instructor to assist me in learning about being a pilot and matters of warfare. Could you spare some of your previous time to help a fellow member of [From.Society.GetName]? I would be grateful if you could help me become a better man to serve [From.Religion.GetHighGodName].\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_CHI_171_custom;Greetings to you [Root.GetSocietyRank] [Root.GetFirstName],\n\nI am currently in the search for an instructor to assist me in learning about being a pilot and matters of warfare. Could you spare some of your previous time to help a fellow member of the [chivalry_holy_society_one_name.GetName]? I would be grateful if you could help me become a better man to serve [From.Religion.GetHighGodName].\n\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
 EVTDESC_CHI_173;You have accepted to teach [From.GetSocietyRank] [From.GetFirstName] about warfare and how to live your life as a [From.GetSocietyRank] of [From.Society.GetName]. But one can only teach about things that he [From.GetHerselfHimself] know about.\nWhat are you going to teach [From.GetHerHim] about...?;;;;;;;;;;;;;x
 EVTDESC_CHI_173_custom;You have accepted to teach [From.GetSocietyRank] [From.GetFirstName] about warfare and how to live your life as a [From.GetSocietyRank] of the [chivalry_holy_society_one_name.GetName]. But one can only teach about things that he [From.GetHerselfHimself] knows about.\nWhat are you going to teach [From.GetHerHim] about...?;;;;;;;;;;;;;x
 EVTOPTA_CHI_173;Warfare and combat.;;;;;;;;;;;;;x
-EVTOPTB_CHI_173;How to be less sinful.;;;;;;;;;;;;;x
-EVTOPTC_CHI_173;Being virtuous.;;;;;;;;;;;;;x
-EVTDESC_CHI_1733_MARTIAL;You have been waiting for someone to teach you about knighthood for quite some time and somebody has answered your call. [From.GetSocietyRank] [From.GetFirstName] has stepped forward to teach you about combat and warfare.\nYou are awaiting [From.GetHerHis] instructions.;;;;;;;;;;;;;x
-EVTDESC_CHI_1733_SIN;You have been waiting for someone to teach you about knighthood for quite some time and somebody has answered your call. [From.GetSocietyRank] [From.GetFirstName] has stepped forward to help you purge yourself of sins.\nYou are awaiting [From.GetHerHis] instructions.;;;;;;;;;;;;;x
-EVTDESC_CHI_1733_VIRTUE;You have been waiting for someone to teach you about knighthood for quite some time and somebody has answered your call. [From.GetSocietyRank] [From.GetFirstName] has stepped forward to make you a more virtuous person.\nYou are awaiting [From.GetHerHis] instructions.;;;;;;;;;;;;;x
+EVTOPTB_CHI_173;How to be less immoral.;;;;;;;;;;;;;x
+EVTOPTC_CHI_173;Being moral.;;;;;;;;;;;;;x
+EVTDESC_CHI_1733_MARTIAL;You have been waiting for someone to teach you about being a pilot for quite some time and somebody has answered your call. [From.GetSocietyRank] [From.GetFirstName] has stepped forward to teach you about combat and warfare.\nYou are awaiting [From.GetHerHis] instructions.;;;;;;;;;;;;;x
+EVTDESC_CHI_1733_SIN;You have been waiting for someone to teach you about being a pilot for quite some time and somebody has answered your call. [From.GetSocietyRank] [From.GetFirstName] has stepped forward to help you purge yourself of sins.\nYou are awaiting [From.GetHerHis] instructions.;;;;;;;;;;;;;x
+EVTDESC_CHI_1733_VIRTUE;You have been waiting for someone to teach you about being a pilot for quite some time and somebody has answered your call. [From.GetSocietyRank] [From.GetFirstName] has stepped forward to make you a more virtuous person.\nYou are awaiting [From.GetHerHis] instructions.;;;;;;;;;;;;;x
 EVTOPTA_CHI_1733;Good, I cannot wait!;;;;;;;;;;;;;x
 EVTDESC_CHI_174;It is time to start [From.GetSocietyRank] [From.GetFirstName] training, these is several ways to train a man and a few come to mind. Not all of them are the best of ideas and your pupil may choose to not follow through. If no significant result are shown after a while it'll hurt your credibility.;;;;;;;;;;;;;x
 EVTOPTA_CHI_174;Suggest a book.;;;;;;;;;;;;;x
@@ -1317,7 +1317,7 @@ EVTOPTJ_CHI_174;Suggest immersing [From.GetHerselfHimself] in a group.;;;;;;;;;;
 EVTOPTK_CHI_174;I give up, there is nothing to do with [From.GetHerHim].;;;;;;;;;;;;;x
 EVTDESC_CHI_1742;It appears that your student has met with a sudden death.\nThis also abruptly put an end to your training sessions together.;;;;;;;;;;;;;x
 EVTOPTA_CHI_1742;It is unfortunate.;;;;;;;;;;;;;x
-EVTDESC_CHI_175_BOOK;[From.GetSocietyRank] [From.GetFirstName] offer you some books about the subject.\nWhether or not his advice are worth listening to is up to you.;;;;;;;;;;;;;x
+EVTDESC_CHI_175_BOOK;[From.GetSocietyRank] [From.GetFirstName] offer you some reading material about the subject.\nWhether or not his advice are worth listening to is up to you.;;;;;;;;;;;;;x
 EVTDESC_CHI_175_SPARE;[From.GetSocietyRank] [From.GetFirstName] suggest a small competition to teach you the basics.\nWhether or not his advice are worth listening to is up to you.;;;;;;;;;;;;;x
 EVTDESC_CHI_175_MEDITATE;[From.GetSocietyRank] [From.GetFirstName] think that you should spend some time in meditation to think about it.\nWhether or not his advice are worth listening to is up to you.;;;;;;;;;;;;;x
 EVTDESC_CHI_175_TALK;[From.GetSocietyRank] [From.GetFirstName] say that the both of you talk at long length about the matter.\nWhether or not his advice are worth listening to is up to you.;;;;;;;;;;;;;x
@@ -1366,7 +1366,7 @@ EVTOPTJ_CHI_184;Suggest immersing [From.GetHerselfHimself] in a group.;;;;;;;;;;
 EVTOPTK_CHI_184;I give up, there is nothing to do with [From.GetHerHim].;;;;;;;;;;;;;x
 EVTDESC_CHI_1842;It appears that your student has met with a sudden death.\nThis also abruptly put an end to your training sessions together.;;;;;;;;;;;;;x
 EVTOPTA_CHI_1842;It is unfortunate.;;;;;;;;;;;;;x
-EVTDESC_CHI_185_BOOK;[From.GetSocietyRank] [From.GetFirstName] offer you some books about tactics and warfare.\nWhether or not his advice are worth listening to is up to you.;;;;;;;;;;;;;x
+EVTDESC_CHI_185_BOOK;[From.GetSocietyRank] [From.GetFirstName] offer you some reading material about tactics and warfare.\nWhether or not his advice are worth listening to is up to you.;;;;;;;;;;;;;x
 EVTDESC_CHI_185_SPARE;[From.GetSocietyRank] [From.GetFirstName] suggest a friendly duel to teach you the basics.\nWhether or not his advice are worth listening to is up to you.;;;;;;;;;;;;;x
 EVTDESC_CHI_185_MEDITATE;[From.GetSocietyRank] [From.GetFirstName] think that you should spend some time in meditation to sharpen your senses.\nWhether or not his advice are worth listening to is up to you.;;;;;;;;;;;;;x
 EVTDESC_CHI_185_TALK;[From.GetSocietyRank] [From.GetFirstName] say that the both of you talk at long length about strategy.\nWhether or not his advice are worth listening to is up to you.;;;;;;;;;;;;;x
@@ -1501,7 +1501,7 @@ chivalry_duel_type_score_from;Your score: [Root.chivalry_duel.GetValue] vs [From
 chivalry_duel_type_score_fromfrom;Your score: [Root.chivalry_duel.GetValue] vs [FromFrom.chivalry_duel.GetValue] for your opponent;;;;;;;;;;;;;x
 chivalry_duel_type_wound;To First Blood;;;;;;;;;;;;;x
 chivalry_duel_type_death;To the Death;;;;;;;;;;;;;x
-EVTDESC_CHI_311_BASE;[Root.DuelTypeFrom]\n\nYour enemy is in front of you, looking directly at you and getting ready to receive your attack.;;;;;;;;;;;;;x
+EVTDESC_CHI_311_BASE;[Root.DuelTypeFrom]\n\nYour enemy is in front of you getting ready to receive your attack.;;;;;;;;;;;;;x
 EVTDESC_CHI_311_TURTLE;[Root.DuelTypeFrom]\n\nYour enemy is taking a Defensive Stance. [From.GetSheHeCap] is protecting himself from being critically hit but is easier to hit with a normal attack.;;;;;;;;;;;;;x
 EVTDESC_CHI_311_CLOSE;[Root.DuelTypeFrom]\n\nYour enemy is taking a Aggressive Stance. [From.GetSheHeCap] is coming directly at you, making the next attack more likely to be a critical hit.;;;;;;;;;;;;;x
 EVTDESC_CHI_311_SCREAM;[Root.DuelTypeFrom]\n\nYour enemy let out a battle cry. [From.GetSheHeCap] is forgoing all form of restraints and rush to you. This is a fairly dangerous action for both you and him, all attack are more likely to be critical.;;;;;;;;;;;;;x
@@ -1857,7 +1857,7 @@ chivalry_merc_help_infidel_tooltip;Helping a heretic or infidel:;;;;;;;;;;;;;x
 EVTOPTB_CHI_3732;I am not for hire at the moment...;;;;;;;;;;;;;x
 EVTOPTC_CHI_3732;Unfortunately, the incoming Crusade takes priority.;;;;;;;;;;;;;x
 EVTDESC_CHI_3735;To [Root.GetTitledFirstName]\nI am  under attack by infidels and I am requesting the services of [Root.PrimaryTitle.GetName] to fight the enemies of the [From.Religion.GetName] faith! You will be paid upfront and you will receive more for every achievement you accomplish in this holy war.\n\nSigned,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
-# chivalry_hired_pay_tooltip;\nYou will receive yearly letters with payments based on how many battles and sieges you have won with your army as the leading army and/or with you as a flank leader. Unsieging your employer's provinces and attacking the armies of your target's vassals do count. Failure to participate will hurt your reputation.;;;;;;;;;;;;;x
+# chivalry_hired_pay_tooltip;\nYou will receive yearly messages with payments based on how many battles and sieges you have won with your army as the leading army and/or with you as a flank leader. Unsieging your employer's provinces and attacking the armies of your target's vassals do count. Failure to participate will hurt your reputation.;;;;;;;;;;;;;x
 EVTOPTA_CHI_3735;For [From.Religion.GetHighGodName]!;;;;;;;;;;;;;x
 EVTOPTB_CHI_3735;I am not for hire at the moment...;;;;;;;;;;;;;x
 EVTOPTC_CHI_3735;Unfortunately, the incoming Crusade takes priority.;;;;;;;;;;;;;x
