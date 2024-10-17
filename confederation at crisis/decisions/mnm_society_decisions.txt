@@ -1,0 +1,295 @@
+###########################################
+#
+# Society decisions for Monks and Mystics
+#
+# Hermetic/mystic
+# Secret religious cults
+# Monastic orders
+# Assassins
+# Devil worshipers
+#
+###########################################
+
+
+# General
+society_decisions = { # Society decisions are only evaluated by members of societies	
+	request_to_rank_up_within_society = {
+		only_playable = yes
+
+		hide_in_decisions_list = yes # This is shown in the Society View
+		
+		ai_check_interval = 24
+		
+		potential = {
+			hidden_tooltip = {
+				OR = { #In some societies, there can only be 1 member at rank 4
+					society_rank < 3
+					NOR = {
+						society_member_of = the_assassins
+						is_devil_worshiper_trigger = yes
+					}
+				}
+				society_rank < 4
+				days_in_society > 365
+				#has_dlc = "Mystics"
+				is_in_society = yes
+				OR = { #Players can always rank up (if they have the power)
+					ai = no
+					AND = {
+						ai = yes
+						society_can_rank_up = yes
+					}
+				}
+			}
+		}
+
+		allow = {
+			#Rank requirements. IMPORTANT!!! If you change the requirements, the customizable loc keys "GetSocietyRankUpTooltip" 1, 2, 3, and 4 must be updated, as it displays these requirements.
+			custom_tooltip = { # Sufficient currency
+				text = request_to_rank_up_within_society_currency_tt
+				OR = {
+					AND = {
+						society_rank == 1
+						society_currency >= 750
+					}
+					AND = {
+						society_rank == 2
+						society_currency >= 1000
+					}
+					society_currency >= 2000 # rank 3
+				}
+			}
+			# custom_tooltip = { # No vices for Buddhist/Jain 					###Merged below
+				# text = request_to_rank_up_within_society_vices_tt
+				# OR = {
+					# NOR = { society_member_of = monastic_order_jain society_member_of = monastic_order_buddhist }
+					# NOR = {
+						# trait = greedy
+						# trait = gluttonous
+						# trait = slothful
+						# trait = envious
+						# trait = wroth
+						# trait = cruel
+						# trait = proud
+					# }
+				# }
+			# }
+			trigger_if = {
+				limit = { has_character_modifier = lost_rank_up_duel_cooldown }
+				custom_tooltip = {
+					text = recently_lost_rank_up_duel_tt
+					NOT = { has_character_modifier = lost_rank_up_duel_cooldown }				
+				}
+			}
+			trigger_if = {
+				limit = {
+					ai = no #if you are a player
+	                any_society_member = { #and there are already 4 other Heroes (rank is full).
+	                	count = 4
+	                    society_rank == 4
+	                }
+				}
+				custom_tooltip = {
+					text = there_is_a_hero_available_to_duel_tt
+		            any_society_member = { #there is no one to duel for the spot...
+	                    ai = yes
+                    	NOT = { has_character_flag = call_to_legend_active }
+	                    NOT = { trait = incapable }
+	                    prisoner = no
+	                    society_rank == 4
+	                }
+				}
+			}
+			trigger_if = {
+				limit = { has_character_flag = rank_up_blocked }
+				custom_tooltip = {
+					text = rank_up_blocked_tt
+					NOT = { has_character_flag = rank_up_blocked }
+				}
+			}			
+			# custom_tooltip = {
+				# text = request_to_rank_up_within_society_cynical_tt
+				# OR = {
+					# NOR = { society_member_of = monastic_order_jain society_member_of = monastic_order_buddhist society_member_of = monastic_order_stoics }
+					# AND = {
+						# society_rank == 1
+						# NOT = {
+							# trait = cruel
+						# }
+					# }
+					# AND = {
+						# society_rank == 2
+						# NOR = {
+							# trait = cruel
+							# trait = cynical
+						# }
+					# }
+					# AND = {
+						# society_rank == 3
+						# NOR = {
+							# trait = cruel
+							# trait = cynical
+							# trait = greedy
+							# trait = gluttonous
+							# trait = slothful
+							# trait = envious
+							# trait = wroth
+							# trait = cruel
+							# trait = proud
+						# }
+					# }
+				# }
+			# }
+			# custom_tooltip = {
+				# text = request_to_rank_up_within_society_virtues_tt
+				# OR = {
+					# NOR = { society_member_of = monastic_order_jain society_member_of = monastic_order_buddhist society_member_of = monastic_order_stoics }
+					# AND = {
+						# society_rank == 1
+						# OR = {
+							# trait = humble
+							# trait = charitable
+							# trait = chaste
+							# trait = kind
+							# trait = temperate
+							# trait = patient
+							# trait = diligent
+						# }
+					# }
+					# AND = {
+						# society_rank == 2
+						# calc_true_if = {
+							# amount = 2
+							# trait = humble
+							# trait = charitable
+							# trait = chaste
+							# trait = kind
+							# trait = temperate
+							# trait = patient
+							# trait = diligent
+						# }
+					# }
+					# AND = {
+						# society_rank == 3
+						# calc_true_if = {
+							# amount = 3
+							# trait = humble
+							# trait = charitable
+							# trait = chaste
+							# trait = kind
+							# trait = temperate
+							# trait = patient
+							# trait = diligent
+						# }
+					# }
+				# }
+			# }
+
+			custom_tooltip = {
+				text = must_not_have_sent_request_already_tooltip 
+				NOT = { has_character_flag = has_sent_request_to_rank_up }
+			}
+
+			custom_tooltip = {
+				text = must_be_allowed_to_rank_up_tooltip 
+				days_at_current_society_rank >= 1095 #IMPORTANT! Update tooltip.
+			}
+
+			custom_tooltip = {
+				text = must_have_grandmaster_tooltip #You must have a grand master
+				any_society_member = {
+					is_society_grandmaster = yes
+					same_society_as = ROOT
+				}
+			}
+
+			custom_tooltip = {
+				text = must_have_multiple_rank_4 #Society must allow multiple characters at Rank 4
+				NAND = {
+					society_rank == 3
+					OR = {
+						society_member_of = the_assassins
+						is_devil_worshiper_trigger = yes
+					}
+				}
+			}
+		}
+
+		effect = {
+			society = { save_event_target_as = my_society }
+			if = { # Special handling for warrior lodge rank 3 members (in a society with enough Heroes already)...
+				limit = {
+					ai = no
+					is_member_of_any_warrior_lodge_trigger = yes
+					society_rank == 3
+					society = {
+	                    any_society_member = { #make sure there is someone you can duel for the spot.
+	                    	NOT = { has_character_flag = call_to_legend_active }
+		                    ai = yes
+		                    prisoner = no
+		                    society_rank == 4
+		                }
+		                any_society_member = { #make sure there are already 4 other Heroes (rank is full).
+		                	count = 4
+		                    society_rank == 4
+		                }
+					}
+				}
+				set_character_flag = has_sent_request_to_rank_up
+				#character_event = { id = HF.10060 } #sends event presenting choice: to duel a current Hero or nah?
+			}
+
+			else = { #For everyone else...
+				#Rank up cost
+				if = {
+					limit = { society_rank == 1 }
+					change_society_currency = -750
+				}
+				if = {
+					limit = { society_rank == 2 }
+					change_society_currency = -1000
+				}
+				if = {
+					limit = { society_rank == 3 }
+					change_society_currency = -2000
+				}
+
+				#Perform rank up
+				hidden_tooltip = {
+					save_event_target_as = rank_up_target
+					set_character_flag = has_sent_request_to_rank_up
+					character_event = { id = MNM.10002 days = 20 random = 10 } # sends hidden delayed event to self, which then sends request to Leader of the society
+					
+					#Conversus power for benedictines
+					# if = {
+						# limit = {
+							# society_member_of = monastic_order_benedictine
+							# society_rank == 3
+						# }
+						# character_event = { id = MNM.4600 days = 10 random = 350 }
+					# }
+				}
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.5 #Slow down
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2 
+				trait = ambitious
+			}
+		}
+	}
+}

@@ -51,23 +51,23 @@ character_event = {
 	immediate = {
 		event_target:rank_up_target = { letter_event = { id = MNM.10001 } }
 
-		FROM = {
-			if = {
-				limit = {
-					society_rank == 2
-					is_christian_monastic_member_trigger = yes
-				}
+		# FROM = {
+			# if = {
+				# limit = {
+					# society_rank == 2
+					# is_christian_monastic_member_trigger = yes
+				# }
 				
-				random = {
-					chance = 20
-					modifier = {
-						ai = no
-						factor = 5
-					}
-					letter_event = { id = MNM.4431 days = 30 random = 15 } #Gives saint's fingerbone
-				}
-			}
-		}
+				# random = {
+					# chance = 20
+					# modifier = {
+						# ai = no
+						# factor = 5
+					# }
+					# letter_event = { id = MNM.4431 days = 30 random = 15 } #Gives saint's fingerbone
+				# }
+			# }
+		# }
 	}
 }
 
@@ -731,403 +731,403 @@ character_event = {
 				
 				random_list = {
 					700 = { } # Fall back dead weight
-					100 = {
-						trigger = {
-							can_join_society = monastic_order_benedictine
-						}
-						modifier = {
-							factor = 3
-							OR = {
-								trait = zealous
-								trait = intellectual
-								trait = theologian
-								trait = gardener
-								trait = monk
-								trait = nun
-								learning = 16
-								is_priest = yes
-							}
-						}
-						modifier = {
-							factor = 2
-							monastic_order_benedictine = { num_of_society_members < 15 }
-						}
-						modifier = {
-							factor = 2
-							monastic_order_benedictine = { num_of_society_members < 10 }
-						}
-						join_society = monastic_order_benedictine
-						random_list = { # Artificially increase society influence for balance purposes
-							75 = {
-								modifier = {
-									factor = 0
-									society_influence >= 30
-								}
-								add_mission_succeed_influence_effect = yes
-							}
-							25 = {
-							}
-						}
-						if = {
-							limit = {
-								NOT = {
-									society = {
-										any_society_member = {
-											is_society_grandmaster = yes
-										}
-									}
-								}
-							}
-							set_society_grandmaster = yes
-						}
-					}
-					100 = {
-						trigger = {
-							can_join_society = monastic_order_dominican
-						}
-						modifier = {
-							factor = 3
-							OR = {
-								trait = zealous
-								trait = intellectual
-								trait = theologian
-								trait = gardener
-								trait = monk
-								trait = nun
-								learning = 16
-								is_priest = yes
-							}
-						}
-						modifier = {
-							factor = 2
-							monastic_order_dominican = { num_of_society_members < 15 }
-						}
-						modifier = {
-							factor = 2
-							monastic_order_dominican = { num_of_society_members < 10 }
-						}
-						join_society = monastic_order_dominican
-						random_list = { # Artificially increase society influence for balance purposes
-							75 = {
-								modifier = {
-									factor = 0
-								}
-								modifier = {
-									factor = 0
-									society_influence >= 30
-								}
-								add_mission_succeed_influence_effect = yes
-							}
-							25 = {
-							}
-						}
-						if = {
-							limit = {
-								NOT = {
-									society = {
-										any_society_member = {
-											is_society_grandmaster = yes
-										}
-									}
-								}
-							}
-							set_society_grandmaster = yes
-						}
-					}
-					100 = {
-						trigger = {
-							can_join_society = monastic_order_orthodox
-						}
-						modifier = {
-							factor = 3
-							OR = {
-								trait = zealous
-								trait = intellectual
-								trait = theologian
-								trait = gardener
-								trait = monk
-								trait = nun
-								learning = 16
-								is_priest = yes
-							}
-						}
-						modifier = {
-							factor = 2
-							monastic_order_orthodox = { num_of_society_members < 15 }
-						}
-						modifier = {
-							factor = 2
-							monastic_order_orthodox = { num_of_society_members < 10 }
-						}
-						join_society = monastic_order_orthodox
-						random_list = { # Artificially increase society influence for balance purposes
-							75 = {
-								modifier = {
-									factor = 0
-									society_influence >= 30
-								}
-								add_mission_succeed_influence_effect = yes
-							}
-							25 = {
-							}
-						}
-						if = {
-							limit = {
-								NOT = {
-									society = {
-										any_society_member = {
-											is_society_grandmaster = yes
-										}
-									}
-								}
-							}
-							set_society_grandmaster = yes
-						}
-					}
-					100 = {
-						trigger = {
-							can_join_society = monastic_order_nestorian
-						}
-						modifier = {
-							factor = 3
-							OR = {
-								trait = zealous
-								trait = intellectual
-								trait = theologian
-								trait = gardener
-								trait = monk
-								trait = nun
-								learning = 16
-								is_priest = yes
-							}
-						}
-						modifier = {
-							factor = 2
-							monastic_order_nestorian = { num_of_society_members < 15 }
-						}
-						modifier = {
-							factor = 2
-							monastic_order_nestorian = { num_of_society_members < 10 }
-						}
-						join_society = monastic_order_nestorian
-						random_list = { # Artificially increase society influence for balance purposes
-							75 = {
-								modifier = {
-									factor = 0
-									society_influence >= 30
-								}
-								add_mission_succeed_influence_effect = yes
-							}
-							25 = {
-							}
-						}
-						if = {
-							limit = {
-								NOT = {
-									society = {
-										any_society_member = {
-											is_society_grandmaster = yes
-										}
-									}
-								}
-							}
-							set_society_grandmaster = yes
-						}
-					}
-					100 = {
-						trigger = {
-							can_join_society = monastic_order_monophysite
-						}
-						modifier = {
-							factor = 3
-							OR = {
-								trait = zealous
-								trait = intellectual
-								trait = theologian
-								trait = gardener
-								trait = monk
-								trait = nun
-								learning = 16
-								is_priest = yes
-							}
-						}
-						modifier = {
-							factor = 2
-							monastic_order_monophysite = { num_of_society_members < 15 }
-						}
-						modifier = {
-							factor = 2
-							monastic_order_monophysite = { num_of_society_members < 10 }
-						}
-						join_society = monastic_order_monophysite
-						random_list = { # Artificially increase society influence for balance purposes
-							75 = {
-								modifier = {
-									factor = 0
-									society_influence >= 30
-								}
-								add_mission_succeed_influence_effect = yes
-							}
-							25 = {
-							}
-						}
-						if = {
-							limit = {
-								NOT = {
-									society = {
-										any_society_member = {
-											is_society_grandmaster = yes
-										}
-									}
-								}
-							}
-							set_society_grandmaster = yes
-						}
-					}
-					100 = {
-						trigger = {
-							can_join_society = monastic_order_hindu
-						}
-						modifier = {
-							factor = 3
-							OR = {
-								trait = zealous
-								trait = intellectual
-								trait = theologian
-								trait = brahmin
-								learning = 16
-								is_priest = yes
-							}
-						}
-						modifier = {
-							factor = 2
-							monastic_order_hindu = { num_of_society_members < 15 }
-						}
-						modifier = {
-							factor = 2
-							monastic_order_hindu = { num_of_society_members < 10 }
-						}
-						join_society = monastic_order_hindu
-						random_list = { # Artificially increase society influence for balance purposes
-							75 = {
-								modifier = {
-									factor = 0
-									society_influence >= 30
-								}
-								add_mission_succeed_influence_effect = yes
-							}
-							25 = {
-							}
-						}
-						if = {
-							limit = {
-								NOT = {
-									society = {
-										any_society_member = {
-											is_society_grandmaster = yes
-										}
-									}
-								}
-							}
-							set_society_grandmaster = yes
-						}
-					}
-					100 = {
-						trigger = {
-							can_join_society = monastic_order_buddhist
-						}
-						modifier = {
-							factor = 3
-							OR = {
-								trait = zealous
-								trait = intellectual
-								trait = theologian
-								trait = brahmin
-								learning = 16
-								is_priest = yes
-							}
-						}
-						modifier = {
-							factor = 2
-							monastic_order_buddhist = { num_of_society_members < 15 }
-						}
-						modifier = {
-							factor = 2
-							monastic_order_buddhist = { num_of_society_members < 10 }
-						}
-						join_society = monastic_order_buddhist
-						random_list = { # Artificially increase society influence for balance purposes
-							75 = {
-								modifier = {
-									factor = 0
-									society_influence >= 30
-								}
-								add_mission_succeed_influence_effect = yes
-							}
-							25 = {
-							}
-						}
-						if = {
-							limit = {
-								NOT = {
-									society = {
-										any_society_member = {
-											is_society_grandmaster = yes
-										}
-									}
-								}
-							}
-							set_society_grandmaster = yes
-						}
-					}
-					100 = {
-						trigger = {
-							can_join_society = monastic_order_jain
-						}
-						modifier = {
-							factor = 3
-							OR = {
-								trait = zealous
-								trait = intellectual
-								trait = theologian
-								trait = brahmin
-								learning = 16
-								is_priest = yes
-							}
-						}
-						modifier = {
-							factor = 2
-							monastic_order_jain = { num_of_society_members < 15 }
-						}
-						modifier = {
-							factor = 2
-							monastic_order_jain = { num_of_society_members < 10 }
-						}
-						join_society = monastic_order_jain
-						random_list = { # Artificially increase society influence for balance purposes
-							75 = {
-								modifier = {
-									factor = 0
-									society_influence >= 30
-								}
-								add_mission_succeed_influence_effect = yes
-							}
-							25 = {
-							}
-						}
-						if = {
-							limit = {
-								NOT = {
-									society = {
-										any_society_member = {
-											is_society_grandmaster = yes
-										}
-									}
-								}
-							}
-							set_society_grandmaster = yes
-						}
-					}
+					# 100 = {
+						# trigger = {
+							# can_join_society = monastic_order_benedictine
+						# }
+						# modifier = {
+							# factor = 3
+							# OR = {
+								# trait = zealous
+								# trait = intellectual
+								# trait = theologian
+								# trait = gardener
+								# trait = monk
+								# trait = nun
+								# learning = 16
+								# is_priest = yes
+							# }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_benedictine = { num_of_society_members < 15 }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_benedictine = { num_of_society_members < 10 }
+						# }
+						# join_society = monastic_order_benedictine
+						# random_list = { # Artificially increase society influence for balance purposes
+							# 75 = {
+								# modifier = {
+									# factor = 0
+									# society_influence >= 30
+								# }
+								# add_mission_succeed_influence_effect = yes
+							# }
+							# 25 = {
+							# }
+						# }
+						# if = {
+							# limit = {
+								# NOT = {
+									# society = {
+										# any_society_member = {
+											# is_society_grandmaster = yes
+										# }
+									# }
+								# }
+							# }
+							# set_society_grandmaster = yes
+						# }
+					# }
+					# 100 = {
+						# trigger = {
+							# can_join_society = monastic_order_dominican
+						# }
+						# modifier = {
+							# factor = 3
+							# OR = {
+								# trait = zealous
+								# trait = intellectual
+								# trait = theologian
+								# trait = gardener
+								# trait = monk
+								# trait = nun
+								# learning = 16
+								# is_priest = yes
+							# }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_dominican = { num_of_society_members < 15 }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_dominican = { num_of_society_members < 10 }
+						# }
+						# join_society = monastic_order_dominican
+						# random_list = { # Artificially increase society influence for balance purposes
+							# 75 = {
+								# modifier = {
+									# factor = 0
+								# }
+								# modifier = {
+									# factor = 0
+									# society_influence >= 30
+								# }
+								# add_mission_succeed_influence_effect = yes
+							# }
+							# 25 = {
+							# }
+						# }
+						# if = {
+							# limit = {
+								# NOT = {
+									# society = {
+										# any_society_member = {
+											# is_society_grandmaster = yes
+										# }
+									# }
+								# }
+							# }
+							# set_society_grandmaster = yes
+						# }
+					# }
+					# 100 = {
+						# trigger = {
+							# can_join_society = monastic_order_orthodox
+						# }
+						# modifier = {
+							# factor = 3
+							# OR = {
+								# trait = zealous
+								# trait = intellectual
+								# trait = theologian
+								# trait = gardener
+								# trait = monk
+								# trait = nun
+								# learning = 16
+								# is_priest = yes
+							# }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_orthodox = { num_of_society_members < 15 }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_orthodox = { num_of_society_members < 10 }
+						# }
+						# join_society = monastic_order_orthodox
+						# random_list = { # Artificially increase society influence for balance purposes
+							# 75 = {
+								# modifier = {
+									# factor = 0
+									# society_influence >= 30
+								# }
+								# add_mission_succeed_influence_effect = yes
+							# }
+							# 25 = {
+							# }
+						# }
+						# if = {
+							# limit = {
+								# NOT = {
+									# society = {
+										# any_society_member = {
+											# is_society_grandmaster = yes
+										# }
+									# }
+								# }
+							# }
+							# set_society_grandmaster = yes
+						# }
+					# }
+					# 100 = {
+						# trigger = {
+							# can_join_society = monastic_order_nestorian
+						# }
+						# modifier = {
+							# factor = 3
+							# OR = {
+								# trait = zealous
+								# trait = intellectual
+								# trait = theologian
+								# trait = gardener
+								# trait = monk
+								# trait = nun
+								# learning = 16
+								# is_priest = yes
+							# }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_nestorian = { num_of_society_members < 15 }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_nestorian = { num_of_society_members < 10 }
+						# }
+						# join_society = monastic_order_nestorian
+						# random_list = { # Artificially increase society influence for balance purposes
+							# 75 = {
+								# modifier = {
+									# factor = 0
+									# society_influence >= 30
+								# }
+								# add_mission_succeed_influence_effect = yes
+							# }
+							# 25 = {
+							# }
+						# }
+						# if = {
+							# limit = {
+								# NOT = {
+									# society = {
+										# any_society_member = {
+											# is_society_grandmaster = yes
+										# }
+									# }
+								# }
+							# }
+							# set_society_grandmaster = yes
+						# }
+					# }
+					# 100 = {
+						# trigger = {
+							# can_join_society = monastic_order_monophysite
+						# }
+						# modifier = {
+							# factor = 3
+							# OR = {
+								# trait = zealous
+								# trait = intellectual
+								# trait = theologian
+								# trait = gardener
+								# trait = monk
+								# trait = nun
+								# learning = 16
+								# is_priest = yes
+							# }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_monophysite = { num_of_society_members < 15 }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_monophysite = { num_of_society_members < 10 }
+						# }
+						# join_society = monastic_order_monophysite
+						# random_list = { # Artificially increase society influence for balance purposes
+							# 75 = {
+								# modifier = {
+									# factor = 0
+									# society_influence >= 30
+								# }
+								# add_mission_succeed_influence_effect = yes
+							# }
+							# 25 = {
+							# }
+						# }
+						# if = {
+							# limit = {
+								# NOT = {
+									# society = {
+										# any_society_member = {
+											# is_society_grandmaster = yes
+										# }
+									# }
+								# }
+							# }
+							# set_society_grandmaster = yes
+						# }
+					# }
+					# 100 = {
+						# trigger = {
+							# can_join_society = monastic_order_hindu
+						# }
+						# modifier = {
+							# factor = 3
+							# OR = {
+								# trait = zealous
+								# trait = intellectual
+								# trait = theologian
+								# trait = brahmin
+								# learning = 16
+								# is_priest = yes
+							# }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_hindu = { num_of_society_members < 15 }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_hindu = { num_of_society_members < 10 }
+						# }
+						# join_society = monastic_order_hindu
+						# random_list = { # Artificially increase society influence for balance purposes
+							# 75 = {
+								# modifier = {
+									# factor = 0
+									# society_influence >= 30
+								# }
+								# add_mission_succeed_influence_effect = yes
+							# }
+							# 25 = {
+							# }
+						# }
+						# if = {
+							# limit = {
+								# NOT = {
+									# society = {
+										# any_society_member = {
+											# is_society_grandmaster = yes
+										# }
+									# }
+								# }
+							# }
+							# set_society_grandmaster = yes
+						# }
+					# }
+					# 100 = {
+						# trigger = {
+							# can_join_society = monastic_order_buddhist
+						# }
+						# modifier = {
+							# factor = 3
+							# OR = {
+								# trait = zealous
+								# trait = intellectual
+								# trait = theologian
+								# trait = brahmin
+								# learning = 16
+								# is_priest = yes
+							# }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_buddhist = { num_of_society_members < 15 }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_buddhist = { num_of_society_members < 10 }
+						# }
+						# join_society = monastic_order_buddhist
+						# random_list = { # Artificially increase society influence for balance purposes
+							# 75 = {
+								# modifier = {
+									# factor = 0
+									# society_influence >= 30
+								# }
+								# add_mission_succeed_influence_effect = yes
+							# }
+							# 25 = {
+							# }
+						# }
+						# if = {
+							# limit = {
+								# NOT = {
+									# society = {
+										# any_society_member = {
+											# is_society_grandmaster = yes
+										# }
+									# }
+								# }
+							# }
+							# set_society_grandmaster = yes
+						# }
+					# }
+					# 100 = {
+						# trigger = {
+							# can_join_society = monastic_order_jain
+						# }
+						# modifier = {
+							# factor = 3
+							# OR = {
+								# trait = zealous
+								# trait = intellectual
+								# trait = theologian
+								# trait = brahmin
+								# learning = 16
+								# is_priest = yes
+							# }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_jain = { num_of_society_members < 15 }
+						# }
+						# modifier = {
+							# factor = 2
+							# monastic_order_jain = { num_of_society_members < 10 }
+						# }
+						# join_society = monastic_order_jain
+						# random_list = { # Artificially increase society influence for balance purposes
+							# 75 = {
+								# modifier = {
+									# factor = 0
+									# society_influence >= 30
+								# }
+								# add_mission_succeed_influence_effect = yes
+							# }
+							# 25 = {
+							# }
+						# }
+						# if = {
+							# limit = {
+								# NOT = {
+									# society = {
+										# any_society_member = {
+											# is_society_grandmaster = yes
+										# }
+									# }
+								# }
+							# }
+							# set_society_grandmaster = yes
+						# }
+					# }
 					100 = {
 						trigger = {
 							can_join_society = monastic_order_stoics
@@ -2375,8 +2375,8 @@ character_event = {
     			society_member_of = hermetics
     			society_member_of = secret_religious_cult
     			society_member_of = the_assassins
-    			is_dharmic_monastic_member_trigger = yes
-    			is_christian_monastic_member_trigger = yes
+    			#is_dharmic_monastic_member_trigger = yes
+    			#is_christian_monastic_member_trigger = yes
     		}
     	}
     	text = EVTDESC_MNM_10045
@@ -2402,16 +2402,16 @@ character_event = {
     	text = EVTDESC_MNM_10045
     	picture = GFX_evt_council_arabic
     }
-    desc = {
-    	trigger = { is_dharmic_monastic_member_trigger = yes }
-    	text = EVTDESC_MNM_10045
-    	picture = GFX_evt_bishop_hindu
-    }
-    desc = {
-    	trigger = { is_christian_monastic_member_trigger = yes }
-    	text = EVTDESC_MNM_10045
-    	picture = GFX_evt_monastery_monks
-    }
+    # desc = {
+    	# trigger = { is_dharmic_monastic_member_trigger = yes }
+    	# text = EVTDESC_MNM_10045
+    	# picture = GFX_evt_bishop_hindu
+    # }
+    # desc = {
+    	# trigger = { is_christian_monastic_member_trigger = yes }
+    	# text = EVTDESC_MNM_10045
+    	# picture = GFX_evt_monastery_monks
+    # }
 
     is_triggered_only = yes
     
