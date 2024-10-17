@@ -1,0 +1,26 @@
+#171000-171999
+171090 = {
+	name="Achitomecatl" # Achitomecatl Teomecatl II
+	dynasty=1035033 # Toltecatl, "of Tollan"
+	religion="xenoterran"
+	culture="heavy_worlder_ge"
+	father=171088
+	2957.1.1={
+		birth = yes
+	}
+	2997.1.1 = {
+		add_trait = dead_crown_aztec_fylkir
+	}
+}
+171092 = {
+	name="Opochtli" # Opochtli Iztahuatzin
+	dynasty=1035017 # Nochtli, Cactus fruit
+	religion="xenoterran"
+	culture="heavy_worlder_ge"
+	1287.1.1={
+		birth = yes
+	}
+	1336.1.1={
+		death = { death_reason = death_in_mexikha_historic }
+	}
+}
