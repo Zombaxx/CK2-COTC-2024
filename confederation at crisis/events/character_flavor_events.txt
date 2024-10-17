@@ -342,6 +342,9 @@ character_event = {
 			}
 		}
 	}
+	mean_time_to_happen = {
+		years = 2
+	}
 
 	option = {
 		trigger = {
@@ -814,36 +817,40 @@ character_event = {
 	}
 }
 
-# Pirates ambush a freighter #Disabled because it spams the entire time the raider is in the province without doing anything, may want to reduce and expand functionality in future
-#character_event = {
-#	id = flavor.5200
-#	hide_window = yes
-#	is_triggered_only = yes
-#
-#	trigger = {
-#		FROM = {
-#			has_trade_post = yes
-#			NOT = { trade_post_owner = { character = ROOT } }
-#		}
-#	}
-#
-#	immediate = {
-#		FROM = { trade_post_owner = { character_event = { id = flavor.5201 } } }
-#	}
-#}
-#character_event = {
-#	id = flavor.5201
-#	desc = "EVTDESCFLAVOR5201"
-#	picture = GFX_evt_space
-#	border = GFX_event_normal_frame_war
-#	is_triggered_only = yes
-#
-#	option = {
-#		name = "EVTOPTCONFIRM"
-#		tooltip = { scaled_wealth_transfer = { to = FROM value = 0.1 } }
-#		hidden_tooltip = { FROM = { character_event = { id = flavor.5202 } } }
-#	}
-#}
+# Pirates ambush a freighter
+character_event = {
+	id = flavor.5200
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			has_trade_post = yes
+			NOT = { trade_post_owner = { character = ROOT } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 2
+	}
+
+	immediate = {
+		FROM = { trade_post_owner = { character_event = { id = flavor.5201 } } }
+	}
+}
+character_event = {
+	id = flavor.5201
+	desc = "EVTDESCFLAVOR5201"
+	picture = GFX_evt_space
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTCONFIRM"
+		tooltip = { scaled_wealth_transfer = { to = FROM value = 0.1 } }
+		hidden_tooltip = { FROM = { character_event = { id = flavor.5202 } } }
+	}
+}
 character_event = {
 	id = flavor.5202
 	desc = "EVTDESCFLAVOR5202"
@@ -855,6 +862,7 @@ character_event = {
 		name = "EVTOPTCONFIRM"
 		FROM = {
 			scaled_wealth_transfer = { to = ROOT value = 0.1 }
+			wealth = 5
 			opinion = { who = ROOT modifier = opinion_looted }
 		}
 	}
