@@ -327,8 +327,9 @@ the_assassins = {
 		age = 16
 		OR = {
 			true_religion = criminal_syndicate
+			religion_group = outlaw_group
 			AND = {
-				trait = greedy
+				#trait = greedy
 				trait = deceitful
 				NOT = { trait = radical }
 				OR = {
@@ -362,7 +363,7 @@ the_assassins = {
 			society_member_of = the_assassins #You can always see the society you are a part of
 			AND = {
 				OR = {
-					religion = criminal_syndicate
+					religion_group = outlaw_group
 					secret_religion = criminal_syndicate
 					AND = {
 						ai = no
@@ -381,10 +382,6 @@ the_assassins = {
 	}
 
 	potential = {
-		OR = {
-			religion = criminal_syndicate
-			secret_religion = criminal_syndicate
-		}
 	}
 
 	society_rank = {
@@ -638,12 +635,6 @@ the_assassins = {
 				}
 				has_religion_feature = religion_matriarchal
 			}
-			OR = {
-				is_female = yes
-				NOT = {
-					has_religion_feature = religion_matriarchal
-				}
-			}
 			NOT = { trait = decadent }
 			OR = {
 				trait = radical
@@ -651,15 +642,11 @@ the_assassins = {
 				trait = elusive_shadow
 				trait = deceitful
 				trait = ambitious
-				intrigue = 18
+				intrigue = 10
 			}
 			is_in_society = no
 			NOT = { higher_tier_than = DUKE }
 			NOT = { mercenary = yes }
-			OR = {
-				NOT = { holy_order = yes }
-				primary_title = { title = d_hades }
-			}
 		}
 	}
 }
