@@ -113,7 +113,7 @@ title_court_educator = {
 
 title_senatorduke = {
 	dignity = 8.0
-	grant_limit = 5
+	grant_limit = 4
 	opinion_effect = 0
 	monthly_salary = 0.5
 	monthly_prestige = 0.5
@@ -208,7 +208,7 @@ title_senatorduke = {
 
 title_senatorking = {
 	dignity = 8.0
-	grant_limit = 5
+	grant_limit = 2
 	opinion_effect = 0
 	monthly_salary = 0.5
 	monthly_prestige = 0.5
@@ -304,7 +304,7 @@ title_senatorking = {
 
 title_senatoremperor = {
 	dignity = 8.0
-	grant_limit = 10
+	grant_limit = 3
 	opinion_effect = 0
 	monthly_salary = 0.5
 	monthly_prestige = 0.5
@@ -400,7 +400,7 @@ title_senatoremperor = {
 
 title_senatorbigrealm1 = {
 	dignity = 8.0
-	grant_limit = 5
+	grant_limit = 1
 	opinion_effect = 0
 	monthly_salary = 0.5
 	monthly_prestige = 0.5
@@ -532,7 +532,7 @@ title_senatorbigrealm1 = {
 
 title_senatorbigrealm2 = {
 	dignity = 8.0
-	grant_limit = 5
+	grant_limit = 1
 	opinion_effect = 0
 	monthly_salary = 0.5
 	monthly_prestige = 0.5
@@ -664,7 +664,7 @@ title_senatorbigrealm2 = {
 
 title_senatorbigrealm3 = {
 	dignity = 8.0
-	grant_limit = 5
+	grant_limit = 1
 	opinion_effect = 0
 	monthly_salary = 0.5
 	monthly_prestige = 0.5
@@ -796,7 +796,7 @@ title_senatorbigrealm3 = {
 
 title_senatorbigrealm4 = {
 	dignity = 8.0
-	grant_limit = 10
+	grant_limit = 1
 	opinion_effect = 0
 	monthly_salary = 0.5
 	monthly_prestige = 0.5
@@ -928,7 +928,7 @@ title_senatorbigrealm4 = {
 
 title_senatorbigrealm5 = {
 	dignity = 8.0
-	grant_limit = 25
+	grant_limit = 1 #25
 	opinion_effect = 0
 	monthly_salary = 0.5
 	monthly_prestige = 0.5
