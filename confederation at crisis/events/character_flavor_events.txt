@@ -342,10 +342,7 @@ character_event = {
 			}
 		}
 	}
-	mean_time_to_happen = {
-		years = 2
-	}
-
+	
 	option = {
 		trigger = {
 			FROM = {
@@ -828,10 +825,6 @@ character_event = {
 			has_trade_post = yes
 			NOT = { trade_post_owner = { character = ROOT } }
 		}
-	}
-	
-	mean_time_to_happen = {
-		years = 2
 	}
 
 	immediate = {
