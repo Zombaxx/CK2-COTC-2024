@@ -936,18 +936,18 @@ character_event = {
 }
 
 # Freighter shipwreck
-province_event = {
-	id = flavor.300
-	hide_window = yes
-	trigger = {
-		has_trade_post = yes
-		trade_post_owner = { NOT = { any_demesne_province = { province_id = PREVPREV } } }
-	}
-	mean_time_to_happen = {
-		months = 120
-	}
-	immediate = { trade_post_owner = { character_event = { id = flavor.301 } } }
-}
+#province_event = {
+#	id = flavor.300
+#	hide_window = yes
+#	trigger = {
+#		has_trade_post = yes
+#		trade_post_owner = { NOT = { any_demesne_province = { province_id = PREVPREV } } }
+#	}
+#	mean_time_to_happen = {
+#		months = 120
+#	}
+#	immediate = { trade_post_owner = { character_event = { id = flavor.301 } } }
+#}
 character_event = {
 	id = flavor.301
 	is_triggered_only = yes
