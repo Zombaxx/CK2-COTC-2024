@@ -90,7 +90,7 @@ nomad_agitation = {
 	icon = 83
 }
 negative_money = {
-	land_morale = -1
+	land_morale =  -0.25
 	monthly_character_prestige = -1
 	global_levy_size = -0.1
 	general_opinion = -20
