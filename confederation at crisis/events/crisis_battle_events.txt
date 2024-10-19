@@ -1210,19 +1210,19 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
 
-	trigger = {
-		NOT = { trait = full_cybernetic_conversion }
-		NOT = { trait = frigate_pilot }
-		FROM = {
-			any_realm_character = {
-				not = { trait = frigate_pilot }
-				at_location = ROOT
-				in_battle = yes
-				war_with = ROOT
-				martial = ROOT
-			}
-		}
-	}
+#	trigger = {
+#		NOT = { trait = full_cybernetic_conversion }
+#		NOT = { trait = frigate_pilot }
+#		FROM = {
+#			any_realm_character = {
+#				not = { trait = frigate_pilot }
+#				at_location = ROOT
+#				in_battle = yes
+#				war_with = ROOT
+#				martial = ROOT
+#			}
+#		}
+#	}
 
 	weight_multiplier = {
 		factor = 1
