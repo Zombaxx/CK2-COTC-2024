@@ -82,7 +82,7 @@ NDefines.NMilitary.HOLY_ORDER_DYNASTY_HIRE_COST_FACTOR = 0.1		-- Reduction of co
 NDefines.NMilitary.VASSAL_MERC_HIRE_COST_FACTOR = 0.1			-- Fraction of nominal hire cost when hiring vassal mercenaries OR Holy Orders
 NDefines.NMilitary.MERCENARY_HIRE_DISTANCE_THRESHOLD = 800
 NDefines.NMilitary.REINFORCE_RATE = 0.2                          -- Reinforce rate per year, it is increased compared to vanilla because building ships is easier than making people reproduce
-NDefines.NMilitary.DAYS_BETWEEN_COMBAT_EVENTS = 5                -- Combat events will happen every this many days
+NDefines.NMilitary.DAYS_BETWEEN_COMBAT_EVENTS = 10                -- Combat events will happen every this many days
 NDefines.NMilitary.DAYS_BEFORE_FIRST_COMBAT_EVENT = 2             -- First combat event can't fire before this many days
 
 
@@ -121,7 +121,7 @@ NDefines.NMilitary.BATTLE_MINIMUM_WARSCORE = 0.01
 NDefines.NMilitary.MORALELOSS_FACTOR = 1.0                                 -- Affects the morale loss rate in combats (higher gives bigger losses)
 NDefines.NMilitary.MIN_COMBAT_DAYS = 15                                                        -- Minimum number of days in combat
 NDefines.NMilitary.NUMBER_OF_RETREAT_DAYS = 4                                                 -- Number of days before you retreat successfully
-NDefines.NMilitary.NUMBER_OF_TROOPS_PER_GALLEY = 100                                          -- Number of men each galley can hold
+NDefines.NMilitary.NUMBER_OF_TROOPS_PER_GALLEY = 130                                          -- Number of men each galley can hold
 NDefines.NMilitary.BATTLE_WARSCORE_WORTH = 100                                                 -- Warscore from battles are multiplied with this value
 NDefines.NMilitary.BATTLE_WARSCORE_DEFENDER_MULTIPLIER = 1.5                                  -- Defenders wins are multiplied with this value, which also means they get more prestige for a win
 NDefines.NMilitary.BATTLE_WARSCORE_WORTH_MULTIPLIER = 1.25                                    -- Multiplier applied to the warscore value of individual battles (doesn't affect prestige)
@@ -130,17 +130,17 @@ NDefines.NMilitary.BATTLE_WARSCORE_LANDLESS_MULTIPLIER = 2                      
 NDefines.NMilitary.TERRAIN_SPEC_BONUS = 0.25                                                   -- Bonus to fighting in this terrain if you have that terrain as your
 
 -- siege related stuff
-NDefines.NMilitary.ATTACKER_SIEGE_DAMAGE = 1.0                      -- Skirmish damage done by defenders on attackers
-NDefines.NMilitary.DEFENDER_SIEGE_DAMAGE = 1.0                      -- Skirmish damage done by attackers on defenders
+NDefines.NMilitary.ATTACKER_SIEGE_DAMAGE = 0                      -- Skirmish damage done by defenders on attackers
+NDefines.NMilitary.DEFENDER_SIEGE_DAMAGE = 0                      -- Skirmish damage done by attackers on defenders
 NDefines.NMilitary.PERCENT_OF_GARRISON_DETACHED = 0.1               -- How many people of your forces become the new garrison
-NDefines.NMilitary.NUM_DAYS_BETWEEN_SIEGE_MORALE_LOSS = 6        -- Number of days between morale loss for defender in a siege
-NDefines.NMilitary.SIEGE_MORALE_LOSS = 0.15                                        -- Base monthly morale loss in a siege
-NDefines.NMilitary.FORT_LEVEL_MORALE_LOSS_REDUCTION_MULT = 4.0    -- Fort Level effect on morale loss (a higher value slows down morale loss)
-NDefines.NMilitary.DAYS_BEFORE_DEFENDER_SALLY = 4                 -- Seemly this affects how many days happen between siege events.
-NDefines.NMilitary.ATTACKER_ASSULT_DAMAGE_FACTOR = 3.0             -- How much damage attackers take when assaulting
-NDefines.NMilitary.DEFENDER_ASSULT_DAMAGE_FACTOR = 0.4            -- How much damage defenders take when assaulting
-NDefines.NMilitary.DAYS_PER_FORTLEVEL_BEFORE_ASSAULT = 5         -- Number of days until attacker can assault
-NDefines.NMilitary.SIMPLE_RETREAT_ENABLED_SIEGE = 1                                           -- Enables simple retreat for sieges if set to 1
+NDefines.NMilitary.NUM_DAYS_BETWEEN_SIEGE_MORALE_LOSS = 12        -- Number of days between morale loss for defender in a siege
+NDefines.NMilitary.SIEGE_MORALE_LOSS = 0.5                                        -- Base monthly morale loss in a siege
+NDefines.NMilitary.FORT_LEVEL_MORALE_LOSS_REDUCTION_MULT = 2.0    -- Fort Level effect on morale loss (a higher value slows down morale loss)
+NDefines.NMilitary.DAYS_BEFORE_DEFENDER_SALLY = 7                 -- Seemly this affects how many days happen between siege events.
+NDefines.NMilitary.ATTACKER_ASSULT_DAMAGE_FACTOR = 15             -- How much damage attackers take when assaulting
+NDefines.NMilitary.DEFENDER_ASSULT_DAMAGE_FACTOR = 0.6           -- How much damage defenders take when assaulting
+NDefines.NMilitary.DAYS_PER_FORTLEVEL_BEFORE_ASSAULT = 30         -- Number of days until attacker can assault
+NDefines.NMilitary.SIMPLE_RETREAT_ENABLED_SIEGE = 0                                           -- Enables simple retreat for sieges if set to 1
 NDefines.NMilitary.FORT_LEVEL_ASSAULT_THRESHOLD = 8
 
 
