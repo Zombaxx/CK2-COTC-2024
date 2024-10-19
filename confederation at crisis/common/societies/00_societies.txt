@@ -326,7 +326,7 @@ the_assassins = {
 		}
 		age = 16
 		OR = {
-			true_religion = criminal_syndicate
+			true_religion = mobster
 			religion_group = outlaw_group
 			AND = {
 				#trait = greedy
@@ -342,7 +342,7 @@ the_assassins = {
 				ai = no
 				NOT = { trait = radical }
 				any_playable_ruler = {
-					religion = criminal_syndicate
+					religion = mobster
 					NOT = {
 						distance_from_realm = { value = 300 who = ROOT }
 					}
@@ -364,12 +364,12 @@ the_assassins = {
 			AND = {
 				OR = {
 					religion_group = outlaw_group
-					secret_religion = criminal_syndicate
+					secret_religion = mobster
 					AND = {
 						ai = no
 						NOT = { trait = radical }
 						any_playable_ruler = {
-							religion = criminal_syndicate
+							religion = mobster
 							NOT = {
 								distance_from_realm = { value = 300 who = ROOT }
 							}
@@ -625,16 +625,8 @@ the_assassins = {
 			ai = yes
 			historical = no
 	    	controls_religion = no
-			religion = criminal_syndicate
+			religion = mobster
 			age = 16
-			OR = {
-				is_female = no
-				has_game_rule = {
-					name = gender
-					value = all
-				}
-				has_religion_feature = religion_matriarchal
-			}
 			NOT = { trait = decadent }
 			OR = {
 				trait = radical

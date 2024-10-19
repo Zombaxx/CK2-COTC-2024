@@ -312,11 +312,11 @@ character_event = {
 				set_character_flag = assassins_attempted_recruitment
 				set_character_flag = ongoing_recruitment
 				if = {
-					limit = { NOT = { religion = shiite } }
+					limit = { NOT = { religion = mobster } }
 					character_event = { id = MNM.6020 } 
 				}
 				if = {
-					limit = { religion = shiite }
+					limit = { religion = mobster }
 					character_event = { id = MNM.6022 } 
 				}
 			}
@@ -725,7 +725,7 @@ character_event = {
 				}
 				modifier = {
 					factor = 3
-					true_religion = shiite
+					true_religion = mobster
 					can_join_society = the_assassins
 				}
 				
@@ -1781,7 +1781,7 @@ character_event = {
 						modifier = {
 							factor = 0.1
 							NOR = { 
-								true_religion = shiite 
+								true_religion = mobster 
 								AND = {
 									trait = sympathy_islam
 									trait = deceitful
@@ -1796,7 +1796,7 @@ character_event = {
 						}
 						modifier = {
 							factor = 0
-							NOT = { true_religion = shiite }
+							NOT = { true_religion = mobster }
 							trait = zealous
 						}
 						modifier = {
@@ -1805,12 +1805,12 @@ character_event = {
 						}
 						modifier = {
 							factor = 2
-							true_religion = shiite
+							true_religion = mobster
 							is_landed = yes
 						}
 						modifier = {
 							factor = 5
-							true_religion = shiite
+							true_religion = mobster
 							NOT = { trait = decadent }
 							OR = {
 								trait = zealous
@@ -1836,10 +1836,10 @@ character_event = {
 						if = {
 							limit = {
 								NOT = {
-									religion = shiite
+									religion = mobster
 								}
 							}
-							set_secret_religion = shiite
+							set_secret_religion = mobster
 						}
 						join_society = the_assassins
 						random_list = { # Artificially increase society influence for balance purposes

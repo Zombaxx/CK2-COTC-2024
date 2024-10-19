@@ -484,7 +484,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = zealous
-				NOT = { secret_religion = shiite }
+				NOT = { secret_religion = mobster }
 			}
 			modifier = {
 				factor = 0
@@ -624,11 +624,11 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 
 	desc = {
-		trigger = { FROM = { NOT = { religion = shiite } } }
+		trigger = { FROM = { NOT = { religion = mobster } } }
 		text = EVTDESC_MNM_6022_A
 	}
 	desc = {
-		trigger = { FROM = { religion = shiite } }
+		trigger = { FROM = { religion = mobster } }
 		text = EVTDESC_MNM_6022_B
 	}
 
@@ -898,8 +898,8 @@ character_event = {
 						society = the_assassins
 					}
 					if = {
-						limit = { NOT = { religion = shiite } }
-						set_secret_religion = shiite
+						limit = { NOT = { religion = mobster } }
+						set_secret_religion = mobster
 					}
 				}
 			}
@@ -1050,7 +1050,7 @@ character_event = {
 			custom_tooltip = { text = EVTOPTB_6028_TOOLTIP }
 		}
 
-		religion = shiite
+		religion = mobster
 
 		hidden_effect = { character_event = { id = MNM.6029 days = 1 } }
 		
@@ -1104,7 +1104,7 @@ character_event = {
 		}
 		
 		hidden_effect = { clear_secret_religion = yes } #To hide spammy tooltips...
-		set_secret_religion = shiite
+		set_secret_religion = mobster
 
 		hidden_effect = { character_event = { id = MNM.6029 days = 1 } }
 
@@ -1254,8 +1254,8 @@ character_event = {
 							society = the_assassins
 						}
 						if = {
-							limit = { NOT = { religion = shiite } }
-							set_secret_religion = shiite
+							limit = { NOT = { religion = mobster } }
+							set_secret_religion = mobster
 						}
 					}
 				}
@@ -1411,7 +1411,7 @@ character_event = {
 			limit = { 
 				NOT = { society_member_of = the_assassins }
 				trait = cynical 
-				religion = shiite
+				religion = mobster
 				is_adult = yes
 				ai = yes
 			}
@@ -3323,7 +3323,7 @@ character_event = {
 			}
 			20 = {
 				modifier = { factor = 0 ai = yes }
-				modifier = { factor = 0 NOT = { religion = shiite } }
+				modifier = { factor = 0 NOT = { religion = mobster } }
 				event_target:grand_master = { character_event = { id = MNM.6203 } } #Convert a specific holding
 			}
 			15 = {
@@ -3351,7 +3351,7 @@ character_event = {
 				}
 				modifier = {
 					factor = 0
-					NOT = { religion = shiite }
+					NOT = { religion = mobster }
 				}
 				modifier = {
 					factor = 0
@@ -3369,11 +3369,11 @@ character_event = {
 								owner = {
 									top_liege = {
 										NOT = { character = ROOT }
-										NOT = { religion = shiite }
+										NOT = { religion = mobster }
 										any_realm_province = {
-											owner = { NOT = { religion = shiite } }
+											owner = { NOT = { religion = mobster } }
 											any_province_holding = { 
-												owner = { NOT = { religion = shiite } } 
+												owner = { NOT = { religion = mobster } } 
 												OR = {
 													holding_type = temple
 													holding_type = castle
@@ -3466,12 +3466,12 @@ character_event = {
 					any_independent_ruler = { 
 						is_within_diplo_range = ROOT #Not using assassins_appropriate_target_trigger here to also find vassals/commanders
 						NOT = { character = ROOT }
-						NOT = { religion = shiite }
+						NOT = { religion = mobster }
 						NOT = { society_member_of = the_assassins }
 						any_war = {
 							attacker = { character = PREV }
 							defender = { 
-								religion = shiite 
+								religion = mobster 
 								NOT = { character = ROOT }
 							}
 						}
@@ -3483,12 +3483,12 @@ character_event = {
 					limit = {
 						is_within_diplo_range = ROOT #Not using assassins_appropriate_target_trigger here to also find vassals/commanders
 						NOT = { character = ROOT }
-						NOT = { religion = shiite }
+						NOT = { religion = mobster }
 						NOT = { society_member_of = the_assassins }
 						any_war = {
 							any_attacker = { character = PREV }
 							defender = { 
-								religion = shiite 
+								religion = mobster 
 								NOT = { character = ROOT }
 							}
 						}
@@ -3514,7 +3514,7 @@ character_event = {
 									liege = { is_feudal = yes }
 									any_war = {
 										any_attacker = { character = PREV }
-										defender = { religion = shiite }
+										defender = { religion = mobster }
 									}
 								}
 							}
@@ -3532,7 +3532,7 @@ character_event = {
 										liege = { is_feudal = yes }
 										any_war = {
 											any_attacker = { character = PREV }
-											defender = { religion = shiite }
+											defender = { religion = mobster }
 										}
 									}
 								}
@@ -3630,8 +3630,8 @@ character_event = {
 							is_evil_trigger = yes
 							trait = zealous
 						}
-						NOT = { religion = shiite }
-						any_realm_province = { religion = shiite }
+						NOT = { religion = mobster }
+						any_realm_province = { religion = mobster }
 					}
 				}
 				random_independent_ruler = {
@@ -3643,8 +3643,8 @@ character_event = {
 							is_evil_trigger = yes
 							trait = zealous
 						}
-						NOT = { religion = shiite }
-						any_realm_province = { religion = shiite }
+						NOT = { religion = mobster }
+						any_realm_province = { religion = mobster }
 					}
 					save_event_target_as = assassins_target
 					set_character_flag = assassins_target_persecutes_shiites
@@ -3658,13 +3658,13 @@ character_event = {
 				limit = {
 					assassins_appropriate_target_trigger = yes
 					NOT = { character = ROOT }
-					NOT = { religion = shiite }
+					NOT = { religion = mobster }
 					NOT = { society_member_of = the_assassins }
 					OR = {
 						NOT = {
 							any_playable_ruler = {
 								assassins_appropriate_target_trigger = yes
-								NOT = { religion = shiite }
+								NOT = { religion = mobster }
 								NOT = { society_member_of = the_assassins }
 								
 								OR = {
@@ -3774,11 +3774,11 @@ society_quest_event = {
 		hidden_effect = {
 			event_target:assassins_target = {
 				any_war = {
-					limit = { defender = { religion = shiite } }
+					limit = { defender = { religion = mobster } }
 					defender = { save_event_target_as = shiite_defender }
 				}
 				any_realm_province = {
-					limit = { religion = shiite }
+					limit = { religion = mobster }
 					save_event_target_as = shiite_province
 				}
 			}
@@ -3946,8 +3946,8 @@ character_event = {
 
 	trigger = { 
 		FROM = { 
-			religion = shiite 
-			any_realm_province = { NOT = { religion = shiite } }
+			religion = mobster 
+			any_realm_province = { NOT = { religion = mobster } }
 		} 
 	}
 
@@ -3984,19 +3984,19 @@ society_quest_event = {
 	immediate = {
 		random_realm_province = {
 			limit = { 
-				NOT = { religion = shiite }
+				NOT = { religion = mobster }
 			}
 			save_event_target_as = conversion_province
 		}
 		random_realm_province = {
 			limit = { 
-				owner = { NOT = { religion = shiite } }
-				NOT = { religion = shiite }
+				owner = { NOT = { religion = mobster } }
+				NOT = { religion = mobster }
 			}
 			save_event_target_as = conversion_province
 		}
 		random_demesne_province = {
-			limit = { NOT = { religion = shiite } }
+			limit = { NOT = { religion = mobster } }
 			save_event_target_as = conversion_province
 		}
 		event_target:conversion_province = { owner = { save_event_target_as = conversion_province_owner } }
@@ -4895,13 +4895,13 @@ society_quest_event = {
 							OR = {
 								NOT = { religion_group = muslim }
 								AND = {
-									NOT = { religion = shiite }
+									NOT = { religion = mobster }
 									NOT = { ROOT = { any_realm_province = { any_neighbor_province = { owner = { top_liege = { NOT = { religion_group = muslim } } } } } } }
 								}
 							}
 							any_realm_province = {
 								any_province_holding = { 
-									owner = { NOT = { religion = shiite } } 
+									owner = { NOT = { religion = mobster } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4920,14 +4920,14 @@ society_quest_event = {
 							OR = {
 								NOT = { religion_group = muslim }
 								AND = {
-									NOT = { religion = shiite }
+									NOT = { religion = mobster }
 									NOT = { ROOT = { any_realm_province = { any_neighbor_province = { owner = { top_liege = { NOT = { religion_group = muslim } } } } } } }
 								}
 							}
 							any_realm_province = {
-								owner = { NOT = { religion = shiite } }
+								owner = { NOT = { religion = mobster } }
 								any_province_holding = { 
-									owner = { NOT = { religion = shiite } } 
+									owner = { NOT = { religion = mobster } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4943,7 +4943,7 @@ society_quest_event = {
 						random_realm_province = {
 							limit = {
 								any_province_holding = { 
-									owner = { NOT = { religion = shiite } } 
+									owner = { NOT = { religion = mobster } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4952,7 +4952,7 @@ society_quest_event = {
 							}
 							random_province_holding = {
 								limit = {
-									owner = { NOT = { religion = shiite } } 
+									owner = { NOT = { religion = mobster } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4964,7 +4964,7 @@ society_quest_event = {
 						random_demesne_province = {
 							limit = {
 								any_province_holding = { 
-									owner = { NOT = { religion = shiite } } 
+									owner = { NOT = { religion = mobster } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4973,7 +4973,7 @@ society_quest_event = {
 							}
 							random_province_holding = {
 								limit = {
-									owner = { NOT = { religion = shiite } } 
+									owner = { NOT = { religion = mobster } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -7740,7 +7740,7 @@ character_event = { # Conversion event (for apprentice) if they are not already 
 	option = { #I (apprentice)  will convert
 		name = EVTOPTA_MNM_6258
 		
-		religion = shiite
+		religion = mobster
 		
 		ai_chance = {
 			factor = 20
@@ -7767,7 +7767,7 @@ character_event = { # Conversion event (for apprentice) if they are not already 
 		name = EVTOPTB_MNM_6258
 		
 		clear_secret_religion = yes
-		set_secret_religion = shiite
+		set_secret_religion = mobster
 
 		ai_chance = {
 			factor = 80
@@ -9095,9 +9095,9 @@ character_event = {
 			limit = { 
 				independent = yes 
 				primary_title = { title = d_hashshashin } 
-				NOT = { religion = shiite }
+				NOT = { religion = mobster }
 			}
-			religion = shiite
+			religion = mobster
 		}
 
 		if = {
@@ -9105,12 +9105,12 @@ character_event = {
 				NAND = {
 					independent = yes 
 					primary_title = { title = d_hashshashin }
-					religion = shiite
+					religion = mobster
 				}
-				NOT = { secret_religion = shiite }
+				NOT = { secret_religion = mobster }
 			}
 			clear_secret_religion = yes
-			set_secret_religion = shiite
+			set_secret_religion = mobster
 		}
 
 		#Try and force them to lvl 3 of the assassins
@@ -9147,10 +9147,10 @@ character_event = {
 		if = {
 			limit = { 
 				primary_title = { title = d_hashshashin } 
-				religion = shiite
+				religion = mobster
 			} 
 			any_courtier = {
-				religion = shiite
+				religion = mobster
 
 				if = {
 					limit = {
@@ -9170,7 +9170,7 @@ character_event = {
 				}
 			}
 			any_vassal = {
-				religion = shiite
+				religion = mobster
 
 				if = {
 					limit = {
