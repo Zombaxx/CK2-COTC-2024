@@ -1203,13 +1203,13 @@ character_event = {
 }
 
 # Warship versus Warship: Maimed enemy
-character_event = {
-	id = battle.22
-	desc = "EVTDESCBATTLE22"
-	picture = GFX_evt_battle
-	border = GFX_event_normal_frame_war
-	is_triggered_only = yes
-
+#character_event = {
+#	id = battle.22
+#	desc = "EVTDESCBATTLE22"
+#	picture = GFX_evt_battle
+#	border = GFX_event_normal_frame_war
+#	is_triggered_only = yes
+#
 #	trigger = {
 #		NOT = { trait = full_cybernetic_conversion }
 #		NOT = { trait = frigate_pilot }
@@ -1223,109 +1223,109 @@ character_event = {
 #			}
 #		}
 #	}
-
-	weight_multiplier = {
-		factor = 1
-		modifier = {
-			factor = 0.25
-			has_focus = focus_war
-		}
-		#modifier = {
-		#	factor = 0.2
-		#	any_artifact = {
-		#		is_artifact_equipped = yes
-		#		is_artifact_same_type_as = bishamonten_class_dreadnought
-		#	}
-		#}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 2 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 4 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 6 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 8 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 10 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 12 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 14 }
-		}
-		modifier = {
-			factor = 0.8
-			martial = 16
-		}
-		modifier = {
-			factor = 0.8
-			martial = 18
-		}
-		modifier = {
-			factor = 0.8
-			martial = 20
-		}
-		modifier = {
-			factor = 0.8
-			martial = 22
-		}
-		modifier = {
-			factor = 0.8
-			martial = 24
-		}
-		modifier = {
-			factor = 0.8
-			martial = 26
-		}
-		modifier = {
-			factor = 0.8
-			martial = 28
-		}
-		modifier = {
-			factor = 0.8
-			martial = 30
-		}
-		modifier = {
-			factor = 1.25
-			trait = brave
-		}
-		modifier = {
-			factor = 0.8
-			trait = craven
-		}
-	}
-	option = {
-		name = "EVTOPTABATTLE22"
-		random_list = {
-			60 = { inflict_moderate_injury_effect = yes }
-			40 = { inflict_major_injury_effect = yes }
-		}
-		FROM = {
-			random_realm_character = {
-				limit = {
-					NOT = { trait = frigate_pilot }
-					at_location = ROOT
-					in_battle = yes
-					war_with = ROOT
-					martial = ROOT
-				}
-				character_event = { id = battle.23 tooltip = "EVTTOOLTIPBATTLE21" }
-			}
-		}
-	}
-}
+#
+#	weight_multiplier = {
+#		factor = 1
+#		modifier = {
+#			factor = 0.25
+#			has_focus = focus_war
+#		}
+#		#modifier = {
+#		#	factor = 0.2
+#		#	any_artifact = {
+#		#		is_artifact_equipped = yes
+#		#		is_artifact_same_type_as = bishamonten_class_dreadnought
+#		#	}
+#		#}
+#		modifier = {
+#			factor = 1.25
+#			NOT = { martial = 2 }
+#		}
+#		modifier = {
+#			factor = 1.25
+#			NOT = { martial = 4 }
+#		}
+#		modifier = {
+#			factor = 1.25
+#			NOT = { martial = 6 }
+#		}
+#		modifier = {
+#			factor = 1.25
+#			NOT = { martial = 8 }
+#		}
+#		modifier = {
+#			factor = 1.25
+#			NOT = { martial = 10 }
+#		}
+#		modifier = {
+#			factor = 1.25
+#			NOT = { martial = 12 }
+#		}
+#		modifier = {
+#			factor = 1.25
+#			NOT = { martial = 14 }
+#		}
+#		modifier = {
+#			factor = 0.8
+#			martial = 16
+#		}
+#		modifier = {
+#			factor = 0.8
+#			martial = 18
+#		}
+#		modifier = {
+#			factor = 0.8
+#			martial = 20
+#		}
+#		modifier = {
+#			factor = 0.8
+#			martial = 22
+#		}
+#		modifier = {
+#			factor = 0.8
+#			martial = 24
+#		}
+#		modifier = {
+#			factor = 0.8
+#			martial = 26
+#		}
+#		modifier = {
+#			factor = 0.8
+#			martial = 28
+#		}
+#		modifier = {
+#			factor = 0.8
+#			martial = 30
+#		}
+#		modifier = {
+#			factor = 1.25
+#			trait = brave
+#		}
+#		modifier = {
+#			factor = 0.8
+#			trait = craven
+#		}
+#	}
+#	option = {
+#		name = "EVTOPTABATTLE22"
+#		random_list = {
+#			60 = { inflict_moderate_injury_effect = yes }
+#			40 = { inflict_major_injury_effect = yes }
+#		}
+#		FROM = {
+#			random_realm_character = {
+#				limit = {
+#					NOT = { trait = frigate_pilot }
+#					at_location = ROOT
+#					in_battle = yes
+#					war_with = ROOT
+#					martial = ROOT
+#				}
+#				character_event = { id = battle.23 tooltip = "EVTTOOLTIPBATTLE21" }
+#			}
+#		}
+#	}
+#}
 # Warship versus Warship: Maimed
 character_event = {
 	id = battle.23
