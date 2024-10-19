@@ -1026,8 +1026,110 @@ on_death = {
 
 		532 #Clears regents if heir has one already
 		MNM.6991 #Clears any quests targeting this character
-				HF.24017 #Murder points for Forge Bloodline Ambition.
+		HF.24017 #Murder points for Forge Bloodline Ambition.
 		liestates.7 #Estates inheritance
+		
+		#8250
+		650
+
+
+		70041
+		88291
+		SoA.5306
+		705
+		CM.1068 # Carloman dies
+		CM.1069 # Charlemagne dies
+				# Chronicle entry
+		CM.6185 # Dies of other causes while assassination is in progress - clear flags
+		LT.21100 # # check to see if Henry I of England dies without male son
+		WoL.6335 # Owner of Necronomicon dies...
+		722 # Until Death Do Us Part achievement check
+		HLF.8001 # Sky Burial
+		HL.12
+		HL.4998
+		ZE.1030 # Daughter becomes disobedient - killed lover
+		ZE.1040 # Daughter becomes disobedient - killed friend
+		731 #Achievement Eternity Denied
+		732 #Achievement Papal Mache
+		734 #Achievement Aptly Named	
+			#Clears regents if heir has one already
+		RIP.4400 #Nicknames for executions
+		GR.10
+		MNM.6844 #Removes mark of death block for Assassins GM
+
+		MNM.6012 #Transfers assassins debt to heir
+		MNM.1415 #Announces hermetics apprentice death
+		SoA.3091 # The Death of the Demon Child?
+		RoI.248 # clearing inventory of cursed diamond
+		740 # Achievement Unwelcome Visitors
+		MNM.9030 # Notify of dead relic hunter
+		MNM.1611 # Clears Apprentice minor titles
+		JD.60210 # Destroy Pretender Chinese Empire if heir is not same dynasty and chinese
+		680
+		JD.60015 # Notify of Suzerain dying and you being free
+		JD.60006 # Destroy prosthetics
+		JD.3042 # Clear Supply Horses modifier if no longer Nomadic
+		JD.10080 # Your Chinese Prince/Princess has died (for children or spouse - must be read before JD.60310!)
+		JD.60310 # Courtier from China dies
+		JD.10022 # Chinese councilor visiting dies and cancels visit
+		HF.20014 	# On death of sponsor before baptism
+		HF.20016 	# On death of converter before baptism
+		HF.20022	# On death of sponsor after baptism
+		HF.20095	# On death of converter after baptism
+		HF.20034	# True believer vassal dies before ceremony, heir chooses what to do
+		GR.14 # Lose disconnected exclaves if not at war (Limited)
+		GR.15 # Lose disconnected exclaves if not at war (Significant)
+		GR.16 # Lose disconnected exclaves if not at war (Harsh)
+		GR.17 # Lose disconnected exclaves if not at war (Total)
+		GR.18 # Lose disconnected exclaves if not at war (Limited Naval)
+		HF.20227 # Character flag inheritance during wars for Coronation
+		HF.20228 # Character flag inheritance during wars for Coronation
+		HF.20229 # Character flag inheritance during wars for Coronation
+		HF.20231 # Notification if priest dies before the end of the Coronation Ceremony
+		HF.20374 # Set uncrowned trait to handle real uncrowned Kings not gaining a crown after death.
+		HF.20393 # On death of vassal, heir prompted to pay homage to crowned liege.
+		HF.20415 # Add hidden traits to make dead kings wear special crowns after the artifact has been transferred.
+		HF.20406 # Artifact inheritance for special crowns.
+		HF.21001 # Clear swayed target on his death.
+		HF.22119 # Clear swayed target on his death.
+		HF.40000 # Potential Beatification
+		HF.40090 # Potential bad Papal beatification
+		HF.40100 # Potential Ancestor Worship
+		HF.21152 # Clear special interest Sway/Antagonize characters on_death of Swayer/Antagonizer.
+		LoR.47 # Augustus trait cleanup
+		HFP.10997 #For logging purposes: how many of my commanders died during my lifetime
+		HFP.41002 # Change the Official Crusade Recipient if the current one dies
+		HFP.41053 # Change Beneficiary when a Beneficiary dies
+		HF.23410 #Haruspicy + Bloodthirsty Gods = Read future in human entrails of your sacrifices.
+		HF.23430 #Bloodthirsty Gods gain points for sacrifying people.
+		HF.23448 #A contender for the blood games dies before the games start.
+		HF.23450 #Host of blood games dies before the games start.
+		HF.23801 #Host of a great tribal festival dies, end the event chain.
+		HF.10502 #Clears quest target for: Warrior Lodge duel-, wage war-, and recruit child-missions
+		WoL.4801 #Clear DND on your Carousing guests
+		HF.25801 #Leader of Childrens' Crusade died before war, disband everything.
+		HFP.41170 # Check Crusade Dynasty Modifier
+		HF.560 # Notify Lodge Members that die in duels
+		HF.25071 #Clear Warriors of Ukko event troops.
+		HF.24017 #Murder points for Forge Bloodline Ambition.
+		HF.24232 #Dragon Blood.
+		HF.12304 #Legendary Journey: Notify current heir and other warrior lodge members of your untimely demise
+		HF.49201 # Reconquista Death
+		HF.49208 # Clean up event troops at an old ex-Reconquistadors death
+		HF.50107 # Clean up for Warrior Lodge war aid
+		HFP.24019 # Elder has been killed, other Elders hate the killer.
+		HFP.19101 # Varangian guards return home upon becoming players
+		LT.20501 # Sucessor must decide on Burial if it has wonders with burial_ground flag
+	}
+	random_events = {
+		1 = RIP.29800 #reincarnation investigation
+		5 = HF.51000 # Crucible steel weapon chain
+		10 = 24505
+		10 = 24510
+		25 = RIP.29000 #Lovers/rivals/friends react 
+		100 = MNM.1207 # Hermetic Scrying vision fulfilled
+		2 = HF.40050 # Potential Bad Beatification
+		100 = 0
 	}
 }
 
