@@ -195,11 +195,11 @@ STAT_PIETY_MENU_CREDIBILITY;Credibility;;;;;;;;;;;;;x
 NOT_DEMESENE_PROVINCE_STARTS;No province;;;;;;;;;;;;;x
 STAT_PIETY_MENU_RESPECT;Respect;;;;;;;;;;;;;x
 self_appointment;Self Appointment;;;;;;;;;;;;;x
-RULE_CATGIRLS;Catgirls;;;;;;;;;;;;;x
-RULE_CATGIRLS_DESC_ON;The team that updated the old mod thought it would improve the game to add catgirls down the bio-engineering path (Enabled);;;;;;;;;;;;;x
-RULE_CATGIRLS_DESC_OFF;The team that updated the old mod thought it would improve the game to add catgirls down the bio-engineering path (Disabled);;;;;;;;;;;;;x
-RULE_CATGIRLS_OPTION_ON;And they were right;;;;;;;;;;;;;x
-RULE_CATGIRLS_OPTION_OFF;And they were wrong;;;;;;;;;;;;;x
+RULE_CATGIRLS;Advanced Genetic Engineering;;;;;;;;;;;;;x
+RULE_CATGIRLS_DESC_ON;Strange discoveries lurk down the bio-engineering path (Enabled);;;;;;;;;;;;;x
+RULE_CATGIRLS_DESC_OFF;The bio-engineering path leads to normal congenital traits only(Disabled);;;;;;;;;;;;;x
+RULE_CATGIRLS_OPTION_ON;Yes;;;;;;;;;;;;;x
+RULE_CATGIRLS_OPTION_OFF;No;;;;;;;;;;;;;x
 EVTDESCCYBERNETICS5002;The procedure was successful;;;;;;;;;;;;;x
 opinion_lowered_crown_authority_bad;Weakened the state;;;;;;;;;;;;;x
 EVTDESCCYBERNETICS10200;A beta version of an improven ODIN is ready for testing, you have been asked to volunteer;;;;;;;;;;;;;x
