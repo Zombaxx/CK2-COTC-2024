@@ -78,7 +78,7 @@ character_event = {
 			factor = 100
 			modifier = {
 				factor = 2
-				trait = skeptic
+				trait = skeptical
 			}
 		}
 		prestige = 10
@@ -151,11 +151,11 @@ character_event = {
 			if = {
 				limit = {
 					NOT = { trait = radical }
-					NOT = { trait = skeptic }
+					NOT = { trait = skeptical }
 				}
 				random = {
 					chance = 50
-					add_trait = skeptic
+					add_trait = skeptical
 					hidden_tooltip = {
 						character_event = { id = 38258 } # Notification
 					}
@@ -175,10 +175,10 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { NOT = { trait = diligent } }
+			limit = { NOT = { trait = confident } }
 			random = {
 				chance = 20
-				add_trait = diligent
+				add_trait = confident
 				hidden_tooltip = {
 					character_event = { id = 38256 } # Notification
 				}
@@ -413,10 +413,10 @@ character_event = {
 	option = {
 		name = EVTOPTA_WoL_6140 # Persist!
 		if = {
-			limit = { NOT = { trait = diligent } }
+			limit = { NOT = { trait = confident } }
 			random = {
 				chance = 30
-				add_trait = diligent
+				add_trait = confident
 				hidden_tooltip = {
 					character_event = {
 						id = 38256 #Notify Diligent
@@ -443,16 +443,16 @@ character_event = {
 		if = {
 			limit = {
 				NOT = { trait = slothful }
-				NOT = { trait = diligent }
+				NOT = { trait = confident }
 			}
 			add_trait = slothful
 		}
 		if = {
 			limit = {
 				NOT = { trait = slothful }
-				trait = diligent
+				trait = confident
 			}
-			remove_trait = diligent
+			remove_trait = confident
 		}
 		remove_character_modifier = studying_the_stars
 	}
@@ -686,15 +686,15 @@ character_event = {
 		if = {
 			limit = {
 				NOT = { trait = radical }
-				NOT = { trait = skeptic }
+				NOT = { trait = skeptical }
 			}
 			add_trait = radical
 		}
 		if = {
 			limit = {
-				trait = skeptic
+				trait = skeptical
 			}
-			remove_trait = skeptic
+			remove_trait = skeptical
 		}
 	}
 }
@@ -727,10 +727,10 @@ character_event = {
 			add_trait = paranoid
 		}
 		if = {
-			limit = { NOT = { trait = diligent } }
+			limit = { NOT = { trait = confident } }
 			random = {
 				chance = 30
-				add_trait = diligent
+				add_trait = confident
 				hidden_tooltip = {
 					character_event = {
 						id = 38256 #Notify Diligent
@@ -1054,10 +1054,10 @@ character_event = {
 	option = {
 		name = EVTOPTA_WoL_6340 # Persist!
 		if = {
-			limit = { NOT = { trait = diligent } }
+			limit = { NOT = { trait = confident } }
 			random = {
 				chance = 30
-				add_trait = diligent
+				add_trait = confident
 				hidden_tooltip = {
 					character_event = {
 						id = 38256 #Notify Diligent
@@ -1089,16 +1089,16 @@ character_event = {
 		if = {
 			limit = {
 				NOT = { trait = slothful }
-				NOT = { trait = diligent }
+				NOT = { trait = confident }
 			}
 			add_trait = slothful
 		}
 		if = {
 			limit = {
 				NOT = { trait = slothful }
-				trait = diligent
+				trait = confident
 			}
-			remove_trait = diligent
+			remove_trait = confident
 		}
 		remove_character_modifier = studying_the_stars
 	}

@@ -10395,7 +10395,7 @@ character_event = {
 			trait = tough_soldier
 			trait = strong
 			trait = fair
-			trait = diligent
+			trait = confident
 			trait = trusting
 			trait = brave
 		}
@@ -10571,7 +10571,7 @@ character_event = {
 			trait = intricate_webweaver
 			trait = fair
 			trait = quick
-			trait = diligent
+			trait = confident
 			trait = gregarious
 			trait = cynical
 		}

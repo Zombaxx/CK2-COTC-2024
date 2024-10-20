@@ -1077,12 +1077,12 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = { trait = diligent }
+				NOT = { trait = confident }
 				NOT = { trait = slothful }
 			}
 			random = {
 				chance = 10
-				add_trait = diligent
+				add_trait = confident
 				character_event = { id = 38256 } # Notify Diligent
 			}
 		}
@@ -1108,12 +1108,12 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = { trait = diligent }
+				NOT = { trait = confident }
 				NOT = { trait = slothful }
 			}
 			random = {
 				chance = 10
-				add_trait = diligent
+				add_trait = confident
 				character_event = { id = 38256 } # Notify Diligent
 			}
 		}
@@ -1141,10 +1141,10 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { NOT = { trait = diligent } }
+			limit = { NOT = { trait = confident } }
 			random = {
 				chance = 10
-				add_trait = diligent
+				add_trait = confident
 				character_event = { id = 38256 } # Notify Diligent
 			}
 		}
@@ -1184,12 +1184,12 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = { trait = diligent }
+				NOT = { trait = confident }
 				NOT = { trait = slothful }
 			}
 			random = {
 				chance = 10
-				add_trait = diligent
+				add_trait = confident
 				character_event = { id = 38256 } # Notify Diligent
 			}
 		}
@@ -1308,12 +1308,12 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = { trait = diligent }
+				NOT = { trait = confident }
 				NOT = { trait = slothful }
 			}
 			random = {
 				chance = 10
-				add_trait = diligent
+				add_trait = confident
 				character_event = { id = 38256 } # Notify Diligent
 			}
 		}

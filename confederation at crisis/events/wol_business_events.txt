@@ -1578,7 +1578,7 @@ character_event = {
 				age = 28
 				trait = thrifty_clerk
 				trait = quick
-				trait = diligent
+				trait = confident
 				trait = lustful
 				trait = cynical
 				trait = gregarious
@@ -2956,7 +2956,7 @@ character_event = {
 			limit = { NOT = { trait = slothful } }
 			random = {
 				chance = 50
-				add_trait = diligent
+				add_trait = confident
 				hidden_tooltip = {
 					character_event ={
 						id = 38256 #Notify Diligent

@@ -1499,9 +1499,9 @@
 		# }
 		# if = {
 			# limit = {
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# clr_character_flag = potion_diligent
 		# hidden_tooltip = { character_event = { id = WoL.5062 days = 5 } }
@@ -2207,16 +2207,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2234,16 +2234,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2261,16 +2261,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2288,16 +2288,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2315,16 +2315,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2342,16 +2342,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2369,16 +2369,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2396,16 +2396,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2423,16 +2423,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2450,16 +2450,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2477,16 +2477,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2504,16 +2504,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2531,16 +2531,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2558,16 +2558,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2585,16 +2585,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2612,16 +2612,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2639,16 +2639,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {
@@ -2666,16 +2666,16 @@
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# trait = diligent
+				# trait = confident
 			# }
 			# health = 1
 		# }
 		# if = {
 			# limit = {
 				# is_weak_trigger = no
-				# NOT = { trait = diligent }
+				# NOT = { trait = confident }
 			# }
-			# add_trait = diligent
+			# add_trait = confident
 		# }
 		# if = {
 			# limit = {

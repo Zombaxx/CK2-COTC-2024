@@ -3770,7 +3770,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2.0
-			trait = diligent
+			trait = confident
 		}
 		modifier = {
 			factor = 2.0
@@ -3916,7 +3916,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.75
-			trait = diligent
+			trait = confident
 		}
 		modifier = {
 			factor = 2.0

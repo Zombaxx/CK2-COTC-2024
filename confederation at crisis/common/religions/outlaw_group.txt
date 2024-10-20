@@ -40,8 +40,8 @@ outlaw_group = {
         raised_vassal_opinion_loss = no
 
         psc_marriage = yes
-        pc_marriage = yes
-        bs_marriage = yes
+        #pc_marriage = yes
+        #bs_marriage = yes
         max_consorts = 4
         women_can_take_consorts = yes
 
@@ -96,8 +96,8 @@ outlaw_group = {
         raised_vassal_opinion_loss = no
 
         psc_marriage = yes
-        pc_marriage = yes
-        bs_marriage = yes
+        #pc_marriage = yes
+        #bs_marriage = yes
         max_consorts = 4
         women_can_take_consorts = yes
 
