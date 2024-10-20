@@ -93,6 +93,7 @@ narrative_event = { #Crisis Ended: Confederation Surrender - Colonies gain full 
 
 	option = { #Damn uppity colonials
 		name = "EVTOPTANARRATIVE100"
+		set_global_flag = crisis_rebel_win
 		trigger = {
 			OR = {
 				religion = terran_federalist
@@ -138,6 +139,7 @@ narrative_event = { #Crisis Ended: Negotiated Peace
 
 	option = { #It could be worse...
 		name = "EVTOPTANARRATIVE101"
+		set_global_flag = crisis_draw
 		trigger = {
 			OR = {
 				religion = terran_federalist
@@ -183,6 +185,7 @@ narrative_event = { #Crisis Ended: Victory for the Confedercy - only furthest co
 
 	option = { #Victory for the Motherworld!
 		name = "EVTOPTANARRATIVE102"
+		set_global_flag = crisis_confed_win
 		trigger = {
 			OR = {
 				religion = terran_federalist
@@ -483,7 +486,28 @@ narrative_event = { #President gets rumours, either listens or not
 			}
 		}
 		ai_chance = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_global_flag = crisis_confed_win
+			}
+			#modifier = {
+			#	factor = 10
+			#	OR = {
+			#		trait = gregarious
+			#		trait = proud
+			#		trait = ambitious
+			#		trait = paranoid
+			#	}
+			#}
+			modifier = {
+				factor = 100
+				prestige = 2000
+			}
+			modifier = {
+				factor = 100
+				piety = 2000
+			}
 		}
 	}
 }
@@ -755,16 +779,27 @@ narrative_event = { #makes people indep due to anarchy starting
 				OR = {
 					AND = {
 						NOT = {
+							primary_title = { title = k_terran_commonwealth }
 							k_terran_commonwealth = {
 								de_jure_vassal_or_below = ROOT
 							}
+							primary_title = { title = k_centauri_reach }
 							k_centauri_reach = {
 								de_jure_vassal_or_below = ROOT
 							}
 							k_terran_navy = {
 								de_jure_vassal_or_below = ROOT
 							}
+							primary_title = { title = k_frontier }
 							k_frontier = {
+								de_jure_vassal_or_below = ROOT
+							}
+							primary_title = { title = k_al_samawat }
+							k_al_samawat = {
+								de_jure_vassal_or_below = ROOT
+							}
+							primary_title = { title = k_tierra_celeste }
+							k_tierra_celeste = {
 								de_jure_vassal_or_below = ROOT
 							}
 							primary_title = { title = k_terran_navy }
@@ -773,13 +808,19 @@ narrative_event = { #makes people indep due to anarchy starting
 					}
 					AND = {
 						NOT = {
+							primary_title = { title = k_terran_commonwealth }
 							k_terran_commonwealth = {
 								de_jure_vassal_or_below = ROOT
 							}
+							primary_title = { title = k_centauri_reach }
 							k_centauri_reach = {
 								de_jure_vassal_or_below = ROOT
 							}
 							k_terran_navy = {
+								de_jure_vassal_or_below = ROOT
+							}
+							primary_title = { title = k_tierra_celeste }
+							k_tierra_celeste = {
 								de_jure_vassal_or_below = ROOT
 							}
 							primary_title = { title = k_terran_navy }
@@ -788,9 +829,12 @@ narrative_event = { #makes people indep due to anarchy starting
 					}
 					AND = {
 						NOT = {
+							primary_title = { title = k_terran_commonwealth }
 							k_terran_commonwealth = {
 								de_jure_vassal_or_below = ROOT
 							}
+							k_terran_navy
+							primary_title = { title = k_terran_commonwealth }
 							k_terran_navy = {
 								de_jure_vassal_or_below = ROOT
 							}
