@@ -15,6 +15,7 @@ character_event = {
 		}
 		yearly_income >= 50
 		NAND = { has_law = military_budget_0 has_law = military_budget_0 has_law = military_budget_0 }
+		NOT = { religion_group = outlaw_group }
 	}
 
 	immediate = {

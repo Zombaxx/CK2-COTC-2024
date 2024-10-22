@@ -4,14 +4,14 @@ castle = {
 		gold_cost = 50
 		build_time = 180
 		potential = {
-			NOT = {
-				religion_group = outlaw_group
-			}
-			FROM = {
-				NOT = {
-					religion_group = outlaw_group
-				}
-			}
+			#NOT = {
+			#	religion_group = outlaw_group
+			#}
+			#FROM = {
+			#	NOT = {
+			#		religion_group = outlaw_group
+			#	}
+			#}
 			OR =  {
 				terrain = nebula
 				terrain = debris_disk
