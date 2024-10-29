@@ -1588,141 +1588,141 @@ province_event = {
 #	}
 #}
 # Passenger ship in distress
-province_event = {
-	id = flavor.800
-	desc = "EVTDESCFLAVOR800"
-	picture = GFX_evt_shipwreck
-	trigger = { always = yes }
-
-	mean_time_to_happen = {
-		months = 1200
-	}
-
-	option = {
-		# Lead the rescue effort personally
-		trigger = {
-			owner = {
-				location = { province_id = PREVPREV }
-				OR = {
-					AND = {
-						in_command = yes
-						in_battle = no
-					}
-					in_command = no
-				}
-			}
-		}
-		name = "EVTOPTAFLAVOR800"
-		province_event = { id = flavor.810 tooltip = "EVTTOOLTIPFLAVOR810" }
-		owner = {
-			random = {
-				chance = 33
-				inflict_minor_injury_effect = yes
-				hidden_tooltip = { character_event = { id = flavor.801 } }
-			}
-			random = {
-				chance = 10
-				inflict_major_injury_effect = yes
-				hidden_tooltip = { character_event = { id = flavor.802 } }
-			}
-			random = {
-				chance = 5
-				death = { death_reason = death_accident }
-				hidden_tooltip = { character_event = { id = flavor.803 } }
-			}
-		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 2
-				owner = { trait = brave }
-			}
-			modifier = {
-				factor = 0.5
-				owner = { trait = craven }
-			}
-			modifier = {
-				factor = 2
-				owner = { trait = proud }
-			}
-			modifier = {
-				factor = 0.5
-				owner = { trait = humble }
-			}
-		}
-	}
-
-	option = {
-		# Order a rescue
-		trigger = {
-			any_realm_character = {
-				is_liege_or_above = ROOT
-				in_battle = no
-				location = { province_id = PREVPREV }
-				OR = {
-					in_command = yes
-					has_minor_title = title_commander
-				}
-			}
-		}
-		name = "EVTOPTBFLAVOR800"
-		random_realm_character = {
-			limit = {
-				is_liege_or_above = ROOT
-				in_battle = no
-				location = { province_id = PREVPREV }
-				OR = {
-					in_command = yes
-					has_minor_title = title_commander
-				}
-			}
-			character_event = { id = flavor.805 tooltip = "EVTTOOLTIPFLAVOR805" }
-		}
-		ai_chance = { factor = 50 }
-	}
-
-	option = {
-		# Let them die, then loot the wreck
-		trigger = {
-			owner = {
-				OR = {
-					religion_group = outlaw_group
-					trait = pragmatic
-				}
-			}
-		}
-		name = "EVTOPTCFLAVOR800"
-		owner = {
-			wealth = 50
-			if = {
-				limit = { NOT = { religion_group = outlaw_group } }
-				piety = -100
-			}
-		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 2
-				owner = { trait = cold }
-			}
-			modifier = {
-				factor = 0.5
-				owner = { trait = friendly }
-			}
-			modifier = {
-				factor = 0.5
-				owner = { NOT = { religion_group = outlaw_group } }
-			}
-		}
-	}
-
-	option = {
-		# Do nothing
-		name = "EVTOPTDFLAVOR800"
-		owner = { prestige = -100 }
-		ai_chance = { factor = 0 }
-	}
-}
+#province_event = {
+#	id = flavor.800
+#	desc = "EVTDESCFLAVOR800"
+#	picture = GFX_evt_shipwreck
+#	trigger = { always = yes }
+#
+#	mean_time_to_happen = {
+#		months = 1200
+#	}
+#
+#	option = {
+#		# Lead the rescue effort personally
+#		trigger = {
+#			owner = {
+#				location = { province_id = PREVPREV }
+#				OR = {
+#					AND = {
+#						in_command = yes
+#						in_battle = no
+#					}
+#					in_command = no
+#				}
+#			}
+#		}
+#		name = "EVTOPTAFLAVOR800"
+#		province_event = { id = flavor.810 tooltip = "EVTTOOLTIPFLAVOR810" }
+#		owner = {
+#			random = {
+#				chance = 33
+#				inflict_minor_injury_effect = yes
+#				hidden_tooltip = { character_event = { id = flavor.801 } }
+#			}
+#			random = {
+#				chance = 10
+#				inflict_major_injury_effect = yes
+#				hidden_tooltip = { character_event = { id = flavor.802 } }
+#			}
+#			random = {
+#				chance = 5
+#				death = { death_reason = death_accident }
+#				hidden_tooltip = { character_event = { id = flavor.803 } }
+#			}
+#		}
+#		ai_chance = {
+#			factor = 50
+#			modifier = {
+#				factor = 2
+#				owner = { trait = brave }
+#			}
+#			modifier = {
+#				factor = 0.5
+#				owner = { trait = craven }
+#			}
+#			modifier = {
+#				factor = 2
+#				owner = { trait = proud }
+#			}
+#			modifier = {
+#				factor = 0.5
+#				owner = { trait = humble }
+#			}
+#		}
+#	}
+#
+#	option = {
+#		# Order a rescue
+#		trigger = {
+#			any_realm_character = {
+#				is_liege_or_above = ROOT
+#				in_battle = no
+#				location = { province_id = PREVPREV }
+#				OR = {
+#					in_command = yes
+#					has_minor_title = title_commander
+#				}
+#			}
+#		}
+#		name = "EVTOPTBFLAVOR800"
+#		random_realm_character = {
+#			limit = {
+#				is_liege_or_above = ROOT
+#				in_battle = no
+#				location = { province_id = PREVPREV }
+#				OR = {
+#					in_command = yes
+#					has_minor_title = title_commander
+#				}
+#			}
+#			character_event = { id = flavor.805 tooltip = "EVTTOOLTIPFLAVOR805" }
+#		}
+#		ai_chance = { factor = 50 }
+#	}
+#
+#	option = {
+#		# Let them die, then loot the wreck
+#		trigger = {
+#			owner = {
+#				OR = {
+#					religion_group = outlaw_group
+#					trait = pragmatic
+#				}
+#			}
+#		}
+#		name = "EVTOPTCFLAVOR800"
+#		owner = {
+#			wealth = 50
+#			if = {
+#				limit = { NOT = { religion_group = outlaw_group } }
+#				piety = -100
+#			}
+#		}
+#		ai_chance = {
+#			factor = 50
+#			modifier = {
+#				factor = 2
+#				owner = { trait = cold }
+#			}
+#			modifier = {
+#				factor = 0.5
+#				owner = { trait = friendly }
+#			}
+#			modifier = {
+#				factor = 0.5
+#				owner = { NOT = { religion_group = outlaw_group } }
+#			}
+#		}
+#	}
+#
+#	option = {
+#		# Do nothing
+#		name = "EVTOPTDFLAVOR800"
+#		owner = { prestige = -100 }
+#		ai_chance = { factor = 0 }
+#	}
+#}
 
 # Wounded during a rescue
 character_event = {

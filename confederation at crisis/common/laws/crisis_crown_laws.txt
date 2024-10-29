@@ -44,6 +44,13 @@ de_jure_laws = {
 			holder_scope = { NOT = { has_character_modifier = constitutional_crisis } }
 			has_law = centralization_1
 			NOR = {
+				NAND = {
+					has_law = centralization_0
+					has_law = centralization_1
+					has_law = centralization_2
+					has_law = centralization_3
+					has_law = centralization_4
+				}
 				has_law = military_vassal_legitimacy_2
 				has_law = republic_vassal_legitimacy_2
 				has_law = theocracy_vassal_legitimacy_2
