@@ -2,6 +2,72 @@ offmap_decisions = {
 	
 	#If your grace decisions will spawn a character then give them an appropriate flag eg: is_chinese_administrator and add them to the JD.60310 trigger switch to refund grace if they die early
 
+	chinese_cybernetic_dni = {
+		only_playable = yes
+		button_name = offmap_boons
+		ai_check_interval = 60
+
+		from_potential = {
+			has_dlc = "Jade Dragon"
+			mercenary = no
+			holy_order = no
+			is_landed = yes
+		}
+
+		potential = {
+			is_offmap_tag = offmap_china
+		}
+	
+		allow = {
+			show_only_failed_conditions = yes
+			FROM = {
+				show_scope_change = no
+				has_offmap_currency = { offmap = offmap_china value = 300 }
+				prisoner = no
+				NOT = { trait = incapable }
+				is_inaccessible_trigger = no
+			}
+			china_offmap_boon_decisions_enabled_trigger = yes
+			custom_tooltip = {
+				text = chinese_artifact_has_all_tt
+				hidden_tooltip = {
+					FROM = {
+						NOT = { trait = dni }
+					}
+				}
+			}
+		}
+
+		effect = {
+			FROM = {
+				show_scope_change = no
+				
+				sound_effect = china_grace_spend
+
+				add_offmap_currency = {
+					offmap = offmap_china
+					value = -300
+				}
+				add_trait = dni
+				custom_tooltip = { text = chinese_artifact_effect_tt }			
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.2 # slow down
+			}
+			modifier = {
+				factor = 0.1
+				NOT = {
+					trait = greedy
+				}
+			}
+		}
+	}
+
 	chinese_cybernetic = {
 		only_playable = yes
 		button_name = offmap_boons
@@ -25,6 +91,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 500 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 			}
 			china_offmap_boon_decisions_enabled_trigger = yes
@@ -276,6 +343,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 150 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 			}
 			china_offmap_boon_decisions_enabled_trigger = yes
@@ -381,6 +449,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 150 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 			}
 			china_offmap_boon_decisions_enabled_trigger = yes
@@ -486,6 +555,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 150 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 			}
 			china_offmap_boon_decisions_enabled_trigger = yes
@@ -591,6 +661,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 150 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 			}
 			china_offmap_boon_decisions_enabled_trigger = yes
@@ -696,6 +767,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 150 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 			}
 			china_offmap_boon_decisions_enabled_trigger = yes
@@ -801,6 +873,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 500 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 				OR = {
 					trait = one_legged
@@ -893,6 +966,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 500 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 				OR = {
 					trait = one_handed
@@ -985,6 +1059,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 1000 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 				OR = {
 					trait = incapable
@@ -1077,6 +1152,7 @@ offmap_decisions = {
 #				has_offmap_currency = { offmap = offmap_china value = 1000 }
 #				prisoner = no
 #				NOT = { trait = incapable }
+				trait = dni
 #				is_inaccessible_trigger = no
 #				OR = {
 #					#ai = no
@@ -1174,6 +1250,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 750 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 			}
 			china_offmap_boon_decisions_enabled_trigger = yes
@@ -1238,6 +1315,7 @@ offmap_decisions = {
 				has_offmap_currency = { offmap = offmap_china value = 1000 }
 				prisoner = no
 				NOT = { trait = incapable }
+				trait = dni
 				is_inaccessible_trigger = no
 			}
 			china_offmap_boon_decisions_enabled_trigger = yes
