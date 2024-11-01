@@ -55,7 +55,7 @@ very_hard_ai = {
 ##########################################################################
 
 province_base_values = {
-	supply_limit = 1 # 5K troops
+	supply_limit = 2 # 5K troops
 }
 
 coastal = {
@@ -68,35 +68,34 @@ coastal_sea = {
 }
 
 sea_zone = {
-	max_attrition = 0.5
+	max_attrition = 0.05
 }
 
 land_province = {
-	max_attrition = 0.5
+	max_attrition = 0.05
 }
 
 mild_winter = {
-	supply_limit = 0
-	max_attrition = 1
+	supply_limit = -2
+	max_attrition = 0.1
 }
 
 normal_winter = {
-	supply_limit = 0
-	max_attrition = 1
+	supply_limit = -3
+	max_attrition = 0.15
 }
 
 severe_winter = {
-	supply_limit = 0
-	max_attrition = 1
+	supply_limit = -5
+	max_attrition = 0.2
 }
 
-out_of_supply =
+out_of_supply = 
 {
-	max_attrition = 10
+	max_attrition = 0.1
 }
 
 no_adjacent_controlled = {
-	supply_limit = -2
 }
 
 # Another culture in the same culture group

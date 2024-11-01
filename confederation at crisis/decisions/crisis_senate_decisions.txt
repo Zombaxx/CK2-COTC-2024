@@ -126,6 +126,7 @@ decisions = {
             #    ai = yes
             #    has_character_flag = flag_decree_menu_open
             #}
+			NOT = { religion_group = outlaw_group }
             any_demesne_title = {
                 # Must have a legislature to dissolve
                 OR = {
