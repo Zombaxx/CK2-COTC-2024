@@ -1152,7 +1152,7 @@ offmap_decisions = {
 #				has_offmap_currency = { offmap = offmap_china value = 1000 }
 #				prisoner = no
 #				NOT = { trait = incapable }
-				trait = dni
+#				trait = dni
 #				is_inaccessible_trigger = no
 #				OR = {
 #					#ai = no
@@ -1226,7 +1226,6 @@ offmap_decisions = {
 #		}
 #	}
 
-	
 	chinese_clone = {
 		only_playable = yes
 		button_name = offmap_boons
