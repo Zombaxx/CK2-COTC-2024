@@ -285,6 +285,7 @@ targetted_decisions = {
 			if = {
 				limit = {
 					NOT = { culture_group = terran_group }
+					capital_scope = { culture_group = terran_group }
 				}
 				ROOT = {
 					terranify_culture_effect = yes
