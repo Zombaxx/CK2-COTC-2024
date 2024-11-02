@@ -384,7 +384,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_melee_chivalry"
+		picture = "GFX_evt_knights_melee_battle"
 	}
 	picture = { # Priest/Feudal VS Priest/Feudal
 		trigger = {
@@ -422,7 +422,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -483,7 +483,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	desc = {
 		trigger = {
@@ -1678,7 +1678,7 @@ character_event = {
 character_event = {
 	id = CHI.312
 	desc = EVTDESC_CHI_312
-#	picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	border = GFX_event_normal_frame_war_chivalry
 	
 	picture = {
@@ -1758,7 +1758,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -1819,7 +1819,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	is_triggered_only = yes
 	
@@ -3368,7 +3368,7 @@ character_event = {
 character_event = {
 	id = CHI.313
 	desc = EVTDESC_CHI_313
-#	picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	border = GFX_event_normal_frame_war_chivalry
 	
 	picture = {
@@ -3448,7 +3448,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -3509,7 +3509,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	is_triggered_only = yes
 	
@@ -5094,7 +5094,7 @@ character_event = {
 character_event = {
 	id = CHI.314
 	desc = EVTDESC_CHI_314
-#	picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	border = GFX_event_normal_frame_war_chivalry
 	
 	picture = {
@@ -5174,7 +5174,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -5235,7 +5235,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	is_triggered_only = yes
 
@@ -6820,7 +6820,7 @@ character_event = {
 character_event = {
 	id = CHI.315
 	desc = EVTDESC_CHI_315
-#	picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	border = GFX_event_normal_frame_war_chivalry
 	
 	picture = {
@@ -6900,7 +6900,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -6961,7 +6961,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	is_triggered_only = yes
 
@@ -8546,7 +8546,7 @@ character_event = {
 character_event = {
 	id = CHI.316
 	desc = EVTDESC_CHI_316
-#	picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	border = GFX_event_normal_frame_war_chivalry
 	
 	picture = {
@@ -8626,7 +8626,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -8687,7 +8687,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	is_triggered_only = yes
 
@@ -10272,7 +10272,7 @@ character_event = {
 character_event = {
 	id = CHI.317
 	desc = EVTDESC_CHI_317
-#	picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	border = GFX_event_normal_frame_war_chivalry
 	
 	picture = {
@@ -10352,7 +10352,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -10413,7 +10413,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	is_triggered_only = yes
 
@@ -11998,7 +11998,7 @@ character_event = {
 character_event = {
 	id = CHI.318
 	desc = EVTDESC_CHI_318
-#	picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	border = GFX_event_normal_frame_war_chivalry
 	
 	picture = {
@@ -12078,7 +12078,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -12139,7 +12139,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	is_triggered_only = yes
 
@@ -13723,7 +13723,7 @@ character_event = {
 character_event = {
 	id = CHI.319
 	desc = EVTDESC_CHI_319
-#	picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	border = GFX_event_normal_frame_war_chivalry
 	
 	picture = {
@@ -13803,7 +13803,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -13864,7 +13864,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	is_triggered_only = yes
 
@@ -15413,7 +15413,7 @@ character_event = {
 #FG Rank up duel - opportunity
 character_event = {
 	id = CHI.320
-#	picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	border = GFX_event_normal_frame_war_chivalry
 	
 	picture = {
@@ -15493,7 +15493,7 @@ character_event = {
 			FROMFROM = { NOT = { religion_group = indian_group } }
 			FROMFROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -15554,7 +15554,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	desc = {
 		trigger = {
@@ -15798,7 +15798,7 @@ character_event = {
 #FG Rank up duel - stun
 character_event = {
 	id = CHI.323
-#	picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	border = GFX_event_normal_frame_war_chivalry
 	
 	picture = {
@@ -15878,7 +15878,7 @@ character_event = {
 			FROM = { NOT = { religion_group = indian_group } }
 			FROM = { NOT = { religion_group = zoroastrian_group } }
 		}
-		picture = "GFX_evt_duel_team"
+		picture = "GFX_evt_duel_scene"
 	}
 	picture = { # VS Nomad
 		trigger = {
@@ -15939,7 +15939,7 @@ character_event = {
 		}
 		picture = "GFX_evt_cathedral_indian_group"
 	}
-	#picture = GFX_evt_duel_team
+	picture = GFX_evt_duel_scene
 	
 	desc = {
 		trigger = {
