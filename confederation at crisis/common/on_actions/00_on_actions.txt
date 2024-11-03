@@ -283,10 +283,10 @@ on_bi_yearly_pulse = {
 #character
 on_five_year_pulse = {
 	events = {
-		#MNM.10030 # Have AI characters join societies
-		#HFP.20604 # Hidden check for physique_variable.
+		MNM.10030 # Have AI characters join societies
+		HFP.20604 # Hidden check for physique_variable.
 		HF.99 # Legendary warrior arrives
-		#HF.10050 # Warrior Lodges: Maintenance: AIs joins available warrior lodges
+		HF.10050 # Warrior Lodges: Maintenance: AIs joins available warrior lodges
 		#LoR.45 #Augustus trait cleanup.
 		HF.21997 #AI picks Antagonizing target.
 		HF.21998 #AI picks Swaying target.
