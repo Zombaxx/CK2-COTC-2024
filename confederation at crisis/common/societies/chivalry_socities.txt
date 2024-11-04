@@ -30928,10 +30928,10 @@ society_female_fighter_guild = {
 				name = chivalry_rule_fight
 				value = europextra
 			}
-			has_game_rule = {
-				name = chivalry_rule_fight
-				value = extra
-			}
+			#has_game_rule = {
+			#	name = chivalry_rule_fight
+			#	value = extra
+			#}
 		}
 	}
 	

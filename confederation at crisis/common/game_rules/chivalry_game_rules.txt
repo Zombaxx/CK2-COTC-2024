@@ -33,18 +33,18 @@
 chivalry_rule_fight = {
 	name = "CHIVALRY_RULE_FIGHT_NAME"
 	group = "CHIVALRY_RULE_GROUP"
-	option = {
-		name = europe
-		# achievements = no
-		text = "CHIVALRY_RULE_FIGHT_EUROPE"
-		desc = "CHIVALRY_RULE_FIGHT_EUROPE_DESC"
-	}
-	option = {
-		name = europextra
-		# achievements = no
-		text = "CHIVALRY_RULE_FIGHT_EUROPEXTRA"
-		desc = "CHIVALRY_RULE_FIGHT_EUROPEXTRA_DESC"
-	}
+	#option = {
+	#	name = europe
+	#	# achievements = no
+	#	text = "CHIVALRY_RULE_FIGHT_EUROPE"
+	#	desc = "CHIVALRY_RULE_FIGHT_EUROPE_DESC"
+	#}
+	#option = {
+	#	name = europextra
+	#	# achievements = no
+	#	text = "CHIVALRY_RULE_FIGHT_EUROPEXTRA"
+	#	desc = "CHIVALRY_RULE_FIGHT_EUROPEXTRA_DESC"
+	#}
 	option = {
 		name = extra
 		# achievements = no
