@@ -198,6 +198,49 @@ on_yearly_pulse = {
 		#}
 	}
 	events = {
+	
+		HL.1030 # Wolf Child growing older, rumors of real mother being a wolf
+		63106 # (Safety flag clearance check event)
+		ZE.1100 # Disobedient daughter is unhappy
+		ZE.9000 # Ally not contributing in war
+		ZE.10000 # Mercenary event tombola
+		RIP.10012 # Check for plague notifications
+		RIP.11700 # Prosperity system
+		#RIP.5050 # Scurvy event
+		RIP.30316 # clean up immortal crisis 
+		RIP.30317 # immortal crisis spreads
+		# MNM.4430 # Passive nice trait gain for buddhist/jain monastic societies ### now only triggered upon succeeding in missions
+		MNM.9815 # Seal of Solomon artifact makes you immune to possession
+		MNM.70030 # Secret society visibility reduction
+		HO.100 # Creation of Indian Holy Orders should important cities fall to another religion
+		JD.20041 # Chinese commander teaching other commanders their leadership trait
+		JD.4000 # Character raiding China result events
+		bear.7 # Secret bear generation
+		bear.1 # Secret bear discovery. Called here and in bear.7, as bear.1 can be temporarily precluded
+		GR.23 # Repeat exclave purge for AI's every year if they are at war
+		HF.20405 #Ticking negative opinion modifier for uncrowned Catholic
+		HF.21999 #Main Appease hidden event, no further pulses are required.
+		HF.22999 #Main Antagonize hidden event, no further pulses are required.
+		LoR.46 #Augustus trait cleanup.
+		HF.3 # Activate GHW's and holy orders when running randomized rel names
+		8306
+		8400
+		8410
+		TOG.400
+		TOG.401
+		TOG.402
+		TOG.403
+		HF.304 # Child of Destiny gains bloodline if above Duke tier
+		62933
+		62934
+		HFP.44002 # Holy Orders check if their liege, if any, is still fit to rule them
+		HF.49100 # Check if to start Northern Crusade
+		HF.49116 # Check if Northern Crusade has succeeded
+		HF.49120 # Flavor event tombola Northern Crusade
+		HF.49460 # Reconquista Adventurer
+		HF.49470 # Reconquista flavor tombola
+		HFP.24001 # Elder has too much to live for.
+		
 		maintenance.16
 		maintenance.601
 		maintenance.602
@@ -583,48 +626,6 @@ on_yearly_childhood_pulse = {
 on_focus_pulse = {
 	random_events = {
 		1000 = 0
-
-		HL.1030 # Wolf Child growing older, rumors of real mother being a wolf
-		63106 # (Safety flag clearance check event)
-		ZE.1100 # Disobedient daughter is unhappy
-		ZE.9000 # Ally not contributing in war
-		ZE.10000 # Mercenary event tombola
-		RIP.10012 # Check for plague notifications
-		RIP.11700 # Prosperity system
-		#RIP.5050 # Scurvy event
-		RIP.30316 # clean up immortal crisis 
-		RIP.30317 # immortal crisis spreads
-		# MNM.4430 # Passive nice trait gain for buddhist/jain monastic societies ### now only triggered upon succeeding in missions
-		MNM.9815 # Seal of Solomon artifact makes you immune to possession
-		MNM.70030 # Secret society visibility reduction
-		HO.100 # Creation of Indian Holy Orders should important cities fall to another religion
-		JD.20041 # Chinese commander teaching other commanders their leadership trait
-		JD.4000 # Character raiding China result events
-		bear.7 # Secret bear generation
-		bear.1 # Secret bear discovery. Called here and in bear.7, as bear.1 can be temporarily precluded
-		GR.23 # Repeat exclave purge for AI's every year if they are at war
-		HF.20405 #Ticking negative opinion modifier for uncrowned Catholic
-		HF.21999 #Main Appease hidden event, no further pulses are required.
-		HF.22999 #Main Antagonize hidden event, no further pulses are required.
-		LoR.46 #Augustus trait cleanup.
-		HF.3 # Activate GHW's and holy orders when running randomized rel names
-		8306
-		8400
-		8410
-		TOG.400
-		TOG.401
-		TOG.402
-		TOG.403
-		HF.304 # Child of Destiny gains bloodline if above Duke tier
-		62933
-		62934
-		HFP.44002 # Holy Orders check if their liege, if any, is still fit to rule them
-		HF.49100 # Check if to start Northern Crusade
-		HF.49116 # Check if Northern Crusade has succeeded
-		HF.49120 # Flavor event tombola Northern Crusade
-		HF.49460 # Reconquista Adventurer
-		HF.49470 # Reconquista flavor tombola
-		HFP.24001 # Elder has too much to live for.
 
 		# Family Focus
 		300 = WoL.3010 # Relations with spouse improve

@@ -246,7 +246,7 @@ religious_terran_group = {
     }
     terran_imperial_cult = {
         graphical_culture = westerngfx
-        icon = 2
+        icon = 29
         #heresy_icon = ?
         color = { 0.8 0.2 0.8 }
 
