@@ -18,6 +18,8 @@ RETTYPE_GUNSHIPS =
 
     second_type = 5
     second_amount = 50
+	
+	hire_cost = 50
 }
 
 RETTYPE_LASERSHIPS =
@@ -27,6 +29,8 @@ RETTYPE_LASERSHIPS =
 
     second_type = 5
     second_amount = 50
+	
+	hire_cost = 65
 }
 
 RETTYPE_MISSILESHIPS =
@@ -36,6 +40,8 @@ RETTYPE_MISSILESHIPS =
 
     second_type = 5
     second_amount = 50
+	
+	hire_cost = 75
 }
 
 RETTYPE_DESTROYERS =
@@ -45,6 +51,8 @@ RETTYPE_DESTROYERS =
 
     second_type = 5
     second_amount = 50
+	
+	hire_cost = 100
 
     potential = {
         any_demesne_title = {
@@ -63,7 +71,7 @@ RETTYPE_BATTLESHIPS =
     first_amount = 50
 
     second_type = 5
-    second_amount = 50
+    second_amount = 150
 
     potential = {
         any_demesne_title = {
@@ -94,7 +102,7 @@ RETTYPE_ELITE_GUNSHIPS =
     second_type = 5
     second_amount = 50
 
-    hire_cost = 50
+    hire_cost = 150
     maintenance_multiplier = 3
 
     modifier = {
@@ -115,7 +123,7 @@ RETTYPE_ELITE_LASERSHIPS =
     second_type = 5
     second_amount = 50
 
-    hire_cost = 50
+    hire_cost = 200
     maintenance_multiplier = 3
 
     modifier = {
@@ -136,7 +144,7 @@ RETTYPE_ELITE_MISSILESHIPS =
     second_type = 5
     second_amount = 50
 
-    hire_cost = 50
+    hire_cost = 225
     maintenance_multiplier = 3
 
     modifier = {
@@ -157,7 +165,7 @@ RETTYPE_ELITE_DESTROYERS =
     second_type = 5
     second_amount = 50
 
-    hire_cost = 50
+    hire_cost = 250
     maintenance_multiplier = 3
 
     modifier = {
@@ -189,7 +197,7 @@ RETTYPE_ELITE_BATTLESHIPS =
     second_type = 5
     second_amount = 50
 
-    hire_cost = 50
+    hire_cost = 300
     maintenance_multiplier = 3
 
     modifier = {

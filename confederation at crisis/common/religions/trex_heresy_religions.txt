@@ -51,7 +51,7 @@ political_group = {
 		heresy_icon = 5
 		
 		color = { 255 218 185 }
-		parent = catholic
+		parent = terran_imperial
 		
 		crusade_name = CRUSADE
 		scripture_name = THE_BIBLE
